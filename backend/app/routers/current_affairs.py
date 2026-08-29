@@ -51,7 +51,7 @@ async def current_affairs_overview(user: User = Depends(current_user), db: Async
     for i in range(7):
         d = day - timedelta(days=i)
         s = sessions.get(d)
-        days.append(CADay(day=d, count=counts.get(d, 0), answered=answered.get(d, 0), session_id=s.id if s else None,
+        days.append(CADay(day=d, count=min(counts.get(d, 0), settings.current_affairs_target), answered=answered.get(d, 0), session_id=s.id if s else None,
                           finished=bool(s and s.finished_at), score=s.score if s and s.finished_at else None))
     last = (await db.execute(select(ContentRun).where(ContentRun.status != "skipped")
                              .order_by(ContentRun.started_at.desc()).limit(1))).scalars().first()

@@ -62,7 +62,8 @@ SKIP_PATTERNS = re.compile(
     r"\b(live updates?|watch:|opinion|editorial|horoscope|box office|review:|explained|memoir|booked|FIR|"
     r"dies at|dead|death|killed|murder|rape|accident|crash|arrested|held for|stabbed|suicide|assault|injured|"
     r"threatens|explode|end life|tested positive|rescued|saves|narrow escape|missing|drown|molest|"
-    r"stock market|sensex today|nifty today|gold rate|petrol price|weather today)\b",
+    r"stock market|sensex today|nifty today|gold rate|petrol price|weather today|"
+    r"wrestlemania|wwe|bollywood|celebrity|actor|actress|movie|film|netflix|trailer|reality show|dating)\b",
     re.I,
 )
 
@@ -74,8 +75,8 @@ number or date, which place.
 RULES
 1. Work only from the supplied news items. Never rely on facts not present in the item.
 2. Produce at most one question per item, only where the item contains a clear, verifiable fact of the
-   kind above. Skip items about crime, accidents, opinion, speculation or minor local matters by setting
-   usable=false. It is fine to skip most items.
+   kind above. Skip items about crime, accidents, opinion, speculation, entertainment/celebrity/wrestling
+   gossip, or minor local matters by setting usable=false. It is fine to skip most items.
 3. The question must stand alone: include enough context (month/year, event, body) so it can be answered
    without seeing the article. Do not test headline wording.
 4. Exactly 4 options, exactly one correct. Distractors must be the same entity type and comparable
