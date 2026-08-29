@@ -28,6 +28,9 @@ class Settings(BaseSettings):
     verify_per_night: int = 400            # questions audited per run (fits the free-tier token budget)
     verify_model: str = "qwen/qwen3.8-27b" # 2M tokens/day on Groq's free tier vs 200k for gpt-oss-120b
     verify_autodisable_confidence: float = 0.85
+    # "Explain more" — results are cached on the question forever, so this only guards runaways
+    explain_daily_budget: int = 300
+    explain_model: str = ""                # blank = the provider default
     # Demo account created on startup (set demo_password empty to disable)
     demo_email: str = "demo@mocker.app"
     demo_password: str = "demo1234"

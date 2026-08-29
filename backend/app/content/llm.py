@@ -90,6 +90,10 @@ def _openai_compatible(system: str, user: str, *, max_tokens: int, cfg: LLMConfi
     if cfg.provider == "openrouter":
         headers["HTTP-Referer"] = "https://github.com/aravindshajan6/mocker.ai"
         headers["X-Title"] = "Mocker quiz"
+    # Groq (and some OpenAI-compatible gateways) reject json_object mode unless the word "json"
+    # appears somewhere in the messages. Add it rather than letting the call 400.
+    if "json" not in (system + user).lower():
+        system = system.rstrip() + "\n\nRespond with a single JSON object."
     body = {
         "model": cfg.model,
         "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],

@@ -64,6 +64,7 @@ export const api = {
   active: () => get<ActiveSession[]>("/api/quiz/active"),
   startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
   reviewQueue: () => get<ReviewDue>("/api/me/review"),
+  explain: (questionId: number) => post<{ question_id: number; explanation: string; cached: boolean }>(`/api/quiz/question/${questionId}/explain`),
   currentAffairs: () => get<CurrentAffairs>("/api/current-affairs"),
   session: (id: string) => get<QuizSession>(`/api/quiz/${id}`),
   answer: (id: string, question_id: number, selected_index: number, elapsed_ms?: number) =>
