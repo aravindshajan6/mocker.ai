@@ -32,6 +32,10 @@ async def lifespan(app: FastAPI):
             "ALTER TABLE questions ADD COLUMN IF NOT EXISTS verdict VARCHAR(16)",
             "ALTER TABLE questions ADD COLUMN IF NOT EXISTS verdict_confidence DOUBLE PRECISION",
             "ALTER TABLE questions ADD COLUMN IF NOT EXISTS verdict_note TEXT",
+            "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS repairs_month VARCHAR(7)",
+            "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS repairs_used INTEGER DEFAULT 0",
+            "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS last_repair_on DATE",
+            "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS best_milestone INTEGER DEFAULT 0",
         ):
             await conn.execute(text(ddl))
     async with SessionLocal() as db:

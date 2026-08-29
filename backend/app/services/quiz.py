@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import random
+from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 
 from sqlalchemy import case, func, select
@@ -9,6 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..config import settings
 from ..models import Attempt, DailyChallenge, Question, ReviewCard, Topic, UserStats
+from . import scoring
 
 # Indian Standard Time — the app's "day" boundary for streaks and daily challenges.
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -143,17 +145,54 @@ async def daily_question_ids(db: AsyncSession, day: date) -> list[int]:
     return chosen
 
 
-def touch_streak(stats: UserStats, day: date) -> bool:
-    """Update streak for activity on `day`. Returns True if streak was extended today."""
+@dataclass
+class StreakChange:
+    extended: bool          # the streak grew today
+    repaired: bool          # a missed day was forgiven to keep it alive
+    repairs_left: int
+    streak: int
+    milestone: int | None   # a milestone newly crossed today
+
+
+def _repair_budget(stats: UserStats, day: date) -> int:
+    """Repairs remaining this calendar month, resetting the counter when the month turns over."""
+    month = day.strftime("%Y-%m")
+    if stats.repairs_month != month:
+        stats.repairs_month = month
+        stats.repairs_used = 0
+    return max(0, scoring.MONTHLY_REPAIRS - stats.repairs_used)
+
+
+def touch_streak(stats: UserStats, day: date) -> StreakChange:
+    """Update the streak for activity on `day`.
+
+    Missing a single day is repaired automatically while the user has repairs left this month:
+    one bad day should not cost a hundred-day run, because losing the run is usually when people
+    stop coming back at all.
+    """
+    left = _repair_budget(stats, day)
     if stats.last_active_date == day:
-        return False
+        return StreakChange(False, False, left, stats.current_streak, None)
+
+    repaired = False
     if stats.last_active_date == day - timedelta(days=1):
         stats.current_streak += 1
+    elif stats.last_active_date == day - timedelta(days=2) and left > 0:
+        stats.current_streak += 1
+        stats.repairs_used += 1
+        stats.last_repair_on = day
+        repaired = True
+        left -= 1
     else:
         stats.current_streak = 1
+
     stats.last_active_date = day
     stats.longest_streak = max(stats.longest_streak, stats.current_streak)
-    return True
+    milestone = scoring.milestone_reached(stats.best_milestone, stats.current_streak)
+    if milestone:
+        stats.best_milestone = milestone
+        stats.total_points += scoring.milestone_points(milestone)
+    return StreakChange(True, repaired, left, stats.current_streak, milestone)
 
 
 def effective_streak(stats: UserStats, day: date) -> int:

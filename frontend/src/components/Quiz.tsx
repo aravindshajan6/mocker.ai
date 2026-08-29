@@ -26,6 +26,7 @@ export default function Quiz({ id }: { id: string }) {
   const [mood, setMood] = useState<Mood>("think");
   const [moodTick, setMoodTick] = useState(0);
   const [combo, setCombo] = useState(0);
+  const [milestone, setMilestone] = useState<{ title: string; body: string; days: number } | null>(null);
   const [showQuit, setShowQuit] = useState(false);
   const [deeper, setDeeper] = useState<string | null>(null);
   const [deeperBusy, setDeeperBusy] = useState(false);
@@ -63,6 +64,11 @@ export default function Quiz({ id }: { id: string }) {
       setScore(r.score);
       setMood(r.is_correct ? (r.combo >= 3 ? "celebrate" : "happy") : "oops");
       setMoodTick((t) => t + 1);
+      if (r.milestone && r.milestone_title) {
+        setMilestone({ title: r.milestone_title, body: r.milestone_body ?? "", days: r.milestone });
+        const confetti = (await import("canvas-confetti")).default;
+        confetti({ particleCount: 160, spread: 100, origin: { y: 0.35 }, disableForReducedMotion: true });
+      }
       if (r.is_correct && r.combo >= 3) {
         const confetti = (await import("canvas-confetti")).default;
         confetti({ particleCount: 40, spread: 60, origin: { y: 0.3 }, scalar: 0.8, disableForReducedMotion: true });
@@ -183,7 +189,14 @@ export default function Quiz({ id }: { id: string }) {
             <p className="text-sm font-semibold mt-1 leading-relaxed">{result.explanation}</p>
             {result.source_ref && <p className="text-xs font-bold mt-2 text-ink/70">From the official Kerala PSC paper · {result.source_ref}</p>}
             {result.source_url && <a href={result.source_url} target="_blank" rel="noopener noreferrer" className="inline-block text-xs font-extrabold mt-2 text-primary underline underline-offset-2">{result.source_ref ? "Open the official paper ↗" : "Read the news source ↗"}</a>}
-            {result.streak_extended && <p className="text-xs font-extrabold mt-2 text-ink/70">🔥 Streak extended to {result.streak} day{result.streak === 1 ? "" : "s"}!</p>}
+            {result.streak_repaired ? (
+              <p className="text-xs font-extrabold mt-2 text-ink/70">
+                🛟 You missed a day, so we used a streak repair — your {result.streak}-day run is intact.
+                {result.repairs_left} left this month.
+              </p>
+            ) : result.streak_extended ? (
+              <p className="text-xs font-extrabold mt-2 text-ink/70">🔥 Streak extended to {result.streak} day{result.streak === 1 ? "" : "s"}!</p>
+            ) : null}
 
             {deeper ? (
               <div className="mt-3 pt-3 border-t border-ink/10 whitespace-pre-line text-sm font-semibold leading-relaxed pop-in">{deeper}</div>
@@ -222,6 +235,19 @@ export default function Quiz({ id }: { id: string }) {
           <p className="hidden sm:block text-center text-xs text-muted font-semibold mt-2">Tip: press 1–4 to pick, Enter to continue</p>
         </div>
       </div>
+
+      {/* Streak milestone */}
+      {milestone && (
+        <div className="fixed inset-0 z-40 bg-black/50 grid place-items-center px-6" onClick={() => setMilestone(null)}>
+          <div className="card p-6 w-full max-w-sm text-center pop-in" onClick={(e) => e.stopPropagation()}>
+            <Mascot mood="celebrate" size={120} />
+            <p className="text-3xl font-extrabold mt-1">🔥 {milestone.days}</p>
+            <p className="text-xl font-extrabold mt-1">{milestone.title}</p>
+            <p className="text-sm font-semibold text-muted mt-2 leading-relaxed">{milestone.body}</p>
+            <button className="btn btn-primary w-full mt-5" onClick={() => setMilestone(null)}>Keep going</button>
+          </div>
+        </div>
+      )}
 
       {/* Quit dialog */}
       {showQuit && (

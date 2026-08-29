@@ -57,6 +57,11 @@ export type AnswerResult = {
   total: number;
   streak: number;
   streak_extended: boolean;
+  streak_repaired: boolean;
+  repairs_left: number;
+  milestone: number | null;
+  milestone_title: string | null;
+  milestone_body: string | null;
 };
 
 export type FinishResult = {
@@ -84,6 +89,10 @@ export type Stats = {
   points_to_next_level: number;
   current_streak: number;
   longest_streak: number;
+  repairs_left: number;
+  repairs_used: number;
+  best_milestone: number;
+  next_milestone: number | null;
   questions_answered: number;
   correct_answers: number;
   accuracy: number;
