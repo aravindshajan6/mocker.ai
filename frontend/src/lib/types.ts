@@ -167,3 +167,11 @@ export type ExamResult = {
   coaching: string;
   review: ExamReviewRow[];
 };
+
+export type ReviewDue = {
+  due_now: number;
+  due_today: number;
+  learning: number;
+  next_due_at: string | null;
+  retention: number | null;
+};

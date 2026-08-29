@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Mascot, { type Mood } from "@/components/Mascot";
 import { Chip, ProgressBar, Spinner } from "@/components/ui";
 import { api, greeting } from "@/lib/api";
-import type { ActiveSession, CurrentAffairs, Daily, Stats, Topic, User } from "@/lib/types";
+import type { ActiveSession, CurrentAffairs, Daily, ReviewDue, Stats, Topic, User } from "@/lib/types";
 
 const NUDGES = [
   "One quiz a day keeps the exam fear away.",
@@ -24,16 +24,17 @@ export default function Home() {
   const [topics, setTopics] = useState<Topic[]>([]);
   const [active, setActive] = useState<ActiveSession[]>([]);
   const [ca, setCa] = useState<CurrentAffairs | null>(null);
+  const [due, setDue] = useState<ReviewDue | null>(null);
   const [starting, setStarting] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    Promise.all([api.me(), api.stats(), api.daily(), api.topics(), api.active(), api.currentAffairs()])
-      .then(([u, s, d, t, a, c]) => { setUser(u); setStats(s); setDaily(d); setTopics(t); setActive(a); setCa(c); })
+    Promise.all([api.me(), api.stats(), api.daily(), api.topics(), api.active(), api.currentAffairs(), api.reviewQueue()])
+      .then(([u, s, d, t, a, c, r]) => { setUser(u); setStats(s); setDaily(d); setTopics(t); setActive(a); setCa(c); setDue(r); })
       .catch((e) => setError(e?.message || "Could not load your dashboard. Please try again."));
   }, []);
 
-  const start = async (mode: "daily" | "topic" | "mixed" | "current-affairs", topic?: string, day?: string) => {
+  const start = async (mode: "daily" | "topic" | "mixed" | "current-affairs" | "review", topic?: string, day?: string) => {
     setStarting(topic ?? day ?? mode);
     try {
       const s = await api.startQuiz({ mode, topic, day });
@@ -119,6 +120,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Spaced repetition */}
+      {due && (due.due_now > 0 || due.due_today > 0) && (
+        <ReviewCard due={due} starting={starting} onStart={() => start("review")} />
+      )}
+
       {/* Exam mode */}
       <Link href="/exam" className="card p-4 flex items-center gap-3 transition hover:-translate-y-0.5">
         <span className="text-2xl">📝</span>
@@ -202,6 +208,34 @@ function CurrentAffairsCard({ ca, starting, onStart }: { ca: CurrentAffairs; sta
         </button>
       )}
       {!ca.has_key && <p className="text-[11px] text-muted font-semibold mt-3">Running in basic mode \u2014 add an LLM key in .env for richer questions.</p>}
+    </section>
+  );
+}
+
+
+function ReviewCard({ due, starting, onStart }: { due: ReviewDue; starting: string | null; onStart: () => void }) {
+  const ready = due.due_now > 0;
+  return (
+    <section className="card p-4 flex items-center gap-3" style={ready ? { background: "linear-gradient(135deg, var(--accent-soft), var(--surface))" } : undefined}>
+      <span className="text-2xl">🔁</span>
+      <div className="flex-1 min-w-0">
+        <p className="font-extrabold">
+          {ready
+            ? `${due.due_now} question${due.due_now === 1 ? "" : "s"} ready to revise`
+            : `${due.due_today} question${due.due_today === 1 ? "" : "s"} coming back later today`}
+        </p>
+        <p className="text-sm text-muted font-semibold">
+          {ready
+            ? "Timed to reach you just before you would have forgotten them."
+            : "Spaced repetition is holding these until the moment they are worth repeating."}
+          {due.retention !== null ? ` ${Math.round(due.retention * 100)}% retention so far.` : ""}
+        </p>
+      </div>
+      {ready && (
+        <button className="btn btn-ghost !min-h-10 px-4 text-sm shrink-0" onClick={onStart} disabled={starting !== null}>
+          {starting === "review" ? "…" : "Revise"}
+        </button>
+      )}
     </section>
   );
 }

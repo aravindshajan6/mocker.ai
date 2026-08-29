@@ -8,12 +8,12 @@ from sqlalchemy.orm import selectinload
 from ..auth import current_user
 from ..config import settings
 from ..db import get_db
-from ..models import Attempt, Question, QuizSession, Topic, User, UserStats, utcnow
+from ..models import Attempt, Question, QuizSession, ReviewCard, Topic, User, UserStats, utcnow
 from ..schemas import (ActiveSessionOut, AnswerIn, AnswerOut, AttemptState, DailyOut, FinishOut, QuestionOut,
                        SessionOut, StartQuizIn)
-from ..services import scoring
-from ..services.quiz import (current_affairs_ids, daily_question_ids, effective_streak, pick_questions, today,
-                             touch_streak)
+from ..services import scoring, srs
+from ..services.quiz import (current_affairs_ids, due_question_ids, effective_streak, personal_daily_ids,
+                             pick_questions, today, touch_streak)
 
 router = APIRouter(prefix="/api/quiz", tags=["quiz"])
 
@@ -58,7 +58,7 @@ async def _session_out(db: AsyncSession, s: QuizSession) -> SessionOut:
 @router.get("/daily", response_model=DailyOut)
 async def daily_status(user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
     day = today()
-    ids = await daily_question_ids(db, day)
+    ids = await personal_daily_ids(db, user.id, day)
     s = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id, QuizSession.daily_date == day,
                                                     QuizSession.mode == "daily")
                           .order_by(QuizSession.started_at.desc()))).scalars().first()
@@ -102,7 +102,11 @@ async def start_quiz(data: StartQuizIn, user: User = Depends(current_user), db: 
                                                                 QuizSession.daily_date == daily_date))).scalars().first()
         if existing:
             return await _session_out(db, existing)  # resume (or view finished) — one daily per day
-        ids = await daily_question_ids(db, daily_date)
+        ids = await personal_daily_ids(db, user.id, daily_date)
+    elif data.mode == "review":
+        ids = await due_question_ids(db, user.id, data.count or 15)
+        if not ids:
+            raise HTTPException(409, "Nothing is due for review right now")
     elif data.mode == "current-affairs":
         day = data.day or today()
         existing = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id,
@@ -176,6 +180,8 @@ async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_u
     s.score += pts
     s.correct += 1 if is_correct else 0
 
+    await _schedule_review(db, user.id, q.id, is_correct, data.elapsed_ms)
+
     stats = await _get_stats(db, user.id)
     stats.total_points += pts
     stats.questions_answered += 1
@@ -226,6 +232,20 @@ async def finish(session_id: str, user: User = Depends(current_user), db: AsyncS
         level_title=title, points_to_next_level=to_next, streak=effective_streak(stats, today()),
         already_finished=already, new_badges=new_badges,
     )
+
+
+async def _schedule_review(db: AsyncSession, user_id: str, question_id: int, is_correct: bool,
+                           elapsed_ms: int | None) -> None:
+    """Every answer feeds the spaced-repetition schedule, so reviews build up from normal practice."""
+    card = await db.get(ReviewCard, (user_id, question_id))
+    state, due, lapsed = srs.review(card.state if card else None, is_correct, elapsed_ms)
+    if card:
+        card.state, card.due_at, card.reps = state, due, card.reps + 1
+        card.lapses += 1 if lapsed else 0
+        card.last_reviewed_at = utcnow()
+    else:
+        db.add(ReviewCard(user_id=user_id, question_id=question_id, state=state, due_at=due,
+                          reps=1, lapses=0, last_reviewed_at=utcnow()))
 
 
 async def _badges(db: AsyncSession, user_id: str, stats: UserStats) -> list[str]:

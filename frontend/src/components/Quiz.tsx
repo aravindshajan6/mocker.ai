@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Mascot, { type Mood } from "@/components/Mascot";
 import { Chip, ProgressBar, Spinner } from "@/components/ui";
 import { api } from "@/lib/api";
@@ -27,6 +27,7 @@ export default function Quiz({ id }: { id: string }) {
   const [moodTick, setMoodTick] = useState(0);
   const [combo, setCombo] = useState(0);
   const [showQuit, setShowQuit] = useState(false);
+  const shownAt = useRef<number>(0);
   const [score, setScore] = useState(0);
 
   useEffect(() => {
@@ -39,6 +40,7 @@ export default function Quiz({ id }: { id: string }) {
       let c = 0;
       for (const a of s.attempts) c = a.is_correct ? c + 1 : 0;
       setCombo(c);
+      shownAt.current = Date.now();
     }).catch((e) => setError(e?.message || "Something went wrong. Please try again."));
   }, [id, router]);
 
@@ -50,7 +52,8 @@ export default function Quiz({ id }: { id: string }) {
     if (!session || !q || selected === null || busy) return;
     setBusy(true);
     try {
-      const r = await api.answer(session.id, q.id, selected);
+      const elapsed = shownAt.current ? Date.now() - shownAt.current : undefined;
+      const r = await api.answer(session.id, q.id, selected, elapsed);
       setResult(r);
       setPhase("revealed");
       setCombo(r.combo);
@@ -82,6 +85,7 @@ export default function Quiz({ id }: { id: string }) {
       }
       return;
     }
+    shownAt.current = Date.now();
     setIndex(index + 1);
     setSelected(null);
     setResult(null);

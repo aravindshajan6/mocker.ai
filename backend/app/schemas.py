@@ -44,7 +44,7 @@ class QuestionOut(BaseModel):
 
 
 class StartQuizIn(BaseModel):
-    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs)$")
+    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs|review)$")
     topic: str | None = None
     count: int | None = Field(default=None, ge=3, le=30)
     day: date | None = None  # current-affairs mode: which day's set (default today)
@@ -132,6 +132,7 @@ class SessionOut(BaseModel):
 class AnswerIn(BaseModel):
     question_id: int
     selected_index: int = Field(ge=0, le=3)
+    elapsed_ms: int | None = Field(default=None, ge=0, le=3_600_000)  # informs review scheduling
 
 
 class AnswerOut(BaseModel):
@@ -254,3 +255,11 @@ class CurrentAffairsOut(BaseModel):
     provider: str
     has_key: bool
     last_run: CARun | None
+
+
+class ReviewDueOut(BaseModel):
+    due_now: int
+    due_today: int
+    learning: int          # questions seen at least once and being scheduled
+    next_due_at: datetime | None
+    retention: float | None  # share of due reviews answered correctly, last 30 days
