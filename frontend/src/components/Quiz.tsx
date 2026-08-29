@@ -39,7 +39,7 @@ export default function Quiz({ id }: { id: string }) {
       let c = 0;
       for (const a of s.attempts) c = a.is_correct ? c + 1 : 0;
       setCombo(c);
-    }).catch((e) => setError(e.message));
+    }).catch((e) => setError(e?.message || "Something went wrong. Please try again."));
   }, [id, router]);
 
   const q = session?.questions[index];
@@ -62,7 +62,7 @@ export default function Quiz({ id }: { id: string }) {
         confetti({ particleCount: 40, spread: 60, origin: { y: 0.3 }, scalar: 0.8, disableForReducedMotion: true });
       }
     } catch (e) {
-      setError((e as Error).message);
+      setError((e as Error)?.message || "Something went wrong. Please try again.");
     } finally {
       setBusy(false);
     }
@@ -77,7 +77,7 @@ export default function Quiz({ id }: { id: string }) {
         sessionStorage.setItem(`finish:${session.id}`, JSON.stringify(f));
         router.replace(`/quiz/${session.id}/result`);
       } catch (e) {
-        setError((e as Error).message);
+        setError((e as Error)?.message || "Something went wrong. Please try again.");
         setBusy(false);
       }
       return;
@@ -132,7 +132,7 @@ export default function Quiz({ id }: { id: string }) {
         <div className="flex items-center gap-2">
           <Mascot mood={mood} trigger={moodTick} size={72} />
           <div className="text-sm font-extrabold text-muted">
-            <div className="text-ink">{q.topic_icon} {q.topic}{q.published_at && <span className="text-muted font-bold"> · {new Date(q.published_at + "T00:00:00").toLocaleDateString(undefined, { day: "numeric", month: "short" })}</span>}</div>
+            <div className="text-ink">{q.topic_icon} {q.topic}{q.published_at && !q.source_ref && <span className="text-muted font-bold"> · {new Date(q.published_at + "T00:00:00").toLocaleDateString(undefined, { day: "numeric", month: "short" })}</span>}</div>
             <div>{"★".repeat(q.difficulty)}{"☆".repeat(3 - q.difficulty)} <span className="opacity-70">{["Easy", "Medium", "Hard"][q.difficulty - 1]}</span></div>
           </div>
         </div>
@@ -146,6 +146,9 @@ export default function Quiz({ id }: { id: string }) {
 
       {/* Question */}
       <div key={q.id} className="pop-in mt-4 flex-1 flex flex-col">
+        {q.source_ref && (
+          <p className="text-[11px] font-extrabold text-accent uppercase tracking-wide mb-1.5">📄 Asked in {q.source_ref}</p>
+        )}
         <h1 className="text-lg sm:text-xl font-extrabold leading-snug">{q.text}</h1>
         <div className={`mt-4 flex flex-col gap-2.5 ${phase === "revealed" && !result?.is_correct ? "" : ""}`}>
           {q.options.map((opt, i) => {
@@ -169,7 +172,8 @@ export default function Quiz({ id }: { id: string }) {
               {result.is_correct ? PRAISE[moodTick % PRAISE.length] : CONSOLE[moodTick % CONSOLE.length]}
             </p>
             <p className="text-sm font-semibold mt-1 leading-relaxed">{result.explanation}</p>
-            {result.source_url && <a href={result.source_url} target="_blank" rel="noopener noreferrer" className="inline-block text-xs font-extrabold mt-2 text-primary underline underline-offset-2">Read the news source ↗</a>}
+            {result.source_ref && <p className="text-xs font-bold mt-2 text-ink/70">From the official Kerala PSC paper · {result.source_ref}</p>}
+            {result.source_url && <a href={result.source_url} target="_blank" rel="noopener noreferrer" className="inline-block text-xs font-extrabold mt-2 text-primary underline underline-offset-2">{result.source_ref ? "Open the official paper ↗" : "Read the news source ↗"}</a>}
             {result.streak_extended && <p className="text-xs font-extrabold mt-2 text-ink/70">🔥 Streak extended to {result.streak} day{result.streak === 1 ? "" : "s"}!</p>}
           </div>
         )}

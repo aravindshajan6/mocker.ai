@@ -41,6 +41,13 @@ export default function Shell({ children }: { children: React.ReactNode }) {
       )}
       <main className="flex-1 mx-auto w-full max-w-2xl px-4 pb-24 sm:pb-10">{children}</main>
       {!inQuiz && (
+        <footer className="mx-auto w-full max-w-2xl px-4 pb-24 sm:pb-6 text-[11px] leading-relaxed text-muted font-semibold">
+          Previous-year questions are reproduced from official papers published by the{" "}
+          <a href="https://www.keralapsc.gov.in" target="_blank" rel="noopener noreferrer" className="underline">Kerala Public Service Commission</a>.
+          Mocker is an independent study tool and is not affiliated with or endorsed by the KPSC.
+        </footer>
+      )}
+      {!inQuiz && (
         <nav className="sm:hidden fixed bottom-0 inset-x-0 z-20 border-t border-line bg-surface/95 backdrop-blur pb-[env(safe-area-inset-bottom)]">
           <div className="grid grid-cols-2 max-w-2xl mx-auto">
             {tabs.map((t) => (

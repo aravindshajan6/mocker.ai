@@ -69,6 +69,7 @@ class Question(Base):
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     published_at: Mapped[date | None] = mapped_column(Date, nullable=True)  # for current affairs
     source_url: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    source_ref: Mapped[str | None] = mapped_column(String(160), nullable=True)  # e.g. "Kerala PSC 079/2026 · Q37"
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
 

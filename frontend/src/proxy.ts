@@ -1,18 +1,45 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 const PUBLIC = ["/login", "/register"];
+const COOKIE = "mocker_token";
+
+/**
+ * Reads a JWT's `exp` without verifying the signature. The backend is the real authority — this only
+ * catches tokens that are structurally broken or plainly expired, so we can clear them before the
+ * page loads instead of letting the client bounce between / and /login.
+ */
+function looksExpired(token: string): boolean {
+  const parts = token.split(".");
+  if (parts.length !== 3) return true;
+  try {
+    const payload = JSON.parse(atob(parts[1].replace(/-/g, "+").replace(/_/g, "/")));
+    return typeof payload.exp !== "number" || payload.exp * 1000 <= Date.now();
+  } catch {
+    return true;
+  }
+}
 
 export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  const hasToken = Boolean(req.cookies.get("mocker_token")?.value);
+  const token = req.cookies.get(COOKIE)?.value;
   const isPublic = PUBLIC.some((p) => pathname.startsWith(p));
-  if (!hasToken && !isPublic) {
+
+  if (token && looksExpired(token)) {
+    // Stale cookie: send the user to sign-in and drop the cookie so this can't loop.
+    const url = req.nextUrl.clone();
+    url.pathname = "/login";
+    url.search = "";
+    const res = isPublic ? NextResponse.next() : NextResponse.redirect(url);
+    res.cookies.delete(COOKIE);
+    return res;
+  }
+  if (!token && !isPublic) {
     const url = req.nextUrl.clone();
     url.pathname = "/login";
     url.search = "";
     return NextResponse.redirect(url);
   }
-  if (hasToken && isPublic) {
+  if (token && isPublic) {
     const url = req.nextUrl.clone();
     url.pathname = "/";
     url.search = "";

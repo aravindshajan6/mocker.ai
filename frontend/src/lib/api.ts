@@ -11,6 +11,25 @@ export class ApiError extends Error {
   }
 }
 
+let signingOut = false;
+
+/**
+ * The session is gone (expired token, or an account removed server-side). The cookie is httpOnly, so
+ * only the server can clear it — do that before navigating, otherwise the proxy still sees a cookie
+ * and bounces us straight back, looping forever.
+ */
+async function handleSignedOut(): Promise<void> {
+  if (typeof window === "undefined" || signingOut) return;
+  if (location.pathname.startsWith("/login") || location.pathname.startsWith("/register")) return;
+  signingOut = true;
+  try {
+    await fetch("/api/auth/logout", { method: "POST", credentials: "same-origin" });
+  } catch {
+    /* offline or backend down — navigate anyway, the proxy will clear the cookie */
+  }
+  location.replace("/login");
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(path, {
     ...init,
@@ -26,11 +45,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     } catch {
       /* ignore */
     }
-    if (res.status === 401 && typeof window !== "undefined" && !location.pathname.startsWith("/login")) {
-      // Cookie present but invalid/expired: full reload so the proxy redirects cleanly.
-      // eslint-disable-next-line @next/next/no-location-assign-relative-destination
-      location.href = "/login";
-    }
+    if (res.status === 401) void handleSignedOut();
     throw new ApiError(res.status, msg);
   }
   return (await res.json()) as T;

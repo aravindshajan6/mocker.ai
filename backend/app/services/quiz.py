@@ -13,6 +13,10 @@ from ..models import Attempt, DailyChallenge, Question, Topic, UserStats
 # Indian Standard Time — the app's "day" boundary for streaks and daily challenges.
 IST = timezone(timedelta(hours=5, minutes=30))
 
+# Hand-authored questions and real exam papers are both trustworthy and carry provenance;
+# bulk-imported dataset questions are only used to backfill once these run out.
+CURATED_SOURCES = ("seed", "pyq")
+
 
 def today() -> date:
     return datetime.now(IST).date()
@@ -42,11 +46,11 @@ async def pick_questions(db: AsyncSession, user_id: str, count: int, topic_id: i
                 return fresh
             ids = fresh
             return ids + await _backfill_seen(db, user_id, base, ids, count - len(ids))
-    curated = list((await db.execute(unseen_q.where(Question.source == "seed"))).scalars().all())
+    curated = list((await db.execute(unseen_q.where(Question.source.in_(CURATED_SOURCES)))).scalars().all())
     random.shuffle(curated)
     ids = curated[:count]
     if len(ids) < count:
-        imported = list((await db.execute(unseen_q.where(Question.source != "seed"))).scalars().all())
+        imported = list((await db.execute(unseen_q.where(Question.source.not_in(CURATED_SOURCES)))).scalars().all())
         random.shuffle(imported)
         ids += imported[: count - len(ids)]
     if len(ids) < count:
@@ -107,7 +111,7 @@ async def daily_question_ids(db: AsyncSession, day: date) -> list[int]:
     per_topic: dict[int, list[int]] = {}
     for t in topics:
         ids = (await db.execute(select(Question.id).where(Question.topic_id == t, Question.is_active.is_(True),
-                                                           Question.source == "seed"))).scalars().all()
+                                                           Question.source.in_(CURATED_SOURCES)))).scalars().all()
         ids = list(ids)
         rng.shuffle(ids)
         per_topic[t] = ids

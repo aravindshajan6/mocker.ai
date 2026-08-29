@@ -18,6 +18,7 @@ export type Question = {
   topic: string;
   topic_icon: string;
   published_at: string | null;
+  source_ref: string | null;
 };
 
 export type AttemptState = {
@@ -28,6 +29,7 @@ export type AttemptState = {
   explanation: string;
   points: number;
   source_url: string | null;
+  source_ref: string | null;
 };
 
 export type QuizSession = {
@@ -46,6 +48,7 @@ export type AnswerResult = {
   correct_index: number;
   explanation: string;
   source_url: string | null;
+  source_ref: string | null;
   points: number;
   combo: number;
   score: number;

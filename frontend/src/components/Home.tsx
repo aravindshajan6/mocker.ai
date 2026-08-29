@@ -30,7 +30,7 @@ export default function Home() {
   useEffect(() => {
     Promise.all([api.me(), api.stats(), api.daily(), api.topics(), api.active(), api.currentAffairs()])
       .then(([u, s, d, t, a, c]) => { setUser(u); setStats(s); setDaily(d); setTopics(t); setActive(a); setCa(c); })
-      .catch((e) => setError(e.message));
+      .catch((e) => setError(e?.message || "Could not load your dashboard. Please try again."));
   }, []);
 
   const start = async (mode: "daily" | "topic" | "mixed" | "current-affairs", topic?: string, day?: string) => {
@@ -44,7 +44,13 @@ export default function Home() {
     }
   };
 
-  if (error) return <p className="mt-10 text-center text-danger font-semibold">{error}</p>;
+  if (error) return (
+    <div className="mt-16 text-center flex flex-col items-center gap-3">
+      <Mascot mood="oops" size={110} />
+      <p className="text-danger font-bold">{error}</p>
+      <button className="btn btn-ghost" onClick={() => location.reload()}>Try again</button>
+    </div>
+  );
   if (!user || !stats || !daily) return <Spinner label="Waking up Kunju…" />;
 
   const firstName = user.name.split(" ")[0];
