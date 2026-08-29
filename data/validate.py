@@ -23,7 +23,11 @@ for path in sys.argv[1:]:
         if len(str(q.get("explanation",""))) < 20: errs.append(f"#{i}: explanation too short")
     n = len(qs)
     skew = max(dist.values()) / n if n else 0
-    if skew > 0.36: errs.append(f"answer position skew: {dict(dist)} (max share {skew:.0%} > 36%)")
+    # Real exam papers are reproduced verbatim (a condition of the KPSC licence), so their
+    # answer positions are whatever the paper used — the skew check does not apply to them.
+    verbatim = all(q.get("source") == "pyq" for q in qs) if qs else False
+    if skew > 0.36 and not verbatim:
+        errs.append(f"answer position skew: {dict(dist)} (max share {skew:.0%} > 36%)")
     print(f"{path}: {n} questions, answer dist {dict(sorted(dist.items()))}, {len(errs)} problems")
     for e in errs[:30]: print("   ", e)
     ok = ok and not errs

@@ -40,7 +40,7 @@ export default function Result({ id }: { id: string }) {
         const confetti = (await import("canvas-confetti")).default;
         confetti({ particleCount: 120, spread: 80, origin: { y: 0.4 }, disableForReducedMotion: true });
       }
-    }).catch((e) => setError(e.message));
+    }).catch((e) => setError(e?.message || "Something went wrong. Please try again."));
   }, [id]);
 
   const again = async () => {
@@ -57,7 +57,7 @@ export default function Result({ id }: { id: string }) {
       const s = await api.startQuiz(slug ? { mode: "topic", topic: slug } : { mode: "mixed" });
       router.replace(`/quiz/${s.id}`);
     } catch (e) {
-      setError((e as Error).message);
+      setError((e as Error)?.message || "Something went wrong. Please try again.");
       setStarting(false);
     }
   };
@@ -119,7 +119,8 @@ export default function Result({ id }: { id: string }) {
                 </p>
                 {!a.is_correct && <p className="text-sm font-bold text-success">✓ Correct: {q.options[a.correct_index]}</p>}
                 <p className="text-sm text-muted font-semibold mt-1">{a.explanation}</p>
-                {a.source_url && <a href={a.source_url} target="_blank" rel="noopener noreferrer" className="text-xs font-extrabold text-primary underline underline-offset-2">Read the news source ↗</a>}
+                {a.source_ref && <p className="text-xs font-bold text-ink/60 mt-1">📄 {a.source_ref}</p>}
+                {a.source_url && <a href={a.source_url} target="_blank" rel="noopener noreferrer" className="text-xs font-extrabold text-primary underline underline-offset-2">{a.source_ref ? "Open the official paper ↗" : "Read the news source ↗"}</a>}
               </div>
             );
           })}

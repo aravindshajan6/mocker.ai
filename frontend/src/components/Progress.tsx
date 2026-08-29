@@ -18,7 +18,7 @@ export default function Progress() {
   useEffect(() => {
     Promise.all([api.stats(), api.history(), api.leaderboard()])
       .then(([s, h, b]) => { setStats(s); setHistory(h); setBoard(b); })
-      .catch((e) => setError(e.message));
+      .catch((e) => setError(e?.message || "Something went wrong. Please try again."));
   }, []);
 
   if (error) return <p className="mt-10 text-center text-danger font-semibold">{error}</p>;

@@ -40,6 +40,7 @@ class QuestionOut(BaseModel):
     topic: str
     topic_icon: str
     published_at: date | None = None
+    source_ref: str | None = None
 
 
 class StartQuizIn(BaseModel):
@@ -57,6 +58,7 @@ class AttemptState(BaseModel):
     explanation: str
     points: int
     source_url: str | None = None
+    source_ref: str | None = None
 
 
 class SessionOut(BaseModel):
@@ -80,6 +82,7 @@ class AnswerOut(BaseModel):
     correct_index: int
     explanation: str
     source_url: str | None = None
+    source_ref: str | None = None
     points: int
     combo: int
     score: int

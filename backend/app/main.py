@@ -20,6 +20,7 @@ async def lifespan(app: FastAPI):
         await conn.run_sync(Base.metadata.create_all)
         # Lightweight forward-only migrations for columns added after the first release.
         await conn.execute(text("ALTER TABLE questions ADD COLUMN IF NOT EXISTS source_url VARCHAR(512)"))
+        await conn.execute(text("ALTER TABLE questions ADD COLUMN IF NOT EXISTS source_ref VARCHAR(160)"))
     async with SessionLocal() as db:
         await seed_questions(db)
         await seed_demo_user(db)

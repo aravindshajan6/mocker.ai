@@ -84,6 +84,7 @@ async def seed_questions(db: AsyncSession) -> int:
                 explanation=(item.get("explanation") or "").strip(), difficulty=int(item.get("difficulty") or 1),
                 tags=item.get("tags") or [], source=item.get("source") or "seed", fingerprint=fp,
                 published_at=date.fromisoformat(item["published_at"]) if item.get("published_at") else None,
+                source_url=item.get("source_url"), source_ref=item.get("source_ref"),
             ))
             added += 1
         await db.commit()

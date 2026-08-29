@@ -53,7 +53,12 @@ data/validate.py        validator for question files
 * `data/questions/<topic>.json` — hand-authored, fact-checked banks (~1,150 questions across 11 topics).
 * `data/questions/milu-*.json` — imported from [MILU](https://huggingface.co/datasets/murthyrudra/milu-cleaned)
   (CC-BY-4.0, arXiv:2411.02538) after strict filtering. Re-run with `data/importers/milu.py`.
-* **Current affairs — generated daily.** A scheduler inside the backend runs every morning at 06:00 IST
+* **Previous-year questions (PYQs)** — real Kerala PSC questions with the official answer key, imported from
+  papers published on keralapsc.gov.in. Every one carries its provenance ("Asked in Kerala PSC 079/2026 · Q37")
+  and links to the source PDF. Options are reproduced verbatim, never reshuffled, because accurate reproduction
+  is a condition of the KPSC reuse licence — so `pyq-*.json` files are exempt from the answer-position balance
+  check in `data/validate.py`. Re-run with `data/importers/pyq.py`.
+* Current affairs — generated daily.** A scheduler inside the backend runs every morning at 06:00 IST
   (`CURRENT_AFFAIRS_HOUR_IST`), fetches Indian news from RSS (Deccan Herald, The Hindu incl. Kerala, Onmanorama,
   Mathrubhumi, TOI), turns it into exam-style MCQs and inserts them straight into the database — no restart.
   * Generator: the LLM configured in `.env` (`LLM_PROVIDER` = `groq` (free) | `gemini` | `openrouter` |
@@ -82,3 +87,19 @@ Add your own questions: drop a JSON file into `data/questions/` following the sc
 `POST quiz/start {mode: daily|topic|mixed, topic?, count?}`, `GET quiz/{id}`, `POST quiz/{id}/answer`,
 `POST quiz/{id}/finish`, `POST quiz/{id}/abandon`, `GET me/stats`, `GET me/history`, `GET me/leaderboard`.
 Interactive docs: `docker compose exec backend curl localhost:8000/docs` (not exposed on the host).
+
+## Tests
+
+```bash
+docker compose exec backend python -m pytest tests -q     # API + scoring tests
+cd frontend && npx tsc --noEmit && npx eslint src         # type + lint checks
+python3 data/validate.py data/questions/*.json            # question bank validation
+```
+
+## Attribution
+
+Previous-year questions are reproduced from official papers published by the
+[Kerala Public Service Commission](https://www.keralapsc.gov.in), whose
+[copyright policy](https://www.keralapsc.gov.in/copyright) permits reproduction with acknowledgement.
+Imported dataset questions come from [MILU](https://huggingface.co/datasets/murthyrudra/milu-cleaned) (CC-BY-4.0).
+Mocker is an independent study tool, not affiliated with or endorsed by the KPSC.

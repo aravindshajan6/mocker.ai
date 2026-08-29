@@ -36,7 +36,8 @@ async def _session_out(db: AsyncSession, s: QuizSession) -> SessionOut:
         if qid in by_id:
             q, t = by_id[qid]
             questions.append(QuestionOut(id=q.id, text=q.text, options=q.options, difficulty=q.difficulty,
-                                         topic=t.name, topic_icon=t.icon, published_at=q.published_at))
+                                         topic=t.name, topic_icon=t.icon, published_at=q.published_at,
+                                         source_ref=q.source_ref))
     attempts = (await db.execute(select(Attempt).where(Attempt.session_id == s.id).order_by(Attempt.id))).scalars().all()
     topic_name = None
     if s.topic_id:
@@ -47,7 +48,8 @@ async def _session_out(db: AsyncSession, s: QuizSession) -> SessionOut:
                                correct_index=by_id[a.question_id][0].correct_index if a.question_id in by_id else 0,
                                explanation=by_id[a.question_id][0].explanation if a.question_id in by_id else "",
                                points=a.points,
-                               source_url=by_id[a.question_id][0].source_url if a.question_id in by_id else None)
+                               source_url=by_id[a.question_id][0].source_url if a.question_id in by_id else None,
+                               source_ref=by_id[a.question_id][0].source_ref if a.question_id in by_id else None)
                   for a in attempts],
         score=s.score, correct=s.correct, finished=s.finished_at is not None,
     )
@@ -184,6 +186,7 @@ async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_u
 
     return AnswerOut(
         is_correct=is_correct, correct_index=q.correct_index, explanation=q.explanation, source_url=q.source_url,
+        source_ref=q.source_ref,
         points=pts, combo=combo,
         score=s.score, correct=s.correct, answered=len(s.attempts) + 1, total=len(s.question_ids),
         streak=effective_streak(stats, day), streak_extended=extended,
