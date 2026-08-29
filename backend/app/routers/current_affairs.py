@@ -25,10 +25,17 @@ def _run_out(r: ContentRun | None) -> CARun | None:
 
 
 @router.get("/current-affairs", response_model=CurrentAffairsOut)
-async def current_affairs_overview(user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
-    """Last 7 days of news questions with the user's progress on each day, plus generator status."""
+async def current_affairs_overview(days: int = 7, user: User = Depends(current_user),
+                                   db: AsyncSession = Depends(get_db)):
+    """News questions day by day with this user's progress, plus generator status.
+
+    `days` lets the archive reach back further than the home page strip: a learner who missed a
+    week can still work through those days. Their streak is not retroactively restored — the run
+    is about showing up, not about backfilling.
+    """
+    days = max(1, min(days, 60))
     day = today()
-    start = day - timedelta(days=6)
+    start = day - timedelta(days=days - 1)
     ca = (await db.execute(select(Topic.id).where(Topic.slug == "current-affairs"))).scalar_one_or_none()
     counts: dict = {}
     answered: dict = {}
@@ -48,16 +55,18 @@ async def current_affairs_overview(user: User = Depends(current_user), db: Async
         select(QuizSession).where(QuizSession.user_id == user.id, QuizSession.mode == "current-affairs",
                                   QuizSession.daily_date >= start)
     )).scalars().all()}
-    days = []
-    for i in range(7):
+    out_days = []
+    for i in range(days):
         d = day - timedelta(days=i)
         s = sessions.get(d)
-        days.append(CADay(day=d, count=min(counts.get(d, 0), settings.current_affairs_target), answered=answered.get(d, 0), session_id=s.id if s else None,
-                          finished=bool(s and s.finished_at), score=s.score if s and s.finished_at else None))
+        out_days.append(CADay(day=d, count=min(counts.get(d, 0), settings.current_affairs_target),
+                              answered=answered.get(d, 0), session_id=s.id if s else None,
+                              finished=bool(s and s.finished_at),
+                              score=s.score if s and s.finished_at else None))
     last = (await db.execute(select(ContentRun).where(ContentRun.status != "skipped")
                              .order_by(ContentRun.started_at.desc()).limit(1))).scalars().first()
     cfg = llm.current_config()
-    return CurrentAffairsOut(today=day, days=days, enabled=settings.current_affairs_enabled, provider=cfg.provider,
+    return CurrentAffairsOut(today=day, days=out_days, enabled=settings.current_affairs_enabled, provider=cfg.provider,
                              has_key=cfg.available, last_run=_run_out(last))
 
 

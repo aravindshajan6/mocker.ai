@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
-import { ProgressBar, Spinner } from "@/components/ui";
+import { motion } from "motion/react";
+import { Num, ProgressRing, SkeletonPage } from "@/components/ui";
 import { api } from "@/lib/api";
 import type { FinishResult, QuizSession } from "@/lib/types";
 
@@ -63,7 +64,7 @@ export default function Result({ id }: { id: string }) {
   };
 
   if (error) return <div className="pt-10 text-center"><p className="text-danger font-bold">{error}</p><Link href="/" className="btn btn-ghost mt-4">Back home</Link></div>;
-  if (!res || !session) return <Spinner label="Adding it up…" />;
+  if (!res || !session) return <SkeletonPage />;
 
   const acc = res.accuracy;
   const questionsById = new Map(session.questions.map((q) => [q.id, q]));
@@ -74,20 +75,25 @@ export default function Result({ id }: { id: string }) {
       <h1 className="text-2xl font-extrabold mt-2">{headline(acc)}</h1>
       <p className="text-muted font-semibold mt-1">You got {res.correct} of {res.total} right.</p>
 
-      <div className="card w-full p-5 mt-5 grid grid-cols-3 gap-3">
-        <div><div className="text-2xl font-extrabold text-primary">+{res.score}</div><div className="text-xs font-extrabold text-muted">POINTS</div></div>
-        <div><div className="text-2xl font-extrabold">{Math.round(acc * 100)}%</div><div className="text-xs font-extrabold text-muted">ACCURACY</div></div>
-        <div><div className="text-2xl font-extrabold text-accent">🔥 {res.streak}</div><div className="text-xs font-extrabold text-muted">DAY STREAK</div></div>
-        {res.bonus > 0 && <p className="col-span-3 text-xs font-extrabold text-success">Includes a +{res.bonus} bonus{session.mode === "daily" ? " for finishing today's challenge" : ""}{acc === 1 ? " (perfect round!)" : ""}.</p>}
-      </div>
+      <motion.div className="card card-2 w-full p-5 mt-5 grid grid-cols-3 gap-3"
+        initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.4 }}>
+        <div><div className="text-2xl font-extrabold text-primary"><Num value={res.score} prefix="+" /></div><div className="text-[10px] font-extrabold text-muted uppercase tracking-wider">Points</div></div>
+        <div><div className="text-2xl font-extrabold"><Num value={Math.round(acc * 100)} suffix="%" /></div><div className="text-[10px] font-extrabold text-muted uppercase tracking-wider">Accuracy</div></div>
+        <div><div className="text-2xl font-extrabold text-accent">🔥 <Num value={res.streak} /></div><div className="text-[10px] font-extrabold text-muted uppercase tracking-wider">Day streak</div></div>
+        {res.bonus > 0 && <p className="col-span-3 text-xs font-extrabold text-success">Includes a +{res.bonus} bonus{session.mode === "daily" ? " for finishing today’s challenge" : ""}{acc === 1 ? " (perfect round!)" : ""}.</p>}
+      </motion.div>
 
-      <div className="card w-full p-4 mt-3 text-left">
-        <div className="flex justify-between text-xs font-extrabold text-muted mb-2">
-          <span>Level {res.level} · {res.level_title}</span>
-          <span>{res.points_to_next_level} pts to go</span>
+      <div className="card w-full p-4 mt-3 text-left flex items-center gap-4">
+        <ProgressRing value={1 - res.points_to_next_level / Math.max(res.points_to_next_level + res.total_points, 1)}
+          size={58} stroke={6} color="var(--accent)">
+          <span className="text-xs font-extrabold">{res.level}</span>
+        </ProgressRing>
+        <div className="flex-1">
+          <p className="text-sm font-extrabold">{res.level_title}</p>
+          <p className="text-xs text-muted font-semibold mt-0.5">
+            <Num value={res.points_to_next_level} /> points to the next level · <Num value={res.total_points} /> total
+          </p>
         </div>
-        <ProgressBar value={1 - res.points_to_next_level / Math.max(res.points_to_next_level + res.total_points, 1)} color="var(--accent)" />
-        <p className="text-xs text-muted font-semibold mt-2">{res.total_points} total points</p>
       </div>
 
       {res.new_badges.length > 0 && (

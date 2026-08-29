@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
-import { ProgressBar, Spinner } from "@/components/ui";
+import { Award, BarChart3, Flame, LifeBuoy, Target, Trophy } from "lucide-react";
+import { Num, PageHeader, ProgressBar, ProgressRing, SkeletonPage, StatTile } from "@/components/ui";
 import { api } from "@/lib/api";
 import type { HistoryRow, Insights, LeaderboardRow, Stats } from "@/lib/types";
 
@@ -26,39 +27,41 @@ export default function Progress() {
   }, []);
 
   if (error) return <p className="mt-10 text-center text-danger font-semibold">{error}</p>;
-  if (!stats) return <Spinner label="Counting your points…" />;
+  if (!stats) return <SkeletonPage />;
 
   const maxAnswered = Math.max(1, ...stats.last_7_days.map((d) => d.answered));
   const allBadges = Object.entries(stats.badge_meta);
 
   return (
     <div className="pt-4 flex flex-col gap-5 pop-in">
-      <section className="flex items-center gap-3">
-        <Mascot mood={stats.current_streak > 0 ? "happy" : "idle"} size={80} />
-        <div>
-          <h1 className="text-2xl font-extrabold">Your progress</h1>
-          <p className="text-muted font-semibold text-sm">Level {stats.level} · {stats.level_title}</p>
+      <PageHeader title="Your progress" icon={<BarChart3 size={20} />}
+        subtitle={`Level ${stats.level} · ${stats.level_title}`} />
+
+      <section className="card p-5 flex items-center gap-5">
+        <ProgressRing value={stats.level_progress} size={92} stroke={8} color="var(--accent)">
+          <div className="text-center leading-none">
+            <div className="text-xl font-extrabold">{stats.level}</div>
+            <div className="text-[9px] font-extrabold text-muted mt-0.5">LEVEL</div>
+          </div>
+        </ProgressRing>
+        <div className="flex-1 min-w-0">
+          <p className="text-lg font-extrabold">{stats.level_title}</p>
+          <p className="text-sm text-muted font-semibold"><Num value={stats.points_to_next_level} /> points to the next level</p>
+          <ProgressBar value={stats.level_progress} color="var(--accent)" className="mt-2" />
         </div>
+        <Mascot mood={stats.current_streak > 0 ? "happy" : "idle"} size={72} />
       </section>
 
       <section className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <Stat label="Points" value={stats.total_points.toLocaleString()} tone="text-primary" />
-        <Stat label="Day streak" value={`🔥 ${stats.current_streak}`}
+        <StatTile label="Points" value={<Num value={stats.total_points} />} tone="text-primary" icon={<Trophy size={15} />} />
+        <StatTile label="Day streak" value={<><Flame size={16} className="inline text-accent" /> <Num value={stats.current_streak} /></>}
           sub={stats.next_milestone ? `${stats.next_milestone - stats.current_streak} to ${stats.next_milestone}` : `best ${stats.longest_streak}`} />
-        <Stat label="Accuracy" value={`${Math.round(stats.accuracy * 100)}%`} sub={`${stats.correct_answers}/${stats.questions_answered}`} />
-        <Stat label="Quizzes" value={String(stats.quizzes_completed)} />
-      </section>
-
-      <section className="card p-4">
-        <div className="flex justify-between text-xs font-extrabold text-muted mb-2">
-          <span>Level {stats.level} · {stats.level_title}</span>
-          <span>{stats.points_to_next_level} pts to next</span>
-        </div>
-        <ProgressBar value={stats.level_progress} color="var(--accent)" />
+        <StatTile label="Accuracy" value={`${Math.round(stats.accuracy * 100)}%`} sub={`${stats.correct_answers}/${stats.questions_answered}`} icon={<Target size={15} />} />
+        <StatTile label="Quizzes" value={<Num value={stats.quizzes_completed} />} icon={<Award size={15} />} />
       </section>
 
       <section className="card p-4 flex items-center gap-3">
-        <span className="text-2xl">🛟</span>
+        <div className="grid place-items-center h-10 w-10 rounded-2xl bg-info-soft text-info shrink-0"><LifeBuoy size={18} /></div>
         <div className="flex-1">
           <p className="font-extrabold text-sm">
             {stats.repairs_left > 0
@@ -149,16 +152,6 @@ export default function Progress() {
           </ul>
         )}
       </section>
-    </div>
-  );
-}
-
-function Stat({ label, value, sub, tone = "" }: { label: string; value: string; sub?: string; tone?: string }) {
-  return (
-    <div className="card p-3">
-      <div className={`text-xl font-extrabold ${tone}`}>{value}</div>
-      <div className="text-[11px] font-extrabold text-muted uppercase tracking-wide">{label}</div>
-      {sub && <div className="text-[11px] font-semibold text-muted">{sub}</div>}
     </div>
   );
 }

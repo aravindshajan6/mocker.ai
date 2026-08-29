@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
-import { ErrorNote, Spinner } from "@/components/ui";
+import { Settings as SettingsIcon } from "lucide-react";
+import { ErrorNote, Item, PageHeader, SkeletonPage, Stagger } from "@/components/ui";
 import { api } from "@/lib/api";
 import { currentSubscription, isIOS, isStandalone, permissionState, pushSupported, subscribe, unsubscribe } from "@/lib/push";
 import type { Prefs } from "@/lib/types";
@@ -72,20 +73,18 @@ export default function Settings() {
   };
 
   if (error && !prefs) return <p className="mt-10 text-center text-danger font-semibold">{error}</p>;
-  if (!prefs) return <Spinner label="Loading your settings…" />;
+  if (!prefs) return <SkeletonPage />;
 
   const perm = permissionState();
   const iosNeedsInstall = isIOS() && !isStandalone();
 
   return (
-    <div className="pt-4 pb-10 flex flex-col gap-5 pop-in">
-      <section className="flex items-center gap-3">
-        <Mascot mood="idle" size={80} />
-        <div>
-          <h1 className="text-2xl font-extrabold leading-tight">Settings</h1>
-          <p className="text-muted font-semibold text-sm mt-0.5">One gentle nudge a day, at a time you choose.</p>
-        </div>
-      </section>
+    <Stagger className="pt-1 pb-6 flex flex-col gap-4">
+      <Item>
+        <PageHeader title="Settings" icon={<SettingsIcon size={20} />}
+          subtitle="One gentle nudge a day, at a time you choose."
+          action={<Mascot mood="idle" size={60} />} />
+      </Item>
 
       <ErrorNote message={error} />
       {note && <p className="text-sm font-extrabold text-success">{note}</p>}
@@ -195,6 +194,6 @@ export default function Settings() {
           )}
         </section>
       )}
-    </div>
+    </Stagger>
   );
 }
