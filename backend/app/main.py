@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .db import Base, SessionLocal, engine
 from .content import scheduler
-from .routers import auth, current_affairs, quiz, stats, topics
+from .routers import auth, current_affairs, exam, quiz, stats, topics
 from .seed import seed_demo_user, seed_questions
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -21,6 +21,14 @@ async def lifespan(app: FastAPI):
         # Lightweight forward-only migrations for columns added after the first release.
         await conn.execute(text("ALTER TABLE questions ADD COLUMN IF NOT EXISTS source_url VARCHAR(512)"))
         await conn.execute(text("ALTER TABLE questions ADD COLUMN IF NOT EXISTS source_ref VARCHAR(160)"))
+        for ddl in (
+            "ALTER TABLE quiz_sessions ADD COLUMN IF NOT EXISTS duration_seconds INTEGER",
+            "ALTER TABLE quiz_sessions ADD COLUMN IF NOT EXISTS expires_at TIMESTAMPTZ",
+            "ALTER TABLE quiz_sessions ADD COLUMN IF NOT EXISTS negative_marking DOUBLE PRECISION DEFAULT 0",
+            "ALTER TABLE quiz_sessions ADD COLUMN IF NOT EXISTS raw_score DOUBLE PRECISION DEFAULT 0",
+            "ALTER TABLE attempts ADD COLUMN IF NOT EXISTS marked_for_review BOOLEAN DEFAULT FALSE",
+        ):
+            await conn.execute(text(ddl))
     async with SessionLocal() as db:
         await seed_questions(db)
         await seed_demo_user(db)
@@ -39,6 +47,7 @@ app.include_router(auth.router)
 app.include_router(topics.router)
 app.include_router(quiz.router)
 app.include_router(stats.router)
+app.include_router(exam.router)
 app.include_router(current_affairs.router)
 
 

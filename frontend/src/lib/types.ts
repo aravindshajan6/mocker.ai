@@ -121,3 +121,49 @@ export type ActiveSession = { id: string; mode: string; topic: string | null; to
 export type CADay = { day: string; count: number; answered: number; session_id: string | null; finished: boolean; score: number | null };
 export type CARun = { day: string; status: string; provider: string; model: string; fetched: number; generated: number; inserted: number; message: string; finished_at: string | null };
 export type CurrentAffairs = { today: string; days: CADay[]; enabled: boolean; provider: string; has_key: boolean; last_run: CARun | null };
+
+export type ExamState = {
+  id: string;
+  questions: Question[];
+  answers: Record<number, number>;
+  marked: number[];
+  seconds_remaining: number;
+  duration_seconds: number;
+  total: number;
+  submitted: boolean;
+};
+
+export type ExamReviewRow = {
+  question_id: number;
+  number: number;
+  text: string;
+  options: string[];
+  selected_index: number | null;
+  correct_index: number;
+  is_correct: boolean;
+  skipped: boolean;
+  explanation: string;
+  topic: string;
+  source_ref: string | null;
+};
+
+export type ExamTopicRow = { topic: string; icon: string; total: number; correct: number; wrong: number; blank: number };
+
+export type ExamResult = {
+  id: string;
+  total: number;
+  attempted: number;
+  correct: number;
+  wrong: number;
+  blank: number;
+  raw_score: number;
+  marks_lost_to_negative: number;
+  accuracy: number;
+  percentage: number;
+  points: number;
+  time_taken_seconds: number;
+  per_topic: ExamTopicRow[];
+  guess_break_even: number;
+  coaching: string;
+  review: ExamReviewRow[];
+};

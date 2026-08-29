@@ -3,7 +3,7 @@ from __future__ import annotations
 import uuid
 from datetime import date, datetime, timezone
 
-from sqlalchemy import (JSON, Boolean, Date, DateTime, ForeignKey, Index, Integer, String, Text,
+from sqlalchemy import (JSON, Boolean, Date, DateTime, Float, ForeignKey, Index, Integer, String, Text,
                         UniqueConstraint)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -81,6 +81,11 @@ class QuizSession(Base):
     topic_id: Mapped[int | None] = mapped_column(ForeignKey("topics.id"), nullable=True)
     daily_date: Mapped[date | None] = mapped_column(Date, nullable=True)
     question_ids: Mapped[list] = mapped_column(JSON)
+    # Exam mode only: server-authoritative deadline so a client clock can't buy extra time.
+    duration_seconds: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    negative_marking: Mapped[float] = mapped_column(Float, default=0.0)
+    raw_score: Mapped[float] = mapped_column(Float, default=0.0)
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     score: Mapped[int] = mapped_column(Integer, default=0)
@@ -98,8 +103,9 @@ class Attempt(Base):
     session_id: Mapped[str] = mapped_column(ForeignKey("quiz_sessions.id", ondelete="CASCADE"), index=True)
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     question_id: Mapped[int] = mapped_column(ForeignKey("questions.id"), index=True)
-    selected_index: Mapped[int] = mapped_column(Integer)
+    selected_index: Mapped[int] = mapped_column(Integer)  # -1 = deliberately left blank (exam mode)
     is_correct: Mapped[bool] = mapped_column(Boolean)
+    marked_for_review: Mapped[bool] = mapped_column(Boolean, default=False)
     points: Mapped[int] = mapped_column(Integer, default=0)
     answered_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
