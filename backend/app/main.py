@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .db import Base, SessionLocal, engine
 from .content import scheduler
-from .routers import auth, current_affairs, exam, quiz, stats, topics
+from .routers import auth, current_affairs, exam, prefs, quiz, stats, topics
 from .seed import seed_demo_user, seed_questions
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -54,6 +54,7 @@ app.include_router(topics.router)
 app.include_router(quiz.router)
 app.include_router(stats.router)
 app.include_router(exam.router)
+app.include_router(prefs.router)
 app.include_router(current_affairs.router)
 
 

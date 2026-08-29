@@ -8,6 +8,7 @@ const tabs = [
   { href: "/", label: "Home", icon: "🏠" },
   { href: "/exam", label: "Exam", icon: "📝" },
   { href: "/progress", label: "Progress", icon: "📈" },
+  { href: "/settings", label: "Settings", icon: "⚙️" },
 ];
 
 export default function Shell({ children }: { children: React.ReactNode }) {
@@ -51,7 +52,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
       )}
       {!inQuiz && (
         <nav className="sm:hidden fixed bottom-0 inset-x-0 z-20 border-t border-line bg-surface/95 backdrop-blur pb-[env(safe-area-inset-bottom)]">
-          <div className="grid grid-cols-3 max-w-2xl mx-auto">
+          <div className="grid grid-cols-4 max-w-2xl mx-auto">
             {tabs.map((t) => (
               <Link key={t.href} href={t.href}
                 className={`flex flex-col items-center gap-0.5 py-2.5 text-xs font-bold ${pathname === t.href ? "text-primary" : "text-muted"}`}>

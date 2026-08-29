@@ -199,3 +199,15 @@ export type Insights = {
   enough_data: boolean;
   headline: string;
 };
+
+export type Prefs = {
+  reminders_enabled: boolean;
+  reminder_hour: number;
+  reminder_minute: number;
+  timezone: string;
+  push_devices: number;
+  vapid_public_key: string;
+  telegram_linked: boolean;
+  telegram_available: boolean;
+  telegram_link_url: string | null;
+};
