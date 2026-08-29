@@ -120,6 +120,38 @@ class Attempt(Base):
     __table_args__ = (UniqueConstraint("session_id", "question_id", name="uq_attempt_session_question"),)
 
 
+class AppConfig(Base):
+    """Small key/value store for server-generated secrets (currently the VAPID keypair)."""
+    __tablename__ = "app_config"
+    key: Mapped[str] = mapped_column(String(64), primary_key=True)
+    value: Mapped[str] = mapped_column(Text)
+
+
+class UserPrefs(Base):
+    __tablename__ = "user_prefs"
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
+    reminders_enabled: Mapped[bool] = mapped_column(Boolean, default=True)
+    # Local wall-clock time the learner picked, plus the zone it means. Stored apart so a user who
+    # travels keeps "19:00 my time" rather than drifting.
+    reminder_hour: Mapped[int] = mapped_column(Integer, default=19)
+    reminder_minute: Mapped[int] = mapped_column(Integer, default=0)
+    timezone: Mapped[str] = mapped_column(String(64), default="Asia/Kolkata")
+    telegram_chat_id: Mapped[str | None] = mapped_column(String(40), nullable=True)
+    telegram_link_code: Mapped[str | None] = mapped_column(String(16), nullable=True, index=True)
+    last_reminded_on: Mapped[date | None] = mapped_column(Date, nullable=True)
+
+
+class PushSubscription(Base):
+    __tablename__ = "push_subscriptions"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    endpoint: Mapped[str] = mapped_column(Text, unique=True)
+    p256dh: Mapped[str] = mapped_column(String(255))
+    auth: Mapped[str] = mapped_column(String(255))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    failures: Mapped[int] = mapped_column(Integer, default=0)
+
+
 class ReviewCard(Base):
     """FSRS scheduling state for one (user, question) pair — see services/srs.py."""
     __tablename__ = "review_cards"

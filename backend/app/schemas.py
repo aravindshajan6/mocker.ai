@@ -293,3 +293,28 @@ class InsightsOut(BaseModel):
     answered_total: int
     enough_data: bool
     headline: str
+
+
+class PrefsIn(BaseModel):
+    reminders_enabled: bool | None = None
+    reminder_hour: int | None = Field(default=None, ge=0, le=23)
+    reminder_minute: int | None = Field(default=None, ge=0, le=59)
+    timezone: str | None = None
+
+
+class PrefsOut(BaseModel):
+    reminders_enabled: bool
+    reminder_hour: int
+    reminder_minute: int
+    timezone: str
+    push_devices: int
+    vapid_public_key: str
+    telegram_linked: bool
+    telegram_available: bool
+    telegram_link_url: str | None
+
+
+class PushSubscribeIn(BaseModel):
+    endpoint: str
+    p256dh: str
+    auth: str

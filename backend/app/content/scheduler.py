@@ -13,6 +13,7 @@ from ..config import settings
 from ..db import SessionLocal
 from ..services.quiz import IST
 from .current_affairs import run_daily
+from .reminders import consume_telegram_links, run as run_reminders
 from .verify import run_audit
 
 log = logging.getLogger("scheduler")
@@ -77,8 +78,26 @@ async def audit_loop() -> None:
         await _audit_once()
 
 
+async def reminder_loop() -> None:
+    """Every 15 minutes, nudge whoever asked to be nudged around now and hasn't practised."""
+    if not settings.reminders_enabled:
+        log.info("reminders disabled")
+        return
+    await asyncio.sleep(20)
+    telegram_offset: int | None = None
+    while True:
+        try:
+            async with SessionLocal() as db:
+                await run_reminders(db)
+                _, telegram_offset = await consume_telegram_links(db, telegram_offset)
+        except Exception:  # noqa: BLE001
+            log.exception("reminder pass crashed")
+        await asyncio.sleep(15 * 60)
+
+
 def start() -> list[asyncio.Task]:
     return [
         asyncio.create_task(loop(), name="current-affairs-scheduler"),
         asyncio.create_task(audit_loop(), name="question-audit-scheduler"),
+        asyncio.create_task(reminder_loop(), name="reminder-scheduler"),
     ]

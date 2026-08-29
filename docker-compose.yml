@@ -34,6 +34,11 @@ services:
       VERIFY_HOUR_IST: ${VERIFY_HOUR_IST:-3}
       VERIFY_PER_NIGHT: ${VERIFY_PER_NIGHT:-400}
       VERIFY_MODEL: ${VERIFY_MODEL:-qwen/qwen3.8-27b}
+      REMINDERS_ENABLED: ${REMINDERS_ENABLED:-true}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_BOT_USERNAME: ${TELEGRAM_BOT_USERNAME:-}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:3001}
+      VAPID_SUBJECT: ${VAPID_SUBJECT:-mailto:hello@mocker.local}
       ADMIN_TOKEN: ${ADMIN_TOKEN:-}
       CORS_ORIGINS: http://localhost:3001
       DEMO_EMAIL: ${DEMO_EMAIL:-demo@mocker.app}

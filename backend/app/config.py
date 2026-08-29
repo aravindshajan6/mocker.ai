@@ -31,6 +31,12 @@ class Settings(BaseSettings):
     # "Explain more" — results are cached on the question forever, so this only guards runaways
     explain_daily_budget: int = 300
     explain_model: str = ""                # blank = the provider default
+    # Reminders
+    reminders_enabled: bool = True
+    vapid_subject: str = "mailto:hello@mocker.local"
+    telegram_bot_token: str = ""           # optional; from @BotFather
+    telegram_bot_username: str = ""        # used to build the deep link
+    public_base_url: str = "http://localhost:3001"
     # Demo account created on startup (set demo_password empty to disable)
     demo_email: str = "demo@mocker.app"
     demo_password: str = "demo1234"
