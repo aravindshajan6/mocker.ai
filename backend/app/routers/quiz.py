@@ -12,7 +12,8 @@ from ..models import Attempt, Question, QuizSession, Topic, User, UserStats, utc
 from ..schemas import (ActiveSessionOut, AnswerIn, AnswerOut, AttemptState, DailyOut, FinishOut, QuestionOut,
                        SessionOut, StartQuizIn)
 from ..services import scoring
-from ..services.quiz import daily_question_ids, effective_streak, pick_questions, today, touch_streak
+from ..services.quiz import (current_affairs_ids, daily_question_ids, effective_streak, pick_questions, today,
+                             touch_streak)
 
 router = APIRouter(prefix="/api/quiz", tags=["quiz"])
 
@@ -35,7 +36,7 @@ async def _session_out(db: AsyncSession, s: QuizSession) -> SessionOut:
         if qid in by_id:
             q, t = by_id[qid]
             questions.append(QuestionOut(id=q.id, text=q.text, options=q.options, difficulty=q.difficulty,
-                                         topic=t.name, topic_icon=t.icon))
+                                         topic=t.name, topic_icon=t.icon, published_at=q.published_at))
     attempts = (await db.execute(select(Attempt).where(Attempt.session_id == s.id).order_by(Attempt.id))).scalars().all()
     topic_name = None
     if s.topic_id:
@@ -45,7 +46,9 @@ async def _session_out(db: AsyncSession, s: QuizSession) -> SessionOut:
         attempts=[AttemptState(question_id=a.question_id, selected_index=a.selected_index, is_correct=a.is_correct,
                                correct_index=by_id[a.question_id][0].correct_index if a.question_id in by_id else 0,
                                explanation=by_id[a.question_id][0].explanation if a.question_id in by_id else "",
-                               points=a.points) for a in attempts],
+                               points=a.points,
+                               source_url=by_id[a.question_id][0].source_url if a.question_id in by_id else None)
+                  for a in attempts],
         score=s.score, correct=s.correct, finished=s.finished_at is not None,
     )
 
@@ -54,7 +57,8 @@ async def _session_out(db: AsyncSession, s: QuizSession) -> SessionOut:
 async def daily_status(user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
     day = today()
     ids = await daily_question_ids(db, day)
-    s = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id, QuizSession.daily_date == day)
+    s = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id, QuizSession.daily_date == day,
+                                                    QuizSession.mode == "daily")
                           .order_by(QuizSession.started_at.desc()))).scalars().first()
     return DailyOut(day=day, size=len(ids), done=bool(s and s.finished_at), session_id=s.id if s else None,
                     score=s.score if s and s.finished_at else None, correct=s.correct if s and s.finished_at else None)
@@ -92,11 +96,22 @@ async def start_quiz(data: StartQuizIn, user: User = Depends(current_user), db: 
     daily_date: date | None = None
     if data.mode == "daily":
         daily_date = today()
-        existing = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id,
+        existing = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id, QuizSession.mode == "daily",
                                                                 QuizSession.daily_date == daily_date))).scalars().first()
         if existing:
             return await _session_out(db, existing)  # resume (or view finished) — one daily per day
         ids = await daily_question_ids(db, daily_date)
+    elif data.mode == "current-affairs":
+        day = data.day or today()
+        existing = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id,
+                                                                QuizSession.mode == "current-affairs",
+                                                                QuizSession.daily_date == day))).scalars().first()
+        if existing:
+            return await _session_out(db, existing)  # one session per day per user; resumable
+        ids = await current_affairs_ids(db, day)
+        if not ids:
+            raise HTTPException(409, "No current-affairs questions for that day yet")
+        daily_date = day
     else:
         count = data.count or settings.topic_quiz_size
         if data.mode == "topic":
@@ -168,7 +183,8 @@ async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_u
     await db.commit()
 
     return AnswerOut(
-        is_correct=is_correct, correct_index=q.correct_index, explanation=q.explanation, points=pts, combo=combo,
+        is_correct=is_correct, correct_index=q.correct_index, explanation=q.explanation, source_url=q.source_url,
+        points=pts, combo=combo,
         score=s.score, correct=s.correct, answered=len(s.attempts) + 1, total=len(s.question_ids),
         streak=effective_streak(stats, day), streak_extended=extended,
     )

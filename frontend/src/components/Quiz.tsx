@@ -132,7 +132,7 @@ export default function Quiz({ id }: { id: string }) {
         <div className="flex items-center gap-2">
           <Mascot mood={mood} trigger={moodTick} size={72} />
           <div className="text-sm font-extrabold text-muted">
-            <div className="text-ink">{q.topic_icon} {q.topic}</div>
+            <div className="text-ink">{q.topic_icon} {q.topic}{q.published_at && <span className="text-muted font-bold"> · {new Date(q.published_at + "T00:00:00").toLocaleDateString(undefined, { day: "numeric", month: "short" })}</span>}</div>
             <div>{"★".repeat(q.difficulty)}{"☆".repeat(3 - q.difficulty)} <span className="opacity-70">{["Easy", "Medium", "Hard"][q.difficulty - 1]}</span></div>
           </div>
         </div>
@@ -169,6 +169,7 @@ export default function Quiz({ id }: { id: string }) {
               {result.is_correct ? PRAISE[moodTick % PRAISE.length] : CONSOLE[moodTick % CONSOLE.length]}
             </p>
             <p className="text-sm font-semibold mt-1 leading-relaxed">{result.explanation}</p>
+            {result.source_url && <a href={result.source_url} target="_blank" rel="noopener noreferrer" className="inline-block text-xs font-extrabold mt-2 text-primary underline underline-offset-2">Read the news source ↗</a>}
             {result.streak_extended && <p className="text-xs font-extrabold mt-2 text-ink/70">🔥 Streak extended to {result.streak} day{result.streak === 1 ? "" : "s"}!</p>}
           </div>
         )}

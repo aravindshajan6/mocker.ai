@@ -39,12 +39,14 @@ class QuestionOut(BaseModel):
     difficulty: int
     topic: str
     topic_icon: str
+    published_at: date | None = None
 
 
 class StartQuizIn(BaseModel):
-    mode: str = Field(pattern="^(daily|topic|mixed)$")
+    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs)$")
     topic: str | None = None
     count: int | None = Field(default=None, ge=3, le=30)
+    day: date | None = None  # current-affairs mode: which day's set (default today)
 
 
 class AttemptState(BaseModel):
@@ -54,6 +56,7 @@ class AttemptState(BaseModel):
     correct_index: int
     explanation: str
     points: int
+    source_url: str | None = None
 
 
 class SessionOut(BaseModel):
@@ -76,6 +79,7 @@ class AnswerOut(BaseModel):
     is_correct: bool
     correct_index: int
     explanation: str
+    source_url: str | None = None
     points: int
     combo: int
     score: int
@@ -160,3 +164,33 @@ class ActiveSessionOut(BaseModel):
     topic_icon: str | None
     answered: int
     total: int
+
+
+class CADay(BaseModel):
+    day: date
+    count: int
+    answered: int          # how many of that day's questions this user has answered
+    session_id: str | None # this user's session for that day, if any
+    finished: bool
+    score: int | None
+
+
+class CARun(BaseModel):
+    day: date
+    status: str
+    provider: str
+    model: str
+    fetched: int
+    generated: int
+    inserted: int
+    message: str
+    finished_at: datetime | None
+
+
+class CurrentAffairsOut(BaseModel):
+    today: date
+    days: list[CADay]      # last 7 days, newest first
+    enabled: bool
+    provider: str
+    has_key: bool
+    last_run: CARun | None

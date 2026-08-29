@@ -35,6 +35,7 @@ async def my_stats(user: User = Depends(current_user), db: AsyncSession = Depend
         last7.append(DayActivity(day=d, answered=r[1] if r else 0, correct=(r[2] or 0) if r else 0,
                                  points=(r[3] or 0) if r else 0))
     daily = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id, QuizSession.daily_date == day,
+                                                        QuizSession.mode == "daily",
                                                         QuizSession.finished_at.is_not(None)))).scalars().first()
     level, title, progress, to_next = scoring.level_for(stats.total_points)
     badges = await _badges(db, user.id, stats)

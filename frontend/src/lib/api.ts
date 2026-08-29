@@ -1,5 +1,6 @@
 import type {
-  ActiveSession, AnswerResult, Daily, FinishResult, HistoryRow, LeaderboardRow, QuizSession, Stats, Topic, User,
+  ActiveSession, AnswerResult, CurrentAffairs, Daily, FinishResult, HistoryRow, LeaderboardRow, QuizSession, Stats, Topic,
+  User,
 } from "./types";
 
 export class ApiError extends Error {
@@ -46,7 +47,8 @@ export const api = {
   topics: () => get<Topic[]>("/api/topics"),
   daily: () => get<Daily>("/api/quiz/daily"),
   active: () => get<ActiveSession[]>("/api/quiz/active"),
-  startQuiz: (data: { mode: "daily" | "topic" | "mixed"; topic?: string; count?: number }) => post<QuizSession>("/api/quiz/start", data),
+  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
+  currentAffairs: () => get<CurrentAffairs>("/api/current-affairs"),
   session: (id: string) => get<QuizSession>(`/api/quiz/${id}`),
   answer: (id: string, question_id: number, selected_index: number) => post<AnswerResult>(`/api/quiz/${id}/answer`, { question_id, selected_index }),
   finish: (id: string) => post<FinishResult>(`/api/quiz/${id}/finish`),

@@ -10,6 +10,17 @@ class Settings(BaseSettings):
     cookie_secure: bool = False
     data_dir: str = "data/questions"
     anthropic_api_key: str | None = None
+    # LLM used by the current-affairs generator. Providers: groq | gemini | openrouter | ollama | anthropic
+    llm_provider: str = "groq"
+    llm_api_key: str = ""
+    llm_model: str = ""          # empty = provider default (see content/llm.py)
+    llm_base_url: str = ""       # override for self-hosted / proxies
+    # Daily current-affairs job
+    current_affairs_enabled: bool = True
+    current_affairs_hour_ist: int = 6      # local (IST) hour to run each day
+    current_affairs_target: int = 15       # questions to aim for per day
+    current_affairs_days_back: int = 2     # how many days of news to consider
+    admin_token: str = ""                  # if set, enables POST /api/admin/* with X-Admin-Token
     # Demo account created on startup (set demo_password empty to disable)
     demo_email: str = "demo@mocker.app"
     demo_password: str = "demo1234"

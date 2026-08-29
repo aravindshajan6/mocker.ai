@@ -119,6 +119,7 @@ export default function Result({ id }: { id: string }) {
                 </p>
                 {!a.is_correct && <p className="text-sm font-bold text-success">✓ Correct: {q.options[a.correct_index]}</p>}
                 <p className="text-sm text-muted font-semibold mt-1">{a.explanation}</p>
+                {a.source_url && <a href={a.source_url} target="_blank" rel="noopener noreferrer" className="text-xs font-extrabold text-primary underline underline-offset-2">Read the news source ↗</a>}
               </div>
             );
           })}

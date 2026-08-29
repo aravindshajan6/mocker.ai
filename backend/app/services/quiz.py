@@ -32,6 +32,16 @@ async def pick_questions(db: AsyncSession, user_id: str, count: int, topic_id: i
     # Hand-authored ("seed") questions carry real explanations and are fact-checked, so serve them first;
     # imported banks act as backfill once the curated pool for this selection is exhausted.
     unseen_q = base.where(Question.id.not_in(seen_sub))
+    if topic_id is not None:
+        slug = (await db.execute(select(Topic.slug).where(Topic.id == topic_id))).scalar_one_or_none()
+        if slug == "current-affairs":
+            # News questions: newest first, no curated/imported split.
+            fresh = list((await db.execute(unseen_q.order_by(Question.published_at.desc(), Question.id.desc())
+                                           .limit(count))).scalars().all())
+            if len(fresh) >= count:
+                return fresh
+            ids = fresh
+            return ids + await _backfill_seen(db, user_id, base, ids, count - len(ids))
     curated = list((await db.execute(unseen_q.where(Question.source == "seed"))).scalars().all())
     random.shuffle(curated)
     ids = curated[:count]
@@ -40,21 +50,36 @@ async def pick_questions(db: AsyncSession, user_id: str, count: int, topic_id: i
         random.shuffle(imported)
         ids += imported[: count - len(ids)]
     if len(ids) < count:
-        # Fill with previously seen questions, least recently answered first.
-        last = (
-            select(Attempt.question_id, func.max(Attempt.answered_at).label("last"))
-            .where(Attempt.user_id == user_id)
-            .group_by(Attempt.question_id)
-            .subquery()
-        )
-        q = (
-            base.join(last, last.c.question_id == Question.id)
-            .where(Question.id.not_in(ids) if ids else True)
-            .order_by(last.c.last.asc())
-            .limit(count - len(ids))
-        )
-        ids += list((await db.execute(q)).scalars().all())
+        ids += await _backfill_seen(db, user_id, base, ids, count - len(ids))
     return ids
+
+
+async def _backfill_seen(db: AsyncSession, user_id: str, base, exclude: list[int], n: int) -> list[int]:
+    """Previously answered questions, least recently answered first."""
+    last = (
+        select(Attempt.question_id, func.max(Attempt.answered_at).label("last"))
+        .where(Attempt.user_id == user_id)
+        .group_by(Attempt.question_id)
+        .subquery()
+    )
+    q = (
+        base.join(last, last.c.question_id == Question.id)
+        .where(Question.id.not_in(exclude) if exclude else True)
+        .order_by(last.c.last.asc())
+        .limit(n)
+    )
+    return list((await db.execute(q)).scalars().all())
+
+
+async def current_affairs_ids(db: AsyncSession, day: date) -> list[int]:
+    """All news questions published on `day` (same set for every user), oldest id first."""
+    ca = (await db.execute(select(Topic.id).where(Topic.slug == "current-affairs"))).scalar_one_or_none()
+    if ca is None:
+        return []
+    return list((await db.execute(
+        select(Question.id).where(Question.topic_id == ca, Question.published_at == day, Question.is_active.is_(True))
+        .order_by(Question.id)
+    )).scalars().all())
 
 
 async def daily_question_ids(db: AsyncSession, day: date) -> list[int]:
@@ -63,10 +88,20 @@ async def daily_question_ids(db: AsyncSession, day: date) -> list[int]:
     if existing:
         return list(existing.question_ids)
     rng = random.Random(day.toordinal() * 7919)
-    topics = (await db.execute(select(Topic.id).where(Topic.is_active.is_(True)))).scalars().all()
+    ca_id = (await db.execute(select(Topic.id).where(Topic.slug == "current-affairs"))).scalar_one_or_none()
+    topics = [t for t in (await db.execute(select(Topic.id).where(Topic.is_active.is_(True)))).scalars().all()
+              if t != ca_id]
     rng.shuffle(topics)
     chosen: list[int] = []
     size = settings.daily_quiz_size
+    # Up to 3 fresh current-affairs questions from the last 3 days keep the challenge topical.
+    if ca_id is not None:
+        recent = list((await db.execute(
+            select(Question.id).where(Question.topic_id == ca_id, Question.is_active.is_(True),
+                                      Question.published_at >= day - timedelta(days=3))
+        )).scalars().all())
+        rng.shuffle(recent)
+        chosen += recent[:3]
     # Round-robin over topics so the daily set is varied.
     per_topic: dict[int, list[int]] = {}
     for t in topics:

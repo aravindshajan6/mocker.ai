@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Mascot, { type Mood } from "@/components/Mascot";
 import { Chip, ProgressBar, Spinner } from "@/components/ui";
 import { api, greeting } from "@/lib/api";
-import type { ActiveSession, Daily, Stats, Topic, User } from "@/lib/types";
+import type { ActiveSession, CurrentAffairs, Daily, Stats, Topic, User } from "@/lib/types";
 
 const NUDGES = [
   "One quiz a day keeps the exam fear away.",
@@ -23,19 +23,20 @@ export default function Home() {
   const [daily, setDaily] = useState<Daily | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
   const [active, setActive] = useState<ActiveSession[]>([]);
+  const [ca, setCa] = useState<CurrentAffairs | null>(null);
   const [starting, setStarting] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    Promise.all([api.me(), api.stats(), api.daily(), api.topics(), api.active()])
-      .then(([u, s, d, t, a]) => { setUser(u); setStats(s); setDaily(d); setTopics(t); setActive(a); })
+    Promise.all([api.me(), api.stats(), api.daily(), api.topics(), api.active(), api.currentAffairs()])
+      .then(([u, s, d, t, a, c]) => { setUser(u); setStats(s); setDaily(d); setTopics(t); setActive(a); setCa(c); })
       .catch((e) => setError(e.message));
   }, []);
 
-  const start = async (mode: "daily" | "topic" | "mixed", topic?: string) => {
-    setStarting(topic ?? mode);
+  const start = async (mode: "daily" | "topic" | "mixed" | "current-affairs", topic?: string, day?: string) => {
+    setStarting(topic ?? day ?? mode);
     try {
-      const s = await api.startQuiz({ mode, topic });
+      const s = await api.startQuiz({ mode, topic, day });
       router.push(`/quiz/${s.id}`);
     } catch (e) {
       setError((e as Error).message);
@@ -112,6 +113,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Current affairs */}
+      {ca && <CurrentAffairsCard ca={ca} starting={starting} onStart={(day) => start("current-affairs", undefined, day)} />}
+
       {/* Topics */}
       <section>
         <div className="flex items-baseline justify-between mb-2">
@@ -134,5 +138,54 @@ export default function Home() {
         </div>
       </section>
     </div>
+  );
+}
+
+
+function CurrentAffairsCard({ ca, starting, onStart }: { ca: CurrentAffairs; starting: string | null; onStart: (day: string) => void }) {
+  const todayRow = ca.days[0];
+  const hasToday = todayRow.count > 0;
+  const fmt = (d: string) => new Date(d + "T00:00:00").toLocaleDateString(undefined, { weekday: "short" });
+  const status = !hasToday
+    ? ca.last_run?.status === "error"
+      ? "Today\u2019s batch hit a snag \u2014 earlier days are still here."
+      : "Fresh questions arrive every morning around 6am."
+    : todayRow.finished
+      ? `Done! ${todayRow.score} pts today.`
+      : todayRow.answered > 0
+        ? `${todayRow.answered}/${todayRow.count} answered \u2014 pick up where you left off.`
+        : `${todayRow.count} new questions from today\u2019s news.`;
+  return (
+    <section className="card p-5">
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-xs font-extrabold uppercase tracking-wide text-accent">Current affairs</p>
+          <h2 className="text-xl font-extrabold mt-1">{hasToday ? "Today\u2019s news quiz" : "Recent news quizzes"}</h2>
+          <p className="text-sm text-muted font-semibold mt-1">{status}</p>
+        </div>
+        <span className="text-3xl">📰</span>
+      </div>
+      <div className="mt-4 grid grid-cols-7 gap-1.5">
+        {[...ca.days].reverse().map((d) => {
+          const isToday = d.day === ca.today;
+          const empty = d.count === 0;
+          const done = d.finished;
+          return (
+            <button key={d.day} disabled={empty || starting !== null} onClick={() => onStart(d.day)}
+              title={empty ? "No questions" : `${d.count} questions${done ? " \u00b7 done" : d.answered ? ` \u00b7 ${d.answered} answered` : ""}`}
+              className={`flex flex-col items-center rounded-xl py-2 text-[11px] font-extrabold transition disabled:opacity-40 ${done ? "bg-success-soft text-success" : d.answered ? "bg-primary-soft text-primary" : isToday && !empty ? "bg-accent-soft text-ink ring-2 ring-accent" : "bg-surface-2 text-muted"}`}>
+              <span>{fmt(d.day)}</span>
+              <span className="text-base leading-tight">{empty ? "\u00b7" : done ? "\u2713" : d.count}</span>
+            </button>
+          );
+        })}
+      </div>
+      {hasToday && (
+        <button className="btn btn-primary w-full mt-4" onClick={() => onStart(todayRow.day)} disabled={starting !== null || todayRow.finished}>
+          {starting === todayRow.day ? "Loading\u2026" : todayRow.finished ? "Today\u2019s set completed" : todayRow.answered > 0 ? "Continue today\u2019s quiz" : "Start today\u2019s news quiz"}
+        </button>
+      )}
+      {!ca.has_key && <p className="text-[11px] text-muted font-semibold mt-3">Running in basic mode \u2014 add an LLM key in .env for richer questions.</p>}
+    </section>
   );
 }

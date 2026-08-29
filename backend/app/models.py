@@ -68,6 +68,7 @@ class Question(Base):
     fingerprint: Mapped[str] = mapped_column(String(64), unique=True)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     published_at: Mapped[date | None] = mapped_column(Date, nullable=True)  # for current affairs
+    source_url: Mapped[str | None] = mapped_column(String(512), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
 
@@ -110,3 +111,19 @@ class DailyChallenge(Base):
     __tablename__ = "daily_challenges"
     day: Mapped[date] = mapped_column(Date, primary_key=True)
     question_ids: Mapped[list] = mapped_column(JSON)
+
+
+class ContentRun(Base):
+    """One execution of the current-affairs generator (for status display and idempotency)."""
+    __tablename__ = "content_runs"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    day: Mapped[date] = mapped_column(Date, index=True)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    provider: Mapped[str] = mapped_column(String(32), default="")
+    model: Mapped[str] = mapped_column(String(80), default="")
+    fetched: Mapped[int] = mapped_column(Integer, default=0)
+    generated: Mapped[int] = mapped_column(Integer, default=0)
+    inserted: Mapped[int] = mapped_column(Integer, default=0)
+    status: Mapped[str] = mapped_column(String(16), default="running")  # running | ok | error | skipped
+    message: Mapped[str] = mapped_column(Text, default="")

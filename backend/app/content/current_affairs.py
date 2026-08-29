@@ -1,30 +1,40 @@
 """Current-affairs question generator.
 
-Pulls recent Indian news from RSS feeds and asks Claude to turn them into exam-style MCQs,
-then writes them to data/questions/current-affairs.json (picked up by the seeder on restart).
+Pulls recent Indian news from RSS feeds and turns it into exam-style MCQs, inserted straight into
+the questions table (topic "current-affairs", published_at = run day). The scheduler in
+app.content.scheduler calls run_daily() every morning; it can also be triggered via
+POST /api/admin/current-affairs/run or from the CLI:
 
-Run inside the backend container:
-    python -m app.content.current_affairs            # fetch + generate (needs ANTHROPIC_API_KEY)
+    python -m app.content.current_affairs            # run now (uses configured LLM, or heuristics)
     python -m app.content.current_affairs --dry-run  # only show the headlines that would be used
 
-Feeds were verified on 2026-08-29. PIB has no working English RSS feed, and Wikinews was shut down
-in May 2026, so mainstream Indian outlets are used instead. Only facts are extracted; summaries are
-never republished verbatim.
+Generation path: configured LLM provider (see content/llm.py) -> heuristic gazetteer fallback.
+Feeds were verified on 2026-08-29. PIB has no working English RSS feed and Wikinews shut down in
+May 2026, so mainstream Indian outlets are used. Only facts are extracted; summaries are never
+republished verbatim.
 """
 from __future__ import annotations
 
 import argparse
-import hashlib
-import json
+import asyncio
 import logging
+import random
 import re
 import sys
-from datetime import datetime, timedelta, timezone
-from pathlib import Path
+from datetime import date, datetime, timedelta, timezone
 from time import mktime
 
 import feedparser
 import httpx
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from ..config import settings
+from ..models import ContentRun, Question, Topic, utcnow
+from ..seed import fingerprint
+from ..services.quiz import today
+from . import llm
+from .heuristic import generate_heuristic
 
 log = logging.getLogger("current-affairs")
 
@@ -50,7 +60,8 @@ TOPIC_SLUGS = [
 # Headlines that rarely yield durable, examinable facts.
 SKIP_PATTERNS = re.compile(
     r"\b(live updates?|watch:|opinion|editorial|horoscope|box office|review:|explained|memoir|booked|FIR|"
-    r"dies at|killed|murder|rape|accident|crash|arrested|held for|stabbed|suicide|assault|"
+    r"dies at|dead|death|killed|murder|rape|accident|crash|arrested|held for|stabbed|suicide|assault|injured|"
+    r"threatens|explode|end life|tested positive|rescued|saves|narrow escape|missing|drown|molest|"
     r"stock market|sensex today|nifty today|gold rate|petrol price|weather today)\b",
     re.I,
 )
@@ -65,7 +76,7 @@ RULES
 2. Produce at most one question per item, only where the item contains a clear, verifiable fact of the
    kind above. Skip items about crime, accidents, opinion, speculation or minor local matters by setting
    usable=false. It is fine to skip most items.
-3. The question must stand alone: include enough context (year, event, body) so it can be answered
+3. The question must stand alone: include enough context (month/year, event, body) so it can be answered
    without seeing the article. Do not test headline wording.
 4. Exactly 4 options, exactly one correct. Distractors must be the same entity type and comparable
    specificity (if the answer is an Indian state, all options are Indian states). Never use
@@ -75,7 +86,12 @@ RULES
 7. topic: the substantive GK topic slug the fact belongs to (e.g. an ISRO launch -> general-science,
    a Kerala appointment -> kerala, an RBI decision -> economy, a sports result -> sports).
 8. difficulty: 1 for one-step recall, 2 for two facts, 3 for numeric/multi-fact reasoning.
-9. Write in clear, neutral exam English."""
+9. Write in clear, neutral exam English.
+
+Respond with ONLY a JSON object of this exact shape:
+{"questions": [{"source_index": 0, "usable": true, "question": "...", "options": ["...","...","...","..."],
+  "answer": 0, "explanation": "...", "topic": "<slug>", "difficulty": 1}]}
+Include one entry per news item (usable=false entries may leave the other fields empty)."""
 
 OUTPUT_SCHEMA = {
     "type": "object",
@@ -88,13 +104,13 @@ OUTPUT_SCHEMA = {
                     "source_index": {"type": "integer"},
                     "usable": {"type": "boolean"},
                     "question": {"type": "string"},
-                    "options": {"type": "array", "items": {"type": "string"}, "minItems": 4, "maxItems": 4},
-                    "answer": {"type": "integer", "minimum": 0, "maximum": 3},
+                    "options": {"type": "array", "items": {"type": "string"}},
+                    "answer": {"type": "integer"},
                     "explanation": {"type": "string"},
-                    "topic": {"type": "string", "enum": TOPIC_SLUGS},
-                    "difficulty": {"type": "integer", "minimum": 1, "maximum": 3},
+                    "topic": {"type": "string"},
+                    "difficulty": {"type": "integer"},
                 },
-                "required": ["source_index", "usable", "question", "options", "answer", "explanation", "topic", "difficulty"],
+                "required": ["source_index", "usable"],
                 "additionalProperties": False,
             },
         }
@@ -118,7 +134,7 @@ def fetch_items(days: int = 2, max_items: int = 60) -> list[dict]:
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     items: list[dict] = []
     seen: set[str] = set()
-    headers = {"User-Agent": "MockerQuizBot/0.1 (+https://github.com/; study app; polite RSS reader)"}
+    headers = {"User-Agent": "MockerQuizBot/0.1 (study app; polite RSS reader)"}
     with httpx.Client(timeout=20, headers=headers, follow_redirects=True) as client:
         for name, url in FEEDS:
             try:
@@ -158,116 +174,151 @@ def fetch_items(days: int = 2, max_items: int = 60) -> list[dict]:
     return items[:max_items]
 
 
-def generate_with_claude(items: list[dict], model: str = "claude-opus-5", batch_size: int = 10) -> list[dict]:
-    """Ask Claude to produce MCQs; returns validated question dicts in our bank schema."""
-    import anthropic  # imported lazily so the app runs without the SDK configured
+def _validate(q: dict, src: dict | None) -> dict | None:
+    """Normalise one LLM-produced question into our bank schema, or None if it fails the gates."""
+    if not q.get("usable"):
+        return None
+    opts = [str(o).strip() for o in (q.get("options") or [])]
+    stem = str(q.get("question") or "").strip()
+    ans = q.get("answer")
+    if len(opts) != 4 or len(set(o.lower() for o in opts)) != 4 or not stem or not isinstance(ans, int):
+        return None
+    if not 0 <= ans < 4 or any(len(o) > 90 or not o for o in opts):
+        return None
+    if any(re.search(r"(all|none) of the above|\bboth\b", o, re.I) for o in opts):
+        return None
+    if opts[ans].lower() in stem.lower():
+        return None
+    if not 8 <= len(stem.split()) <= 45:
+        return None
+    topic = q.get("topic") if q.get("topic") in TOPIC_SLUGS else "world-gk"
+    diff = q.get("difficulty") if q.get("difficulty") in (1, 2, 3) else 1
+    return {
+        "topic": "current-affairs",
+        "question": stem,
+        "options": opts,
+        "answer": ans,
+        "explanation": str(q.get("explanation") or "").strip()[:300],
+        "difficulty": diff,
+        "tags": ["current-affairs", topic],
+        "source": "news",
+        "published_at": src["published"] if src else None,
+        "source_url": src["link"] if src else None,
+    }
 
-    client = anthropic.Anthropic()
+
+def generate_with_llm(items: list[dict], target: int, batch_size: int = 10) -> list[dict]:
+    """Ask the configured LLM for MCQs, batch by batch, until `target` questions are collected."""
+    cfg = llm.current_config()
     out: list[dict] = []
     for start in range(0, len(items), batch_size):
+        if len(out) >= target:
+            break
         batch = items[start:start + batch_size]
-        lines = []
-        for i, it in enumerate(batch):
-            lines.append(f"[{i}] ({it['published']}, {it['source']}) {it['title']}\n{it['summary'][:900]}")
+        lines = [f"[{i}] ({it['published']}, {it['source']}) {it['title']}\n{it['summary'][:900]}"
+                 for i, it in enumerate(batch)]
         user = "News items:\n\n" + "\n\n".join(lines) + f"\n\nAllowed topic slugs: {', '.join(TOPIC_SLUGS)}."
         try:
-            resp = client.messages.create(
-                model=model,
-                max_tokens=8000,
-                system=[{"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
-                messages=[{"role": "user", "content": user}],
-                output_config={"format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}},
-            )
-        except anthropic.RateLimitError as e:
-            log.warning("rate limited, stopping early: %s", e)
-            break
-        except anthropic.APIStatusError as e:
-            log.error("API error %s: %s", e.status_code, e.message)
+            data = llm.complete_json(SYSTEM_PROMPT, user, schema=OUTPUT_SCHEMA, cfg=cfg)
+        except llm.LLMError as e:
+            log.warning("LLM batch at %d failed: %s", start, e)
+            if "rate limited" in str(e) or "HTTP 401" in str(e) or "HTTP 403" in str(e) or "no API key" in str(e):
+                break  # no point retrying the remaining batches
             continue
-        if resp.stop_reason == "refusal":
-            log.warning("batch refused (%s)", getattr(resp.stop_details, "category", None))
-            continue
-        text = next((b.text for b in resp.content if b.type == "text"), "{}")
-        try:
-            data = json.loads(text)
-        except json.JSONDecodeError:
-            log.error("non-JSON response for batch at %d", start)
-            continue
-        for q in data.get("questions", []):
-            if not q.get("usable"):
-                continue
-            src = batch[q["source_index"]] if 0 <= q.get("source_index", -1) < len(batch) else None
-            opts = [str(o).strip() for o in q["options"]]
-            if len(set(opts)) != 4 or any(re.search(r"(all|none) of the above|both", o, re.I) for o in opts):
-                continue
-            if opts[q["answer"]].lower() in q["question"].lower():
-                continue
-            out.append({
-                "topic": "current-affairs",
-                "question": q["question"].strip(),
-                "options": opts,
-                "answer": int(q["answer"]),
-                "explanation": q["explanation"].strip(),
-                "difficulty": int(q["difficulty"]),
-                "tags": ["current-affairs", q["topic"]],
-                "source": "news",
-                "published_at": src["published"] if src else None,
-                "source_url": src["link"] if src else None,
-            })
-    return out
+        for q in data.get("questions", []) if isinstance(data, dict) else []:
+            idx = q.get("source_index", -1) if isinstance(q, dict) else -1
+            src = batch[idx] if isinstance(idx, int) and 0 <= idx < len(batch) else None
+            v = _validate(q, src)
+            if v:
+                out.append(v)
+    return out[:target]
 
 
-def merge_into_bank(new: list[dict], path: Path, keep_days: int = 90) -> int:
-    """Append new questions to the bank file, dropping duplicates and stale items."""
-    existing: list[dict] = []
-    if path.exists():
-        try:
-            existing = json.loads(path.read_text())
-        except json.JSONDecodeError:
-            existing = []
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=keep_days)).date().isoformat()
-    kept = [q for q in existing if (q.get("published_at") or "9999") >= cutoff]
-    fps = {hashlib.sha256(re.sub(r"\W+", " ", q["question"].lower()).strip().encode()).hexdigest() for q in kept}
-    added = 0
-    for q in new:
-        fp = hashlib.sha256(re.sub(r"\W+", " ", q["question"].lower()).strip().encode()).hexdigest()
-        if fp in fps:
-            continue
-        fps.add(fp)
-        kept.append(q)
-        added += 1
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(kept, ensure_ascii=False, indent=2))
-    return added
+async def run_daily(db: AsyncSession, *, day: date | None = None, force: bool = False,
+                    target: int | None = None) -> ContentRun:
+    """Fetch news, generate questions and insert them for `day` (default: today, IST).
+
+    Idempotent per day unless force=True: a second call on the same day is recorded as 'skipped'.
+    Blocking network/LLM work runs in a thread so the event loop stays responsive.
+    """
+    day = day or today()
+    target = target or settings.current_affairs_target
+    if not force:
+        prior = (await db.execute(select(ContentRun).where(ContentRun.day == day, ContentRun.status == "ok"))).scalars().first()
+        if prior:
+            run = ContentRun(day=day, status="skipped", message="already generated today", finished_at=utcnow())
+            db.add(run)
+            await db.commit()
+            return run
+
+    cfg = llm.current_config()
+    run = ContentRun(day=day, provider=cfg.provider if cfg.available else "heuristic", model=cfg.model if cfg.available else "")
+    db.add(run)
+    await db.commit()
+    try:
+        items = await asyncio.to_thread(fetch_items, settings.current_affairs_days_back, 80)
+        run.fetched = len(items)
+        questions: list[dict] = []
+        if cfg.available:
+            questions = await asyncio.to_thread(generate_with_llm, items, target)
+        if not questions:
+            questions = generate_heuristic(items, max_questions=target)
+            run.provider = "heuristic" if not cfg.available else f"{cfg.provider}->heuristic"
+        run.generated = len(questions)
+        random.shuffle(questions)  # insertion order must not leak the answer-position pattern
+
+        topic_id = (await db.execute(select(Topic.id).where(Topic.slug == "current-affairs"))).scalar_one()
+        known = set((await db.execute(select(Question.fingerprint))).scalars().all())
+        inserted = 0
+        for q in questions:
+            fp = fingerprint(q["question"])
+            if fp in known:
+                continue
+            known.add(fp)
+            db.add(Question(
+                topic_id=topic_id, text=q["question"], options=q["options"], correct_index=q["answer"],
+                explanation=q["explanation"], difficulty=q["difficulty"], tags=q["tags"], source=q["source"],
+                fingerprint=fp, published_at=day, source_url=q.get("source_url"),
+            ))
+            inserted += 1
+        run.inserted = inserted
+        run.status = "ok"
+        run.message = f"{inserted} questions added for {day.isoformat()}"
+    except Exception as e:  # noqa: BLE001
+        log.exception("current-affairs run failed")
+        run.status = "error"
+        run.message = f"{type(e).__name__}: {e}"[:500]
+    run.finished_at = utcnow()
+    await db.commit()
+    log.info("current-affairs run %s: %s", run.status, run.message)
+    return run
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--days", type=int, default=2, help="how many days back to look (default 2)")
-    ap.add_argument("--max-items", type=int, default=60)
-    ap.add_argument("--model", default="claude-opus-5")
     ap.add_argument("--dry-run", action="store_true", help="fetch and print headlines only")
-    ap.add_argument("--out", default=None, help="output file (default: <DATA_DIR>/current-affairs.json)")
+    ap.add_argument("--force", action="store_true", help="generate even if today's run already succeeded")
+    ap.add_argument("--target", type=int, default=None)
+    ap.add_argument("--max-items", type=int, default=20)
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
-    items = fetch_items(days=args.days, max_items=args.max_items)
-    log.info("fetched %d candidate news items", len(items))
     if args.dry_run:
+        items = fetch_items(days=settings.current_affairs_days_back, max_items=args.max_items)
+        cfg = llm.current_config()
+        print(f"provider={cfg.provider} model={cfg.model} key={'yes' if cfg.available else 'no'}")
         for it in items:
             print(f"- [{it['published']}] {it['source']}: {it['title']}  ({len(it['summary'])} chars)")
         return 0
 
-    from ..config import settings
-    if not settings.anthropic_api_key:
-        log.error("ANTHROPIC_API_KEY is not set; cannot generate questions. Use --dry-run to inspect feeds.")
-        return 2
-    questions = generate_with_claude(items, model=args.model)
-    log.info("generated %d usable questions", len(questions))
-    out = Path(args.out) if args.out else Path(settings.data_dir) / "current-affairs.json"
-    added = merge_into_bank(questions, out)
-    log.info("wrote %s (+%d new). Restart the backend to load them.", out, added)
-    return 0
+    async def _go():
+        from ..db import SessionLocal
+        async with SessionLocal() as db:
+            run = await run_daily(db, force=args.force, target=args.target)
+            print(f"{run.status}: {run.message} (provider={run.provider}, fetched={run.fetched}, generated={run.generated})")
+            return 0 if run.status in ("ok", "skipped") else 1
+
+    return asyncio.run(_go())
 
 
 if __name__ == "__main__":

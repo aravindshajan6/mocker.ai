@@ -53,9 +53,17 @@ data/validate.py        validator for question files
 * `data/questions/<topic>.json` — hand-authored, fact-checked banks (~1,150 questions across 11 topics).
 * `data/questions/milu-*.json` — imported from [MILU](https://huggingface.co/datasets/murthyrudra/milu-cleaned)
   (CC-BY-4.0, arXiv:2411.02538) after strict filtering. Re-run with `data/importers/milu.py`.
-* Current affairs — `python -m app.content.current_affairs` inside the backend container pulls recent Indian news
-  from RSS (PIB, The Hindu, ...) and, if `ANTHROPIC_API_KEY` is set, asks Claude to write exam-style MCQs
-  which are written to `data/questions/current-affairs.json` and picked up on the next backend restart.
+* **Current affairs — generated daily.** A scheduler inside the backend runs every morning at 06:00 IST
+  (`CURRENT_AFFAIRS_HOUR_IST`), fetches Indian news from RSS (Deccan Herald, The Hindu incl. Kerala, Onmanorama,
+  Mathrubhumi, TOI), turns it into exam-style MCQs and inserts them straight into the database — no restart.
+  * Generator: the LLM configured in `.env` (`LLM_PROVIDER` = `groq` (free) | `gemini` | `openrouter` |
+    `ollama` | `anthropic`, with `LLM_API_KEY`), falling back to a dependency-free gazetteer generator
+    (fill-in-the-blank on states/districts/organisations/numbers) when no key is set or the provider fails.
+  * In the app: a "Today's news quiz" card with a 7-day strip, up to 3 fresh news questions mixed into the daily
+    challenge, a *Current Affairs* practice topic (newest first) and "Read the news source" links.
+  * Run it by hand: `docker compose exec backend python -m app.content.current_affairs --force`, or with
+    `ADMIN_TOKEN` set: `curl -X POST "http://localhost:3001/api/admin/current-affairs/run?wait=true&force=true" -H "X-Admin-Token: $ADMIN_TOKEN"`.
+    `GET /api/current-affairs` shows the last run's status.
 
 Add your own questions: drop a JSON file into `data/questions/` following the schema, run
 `python3 data/validate.py data/questions/yourfile.json`, then `docker compose restart backend`.

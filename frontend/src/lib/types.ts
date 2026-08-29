@@ -17,6 +17,7 @@ export type Question = {
   difficulty: number;
   topic: string;
   topic_icon: string;
+  published_at: string | null;
 };
 
 export type AttemptState = {
@@ -26,11 +27,12 @@ export type AttemptState = {
   correct_index: number;
   explanation: string;
   points: number;
+  source_url: string | null;
 };
 
 export type QuizSession = {
   id: string;
-  mode: "daily" | "topic" | "mixed";
+  mode: "daily" | "topic" | "mixed" | "current-affairs";
   topic: string | null;
   questions: Question[];
   attempts: AttemptState[];
@@ -43,6 +45,7 @@ export type AnswerResult = {
   is_correct: boolean;
   correct_index: number;
   explanation: string;
+  source_url: string | null;
   points: number;
   combo: number;
   score: number;
@@ -111,3 +114,7 @@ export type HistoryRow = {
 
 export type LeaderboardRow = { name: string; points: number; is_me: boolean };
 export type ActiveSession = { id: string; mode: string; topic: string | null; topic_icon: string | null; answered: number; total: number };
+
+export type CADay = { day: string; count: number; answered: number; session_id: string | null; finished: boolean; score: number | null };
+export type CARun = { day: string; status: string; provider: string; model: string; fetched: number; generated: number; inserted: number; message: string; finished_at: string | null };
+export type CurrentAffairs = { today: string; days: CADay[]; enabled: boolean; provider: string; has_key: boolean; last_run: CARun | null };
