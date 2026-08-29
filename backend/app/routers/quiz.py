@@ -9,8 +9,9 @@ from ..auth import current_user
 from ..config import settings
 from ..db import get_db
 from ..models import Attempt, Question, QuizSession, ReviewCard, Topic, User, UserStats, utcnow
-from ..schemas import (ActiveSessionOut, AnswerIn, AnswerOut, AttemptState, DailyOut, FinishOut, QuestionOut,
-                       SessionOut, StartQuizIn)
+from ..content.explain import ExplainUnavailable, explain
+from ..schemas import (ActiveSessionOut, AnswerIn, AnswerOut, AttemptState, DailyOut, ExplainOut, FinishOut,
+                       QuestionOut, SessionOut, StartQuizIn)
 from ..services import scoring, srs
 from ..services.quiz import (current_affairs_ids, due_question_ids, effective_streak, personal_daily_ids,
                              pick_questions, today, touch_streak)
@@ -64,6 +65,25 @@ async def daily_status(user: User = Depends(current_user), db: AsyncSession = De
                           .order_by(QuizSession.started_at.desc()))).scalars().first()
     return DailyOut(day=day, size=len(ids), done=bool(s and s.finished_at), session_id=s.id if s else None,
                     score=s.score if s and s.finished_at else None, correct=s.correct if s and s.finished_at else None)
+
+
+@router.post("/question/{question_id}/explain", response_model=ExplainOut)
+async def explain_question(question_id: int, user: User = Depends(current_user),
+                           db: AsyncSession = Depends(get_db)):
+    """A deeper explanation with a memory hook. Only available once the user has answered it."""
+    q = await db.get(Question, question_id)
+    if not q:
+        raise HTTPException(404, "Question not found")
+    seen = (await db.execute(select(Attempt.id).where(Attempt.user_id == user.id,
+                                                       Attempt.question_id == question_id).limit(1))).scalar()
+    if not seen:
+        raise HTTPException(403, "Answer the question first")
+    cached = bool(q.explanation_long)
+    try:
+        text = await explain(db, q)
+    except ExplainUnavailable as e:
+        raise HTTPException(503, str(e)) from e
+    return ExplainOut(question_id=question_id, explanation=text, cached=cached)
 
 
 @router.get("/active", response_model=list[ActiveSessionOut])

@@ -27,6 +27,9 @@ export default function Quiz({ id }: { id: string }) {
   const [moodTick, setMoodTick] = useState(0);
   const [combo, setCombo] = useState(0);
   const [showQuit, setShowQuit] = useState(false);
+  const [deeper, setDeeper] = useState<string | null>(null);
+  const [deeperBusy, setDeeperBusy] = useState(false);
+  const [deeperError, setDeeperError] = useState<string | null>(null);
   const shownAt = useRef<number>(0);
   const [score, setScore] = useState(0);
 
@@ -88,6 +91,8 @@ export default function Quiz({ id }: { id: string }) {
     shownAt.current = Date.now();
     setIndex(index + 1);
     setSelected(null);
+    setDeeper(null);
+    setDeeperError(null);
     setResult(null);
     setPhase("answering");
     setMood("think");
@@ -179,6 +184,28 @@ export default function Quiz({ id }: { id: string }) {
             {result.source_ref && <p className="text-xs font-bold mt-2 text-ink/70">From the official Kerala PSC paper · {result.source_ref}</p>}
             {result.source_url && <a href={result.source_url} target="_blank" rel="noopener noreferrer" className="inline-block text-xs font-extrabold mt-2 text-primary underline underline-offset-2">{result.source_ref ? "Open the official paper ↗" : "Read the news source ↗"}</a>}
             {result.streak_extended && <p className="text-xs font-extrabold mt-2 text-ink/70">🔥 Streak extended to {result.streak} day{result.streak === 1 ? "" : "s"}!</p>}
+
+            {deeper ? (
+              <div className="mt-3 pt-3 border-t border-ink/10 whitespace-pre-line text-sm font-semibold leading-relaxed pop-in">{deeper}</div>
+            ) : (
+              <button
+                className="mt-3 text-xs font-extrabold text-primary underline underline-offset-2 disabled:opacity-50"
+                disabled={deeperBusy}
+                onClick={async () => {
+                  setDeeperBusy(true);
+                  setDeeperError(null);
+                  try {
+                    setDeeper((await api.explain(q.id)).explanation);
+                  } catch (e) {
+                    setDeeperError((e as Error)?.message || "Could not load a deeper explanation.");
+                  } finally {
+                    setDeeperBusy(false);
+                  }
+                }}>
+                {deeperBusy ? "Thinking…" : "💡 Explain this more"}
+              </button>
+            )}
+            {deeperError && <p className="mt-2 text-xs font-bold text-danger">{deeperError}</p>}
           </div>
         )}
 

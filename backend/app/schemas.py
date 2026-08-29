@@ -263,3 +263,9 @@ class ReviewDueOut(BaseModel):
     learning: int          # questions seen at least once and being scheduled
     next_due_at: datetime | None
     retention: float | None  # share of due reviews answered correctly, last 30 days
+
+
+class ExplainOut(BaseModel):
+    question_id: int
+    explanation: str
+    cached: bool
