@@ -1,6 +1,6 @@
 import type {
-  ActiveSession, AnswerResult, CurrentAffairs, Daily, FinishResult, HistoryRow, LeaderboardRow, QuizSession, Stats, Topic,
-  User,
+  ActiveSession, AnswerResult, CurrentAffairs, Daily, ExamResult, ExamState, FinishResult, HistoryRow, LeaderboardRow,
+  QuizSession, Stats, Topic, User,
 } from "./types";
 
 export class ApiError extends Error {
@@ -68,6 +68,12 @@ export const api = {
   answer: (id: string, question_id: number, selected_index: number) => post<AnswerResult>(`/api/quiz/${id}/answer`, { question_id, selected_index }),
   finish: (id: string) => post<FinishResult>(`/api/quiz/${id}/finish`),
   abandon: (id: string) => post<{ ok: boolean }>(`/api/quiz/${id}/abandon`),
+  startExam: (data: { count?: number; duration_minutes?: number; topic?: string }) => post<ExamState>("/api/exam/start", data),
+  currentExam: () => get<ExamState | null>("/api/exam/current"),
+  exam: (id: string) => get<ExamState>(`/api/exam/${id}`),
+  saveExamAnswer: (id: string, question_id: number, selected_index: number, marked_for_review: boolean) =>
+    post<{ ok: boolean; answered: number; seconds_remaining: number }>(`/api/exam/${id}/answer`, { question_id, selected_index, marked_for_review }),
+  submitExam: (id: string) => post<ExamResult>(`/api/exam/${id}/submit`),
   stats: () => get<Stats>("/api/me/stats"),
   history: () => get<HistoryRow[]>("/api/me/history"),
   leaderboard: () => get<LeaderboardRow[]>("/api/me/leaderboard"),

@@ -119,6 +119,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Exam mode */}
+      <Link href="/exam" className="card p-4 flex items-center gap-3 transition hover:-translate-y-0.5">
+        <span className="text-2xl">📝</span>
+        <div className="flex-1">
+          <p className="font-extrabold">Take a full mock exam</p>
+          <p className="text-sm text-muted font-semibold">100 questions, 75 minutes, 1/3 negative marking — the real format.</p>
+        </div>
+        <span className="text-sm font-extrabold text-primary">→</span>
+      </Link>
+
       {/* Current affairs */}
       {ca && <CurrentAffairsCard ca={ca} starting={starting} onStart={(day) => start("current-affairs", undefined, day)} />}
 

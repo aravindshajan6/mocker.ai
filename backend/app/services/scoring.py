@@ -85,3 +85,26 @@ BADGE_META = {
     "sharp-shooter": ("Sharp Shooter", "80%+ accuracy over 50 questions", "🎯"),
     "thousand-points": ("Point Collector", "Earned 1,000 points", "💎"),
 }
+
+
+# --- Exam mode -------------------------------------------------------------
+# Kerala PSC objective papers: 1 mark per correct answer, 1/3 deducted per wrong answer,
+# nothing deducted for a blank. Source: the instruction block printed on the question booklet.
+NEGATIVE_MARK = 1.0 / 3.0
+
+
+def exam_raw_score(correct: int, wrong: int, penalty: float = NEGATIVE_MARK) -> float:
+    """Marks as the Commission would compute them."""
+    return round(correct - wrong * penalty, 4)
+
+
+def exam_points(correct: int, wrong: int, total: int) -> int:
+    """App points for an exam attempt — mirrors the real penalty so the incentive matches."""
+    return max(0, round(correct * 10 - wrong * 10 * NEGATIVE_MARK))
+
+
+def guess_break_even(options: int = 4, penalty: float = NEGATIVE_MARK) -> float:
+    """Expected marks from a blind guess. At 4 options and a 1/3 penalty this is exactly 0,
+    which is the single most useful fact about negative marking: eliminating even one option
+    makes guessing profitable, while guessing with no information is a coin flip on your score."""
+    return round((1 / options) - (1 - 1 / options) * penalty, 4)

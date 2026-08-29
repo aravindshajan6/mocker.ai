@@ -50,6 +50,63 @@ class StartQuizIn(BaseModel):
     day: date | None = None  # current-affairs mode: which day's set (default today)
 
 
+class StartExamIn(BaseModel):
+    """Kerala PSC prelims by default: 100 questions, 75 minutes, 1/3 negative marking."""
+    count: int = Field(default=100, ge=10, le=200)
+    duration_minutes: int = Field(default=75, ge=5, le=240)
+    topic: str | None = None  # optional: a single-topic mock
+
+
+class SaveAnswerIn(BaseModel):
+    question_id: int
+    selected_index: int = Field(ge=-1, le=3)  # -1 = leave blank
+    marked_for_review: bool = False
+
+
+class ExamStateOut(BaseModel):
+    id: str
+    questions: list[QuestionOut]
+    answers: dict[int, int]              # question_id -> selected index (-1 = blank)
+    marked: list[int]
+    seconds_remaining: int
+    duration_seconds: int
+    total: int
+    submitted: bool
+
+
+class ExamQuestionReview(BaseModel):
+    question_id: int
+    number: int
+    text: str
+    options: list[str]
+    selected_index: int | None
+    correct_index: int
+    is_correct: bool
+    skipped: bool
+    explanation: str
+    topic: str
+    source_ref: str | None
+
+
+class ExamResultOut(BaseModel):
+    id: str
+    total: int
+    attempted: int
+    correct: int
+    wrong: int
+    blank: int
+    raw_score: float
+    marks_lost_to_negative: float
+    accuracy: float
+    percentage: float
+    points: int
+    time_taken_seconds: int
+    per_topic: list[dict]
+    guess_break_even: float
+    coaching: str
+    review: list[ExamQuestionReview]
+
+
 class AttemptState(BaseModel):
     question_id: int
     selected_index: int
