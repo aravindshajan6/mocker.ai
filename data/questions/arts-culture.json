@@ -1,0 +1,1802 @@
+[
+  {
+    "topic": "arts-culture",
+    "question": "Bharatanatyam, one of the oldest classical dance forms of India, originated in which state?",
+    "options": [
+      "Karnataka",
+      "Kerala",
+      "Tamil Nadu",
+      "Andhra Pradesh"
+    ],
+    "answer": 2,
+    "explanation": "Bharatanatyam evolved from the Sadir dance of the temple devadasis of Tamil Nadu and was revived in the 20th century by Rukmini Devi Arundale and E. Krishna Iyer.",
+    "difficulty": 1,
+    "tags": [
+      "classical-dance",
+      "tamil-nadu"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Kathakali, a dance-drama noted for its elaborate green facial make-up and towering headgear, belongs to which state?",
+    "options": [
+      "Kerala",
+      "Karnataka",
+      "Odisha",
+      "Assam"
+    ],
+    "answer": 0,
+    "explanation": "Kathakali developed in Kerala in the 17th century and enacts stories from the Ramayana and Mahabharata through mudras and facial expression; its make-up types include Pacha, Kathi, Thadi, Kari and Minukku.",
+    "difficulty": 1,
+    "tags": [
+      "classical-dance",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Kuchipudi, named after a village in the Krishna district, is the classical dance of which state?",
+    "options": [
+      "Telangana",
+      "Andhra Pradesh",
+      "Maharashtra",
+      "Tamil Nadu"
+    ],
+    "answer": 1,
+    "explanation": "Kuchipudi takes its name from the village Kuchelapuram in Andhra Pradesh; the 17th-century saint Siddhendra Yogi is credited with shaping it into a dance-drama tradition.",
+    "difficulty": 1,
+    "tags": [
+      "classical-dance",
+      "andhra-pradesh"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The classical dance form Odissi, marked by the tribhanga posture and sculpturesque poses, belongs to which state?",
+    "options": [
+      "West Bengal",
+      "Bihar",
+      "Jharkhand",
+      "Odisha"
+    ],
+    "answer": 3,
+    "explanation": "Odissi grew out of the maharis (temple dancers) of the Jagannath temple at Puri in Odisha, and its poses echo the sculptures of the Konark and Bhubaneswar temples.",
+    "difficulty": 1,
+    "tags": [
+      "classical-dance",
+      "odisha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which classical dance form is built around the Ras Leela of Radha and Krishna and uses a drum called the pung?",
+    "options": [
+      "Sattriya",
+      "Manipuri",
+      "Mohiniyattam",
+      "Kathak"
+    ],
+    "answer": 1,
+    "explanation": "Manipuri dance of Manipur is devotional and gentle, with the Ras Leela as its central theme; male performers play the pung in the vigorous Pung Cholom.",
+    "difficulty": 2,
+    "tags": [
+      "classical-dance",
+      "manipur"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Sattriya, recognised as a classical dance form in 2000, originated in the monasteries (satras) of which state?",
+    "options": [
+      "Assam",
+      "Tripura",
+      "Meghalaya",
+      "Nagaland"
+    ],
+    "answer": 0,
+    "explanation": "Sattriya was introduced in the 15th century by the Vaishnavite saint Srimanta Sankaradeva as part of the Bhakti movement in Assam and was performed by monks (bhokots) in satras.",
+    "difficulty": 2,
+    "tags": [
+      "classical-dance",
+      "assam"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Mohiniyattam, literally the dance of the enchantress, is a solo classical dance of which state?",
+    "options": [
+      "Tamil Nadu",
+      "Karnataka",
+      "Kerala",
+      "Puducherry"
+    ],
+    "answer": 2,
+    "explanation": "Mohiniyattam is a graceful lasya dance of Kerala performed by women in off-white gold-bordered costume; Swathi Thirunal and later Kalamandalam Kalyanikutty Amma helped revive it.",
+    "difficulty": 1,
+    "tags": [
+      "classical-dance",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which classical dance form is famous for fast footwork (tatkar) and chakkars, and has Lucknow, Jaipur and Banaras gharanas?",
+    "options": [
+      "Odissi",
+      "Kuchipudi",
+      "Bharatanatyam",
+      "Kathak"
+    ],
+    "answer": 3,
+    "explanation": "Kathak is the classical dance of North India; it absorbed Persian influences in the Mughal courts and is the only Indian classical dance with distinct gharanas.",
+    "difficulty": 1,
+    "tags": [
+      "classical-dance",
+      "kathak"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Natya Shastra, the oldest treatise on Indian dramaturgy and dance, is attributed to whom?",
+    "options": [
+      "Bharata Muni",
+      "Nandikeshvara",
+      "Abhinavagupta",
+      "Matanga"
+    ],
+    "answer": 0,
+    "explanation": "The Natya Shastra, ascribed to Bharata Muni, deals with drama, dance, music and the theory of rasa, and is the source of the name Bharatanatyam.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-texts",
+      "classical-dance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Abhinaya Darpana, a classic manual on gestures and hand mudras used in Indian dance, was written by",
+    "options": [
+      "Bharata Muni",
+      "Nandikeshvara",
+      "Jayadeva",
+      "Sarangadeva"
+    ],
+    "answer": 1,
+    "explanation": "Nandikeshvara's Abhinaya Darpana, the Mirror of Gesture, codifies hasta mudras and head, eye and neck movements, and is a key text in Bharatanatyam training.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-texts",
+      "classical-dance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Kalakshetra, the famous institution for Bharatanatyam at Chennai, was founded in 1936 by",
+    "options": [
+      "Balasaraswati",
+      "Yamini Krishnamurthy",
+      "Rukmini Devi Arundale",
+      "Padma Subrahmanyam"
+    ],
+    "answer": 2,
+    "explanation": "Rukmini Devi Arundale founded Kalakshetra to teach Bharatanatyam in a gurukula setting and led the movement that took the dance from the temple to the public stage.",
+    "difficulty": 2,
+    "tags": [
+      "classical-dance",
+      "institutions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Pandit Birju Maharaj was a doyen of which classical dance form?",
+    "options": [
+      "Odissi",
+      "Kathakali",
+      "Manipuri",
+      "Kathak"
+    ],
+    "answer": 3,
+    "explanation": "Birju Maharaj belonged to the Kalka-Bindadin (Lucknow) gharana of Kathak and also choreographed dances for films such as Devdas and Bajirao Mastani.",
+    "difficulty": 2,
+    "tags": [
+      "kathak",
+      "personalities"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Guru Kelucharan Mohapatra is remembered as the legendary exponent of which dance form?",
+    "options": [
+      "Odissi",
+      "Sattriya",
+      "Kuchipudi",
+      "Mohiniyattam"
+    ],
+    "answer": 0,
+    "explanation": "Kelucharan Mohapatra, a Padma Vibhushan awardee, reconstructed and popularised Odissi in the 20th century and trained dancers such as Sanjukta Panigrahi and Sonal Mansingh.",
+    "difficulty": 2,
+    "tags": [
+      "odissi",
+      "personalities"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Koodiyattam, the Sanskrit theatre tradition of Kerala, is historically significant because it was",
+    "options": [
+      "the first Indian art form to be broadcast on radio",
+      "the first Indian art form declared a UNESCO Masterpiece of Intangible Heritage",
+      "the first dance form taught at an Indian university",
+      "the first art form to be given a national academy"
+    ],
+    "answer": 1,
+    "explanation": "In 2001 UNESCO proclaimed Koodiyattam a Masterpiece of the Oral and Intangible Heritage of Humanity, the first Indian art form to receive that recognition.",
+    "difficulty": 3,
+    "tags": [
+      "kerala",
+      "unesco"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Bhangra, the vigorous harvest dance performed to the dhol, is the folk dance of which state?",
+    "options": [
+      "Haryana",
+      "Himachal Pradesh",
+      "Punjab",
+      "Rajasthan"
+    ],
+    "answer": 2,
+    "explanation": "Bhangra is a Punjabi folk dance traditionally linked to the Baisakhi harvest festival; its female counterpart is Giddha.",
+    "difficulty": 1,
+    "tags": [
+      "folk-dance",
+      "punjab"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Garba and Dandiya Raas, performed during Navratri, are folk dances of which state?",
+    "options": [
+      "Maharashtra",
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Gujarat"
+    ],
+    "answer": 3,
+    "explanation": "Garba is danced in circles around an earthen lamp-pot called garbo, representing the goddess, and is central to Navratri celebrations in Gujarat.",
+    "difficulty": 1,
+    "tags": [
+      "folk-dance",
+      "gujarat"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Chhau dance, a martial-style masked dance, is associated with which group of states?",
+    "options": [
+      "Odisha, Jharkhand and West Bengal",
+      "Bihar, Uttar Pradesh and Uttarakhand",
+      "Assam, Manipur and Tripura",
+      "Chhattisgarh, Telangana and Goa"
+    ],
+    "answer": 0,
+    "explanation": "Chhau has three styles named after their homes: Mayurbhanj in Odisha, Seraikella in Jharkhand and Purulia in West Bengal; it entered the UNESCO Intangible Heritage list in 2010.",
+    "difficulty": 2,
+    "tags": [
+      "folk-dance",
+      "unesco"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Yakshagana, a colourful night-long folk theatre with heavy make-up and headgear, belongs to which state?",
+    "options": [
+      "Andhra Pradesh",
+      "Karnataka",
+      "Goa",
+      "Maharashtra"
+    ],
+    "answer": 1,
+    "explanation": "Yakshagana is performed mainly in coastal Karnataka and combines dance, music, spoken dialogue and elaborate costume to narrate puranic stories.",
+    "difficulty": 2,
+    "tags": [
+      "folk-theatre",
+      "karnataka"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Theyyam, a ritual art in which the costumed performer is worshipped as a deity, is practised mainly in",
+    "options": [
+      "southern Tamil Nadu",
+      "coastal Karnataka",
+      "the Konkan coast",
+      "north Kerala"
+    ],
+    "answer": 3,
+    "explanation": "Theyyam is performed in the kavus or sacred groves of north Kerala, especially in Kannur and Kasaragod, where the performer is believed to be possessed by the deity.",
+    "difficulty": 1,
+    "tags": [
+      "ritual-art",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Lavani, performed to the beat of the dholki and closely linked with Tamasha theatre, is the folk dance of which state?",
+    "options": [
+      "Gujarat",
+      "Goa",
+      "Karnataka",
+      "Maharashtra"
+    ],
+    "answer": 3,
+    "explanation": "Lavani is a Marathi folk form famous for its rhythm and powerful lyrics; it flourished in the Peshwa period and remains a mainstay of Tamasha theatre.",
+    "difficulty": 1,
+    "tags": [
+      "folk-dance",
+      "maharashtra"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Ghoomar and Kalbelia are folk dances of which state?",
+    "options": [
+      "Rajasthan",
+      "Haryana",
+      "Madhya Pradesh",
+      "Gujarat"
+    ],
+    "answer": 0,
+    "explanation": "Both belong to Rajasthan: Ghoomar is a swirling dance of Rajput women, while Kalbelia, danced by the snake-charmer community, was inscribed on UNESCO's Intangible Heritage list in 2010.",
+    "difficulty": 1,
+    "tags": [
+      "folk-dance",
+      "rajasthan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Cheraw, popularly called the bamboo dance, is the traditional dance of which state?",
+    "options": [
+      "Nagaland",
+      "Mizoram",
+      "Meghalaya",
+      "Arunachal Pradesh"
+    ],
+    "answer": 1,
+    "explanation": "In Mizoram's Cheraw, men tap long bamboo staves on the ground in rhythm while dancers step nimbly between them without being caught.",
+    "difficulty": 2,
+    "tags": [
+      "folk-dance",
+      "mizoram"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Bihu, performed with the dhol and pepa during a spring festival, is the folk dance of which state?",
+    "options": [
+      "Tripura",
+      "West Bengal",
+      "Assam",
+      "Bihar"
+    ],
+    "answer": 2,
+    "explanation": "The Bihu dance accompanies Rongali or Bohag Bihu, the Assamese new year and spring festival celebrated in mid-April.",
+    "difficulty": 1,
+    "tags": [
+      "folk-dance",
+      "assam"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Padayani, a ritual performance featuring large painted kolams made of areca palm sheath, belongs to which state?",
+    "options": [
+      "Tamil Nadu",
+      "Karnataka",
+      "Andhra Pradesh",
+      "Kerala"
+    ],
+    "answer": 3,
+    "explanation": "Padayani is performed in Bhagavathi temples of central Travancore in Kerala, chiefly around Pathanamthitta, with huge kolams representing Kali, Yakshi and Bhairavi.",
+    "difficulty": 3,
+    "tags": [
+      "ritual-art",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Sangeet Natak Akademi, India's national academy for music, dance and drama, was set up in which year?",
+    "options": [
+      "1953",
+      "1947",
+      "1961",
+      "1972"
+    ],
+    "answer": 0,
+    "explanation": "The Sangeet Natak Akademi was established in 1953, the first of India's three national academies; the Sahitya Akademi and Lalit Kala Akademi followed in 1954.",
+    "difficulty": 3,
+    "tags": [
+      "institutions",
+      "awards"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The 'Trinity of Carnatic music' consists of Tyagaraja, Muthuswami Dikshitar and",
+    "options": [
+      "Purandara Dasa",
+      "Swathi Thirunal",
+      "Syama Sastri",
+      "Annamacharya"
+    ],
+    "answer": 2,
+    "explanation": "Tyagaraja, Muthuswami Dikshitar and Syama Sastri, all born in Tiruvarur in the 18th century, composed the bulk of the Carnatic concert repertoire.",
+    "difficulty": 2,
+    "tags": [
+      "carnatic-music",
+      "composers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Who is honoured as the 'Pitamaha' or father of Carnatic music for systematising its teaching?",
+    "options": [
+      "Tyagaraja",
+      "Purandara Dasa",
+      "Annamacharya",
+      "Bhadrachala Ramadasu"
+    ],
+    "answer": 1,
+    "explanation": "The 16th-century Kannada saint-composer Purandara Dasa devised the graded exercises (sarali varisai, geetams) still used to begin Carnatic training.",
+    "difficulty": 3,
+    "tags": [
+      "carnatic-music",
+      "composers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Tansen, the legendary musician credited with the raga Miyan ki Malhar, adorned the court of",
+    "options": [
+      "Sher Shah Suri",
+      "Ibrahim Adil Shah II",
+      "Jahangir",
+      "Akbar"
+    ],
+    "answer": 3,
+    "explanation": "Tansen was one of the navaratnas of Akbar's court; he trained under Swami Haridas and his tomb lies at Gwalior, where the Tansen Samaroh is held.",
+    "difficulty": 1,
+    "tags": [
+      "hindustani-music",
+      "medieval"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which poet-musician of the Delhi Sultanate is traditionally credited with developing the qawwali and the khayal style?",
+    "options": [
+      "Amir Khusrau",
+      "Baba Farid",
+      "Kabir",
+      "Malik Muhammad Jayasi"
+    ],
+    "answer": 0,
+    "explanation": "Amir Khusrau, a disciple of Nizamuddin Auliya, is credited with qawwali, the khayal form and, by tradition, the invention of the sitar and tabla.",
+    "difficulty": 2,
+    "tags": [
+      "hindustani-music",
+      "medieval"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Ustad Bismillah Khan, a Bharat Ratna awardee, was the master of which instrument?",
+    "options": [
+      "Sarod",
+      "Shehnai",
+      "Santoor",
+      "Sarangi"
+    ],
+    "answer": 1,
+    "explanation": "Bismillah Khan of Varanasi took the shehnai from wedding processions to the concert stage and played at the Red Fort on the eve of Independence in 1947.",
+    "difficulty": 1,
+    "tags": [
+      "instruments",
+      "musicians"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Pandit Shivkumar Sharma is credited with establishing which instrument as a solo classical instrument?",
+    "options": [
+      "Sarangi",
+      "Rudra veena",
+      "Santoor",
+      "Sarod"
+    ],
+    "answer": 2,
+    "explanation": "Shivkumar Sharma adapted the santoor, a hundred-stringed folk instrument of Kashmir, for Hindustani classical performance and partnered flautist Hariprasad Chaurasia as Shiv-Hari.",
+    "difficulty": 2,
+    "tags": [
+      "instruments",
+      "musicians"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Ustad Amjad Ali Khan is a world-renowned exponent of which instrument?",
+    "options": [
+      "Sitar",
+      "Tabla",
+      "Sarod",
+      "Violin"
+    ],
+    "answer": 2,
+    "explanation": "Amjad Ali Khan belongs to the Bangash lineage of the Senia Bangash gharana, whose ancestors are said to have developed the fretless sarod from the Afghan rabab.",
+    "difficulty": 2,
+    "tags": [
+      "instruments",
+      "musicians"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Pandit Hariprasad Chaurasia is famous for playing which instrument?",
+    "options": [
+      "Bansuri (flute)",
+      "Shehnai",
+      "Nadaswaram",
+      "Mridangam"
+    ],
+    "answer": 0,
+    "explanation": "Hariprasad Chaurasia raised the bamboo bansuri to the front rank of Hindustani classical instruments and composed film music with Shivkumar Sharma as the duo Shiv-Hari.",
+    "difficulty": 1,
+    "tags": [
+      "instruments",
+      "musicians"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Ustad Zakir Hussain, son of Ustad Alla Rakha, is associated with which instrument?",
+    "options": [
+      "Pakhawaj",
+      "Tabla",
+      "Ghatam",
+      "Dholak"
+    ],
+    "answer": 1,
+    "explanation": "Zakir Hussain, a Punjab gharana tabla maestro, won multiple Grammy awards and co-founded the fusion group Shakti with guitarist John McLaughlin.",
+    "difficulty": 1,
+    "tags": [
+      "instruments",
+      "musicians"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Pandit Ravi Shankar, who popularised Indian classical music worldwide, played which instrument?",
+    "options": [
+      "Sarod",
+      "Sarangi",
+      "Veena",
+      "Sitar"
+    ],
+    "answer": 3,
+    "explanation": "Ravi Shankar, a disciple of Baba Allauddin Khan, taught George Harrison of the Beatles, performed at Woodstock and received the Bharat Ratna in 1999.",
+    "difficulty": 1,
+    "tags": [
+      "instruments",
+      "musicians"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which of these is a percussion instrument central to Carnatic music concerts?",
+    "options": [
+      "Mridangam",
+      "Tabla",
+      "Pakhawaj",
+      "Dholak"
+    ],
+    "answer": 0,
+    "explanation": "The double-headed mridangam is the principal percussion accompaniment in Carnatic music, often joined by the ghatam, kanjira and morsing in the tani avartanam.",
+    "difficulty": 1,
+    "tags": [
+      "instruments",
+      "carnatic-music"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The ghatam, an instrument popularised by Vikku Vinayakram, is essentially",
+    "options": [
+      "a bamboo flute",
+      "a bowed string instrument",
+      "a clay pot played with the hands",
+      "a pair of small cymbals"
+    ],
+    "answer": 2,
+    "explanation": "The ghatam is a baked clay pot struck with the fingers, wrists and palms; Vikku Vinayakram won a Grammy as part of the group Shakti.",
+    "difficulty": 3,
+    "tags": [
+      "instruments",
+      "carnatic-music"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which is the oldest surviving genre of Hindustani classical vocal music, preserved by families such as the Dagars?",
+    "options": [
+      "Khayal",
+      "Thumri",
+      "Dhrupad",
+      "Tappa"
+    ],
+    "answer": 2,
+    "explanation": "Dhrupad is austere and meditative, beginning with an elaborate alap and accompanied by the pakhawaj rather than the tabla; khayal later became the dominant concert form.",
+    "difficulty": 3,
+    "tags": [
+      "hindustani-music",
+      "genres"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Pandit Bhimsen Joshi, awarded the Bharat Ratna in 2008, belonged to which gharana?",
+    "options": [
+      "Gwalior gharana",
+      "Kirana gharana",
+      "Agra gharana",
+      "Patiala gharana"
+    ],
+    "answer": 1,
+    "explanation": "Bhimsen Joshi was the outstanding Kirana gharana vocalist of his time and is widely remembered for his abhangs and for the national integration song Mile Sur Mera Tumhara.",
+    "difficulty": 3,
+    "tags": [
+      "hindustani-music",
+      "musicians"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "M. S. Subbulakshmi, the Carnatic vocalist, achieved which of the following distinctions?",
+    "options": [
+      "First Indian to win a Grammy award",
+      "First musician to receive the Bharat Ratna",
+      "First woman to head the Sangeet Natak Akademi",
+      "First Indian to compose a national anthem"
+    ],
+    "answer": 1,
+    "explanation": "M. S. Subbulakshmi received the Bharat Ratna in 1998, the first musician to be so honoured, and in 1966 became the first Indian to sing at the United Nations General Assembly.",
+    "difficulty": 2,
+    "tags": [
+      "carnatic-music",
+      "awards"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Lata Mangeshkar, the celebrated playback singer, was conferred the Bharat Ratna in which year?",
+    "options": [
+      "1992",
+      "1998",
+      "2001",
+      "2009"
+    ],
+    "answer": 2,
+    "explanation": "Lata Mangeshkar received the Bharat Ratna in 2001, becoming only the second singer after M. S. Subbulakshmi to receive India's highest civilian award.",
+    "difficulty": 3,
+    "tags": [
+      "awards",
+      "music"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Bhupen Hazarika, the singer and lyricist awarded the Bharat Ratna in 2019, is associated with which state?",
+    "options": [
+      "West Bengal",
+      "Odisha",
+      "Tripura",
+      "Assam"
+    ],
+    "answer": 3,
+    "explanation": "Bhupen Hazarika composed and sang in Assamese, drawing on Bihu and borgeet traditions; he also won the Dadasaheb Phalke Award in 1992.",
+    "difficulty": 2,
+    "tags": [
+      "music",
+      "awards"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Raja Harishchandra (1913), regarded as the first full-length Indian feature film, was made by",
+    "options": [
+      "Dadasaheb Phalke",
+      "Ardeshir Irani",
+      "Hiralal Sen",
+      "V. Shantaram"
+    ],
+    "answer": 0,
+    "explanation": "Dhundiraj Govind Phalke, known as Dadasaheb Phalke, made the silent film Raja Harishchandra in 1913 and is called the father of Indian cinema.",
+    "difficulty": 1,
+    "tags": [
+      "cinema",
+      "milestones"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Alam Ara (1931), the first Indian sound film or 'talkie', was directed by",
+    "options": [
+      "Dadasaheb Phalke",
+      "Ardeshir Irani",
+      "Bimal Roy",
+      "Sohrab Modi"
+    ],
+    "answer": 1,
+    "explanation": "Ardeshir Irani's Alam Ara introduced dialogue and songs to Indian cinema in 1931; the same director later made Kisan Kanya (1937), India's first indigenously processed colour film.",
+    "difficulty": 2,
+    "tags": [
+      "cinema",
+      "milestones"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Who was the first recipient of the Dadasaheb Phalke Award, instituted in 1969?",
+    "options": [
+      "Prithviraj Kapoor",
+      "Nargis",
+      "Devika Rani",
+      "Kanan Devi"
+    ],
+    "answer": 2,
+    "explanation": "Actress Devika Rani Roerich received the first Dadasaheb Phalke Award in 1969; the honour is India's highest award in cinema and is given by the Government of India.",
+    "difficulty": 3,
+    "tags": [
+      "cinema",
+      "awards"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Pather Panchali (1955), a landmark of world cinema, was directed by",
+    "options": [
+      "Ritwik Ghatak",
+      "Mrinal Sen",
+      "Bimal Roy",
+      "Satyajit Ray"
+    ],
+    "answer": 3,
+    "explanation": "Satyajit Ray's Pather Panchali began the Apu Trilogy; Ray received an Honorary Academy Award and the Bharat Ratna in 1992.",
+    "difficulty": 1,
+    "tags": [
+      "cinema",
+      "directors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Bhanu Athaiya became the first Indian to win an Academy Award, in 1983, for her work in which field?",
+    "options": [
+      "Costume design",
+      "Sound mixing",
+      "Cinematography",
+      "Film editing"
+    ],
+    "answer": 0,
+    "explanation": "Bhanu Athaiya won the Oscar for Best Costume Design for Richard Attenborough's Gandhi, sharing it with John Mollo.",
+    "difficulty": 2,
+    "tags": [
+      "cinema",
+      "awards"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "A. R. Rahman won two Academy Awards in 2009 for his work on which film?",
+    "options": [
+      "Lagaan",
+      "Slumdog Millionaire",
+      "Life of Pi",
+      "127 Hours"
+    ],
+    "answer": 1,
+    "explanation": "Rahman won Best Original Score and, with lyricist Gulzar, Best Original Song for 'Jai Ho' from Slumdog Millionaire; Resul Pookutty won for sound mixing on the same film.",
+    "difficulty": 1,
+    "tags": [
+      "cinema",
+      "awards"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Mother India (1957) is remembered as the first Indian film to be",
+    "options": [
+      "shot entirely in colour",
+      "screened at the Cannes Film Festival",
+      "nominated for the Academy Award for Best Foreign Language Film",
+      "made in more than one language"
+    ],
+    "answer": 2,
+    "explanation": "Mehboob Khan's Mother India was nominated in the Best Foreign Language Film category and lost by a single vote; Lagaan (2001) later earned the same nomination.",
+    "difficulty": 3,
+    "tags": [
+      "cinema",
+      "milestones"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The International Film Festival of India (IFFI), Asia's oldest film festival, is now held permanently in",
+    "options": [
+      "Kolkata",
+      "Thiruvananthapuram",
+      "Mumbai",
+      "Goa"
+    ],
+    "answer": 3,
+    "explanation": "IFFI began in 1952 and has been held annually in Goa since 2004; it is organised by the National Film Development Corporation with the Government of Goa.",
+    "difficulty": 2,
+    "tags": [
+      "cinema",
+      "festivals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which is the oldest of the four Vedas?",
+    "options": [
+      "Rig Veda",
+      "Sama Veda",
+      "Yajur Veda",
+      "Atharva Veda"
+    ],
+    "answer": 0,
+    "explanation": "The Rig Veda, a collection of 1,028 hymns in ten mandalas, is the oldest Vedic text; the Sama Veda sets its verses to melody and the Atharva Veda is the latest.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-texts",
+      "vedas"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The epic Mahabharata is traditionally attributed to which sage?",
+    "options": [
+      "Valmiki",
+      "Vyasa",
+      "Vishwamitra",
+      "Narada"
+    ],
+    "answer": 1,
+    "explanation": "Veda Vyasa is credited with the Mahabharata, the world's longest epic, which contains the Bhagavad Gita as part of its Bhishma Parva; the Ramayana is ascribed to Valmiki.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-texts",
+      "epics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Arthashastra, a treatise on statecraft and economics, was written by",
+    "options": [
+      "Panini",
+      "Patanjali",
+      "Kautilya",
+      "Vishakhadatta"
+    ],
+    "answer": 2,
+    "explanation": "Kautilya, also called Chanakya or Vishnugupta, was the minister of Chandragupta Maurya; the text was rediscovered by R. Shamasastry in 1905.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-texts",
+      "polity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Abhijnanashakuntalam, Meghaduta and Raghuvamsa were composed by which Sanskrit poet?",
+    "options": [
+      "Bhasa",
+      "Bhavabhuti",
+      "Banabhatta",
+      "Kalidasa"
+    ],
+    "answer": 3,
+    "explanation": "Kalidasa, traditionally placed in the Gupta age, is regarded as the greatest Sanskrit poet-dramatist; Meghaduta is a lyric poem and Abhijnanashakuntalam a play about Shakuntala and Dushyanta.",
+    "difficulty": 1,
+    "tags": [
+      "sanskrit-literature",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Sanskrit play Mudrarakshasa, dealing with the intrigues that brought Chandragupta Maurya to power, was written by",
+    "options": [
+      "Vishakhadatta",
+      "Shudraka",
+      "Bhasa",
+      "Dandin"
+    ],
+    "answer": 0,
+    "explanation": "Vishakhadatta's Mudrarakshasa is a rare political drama centred on Chanakya's manoeuvres against the Nanda minister Rakshasa.",
+    "difficulty": 3,
+    "tags": [
+      "sanskrit-literature",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Harshacharita and Kadambari were written by the court poet of Harshavardhana, namely",
+    "options": [
+      "Kalhana",
+      "Banabhatta",
+      "Bilhana",
+      "Jayadeva"
+    ],
+    "answer": 1,
+    "explanation": "Banabhatta's Harshacharita is a biography of Harshavardhana and Kadambari is a Sanskrit prose romance; both are landmarks of Sanskrit prose.",
+    "difficulty": 2,
+    "tags": [
+      "sanskrit-literature",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Rajatarangini, a chronicle of the kings of Kashmir, was composed by",
+    "options": [
+      "Bilhana",
+      "Kshemendra",
+      "Kalhana",
+      "Somadeva"
+    ],
+    "answer": 2,
+    "explanation": "Kalhana wrote Rajatarangini in the 12th century; it is often called the first work of history writing in India in the modern sense.",
+    "difficulty": 2,
+    "tags": [
+      "sanskrit-literature",
+      "history-texts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Ashtadhyayi, the foundational grammar of the Sanskrit language, was composed by",
+    "options": [
+      "Patanjali",
+      "Katyayana",
+      "Pingala",
+      "Panini"
+    ],
+    "answer": 3,
+    "explanation": "Panini's Ashtadhyayi arranges Sanskrit grammar in about 4,000 aphoristic rules in eight chapters; Patanjali later wrote the Mahabhashya as a commentary on it.",
+    "difficulty": 2,
+    "tags": [
+      "sanskrit-literature",
+      "grammar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Gita Govinda, the lyrical Sanskrit poem on Radha and Krishna sung in the Jagannath temple, was written by",
+    "options": [
+      "Jayadeva",
+      "Chandidas",
+      "Vidyapati",
+      "Surdas"
+    ],
+    "answer": 0,
+    "explanation": "Jayadeva, a 12th-century poet of Odisha, composed the Gita Govinda; its ashtapadis are sung in Odissi dance and in temple ritual at Puri.",
+    "difficulty": 2,
+    "tags": [
+      "sanskrit-literature",
+      "bhakti"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Silappadikaram, one of the five great epics of Tamil literature, was written by",
+    "options": [
+      "Sattanar",
+      "Ilango Adigal",
+      "Tiruvalluvar",
+      "Kamban"
+    ],
+    "answer": 1,
+    "explanation": "Ilango Adigal's Silappadikaram tells the story of Kannagi and Kovalan; its sequel Manimekalai was composed by Sattanar.",
+    "difficulty": 3,
+    "tags": [
+      "tamil-literature",
+      "epics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Thirukkural, a classic of couplets on ethics and governance, was composed by",
+    "options": [
+      "Kamban",
+      "Avvaiyar",
+      "Tiruvalluvar",
+      "Nakkirar"
+    ],
+    "answer": 2,
+    "explanation": "Tiruvalluvar's Thirukkural has 1,330 couplets in three sections on virtue, wealth and love, and is one of the most widely translated Tamil works.",
+    "difficulty": 1,
+    "tags": [
+      "tamil-literature",
+      "classics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Panchatantra, the collection of animal fables used to teach worldly wisdom, is attributed to",
+    "options": [
+      "Somadeva",
+      "Gunadhya",
+      "Dandin",
+      "Vishnu Sharma"
+    ],
+    "answer": 3,
+    "explanation": "Vishnu Sharma is said to have composed the Panchatantra to instruct the dull sons of a king; the tales travelled to Persia and Europe in translation.",
+    "difficulty": 2,
+    "tags": [
+      "sanskrit-literature",
+      "fables"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Ain-i-Akbari and Akbarnama, the great chronicles of Akbar's reign, were written by",
+    "options": [
+      "Abul Fazl",
+      "Badauni",
+      "Faizi",
+      "Abdul Hamid Lahori"
+    ],
+    "answer": 0,
+    "explanation": "Abul Fazl, one of Akbar's navaratnas, wrote the Akbarnama, whose third volume, the Ain-i-Akbari, is a detailed account of the empire's administration.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-literature",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Ramcharitmanas, the Awadhi retelling of the Ramayana, was written by",
+    "options": [
+      "Kabir",
+      "Tulsidas",
+      "Surdas",
+      "Malik Muhammad Jayasi"
+    ],
+    "answer": 1,
+    "explanation": "Tulsidas composed the Ramcharitmanas in the 16th century at Varanasi; his other works include the Hanuman Chalisa and Vinaya Patrika.",
+    "difficulty": 1,
+    "tags": [
+      "bhakti",
+      "hindi-literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Rabindranath Tagore won the Nobel Prize for Literature in 1913 for which work?",
+    "options": [
+      "Gora",
+      "Ghare Baire",
+      "Gitanjali",
+      "Chokher Bali"
+    ],
+    "answer": 2,
+    "explanation": "Tagore's own English rendering of Gitanjali (Song Offerings) won him the Nobel, making him the first non-European to receive the Literature prize.",
+    "difficulty": 1,
+    "tags": [
+      "nobel",
+      "bengali-literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The song Vande Mataram was taken from which novel?",
+    "options": [
+      "Durgeshnandini",
+      "Kapalkundala",
+      "Devi Chaudhurani",
+      "Anandamath"
+    ],
+    "answer": 3,
+    "explanation": "Bankim Chandra Chattopadhyay included Vande Mataram in his 1882 Bengali novel Anandamath; it was adopted as the national song of India in 1950.",
+    "difficulty": 1,
+    "tags": [
+      "bengali-literature",
+      "national-symbols"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Godan and Gaban, classics of Hindi social realism, were written by",
+    "options": [
+      "Premchand",
+      "Jaishankar Prasad",
+      "Mahadevi Verma",
+      "Harivansh Rai Bachchan"
+    ],
+    "answer": 0,
+    "explanation": "Munshi Premchand, born Dhanpat Rai, wrote in Urdu and Hindi; Godan (1936) depicts the exploitation of the peasant Hori and is regarded as his masterpiece.",
+    "difficulty": 1,
+    "tags": [
+      "hindi-literature",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The novels Untouchable and Coolie were written by which Indian English writer?",
+    "options": [
+      "R. K. Narayan",
+      "Mulk Raj Anand",
+      "Raja Rao",
+      "Khushwant Singh"
+    ],
+    "answer": 1,
+    "explanation": "Mulk Raj Anand, one of the pioneers of Indian writing in English along with R. K. Narayan and Raja Rao, wrote about caste and class oppression.",
+    "difficulty": 2,
+    "tags": [
+      "indian-english",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which Indian author won the Booker Prize in 1981 for the novel Midnight's Children?",
+    "options": [
+      "V. S. Naipaul",
+      "Vikram Seth",
+      "Salman Rushdie",
+      "Amitav Ghosh"
+    ],
+    "answer": 2,
+    "explanation": "Salman Rushdie's Midnight's Children, about children born at the moment of Independence, won the Booker in 1981 and was later voted the 'Booker of Bookers'.",
+    "difficulty": 1,
+    "tags": [
+      "booker",
+      "indian-english"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Arundhati Roy won the Booker Prize in 1997 for which novel?",
+    "options": [
+      "The Ministry of Utmost Happiness",
+      "The Shadow Lines",
+      "The Guide",
+      "The God of Small Things"
+    ],
+    "answer": 3,
+    "explanation": "The God of Small Things, set in Ayemenem in Kerala, made Arundhati Roy the first Indian woman to win the Booker Prize.",
+    "difficulty": 1,
+    "tags": [
+      "booker",
+      "indian-english"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The White Tiger, winner of the Booker Prize in 2008, was written by",
+    "options": [
+      "Aravind Adiga",
+      "Kiran Desai",
+      "Amitav Ghosh",
+      "Jhumpa Lahiri"
+    ],
+    "answer": 0,
+    "explanation": "Aravind Adiga's debut novel The White Tiger is narrated by Balram Halwai, a driver turned entrepreneur; Kiran Desai had won in 2006 for The Inheritance of Loss.",
+    "difficulty": 2,
+    "tags": [
+      "booker",
+      "indian-english"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Geetanjali Shree won the International Booker Prize in 2022 for which novel, translated by Daisy Rockwell?",
+    "options": [
+      "The Palace of Illusions",
+      "Tomb of Sand",
+      "A Suitable Boy",
+      "The Sea of Poppies"
+    ],
+    "answer": 1,
+    "explanation": "Tomb of Sand, translated from the Hindi Ret Samadhi, was the first book originally written in any Indian language to win the International Booker Prize.",
+    "difficulty": 2,
+    "tags": [
+      "booker",
+      "hindi-literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Who was the first recipient of the Jnanpith Award, given in 1965?",
+    "options": [
+      "Tarashankar Bandopadhyay",
+      "Kuvempu",
+      "G. Sankara Kurup",
+      "Umashankar Joshi"
+    ],
+    "answer": 2,
+    "explanation": "The Malayalam poet G. Sankara Kurup received the first Jnanpith Award for his collection Odakkuzhal (The Bamboo Flute).",
+    "difficulty": 2,
+    "tags": [
+      "jnanpith",
+      "malayalam-literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Ashapurna Devi, who won the Jnanpith Award in 1976 for Prathama Pratisruti, wrote in which language?",
+    "options": [
+      "Odia",
+      "Assamese",
+      "Marathi",
+      "Bengali"
+    ],
+    "answer": 3,
+    "explanation": "Ashapurna Devi was the first woman to win the Jnanpith Award; her Bengali novel Prathama Pratisruti is the first part of a trilogy on women's struggle for education.",
+    "difficulty": 3,
+    "tags": [
+      "jnanpith",
+      "bengali-literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Jnanpith Award, India's highest literary honour, is given for literature in",
+    "options": [
+      "languages listed in the Eighth Schedule of the Constitution",
+      "Hindi and English only",
+      "any language spoken in India",
+      "the official languages of the states only"
+    ],
+    "answer": 0,
+    "explanation": "Instituted in 1961 by the Bharatiya Jnanpith trust, the award recognises outstanding writing in any of the Eighth Schedule languages, and English was added later.",
+    "difficulty": 3,
+    "tags": [
+      "jnanpith",
+      "awards"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Taj Mahal at Agra was built by Shah Jahan in memory of",
+    "options": [
+      "Nur Jahan",
+      "Jahanara",
+      "Mumtaz Mahal",
+      "Roshanara"
+    ],
+    "answer": 2,
+    "explanation": "Shah Jahan built the Taj Mahal between 1632 and 1653 for his wife Mumtaz Mahal; the chief architect is generally identified as Ustad Ahmad Lahauri and it became a UNESCO World Heritage Site in 1983.",
+    "difficulty": 1,
+    "tags": [
+      "architecture",
+      "unesco"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Khajuraho group of temples, famous for their sculpture, was built by which dynasty?",
+    "options": [
+      "Chandela",
+      "Chalukya",
+      "Pala",
+      "Solanki"
+    ],
+    "answer": 0,
+    "explanation": "The Chandela rulers built the Khajuraho temples in Madhya Pradesh between the 10th and 12th centuries in the Nagara style; the Kandariya Mahadeva is the largest.",
+    "difficulty": 2,
+    "tags": [
+      "architecture",
+      "temples"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Sun Temple at Konark, designed as a chariot with wheels and horses, was built by",
+    "options": [
+      "Anantavarman Chodaganga",
+      "Narasimhadeva I",
+      "Kharavela",
+      "Kapilendra Deva"
+    ],
+    "answer": 1,
+    "explanation": "The Eastern Ganga king Narasimhadeva I built the Konark Sun Temple in the 13th century; its twenty-four carved wheels function as sundials and it is known as the Black Pagoda.",
+    "difficulty": 3,
+    "tags": [
+      "architecture",
+      "odisha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Kailasa temple at Ellora, carved out of a single rock, was built under which dynasty?",
+    "options": [
+      "Chalukya",
+      "Pallava",
+      "Rashtrakuta",
+      "Yadava"
+    ],
+    "answer": 2,
+    "explanation": "The Rashtrakuta king Krishna I had the Kailasa temple (Cave 16) excavated top-down from a single basalt rock in the 8th century; Ellora also has Buddhist and Jain caves.",
+    "difficulty": 2,
+    "tags": [
+      "architecture",
+      "caves"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Ajanta caves in Maharashtra are best known for their",
+    "options": [
+      "Jain rock-cut sculptures",
+      "Buddhist mural paintings",
+      "Shaivite monolithic rathas",
+      "Islamic calligraphy panels"
+    ],
+    "answer": 1,
+    "explanation": "The thirty Ajanta caves preserve the finest surviving ancient Indian paintings, mostly Jataka scenes, executed in the tempera technique between the 2nd century BCE and the 5th century CE.",
+    "difficulty": 1,
+    "tags": [
+      "paintings",
+      "caves"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Brihadeeswarar Temple at Thanjavur, part of the Great Living Chola Temples, was built by",
+    "options": [
+      "Rajendra Chola I",
+      "Karikala Chola",
+      "Kulottunga Chola",
+      "Rajaraja Chola I"
+    ],
+    "answer": 3,
+    "explanation": "Rajaraja Chola I completed the granite Brihadeeswarar temple in 1010 CE; its vimana rises to about 66 metres and the complex is a UNESCO World Heritage Site.",
+    "difficulty": 2,
+    "tags": [
+      "architecture",
+      "temples"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The rock-cut shore temple and monolithic rathas at Mahabalipuram were built by which dynasty?",
+    "options": [
+      "Pallava",
+      "Chola",
+      "Pandya",
+      "Chera"
+    ],
+    "answer": 0,
+    "explanation": "The Pallavas, notably Narasimhavarman I and Rajasimha, created the Mahabalipuram monuments including the Descent of the Ganga relief; the site is a UNESCO World Heritage Site.",
+    "difficulty": 2,
+    "tags": [
+      "architecture",
+      "temples"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Qutub Minar in Delhi was begun by Qutb-ud-din Aibak and completed by",
+    "options": [
+      "Balban",
+      "Iltutmish",
+      "Alauddin Khalji",
+      "Firoz Shah Tughlaq"
+    ],
+    "answer": 1,
+    "explanation": "Aibak laid the first storey and Iltutmish added three more; Firoz Shah Tughlaq later repaired the top after lightning damage, and the minar is a UNESCO World Heritage Site.",
+    "difficulty": 2,
+    "tags": [
+      "architecture",
+      "delhi"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Charminar, built in 1591, stands in which city?",
+    "options": [
+      "Bijapur",
+      "Golconda",
+      "Aurangabad",
+      "Hyderabad"
+    ],
+    "answer": 3,
+    "explanation": "Muhammad Quli Qutb Shah built the Charminar in Hyderabad, reportedly to mark the end of a plague; its four minarets give the monument its name.",
+    "difficulty": 1,
+    "tags": [
+      "architecture",
+      "monuments"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Rani ki Vav, the ornate stepwell inscribed as a UNESCO World Heritage Site in 2014, is located in",
+    "options": [
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Gujarat"
+    ],
+    "answer": 3,
+    "explanation": "Rani ki Vav at Patan in Gujarat was built by Queen Udayamati of the Solanki dynasty in the 11th century and is depicted on the Indian one-hundred rupee note.",
+    "difficulty": 3,
+    "tags": [
+      "architecture",
+      "unesco"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The ruins of Hampi, a UNESCO World Heritage Site, were the capital of which empire?",
+    "options": [
+      "Vijayanagara",
+      "Bahmani",
+      "Kakatiya",
+      "Hoysala"
+    ],
+    "answer": 0,
+    "explanation": "Hampi on the Tungabhadra in Karnataka was the capital of the Vijayanagara empire; its Virupaksha temple and Vittala temple with stone chariot are famous landmarks.",
+    "difficulty": 1,
+    "tags": [
+      "architecture",
+      "unesco"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Dilwara temples, celebrated for their intricate marble carving, are Jain temples located at",
+    "options": [
+      "Palitana",
+      "Mount Abu",
+      "Ranakpur",
+      "Shravanabelagola"
+    ],
+    "answer": 1,
+    "explanation": "The Dilwara temples at Mount Abu in Rajasthan were built between the 11th and 13th centuries by the Solanki-era ministers Vimal Shah and the brothers Vastupala and Tejpal.",
+    "difficulty": 2,
+    "tags": [
+      "architecture",
+      "jain"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Madhubani or Mithila painting, done with natural dyes and fine line work, belongs to which state?",
+    "options": [
+      "West Bengal",
+      "Jharkhand",
+      "Bihar",
+      "Odisha"
+    ],
+    "answer": 2,
+    "explanation": "Madhubani painting comes from the Mithila region of Bihar, traditionally painted by women on the walls and floors of homes for weddings and festivals.",
+    "difficulty": 1,
+    "tags": [
+      "paintings",
+      "folk-art"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Warli painting, using simple white circles, triangles and stick figures on a mud background, is a tribal art of",
+    "options": [
+      "Chhattisgarh",
+      "Jharkhand",
+      "Gujarat",
+      "Maharashtra"
+    ],
+    "answer": 3,
+    "explanation": "The Warli tribe of northern Maharashtra paints ritual scenes such as the tarpa dance using rice paste on cow-dung plastered walls.",
+    "difficulty": 2,
+    "tags": [
+      "paintings",
+      "folk-art"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Pattachitra, the cloth-based scroll painting tradition centred on Jagannath themes, belongs mainly to",
+    "options": [
+      "Odisha",
+      "Andhra Pradesh",
+      "Assam",
+      "Rajasthan"
+    ],
+    "answer": 0,
+    "explanation": "Pattachitra of Odisha and adjoining Bengal is painted on cloth treated with tamarind paste, using bold outlines and natural colours; Raghurajpur is a famous Pattachitra village.",
+    "difficulty": 2,
+    "tags": [
+      "paintings",
+      "folk-art"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Kalamkari, the art of drawing on cloth with a pen and natural dyes, is chiefly practised at Srikalahasti and Machilipatnam in",
+    "options": [
+      "Tamil Nadu",
+      "Andhra Pradesh",
+      "Karnataka",
+      "Telangana"
+    ],
+    "answer": 1,
+    "explanation": "Kalamkari takes its name from the kalam or pen; the Srikalahasti style is free-hand and temple-oriented while the Machilipatnam style uses hand-carved blocks.",
+    "difficulty": 3,
+    "tags": [
+      "paintings",
+      "textiles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Raja Ravi Varma, celebrated for oil paintings of Indian mythological subjects, belonged to which princely state?",
+    "options": [
+      "Mysore",
+      "Baroda",
+      "Travancore",
+      "Cochin"
+    ],
+    "answer": 2,
+    "explanation": "Raja Ravi Varma of Kilimanoor in Travancore blended European academic realism with Indian themes and made art popular through his oleograph press.",
+    "difficulty": 1,
+    "tags": [
+      "paintings",
+      "personalities"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which artist led the Bengal School and painted the famous work Bharat Mata?",
+    "options": [
+      "Nandalal Bose",
+      "Jamini Roy",
+      "Abanindranath Tagore",
+      "Amrita Sher-Gil"
+    ],
+    "answer": 2,
+    "explanation": "Abanindranath Tagore, nephew of Rabindranath, founded the Bengal School as a nationalist alternative to Western academic art and painted Bharat Mata in 1905.",
+    "difficulty": 2,
+    "tags": [
+      "paintings",
+      "bengal-school"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which artist decorated the original manuscript of the Constitution of India with borders and illustrations?",
+    "options": [
+      "Nandalal Bose",
+      "M. F. Husain",
+      "Raja Ravi Varma",
+      "Jamini Roy"
+    ],
+    "answer": 0,
+    "explanation": "Nandalal Bose of Santiniketan, with his students, illustrated the calligraphed Constitution; Prem Behari Narain Raizada wrote out the text by hand.",
+    "difficulty": 3,
+    "tags": [
+      "paintings",
+      "constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The national emblem of India is adapted from the Lion Capital of Ashoka at",
+    "options": [
+      "Lumbini",
+      "Sanchi",
+      "Sarnath",
+      "Vaishali"
+    ],
+    "answer": 2,
+    "explanation": "The Lion Capital at Sarnath was adopted as the state emblem on 26 January 1950; the motto Satyameva Jayate below it comes from the Mundaka Upanishad.",
+    "difficulty": 1,
+    "tags": [
+      "national-symbols",
+      "ashoka"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Jana Gana Mana was adopted as the national anthem of India on",
+    "options": [
+      "15 August 1947",
+      "26 November 1949",
+      "26 January 1950",
+      "24 January 1950"
+    ],
+    "answer": 3,
+    "explanation": "The Constituent Assembly adopted Jana Gana Mana as the national anthem on 24 January 1950; Tagore's song was first sung at the Calcutta session of the Congress in December 1911 and its formal rendition takes about 52 seconds.",
+    "difficulty": 3,
+    "tags": [
+      "national-symbols",
+      "anthem"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which of the following is the national aquatic animal of India?",
+    "options": [
+      "Ganges river dolphin",
+      "Olive ridley turtle",
+      "Gharial",
+      "Blue whale"
+    ],
+    "answer": 0,
+    "explanation": "The Ganges river dolphin was declared the national aquatic animal in 2009; the tiger is the national animal, the peacock the national bird and the elephant the national heritage animal.",
+    "difficulty": 2,
+    "tags": [
+      "national-symbols",
+      "wildlife"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Onam, the harvest festival marked by the Vallam Kali boat race and pookalam floral carpets, is celebrated in",
+    "options": [
+      "Tamil Nadu",
+      "Kerala",
+      "Karnataka",
+      "Andhra Pradesh"
+    ],
+    "answer": 1,
+    "explanation": "Onam commemorates the annual return of the mythical king Mahabali and falls in the Malayalam month of Chingam; it is the state festival of Kerala.",
+    "difficulty": 1,
+    "tags": [
+      "festivals",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Hornbill Festival, held every December to showcase tribal culture, belongs to which state?",
+    "options": [
+      "Mizoram",
+      "Manipur",
+      "Nagaland",
+      "Arunachal Pradesh"
+    ],
+    "answer": 2,
+    "explanation": "Nagaland's Hornbill Festival at Kisama near Kohima brings together all the major Naga tribes and is called the festival of festivals.",
+    "difficulty": 2,
+    "tags": [
+      "festivals",
+      "nagaland"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "The Bharat Ratna was instituted in 1954, and its first recipients included C. Rajagopalachari, S. Radhakrishnan and",
+    "options": [
+      "Jawaharlal Nehru",
+      "Bhagwan Das",
+      "Sardar Patel",
+      "C. V. Raman"
+    ],
+    "answer": 3,
+    "explanation": "The physicist C. V. Raman was among the first three Bharat Ratna awardees in 1954; Lal Bahadur Shastri became the first posthumous recipient in 1966.",
+    "difficulty": 2,
+    "tags": [
+      "awards",
+      "bharat-ratna"
+    ],
+    "source": "seed"
+  }
+]

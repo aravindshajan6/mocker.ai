@@ -1,0 +1,2155 @@
+[
+  {
+    "topic": "kerala",
+    "question": "The title 'Zamorin' (Samoothiri) was borne by the rulers of which Kerala kingdom?",
+    "options": [
+      "Kozhikode",
+      "Kochi",
+      "Venad",
+      "Kolathunad"
+    ],
+    "answer": 0,
+    "explanation": "Samoothiri, anglicised as Zamorin, was the hereditary title of the rulers of Kozhikode (Calicut), the dominant maritime power of medieval Malabar and the ruler who received Vasco da Gama in 1498.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-history",
+      "medieval-kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Vasco da Gama first set foot on Indian soil in 1498 at Kappad, which lies in which present-day district?",
+    "options": [
+      "Kannur",
+      "Kozhikode",
+      "Malappuram",
+      "Thrissur"
+    ],
+    "answer": 1,
+    "explanation": "Kappad, near Koyilandy in Kozhikode district, is where Vasco da Gama landed on 20 May 1498, opening the direct sea route from Europe to India.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-history",
+      "europeans"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Marthanda Varma of Travancore decisively defeated the Dutch East India Company in which battle?",
+    "options": [
+      "Battle of Chaliyam",
+      "Battle of Ambalapuzha",
+      "Battle of Colachel",
+      "Battle of Kayamkulam"
+    ],
+    "answer": 2,
+    "explanation": "At the Battle of Colachel (Kulachal) in 1741, Travancore routed the Dutch, one of the earliest defeats of a European naval power by an Indian ruler; the captured commander De Lannoy later modernised the Travancore army.",
+    "difficulty": 1,
+    "tags": [
+      "travancore",
+      "marthanda-varma"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The ceremony of 1750 by which Marthanda Varma surrendered the kingdom of Travancore to Sree Padmanabha and ruled thereafter as the deity's servant is called",
+    "options": [
+      "Attingal Grant",
+      "Kundara Proclamation",
+      "Karyakkar Vaka",
+      "Trippadidanam"
+    ],
+    "answer": 3,
+    "explanation": "By the Trippadidanam of 1750, Marthanda Varma dedicated Travancore to Sree Padmanabhaswamy, and its rulers styled themselves 'Padmanabha Dasa' thereafter.",
+    "difficulty": 2,
+    "tags": [
+      "travancore",
+      "marthanda-varma"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Kundara Proclamation of 1809, calling on the people to rise against the British, was issued by",
+    "options": [
+      "Pazhassi Raja",
+      "Marthanda Varma",
+      "Paliath Achan",
+      "Velu Thampi Dalawa"
+    ],
+    "answer": 3,
+    "explanation": "Velu Thampi Dalawa, Dewan of Travancore, issued the Kundara Proclamation on 11 January 1809 against Resident Macaulay and the British; the revolt failed and Velu Thampi died at Mannadi.",
+    "difficulty": 1,
+    "tags": [
+      "velu-thampi",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Kerala Varma Pazhassi Raja, who waged guerrilla war against the British, belonged to which royal house?",
+    "options": [
+      "Venad royal house",
+      "Kolathunad royal house",
+      "Kottayam (Pazhassi) royal house of Malabar",
+      "The Zamorin's house of Kozhikode"
+    ],
+    "answer": 2,
+    "explanation": "Pazhassi Raja of the Kottayam royal house in northern Malabar led the Cotiote wars using Wayanad's forests for guerrilla warfare until his death in 1805; he is remembered as 'Kerala Simham', the Lion of Kerala.",
+    "difficulty": 2,
+    "tags": [
+      "pazhassi-raja",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The second Chera empire of the Kulasekharas (c. 800-1102 AD) had its capital at",
+    "options": [
+      "Kollam",
+      "Mahodayapuram",
+      "Ezhimala",
+      "Vanchi Muthur"
+    ],
+    "answer": 1,
+    "explanation": "The Kulasekhara Cheras ruled from Mahodayapuram (Kodungallur) on the Periyar; the dynasty declined after the long Chera-Chola wars.",
+    "difficulty": 3,
+    "tags": [
+      "chera",
+      "ancient-kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Cheraman Juma Masjid at Kodungallur is traditionally regarded as India's first",
+    "options": [
+      "mosque",
+      "church",
+      "synagogue",
+      "Buddhist vihara"
+    ],
+    "answer": 0,
+    "explanation": "Tradition dates the Cheraman Juma Masjid in Kodungallur to the 7th century, making it the oldest mosque in India, a legacy of Kerala's early Arab trade contacts.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-history",
+      "kodungallur"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Kunjali Marakkars were the naval chiefs of which ruler?",
+    "options": [
+      "The Zamorin of Kozhikode",
+      "The Raja of Kochi",
+      "The Maharaja of Travancore",
+      "The Kolathiri of Kolathunad"
+    ],
+    "answer": 0,
+    "explanation": "The Kunjali Marakkars commanded the Zamorin's navy and fought the Portuguese for most of the 16th century; the fourth Kunjali was captured and executed in 1600.",
+    "difficulty": 1,
+    "tags": [
+      "kunjali-marakkar",
+      "zamorin"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Dutch captured Cochin from the Portuguese in the year",
+    "options": [
+      "1653",
+      "1663",
+      "1683",
+      "1603"
+    ],
+    "answer": 1,
+    "explanation": "The Dutch took Cochin in 1663, ending Portuguese supremacy in Kerala; Dutch rule left behind the Mattancherry palace murals and Van Rheede's botanical work Hortus Malabaricus.",
+    "difficulty": 2,
+    "tags": [
+      "dutch",
+      "kochi"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Fort Manuel (Fort Emmanuel) built at Kochi in 1503, the first European fort in India, was constructed by",
+    "options": [
+      "the Dutch",
+      "the English",
+      "the Portuguese",
+      "the French"
+    ],
+    "answer": 2,
+    "explanation": "The Portuguese built Fort Manuel at Kochi in 1503 with the permission of the Raja of Kochi, making it the earliest European fortification in India.",
+    "difficulty": 2,
+    "tags": [
+      "portuguese",
+      "kochi"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Synod of Diamper (Udayamperoor Sunnahados) of 1599, which brought the Syrian Christians of Kerala under Roman authority, was convened by",
+    "options": [
+      "Vasco da Gama",
+      "Pedro Alvares Cabral",
+      "St. Francis Xavier",
+      "Archbishop Aleixo de Menezes"
+    ],
+    "answer": 3,
+    "explanation": "Archbishop Aleixo de Menezes of Goa convened the Synod at Udayamperoor in 1599; resentment against its decrees later produced the Coonan Cross Oath of 1653.",
+    "difficulty": 3,
+    "tags": [
+      "kerala-history",
+      "christianity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Anchuthengu (Anjengo), where the English built their first fort in Travancore, is in which district?",
+    "options": [
+      "Kollam",
+      "Alappuzha",
+      "Kottayam",
+      "Thiruvananthapuram"
+    ],
+    "answer": 3,
+    "explanation": "The English East India Company fortified Anchuthengu in coastal Thiruvananthapuram district in 1695; it became their earliest permanent foothold in Travancore.",
+    "difficulty": 2,
+    "tags": [
+      "british",
+      "travancore"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Attingal Revolt of 1721 was directed against which European power?",
+    "options": [
+      "the Portuguese",
+      "the Dutch",
+      "the English",
+      "the French"
+    ],
+    "answer": 2,
+    "explanation": "In the Attingal Outbreak of 1721, local people killed about 140 Englishmen carrying the annual presents to the Attingal Rani, in the earliest organised anti-British uprising in Kerala.",
+    "difficulty": 3,
+    "tags": [
+      "british",
+      "travancore"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Kurichiya Revolt of 1812 against British rule broke out in which region?",
+    "options": [
+      "Malappuram",
+      "Wayanad",
+      "Kannur",
+      "Palakkad"
+    ],
+    "answer": 1,
+    "explanation": "The Kurichiyas and Kurumbas of Wayanad rose in 1812 against oppressive British land revenue collected in cash; it was one of the earliest tribal revolts in India.",
+    "difficulty": 2,
+    "tags": [
+      "tribal-revolt",
+      "wayanad"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Mamankam, the grand medieval assembly held once in twelve years, took place at",
+    "options": [
+      "Tirunavaya on the Bharathappuzha",
+      "Aranmula on the Pamba",
+      "Kodungallur on the Periyar",
+      "Thiruvananthapuram"
+    ],
+    "answer": 0,
+    "explanation": "Mamankam was held at Tirunavaya on the bank of the Bharathappuzha; the Zamorin presided over it, and Valluvanad sent suicide squads called Chavers to challenge him.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-kerala",
+      "festival"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which Travancore ruler is remembered as the 'musician king' and composer of hundreds of kritis?",
+    "options": [
+      "Swathi Thirunal",
+      "Marthanda Varma",
+      "Chithira Thirunal",
+      "Uthram Thirunal"
+    ],
+    "answer": 0,
+    "explanation": "Swathi Thirunal Rama Varma (1813-1846) composed in Malayalam, Sanskrit, Telugu and Hindi using the signature 'Padmanabha', and also started Travancore's first English school and observatory.",
+    "difficulty": 1,
+    "tags": [
+      "travancore",
+      "music"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Temple Entry Proclamation of 1936, opening state temples to all Hindus, was issued by",
+    "options": [
+      "Swathi Thirunal",
+      "Sree Chithira Thirunal Balarama Varma",
+      "Uthram Thirunal",
+      "Sree Mulam Thirunal"
+    ],
+    "answer": 1,
+    "explanation": "Sree Chithira Thirunal Balarama Varma issued the Temple Entry Proclamation on 12 November 1936 in Travancore; Gandhiji called it a modern miracle.",
+    "difficulty": 1,
+    "tags": [
+      "temple-entry",
+      "travancore"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Kollam Era (Kollavarsham), the Malayalam calendar era, began in",
+    "options": [
+      "725 AD",
+      "775 AD",
+      "825 AD",
+      "925 AD"
+    ],
+    "answer": 2,
+    "explanation": "Kollavarsham started in 825 AD and is still used for Kerala's festivals and temple calendars; its first month is Chingam.",
+    "difficulty": 2,
+    "tags": [
+      "kerala-history",
+      "calendar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Dutch commander captured at Colachel who later reorganised the Travancore army as 'Valiya Kappithan' was",
+    "options": [
+      "Hendrik van Rheede",
+      "Cornelis Bruyn",
+      "Van Imhoff",
+      "Eustachius De Lannoy"
+    ],
+    "answer": 3,
+    "explanation": "Eustachius De Lannoy entered Travancore's service after 1741, trained its troops on European lines and built the Udayagiri fort, where he is buried.",
+    "difficulty": 2,
+    "tags": [
+      "travancore",
+      "dutch"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Malabar was ceded to the British by Tipu Sultan under which treaty?",
+    "options": [
+      "Treaty of Mangalore",
+      "Treaty of Mysore",
+      "Treaty of Madras",
+      "Treaty of Srirangapatnam"
+    ],
+    "answer": 3,
+    "explanation": "By the Treaty of Srirangapatnam (1792) that ended the Third Anglo-Mysore War, Tipu surrendered Malabar to the English, and it became a district of the Madras Presidency.",
+    "difficulty": 2,
+    "tags": [
+      "malabar",
+      "british"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Malabar Rebellion, also called the Mappila revolt, broke out in which year?",
+    "options": [
+      "1857",
+      "1901",
+      "1921",
+      "1936"
+    ],
+    "answer": 2,
+    "explanation": "The Malabar Rebellion of 1921 began in Eranad and Valluvanad amid the Khilafat and tenancy agitations; Variyamkunnath Kunjahammad Haji and Ali Musaliar were its best-known leaders.",
+    "difficulty": 1,
+    "tags": [
+      "malabar",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The United State of Travancore and Cochin (Travancore-Cochin) was formed in",
+    "options": [
+      "1947",
+      "1949",
+      "1953",
+      "1956"
+    ],
+    "answer": 1,
+    "explanation": "Travancore and Cochin were merged on 1 July 1949 to form Travancore-Cochin, with Parur T.K. Narayana Pillai as its first Chief Minister; Malabar joined only in 1956.",
+    "difficulty": 2,
+    "tags": [
+      "formation-of-kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The State of Kerala was formed on 1 November 1956 under which law?",
+    "options": [
+      "States Reorganisation Act, 1956",
+      "Indian Independence Act, 1947",
+      "Government of India Act, 1935",
+      "Regulating Act of 1773"
+    ],
+    "answer": 0,
+    "explanation": "The States Reorganisation Act, 1956 redrew state boundaries on linguistic lines and created Kerala by joining Travancore-Cochin (minus the Tamil-majority areas) with Malabar and Kasaragod.",
+    "difficulty": 1,
+    "tags": [
+      "formation-of-kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "How many districts did Kerala have when the state was formed in 1956?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "Kerala began with five districts: Thiruvananthapuram, Kollam, Kottayam, Thrissur and Kozhikode; the number rose to fourteen with Kasaragod in 1984.",
+    "difficulty": 2,
+    "tags": [
+      "formation-of-kerala",
+      "districts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The first Chief Minister of Kerala was",
+    "options": [
+      "E.M.S. Namboodiripad",
+      "Pattom Thanu Pillai",
+      "C. Achutha Menon",
+      "R. Sankar"
+    ],
+    "answer": 0,
+    "explanation": "E.M.S. Namboodiripad took office on 5 April 1957 after the first Kerala assembly election, heading one of the world's earliest elected communist governments.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-polity",
+      "first-in-kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The first Governor of Kerala was",
+    "options": [
+      "V.V. Giri",
+      "Ramesh Bhandari",
+      "Bhagwan Sahay",
+      "Dr. B. Ramakrishna Rao"
+    ],
+    "answer": 3,
+    "explanation": "Dr. Burgula Ramakrishna Rao, earlier Chief Minister of Hyderabad, became Kerala's first Governor in 1956; V.V. Giri was the second.",
+    "difficulty": 3,
+    "tags": [
+      "kerala-polity",
+      "first-in-kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The 'Vimochana Samaram' (Liberation Struggle) that led to the dismissal of Kerala's first ministry took place in",
+    "options": [
+      "1957",
+      "1958",
+      "1959",
+      "1960"
+    ],
+    "answer": 2,
+    "explanation": "The agitation of 1959, sparked largely by the Education Bill and land reforms, ended with the dismissal of the E.M.S. ministry under Article 356 on 31 July 1959.",
+    "difficulty": 2,
+    "tags": [
+      "kerala-polity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which is the most recently formed district of Kerala?",
+    "options": [
+      "Kasaragod",
+      "Malappuram",
+      "Wayanad",
+      "Idukki"
+    ],
+    "answer": 0,
+    "explanation": "Kasaragod was carved out of Kannur on 24 May 1984 as Kerala's fourteenth and newest district; Wayanad was formed in 1980 and Malappuram in 1969.",
+    "difficulty": 2,
+    "tags": [
+      "districts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Paliyam Satyagraha of 1947-48, demanding the right of avarnas to walk on the road near the Paliyam Palace, took place in which princely state?",
+    "options": [
+      "Travancore",
+      "Malabar district",
+      "Cochin",
+      "Madras"
+    ],
+    "answer": 2,
+    "explanation": "The Paliyam Satyagraha at Chendamangalam in Cochin state finally won road and temple access rights; a young volunteer, A.G. Velayudhan, died in the police action.",
+    "difficulty": 3,
+    "tags": [
+      "social-reform",
+      "cochin"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Sree Narayana Guru consecrated a Siva idol at Aruvippuram, defying caste restrictions on worship, in the year",
+    "options": [
+      "1878",
+      "1888",
+      "1898",
+      "1903"
+    ],
+    "answer": 1,
+    "explanation": "The Aruvippuram Pratishta of 1888 is treated as the starting point of the Kerala Renaissance; the Guru inscribed there that this was a model abode where all live as brothers.",
+    "difficulty": 1,
+    "tags": [
+      "sree-narayana-guru",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The message 'One caste, one religion, one God for man' was given by",
+    "options": [
+      "Ayyankali",
+      "Chattampi Swamikal",
+      "Sree Narayana Guru",
+      "Vagbhatananda"
+    ],
+    "answer": 2,
+    "explanation": "Sree Narayana Guru's dictum 'Oru jathi, oru matham, oru daivam manushyanu' summed up his campaign against caste and became the watchword of the Kerala Renaissance.",
+    "difficulty": 1,
+    "tags": [
+      "sree-narayana-guru",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The SNDP Yogam was founded in 1903 with Sree Narayana Guru as its president and who as its first General Secretary?",
+    "options": [
+      "Dr. Palpu",
+      "Sahodaran Ayyappan",
+      "T.K. Madhavan",
+      "Kumaran Asan"
+    ],
+    "answer": 3,
+    "explanation": "The poet Kumaran Asan was the first General Secretary of the Sree Narayana Dharma Paripalana Yogam and edited its journal Vivekodayam; Dr. Palpu was the moving spirit behind its formation.",
+    "difficulty": 2,
+    "tags": [
+      "sndp",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Sree Narayana Guru was born at",
+    "options": [
+      "Chempazhanthy",
+      "Venganoor",
+      "Kannammoola",
+      "Kayikkara"
+    ],
+    "answer": 0,
+    "explanation": "The Guru was born in 1856 at Chempazhanthy near Thiruvananthapuram; Venganoor was Ayyankali's birthplace and Kayikkara that of Kumaran Asan.",
+    "difficulty": 2,
+    "tags": [
+      "sree-narayana-guru"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The All Religion Conference (Sarva Mata Sammelanam) convened by Sree Narayana Guru in 1924 was held at",
+    "options": [
+      "Sivagiri",
+      "the Advaita Ashram, Aluva",
+      "Aruvippuram",
+      "Thalassery"
+    ],
+    "answer": 1,
+    "explanation": "Held at the Advaita Ashram in Aluva in 1924, it was among the earliest such gatherings in India; its motto was 'not to argue and win, but to know and let know'.",
+    "difficulty": 3,
+    "tags": [
+      "sree-narayana-guru",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which of these works was written by Sree Narayana Guru?",
+    "options": [
+      "Vedadhikara Nirupanam",
+      "Adukkalayil Ninnu Arangathekku",
+      "Atmopadesa Satakam",
+      "Veena Poovu"
+    ],
+    "answer": 2,
+    "explanation": "Atmopadesa Satakam, along with Daivadasakam and Darsanamala, is among the Guru's principal writings; Vedadhikara Nirupanam is by Chattampi Swamikal.",
+    "difficulty": 2,
+    "tags": [
+      "sree-narayana-guru",
+      "literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Villuvandi Yatra of 1893, asserting the right of the depressed classes to use public roads, was undertaken by",
+    "options": [
+      "Sree Narayana Guru",
+      "Chattampi Swamikal",
+      "Poikayil Yohannan",
+      "Ayyankali"
+    ],
+    "answer": 3,
+    "explanation": "Ayyankali drove a bullock cart through the public roads of Venganoor, a right denied to his community, in a direct challenge to untouchability.",
+    "difficulty": 1,
+    "tags": [
+      "ayyankali",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Ayyankali founded the Sadhu Jana Paripalana Sangham in the year",
+    "options": [
+      "1907",
+      "1903",
+      "1912",
+      "1917"
+    ],
+    "answer": 0,
+    "explanation": "The Sadhu Jana Paripalana Sangham, formed in 1907, worked for the education, land rights and dignity of Kerala's Dalit communities.",
+    "difficulty": 2,
+    "tags": [
+      "ayyankali",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The agricultural labourers' strike led by Ayyankali, regarded as one of the first such strikes in India, was called mainly to demand",
+    "options": [
+      "higher wages alone",
+      "the right of Dalit children to attend government schools",
+      "redistribution of temple land",
+      "entry into temples"
+    ],
+    "answer": 1,
+    "explanation": "Ayyankali called on agrestic labourers to stop working in the paddy fields until Dalit children were admitted to schools, forcing the landlords and the state to yield.",
+    "difficulty": 3,
+    "tags": [
+      "ayyankali",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The pre-monastic name of Chattampi Swamikal was",
+    "options": [
+      "Kunjan Nair",
+      "Nanu Asan",
+      "Kunjan Pillai",
+      "Padmanabhan Thampi"
+    ],
+    "answer": 2,
+    "explanation": "Born Ayyappan Pillai and known as Kunjan Pillai, he earned the nickname Chattampi (monitor) as a student leader; he was a friend and contemporary of Sree Narayana Guru.",
+    "difficulty": 2,
+    "tags": [
+      "chattampi-swamikal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "'Pracheena Malayalam' and 'Vedadhikara Nirupanam' were written by",
+    "options": [
+      "Sree Narayana Guru",
+      "Vagbhatananda",
+      "Brahmananda Sivayogi",
+      "Chattampi Swamikal"
+    ],
+    "answer": 3,
+    "explanation": "Chattampi Swamikal argued in Vedadhikara Nirupanam that all castes had the right to study the Vedas, attacking the monopoly claimed by the priestly class.",
+    "difficulty": 2,
+    "tags": [
+      "chattampi-swamikal",
+      "literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Ayya Vaikundar (Vaikunda Swami), who preached social equality in south Travancore, is associated with which text?",
+    "options": [
+      "Atmopadesa Satakam",
+      "Anandamatham",
+      "Daivadasakam",
+      "Akilathirattu Ammanai"
+    ],
+    "answer": 3,
+    "explanation": "Akilathirattu Ammanai is the central scripture of Ayyavazhi, the movement founded by Vaikunda Swami, who also began the Samathwa Samajam, an early experiment in equality.",
+    "difficulty": 3,
+    "tags": [
+      "vaikunda-swami",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Kumaran Asan's poem that marked the beginning of romanticism in Malayalam poetry is",
+    "options": [
+      "Veena Poovu",
+      "Duravastha",
+      "Chandalabhikshuki",
+      "Karuna"
+    ],
+    "answer": 0,
+    "explanation": "Veena Poovu (The Fallen Flower, 1907) used the image of a withered flower to meditate on life's transience and began the romantic era in Malayalam verse.",
+    "difficulty": 1,
+    "tags": [
+      "kumaranasan",
+      "literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which poem of Kumaran Asan tells of a Namboothiri woman who takes refuge in a Pulaya's hut during the Malabar Rebellion?",
+    "options": [
+      "Nalini",
+      "Duravastha",
+      "Karuna",
+      "Chinthavishtayaya Sita"
+    ],
+    "answer": 1,
+    "explanation": "Duravastha (1922) attacks caste taboos through the marriage of Savitri, a Namboothiri woman, to Chathan, a Pulaya, and was among Asan's most controversial works.",
+    "difficulty": 3,
+    "tags": [
+      "kumaranasan",
+      "literature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "'Adukkalayil Ninnu Arangathekku' (From the Kitchen to the Stage), a play attacking Namboothiri orthodoxy, was written by",
+    "options": [
+      "M.R. Bhattathiripad",
+      "E.M.S. Namboodiripad",
+      "V.T. Bhattathiripad",
+      "Premji"
+    ],
+    "answer": 2,
+    "explanation": "V.T. Bhattathiripad's 1929 play demanded widow remarriage and education for Namboothiri women and became the manifesto of the Yogakshema Sabha's reform wing.",
+    "difficulty": 2,
+    "tags": [
+      "vt-bhattathiripad",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Vaikom Satyagraha of 1924-25 was launched to secure",
+    "options": [
+      "entry into the temple sanctum for all Hindus",
+      "the abolition of slavery",
+      "the right of women to wear an upper cloth",
+      "the right of avarnas to use the public roads around the Vaikom temple"
+    ],
+    "answer": 3,
+    "explanation": "The demand at Vaikom was the use of the roads surrounding the Mahadeva temple, not entry into it; the satyagraha succeeded in 1925 and prepared the ground for the 1936 Temple Entry Proclamation.",
+    "difficulty": 1,
+    "tags": [
+      "vaikom-satyagraha",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Who was honoured with the title 'Vaikom Veerar' for his role in the Vaikom Satyagraha?",
+    "options": [
+      "K. Kelappan",
+      "T.K. Madhavan",
+      "Mannathu Padmanabhan",
+      "E.V. Ramasamy Periyar"
+    ],
+    "answer": 3,
+    "explanation": "E.V. Ramasamy Periyar came from Tamil Nadu, was jailed twice during the agitation, and was given the title Vaikom Veerar (Hero of Vaikom).",
+    "difficulty": 2,
+    "tags": [
+      "vaikom-satyagraha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Guruvayur Satyagraha of 1931-32 was led by",
+    "options": [
+      "A.K. Gopalan",
+      "P. Krishna Pillai",
+      "K. Kelappan",
+      "T.K. Madhavan"
+    ],
+    "answer": 2,
+    "explanation": "K. Kelappan led the Guruvayur Satyagraha and went on a fast for temple entry; A.K. Gopalan was the volunteer captain and P. Krishna Pillai was beaten while ringing the temple bell.",
+    "difficulty": 2,
+    "tags": [
+      "guruvayur-satyagraha",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "K. Kelappan is popularly remembered as",
+    "options": [
+      "Kerala Lincoln",
+      "Kerala Gandhi",
+      "Kerala Simham",
+      "Bharata Kesari"
+    ],
+    "answer": 1,
+    "explanation": "K. Kelappan, leader of the Guruvayur Satyagraha and the Payyannur salt satyagraha, was called Kerala Gandhi for his adherence to Gandhian methods.",
+    "difficulty": 1,
+    "tags": [
+      "freedom-struggle",
+      "kerala-gandhi"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Channar Revolt (Channar Lahala) of 19th century Travancore was fought over",
+    "options": [
+      "the right of Nadar (Channar) women to cover their upper body",
+      "entry into temples",
+      "the use of public roads",
+      "admission to government schools"
+    ],
+    "answer": 0,
+    "explanation": "The upper-cloth agitation ran from 1822 to 1859, when a royal proclamation finally allowed Channar women to wear an upper garment, ending a humiliating caste custom.",
+    "difficulty": 2,
+    "tags": [
+      "channar-revolt",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Malayali Memorial of 1891 was submitted to which ruler of Travancore?",
+    "options": [
+      "Swathi Thirunal",
+      "Sree Mulam Thirunal",
+      "Chithira Thirunal",
+      "Uthram Thirunal"
+    ],
+    "answer": 1,
+    "explanation": "The Malayali Memorial, with over 10,000 signatures and organised largely by Barrister G.P. Pillai, asked Sree Mulam Thirunal for a fair share of government jobs for native Travancoreans.",
+    "difficulty": 2,
+    "tags": [
+      "malayali-memorial",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Ezhava Memorial of 1896 was organised chiefly by",
+    "options": [
+      "Dr. Palpu",
+      "G.P. Pillai",
+      "C. Krishnan",
+      "T.K. Madhavan"
+    ],
+    "answer": 0,
+    "explanation": "Dr. Palpu, denied government service in Travancore despite his medical qualifications, collected over 13,000 signatures for the Ezhava Memorial demanding civil rights for his community.",
+    "difficulty": 2,
+    "tags": [
+      "ezhava-memorial",
+      "dr-palpu"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Mannathu Padmanabhan was the founder of",
+    "options": [
+      "SNDP Yogam",
+      "Yogakshema Sabha",
+      "Nair Service Society",
+      "Sadhu Jana Paripalana Sangham"
+    ],
+    "answer": 2,
+    "explanation": "Mannathu Padmanabhan founded the Nair Service Society in 1914 at Perunna, Changanassery; he was honoured with the title Bharata Kesari.",
+    "difficulty": 1,
+    "tags": [
+      "mannathu-padmanabhan",
+      "nss"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Sahodaran Ayyappan, who organised the 'Misra Bhojanam' (inter-dining) of 1917, is known for which slogan?",
+    "options": [
+      "'One caste, one religion, one God for man'",
+      "'Educate, agitate, organise'",
+      "'Enlighten through education, strengthen through organisation'",
+      "'No caste, no religion, no God for man'"
+    ],
+    "answer": 3,
+    "explanation": "Sahodaran Ayyappan pushed his teacher's message further with 'Jathi venda, matham venda, daivam venda manushyanu', and staged inter-caste dining at Cherai in 1917.",
+    "difficulty": 3,
+    "tags": [
+      "sahodaran-ayyappan",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Vagbhatananda, the rationalist reformer of north Kerala, founded",
+    "options": [
+      "Sivagiri Mutt",
+      "Atmavidya Sangham",
+      "Siddhasramam",
+      "Prathyaksha Raksha Daiva Sabha"
+    ],
+    "answer": 1,
+    "explanation": "Vagbhatananda founded the Atmavidya Sangham and edited the journal Abhinava Keralam, attacking idol worship, caste and superstition in Malabar.",
+    "difficulty": 3,
+    "tags": [
+      "vagbhatananda",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Poikayil Yohannan (Kumara Guru) founded which organisation?",
+    "options": [
+      "Prathyaksha Raksha Daiva Sabha",
+      "Atmavidya Sangham",
+      "Yogakshema Sabha",
+      "Samathwa Samajam"
+    ],
+    "answer": 0,
+    "explanation": "Poikayil Yohannan founded the Prathyaksha Raksha Daiva Sabha in 1909 for former slave castes and was nominated to the Sree Mulam Praja Sabha.",
+    "difficulty": 3,
+    "tags": [
+      "poikayil-yohannan",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Brahmananda Swami Sivayogi, author of 'Anandamatham', set up his Siddhasramam at",
+    "options": [
+      "Aluva",
+      "Varkala",
+      "Alathur in Palakkad",
+      "Vaikom"
+    ],
+    "answer": 2,
+    "explanation": "Brahmananda Sivayogi founded Siddhasramam at Alathur in Palakkad, preaching Ananda darsanam and rejecting idol worship and caste ritual.",
+    "difficulty": 3,
+    "tags": [
+      "renaissance",
+      "reformers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Pandit K.P. Karuppan, poet and social reformer who worked among the fishing communities, is known as",
+    "options": [
+      "Kerala Gandhi",
+      "Kerala Simham",
+      "Kerala Vyasa",
+      "the Lincoln of Kerala"
+    ],
+    "answer": 3,
+    "explanation": "K.P. Karuppan, called the Lincoln of Kerala for his fight against social slavery, wrote the play Balakalesam and led the Araya and Valan communities towards education.",
+    "difficulty": 3,
+    "tags": [
+      "kp-karuppan",
+      "renaissance"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Nivarthana Prakshobhanam (Abstention Movement) of the 1930s in Travancore demanded",
+    "options": [
+      "proportionate representation for backward communities in the legislature and public services",
+      "entry into all temples",
+      "the right to wear an upper cloth",
+      "the abolition of the Dewan's office"
+    ],
+    "answer": 0,
+    "explanation": "Ezhavas, Christians and Muslims abstained from the 1932 elections demanding representation in proportion to their numbers; the agitation led to franchise reform and a wider Sree Chithira State Council.",
+    "difficulty": 3,
+    "tags": [
+      "nivarthana-prakshobhanam",
+      "travancore"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "During his 1925 visit to Kerala for the Vaikom Satyagraha, Mahatma Gandhi met which reformer at Sivagiri?",
+    "options": [
+      "Chattampi Swamikal",
+      "Ayyankali",
+      "Sree Narayana Guru",
+      "Mannathu Padmanabhan"
+    ],
+    "answer": 2,
+    "explanation": "Gandhiji met Sree Narayana Guru at Sivagiri in March 1925; Rabindranath Tagore had visited the Guru there in 1922 and called him a rare soul.",
+    "difficulty": 2,
+    "tags": [
+      "sree-narayana-guru",
+      "vaikom-satyagraha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The longest river in Kerala is",
+    "options": [
+      "Periyar",
+      "Bharathappuzha",
+      "Pamba",
+      "Chaliyar"
+    ],
+    "answer": 0,
+    "explanation": "The Periyar, about 244 km long, rises in the Sivagiri hills and is called the lifeline of Kerala because of the Idukki hydel project and the drinking water it supplies to Kochi.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-geography",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The second longest river of Kerala, also known as Nila, is",
+    "options": [
+      "Pamba",
+      "Bharathappuzha",
+      "Chaliyar",
+      "Periyar"
+    ],
+    "answer": 1,
+    "explanation": "The Bharathappuzha or Nila, about 209 km long, rises in the Anamalai hills of Tamil Nadu and flows through Palakkad, Thrissur and Malappuram; Kerala Kalamandalam stands on its bank.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-geography",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The highest peak in Kerala, and in South India, is",
+    "options": [
+      "Agasthyakoodam",
+      "Chembra Peak",
+      "Anamudi",
+      "Meesapulimala"
+    ],
+    "answer": 2,
+    "explanation": "Anamudi rises to about 2,695 metres and is the highest point in India south of the Himalayas; it stands inside Eravikulam National Park.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-geography",
+      "peaks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Anamudi peak is located in which district of Kerala?",
+    "options": [
+      "Wayanad",
+      "Palakkad",
+      "Thrissur",
+      "Idukki"
+    ],
+    "answer": 3,
+    "explanation": "Anamudi lies in the Devikulam taluk of Idukki district, within Eravikulam National Park near Munnar.",
+    "difficulty": 2,
+    "tags": [
+      "kerala-geography",
+      "peaks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which Kerala backwater is the longest lake in India?",
+    "options": [
+      "Ashtamudi Lake",
+      "Sasthamkotta Lake",
+      "Kayamkulam Kayal",
+      "Vembanad Lake"
+    ],
+    "answer": 3,
+    "explanation": "Vembanad stretches roughly 96 km from Alappuzha towards Kochi and is India's longest lake; the Vembanad-Kol wetland is a Ramsar site.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-geography",
+      "backwaters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The largest freshwater lake in Kerala is",
+    "options": [
+      "Vembanad",
+      "Ashtamudi",
+      "Sasthamkotta",
+      "Veli"
+    ],
+    "answer": 2,
+    "explanation": "Sasthamkotta Lake in Kollam district is Kerala's largest freshwater lake and a Ramsar site; it supplies drinking water to much of Kollam.",
+    "difficulty": 2,
+    "tags": [
+      "kerala-geography",
+      "lakes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Of the 44 rivers of Kerala, how many flow eastward?",
+    "options": [
+      "3",
+      "4",
+      "7",
+      "11"
+    ],
+    "answer": 0,
+    "explanation": "Only the Kabani, Bhavani and Pambar flow east into the Deccan; the other 41 rivers flow west into the Arabian Sea.",
+    "difficulty": 3,
+    "tags": [
+      "kerala-geography",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which of these rivers of Kerala flows eastward?",
+    "options": [
+      "Periyar",
+      "Kabani",
+      "Chalakudy",
+      "Meenachil"
+    ],
+    "answer": 1,
+    "explanation": "The Kabani rises in Wayanad and flows east to join the Kaveri, making it one of Kerala's three east-flowing rivers.",
+    "difficulty": 2,
+    "tags": [
+      "kerala-geography",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Silent Valley National Park is situated in which district?",
+    "options": [
+      "Idukki",
+      "Wayanad",
+      "Palakkad",
+      "Kollam"
+    ],
+    "answer": 2,
+    "explanation": "Silent Valley in Palakkad district was saved from a hydel project by a famous environmental campaign and declared a national park in 1984; it shelters the lion-tailed macaque.",
+    "difficulty": 1,
+    "tags": [
+      "wildlife",
+      "national-park"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Eravikulam National Park is best known as the habitat of the",
+    "options": [
+      "tiger",
+      "lion-tailed macaque",
+      "great hornbill",
+      "Nilgiri tahr"
+    ],
+    "answer": 3,
+    "explanation": "Eravikulam near Munnar holds the largest surviving population of the Nilgiri tahr and is famous for the Neelakurinji bloom on its slopes.",
+    "difficulty": 1,
+    "tags": [
+      "wildlife",
+      "national-park"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Thattekkad, Kerala's first bird sanctuary, was set up on the recommendation of which ornithologist?",
+    "options": [
+      "Salim Ali",
+      "M. Krishnan",
+      "E.P. Gee",
+      "S. Bhupathy"
+    ],
+    "answer": 0,
+    "explanation": "Salim Ali surveyed the area and called it the richest bird habitat in peninsular India; the sanctuary on the Periyar in Ernakulam district is named after him.",
+    "difficulty": 2,
+    "tags": [
+      "wildlife",
+      "bird-sanctuary"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Periyar Tiger Reserve is centred on which well-known destination?",
+    "options": [
+      "Malampuzha",
+      "Thekkady",
+      "Ponmudi",
+      "Neyyar"
+    ],
+    "answer": 1,
+    "explanation": "The Periyar Tiger Reserve at Thekkady in Idukki district surrounds the artificial lake created by the Mullaperiyar dam and is one of India's earliest tiger reserves.",
+    "difficulty": 1,
+    "tags": [
+      "wildlife",
+      "tiger-reserve"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The smallest district of Kerala by area is",
+    "options": [
+      "Kottayam",
+      "Wayanad",
+      "Pathanamthitta",
+      "Alappuzha"
+    ],
+    "answer": 3,
+    "explanation": "Alappuzha, at about 1,414 sq km, is Kerala's smallest district by area and the only district without any forest land.",
+    "difficulty": 2,
+    "tags": [
+      "districts",
+      "kerala-geography"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "According to the 2011 Census, which district of Kerala has the largest population?",
+    "options": [
+      "Thiruvananthapuram",
+      "Ernakulam",
+      "Thrissur",
+      "Malappuram"
+    ],
+    "answer": 3,
+    "explanation": "Malappuram, with over 41 lakh people in 2011, is Kerala's most populous district and also recorded the state's highest decadal growth.",
+    "difficulty": 2,
+    "tags": [
+      "districts",
+      "census"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which district of Kerala has the smallest population?",
+    "options": [
+      "Wayanad",
+      "Idukki",
+      "Pathanamthitta",
+      "Kasaragod"
+    ],
+    "answer": 0,
+    "explanation": "Wayanad, a hill district with a large tribal population, recorded about 8.17 lakh people in 2011, the lowest in Kerala; Idukki has the lowest population density.",
+    "difficulty": 2,
+    "tags": [
+      "districts",
+      "census"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Palakkad Gap is a natural break in which mountain range?",
+    "options": [
+      "Eastern Ghats",
+      "Western Ghats",
+      "Satpura Range",
+      "Aravalli Range"
+    ],
+    "answer": 1,
+    "explanation": "The Palakkad Gap, about 30 km wide, is the main pass through the Western Ghats linking Kerala with Tamil Nadu, and carries the road and rail routes to Coimbatore.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-geography",
+      "western-ghats"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Kuttanad, famous for cultivation below sea level, lies mainly in which district?",
+    "options": [
+      "Kollam",
+      "Kottayam",
+      "Alappuzha",
+      "Ernakulam"
+    ],
+    "answer": 2,
+    "explanation": "Kuttanad, centred on Alappuzha district around Vembanad Lake, is one of the few places in the world where farming is done up to two metres below sea level; it is recognised as a Globally Important Agricultural Heritage System.",
+    "difficulty": 1,
+    "tags": [
+      "kuttanad",
+      "agriculture"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which city of Kerala is called the 'Venice of the East'?",
+    "options": [
+      "Kochi",
+      "Kollam",
+      "Thrissur",
+      "Alappuzha"
+    ],
+    "answer": 3,
+    "explanation": "Alappuzha earned the name from Lord Curzon for its network of canals and backwaters; it is also the centre of Kerala's coir industry.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-geography",
+      "nicknames"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Idukki arch dam, one of the highest arch dams in Asia, is built across which river?",
+    "options": [
+      "Periyar",
+      "Pamba",
+      "Chalakudy",
+      "Bharathappuzha"
+    ],
+    "answer": 0,
+    "explanation": "The Idukki arch dam spans the Periyar between the Kuravan and Kurathi hills and feeds the Moolamattom underground power house.",
+    "difficulty": 2,
+    "tags": [
+      "dams",
+      "kerala-geography"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Mullaperiyar Dam is a long-standing dispute between Kerala and which state?",
+    "options": [
+      "Karnataka",
+      "Tamil Nadu",
+      "Andhra Pradesh",
+      "Maharashtra"
+    ],
+    "answer": 1,
+    "explanation": "Built in 1895 under engineer John Pennycuick, the dam stands on Kerala soil but is operated by Tamil Nadu, which receives its water for irrigation in Theni and Madurai.",
+    "difficulty": 1,
+    "tags": [
+      "dams",
+      "mullaperiyar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Banasura Sagar, the largest earth dam in India, is located in which district?",
+    "options": [
+      "Idukki",
+      "Wayanad",
+      "Palakkad",
+      "Kannur"
+    ],
+    "answer": 1,
+    "explanation": "Banasura Sagar in Wayanad is built across the Karamanathodu, a tributary of the Kabani, and is part of the Kakkayam hydel project.",
+    "difficulty": 2,
+    "tags": [
+      "dams",
+      "wayanad"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Malampuzha dam and garden are in which district?",
+    "options": [
+      "Thrissur",
+      "Idukki",
+      "Palakkad",
+      "Kollam"
+    ],
+    "answer": 2,
+    "explanation": "Malampuzha, on a tributary of the Bharathappuzha in Palakkad district, is Kerala's largest reservoir and a well-known irrigation and tourism site.",
+    "difficulty": 1,
+    "tags": [
+      "dams",
+      "palakkad"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Athirappilly waterfalls, often called the Niagara of India, is on which river?",
+    "options": [
+      "Periyar",
+      "Pamba",
+      "Kabani",
+      "Chalakudy"
+    ],
+    "answer": 3,
+    "explanation": "Athirappilly falls, about 24 metres high, is on the Chalakudy river in Thrissur district and lies close to the Vazhachal forest, a habitat of hornbills.",
+    "difficulty": 2,
+    "tags": [
+      "waterfalls",
+      "kerala-geography"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Neelakurinji, the shrub that blooms once in twelve years, is most closely associated with which hill station?",
+    "options": [
+      "Munnar",
+      "Ponmudi",
+      "Nelliampathy",
+      "Wagamon"
+    ],
+    "answer": 0,
+    "explanation": "The Strobilanthes kunthiana turns the slopes around Munnar and Eravikulam blue when it blooms in mass every twelfth year, last seen in 2018.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-geography",
+      "flora"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Edakkal Caves, famous for prehistoric petroglyphs, are located in which district?",
+    "options": [
+      "Idukki",
+      "Wayanad",
+      "Kasaragod",
+      "Palakkad"
+    ],
+    "answer": 1,
+    "explanation": "The Edakkal Caves on Ambukuthi hill in Wayanad carry rock engravings of human and animal figures believed to be several thousand years old.",
+    "difficulty": 2,
+    "tags": [
+      "wayanad",
+      "archaeology"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The state bird of Kerala is the",
+    "options": [
+      "peacock",
+      "Indian roller",
+      "great hornbill",
+      "white-breasted kingfisher"
+    ],
+    "answer": 2,
+    "explanation": "The great hornbill, called Malamuzhakki Vezhambal in Malayalam, is Kerala's state bird and is found in the evergreen forests of the Western Ghats.",
+    "difficulty": 1,
+    "tags": [
+      "state-symbols",
+      "wildlife"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The state flower of Kerala is",
+    "options": [
+      "lotus",
+      "jasmine",
+      "neelakurinji",
+      "kanikonna (golden shower)"
+    ],
+    "answer": 3,
+    "explanation": "Kanikonna, Cassia fistula, blooms in April and is placed in the Vishukkani arrangement on Vishu day, which is why it is the state flower.",
+    "difficulty": 1,
+    "tags": [
+      "state-symbols",
+      "flora"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The state animal of Kerala is the",
+    "options": [
+      "Indian elephant",
+      "Nilgiri tahr",
+      "tiger",
+      "sambar deer"
+    ],
+    "answer": 0,
+    "explanation": "The Indian elephant is Kerala's state animal and appears on the state emblem; the coconut palm is the state tree and the great hornbill the state bird.",
+    "difficulty": 1,
+    "tags": [
+      "state-symbols",
+      "wildlife"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which of the following districts of Kerala has no sea coast?",
+    "options": [
+      "Kollam",
+      "Kannur",
+      "Palakkad",
+      "Thrissur"
+    ],
+    "answer": 2,
+    "explanation": "Palakkad, along with Idukki, Wayanad and Pathanamthitta, is a landlocked district; the other ten districts of Kerala touch the Arabian Sea.",
+    "difficulty": 2,
+    "tags": [
+      "districts",
+      "kerala-geography"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "G. Sankara Kurup won the very first Jnanpith Award (1965) for which collection of poems?",
+    "options": [
+      "Odakkuzhal",
+      "Kayar",
+      "Oru Desathinte Katha",
+      "Randamoozham"
+    ],
+    "answer": 0,
+    "explanation": "Odakkuzhal (The Bamboo Flute) brought G. Sankara Kurup the first Jnanpith Award ever given, making Malayalam the first language to receive the honour.",
+    "difficulty": 1,
+    "tags": [
+      "literature",
+      "jnanpith"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Thakazhi Sivasankara Pillai received the Jnanpith Award for which novel?",
+    "options": [
+      "Chemmeen",
+      "Kayar",
+      "Enippadikal",
+      "Randidangazhi"
+    ],
+    "answer": 1,
+    "explanation": "Kayar (Coir), a sweeping account of Kuttanad society across generations, won Thakazhi the Jnanpith in 1984; Chemmeen had earlier won him the Sahitya Akademi Award.",
+    "difficulty": 3,
+    "tags": [
+      "literature",
+      "jnanpith"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "S.K. Pottekkatt was awarded the Jnanpith for which work?",
+    "options": [
+      "Vishakanyaka",
+      "Nadan Premam",
+      "Oru Desathinte Katha",
+      "Kabinilokam"
+    ],
+    "answer": 2,
+    "explanation": "Oru Desathinte Katha (The Story of a Locale), based on his native Athiranippadam in Kozhikode, won Pottekkatt the Jnanpith in 1980; he was also a noted travel writer.",
+    "difficulty": 2,
+    "tags": [
+      "literature",
+      "jnanpith"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which Malayalam writer received the Jnanpith Award in 1995?",
+    "options": [
+      "O.N.V. Kurup",
+      "Akkitham",
+      "Thakazhi Sivasankara Pillai",
+      "M.T. Vasudevan Nair"
+    ],
+    "answer": 3,
+    "explanation": "M.T. Vasudevan Nair, author of Naalukettu, Kaalam and Randamoozham and a celebrated screenwriter, won the Jnanpith in 1995; O.N.V. Kurup received it in 2007 and Akkitham in 2019.",
+    "difficulty": 2,
+    "tags": [
+      "literature",
+      "jnanpith"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The novel 'Chemmeen', set among the fisherfolk of the Kerala coast, was written by",
+    "options": [
+      "Thakazhi Sivasankara Pillai",
+      "Vaikom Muhammad Basheer",
+      "P. Kesavadev",
+      "S.K. Pottekkatt"
+    ],
+    "answer": 0,
+    "explanation": "Thakazhi's Chemmeen tells the story of Karuthamma and Pareekutty; Ramu Kariat's 1965 film of the novel was the first South Indian film to win the President's Gold Medal.",
+    "difficulty": 1,
+    "tags": [
+      "literature",
+      "novel"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "'Balyakalasakhi' and 'Pathummayude Aadu' were written by",
+    "options": [
+      "M.T. Vasudevan Nair",
+      "Vaikom Muhammad Basheer",
+      "Uroob",
+      "Thakazhi Sivasankara Pillai"
+    ],
+    "answer": 1,
+    "explanation": "Vaikom Muhammad Basheer, the Beypore Sultan, wrote in a plain conversational Malayalam; his other well-known works include Ntuppuppakkoranendarnnu and Mathilukal.",
+    "difficulty": 1,
+    "tags": [
+      "literature",
+      "basheer"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The first novel in Malayalam is generally held to be",
+    "options": [
+      "Indulekha",
+      "Kundalatha",
+      "Marthandavarma",
+      "Saraswathi Vijayam"
+    ],
+    "answer": 1,
+    "explanation": "Kundalatha by Appu Nedungadi (1887) was the first Malayalam novel, while O. Chandu Menon's Indulekha (1889) is regarded as the first realistic social novel in the language.",
+    "difficulty": 3,
+    "tags": [
+      "literature",
+      "novel"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Thunchath Ramanujan Ezhuthachan, called the father of the Malayalam language, is best known for which work?",
+    "options": [
+      "Krishnagatha",
+      "Ramacharitham",
+      "Adhyatma Ramayanam Kilippattu",
+      "Kalyana Saugandhikam"
+    ],
+    "answer": 2,
+    "explanation": "Ezhuthachan's Adhyatma Ramayanam, composed in the Kilippattu (parrot song) form in the 16th century, shaped modern Malayalam; Krishnagatha is by Cherusseri.",
+    "difficulty": 1,
+    "tags": [
+      "literature",
+      "ezhuthachan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Ottamthullal, a solo satirical performing art, was created by",
+    "options": [
+      "Cherusseri",
+      "Ezhuthachan",
+      "Vallathol Narayana Menon",
+      "Kunchan Nambiar"
+    ],
+    "answer": 3,
+    "explanation": "Kunchan Nambiar devised Thullal in the 18th century, using simple Malayalam and biting humour to mock social evils; Ottamthullal is its best known form.",
+    "difficulty": 1,
+    "tags": [
+      "art-forms",
+      "thullal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Kerala Kalamandalam was founded by",
+    "options": [
+      "Vallathol Narayana Menon",
+      "Ulloor S. Parameswara Iyer",
+      "Kumaran Asan",
+      "G. Sankara Kurup"
+    ],
+    "answer": 0,
+    "explanation": "The poet Vallathol Narayana Menon founded Kalamandalam in 1930 with Manakkulam Mukunda Raja to revive Kathakali and other classical arts of Kerala.",
+    "difficulty": 1,
+    "tags": [
+      "art-forms",
+      "kalamandalam"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Kerala Kalamandalam is located at",
+    "options": [
+      "Kottakkal",
+      "Cheruthuruthy",
+      "Thrippunithura",
+      "Irinjalakuda"
+    ],
+    "answer": 1,
+    "explanation": "Kalamandalam stands at Cheruthuruthy in Thrissur district on the bank of the Bharathappuzha and now functions as a deemed university for art and culture.",
+    "difficulty": 2,
+    "tags": [
+      "art-forms",
+      "kalamandalam"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which Kerala art form was proclaimed a Masterpiece of the Oral and Intangible Heritage of Humanity by UNESCO in 2001?",
+    "options": [
+      "Kathakali",
+      "Theyyam",
+      "Koodiyattam",
+      "Mohiniyattam"
+    ],
+    "answer": 2,
+    "explanation": "Koodiyattam, the Sanskrit theatre performed in temple koothambalams and preserved by the Chakyar families, was among the first traditions worldwide to receive this UNESCO recognition.",
+    "difficulty": 2,
+    "tags": [
+      "art-forms",
+      "unesco"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Theyyam, a ritual dance in which the performer is worshipped as a deity, is performed mainly in",
+    "options": [
+      "Travancore",
+      "Kuttanad",
+      "central Kerala",
+      "north Malabar (Kannur and Kasaragod)"
+    ],
+    "answer": 3,
+    "explanation": "Theyyam or Theyyattam is performed in the kavus and tharavadu shrines of Kannur and Kasaragod, with elaborate face painting and towering headgear.",
+    "difficulty": 1,
+    "tags": [
+      "art-forms",
+      "theyyam"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Mohiniyattam is best described as",
+    "options": [
+      "a graceful solo classical dance of Kerala traditionally performed by women",
+      "a martial art of north Malabar",
+      "a ritual dance performed only by men in temples",
+      "a percussion ensemble of temple festivals"
+    ],
+    "answer": 0,
+    "explanation": "Mohiniyattam, with its swaying lasya movements and off-white kasavu costume, was systematised under Swathi Thirunal and revived at Kalamandalam.",
+    "difficulty": 1,
+    "tags": [
+      "art-forms",
+      "mohiniyattam"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Kalaripayattu is",
+    "options": [
+      "a folk theatre of Malabar",
+      "a martial art of Kerala",
+      "a temple percussion art",
+      "a genre of boat songs"
+    ],
+    "answer": 1,
+    "explanation": "Kalaripayattu, trained in a pit-like arena called the kalari, is among the oldest martial arts in the world and includes marmma treatment and weapon combat.",
+    "difficulty": 1,
+    "tags": [
+      "art-forms",
+      "kalaripayattu"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which of these is a temple orchestra of Kerala made up of five instruments?",
+    "options": [
+      "Thayambaka",
+      "Panchavadyam",
+      "Chakyar Koothu",
+      "Ottamthullal"
+    ],
+    "answer": 1,
+    "explanation": "Panchavadyam uses timila, maddalam, ilathalam, idakka and kombu; Thayambaka by contrast is a solo chenda performance.",
+    "difficulty": 3,
+    "tags": [
+      "art-forms",
+      "percussion"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Thrissur Pooram is celebrated at which temple?",
+    "options": [
+      "Guruvayur Sree Krishna Temple",
+      "Sabarimala",
+      "Vadakkumnathan Temple",
+      "Padmanabhaswamy Temple"
+    ],
+    "answer": 2,
+    "explanation": "The Pooram is held on the Thekkinkadu maidan around the Vadakkumnathan Temple, with the caparisoned elephants of Paramekkavu and Thiruvambadi facing each other.",
+    "difficulty": 1,
+    "tags": [
+      "festivals",
+      "thrissur-pooram"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Thrissur Pooram was started by",
+    "options": [
+      "Marthanda Varma",
+      "Swathi Thirunal",
+      "the Zamorin of Kozhikode",
+      "Sakthan Thampuran"
+    ],
+    "answer": 3,
+    "explanation": "Rama Varma Sakthan Thampuran of Cochin organised the Pooram in the late 18th century by bringing together temples around Thrissur after they were excluded from the Aarattupuzha Pooram.",
+    "difficulty": 3,
+    "tags": [
+      "festivals",
+      "thrissur-pooram"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Nehru Trophy Boat Race is held on which lake?",
+    "options": [
+      "Punnamada Lake",
+      "Ashtamudi Lake",
+      "Sasthamkotta Lake",
+      "Veli Lake"
+    ],
+    "answer": 0,
+    "explanation": "The snake boat race on Punnamada Lake in Alappuzha began in 1952 after Jawaharlal Nehru's visit; the trophy is a model of a chundan vallam.",
+    "difficulty": 1,
+    "tags": [
+      "festivals",
+      "boat-race"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Onam is celebrated in which month of the Malayalam calendar?",
+    "options": [
+      "Karkidakam",
+      "Chingam",
+      "Medam",
+      "Thulam"
+    ],
+    "answer": 1,
+    "explanation": "Onam falls in Chingam, the first month of the Malayalam year, on the Thiruvonam asterism, and commemorates the annual homecoming of the mythical king Mahabali.",
+    "difficulty": 1,
+    "tags": [
+      "festivals",
+      "onam"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Vishu is celebrated on the first day of which Malayalam month?",
+    "options": [
+      "Chingam",
+      "Medam",
+      "Kanni",
+      "Vrischikam"
+    ],
+    "answer": 1,
+    "explanation": "Vishu falls on the first of Medam, around 14-15 April, and marks the astronomical new year; the day begins with the Vishukkani arrangement of konna flowers, rice and gold.",
+    "difficulty": 2,
+    "tags": [
+      "festivals",
+      "vishu"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Attukal Pongala, noted in the Guinness Book for the largest gathering of women for a single event, is held in which city?",
+    "options": [
+      "Kollam",
+      "Thrissur",
+      "Thiruvananthapuram",
+      "Kottayam"
+    ],
+    "answer": 2,
+    "explanation": "Lakhs of women cook pongala in earthen pots on the streets around the Attukal Bhagavathy Temple in Thiruvananthapuram, which is called the Sabarimala of Women.",
+    "difficulty": 2,
+    "tags": [
+      "festivals",
+      "attukal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The Aranmula Uthrattathi Vallamkali (boat race) is held on which river?",
+    "options": [
+      "Periyar",
+      "Bharathappuzha",
+      "Chalakudy",
+      "Pamba"
+    ],
+    "answer": 3,
+    "explanation": "The Aranmula boat race is held on the Pamba near the Parthasarathy Temple, using palliyodams that are treated as sacred and not raced for competition alone.",
+    "difficulty": 2,
+    "tags": [
+      "festivals",
+      "boat-race"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The first Malayalam feature film 'Vigathakumaran' (1928) was produced and directed by",
+    "options": [
+      "J.C. Daniel",
+      "P. Subramaniam",
+      "Ramu Kariat",
+      "Adoor Gopalakrishnan"
+    ],
+    "answer": 0,
+    "explanation": "J.C. Daniel, honoured as the father of Malayalam cinema, made the silent film Vigathakumaran; Kerala's state film award for lifetime achievement is named after him.",
+    "difficulty": 2,
+    "tags": [
+      "first-in-kerala",
+      "cinema"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The first Malayalam talkie film was",
+    "options": [
+      "Vigathakumaran",
+      "Balan",
+      "Neelakuyil",
+      "Jeevithanauka"
+    ],
+    "answer": 1,
+    "explanation": "Balan, released in 1938 and directed by S. Nottani, was the first Malayalam film with sound; Vigathakumaran of 1928 was silent.",
+    "difficulty": 3,
+    "tags": [
+      "first-in-kerala",
+      "cinema"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The first Malayalam newspaper, 'Rajyasamacharam' (1847), was started by",
+    "options": [
+      "Kesari Balakrishna Pillai",
+      "Kandathil Varghese Mappillai",
+      "Hermann Gundert",
+      "Benjamin Bailey"
+    ],
+    "answer": 2,
+    "explanation": "The German missionary Hermann Gundert brought out Rajyasamacharam from Illikkunnu, Thalassery in 1847; he also compiled the first Malayalam-English dictionary.",
+    "difficulty": 3,
+    "tags": [
+      "first-in-kerala",
+      "media"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Technopark, India's first technology park for IT industries, is located at",
+    "options": [
+      "Kochi",
+      "Kozhikode",
+      "Kollam",
+      "Thiruvananthapuram"
+    ],
+    "answer": 3,
+    "explanation": "Technopark at Thiruvananthapuram, established in 1990, was the first organised IT park in India and remains one of the largest by employment.",
+    "difficulty": 2,
+    "tags": [
+      "economy",
+      "first-in-india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "FACT, India's first large-scale fertiliser plant, is situated at",
+    "options": [
+      "Udyogamandal near Eloor",
+      "Kollam",
+      "Kozhikode",
+      "Alappuzha"
+    ],
+    "answer": 0,
+    "explanation": "The Fertilisers and Chemicals Travancore Ltd began production at Udyogamandal on the Periyar in 1947 and was the country's first big fertiliser factory.",
+    "difficulty": 3,
+    "tags": [
+      "economy",
+      "industry"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "Which was the first district in India to be declared fully literate, in 1990?",
+    "options": [
+      "Kottayam",
+      "Thiruvananthapuram",
+      "Palakkad",
+      "Ernakulam"
+    ],
+    "answer": 3,
+    "explanation": "Ernakulam was declared the first fully literate district in India in February 1990, and Kerala became the first fully literate state in 1991; Kottayam town had been declared fully literate in 1989.",
+    "difficulty": 3,
+    "tags": [
+      "first-in-india",
+      "literacy"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "The High Court of Kerala is located at",
+    "options": [
+      "Ernakulam",
+      "Thiruvananthapuram",
+      "Thrissur",
+      "Kollam"
+    ],
+    "answer": 0,
+    "explanation": "The Kerala High Court sits at Ernakulam in Kochi and exercises jurisdiction over Kerala and the Union Territory of Lakshadweep.",
+    "difficulty": 1,
+    "tags": [
+      "kerala-polity",
+      "institutions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "kerala",
+    "question": "How many seats are there in the Kerala Legislative Assembly?",
+    "options": [
+      "120",
+      "133",
+      "140",
+      "147"
+    ],
+    "answer": 2,
+    "explanation": "The Kerala Niyamasabha has 140 elected members; the state sends 20 members to the Lok Sabha and 9 to the Rajya Sabha.",
+    "difficulty": 2,
+    "tags": [
+      "kerala-polity",
+      "institutions"
+    ],
+    "source": "seed"
+  }
+]

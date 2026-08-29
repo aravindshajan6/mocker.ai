@@ -1,0 +1,1437 @@
+[
+ {
+  "topic": "computers-tech",
+  "question": "Which electronic component was used in the first generation of computers?",
+  "options": [
+   "Vacuum tubes",
+   "Transistors",
+   "Integrated circuits",
+   "Microprocessors"
+  ],
+  "answer": 0,
+  "explanation": "First generation computers (1940-1956), such as ENIAC and UNIVAC, used vacuum tubes for circuitry and magnetic drums for memory, which made them huge, power hungry and prone to overheating.",
+  "difficulty": 1,
+  "tags": [
+   "generations",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Integrated circuits (ICs) were first used in which generation of computers?",
+  "options": [
+   "First generation",
+   "Second generation",
+   "Third generation",
+   "Fifth generation"
+  ],
+  "answer": 2,
+  "explanation": "Third generation computers (1964-1971) replaced transistors with integrated circuits, packing many transistors onto a single silicon chip and greatly reducing size and cost.",
+  "difficulty": 1,
+  "tags": [
+   "generations",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The fourth generation of computers is marked by the use of which technology?",
+  "options": [
+   "Magnetic drums",
+   "Vacuum tubes",
+   "Discrete transistors",
+   "Microprocessors based on VLSI"
+  ],
+  "answer": 3,
+  "explanation": "Fourth generation computers (1971 onwards) use microprocessors built with Very Large Scale Integration, placing the entire CPU on one chip; the Intel 4004 of 1971 was the first such microprocessor.",
+  "difficulty": 1,
+  "tags": [
+   "generations",
+   "microprocessor"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The fifth generation of computers is chiefly associated with which technology?",
+  "options": [
+   "Punched card processing",
+   "Vacuum tube amplification",
+   "Magnetic core memory",
+   "Artificial intelligence and parallel processing"
+  ],
+  "answer": 3,
+  "explanation": "Fifth generation computing is defined by artificial intelligence, natural language processing and massively parallel architectures rather than by a new switching device.",
+  "difficulty": 1,
+  "tags": [
+   "generations",
+   "artificial-intelligence"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "What does the abbreviation ENIAC stand for?",
+  "options": [
+   "Electronic Numerical Integrator and Computer",
+   "Electrical Numeric Integrated Automatic Calculator",
+   "Electronic Network Integrator and Analog Computer",
+   "Electronic Numerical Interpreter and Accumulator"
+  ],
+  "answer": 0,
+  "explanation": "ENIAC (Electronic Numerical Integrator and Computer) was completed in 1946 at the University of Pennsylvania by J. Presper Eckert and John Mauchly, and is regarded as the first general-purpose electronic digital computer.",
+  "difficulty": 2,
+  "tags": [
+   "computer-history",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which computer, delivered in 1951, was the first commercial computer built in the United States and was used to process census data?",
+  "options": [
+   "ENIAC",
+   "EDSAC",
+   "UNIVAC I",
+   "Harvard Mark I"
+  ],
+  "answer": 2,
+  "explanation": "UNIVAC I (Universal Automatic Computer) was delivered to the US Census Bureau in 1951; it also famously predicted the 1952 US presidential election result.",
+  "difficulty": 3,
+  "tags": [
+   "computer-history"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which is regarded as the earliest known device used for calculation?",
+  "options": [
+   "Slide rule",
+   "Pascaline",
+   "Napier's bones",
+   "Abacus"
+  ],
+  "answer": 3,
+  "explanation": "The abacus, a bead-and-frame counting device believed to have originated in China around 3000 BC, is the oldest known calculating aid; the slide rule, Napier's bones and Pascaline all came much later.",
+  "difficulty": 1,
+  "tags": [
+   "computer-history"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Who is known as the 'Father of the Computer'?",
+  "options": [
+   "Charles Babbage",
+   "Blaise Pascal",
+   "John von Neumann",
+   "Herman Hollerith"
+  ],
+  "answer": 0,
+  "explanation": "Charles Babbage designed the Difference Engine (1822) and the Analytical Engine (1837), the first design of a general-purpose programmable computer, earning him the title Father of the Computer.",
+  "difficulty": 1,
+  "tags": [
+   "pioneers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Who is considered the world's first computer programmer?",
+  "options": [
+   "Grace Hopper",
+   "Joan Clarke",
+   "Hedy Lamarr",
+   "Ada Lovelace"
+  ],
+  "answer": 3,
+  "explanation": "Ada Lovelace wrote an algorithm in 1843 for Charles Babbage's Analytical Engine to compute Bernoulli numbers, making her the first computer programmer; the language Ada is named after her.",
+  "difficulty": 1,
+  "tags": [
+   "pioneers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The 'Turing Test', used to judge whether a machine can exhibit human-like intelligence, is named after which scientist?",
+  "options": [
+   "John McCarthy",
+   "Claude Shannon",
+   "Alan Turing",
+   "Marvin Minsky"
+  ],
+  "answer": 2,
+  "explanation": "Alan Turing, often called the father of theoretical computer science, proposed the test in his 1950 paper 'Computing Machinery and Intelligence'; he also devised the Turing machine model and broke the German Enigma code.",
+  "difficulty": 2,
+  "tags": [
+   "pioneers",
+   "artificial-intelligence"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Who invented the World Wide Web?",
+  "options": [
+   "Vinton Cerf",
+   "Bill Gates",
+   "Ray Tomlinson",
+   "Tim Berners-Lee"
+  ],
+  "answer": 3,
+  "explanation": "Tim Berners-Lee, a British scientist working at CERN, proposed the World Wide Web in 1989 and created HTML, HTTP and the first web browser; the Web went public in 1991.",
+  "difficulty": 1,
+  "tags": [
+   "internet",
+   "pioneers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Who sent the first network email and chose the '@' symbol to separate the user name from the host name?",
+  "options": [
+   "Ray Tomlinson",
+   "Vinton Cerf",
+   "Larry Roberts",
+   "Tim Berners-Lee"
+  ],
+  "answer": 0,
+  "explanation": "Ray Tomlinson sent the first email between two computers on the ARPANET in 1971 and picked '@' because it was the only preposition-like symbol on the keyboard that did not appear in user names.",
+  "difficulty": 3,
+  "tags": [
+   "internet",
+   "pioneers",
+   "email"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The C programming language was developed at Bell Laboratories by which scientist?",
+  "options": [
+   "Bjarne Stroustrup",
+   "James Gosling",
+   "Niklaus Wirth",
+   "Dennis Ritchie"
+  ],
+  "answer": 3,
+  "explanation": "Dennis Ritchie created C in 1972 at Bell Labs and, with Ken Thompson, used it to rewrite the UNIX operating system; C++ was later developed by Bjarne Stroustrup and Java by James Gosling.",
+  "difficulty": 2,
+  "tags": [
+   "programming-languages",
+   "pioneers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Who developed the Linux kernel in 1991?",
+  "options": [
+   "Linus Torvalds",
+   "Richard Stallman",
+   "Ken Thompson",
+   "Steve Wozniak"
+  ],
+  "answer": 0,
+  "explanation": "Linus Torvalds, then a student in Finland, released the Linux kernel in 1991; combined with Richard Stallman's GNU tools it became the free GNU/Linux operating system.",
+  "difficulty": 1,
+  "tags": [
+   "operating-systems",
+   "pioneers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which part of a computer is called the 'brain' of the computer?",
+  "options": [
+   "Hard disk",
+   "Monitor",
+   "Central Processing Unit",
+   "Motherboard"
+  ],
+  "answer": 2,
+  "explanation": "The Central Processing Unit interprets and executes instructions, and consists of the Arithmetic Logic Unit, the Control Unit and a set of registers.",
+  "difficulty": 1,
+  "tags": [
+   "cpu",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which unit of the CPU carries out all arithmetic and logical operations?",
+  "options": [
+   "Control Unit",
+   "Input Unit",
+   "Memory Unit",
+   "Arithmetic Logic Unit"
+  ],
+  "answer": 3,
+  "explanation": "The Arithmetic Logic Unit performs addition, subtraction and comparisons, while the Control Unit fetches and decodes instructions and directs the flow of data.",
+  "difficulty": 1,
+  "tags": [
+   "cpu",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which type of memory loses all its contents when the computer is switched off?",
+  "options": [
+   "ROM",
+   "Pen drive",
+   "Hard disk",
+   "RAM"
+  ],
+  "answer": 3,
+  "explanation": "RAM is volatile read-write memory that holds programs and data only while power is supplied; ROM, hard disks and flash drives are non-volatile and retain data without power.",
+  "difficulty": 1,
+  "tags": [
+   "memory",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In computing, ROM stands for:",
+  "options": [
+   "Random Output Memory",
+   "Rapid Operating Memory",
+   "Read Only Memory",
+   "Reserved Onboard Module"
+  ],
+  "answer": 2,
+  "explanation": "Read Only Memory is non-volatile memory whose contents are written during manufacture and normally only read thereafter; it stores start-up firmware such as the BIOS.",
+  "difficulty": 1,
+  "tags": [
+   "memory",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which of the following storage locations can the CPU access fastest?",
+  "options": [
+   "Main memory (RAM)",
+   "Magnetic hard disk",
+   "Registers inside the CPU",
+   "Optical disc"
+  ],
+  "answer": 2,
+  "explanation": "Registers, being inside the processor itself, are the fastest storage; the memory hierarchy in decreasing order of speed runs registers, cache, RAM, then secondary storage such as disks.",
+  "difficulty": 2,
+  "tags": [
+   "memory",
+   "cpu"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Cache memory is located between which two components?",
+  "options": [
+   "The CPU and the main memory",
+   "The hard disk and the printer",
+   "The keyboard and the monitor",
+   "The power supply and the motherboard"
+  ],
+  "answer": 0,
+  "explanation": "Cache is small, very fast memory placed between the CPU and RAM that holds frequently used instructions and data, reducing the time the processor waits for main memory.",
+  "difficulty": 2,
+  "tags": [
+   "memory",
+   "cpu"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "One byte is made up of how many bits?",
+  "options": [
+   "4",
+   "8",
+   "16",
+   "32"
+  ],
+  "answer": 1,
+  "explanation": "A byte is 8 bits and can represent 256 different values; half a byte, that is 4 bits, is called a nibble.",
+  "difficulty": 1,
+  "tags": [
+   "storage-units"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In computer storage, one kilobyte (KB) is conventionally equal to how many bytes?",
+  "options": [
+   "100",
+   "512",
+   "1000",
+   "1024"
+  ],
+  "answer": 3,
+  "explanation": "Storage units are based on powers of two, so 1 KB = 2^10 = 1024 bytes, 1 MB = 1024 KB and 1 GB = 1024 MB.",
+  "difficulty": 2,
+  "tags": [
+   "storage-units"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which type of memory chip can be erased by exposing it to ultraviolet light?",
+  "options": [
+   "EPROM",
+   "EEPROM",
+   "SRAM",
+   "DRAM"
+  ],
+  "answer": 0,
+  "explanation": "EPROM (Erasable Programmable Read Only Memory) has a quartz window through which ultraviolet light erases the stored data, whereas EEPROM is erased electrically.",
+  "difficulty": 3,
+  "tags": [
+   "memory",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which of the following is an input device?",
+  "options": [
+   "Plotter",
+   "Speaker",
+   "Optical Mark Reader",
+   "Laser printer"
+  ],
+  "answer": 2,
+  "explanation": "An Optical Mark Reader senses pencil marks on answer sheets and feeds the data into the computer, so it is an input device; plotters, speakers and printers produce output.",
+  "difficulty": 1,
+  "tags": [
+   "input-output",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which of the following is an output device?",
+  "options": [
+   "Joystick",
+   "Light pen",
+   "Plotter",
+   "Barcode reader"
+  ],
+  "answer": 2,
+  "explanation": "A plotter draws vector graphics such as maps and engineering drawings on paper, making it an output device; joysticks, light pens and barcode readers all supply input.",
+  "difficulty": 1,
+  "tags": [
+   "input-output",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which device works as both an input and an output device?",
+  "options": [
+   "Mouse",
+   "Scanner",
+   "Touch screen",
+   "Dot matrix printer"
+  ],
+  "answer": 2,
+  "explanation": "A touch screen displays information (output) and simultaneously accepts commands through finger touch (input); modems and network cards are other examples of dual-function devices.",
+  "difficulty": 2,
+  "tags": [
+   "input-output",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "A CD-ROM is an example of which type of storage medium?",
+  "options": [
+   "Magnetic storage",
+   "Optical storage",
+   "Semiconductor storage",
+   "Electrostatic storage"
+  ],
+  "answer": 1,
+  "explanation": "CDs, DVDs and Blu-ray discs are optical media in which a laser beam reads pits and lands on the disc surface, unlike hard disks and tapes which store data magnetically.",
+  "difficulty": 1,
+  "tags": [
+   "storage",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The BIOS, which starts a computer when it is switched on, is normally stored in which memory?",
+  "options": [
+   "RAM",
+   "ROM",
+   "Cache memory",
+   "Hard disk"
+  ],
+  "answer": 1,
+  "explanation": "The Basic Input Output System is firmware held in ROM (today usually flash ROM) on the motherboard; it performs the power-on self test and loads the operating system.",
+  "difficulty": 2,
+  "tags": [
+   "memory",
+   "operating-systems"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The storage capacity of a standard single-layer, single-sided DVD is about:",
+  "options": [
+   "1.44 MB",
+   "700 MB",
+   "4.7 GB",
+   "25 GB"
+  ],
+  "answer": 2,
+  "explanation": "A single-layer DVD holds about 4.7 GB, against 700 MB for a CD and 25 GB for a single-layer Blu-ray disc; a 3.5 inch floppy held only 1.44 MB.",
+  "difficulty": 3,
+  "tags": [
+   "storage",
+   "storage-units"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "An operating system is an example of which category of software?",
+  "options": [
+   "Application software",
+   "Open courseware",
+   "Utility hardware",
+   "System software"
+  ],
+  "answer": 3,
+  "explanation": "System software manages the machine and provides a platform for other programs; operating systems, device drivers, compilers and assemblers belong to this category, while Word or Tally are application software.",
+  "difficulty": 1,
+  "tags": [
+   "software",
+   "operating-systems"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which language translator converts an entire high-level source program into machine code in one go?",
+  "options": [
+   "Interpreter",
+   "Assembler",
+   "Compiler",
+   "Linker"
+  ],
+  "answer": 2,
+  "explanation": "A compiler translates the whole program at once and reports all errors together, whereas an interpreter translates and executes the program line by line and is therefore slower in execution.",
+  "difficulty": 2,
+  "tags": [
+   "software",
+   "programming-languages"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "An assembler is a program that translates:",
+  "options": [
+   "assembly language into machine code",
+   "high-level language into machine code",
+   "machine code into a high-level language",
+   "a program line by line during execution"
+  ],
+  "answer": 0,
+  "explanation": "Assembly language uses mnemonics such as ADD and MOV, and the assembler converts these into the binary machine code the processor executes.",
+  "difficulty": 2,
+  "tags": [
+   "software",
+   "programming-languages"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The process of starting a computer and loading the operating system into memory is called:",
+  "options": [
+   "Formatting",
+   "Compiling",
+   "Debugging",
+   "Booting"
+  ],
+  "answer": 3,
+  "explanation": "Booting loads the operating system from storage into RAM; starting from a powered-off state is a cold boot, while restarting a running machine is a warm boot.",
+  "difficulty": 1,
+  "tags": [
+   "operating-systems"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The Android mobile operating system is built on which kernel?",
+  "options": [
+   "Windows NT kernel",
+   "Mach kernel",
+   "Symbian kernel",
+   "Linux kernel"
+  ],
+  "answer": 3,
+  "explanation": "Android, released by Google in 2008, uses a modified Linux kernel; Apple's iOS by contrast is built on a Darwin/Mach-based foundation.",
+  "difficulty": 2,
+  "tags": [
+   "operating-systems"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "GUI, the style of interface that uses windows, icons and a mouse pointer, stands for:",
+  "options": [
+   "General User Interaction",
+   "Graphical User Interface",
+   "Graphic Utility Input",
+   "Global Unified Interface"
+  ],
+  "answer": 1,
+  "explanation": "A Graphical User Interface lets users work with icons and menus instead of typing commands as in a Command Line Interface such as MS-DOS.",
+  "difficulty": 1,
+  "tags": [
+   "operating-systems",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which file extension identifies an executable program file in Windows?",
+  "options": [
+   ".txt",
+   ".exe",
+   ".log",
+   ".ini"
+  ],
+  "answer": 1,
+  "explanation": "Files ending in .exe contain programs that Windows can run directly; .txt, .log and .ini are plain text data or settings files.",
+  "difficulty": 1,
+  "tags": [
+   "file-extensions"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "What is the default file extension of a Microsoft Excel workbook from Excel 2007 onwards?",
+  "options": [
+   ".docx",
+   ".pptx",
+   ".xlsx",
+   ".accdb"
+  ],
+  "answer": 2,
+  "explanation": "Excel workbooks use .xlsx, Word documents use .docx, PowerPoint presentations use .pptx and Access databases use .accdb; the older Excel format was .xls.",
+  "difficulty": 1,
+  "tags": [
+   "file-extensions",
+   "ms-office"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "A web page written for display in a browser is normally saved with which file extension?",
+  "options": [
+   ".html",
+   ".psd",
+   ".mdb",
+   ".dll"
+  ],
+  "answer": 0,
+  "explanation": "Web pages are saved as .html or .htm files containing HyperText Markup Language, which the browser interprets to display text, images and links.",
+  "difficulty": 2,
+  "tags": [
+   "file-extensions",
+   "internet"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "A computer network confined to a single building, office or campus is called a:",
+  "options": [
+   "LAN",
+   "WAN",
+   "MAN",
+   "VPN"
+  ],
+  "answer": 0,
+  "explanation": "A Local Area Network covers a small area such as one building; a Metropolitan Area Network spans a city and a Wide Area Network covers regions or countries.",
+  "difficulty": 1,
+  "tags": [
+   "networking"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The Internet is the best example of which type of network?",
+  "options": [
+   "LAN",
+   "PAN",
+   "WAN",
+   "SAN"
+  ],
+  "answer": 2,
+  "explanation": "The Internet links networks across the whole world, making it the largest Wide Area Network; a Personal Area Network such as Bluetooth covers only a few metres.",
+  "difficulty": 1,
+  "tags": [
+   "networking",
+   "internet"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In which network topology are all the nodes connected to one central hub or switch?",
+  "options": [
+   "Bus topology",
+   "Ring topology",
+   "Mesh topology",
+   "Star topology"
+  ],
+  "answer": 3,
+  "explanation": "In a star topology every device has its own cable to a central hub or switch, so a single cable fault affects only one node, but failure of the hub brings down the whole network.",
+  "difficulty": 1,
+  "tags": [
+   "networking",
+   "topology"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which Internet service translates a domain name such as www.kerala.gov.in into its numeric IP address?",
+  "options": [
+   "DHCP",
+   "DNS",
+   "FTP",
+   "SMTP"
+  ],
+  "answer": 1,
+  "explanation": "The Domain Name System acts as the phone book of the Internet, mapping human-readable domain names to IP addresses; DHCP by contrast assigns IP addresses to devices.",
+  "difficulty": 1,
+  "tags": [
+   "networking",
+   "internet"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "An IPv4 address is how many bits long?",
+  "options": [
+   "16 bits",
+   "32 bits",
+   "64 bits",
+   "128 bits"
+  ],
+  "answer": 1,
+  "explanation": "IPv4 uses 32-bit addresses written as four decimal numbers such as 192.168.1.1, allowing about 4.3 billion addresses; IPv6 was introduced with 128-bit addresses to overcome this shortage.",
+  "difficulty": 2,
+  "tags": [
+   "networking",
+   "internet"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which protocol is used to send an email message from a client to a mail server?",
+  "options": [
+   "SMTP",
+   "IMAP",
+   "POP3",
+   "SNMP"
+  ],
+  "answer": 0,
+  "explanation": "Simple Mail Transfer Protocol handles the sending of mail, while POP3 and IMAP are used to retrieve mail from the server to the user's device.",
+  "difficulty": 3,
+  "tags": [
+   "networking",
+   "email",
+   "protocols"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "FTP is a protocol used mainly for:",
+  "options": [
+   "browsing web pages",
+   "transferring files between computers",
+   "assigning IP addresses",
+   "encrypting passwords"
+  ],
+  "answer": 1,
+  "explanation": "File Transfer Protocol moves files between a client and a server over a network; HTTP serves web pages and DHCP assigns IP addresses.",
+  "difficulty": 1,
+  "tags": [
+   "networking",
+   "protocols",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The word 'modem' is formed from which two words?",
+  "options": [
+   "module and demo",
+   "monitor and demodulator",
+   "modulator and demodulator",
+   "mode and demand"
+  ],
+  "answer": 2,
+  "explanation": "A modem modulates digital data into analog signals for transmission over telephone or cable lines and demodulates incoming analog signals back into digital form.",
+  "difficulty": 2,
+  "tags": [
+   "networking",
+   "hardware",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which network device forwards data packets between different networks and selects the best path for them?",
+  "options": [
+   "Hub",
+   "Router",
+   "Repeater",
+   "Modem"
+  ],
+  "answer": 1,
+  "explanation": "A router works at the network layer, reading IP addresses to route packets between networks; a hub simply repeats signals to all its ports within one network.",
+  "difficulty": 2,
+  "tags": [
+   "networking",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Wireless LAN technology, popularly known as Wi-Fi, is defined by which IEEE standard?",
+  "options": [
+   "IEEE 802.3",
+   "IEEE 802.16",
+   "IEEE 802.15",
+   "IEEE 802.11"
+  ],
+  "answer": 3,
+  "explanation": "IEEE 802.11 is the family of wireless LAN standards branded Wi-Fi; 802.3 covers wired Ethernet, 802.15 covers Bluetooth and 802.16 covers WiMAX.",
+  "difficulty": 3,
+  "tags": [
+   "networking",
+   "wireless"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The Internet grew out of which network, set up in 1969 by the United States Department of Defense?",
+  "options": [
+   "NSFNET",
+   "ETHERNET",
+   "ARPANET",
+   "MILNET"
+  ],
+  "answer": 2,
+  "explanation": "ARPANET, funded by the Advanced Research Projects Agency, connected four American universities in 1969 and pioneered packet switching, the basis of today's Internet.",
+  "difficulty": 2,
+  "tags": [
+   "internet",
+   "computer-history"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Public Internet service was launched in India on 15 August 1995 by which organisation?",
+  "options": [
+   "BSNL",
+   "MTNL",
+   "ERNET India",
+   "VSNL"
+  ],
+  "answer": 3,
+  "explanation": "Videsh Sanchar Nigam Limited started India's first public Internet service on 15 August 1995; ERNET had earlier provided limited academic connectivity from 1986.",
+  "difficulty": 3,
+  "tags": [
+   "internet",
+   "indian-it"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The World Wide Web was invented in 1989 at which organisation?",
+  "options": [
+   "CERN, Geneva",
+   "NASA, Houston",
+   "DARPA, Virginia",
+   "MIT, Massachusetts"
+  ],
+  "answer": 0,
+  "explanation": "Tim Berners-Lee proposed the Web while working at CERN, the European Organization for Nuclear Research, and CERN placed the Web software in the public domain in 1993.",
+  "difficulty": 2,
+  "tags": [
+   "internet",
+   "computer-history"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In the context of the Internet, URL stands for:",
+  "options": [
+   "Universal Reference Link",
+   "Uniform Resource Locator",
+   "United Resource Library",
+   "Uniform Retrieval Language"
+  ],
+  "answer": 1,
+  "explanation": "A Uniform Resource Locator is the address of a resource on the Web, made up of the protocol, the domain name and the path, as in https://www.keralapsc.gov.in/index.html.",
+  "difficulty": 1,
+  "tags": [
+   "internet",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "HTML, the language used to create web pages, stands for:",
+  "options": [
+   "HyperText Markup Language",
+   "High Level Text Machine Language",
+   "Hyperlink and Text Management Language",
+   "Home Tool Markup Language"
+  ],
+  "answer": 0,
+  "explanation": "HyperText Markup Language uses tags such as <p> and <a> to structure the content of a web page; it was created by Tim Berners-Lee and is a markup, not a programming, language.",
+  "difficulty": 1,
+  "tags": [
+   "internet",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which of the following is a web browser and not a search engine?",
+  "options": [
+   "Google",
+   "Yahoo",
+   "Bing",
+   "Mozilla Firefox"
+  ],
+  "answer": 3,
+  "explanation": "Mozilla Firefox is browser software used to view web pages, whereas Google, Yahoo and Bing are search engines, that is websites that index and find content.",
+  "difficulty": 1,
+  "tags": [
+   "internet",
+   "browsers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In a web address, the domain suffix '.in' indicates that the site is registered under:",
+  "options": [
+   "an Indian educational institution",
+   "India's country code top-level domain",
+   "an international organisation",
+   "an Internet service provider"
+  ],
+  "answer": 1,
+  "explanation": "'.in' is India's country code top-level domain, administered by the National Internet Exchange of India; generic domains such as .com, .org and .edu are not tied to any country.",
+  "difficulty": 2,
+  "tags": [
+   "internet",
+   "domains"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In an email, the 'Bcc' field is used to:",
+  "options": [
+   "attach large files to the message",
+   "send a copy without other recipients seeing that address",
+   "mark the message as urgent",
+   "forward the message automatically"
+  ],
+  "answer": 1,
+  "explanation": "Blind carbon copy sends the message to an address that remains hidden from all other recipients, unlike Cc (carbon copy) where every address is visible to everyone.",
+  "difficulty": 2,
+  "tags": [
+   "email",
+   "internet"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "USB, the common port used to connect keyboards, printers and pen drives, stands for:",
+  "options": [
+   "Universal Serial Bus",
+   "Unified System Bus",
+   "Universal Storage Board",
+   "User Serial Buffer"
+  ],
+  "answer": 0,
+  "explanation": "Universal Serial Bus is a plug-and-play interface introduced in 1996 that also supplies power to the connected device; it replaced older serial and parallel ports.",
+  "difficulty": 1,
+  "tags": [
+   "abbreviations",
+   "hardware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "HTTP, seen at the beginning of many web addresses, stands for:",
+  "options": [
+   "High Transfer Text Protocol",
+   "Hyperlink Transmission Text Program",
+   "HyperText Transfer Protocol",
+   "Host Transfer and Translation Protocol"
+  ],
+  "answer": 2,
+  "explanation": "HyperText Transfer Protocol governs how browsers request web pages and how servers reply; HTTPS is its secure version, which encrypts the traffic using SSL/TLS.",
+  "difficulty": 1,
+  "tags": [
+   "abbreviations",
+   "internet",
+   "protocols"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which type of malicious program replicates itself and spreads through a network without needing to attach to a host file?",
+  "options": [
+   "Trojan horse",
+   "Worm",
+   "Adware",
+   "Cookie"
+  ],
+  "answer": 1,
+  "explanation": "A worm is a standalone self-replicating program that spreads over networks on its own, whereas a virus must attach itself to another file or program to spread.",
+  "difficulty": 2,
+  "tags": [
+   "cyber-security",
+   "malware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "A harmful program that disguises itself as useful software so that the user installs it willingly is called a:",
+  "options": [
+   "Trojan horse",
+   "Worm",
+   "Firewall",
+   "Cookie"
+  ],
+  "answer": 0,
+  "explanation": "A Trojan horse hides malicious code inside an apparently legitimate program; unlike a virus or worm it does not replicate itself but creates a backdoor for attackers.",
+  "difficulty": 2,
+  "tags": [
+   "cyber-security",
+   "malware"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Sending fake emails or setting up fake websites that look genuine in order to steal passwords and bank details is known as:",
+  "options": [
+   "Spamming",
+   "Defragmenting",
+   "Compiling",
+   "Phishing"
+  ],
+  "answer": 3,
+  "explanation": "Phishing tricks victims into revealing confidential information by imitating a trusted bank or organisation; in India such cheating by personation using a computer is punishable under Section 66D of the IT Act.",
+  "difficulty": 1,
+  "tags": [
+   "cyber-security",
+   "cyber-law"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The main function of a firewall in a computer network is to:",
+  "options": [
+   "cool the processor during heavy use",
+   "monitor and control incoming and outgoing network traffic",
+   "increase the amount of available RAM",
+   "speed up printing over the network"
+  ],
+  "answer": 1,
+  "explanation": "A firewall, which may be hardware or software, filters network traffic against a set of security rules and blocks unauthorised access to a private network.",
+  "difficulty": 1,
+  "tags": [
+   "cyber-security",
+   "networking"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Converting readable data into a coded form so that unauthorised persons cannot understand it is called:",
+  "options": [
+   "Encryption",
+   "Formatting",
+   "Compression",
+   "Defragmentation"
+  ],
+  "answer": 0,
+  "explanation": "Encryption uses a key and an algorithm to turn plain text into cipher text; the reverse process, carried out with the correct key, is called decryption.",
+  "difficulty": 1,
+  "tags": [
+   "cyber-security"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "India's Information Technology Act, which gives legal recognition to electronic records and digital signatures, was enacted in which year?",
+  "options": [
+   "1998",
+   "2000",
+   "2005",
+   "2008"
+  ],
+  "answer": 1,
+  "explanation": "The Information Technology Act, 2000 received Presidential assent in June 2000 and came into force on 17 October 2000; it was substantially amended in 2008.",
+  "difficulty": 1,
+  "tags": [
+   "cyber-law",
+   "it-act"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which section of the Information Technology Act, dealing with offensive messages sent through communication services, was struck down by the Supreme Court in the Shreya Singhal case of 2015?",
+  "options": [
+   "Section 43",
+   "Section 66A",
+   "Section 67",
+   "Section 69A"
+  ],
+  "answer": 1,
+  "explanation": "In Shreya Singhal v. Union of India (2015) the Supreme Court struck down Section 66A as an unconstitutional restriction on free speech under Article 19(1)(a), holding it vague and overbroad.",
+  "difficulty": 3,
+  "tags": [
+   "cyber-law",
+   "it-act"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "India's Information Technology Act, 2000 was drafted on the basis of which international instrument?",
+  "options": [
+   "The UNCITRAL Model Law on Electronic Commerce",
+   "The Budapest Convention on Cybercrime",
+   "The Berne Convention",
+   "The WIPO Copyright Treaty"
+  ],
+  "answer": 0,
+  "explanation": "The Act follows the UNCITRAL Model Law on Electronic Commerce, 1996, which the United Nations General Assembly recommended that member states adopt to give legal effect to electronic records.",
+  "difficulty": 3,
+  "tags": [
+   "cyber-law",
+   "it-act"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The Digital India programme was launched by the Government of India in which year?",
+  "options": [
+   "2012",
+   "2014",
+   "2015",
+   "2017"
+  ],
+  "answer": 2,
+  "explanation": "Digital India was launched on 1 July 2015 to transform India into a digitally empowered society, resting on the three pillars of digital infrastructure, governance and services on demand, and digital literacy.",
+  "difficulty": 2,
+  "tags": [
+   "indian-it",
+   "e-governance"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "PARAM 8000, India's first indigenously developed supercomputer, was built in 1991 by which organisation?",
+  "options": [
+   "ISRO",
+   "DRDO",
+   "BARC",
+   "C-DAC"
+  ],
+  "answer": 3,
+  "explanation": "The Centre for Development of Advanced Computing built PARAM 8000 in 1991 after India was denied Cray supercomputers; the PARAM series has since grown to machines such as PARAM Siddhi-AI.",
+  "difficulty": 2,
+  "tags": [
+   "indian-it",
+   "supercomputers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "C-DAC, the organisation behind India's PARAM supercomputers, stands for:",
+  "options": [
+   "Centre for Development of Advanced Computing",
+   "Council for Digital and Applied Computing",
+   "Central Department of Automatic Computers",
+   "Computer Design and Applications Centre"
+  ],
+  "answer": 0,
+  "explanation": "The Centre for Development of Advanced Computing was set up in 1988 with headquarters at Pune and works under the Ministry of Electronics and Information Technology.",
+  "difficulty": 2,
+  "tags": [
+   "indian-it",
+   "abbreviations"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Who is regarded as the chief architect of India's PARAM series of supercomputers?",
+  "options": [
+   "Sam Pitroda",
+   "Vijay P. Bhatkar",
+   "Raj Reddy",
+   "Narayana Murthy"
+  ],
+  "answer": 1,
+  "explanation": "Vijay P. Bhatkar led the C-DAC team that built PARAM 8000 in 1991 and is called the father of Indian supercomputing; Sam Pitroda is associated with India's telecom revolution.",
+  "difficulty": 3,
+  "tags": [
+   "indian-it",
+   "supercomputers",
+   "pioneers"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which is India's first technology park dedicated to information technology, established in 1990?",
+  "options": [
+   "Infopark, Kochi",
+   "Electronic City, Bengaluru",
+   "Technopark, Thiruvananthapuram",
+   "HITEC City, Hyderabad"
+  ],
+  "answer": 2,
+  "explanation": "Technopark at Thiruvananthapuram was established in 1990 and began operations in 1991, making it India's first IT park; it is promoted by the Government of Kerala.",
+  "difficulty": 2,
+  "tags": [
+   "kerala-it",
+   "it-parks"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Infopark, one of Kerala's major information technology parks, is located in which city?",
+  "options": [
+   "Kozhikode",
+   "Kochi",
+   "Kollam",
+   "Thrissur"
+  ],
+  "answer": 1,
+  "explanation": "Infopark was set up at Kakkanad in Kochi in 2004 and is Kerala's second major IT park after Technopark; Cyberpark at Kozhikode is the third.",
+  "difficulty": 1,
+  "tags": [
+   "kerala-it",
+   "it-parks"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "The Akshaya project, Kerala's pioneering e-literacy and e-governance initiative, was first launched in 2002 in which district?",
+  "options": [
+   "Kannur",
+   "Palakkad",
+   "Wayanad",
+   "Malappuram"
+  ],
+  "answer": 3,
+  "explanation": "Akshaya was inaugurated in Malappuram district on 18 November 2002 by President A.P.J. Abdul Kalam, and Malappuram thereby became India's first district declared e-literate.",
+  "difficulty": 2,
+  "tags": [
+   "kerala-it",
+   "e-governance"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "CERT-In, the national nodal agency for responding to computer security incidents in India, functions under which ministry?",
+  "options": [
+   "Ministry of Home Affairs",
+   "Ministry of Defence",
+   "Ministry of Electronics and Information Technology",
+   "Ministry of Communications"
+  ],
+  "answer": 2,
+  "explanation": "The Indian Computer Emergency Response Team was set up in 2004 under the Ministry of Electronics and Information Technology and is empowered by Section 70B of the IT Act to handle cyber security incidents.",
+  "difficulty": 3,
+  "tags": [
+   "cyber-security",
+   "indian-it"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which state was declared India's first fully digital state in February 2016?",
+  "options": [
+   "Kerala",
+   "Karnataka",
+   "Goa",
+   "Telangana"
+  ],
+  "answer": 0,
+  "explanation": "Kerala was declared India's first digital state by President Pranab Mukherjee in February 2016, on the strength of near-universal e-literacy, broadband connectivity and e-governance services.",
+  "difficulty": 3,
+  "tags": [
+   "kerala-it",
+   "e-governance"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In most Windows applications, which keyboard shortcut undoes the last action?",
+  "options": [
+   "Ctrl+U",
+   "Ctrl+Y",
+   "Ctrl+Z",
+   "Ctrl+X"
+  ],
+  "answer": 2,
+  "explanation": "Ctrl+Z reverses the last action, while Ctrl+Y redoes it; Ctrl+X cuts the selection and Ctrl+U applies underlining in word processors.",
+  "difficulty": 1,
+  "tags": [
+   "shortcuts",
+   "ms-office"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "Which keyboard shortcut opens the Print dialogue box in most Windows applications?",
+  "options": [
+   "Ctrl+P",
+   "Ctrl+S",
+   "Ctrl+F",
+   "Ctrl+O"
+  ],
+  "answer": 0,
+  "explanation": "Ctrl+P is the print shortcut; Ctrl+S saves the file, Ctrl+O opens a file and Ctrl+F starts a search within the document.",
+  "difficulty": 1,
+  "tags": [
+   "shortcuts",
+   "ms-office"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In Windows, the key combination Alt+F4 is used to:",
+  "options": [
+   "refresh the screen",
+   "close the active window or program",
+   "open the Start menu",
+   "rename the selected file"
+  ],
+  "answer": 1,
+  "explanation": "Alt+F4 closes the currently active window, and closes Windows itself when the desktop is active; F5 refreshes and F2 renames a selected file.",
+  "difficulty": 2,
+  "tags": [
+   "shortcuts",
+   "operating-systems"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In Microsoft PowerPoint, which function key starts the slide show from the first slide?",
+  "options": [
+   "F2",
+   "F5",
+   "F7",
+   "F12"
+  ],
+  "answer": 1,
+  "explanation": "F5 runs the presentation from the beginning, while Shift+F5 starts it from the current slide; F7 launches the spelling check and F12 opens Save As.",
+  "difficulty": 2,
+  "tags": [
+   "ms-office",
+   "shortcuts"
+  ],
+  "source": "seed"
+ },
+ {
+  "topic": "computers-tech",
+  "question": "In Microsoft Excel, every formula entered in a cell must begin with which symbol?",
+  "options": [
+   "+",
+   "#",
+   "@",
+   "="
+  ],
+  "answer": 3,
+  "explanation": "An entry beginning with the equals sign tells Excel to treat the rest as a formula to be calculated, as in =SUM(A1:A10); without it the entry is stored as ordinary text.",
+  "difficulty": 1,
+  "tags": [
+   "ms-office",
+   "spreadsheet"
+  ],
+  "source": "seed"
+ }
+]

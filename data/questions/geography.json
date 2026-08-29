@@ -1,0 +1,2162 @@
+[
+  {
+    "topic": "geography",
+    "question": "Which is the highest mountain peak located entirely within India?",
+    "options": [
+      "Kanchenjunga",
+      "Saltoro Kangri",
+      "Kamet",
+      "Nanda Devi"
+    ],
+    "answer": 3,
+    "explanation": "Nanda Devi (7,816 m) in Uttarakhand is the highest peak lying wholly inside Indian territory. Kanchenjunga is higher but lies on the India-Nepal border.",
+    "difficulty": 2,
+    "tags": [
+      "physiography",
+      "himalayas"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Western Ghats and the Eastern Ghats meet at which hills?",
+    "options": [
+      "Nilgiri Hills",
+      "Anaimalai Hills",
+      "Cardamom Hills",
+      "Palani Hills"
+    ],
+    "answer": 0,
+    "explanation": "The Nilgiri Hills form the junction of the Western and Eastern Ghats. Doddabetta (2,637 m) is the highest peak of the Nilgiris.",
+    "difficulty": 1,
+    "tags": [
+      "physiography",
+      "western-ghats"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Anaimudi, the highest peak in South India, is located in which state?",
+    "options": [
+      "Kerala",
+      "Karnataka",
+      "Tamil Nadu",
+      "Andhra Pradesh"
+    ],
+    "answer": 0,
+    "explanation": "Anaimudi (2,695 m) stands in the Anaimalai range of Idukki district, Kerala, and is the highest peak in India south of the Himalayas.",
+    "difficulty": 1,
+    "tags": [
+      "physiography",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which river is known as the 'Sorrow of Bihar'?",
+    "options": [
+      "Gandak",
+      "Son",
+      "Ghaghara",
+      "Kosi"
+    ],
+    "answer": 3,
+    "explanation": "The Kosi river frequently shifts its course and causes devastating floods in north Bihar, earning it the name 'Sorrow of Bihar'.",
+    "difficulty": 1,
+    "tags": [
+      "rivers",
+      "floods"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Brahmaputra river is known by which name in Tibet?",
+    "options": [
+      "Tsangpo",
+      "Dihang",
+      "Jamuna",
+      "Siang"
+    ],
+    "answer": 0,
+    "explanation": "The Brahmaputra rises near Mansarovar and flows through Tibet as the Tsangpo; it enters India in Arunachal Pradesh as the Siang or Dihang and becomes the Jamuna in Bangladesh.",
+    "difficulty": 1,
+    "tags": [
+      "rivers",
+      "brahmaputra"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which of the following is a left-bank tributary of the Ganga?",
+    "options": [
+      "Yamuna",
+      "Son",
+      "Gomti",
+      "Chambal"
+    ],
+    "answer": 2,
+    "explanation": "The Gomti, along with the Ghaghara, Gandak and Kosi, joins the Ganga from the left or northern side. The Yamuna and Son are right-bank tributaries.",
+    "difficulty": 3,
+    "tags": [
+      "rivers",
+      "ganga"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Nathu La pass connects Sikkim with which region?",
+    "options": [
+      "Nepal",
+      "Bhutan",
+      "Myanmar",
+      "Tibet (China)"
+    ],
+    "answer": 3,
+    "explanation": "Nathu La, on the old Silk Route in East Sikkim, links Sikkim with the Chumbi Valley of Tibet and was reopened for border trade in 2006.",
+    "difficulty": 1,
+    "tags": [
+      "mountain-passes",
+      "sikkim"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Zoji La pass links the Kashmir Valley with which region?",
+    "options": [
+      "Ladakh",
+      "Lahaul",
+      "Kumaon",
+      "Chamba"
+    ],
+    "answer": 0,
+    "explanation": "Zoji La, on the Srinagar-Leh highway, connects the Kashmir Valley with Ladakh via Dras and Kargil, and is usually snowbound in winter.",
+    "difficulty": 1,
+    "tags": [
+      "mountain-passes",
+      "ladakh"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Palghat (Palakkad) Gap is a break in which mountain range?",
+    "options": [
+      "Eastern Ghats",
+      "Western Ghats",
+      "Satpura Range",
+      "Aravalli Range"
+    ],
+    "answer": 1,
+    "explanation": "The Palakkad Gap is a roughly 30 km wide break in the Western Ghats that carries the main road and rail links between Kerala and Tamil Nadu.",
+    "difficulty": 1,
+    "tags": [
+      "mountain-passes",
+      "western-ghats"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the longest river flowing entirely within Indian territory?",
+    "options": [
+      "Krishna",
+      "Narmada",
+      "Godavari",
+      "Mahanadi"
+    ],
+    "answer": 2,
+    "explanation": "The Godavari, about 1,465 km long, rises at Trimbakeshwar in Maharashtra and is the longest river lying wholly within India.",
+    "difficulty": 2,
+    "tags": [
+      "rivers",
+      "peninsular"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Narmada river flows through which type of structural feature?",
+    "options": [
+      "A rift valley",
+      "A glacial valley",
+      "A hanging valley",
+      "An oxbow depression"
+    ],
+    "answer": 0,
+    "explanation": "The Narmada flows westward through a rift valley between the Vindhya and Satpura ranges, which is why it forms an estuary rather than a delta.",
+    "difficulty": 2,
+    "tags": [
+      "rivers",
+      "narmada"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which pass in Himachal Pradesh connects the Kullu Valley with the Lahaul and Spiti valleys?",
+    "options": [
+      "Banihal Pass",
+      "Shipki La",
+      "Rohtang Pass",
+      "Bara Lacha La"
+    ],
+    "answer": 2,
+    "explanation": "Rohtang Pass, at about 3,978 m on the Pir Panjal range, links Kullu with Lahaul and Spiti; the Atal Tunnel now bypasses it.",
+    "difficulty": 2,
+    "tags": [
+      "mountain-passes",
+      "himachal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which river forms the Dhuandhar Falls at Bhedaghat?",
+    "options": [
+      "Chambal",
+      "Narmada",
+      "Tapti",
+      "Betwa"
+    ],
+    "answer": 1,
+    "explanation": "The Narmada plunges as the Dhuandhar Falls near Bhedaghat, Jabalpur, after cutting through the famous Marble Rocks gorge.",
+    "difficulty": 2,
+    "tags": [
+      "rivers",
+      "waterfalls"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Sundarbans delta is formed by which river system?",
+    "options": [
+      "Mahanadi-Brahmani",
+      "Indus-Sutlej",
+      "Godavari-Krishna",
+      "Ganga-Brahmaputra"
+    ],
+    "answer": 3,
+    "explanation": "The Sundarbans, the world's largest mangrove delta, is built by the combined Ganga-Brahmaputra-Meghna river system in India and Bangladesh.",
+    "difficulty": 1,
+    "tags": [
+      "rivers",
+      "delta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which of these Himalayan ranges is the southernmost and outermost?",
+    "options": [
+      "Shivalik",
+      "Greater Himalaya",
+      "Lesser Himalaya",
+      "Trans-Himalaya"
+    ],
+    "answer": 0,
+    "explanation": "The Shivaliks are the outermost and lowest Himalayan range; the flat-floored valleys between the Shivaliks and the Lesser Himalaya are called Duns.",
+    "difficulty": 1,
+    "tags": [
+      "physiography",
+      "himalayas"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Chambal river is a tributary of which river?",
+    "options": [
+      "Ganga",
+      "Son",
+      "Betwa",
+      "Yamuna"
+    ],
+    "answer": 3,
+    "explanation": "The Chambal rises in the Vindhyan range near Mhow and joins the Yamuna in Uttar Pradesh; it is famous for its badland ravines.",
+    "difficulty": 2,
+    "tags": [
+      "rivers",
+      "yamuna"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the highest waterfall in India?",
+    "options": [
+      "Jog Falls",
+      "Dudhsagar Falls",
+      "Kunchikal Falls",
+      "Athirappilly Falls"
+    ],
+    "answer": 2,
+    "explanation": "Kunchikal Falls on the Varahi river in Karnataka, at roughly 455 m, is India's highest waterfall; Jog Falls is the best known plunge waterfall.",
+    "difficulty": 3,
+    "tags": [
+      "waterfalls",
+      "karnataka"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Loktak Lake, the largest freshwater lake in North-East India, is located in which state?",
+    "options": [
+      "Assam",
+      "Meghalaya",
+      "Nagaland",
+      "Manipur"
+    ],
+    "answer": 3,
+    "explanation": "Loktak Lake in Manipur is famous for its floating phumdis; Keibul Lamjao, the only floating national park in the world, lies on it.",
+    "difficulty": 2,
+    "tags": [
+      "lakes",
+      "manipur"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which peninsular river drains into the Arabian Sea?",
+    "options": [
+      "Kaveri",
+      "Tapti",
+      "Mahanadi",
+      "Krishna"
+    ],
+    "answer": 1,
+    "explanation": "The Tapti or Tapi, like the Narmada, flows westward through a rift valley into the Gulf of Khambhat in the Arabian Sea.",
+    "difficulty": 1,
+    "tags": [
+      "rivers",
+      "peninsular"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Indus Waters Treaty of 1960 allotted which three rivers wholly to India?",
+    "options": [
+      "Indus, Jhelum and Chenab",
+      "Ravi, Beas and Sutlej",
+      "Jhelum, Ravi and Beas",
+      "Chenab, Sutlej and Indus"
+    ],
+    "answer": 1,
+    "explanation": "Under the 1960 treaty brokered by the World Bank, the eastern rivers Ravi, Beas and Sutlej were allotted to India, and the western Indus, Jhelum and Chenab largely to Pakistan.",
+    "difficulty": 3,
+    "tags": [
+      "rivers",
+      "indus"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which strait separates India from Sri Lanka?",
+    "options": [
+      "Sunda Strait",
+      "Malacca Strait",
+      "Palk Strait",
+      "Ten Degree Channel"
+    ],
+    "answer": 2,
+    "explanation": "The Palk Strait, along with the Gulf of Mannar, separates Tamil Nadu from northern Sri Lanka; Adam's Bridge or Rama Setu lies across it.",
+    "difficulty": 1,
+    "tags": [
+      "straits",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Ten Degree Channel separates which two island groups?",
+    "options": [
+      "Andaman and Nicobar",
+      "Lakshadweep and Minicoy",
+      "Great Nicobar and Sumatra",
+      "Amindivi and Laccadive"
+    ],
+    "answer": 0,
+    "explanation": "The Ten Degree Channel, lying near the 10 degrees north parallel, separates the Andaman Islands from the Nicobar Islands.",
+    "difficulty": 2,
+    "tags": [
+      "straits",
+      "islands"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the largest brackish-water lagoon in India?",
+    "options": [
+      "Wular Lake",
+      "Chilika Lake",
+      "Sambhar Lake",
+      "Pulicat Lake"
+    ],
+    "answer": 1,
+    "explanation": "Chilika Lake in Odisha is India's largest brackish-water coastal lagoon and a Ramsar site famous for Irrawaddy dolphins and migratory birds.",
+    "difficulty": 2,
+    "tags": [
+      "lakes",
+      "odisha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Aravalli range is the oldest fold mountain system in India. Its highest peak is:",
+    "options": [
+      "Dhupgarh",
+      "Guru Shikhar",
+      "Parasnath",
+      "Doddabetta"
+    ],
+    "answer": 1,
+    "explanation": "Guru Shikhar, at about 1,722 m on Mount Abu in Rajasthan, is the highest point of the Aravallis, one of the world's oldest fold mountain ranges.",
+    "difficulty": 2,
+    "tags": [
+      "physiography",
+      "aravalli"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which river is called the 'Dakshina Ganga'?",
+    "options": [
+      "Krishna",
+      "Kaveri",
+      "Tungabhadra",
+      "Godavari"
+    ],
+    "answer": 3,
+    "explanation": "The Godavari is called the Dakshina Ganga or Ganga of the South because of its length and religious importance in peninsular India.",
+    "difficulty": 1,
+    "tags": [
+      "rivers",
+      "godavari"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which pass connects Uttarakhand with Tibet and is used on the Kailash-Mansarovar pilgrimage route?",
+    "options": [
+      "Lipulekh",
+      "Nathu La",
+      "Jelep La",
+      "Khardung La"
+    ],
+    "answer": 0,
+    "explanation": "Lipulekh Pass in the Kumaon Himalaya of Uttarakhand is a traditional trade and pilgrimage route to Tibet for Kailash-Mansarovar yatris.",
+    "difficulty": 3,
+    "tags": [
+      "mountain-passes",
+      "uttarakhand"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Kaveri river originates from which place?",
+    "options": [
+      "Amarkantak",
+      "Talakaveri",
+      "Trimbakeshwar",
+      "Mahabaleshwar"
+    ],
+    "answer": 1,
+    "explanation": "The Kaveri rises at Talakaveri in the Brahmagiri hills of Kodagu district, Karnataka, and flows east into the Bay of Bengal.",
+    "difficulty": 2,
+    "tags": [
+      "rivers",
+      "kaveri"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which plateau in India is known as the 'Ruhr of India' for its mineral wealth?",
+    "options": [
+      "Malwa Plateau",
+      "Deccan Plateau",
+      "Chhota Nagpur Plateau",
+      "Meghalaya Plateau"
+    ],
+    "answer": 2,
+    "explanation": "The Chhota Nagpur Plateau, spread mainly over Jharkhand, holds huge coal, iron ore and mica reserves, so it is compared with Germany's Ruhr industrial region.",
+    "difficulty": 2,
+    "tags": [
+      "plateau",
+      "minerals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which of the following rivers does NOT form a delta at its mouth?",
+    "options": [
+      "Mahanadi",
+      "Krishna",
+      "Tapti",
+      "Kaveri"
+    ],
+    "answer": 2,
+    "explanation": "The Tapti flows through a rift valley at high speed and forms an estuary in the Gulf of Khambhat, unlike the east-flowing rivers that build deltas.",
+    "difficulty": 3,
+    "tags": [
+      "rivers",
+      "delta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Khardung La, one of the world's highest motorable passes, lies in which range?",
+    "options": [
+      "Zanskar",
+      "Pir Panjal",
+      "Ladakh Range",
+      "Karakoram"
+    ],
+    "answer": 2,
+    "explanation": "Khardung La, at about 5,359 m on the Ladakh Range north of Leh, is the gateway to the Shyok and Nubra valleys.",
+    "difficulty": 3,
+    "tags": [
+      "mountain-passes",
+      "ladakh"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which soil type is most suitable for cotton cultivation in India?",
+    "options": [
+      "Laterite soil",
+      "Black soil",
+      "Alluvial soil",
+      "Red soil"
+    ],
+    "answer": 1,
+    "explanation": "Black soil, also called regur or black cotton soil, is clayey, retains moisture well and is formed from Deccan lava, making it ideal for cotton.",
+    "difficulty": 1,
+    "tags": [
+      "soils",
+      "agriculture"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Laterite soil is typically formed under which climatic conditions?",
+    "options": [
+      "High temperature with heavy rainfall",
+      "Cold and arid",
+      "Cool and dry",
+      "Temperate with moderate rain"
+    ],
+    "answer": 0,
+    "explanation": "Laterite soil results from intense leaching in hot, heavy-rainfall tropical areas, which washes away silica and leaves iron and aluminium oxides behind.",
+    "difficulty": 2,
+    "tags": [
+      "soils",
+      "climate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which soil covers the largest area in India?",
+    "options": [
+      "Black soil",
+      "Red soil",
+      "Desert soil",
+      "Alluvial soil"
+    ],
+    "answer": 3,
+    "explanation": "Alluvial soil, deposited by the Indus, Ganga and Brahmaputra systems, covers roughly 40 percent of India's land area and is the most fertile.",
+    "difficulty": 2,
+    "tags": [
+      "soils",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The south-west monsoon normally arrives first over which part of India?",
+    "options": [
+      "Kerala coast",
+      "Coromandel coast",
+      "Konkan coast",
+      "Gangetic plains"
+    ],
+    "answer": 0,
+    "explanation": "The south-west monsoon usually bursts over the Kerala coast around 1 June and then advances northwards through its Arabian Sea and Bay of Bengal branches.",
+    "difficulty": 1,
+    "tags": [
+      "monsoon",
+      "climate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Tamil Nadu receives most of its annual rainfall from which source?",
+    "options": [
+      "South-west monsoon",
+      "Western disturbances",
+      "North-east monsoon",
+      "Local convection"
+    ],
+    "answer": 2,
+    "explanation": "The retreating or north-east monsoon of October to December picks up moisture over the Bay of Bengal and brings the bulk of the rain to the Coromandel coast.",
+    "difficulty": 2,
+    "tags": [
+      "monsoon",
+      "climate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Winter rainfall in Punjab and Haryana is mainly caused by:",
+    "options": [
+      "Retreating monsoon",
+      "Western disturbances",
+      "Norwesters",
+      "Mango showers"
+    ],
+    "answer": 1,
+    "explanation": "Western disturbances are extra-tropical cyclonic systems originating over the Mediterranean that bring light winter rain and snow to north-west India, benefiting the rabi wheat crop.",
+    "difficulty": 2,
+    "tags": [
+      "climate",
+      "rainfall"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "'Mango showers' are pre-monsoon rains that occur mainly in:",
+    "options": [
+      "Rajasthan and Gujarat",
+      "Punjab and Haryana",
+      "Assam and Meghalaya",
+      "Kerala and Karnataka"
+    ],
+    "answer": 3,
+    "explanation": "Mango showers are pre-monsoon thunderstorms in April and May over Kerala and coastal Karnataka that help ripen mangoes and benefit coffee plantations.",
+    "difficulty": 3,
+    "tags": [
+      "climate",
+      "rainfall"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Mawsynram, one of the wettest places on earth, is located in which state?",
+    "options": [
+      "Assam",
+      "Meghalaya",
+      "Arunachal Pradesh",
+      "Nagaland"
+    ],
+    "answer": 1,
+    "explanation": "Mawsynram in the Khasi Hills of Meghalaya records the world's highest average annual rainfall because the funnel-shaped hills force the moist Bay of Bengal winds to rise sharply.",
+    "difficulty": 1,
+    "tags": [
+      "climate",
+      "rainfall"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Kaziranga National Park is famous for which animal?",
+    "options": [
+      "Asiatic lion",
+      "Snow leopard",
+      "Great Indian bustard",
+      "One-horned rhinoceros"
+    ],
+    "answer": 3,
+    "explanation": "Kaziranga in Assam, a UNESCO World Heritage Site on the Brahmaputra floodplain, shelters about two-thirds of the world's one-horned rhinoceroses.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "wildlife"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Gir National Park, the last natural home of the Asiatic lion, is in which state?",
+    "options": [
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Gujarat"
+    ],
+    "answer": 3,
+    "explanation": "Gir forest in Junagadh district of Gujarat is the only place where the Asiatic lion survives in the wild.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "wildlife"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which was the first national park established in India?",
+    "options": [
+      "Jim Corbett National Park",
+      "Kanha National Park",
+      "Bandipur National Park",
+      "Silent Valley National Park"
+    ],
+    "answer": 0,
+    "explanation": "Set up in 1936 as Hailey National Park in what is now Uttarakhand, it was renamed Jim Corbett National Park and became the launch site of Project Tiger in 1973.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "conservation"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Keibul Lamjao, the only floating national park in the world, protects which endangered deer?",
+    "options": [
+      "Hangul",
+      "Sangai",
+      "Barasingha",
+      "Chital"
+    ],
+    "answer": 1,
+    "explanation": "Keibul Lamjao on Loktak Lake in Manipur protects the Sangai or brow-antlered deer, which walks on the floating phumdi vegetation.",
+    "difficulty": 3,
+    "tags": [
+      "national-parks",
+      "wildlife"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Bhakra Nangal Dam is built across which river?",
+    "options": [
+      "Beas",
+      "Ravi",
+      "Chenab",
+      "Sutlej"
+    ],
+    "answer": 3,
+    "explanation": "Bhakra Dam on the Sutlej in Himachal Pradesh is one of the highest gravity dams in India; its reservoir is named Gobind Sagar.",
+    "difficulty": 1,
+    "tags": [
+      "dams",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Sardar Sarovar Dam is constructed on which river?",
+    "options": [
+      "Tapti",
+      "Narmada",
+      "Mahi",
+      "Sabarmati"
+    ],
+    "answer": 1,
+    "explanation": "The Sardar Sarovar Project on the Narmada in Gujarat is a multi-state scheme supplying water and power to Gujarat, Madhya Pradesh, Maharashtra and Rajasthan.",
+    "difficulty": 1,
+    "tags": [
+      "dams",
+      "narmada"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Hirakud Dam, one of the longest earthen dams in the world, is built across which river?",
+    "options": [
+      "Godavari",
+      "Brahmani",
+      "Mahanadi",
+      "Subarnarekha"
+    ],
+    "answer": 2,
+    "explanation": "Hirakud Dam near Sambalpur in Odisha spans the Mahanadi and was among the first major multipurpose river valley projects taken up after independence.",
+    "difficulty": 1,
+    "tags": [
+      "dams",
+      "odisha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Nagarjuna Sagar Dam is built across which river?",
+    "options": [
+      "Krishna",
+      "Godavari",
+      "Penna",
+      "Tungabhadra"
+    ],
+    "answer": 0,
+    "explanation": "Nagarjuna Sagar, a masonry dam on the Krishna river between Telangana and Andhra Pradesh, is one of the earliest large multipurpose projects of India.",
+    "difficulty": 2,
+    "tags": [
+      "dams",
+      "krishna"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Tehri Dam, India's tallest dam, is located on which river?",
+    "options": [
+      "Bhagirathi",
+      "Alaknanda",
+      "Mandakini",
+      "Yamuna"
+    ],
+    "answer": 0,
+    "explanation": "The Tehri Dam in Uttarakhand rises about 260 m on the Bhagirathi river, making it the tallest dam in India.",
+    "difficulty": 2,
+    "tags": [
+      "dams",
+      "uttarakhand"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which state of India has the longest coastline?",
+    "options": [
+      "Tamil Nadu",
+      "Andhra Pradesh",
+      "Maharashtra",
+      "Gujarat"
+    ],
+    "answer": 3,
+    "explanation": "Gujarat has the longest coastline of any Indian state, roughly 1,600 km, thanks to the Gulfs of Kachchh and Khambhat and the Saurashtra peninsula.",
+    "difficulty": 1,
+    "tags": [
+      "coast",
+      "states"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which Indian state shares a border with the largest number of other Indian states?",
+    "options": [
+      "Uttar Pradesh",
+      "Madhya Pradesh",
+      "Assam",
+      "Maharashtra"
+    ],
+    "answer": 0,
+    "explanation": "Uttar Pradesh borders eight states besides Delhi, the highest for any Indian state; Assam borders seven states.",
+    "difficulty": 3,
+    "tags": [
+      "states",
+      "borders"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Itanagar is the capital of which Indian state?",
+    "options": [
+      "Nagaland",
+      "Mizoram",
+      "Arunachal Pradesh",
+      "Tripura"
+    ],
+    "answer": 2,
+    "explanation": "Itanagar is the capital of Arunachal Pradesh; the city takes its name from the historic Ita fort, meaning 'fort of bricks'.",
+    "difficulty": 1,
+    "tags": [
+      "states",
+      "capitals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which country shares the longest land border with India?",
+    "options": [
+      "China",
+      "Pakistan",
+      "Nepal",
+      "Bangladesh"
+    ],
+    "answer": 3,
+    "explanation": "India's border with Bangladesh runs about 4,096 km, the longest of all its land boundaries, followed by China and then Pakistan.",
+    "difficulty": 2,
+    "tags": [
+      "borders",
+      "neighbours"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The McMahon Line is the boundary between India and which country?",
+    "options": [
+      "Pakistan",
+      "China",
+      "Nepal",
+      "Myanmar"
+    ],
+    "answer": 1,
+    "explanation": "Drawn at the Simla Convention of 1914, the McMahon Line marks the boundary between India's north-east, mainly Arunachal Pradesh, and Tibet, now claimed by China.",
+    "difficulty": 2,
+    "tags": [
+      "borders",
+      "neighbours"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Radcliffe Line separates India from which country?",
+    "options": [
+      "Pakistan",
+      "China",
+      "Bhutan",
+      "Sri Lanka"
+    ],
+    "answer": 0,
+    "explanation": "The Radcliffe Line, drawn by Sir Cyril Radcliffe in 1947, demarcates the India-Pakistan boundary as well as the boundary with what is now Bangladesh.",
+    "difficulty": 1,
+    "tags": [
+      "borders",
+      "neighbours"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which Indian state does NOT share a border with Bangladesh?",
+    "options": [
+      "Meghalaya",
+      "Mizoram",
+      "Manipur",
+      "Tripura"
+    ],
+    "answer": 2,
+    "explanation": "Bangladesh borders West Bengal, Assam, Meghalaya, Tripura and Mizoram; Manipur borders Myanmar, not Bangladesh.",
+    "difficulty": 3,
+    "tags": [
+      "borders",
+      "states"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Tropic of Cancer passes through how many Indian states?",
+    "options": [
+      "Six",
+      "Seven",
+      "Eight",
+      "Nine"
+    ],
+    "answer": 2,
+    "explanation": "The Tropic of Cancer crosses eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura and Mizoram.",
+    "difficulty": 3,
+    "tags": [
+      "latitude",
+      "states"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Indian Standard Time meridian passes through which town in Uttar Pradesh?",
+    "options": [
+      "Allahabad (Prayagraj)",
+      "Mirzapur",
+      "Varanasi",
+      "Kanpur"
+    ],
+    "answer": 1,
+    "explanation": "IST is based on the 82 degrees 30 minutes east meridian, which passes through Mirzapur, and is 5 hours 30 minutes ahead of Greenwich Mean Time.",
+    "difficulty": 3,
+    "tags": [
+      "longitude",
+      "time"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the southernmost point of the Indian mainland?",
+    "options": [
+      "Indira Point",
+      "Kanyakumari (Cape Comorin)",
+      "Point Calimere",
+      "Dhanushkodi"
+    ],
+    "answer": 1,
+    "explanation": "Kanyakumari is the southern tip of the Indian mainland, while Indira Point on Great Nicobar Island is the southernmost point of Indian territory.",
+    "difficulty": 2,
+    "tags": [
+      "extremes",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Silent Valley National Park, known for its lion-tailed macaques, is in which state?",
+    "options": [
+      "Karnataka",
+      "Tamil Nadu",
+      "Goa",
+      "Kerala"
+    ],
+    "answer": 3,
+    "explanation": "Silent Valley in Palakkad district, Kerala, preserves one of India's last undisturbed tropical evergreen rainforests and was saved from a hydel project after a famous campaign in the 1970s.",
+    "difficulty": 2,
+    "tags": [
+      "national-parks",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which characteristic of desert soil makes irrigation essential in western Rajasthan?",
+    "options": [
+      "High clay content",
+      "High organic matter",
+      "Low water retention and high salt content",
+      "Excess nitrogen"
+    ],
+    "answer": 2,
+    "explanation": "Arid or desert soils are sandy, low in humus and moisture and often saline, so they need irrigation and soil treatment before they can be farmed productively.",
+    "difficulty": 2,
+    "tags": [
+      "soils",
+      "rajasthan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which national park in Rajasthan was formerly the Bharatpur bird sanctuary?",
+    "options": [
+      "Ranthambore",
+      "Sariska",
+      "Keoladeo Ghana",
+      "Desert National Park"
+    ],
+    "answer": 2,
+    "explanation": "Keoladeo Ghana National Park at Bharatpur is a UNESCO World Heritage Site and Ramsar wetland famous as a wintering ground for migratory waterbirds.",
+    "difficulty": 2,
+    "tags": [
+      "national-parks",
+      "rajasthan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "India's largest iron-ore producing state is:",
+    "options": [
+      "Jharkhand",
+      "Karnataka",
+      "Chhattisgarh",
+      "Odisha"
+    ],
+    "answer": 3,
+    "explanation": "Odisha leads India in iron-ore output, with major deposits in the Sundargarh, Keonjhar and Mayurbhanj belt.",
+    "difficulty": 2,
+    "tags": [
+      "minerals",
+      "mining"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Kolar gold fields, historically India's chief gold source, are in which state?",
+    "options": [
+      "Karnataka",
+      "Andhra Pradesh",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "answer": 0,
+    "explanation": "The Kolar Gold Fields in Karnataka were mined for over a century and were among the deepest gold mines in the world before closing in 2001.",
+    "difficulty": 2,
+    "tags": [
+      "minerals",
+      "karnataka"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "India is the world's leading producer of which mineral used in electrical insulation?",
+    "options": [
+      "Bauxite",
+      "Manganese",
+      "Gypsum",
+      "Mica"
+    ],
+    "answer": 3,
+    "explanation": "India has long been a top producer of sheet mica, mined mainly in the Koderma belt of Jharkhand, Nellore in Andhra Pradesh and parts of Rajasthan.",
+    "difficulty": 3,
+    "tags": [
+      "minerals",
+      "mica"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Most of India's coal reserves belong to which geological formation?",
+    "options": [
+      "Vindhyan system",
+      "Gondwana system",
+      "Tertiary system",
+      "Cuddapah system"
+    ],
+    "answer": 1,
+    "explanation": "About 98 percent of India's coal comes from Gondwana rocks of the Damodar, Son, Mahanadi and Godavari valleys; Tertiary coal is limited to the north-east and Jammu.",
+    "difficulty": 3,
+    "tags": [
+      "minerals",
+      "coal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Bombay High is important for the extraction of:",
+    "options": [
+      "Natural gas and petroleum",
+      "Manganese",
+      "Uranium",
+      "Copper"
+    ],
+    "answer": 0,
+    "explanation": "Bombay High (Mumbai High) is an offshore oilfield in the Arabian Sea about 160 km from Mumbai, discovered in 1974 and operated by ONGC.",
+    "difficulty": 1,
+    "tags": [
+      "minerals",
+      "petroleum"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which crop is described as a kharif crop in India?",
+    "options": [
+      "Wheat",
+      "Mustard",
+      "Rice",
+      "Barley"
+    ],
+    "answer": 2,
+    "explanation": "Kharif crops such as rice, maize, jowar and cotton are sown with the onset of the south-west monsoon in June-July and harvested in September-October.",
+    "difficulty": 1,
+    "tags": [
+      "agriculture",
+      "crops"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Green Revolution in India was most successful with which crops?",
+    "options": [
+      "Pulses and oilseeds",
+      "Wheat and rice",
+      "Cotton and jute",
+      "Tea and coffee"
+    ],
+    "answer": 1,
+    "explanation": "The Green Revolution of the late 1960s used high-yielding varieties, fertilisers and irrigation, transforming wheat output in Punjab, Haryana and western Uttar Pradesh, and later rice.",
+    "difficulty": 2,
+    "tags": [
+      "agriculture",
+      "green-revolution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which Indian state is the largest producer of tea?",
+    "options": [
+      "West Bengal",
+      "Kerala",
+      "Assam",
+      "Tamil Nadu"
+    ],
+    "answer": 2,
+    "explanation": "Assam produces more than half of India's tea, grown on the Brahmaputra and Barak valley plantations where heavy rain and well-drained soils suit the crop.",
+    "difficulty": 1,
+    "tags": [
+      "agriculture",
+      "tea"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Jute cultivation in India is concentrated mainly in which region?",
+    "options": [
+      "Deccan plateau",
+      "Malabar coast",
+      "Thar region",
+      "Ganga-Brahmaputra delta"
+    ],
+    "answer": 3,
+    "explanation": "Jute needs high temperature, heavy rainfall and fresh alluvial soil, so it is grown mainly in West Bengal, Bihar and Assam within the Ganga-Brahmaputra delta.",
+    "difficulty": 2,
+    "tags": [
+      "agriculture",
+      "jute"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the largest natural harbour and port on the west coast of India?",
+    "options": [
+      "Kandla",
+      "Mormugao",
+      "Mumbai",
+      "New Mangalore"
+    ],
+    "answer": 2,
+    "explanation": "Mumbai port, on a deep natural harbour sheltered by Salsette Island, is India's premier west-coast port; Jawaharlal Nehru Port at Nhava Sheva was built to relieve its congestion.",
+    "difficulty": 2,
+    "tags": [
+      "ports",
+      "maritime"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which port is known as the 'Child of Partition' and was developed as a tidal port in Gujarat?",
+    "options": [
+      "Kandla (Deendayal)",
+      "Porbandar",
+      "Okha",
+      "Bhavnagar"
+    ],
+    "answer": 0,
+    "explanation": "Kandla, now Deendayal Port, was developed after 1947 to replace Karachi as the main port for north-west India, and hence is called the Child of Partition.",
+    "difficulty": 3,
+    "tags": [
+      "ports",
+      "gujarat"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Paradip port is located in which state?",
+    "options": [
+      "West Bengal",
+      "Andhra Pradesh",
+      "Odisha",
+      "Tamil Nadu"
+    ],
+    "answer": 2,
+    "explanation": "Paradip on the Odisha coast, near the Mahanadi delta, is a deep-water port handling large volumes of iron ore, coal and petroleum.",
+    "difficulty": 2,
+    "tags": [
+      "ports",
+      "odisha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the largest continent by area?",
+    "options": [
+      "Africa",
+      "Asia",
+      "North America",
+      "Antarctica"
+    ],
+    "answer": 1,
+    "explanation": "Asia covers about 44 million sq km, roughly 30 percent of the world's land area, and holds around 60 percent of humanity.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "continents"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the smallest ocean in the world?",
+    "options": [
+      "Arctic Ocean",
+      "Southern Ocean",
+      "Indian Ocean",
+      "Atlantic Ocean"
+    ],
+    "answer": 0,
+    "explanation": "The Arctic Ocean is the smallest and shallowest of the world's oceans, largely covered by sea ice and enclosed by Eurasia and North America.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "oceans"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Mariana Trench, the deepest point of the world's oceans, lies in which ocean?",
+    "options": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Southern Ocean",
+      "Pacific Ocean"
+    ],
+    "answer": 3,
+    "explanation": "The Mariana Trench in the western Pacific reaches about 11,000 m at Challenger Deep, formed where the Pacific plate subducts beneath the Philippine plate.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "oceans"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the longest river in the world?",
+    "options": [
+      "Amazon",
+      "Nile",
+      "Yangtze",
+      "Mississippi-Missouri"
+    ],
+    "answer": 1,
+    "explanation": "The Nile, flowing about 6,650 km from the East African highlands to the Mediterranean, is generally accepted as the world's longest river, while the Amazon carries the most water.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Amazon river drains into which ocean?",
+    "options": [
+      "Pacific Ocean",
+      "Caribbean Sea",
+      "Indian Ocean",
+      "Atlantic Ocean"
+    ],
+    "answer": 3,
+    "explanation": "The Amazon rises in the Peruvian Andes and flows east across Brazil to empty into the Atlantic Ocean, discharging more water than any other river.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which river flows through the German industrial region and is Europe's busiest waterway?",
+    "options": [
+      "Rhine",
+      "Danube",
+      "Elbe",
+      "Seine"
+    ],
+    "answer": 0,
+    "explanation": "The Rhine flows from the Swiss Alps to the North Sea through the Ruhr industrial belt and is the most heavily used inland waterway in Europe.",
+    "difficulty": 3,
+    "tags": [
+      "world",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Danube river flows into which sea?",
+    "options": [
+      "Baltic Sea",
+      "North Sea",
+      "Black Sea",
+      "Caspian Sea"
+    ],
+    "answer": 2,
+    "explanation": "The Danube, Europe's second-longest river, rises in Germany's Black Forest and empties into the Black Sea through a large delta in Romania.",
+    "difficulty": 3,
+    "tags": [
+      "world",
+      "rivers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the largest hot desert in the world?",
+    "options": [
+      "Kalahari",
+      "Gobi",
+      "Arabian",
+      "Sahara"
+    ],
+    "answer": 3,
+    "explanation": "The Sahara stretches about 9 million sq km across North Africa, making it the largest hot desert; Antarctica is the largest desert overall as a cold desert.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "deserts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Atacama Desert, one of the driest places on earth, lies mainly in which country?",
+    "options": [
+      "Peru",
+      "Argentina",
+      "Chile",
+      "Bolivia"
+    ],
+    "answer": 2,
+    "explanation": "The Atacama in northern Chile is extremely arid because the cold Peru (Humboldt) current and the Andes rain shadow both cut off moisture.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "deserts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Gobi Desert lies in which two countries?",
+    "options": [
+      "China and Mongolia",
+      "Iran and Afghanistan",
+      "Kazakhstan and Russia",
+      "India and Pakistan"
+    ],
+    "answer": 0,
+    "explanation": "The Gobi is a cold desert on the China-Mongolia border, kept dry by the Himalayan rain shadow blocking moisture from the Indian Ocean.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "deserts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which strait connects the Mediterranean Sea with the Atlantic Ocean?",
+    "options": [
+      "Strait of Hormuz",
+      "Strait of Gibraltar",
+      "Bosphorus Strait",
+      "Bering Strait"
+    ],
+    "answer": 1,
+    "explanation": "The Strait of Gibraltar, about 14 km wide at its narrowest, separates Spain from Morocco and is the only natural link between the Mediterranean and the Atlantic.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "straits"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Strait of Hormuz, a vital oil shipping route, connects the Persian Gulf with:",
+    "options": [
+      "Gulf of Oman",
+      "Red Sea",
+      "Caspian Sea",
+      "Mediterranean Sea"
+    ],
+    "answer": 0,
+    "explanation": "The Strait of Hormuz between Iran and Oman links the Persian Gulf to the Gulf of Oman and the Arabian Sea, carrying a large share of the world's seaborne crude oil.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "straits"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Bering Strait separates which two continents?",
+    "options": [
+      "Asia and North America",
+      "Africa and Europe",
+      "Asia and Europe",
+      "Australia and Asia"
+    ],
+    "answer": 0,
+    "explanation": "The Bering Strait separates Russia's Chukchi Peninsula in Asia from Alaska in North America and links the Arctic and Pacific Oceans.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "straits"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Malacca Strait lies between the Malay Peninsula and which island?",
+    "options": [
+      "Java",
+      "Borneo",
+      "Sulawesi",
+      "Sumatra"
+    ],
+    "answer": 3,
+    "explanation": "The Strait of Malacca between Peninsular Malaysia and the Indonesian island of Sumatra is the shortest sea route between the Indian and Pacific Oceans.",
+    "difficulty": 3,
+    "tags": [
+      "world",
+      "straits"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which canal connects the Mediterranean Sea with the Red Sea?",
+    "options": [
+      "Panama Canal",
+      "Kiel Canal",
+      "Suez Canal",
+      "Grand Canal"
+    ],
+    "answer": 2,
+    "explanation": "The Suez Canal, opened in 1869 across Egypt, shortens the sea route between Europe and Asia by avoiding the voyage around Africa.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "canals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which line of latitude divides the earth into the Northern and Southern hemispheres?",
+    "options": [
+      "Tropic of Cancer",
+      "Equator",
+      "Prime Meridian",
+      "Arctic Circle"
+    ],
+    "answer": 1,
+    "explanation": "The Equator is the 0 degree parallel; the Prime Meridian is a line of longitude and divides the earth into eastern and western hemispheres instead.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "latitude"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The International Date Line roughly follows which meridian?",
+    "options": [
+      "0 degrees",
+      "90 degrees East",
+      "180 degrees",
+      "45 degrees West"
+    ],
+    "answer": 2,
+    "explanation": "The International Date Line follows the 180 degree meridian in the Pacific, deviating around land so that island groups keep a single date.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "longitude"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Prime Meridian passes through which observatory?",
+    "options": [
+      "Palomar",
+      "Greenwich",
+      "Mount Wilson",
+      "Pulkovo"
+    ],
+    "answer": 1,
+    "explanation": "The 0 degree meridian was fixed at the Royal Observatory, Greenwich, London, in 1884 and forms the basis of Greenwich Mean Time.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "longitude"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The outermost solid layer of the earth is called the:",
+    "options": [
+      "Mantle",
+      "Crust",
+      "Outer core",
+      "Inner core"
+    ],
+    "answer": 1,
+    "explanation": "The crust is the thin outermost solid shell, about 5 km thick under the oceans and up to 70 km under mountains, resting on the mantle.",
+    "difficulty": 1,
+    "tags": [
+      "earth-structure",
+      "interior"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The innermost layer of the earth, the inner core, is composed mainly of:",
+    "options": [
+      "Iron and nickel",
+      "Silicon and magnesium",
+      "Aluminium and silica",
+      "Calcium and sodium"
+    ],
+    "answer": 0,
+    "explanation": "The inner core is a solid ball of iron and nickel, kept solid despite extreme heat by the enormous pressure at the centre of the earth.",
+    "difficulty": 2,
+    "tags": [
+      "earth-structure",
+      "interior"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The boundary between the earth's crust and the mantle is known as the:",
+    "options": [
+      "Gutenberg discontinuity",
+      "Lehmann discontinuity",
+      "Conrad discontinuity",
+      "Mohorovicic discontinuity"
+    ],
+    "answer": 3,
+    "explanation": "The Mohorovicic discontinuity, or Moho, marks the sharp increase in seismic wave velocity where the crust gives way to the denser mantle.",
+    "difficulty": 3,
+    "tags": [
+      "earth-structure",
+      "seismology"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which layer of the atmosphere contains the ozone layer?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "answer": 1,
+    "explanation": "The ozone layer lies in the lower stratosphere, roughly 15-35 km up, and absorbs most of the sun's harmful ultraviolet radiation.",
+    "difficulty": 1,
+    "tags": [
+      "atmosphere",
+      "ozone"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Almost all weather phenomena occur in which layer of the atmosphere?",
+    "options": [
+      "Stratosphere",
+      "Ionosphere",
+      "Troposphere",
+      "Exosphere"
+    ],
+    "answer": 2,
+    "explanation": "The troposphere holds most of the atmosphere's mass and water vapour, so clouds, rain and storms form there; temperature falls with height in this layer.",
+    "difficulty": 1,
+    "tags": [
+      "atmosphere",
+      "weather"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Radio waves are reflected back to earth by which atmospheric layer?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Exosphere",
+      "Ionosphere"
+    ],
+    "answer": 3,
+    "explanation": "The ionosphere, part of the thermosphere, contains electrically charged particles that reflect medium and short radio waves, enabling long-distance broadcasting.",
+    "difficulty": 2,
+    "tags": [
+      "atmosphere",
+      "ionosphere"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Meteors usually burn up in which layer of the atmosphere?",
+    "options": [
+      "Mesosphere",
+      "Troposphere",
+      "Stratosphere",
+      "Exosphere"
+    ],
+    "answer": 0,
+    "explanation": "The mesosphere, extending roughly 50-80 km up, is dense enough that friction burns up most incoming meteors; it is also the coldest atmospheric layer.",
+    "difficulty": 2,
+    "tags": [
+      "atmosphere",
+      "mesosphere"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The instrument used to record the intensity and duration of an earthquake is the:",
+    "options": [
+      "Barometer",
+      "Seismograph",
+      "Hygrometer",
+      "Anemometer"
+    ],
+    "answer": 1,
+    "explanation": "A seismograph records ground motion as seismic waves pass; the energy released is expressed on the Richter or moment magnitude scale.",
+    "difficulty": 1,
+    "tags": [
+      "earthquakes",
+      "instruments"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which type of seismic wave cannot travel through liquids?",
+    "options": [
+      "P waves",
+      "S waves",
+      "Surface waves",
+      "Love waves"
+    ],
+    "answer": 1,
+    "explanation": "Secondary or S waves are transverse and cannot pass through liquids; their shadow zone is the main evidence that the earth's outer core is molten.",
+    "difficulty": 3,
+    "tags": [
+      "earthquakes",
+      "seismology"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The point on the earth's surface directly above the focus of an earthquake is called the:",
+    "options": [
+      "Epicentre",
+      "Hypocentre",
+      "Fault line",
+      "Nodal point"
+    ],
+    "answer": 0,
+    "explanation": "The focus or hypocentre is where rupture begins underground; the epicentre is the point vertically above it on the surface, where shaking is usually strongest.",
+    "difficulty": 2,
+    "tags": [
+      "earthquakes",
+      "terms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The 'Ring of Fire', a belt of intense volcanic and earthquake activity, encircles which ocean?",
+    "options": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Pacific Ocean",
+      "Arctic Ocean"
+    ],
+    "answer": 2,
+    "explanation": "The Pacific Ring of Fire is a horseshoe-shaped zone of subduction boundaries holding about 75 percent of the world's active volcanoes.",
+    "difficulty": 2,
+    "tags": [
+      "volcanoes",
+      "plate-tectonics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Mount Fuji, Krakatoa and Mount St. Helens are examples of:",
+    "options": [
+      "Shield volcanoes",
+      "Composite (strato) volcanoes",
+      "Cinder cones",
+      "Fissure eruptions"
+    ],
+    "answer": 1,
+    "explanation": "Composite or stratovolcanoes build steep cones from alternating layers of lava and ash and are typical of subduction zones, where explosive eruptions occur.",
+    "difficulty": 3,
+    "tags": [
+      "volcanoes",
+      "landforms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "India's only active volcano is located on which island?",
+    "options": [
+      "Barren Island",
+      "Little Andaman",
+      "Car Nicobar",
+      "Narcondam"
+    ],
+    "answer": 0,
+    "explanation": "Barren Island in the Andaman Sea holds the only confirmed active volcano in South Asia; nearby Narcondam is considered dormant.",
+    "difficulty": 2,
+    "tags": [
+      "volcanoes",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Himalayas were formed by the collision of the Indian plate with which plate?",
+    "options": [
+      "African plate",
+      "Pacific plate",
+      "Eurasian plate",
+      "Arabian plate"
+    ],
+    "answer": 2,
+    "explanation": "The northward drift of the Indian plate into the Eurasian plate crumpled the sediments of the Tethys Sea into the Himalayas, which are still rising.",
+    "difficulty": 2,
+    "tags": [
+      "plate-tectonics",
+      "himalayas"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the highest mountain peak in the world?",
+    "options": [
+      "K2",
+      "Mount Everest",
+      "Kanchenjunga",
+      "Lhotse"
+    ],
+    "answer": 1,
+    "explanation": "Mount Everest, on the Nepal-Tibet border, rises about 8,849 m; it is called Sagarmatha in Nepal and Chomolungma in Tibet.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "mountains"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Great Barrier Reef, the world's largest coral reef system, lies off the coast of:",
+    "options": [
+      "Australia",
+      "Brazil",
+      "Indonesia",
+      "Madagascar"
+    ],
+    "answer": 0,
+    "explanation": "The Great Barrier Reef stretches over 2,300 km along the Queensland coast of north-east Australia and is visible from space.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "landmarks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Grand Canyon was carved by which river?",
+    "options": [
+      "Missouri",
+      "Rio Grande",
+      "Columbia",
+      "Colorado"
+    ],
+    "answer": 3,
+    "explanation": "The Colorado River cut the Grand Canyon in Arizona over millions of years, exposing nearly two billion years of rock layers.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "landmarks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Angel Falls, the world's highest uninterrupted waterfall, is located in which country?",
+    "options": [
+      "Brazil",
+      "Colombia",
+      "Guyana",
+      "Venezuela"
+    ],
+    "answer": 3,
+    "explanation": "Angel Falls drops about 979 m from the Auyan-tepui plateau in Venezuela's Canaima National Park.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "waterfalls"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the largest freshwater lake in the world by surface area?",
+    "options": [
+      "Lake Baikal",
+      "Lake Superior",
+      "Lake Victoria",
+      "Lake Michigan"
+    ],
+    "answer": 1,
+    "explanation": "Lake Superior in North America has the greatest surface area of any freshwater lake; Lake Baikal in Siberia is the deepest and holds the most water.",
+    "difficulty": 3,
+    "tags": [
+      "world",
+      "lakes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which is the largest island in the world?",
+    "options": [
+      "New Guinea",
+      "Borneo",
+      "Greenland",
+      "Madagascar"
+    ],
+    "answer": 2,
+    "explanation": "Greenland, an autonomous territory of Denmark, is the world's largest island; Australia is treated as a continental landmass rather than an island.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "islands"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The capital of Australia is:",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Canberra",
+      "Perth"
+    ],
+    "answer": 2,
+    "explanation": "Canberra was purpose-built as the federal capital in 1913 as a compromise between the rival cities of Sydney and Melbourne.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "capitals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Ankara is the capital of which country?",
+    "options": [
+      "Turkey",
+      "Greece",
+      "Iran",
+      "Egypt"
+    ],
+    "answer": 0,
+    "explanation": "Ankara replaced Istanbul as Turkey's capital in 1923 under Mustafa Kemal Ataturk, though Istanbul remains the largest city.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "capitals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which country has Wellington as its capital?",
+    "options": [
+      "Ireland",
+      "Fiji",
+      "Papua New Guinea",
+      "New Zealand"
+    ],
+    "answer": 3,
+    "explanation": "Wellington, at the southern tip of New Zealand's North Island, has been the capital since 1865; Auckland is the country's largest city.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "capitals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The currency of Japan is the:",
+    "options": [
+      "Won",
+      "Yuan",
+      "Yen",
+      "Ringgit"
+    ],
+    "answer": 2,
+    "explanation": "Japan's currency is the yen; the won is used in Korea, the yuan in China and the ringgit in Malaysia.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "currency"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The currency of Bangladesh is the:",
+    "options": [
+      "Taka",
+      "Rupee",
+      "Kyat",
+      "Ngultrum"
+    ],
+    "answer": 0,
+    "explanation": "Bangladesh uses the taka, while Myanmar uses the kyat, Bhutan the ngultrum and Nepal the Nepalese rupee.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "currency"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Rand is the currency of which country?",
+    "options": [
+      "Nigeria",
+      "Kenya",
+      "Egypt",
+      "South Africa"
+    ],
+    "answer": 3,
+    "explanation": "South Africa's currency is the rand, named after the Witwatersrand ridge where the country's great goldfields were discovered.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "currency"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which country is known as the 'Land of the Midnight Sun'?",
+    "options": [
+      "Iceland",
+      "Norway",
+      "Canada",
+      "Finland"
+    ],
+    "answer": 1,
+    "explanation": "Norway is called the Land of the Midnight Sun because areas north of the Arctic Circle see continuous daylight for weeks around the summer solstice.",
+    "difficulty": 2,
+    "tags": [
+      "world",
+      "nicknames"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "Which African country is completely surrounded by South Africa?",
+    "options": [
+      "Eswatini",
+      "Botswana",
+      "Malawi",
+      "Lesotho"
+    ],
+    "answer": 3,
+    "explanation": "Lesotho is one of the world's few enclaved countries, lying entirely within South Africa in the highlands of the Drakensberg.",
+    "difficulty": 3,
+    "tags": [
+      "world",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Panama Canal connects the Atlantic Ocean with which ocean?",
+    "options": [
+      "Arctic Ocean",
+      "Indian Ocean",
+      "Southern Ocean",
+      "Pacific Ocean"
+    ],
+    "answer": 3,
+    "explanation": "Opened in 1914, the Panama Canal cuts across the Isthmus of Panama and uses a system of locks to link the Atlantic and Pacific Oceans.",
+    "difficulty": 1,
+    "tags": [
+      "world",
+      "canals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "geography",
+    "question": "The Sahel region of Africa lies immediately to the south of which desert?",
+    "options": [
+      "Kalahari",
+      "Namib",
+      "Sahara",
+      "Danakil"
+    ],
+    "answer": 2,
+    "explanation": "The Sahel is a semi-arid transition belt between the Sahara desert to the north and the wetter savanna to the south, and is highly prone to drought and desertification.",
+    "difficulty": 3,
+    "tags": [
+      "world",
+      "deserts"
+    ],
+    "source": "seed"
+  }
+]

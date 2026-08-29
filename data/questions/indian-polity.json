@@ -1,0 +1,2170 @@
+[
+  {
+    "topic": "indian-polity",
+    "question": "The Constituent Assembly of India was set up under the provisions of which plan?",
+    "options": [
+      "Cripps Mission, 1942",
+      "Cabinet Mission Plan, 1946",
+      "Mountbatten Plan, 1947",
+      "Wavell Plan, 1945"
+    ],
+    "answer": 1,
+    "explanation": "The Constituent Assembly was constituted in November 1946 under the scheme of the Cabinet Mission, whose members were Pethick-Lawrence, Stafford Cripps and A.V. Alexander.",
+    "difficulty": 2,
+    "tags": [
+      "constituent-assembly",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "When did the Constituent Assembly of India hold its first sitting?",
+    "options": [
+      "9 December 1946",
+      "26 November 1949",
+      "15 August 1947",
+      "26 January 1950"
+    ],
+    "answer": 0,
+    "explanation": "The Assembly first met on 9 December 1946 in New Delhi; the Muslim League boycotted the session and pressed for a separate Constituent Assembly for Pakistan.",
+    "difficulty": 2,
+    "tags": [
+      "constituent-assembly",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Who acted as the temporary President of the Constituent Assembly at its first sitting?",
+    "options": [
+      "Dr. Rajendra Prasad",
+      "Dr. B.R. Ambedkar",
+      "Dr. Sachchidananda Sinha",
+      "H.C. Mukherjee"
+    ],
+    "answer": 2,
+    "explanation": "Following French practice, the oldest member, Dr. Sachchidananda Sinha, was made temporary President on 9 December 1946; Dr. Rajendra Prasad was elected permanent President two days later.",
+    "difficulty": 2,
+    "tags": [
+      "constituent-assembly",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Who was elected the permanent President of the Constituent Assembly?",
+    "options": [
+      "Sardar Vallabhbhai Patel",
+      "C. Rajagopalachari",
+      "B.N. Rau",
+      "Dr. Rajendra Prasad"
+    ],
+    "answer": 3,
+    "explanation": "Dr. Rajendra Prasad was elected President of the Constituent Assembly on 11 December 1946 and later became the first President of India.",
+    "difficulty": 1,
+    "tags": [
+      "constituent-assembly",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Who was the Chairman of the Drafting Committee of the Constitution?",
+    "options": [
+      "B.N. Rau",
+      "K.M. Munshi",
+      "Alladi Krishnaswamy Ayyar",
+      "Dr. B.R. Ambedkar"
+    ],
+    "answer": 3,
+    "explanation": "The Drafting Committee was set up on 29 August 1947 with Dr. B.R. Ambedkar as Chairman, which is why he is called the chief architect of the Indian Constitution.",
+    "difficulty": 1,
+    "tags": [
+      "drafting-committee",
+      "ambedkar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Objectives Resolution, which laid down the philosophy of the Constitution, was moved in the Constituent Assembly by",
+    "options": [
+      "Dr. B.R. Ambedkar",
+      "Jawaharlal Nehru",
+      "Dr. Rajendra Prasad",
+      "Sardar Vallabhbhai Patel"
+    ],
+    "answer": 1,
+    "explanation": "Jawaharlal Nehru moved the Objectives Resolution on 13 December 1946; it was adopted on 22 January 1947 and its ideals were later embodied in the Preamble.",
+    "difficulty": 2,
+    "tags": [
+      "objectives-resolution",
+      "preamble"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "On which date was the Constitution of India adopted by the Constituent Assembly?",
+    "options": [
+      "26 January 1950",
+      "15 August 1947",
+      "26 November 1949",
+      "9 December 1946"
+    ],
+    "answer": 2,
+    "explanation": "The Constitution was adopted and signed on 26 November 1949, now observed as Constitution Day (Samvidhan Divas); most of it came into force only on 26 January 1950.",
+    "difficulty": 1,
+    "tags": [
+      "constitution-day",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Constitution of India came into full force on",
+    "options": [
+      "26 January 1950",
+      "26 November 1949",
+      "15 August 1947",
+      "1 January 1950"
+    ],
+    "answer": 0,
+    "explanation": "26 January 1950 was chosen because the Congress had celebrated 26 January 1930 as Purna Swaraj Day; the day is observed as Republic Day.",
+    "difficulty": 1,
+    "tags": [
+      "republic-day",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How long did the Constituent Assembly take to frame the Constitution of India?",
+    "options": [
+      "1 year 6 months 12 days",
+      "2 years 11 months 18 days",
+      "3 years 2 months 5 days",
+      "4 years 7 months 9 days"
+    ],
+    "answer": 1,
+    "explanation": "From its first sitting on 9 December 1946 to the adoption on 26 November 1949, the Assembly took 2 years, 11 months and 18 days spread over 11 sessions.",
+    "difficulty": 2,
+    "tags": [
+      "constituent-assembly",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Who was appointed Constitutional Adviser to the Constituent Assembly and prepared the original draft of the Constitution?",
+    "options": [
+      "Dr. B.R. Ambedkar",
+      "K.M. Munshi",
+      "Sir B.N. Rau",
+      "S.N. Mukherjee"
+    ],
+    "answer": 2,
+    "explanation": "Sir Benegal Narsing Rau prepared the initial draft of February 1948, which the Drafting Committee under Ambedkar then scrutinised and revised.",
+    "difficulty": 3,
+    "tags": [
+      "constituent-assembly",
+      "drafting-committee"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How many members did the Drafting Committee of the Constituent Assembly have?",
+    "options": [
+      "Five",
+      "Seven",
+      "Nine",
+      "Eleven"
+    ],
+    "answer": 1,
+    "explanation": "The Drafting Committee had seven members, including Ambedkar, K.M. Munshi, Alladi Krishnaswamy Ayyar, N. Gopalaswami Ayyangar, Syed Mohammad Saadulla, N. Madhava Rau and T.T. Krishnamachari.",
+    "difficulty": 3,
+    "tags": [
+      "drafting-committee",
+      "making-of-constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The idea of Fundamental Rights in the Indian Constitution has been borrowed from the Constitution of",
+    "options": [
+      "the United Kingdom",
+      "Ireland",
+      "Canada",
+      "the United States of America"
+    ],
+    "answer": 3,
+    "explanation": "Fundamental Rights, judicial review and independence of the judiciary were drawn from the American Bill of Rights.",
+    "difficulty": 1,
+    "tags": [
+      "borrowed-features",
+      "fundamental-rights"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Directive Principles of State Policy have been borrowed from the Constitution of",
+    "options": [
+      "the United States of America",
+      "Germany",
+      "Ireland",
+      "Japan"
+    ],
+    "answer": 2,
+    "explanation": "The DPSP were modelled on the Irish Constitution, which had itself taken the idea from Spain; the method of nominating members to the Rajya Sabha also comes from Ireland.",
+    "difficulty": 1,
+    "tags": [
+      "borrowed-features",
+      "dpsp"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The parliamentary form of government in India has been adopted from",
+    "options": [
+      "the United Kingdom",
+      "the United States of America",
+      "Canada",
+      "Australia"
+    ],
+    "answer": 0,
+    "explanation": "From Britain India took the parliamentary system, a nominal head of state, rule of law, single citizenship, collective responsibility of the cabinet and the office of the Speaker.",
+    "difficulty": 1,
+    "tags": [
+      "borrowed-features",
+      "parliamentary-system"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The suspension of Fundamental Rights during an emergency was an idea drawn from the Constitution of",
+    "options": [
+      "Weimar Germany",
+      "Ireland",
+      "Canada",
+      "the United States of America"
+    ],
+    "answer": 0,
+    "explanation": "The Weimar Constitution of Germany inspired the provision allowing Fundamental Rights to be suspended while a National Emergency is in force.",
+    "difficulty": 2,
+    "tags": [
+      "borrowed-features",
+      "emergency"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Fundamental Duties in the Indian Constitution were borrowed from the Constitution of",
+    "options": [
+      "Japan",
+      "France",
+      "the erstwhile USSR",
+      "South Africa"
+    ],
+    "answer": 2,
+    "explanation": "Fundamental Duties, and the ideal of justice in the Preamble, were taken from the Soviet Constitution and inserted by the 42nd Amendment in 1976.",
+    "difficulty": 2,
+    "tags": [
+      "borrowed-features",
+      "fundamental-duties"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The procedure for amendment of the Constitution and the mode of election of Rajya Sabha members were borrowed from",
+    "options": [
+      "Canada",
+      "the United States of America",
+      "Australia",
+      "South Africa"
+    ],
+    "answer": 3,
+    "explanation": "The amendment procedure under Article 368 and the indirect election of Rajya Sabha members were drawn from the South African Constitution.",
+    "difficulty": 3,
+    "tags": [
+      "borrowed-features",
+      "amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Concurrent List and the joint sitting of the two Houses of Parliament were borrowed from the Constitution of",
+    "options": [
+      "Australia",
+      "Canada",
+      "the United States of America",
+      "Ireland"
+    ],
+    "answer": 0,
+    "explanation": "Australia contributed the Concurrent List, freedom of trade, commerce and intercourse, and the joint sitting of the two Houses to resolve a deadlock over a bill.",
+    "difficulty": 3,
+    "tags": [
+      "borrowed-features",
+      "parliament"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "A federation with a strong Centre, with residuary powers vested in the Union, was modelled on the Constitution of",
+    "options": [
+      "the United States of America",
+      "Canada",
+      "Australia",
+      "Germany"
+    ],
+    "answer": 1,
+    "explanation": "From Canada India took a federation with a strong Centre, residuary powers with the Centre, appointment of Governors by the Centre and the advisory jurisdiction of the Supreme Court.",
+    "difficulty": 2,
+    "tags": [
+      "borrowed-features",
+      "federalism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The largest single source of the provisions of the Indian Constitution is",
+    "options": [
+      "the Government of India Act, 1935",
+      "the Indian Councils Act, 1909",
+      "the Government of India Act, 1919",
+      "the Indian Independence Act, 1947"
+    ],
+    "answer": 0,
+    "explanation": "Nearly two-thirds of the Constitution's provisions, including the federal scheme, the office of Governor, emergency powers and the public service commissions, come from the Government of India Act, 1935.",
+    "difficulty": 2,
+    "tags": [
+      "borrowed-features",
+      "goi-act-1935"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which words were added to the Preamble of the Constitution by the 42nd Amendment Act, 1976?",
+    "options": [
+      "Sovereign, Democratic and Republic",
+      "Justice, Liberty and Equality",
+      "Federal, Secular and Unity",
+      "Socialist, Secular and Integrity"
+    ],
+    "answer": 3,
+    "explanation": "The 42nd Amendment added 'Socialist' and 'Secular' to the description of the Republic and changed 'unity of the Nation' to 'unity and integrity of the Nation'.",
+    "difficulty": 1,
+    "tags": [
+      "preamble",
+      "42nd-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "In which case did the Supreme Court hold that the Preamble is a part of the Constitution?",
+    "options": [
+      "Berubari Union case (1960)",
+      "Golaknath case (1967)",
+      "Kesavananda Bharati case (1973)",
+      "Minerva Mills case (1980)"
+    ],
+    "answer": 2,
+    "explanation": "In Berubari Union (1960) the Court had said the Preamble was not part of the Constitution, but in Kesavananda Bharati (1973) it reversed that view and held the Preamble to be a part of it.",
+    "difficulty": 3,
+    "tags": [
+      "preamble",
+      "landmark-cases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which date is mentioned in the Preamble of the Constitution of India?",
+    "options": [
+      "15 August 1947",
+      "26 January 1950",
+      "9 December 1946",
+      "26 November 1949"
+    ],
+    "answer": 3,
+    "explanation": "The Preamble ends with the words 'this twenty-sixth day of November, 1949, do hereby adopt, enact and give to ourselves this Constitution'.",
+    "difficulty": 2,
+    "tags": [
+      "preamble"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The opening words of the Preamble, 'We, the people of India', indicate that",
+    "options": [
+      "the Constitution was granted by the British Parliament",
+      "the ultimate sovereignty rests with the people of India",
+      "India is a confederation of sovereign states",
+      "Parliament is supreme over the Constitution"
+    ],
+    "answer": 1,
+    "explanation": "The phrase asserts popular sovereignty: the Constitution derives its authority from the people of India and not from any external authority.",
+    "difficulty": 1,
+    "tags": [
+      "preamble",
+      "sovereignty"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Article 1 of the Constitution describes India as",
+    "options": [
+      "a quasi-federal State",
+      "a Confederation of States",
+      "a Union of States",
+      "a Federation of States"
+    ],
+    "answer": 2,
+    "explanation": "Article 1 says 'India, that is Bharat, shall be a Union of States'; Ambedkar explained that the term signifies that the federation is not the result of an agreement and that no state may secede.",
+    "difficulty": 1,
+    "tags": [
+      "article-1",
+      "federalism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How many Schedules does the Constitution of India contain at present?",
+    "options": [
+      "Ten",
+      "Eleven",
+      "Twelve",
+      "Fourteen"
+    ],
+    "answer": 2,
+    "explanation": "The Constitution originally had eight Schedules; four more were added by later amendments, taking the total to twelve.",
+    "difficulty": 1,
+    "tags": [
+      "schedules"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Provisions relating to disqualification of legislators on the ground of defection are contained in which Schedule?",
+    "options": [
+      "Ninth Schedule",
+      "Tenth Schedule",
+      "Eleventh Schedule",
+      "Twelfth Schedule"
+    ],
+    "answer": 1,
+    "explanation": "The Tenth Schedule, the anti-defection law, was added by the 52nd Amendment Act, 1985 and empowers the presiding officer to decide questions of disqualification.",
+    "difficulty": 1,
+    "tags": [
+      "schedules",
+      "anti-defection"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Ninth Schedule, which shields certain laws from being challenged in court, was added by which Constitutional Amendment?",
+    "options": [
+      "First Amendment, 1951",
+      "Fourth Amendment, 1955",
+      "Seventh Amendment, 1956",
+      "Twenty-fifth Amendment, 1971"
+    ],
+    "answer": 0,
+    "explanation": "The First Amendment created the Ninth Schedule mainly to protect land reform laws; in I.R. Coelho (2007) the Supreme Court held that laws placed in it after 24 April 1973 can still be tested against the basic structure.",
+    "difficulty": 2,
+    "tags": [
+      "schedules",
+      "first-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How many languages are recognised in the Eighth Schedule of the Constitution at present?",
+    "options": [
+      "Fourteen",
+      "Eighteen",
+      "Twenty",
+      "Twenty-two"
+    ],
+    "answer": 3,
+    "explanation": "The Eighth Schedule began with 14 languages; the 92nd Amendment Act, 2003 added Bodo, Dogri, Maithili and Santhali, taking the number to 22.",
+    "difficulty": 1,
+    "tags": [
+      "schedules",
+      "languages"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How many subjects are listed in the Eleventh Schedule of the Constitution?",
+    "options": [
+      "Eighteen",
+      "Twenty",
+      "Twenty-five",
+      "Twenty-nine"
+    ],
+    "answer": 3,
+    "explanation": "The Eleventh Schedule, inserted by the 73rd Amendment, lists 29 functional items that states may devolve on panchayats; the Twelfth Schedule lists 18 items for municipalities.",
+    "difficulty": 3,
+    "tags": [
+      "schedules",
+      "panchayati-raj"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Fundamental Rights are contained in which Part of the Constitution of India?",
+    "options": [
+      "Part I",
+      "Part II",
+      "Part IV",
+      "Part III"
+    ],
+    "answer": 3,
+    "explanation": "Part III (Articles 12 to 35) contains the Fundamental Rights, often called the Magna Carta of the Indian Constitution.",
+    "difficulty": 1,
+    "tags": [
+      "fundamental-rights",
+      "parts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How many Fundamental Rights does the Constitution guarantee at present?",
+    "options": [
+      "Six",
+      "Seven",
+      "Eight",
+      "Five"
+    ],
+    "answer": 0,
+    "explanation": "There were originally seven Fundamental Rights; after the Right to Property was deleted in 1978, six remain, beginning with the Right to Equality.",
+    "difficulty": 1,
+    "tags": [
+      "fundamental-rights"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Right to Property was removed from the list of Fundamental Rights by which Amendment?",
+    "options": [
+      "42nd Amendment",
+      "24th Amendment",
+      "25th Amendment",
+      "44th Amendment"
+    ],
+    "answer": 3,
+    "explanation": "The 44th Amendment Act, 1978 deleted Article 19(1)(f) and Article 31, converting the right to property into an ordinary legal right.",
+    "difficulty": 2,
+    "tags": [
+      "fundamental-rights",
+      "44th-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "After 1978, the Right to Property exists in the Constitution as a legal right under",
+    "options": [
+      "Article 19(1)(f)",
+      "Article 300A",
+      "Article 31",
+      "Article 265"
+    ],
+    "answer": 1,
+    "explanation": "Article 300A, in Part XII, says no person shall be deprived of his property save by authority of law; it is enforceable in an ordinary court but not under Article 32.",
+    "difficulty": 2,
+    "tags": [
+      "right-to-property",
+      "article-300a"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which Article guarantees equality before the law and equal protection of the laws?",
+    "options": [
+      "Article 14",
+      "Article 15",
+      "Article 16",
+      "Article 17"
+    ],
+    "answer": 0,
+    "explanation": "Article 14 borrows 'equality before law' from the British concept of rule of law and 'equal protection of the laws' from the American Constitution; it applies to all persons, not just citizens.",
+    "difficulty": 1,
+    "tags": [
+      "fundamental-rights",
+      "article-14"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The abolition of untouchability is provided for in which Article of the Constitution?",
+    "options": [
+      "Article 15",
+      "Article 16",
+      "Article 17",
+      "Article 18"
+    ],
+    "answer": 2,
+    "explanation": "Article 17 abolishes untouchability and forbids its practice in any form; the Protection of Civil Rights Act, 1955 prescribes punishment for its enforcement.",
+    "difficulty": 1,
+    "tags": [
+      "fundamental-rights",
+      "article-17"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Article 18 of the Constitution deals with",
+    "options": [
+      "abolition of untouchability",
+      "abolition of titles",
+      "protection of life and personal liberty",
+      "the right to education"
+    ],
+    "answer": 1,
+    "explanation": "Article 18 abolishes titles except military and academic distinctions; the Supreme Court has held that national awards such as the Bharat Ratna do not violate it as long as they are not used as titles.",
+    "difficulty": 1,
+    "tags": [
+      "fundamental-rights",
+      "article-18"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How many freedoms are guaranteed to citizens under Article 19 at present?",
+    "options": [
+      "Six",
+      "Seven",
+      "Five",
+      "Four"
+    ],
+    "answer": 0,
+    "explanation": "Article 19 originally listed seven freedoms; after the right to acquire and dispose of property was deleted in 1978, six remain, including speech and expression, assembly and movement.",
+    "difficulty": 2,
+    "tags": [
+      "fundamental-rights",
+      "article-19"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which case held that the procedure established by law under Article 21 must be fair, just and reasonable?",
+    "options": [
+      "A.K. Gopalan case",
+      "ADM Jabalpur case",
+      "Shankari Prasad case",
+      "Maneka Gandhi case"
+    ],
+    "answer": 3,
+    "explanation": "In Maneka Gandhi v. Union of India (1978) the Supreme Court read due process into Article 21, giving rise to a wide range of derived rights such as the right to live with dignity and a clean environment.",
+    "difficulty": 3,
+    "tags": [
+      "article-21",
+      "landmark-cases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Right to Education for children aged 6 to 14 years was inserted as Article 21A by which Amendment?",
+    "options": [
+      "42nd Amendment",
+      "73rd Amendment",
+      "93rd Amendment",
+      "86th Amendment"
+    ],
+    "answer": 3,
+    "explanation": "The 86th Amendment Act, 2002 added Article 21A, altered Article 45 and added a Fundamental Duty for parents; the Right to Education Act came into force in 2010.",
+    "difficulty": 1,
+    "tags": [
+      "article-21a",
+      "86th-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Prohibition of traffic in human beings and forced labour (begar) is provided under",
+    "options": [
+      "Article 21",
+      "Article 22",
+      "Article 23",
+      "Article 24"
+    ],
+    "answer": 2,
+    "explanation": "Article 23 is part of the Right against Exploitation and is available against both the State and private persons; the State may still impose compulsory service for public purposes.",
+    "difficulty": 2,
+    "tags": [
+      "fundamental-rights",
+      "article-23"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Article 24 prohibits the employment of children below which age in factories, mines and hazardous work?",
+    "options": [
+      "Twelve years",
+      "Fourteen years",
+      "Sixteen years",
+      "Eighteen years"
+    ],
+    "answer": 1,
+    "explanation": "Article 24 bars employment of children under 14 in factories, mines and other hazardous occupations; the Child Labour (Prohibition and Regulation) Act, 1986 gives effect to it.",
+    "difficulty": 1,
+    "tags": [
+      "fundamental-rights",
+      "article-24"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which Article did Dr. B.R. Ambedkar call 'the heart and soul of the Constitution'?",
+    "options": [
+      "Article 14",
+      "Article 19",
+      "Article 32",
+      "Article 226"
+    ],
+    "answer": 2,
+    "explanation": "Article 32 gives the right to move the Supreme Court directly for enforcement of Fundamental Rights; the Court cannot refuse relief and the right itself is a Fundamental Right.",
+    "difficulty": 1,
+    "tags": [
+      "article-32",
+      "writs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The writ of Habeas Corpus literally means",
+    "options": [
+      "We command",
+      "To be certified",
+      "By what authority",
+      "To have the body"
+    ],
+    "answer": 3,
+    "explanation": "Habeas Corpus is issued to produce a detained person before the court and secure release if the detention is unlawful; it can be issued against both public authorities and private individuals.",
+    "difficulty": 1,
+    "tags": [
+      "writs",
+      "article-32"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which writ is issued by a court to a public official directing the performance of an official duty that he has failed to perform?",
+    "options": [
+      "Certiorari",
+      "Prohibition",
+      "Mandamus",
+      "Quo warranto"
+    ],
+    "answer": 2,
+    "explanation": "Mandamus, meaning 'we command', cannot be issued against a private individual, the President or Governors, or to enforce a purely discretionary or contractual duty.",
+    "difficulty": 2,
+    "tags": [
+      "writs",
+      "mandamus"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which writ is issued to enquire into the legality of a person's claim to a public office?",
+    "options": [
+      "Habeas corpus",
+      "Mandamus",
+      "Prohibition",
+      "Quo warranto"
+    ],
+    "answer": 3,
+    "explanation": "Quo warranto, meaning 'by what authority', lies only against a substantive public office of a permanent character created by statute or the Constitution, and any interested person may seek it.",
+    "difficulty": 2,
+    "tags": [
+      "writs",
+      "quo-warranto"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which writ is issued by a higher court to quash an order already passed by a lower court or tribunal?",
+    "options": [
+      "Prohibition",
+      "Certiorari",
+      "Mandamus",
+      "Habeas corpus"
+    ],
+    "answer": 1,
+    "explanation": "Certiorari is curative and quashes an order already made, whereas prohibition is preventive and stops a subordinate court from continuing to act beyond its jurisdiction.",
+    "difficulty": 3,
+    "tags": [
+      "writs",
+      "certiorari"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "High Courts are empowered to issue writs under which Article of the Constitution?",
+    "options": [
+      "Article 226",
+      "Article 32",
+      "Article 136",
+      "Article 227"
+    ],
+    "answer": 0,
+    "explanation": "Article 226 gives High Courts a wider writ power than the Supreme Court, since writs may be issued not only for Fundamental Rights but also for 'any other purpose', that is, ordinary legal rights.",
+    "difficulty": 2,
+    "tags": [
+      "writs",
+      "article-226",
+      "high-court"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Fundamental Duties of citizens are enumerated in which Article?",
+    "options": [
+      "Article 51",
+      "Article 51A",
+      "Article 48A",
+      "Article 50"
+    ],
+    "answer": 1,
+    "explanation": "Article 51A, in Part IVA, lists the Fundamental Duties; they are non-justiciable, though Parliament may enforce some of them through ordinary law.",
+    "difficulty": 2,
+    "tags": [
+      "fundamental-duties",
+      "article-51a"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Fundamental Duties were added to the Constitution on the recommendation of which committee?",
+    "options": [
+      "Sarkaria Commission",
+      "Swaran Singh Committee",
+      "Balwant Rai Mehta Committee",
+      "Ashok Mehta Committee"
+    ],
+    "answer": 1,
+    "explanation": "The Swaran Singh Committee, appointed in 1976, recommended the inclusion of Fundamental Duties, which were added by the 42nd Amendment as Part IVA.",
+    "difficulty": 3,
+    "tags": [
+      "fundamental-duties",
+      "42nd-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "How many Fundamental Duties are listed in the Constitution at present?",
+    "options": [
+      "Nine",
+      "Ten",
+      "Eleven",
+      "Twelve"
+    ],
+    "answer": 2,
+    "explanation": "Ten duties were added by the 42nd Amendment in 1976, and an eleventh, requiring parents to provide education to children aged 6 to 14, was added by the 86th Amendment in 2002.",
+    "difficulty": 2,
+    "tags": [
+      "fundamental-duties"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which set of Fundamental Rights is available only to citizens and not to foreigners?",
+    "options": [
+      "Articles 15, 16, 19, 29 and 30",
+      "Articles 14, 20 and 21",
+      "Articles 21, 22 and 25",
+      "Articles 23, 24 and 32"
+    ],
+    "answer": 0,
+    "explanation": "Rights under Articles 15, 16, 19, 29 and 30 are confined to citizens, while Articles 14, 20, 21, 21A, 22, 23, 25 to 28 and 32 are available to all persons including foreigners.",
+    "difficulty": 3,
+    "tags": [
+      "fundamental-rights",
+      "citizenship"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Directive Principles of State Policy are contained in",
+    "options": [
+      "Part III (Articles 12-35)",
+      "Part IVA (Article 51A)",
+      "Part V (Articles 52-151)",
+      "Part IV (Articles 36-51)"
+    ],
+    "answer": 3,
+    "explanation": "Part IV, Articles 36 to 51, contains the Directive Principles, which Ambedkar described as 'novel features' aimed at establishing a welfare state.",
+    "difficulty": 1,
+    "tags": [
+      "dpsp",
+      "parts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which statement about the Directive Principles of State Policy is correct?",
+    "options": [
+      "They are enforceable in any court of law",
+      "They can be enforced only by the High Courts",
+      "They are not enforceable by any court but are fundamental in the governance of the country",
+      "They automatically override Fundamental Rights in every case"
+    ],
+    "answer": 2,
+    "explanation": "Article 37 declares that the Directive Principles are not enforceable by any court, yet they are fundamental in governance and the State has a duty to apply them in making laws.",
+    "difficulty": 2,
+    "tags": [
+      "dpsp",
+      "article-37"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Directive Principle asking the State to secure a Uniform Civil Code for citizens is contained in",
+    "options": [
+      "Article 40",
+      "Article 45",
+      "Article 48",
+      "Article 44"
+    ],
+    "answer": 3,
+    "explanation": "Article 44 directs the State to endeavour to secure a uniform civil code throughout India; it is a Gandhian-era liberal-intellectual principle and remains non-justiciable.",
+    "difficulty": 1,
+    "tags": [
+      "dpsp",
+      "article-44"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which Directive Principle asks the State to organise village panchayats as units of self-government?",
+    "options": [
+      "Article 40",
+      "Article 43",
+      "Article 46",
+      "Article 50"
+    ],
+    "answer": 0,
+    "explanation": "Article 40, a Gandhian principle, inspired the 73rd Amendment of 1992 which gave constitutional status to panchayati raj institutions.",
+    "difficulty": 2,
+    "tags": [
+      "dpsp",
+      "article-40",
+      "panchayati-raj"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Separation of the judiciary from the executive in the public services of the State is directed by",
+    "options": [
+      "Article 48",
+      "Article 49",
+      "Article 50",
+      "Article 51"
+    ],
+    "answer": 2,
+    "explanation": "Article 50 is a liberal-intellectual Directive Principle; Article 51 immediately after it directs promotion of international peace and security.",
+    "difficulty": 2,
+    "tags": [
+      "dpsp",
+      "article-50"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Directive Principle requiring the State to provide free legal aid and equal justice was inserted by the 42nd Amendment as",
+    "options": [
+      "Article 39A",
+      "Article 43A",
+      "Article 48A",
+      "Article 38(2)"
+    ],
+    "answer": 0,
+    "explanation": "Article 39A was added in 1976 and led to the Legal Services Authorities Act, 1987; the same amendment added Article 43A on worker participation in management and Article 48A on protection of the environment.",
+    "difficulty": 3,
+    "tags": [
+      "dpsp",
+      "article-39a",
+      "42nd-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Provisions relating to citizenship are contained in which Articles of the Constitution?",
+    "options": [
+      "Articles 1 to 4",
+      "Articles 5 to 11",
+      "Articles 12 to 35",
+      "Articles 36 to 51"
+    ],
+    "answer": 1,
+    "explanation": "Part II, Articles 5 to 11, deals with citizenship at the commencement of the Constitution; detailed rules are laid down in the Citizenship Act, 1955.",
+    "difficulty": 2,
+    "tags": [
+      "citizenship",
+      "part-ii"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Under which Article is Parliament empowered to make provisions with respect to the acquisition and termination of citizenship?",
+    "options": [
+      "Article 5",
+      "Article 11",
+      "Article 9",
+      "Article 10"
+    ],
+    "answer": 1,
+    "explanation": "Article 11 gives Parliament exclusive power over citizenship, under which it enacted the Citizenship Act, 1955 providing for citizenship by birth, descent, registration, naturalisation and incorporation of territory.",
+    "difficulty": 3,
+    "tags": [
+      "citizenship",
+      "article-11"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Under the Constitution, the executive power of the Union is vested in",
+    "options": [
+      "the Prime Minister",
+      "the Council of Ministers",
+      "the President",
+      "Parliament"
+    ],
+    "answer": 2,
+    "explanation": "Article 53 vests the executive power of the Union in the President, to be exercised by him directly or through officers subordinate to him, in practice on the aid and advice of the Council of Ministers.",
+    "difficulty": 1,
+    "tags": [
+      "president",
+      "union-executive"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The electoral college that elects the President of India consists of",
+    "options": [
+      "elected members of both Houses of Parliament and elected members of the legislative assemblies of the states and of Delhi and Puducherry",
+      "all members of both Houses of Parliament and all members of state legislative assemblies",
+      "only the elected members of the Lok Sabha and the state assemblies",
+      "members of Parliament together with members of state legislative councils"
+    ],
+    "answer": 0,
+    "explanation": "Nominated members and members of legislative councils are excluded; the 70th Amendment Act, 1992 added the elected MLAs of the Union Territories of Delhi and Puducherry to the electoral college.",
+    "difficulty": 3,
+    "tags": [
+      "president",
+      "presidential-election"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The President of India is elected by which method of voting?",
+    "options": [
+      "First past the post",
+      "Proportional representation by means of the single transferable vote",
+      "Simple majority through an open ballot",
+      "Cumulative voting by show of hands"
+    ],
+    "answer": 1,
+    "explanation": "Article 55 prescribes proportional representation by the single transferable vote with a secret ballot, and the value of each vote is weighted to maintain uniformity among states and parity between the Union and the states.",
+    "difficulty": 2,
+    "tags": [
+      "president",
+      "presidential-election"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "What is the minimum age required for a person to be eligible for election as President of India?",
+    "options": [
+      "25 years",
+      "30 years",
+      "40 years",
+      "35 years"
+    ],
+    "answer": 3,
+    "explanation": "A candidate must be a citizen of India, have completed 35 years of age and be qualified for election as a member of the Lok Sabha.",
+    "difficulty": 1,
+    "tags": [
+      "president",
+      "qualifications"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "What is the term of office of the President of India?",
+    "options": [
+      "Five years",
+      "Four years",
+      "Six years",
+      "Seven years"
+    ],
+    "answer": 0,
+    "explanation": "Article 56 fixes a five-year term from the date of entering office, but the President continues in office until the successor takes over and is eligible for re-election.",
+    "difficulty": 1,
+    "tags": [
+      "president",
+      "term"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "On what ground can the President of India be impeached?",
+    "options": [
+      "Proved misbehaviour or incapacity",
+      "Corruption established by an official inquiry",
+      "Loss of majority support in the Lok Sabha",
+      "Violation of the Constitution"
+    ],
+    "answer": 3,
+    "explanation": "Article 61 allows impeachment only for violation of the Constitution; the charge may be preferred by either House and must be passed by a two-thirds majority of the total membership of each House.",
+    "difficulty": 2,
+    "tags": [
+      "president",
+      "impeachment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Nominated members of Parliament are entitled to vote in the election of",
+    "options": [
+      "the President of India",
+      "the Vice-President of India",
+      "both the President and the Vice-President",
+      "neither the President nor the Vice-President"
+    ],
+    "answer": 1,
+    "explanation": "The Vice-President is elected by an electoral college of all members of both Houses, including nominated members, whereas only elected members take part in the presidential election.",
+    "difficulty": 3,
+    "tags": [
+      "vice-president",
+      "elections"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The power of the President to promulgate ordinances when Parliament is not in session is given by",
+    "options": [
+      "Article 121",
+      "Article 122",
+      "Article 123",
+      "Article 124"
+    ],
+    "answer": 2,
+    "explanation": "An ordinance under Article 123 has the same force as an Act of Parliament but ceases to operate six weeks after Parliament reassembles unless approved by both Houses.",
+    "difficulty": 2,
+    "tags": [
+      "president",
+      "ordinance",
+      "article-123"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The pardoning power of the President is contained in which Article?",
+    "options": [
+      "Article 72",
+      "Article 74",
+      "Article 76",
+      "Article 78"
+    ],
+    "answer": 0,
+    "explanation": "Article 72 allows the President to grant pardons, reprieves, respites and remissions, and alone can pardon a death sentence or a sentence by a court martial; Governors have a narrower power under Article 161.",
+    "difficulty": 2,
+    "tags": [
+      "president",
+      "pardoning-power",
+      "article-72"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Who is the ex-officio Chairman of the Rajya Sabha?",
+    "options": [
+      "The Speaker of the Lok Sabha",
+      "The Prime Minister",
+      "The Vice-President of India",
+      "A member elected by the House"
+    ],
+    "answer": 2,
+    "explanation": "Article 64 makes the Vice-President ex-officio Chairman of the Rajya Sabha; he is not a member of the House and therefore votes only in the case of a tie.",
+    "difficulty": 1,
+    "tags": [
+      "vice-president",
+      "rajya-sabha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Vice-President of India is elected by an electoral college consisting of",
+    "options": [
+      "members of both Houses of Parliament",
+      "elected members of Parliament and of the state legislative assemblies",
+      "members of the Rajya Sabha alone",
+      "elected members of the Lok Sabha alone"
+    ],
+    "answer": 0,
+    "explanation": "State legislatures have no role in the election of the Vice-President; the electoral college is confined to the members of the Rajya Sabha and the Lok Sabha.",
+    "difficulty": 2,
+    "tags": [
+      "vice-president",
+      "elections"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Who administers the oath of office to the President of India?",
+    "options": [
+      "The Vice-President",
+      "The Speaker of the Lok Sabha",
+      "The Chief Justice of India",
+      "The outgoing President"
+    ],
+    "answer": 2,
+    "explanation": "Under Article 60 the oath is administered by the Chief Justice of India, or in his absence the senior-most judge of the Supreme Court available.",
+    "difficulty": 1,
+    "tags": [
+      "president",
+      "oath"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Prime Minister of India is",
+    "options": [
+      "elected by the members of the Lok Sabha",
+      "appointed by the President",
+      "elected by both Houses of Parliament sitting together",
+      "nominated by the national executive of the ruling party"
+    ],
+    "answer": 1,
+    "explanation": "Article 75 says the Prime Minister shall be appointed by the President, who by convention invites the leader of the party or coalition commanding a majority in the Lok Sabha.",
+    "difficulty": 1,
+    "tags": [
+      "prime-minister",
+      "article-75"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Council of Ministers is collectively responsible to",
+    "options": [
+      "the President",
+      "the Rajya Sabha",
+      "Parliament as a whole",
+      "the Lok Sabha"
+    ],
+    "answer": 3,
+    "explanation": "Article 75(3) makes the Council of Ministers collectively responsible to the Lok Sabha, which is why a no-confidence motion passed by that House brings down the entire ministry.",
+    "difficulty": 1,
+    "tags": [
+      "council-of-ministers",
+      "collective-responsibility"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The 91st Amendment Act, 2003 limits the size of the Union Council of Ministers, including the Prime Minister, to what proportion of the total strength of the Lok Sabha?",
+    "options": [
+      "10 per cent",
+      "15 per cent",
+      "20 per cent",
+      "25 per cent"
+    ],
+    "answer": 1,
+    "explanation": "The same amendment fixed a ceiling of 15 per cent for states, with a minimum of 12 ministers, and barred a member disqualified for defection from holding ministerial office.",
+    "difficulty": 2,
+    "tags": [
+      "council-of-ministers",
+      "91st-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The provision that the President may require the Council of Ministers to reconsider its advice, but must act on the advice tendered after such reconsideration, was introduced by",
+    "options": [
+      "the 24th Amendment",
+      "the 42nd Amendment",
+      "the 61st Amendment",
+      "the 44th Amendment"
+    ],
+    "answer": 3,
+    "explanation": "The 42nd Amendment first made ministerial advice binding on the President, and the 44th Amendment, 1978 added the proviso to Article 74 allowing one reconsideration.",
+    "difficulty": 3,
+    "tags": [
+      "president",
+      "article-74",
+      "44th-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Attorney General of India is appointed under which Article of the Constitution?",
+    "options": [
+      "Article 74",
+      "Article 75",
+      "Article 76",
+      "Article 148"
+    ],
+    "answer": 2,
+    "explanation": "Article 76 provides for the Attorney General, the highest law officer of the Union, appointed by the President and holding office during his pleasure; he has the right to audience in all courts.",
+    "difficulty": 2,
+    "tags": [
+      "attorney-general",
+      "article-76"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "According to Article 79, the Parliament of India consists of",
+    "options": [
+      "the Lok Sabha and the Rajya Sabha only",
+      "the President and the two Houses",
+      "the President, the two Houses and the Council of Ministers",
+      "the Lok Sabha, the Rajya Sabha and the state legislatures"
+    ],
+    "answer": 1,
+    "explanation": "The President is an integral part of Parliament even though he does not sit in either House, because a bill becomes law only after receiving his assent.",
+    "difficulty": 1,
+    "tags": [
+      "parliament",
+      "article-79"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "What is the maximum strength of the Lok Sabha as laid down in the Constitution?",
+    "options": [
+      "500",
+      "525",
+      "545",
+      "550"
+    ],
+    "answer": 3,
+    "explanation": "Article 81 permits up to 550 members, 530 from the states and 20 from the Union Territories; the provision for nominating two Anglo-Indian members lapsed after the 104th Amendment.",
+    "difficulty": 2,
+    "tags": [
+      "lok-sabha",
+      "strength"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Of the maximum strength of 250 in the Rajya Sabha, how many members are nominated by the President?",
+    "options": [
+      "Two",
+      "Ten",
+      "Fifteen",
+      "Twelve"
+    ],
+    "answer": 3,
+    "explanation": "Twelve members are nominated for their special knowledge or practical experience in literature, science, art and social service; the remaining 238 represent the states and Union Territories.",
+    "difficulty": 1,
+    "tags": [
+      "rajya-sabha",
+      "strength"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which statement about the Rajya Sabha is correct?",
+    "options": [
+      "It can be dissolved by the President at any time",
+      "It is a permanent body and one-third of its members retire every two years",
+      "All its members retire together at the end of six years",
+      "It stands dissolved whenever the Lok Sabha is dissolved"
+    ],
+    "answer": 1,
+    "explanation": "Article 83 makes the Rajya Sabha a continuing chamber that is never dissolved; each member serves six years and one-third of the House is renewed biennially.",
+    "difficulty": 1,
+    "tags": [
+      "rajya-sabha",
+      "parliament"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Who certifies whether a bill is a Money Bill?",
+    "options": [
+      "The President",
+      "The Chairman of the Rajya Sabha",
+      "The Speaker of the Lok Sabha",
+      "The Comptroller and Auditor General"
+    ],
+    "answer": 2,
+    "explanation": "Under Article 110 the Speaker's certificate that a bill is a Money Bill is final; such a bill can be introduced only in the Lok Sabha and only on the recommendation of the President.",
+    "difficulty": 2,
+    "tags": [
+      "money-bill",
+      "article-110",
+      "speaker"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Within how many days must the Rajya Sabha return a Money Bill to the Lok Sabha?",
+    "options": [
+      "14 days",
+      "7 days",
+      "21 days",
+      "30 days"
+    ],
+    "answer": 0,
+    "explanation": "The Rajya Sabha may only make recommendations, which the Lok Sabha may accept or reject; if the bill is not returned within 14 days it is deemed passed by both Houses.",
+    "difficulty": 2,
+    "tags": [
+      "money-bill",
+      "rajya-sabha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "A joint sitting of the two Houses of Parliament is presided over by",
+    "options": [
+      "the President",
+      "the Speaker of the Lok Sabha",
+      "the Chairman of the Rajya Sabha",
+      "the Deputy Chairman of the Rajya Sabha"
+    ],
+    "answer": 1,
+    "explanation": "Article 108 provides for a joint sitting to resolve a deadlock over an ordinary bill, and it is presided over by the Speaker of the Lok Sabha; only three joint sittings have been held so far.",
+    "difficulty": 1,
+    "tags": [
+      "parliament",
+      "joint-sitting",
+      "article-108"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "For which type of bill can a joint sitting of the two Houses NOT be summoned?",
+    "options": [
+      "An ordinary bill",
+      "A financial bill other than a money bill",
+      "A Constitution Amendment Bill",
+      "A bill first introduced in the Rajya Sabha"
+    ],
+    "answer": 2,
+    "explanation": "Money Bills and Constitution Amendment Bills are outside the scope of Article 108, since a Money Bill needs no Rajya Sabha consent and an amendment bill must be passed separately by each House.",
+    "difficulty": 3,
+    "tags": [
+      "parliament",
+      "joint-sitting"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "A motion of no-confidence against the Council of Ministers",
+    "options": [
+      "can be moved in either House of Parliament",
+      "can be moved only in the Lok Sabha",
+      "can be moved only in the Rajya Sabha",
+      "requires the prior recommendation of the President"
+    ],
+    "answer": 1,
+    "explanation": "Because the ministry is collectively responsible to the Lok Sabha, only that House can move a no-confidence motion; it needs the support of at least 50 members to be admitted.",
+    "difficulty": 1,
+    "tags": [
+      "parliament",
+      "no-confidence-motion"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which statement about the Public Accounts Committee of Parliament is correct?",
+    "options": [
+      "It has 30 members, all drawn from the Lok Sabha",
+      "It is chaired by the Union Finance Minister",
+      "All its members are nominated by the President",
+      "It has 22 members and since 1967 its chairman has been appointed from the opposition"
+    ],
+    "answer": 3,
+    "explanation": "The Public Accounts Committee has 15 members from the Lok Sabha and 7 from the Rajya Sabha, and examines the audit reports of the Comptroller and Auditor General.",
+    "difficulty": 3,
+    "tags": [
+      "parliamentary-committees",
+      "public-accounts-committee"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which statement about the Estimates Committee of Parliament is correct?",
+    "options": [
+      "It has 30 members, all drawn from the Lok Sabha",
+      "It has 22 members drawn from both Houses",
+      "It has 15 members nominated by the President",
+      "It is chaired by the Speaker of the Lok Sabha"
+    ],
+    "answer": 0,
+    "explanation": "The Estimates Committee is the largest parliamentary committee and has no Rajya Sabha representation; it suggests economies in public expenditure and is often called the continuous economy committee.",
+    "difficulty": 3,
+    "tags": [
+      "parliamentary-committees",
+      "estimates-committee"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Union Budget is described in the Constitution as the Annual Financial Statement under",
+    "options": [
+      "Article 112",
+      "Article 110",
+      "Article 114",
+      "Article 117"
+    ],
+    "answer": 0,
+    "explanation": "Article 112 requires the President to cause a statement of estimated receipts and expenditure for each financial year to be laid before both Houses of Parliament.",
+    "difficulty": 2,
+    "tags": [
+      "budget",
+      "article-112"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "What is the quorum required to constitute a sitting of either House of Parliament?",
+    "options": [
+      "One-tenth of the total number of members of the House",
+      "One-fourth of the total membership",
+      "Fifty members",
+      "One-third of the total membership"
+    ],
+    "answer": 0,
+    "explanation": "Article 100 fixes the quorum at one-tenth of the total membership, including the presiding officer; if there is no quorum the presiding officer must adjourn the House.",
+    "difficulty": 2,
+    "tags": [
+      "parliament",
+      "quorum",
+      "article-100"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "What is the sanctioned strength of judges of the Supreme Court of India, including the Chief Justice?",
+    "options": [
+      "26",
+      "30",
+      "31",
+      "34"
+    ],
+    "answer": 3,
+    "explanation": "The Constitution originally fixed the strength at eight including the Chief Justice, and Parliament has raised it by law from time to time, most recently to 34 in 2019.",
+    "difficulty": 2,
+    "tags": [
+      "supreme-court",
+      "judiciary"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "A judge of the Supreme Court of India holds office until attaining the age of",
+    "options": [
+      "60 years",
+      "62 years",
+      "65 years",
+      "70 years"
+    ],
+    "answer": 2,
+    "explanation": "Supreme Court judges retire at 65 while High Court judges retire at 62, the High Court age having been raised from 60 by the 15th Amendment Act, 1963.",
+    "difficulty": 1,
+    "tags": [
+      "supreme-court",
+      "judiciary"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "On what ground can a judge of the Supreme Court be removed from office?",
+    "options": [
+      "Violation of the Constitution",
+      "Proved misbehaviour or incapacity",
+      "Loss of the confidence of the Bar",
+      "Attaining the age of sixty"
+    ],
+    "answer": 1,
+    "explanation": "Article 124(4) requires an address by each House supported by a majority of its total membership and by two-thirds of members present and voting, following an inquiry under the Judges (Inquiry) Act, 1968.",
+    "difficulty": 2,
+    "tags": [
+      "supreme-court",
+      "removal-of-judges"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Under which Article may the President seek the advisory opinion of the Supreme Court on a question of law or fact of public importance?",
+    "options": [
+      "Article 32",
+      "Article 131",
+      "Article 136",
+      "Article 143"
+    ],
+    "answer": 3,
+    "explanation": "The advisory jurisdiction under Article 143 was borrowed from Canada; the Supreme Court is not bound to give its opinion and the opinion given is not binding on the President.",
+    "difficulty": 3,
+    "tags": [
+      "supreme-court",
+      "advisory-jurisdiction",
+      "article-143"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Special Leave to Appeal to the Supreme Court against the order of any court or tribunal is granted under",
+    "options": [
+      "Article 132",
+      "Article 137",
+      "Article 139",
+      "Article 136"
+    ],
+    "answer": 3,
+    "explanation": "Article 136 gives the Supreme Court a wide discretionary power to grant special leave against any judgment of any court or tribunal in India, except those of a court martial.",
+    "difficulty": 3,
+    "tags": [
+      "supreme-court",
+      "article-136"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "In which case did the Supreme Court propound the doctrine of the 'basic structure' of the Constitution?",
+    "options": [
+      "Golaknath case (1967)",
+      "Minerva Mills case (1980)",
+      "Kesavananda Bharati case (1973)",
+      "Maneka Gandhi case (1978)"
+    ],
+    "answer": 2,
+    "explanation": "In Kesavananda Bharati the Court held that Parliament may amend any part of the Constitution under Article 368 but cannot destroy its basic structure; Minerva Mills later reaffirmed and extended the doctrine.",
+    "difficulty": 2,
+    "tags": [
+      "basic-structure",
+      "landmark-cases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which judge is regarded as the pioneer of Public Interest Litigation in India?",
+    "options": [
+      "Justice P.N. Bhagwati",
+      "Justice H.R. Khanna",
+      "Justice M. Hidayatullah",
+      "Justice A.N. Ray"
+    ],
+    "answer": 0,
+    "explanation": "Justice P.N. Bhagwati, along with Justice V.R. Krishna Iyer, relaxed the rule of locus standi in the late 1970s so that any public-spirited person could move the court on behalf of the disadvantaged.",
+    "difficulty": 3,
+    "tags": [
+      "pil",
+      "judiciary"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Governor of a state is appointed by",
+    "options": [
+      "the Prime Minister",
+      "the President",
+      "the Chief Minister of the state",
+      "the state legislative assembly"
+    ],
+    "answer": 1,
+    "explanation": "Article 155 provides that the Governor is appointed by the President by warrant under his hand and seal, making the office an instrument of the Centre rather than an elected post.",
+    "difficulty": 1,
+    "tags": [
+      "governor",
+      "state-government"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Governor of a state holds office",
+    "options": [
+      "during the pleasure of the Chief Minister",
+      "for a fixed term of five years and cannot be removed earlier",
+      "during the pleasure of the President",
+      "until removed by a resolution of the state legislature"
+    ],
+    "answer": 2,
+    "explanation": "Article 156 states that the Governor holds office during the pleasure of the President, with a normal term of five years; there is no procedure for impeaching a Governor.",
+    "difficulty": 2,
+    "tags": [
+      "governor",
+      "state-government"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "President's rule in a state on the failure of constitutional machinery is imposed under",
+    "options": [
+      "Article 352",
+      "Article 356",
+      "Article 360",
+      "Article 365"
+    ],
+    "answer": 1,
+    "explanation": "A proclamation under Article 356 must be approved by both Houses within two months and can normally continue for a maximum of three years; in S.R. Bommai (1994) the Supreme Court held it to be subject to judicial review.",
+    "difficulty": 1,
+    "tags": [
+      "presidents-rule",
+      "article-356",
+      "emergency"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Advocate General of a state is appointed under which Article?",
+    "options": [
+      "Article 76",
+      "Article 148",
+      "Article 165",
+      "Article 315"
+    ],
+    "answer": 2,
+    "explanation": "Article 165 provides for an Advocate General appointed by the Governor as the highest law officer of the state, corresponding to the Attorney General of India under Article 76.",
+    "difficulty": 2,
+    "tags": [
+      "advocate-general",
+      "state-government"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The total strength of a state Legislative Council must not exceed",
+    "options": [
+      "one-half of the strength of the legislative assembly",
+      "two-thirds of the strength of the legislative assembly",
+      "one-fourth of the strength of the legislative assembly",
+      "one-third of the strength of the legislative assembly"
+    ],
+    "answer": 3,
+    "explanation": "Article 171 caps the Council at one-third of the assembly's strength subject to a minimum of 40 members; a Council may be created or abolished by Parliament on a resolution of the state assembly under Article 169.",
+    "difficulty": 3,
+    "tags": [
+      "legislative-council",
+      "state-legislature"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Panchayati raj institutions were given constitutional status by which Amendment Act?",
+    "options": [
+      "73rd Amendment",
+      "71st Amendment",
+      "72nd Amendment",
+      "74th Amendment"
+    ],
+    "answer": 0,
+    "explanation": "The 73rd Amendment Act, 1992 added Part IX and the Eleventh Schedule and came into force on 24 April 1993, now observed as National Panchayati Raj Day.",
+    "difficulty": 1,
+    "tags": [
+      "panchayati-raj",
+      "73rd-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Urban local bodies (municipalities) are dealt with in which Part and Schedule of the Constitution?",
+    "options": [
+      "Part IX and the Eleventh Schedule",
+      "Part IXA and the Twelfth Schedule",
+      "Part IXB and the Twelfth Schedule",
+      "Part X and the Fifth Schedule"
+    ],
+    "answer": 1,
+    "explanation": "The 74th Amendment Act, 1992 inserted Part IXA (Articles 243P to 243ZG) and the Twelfth Schedule listing 18 functions of municipalities.",
+    "difficulty": 2,
+    "tags": [
+      "municipalities",
+      "74th-amendment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which committee first recommended a three-tier system of panchayati raj in India?",
+    "options": [
+      "Balwant Rai Mehta Committee",
+      "Ashok Mehta Committee",
+      "G.V.K. Rao Committee",
+      "L.M. Singhvi Committee"
+    ],
+    "answer": 0,
+    "explanation": "The Balwant Rai Mehta Committee (1957) recommended democratic decentralisation through gram panchayat, panchayat samiti and zila parishad; the Ashok Mehta Committee (1977) later suggested a two-tier structure.",
+    "difficulty": 2,
+    "tags": [
+      "panchayati-raj",
+      "committees"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "In which state was the panchayati raj system first inaugurated, on 2 October 1959?",
+    "options": [
+      "Andhra Pradesh",
+      "Gujarat",
+      "Rajasthan",
+      "Maharashtra"
+    ],
+    "answer": 2,
+    "explanation": "Jawaharlal Nehru inaugurated panchayati raj at Nagaur in Rajasthan on 2 October 1959; Andhra Pradesh adopted the system soon afterwards in the same year.",
+    "difficulty": 3,
+    "tags": [
+      "panchayati-raj",
+      "history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "What proportion of seats in panchayats is reserved for women under the Constitution?",
+    "options": [
+      "Not less than one-fourth",
+      "Not less than one-half",
+      "Not less than 40 per cent",
+      "Not less than one-third"
+    ],
+    "answer": 3,
+    "explanation": "Article 243D requires at least one-third of all seats and of the offices of chairperson to be reserved for women, including within the seats reserved for Scheduled Castes and Scheduled Tribes.",
+    "difficulty": 1,
+    "tags": [
+      "panchayati-raj",
+      "reservation"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Elections to panchayats and municipalities in a state are conducted by",
+    "options": [
+      "the Election Commission of India",
+      "the State Election Commission appointed by the Governor",
+      "the district collector on behalf of the state government",
+      "the Union Ministry of Panchayati Raj"
+    ],
+    "answer": 1,
+    "explanation": "Article 243K provides for a State Election Commission, headed by a State Election Commissioner appointed by the Governor, to superintend elections to local bodies.",
+    "difficulty": 2,
+    "tags": [
+      "panchayati-raj",
+      "state-election-commission"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which Constitutional Amendment is popularly called the 'Mini Constitution' because of the sweeping changes it made?",
+    "options": [
+      "24th Amendment",
+      "44th Amendment",
+      "52nd Amendment",
+      "42nd Amendment"
+    ],
+    "answer": 3,
+    "explanation": "The 42nd Amendment Act, 1976 amended the Preamble, added Fundamental Duties and Part IVA, extended the life of legislatures to six years and curtailed the power of judicial review.",
+    "difficulty": 1,
+    "tags": [
+      "42nd-amendment",
+      "amendments"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The expression 'internal disturbance' in Article 352 was replaced by 'armed rebellion' by which Amendment?",
+    "options": [
+      "The 42nd Amendment",
+      "The 44th Amendment",
+      "The 38th Amendment",
+      "The 59th Amendment"
+    ],
+    "answer": 1,
+    "explanation": "The 44th Amendment Act, 1978 was enacted after the 1975 Emergency to make a national emergency harder to declare, also requiring the Cabinet's written advice and approval by a special majority within one month.",
+    "difficulty": 2,
+    "tags": [
+      "44th-amendment",
+      "emergency"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The voting age in India was lowered from 21 years to 18 years by",
+    "options": [
+      "the 61st Amendment, 1988",
+      "the 42nd Amendment, 1976",
+      "the 52nd Amendment, 1985",
+      "the 44th Amendment, 1978"
+    ],
+    "answer": 0,
+    "explanation": "The 61st Amendment amended Article 326 to lower the voting age; it took effect from the 1989 general election and enfranchised millions of young voters.",
+    "difficulty": 1,
+    "tags": [
+      "61st-amendment",
+      "elections"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Goods and Services Tax was introduced in India by which Constitutional Amendment?",
+    "options": [
+      "The 99th Amendment",
+      "The 100th Amendment",
+      "The 101st Amendment",
+      "The 103rd Amendment"
+    ],
+    "answer": 2,
+    "explanation": "The 101st Amendment Act, 2016 inserted Article 246A and Article 279A creating the GST Council, and GST came into force on 1 July 2017.",
+    "difficulty": 1,
+    "tags": [
+      "101st-amendment",
+      "gst"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which Article lays down the procedure for amendment of the Constitution?",
+    "options": [
+      "Article 368",
+      "Article 360",
+      "Article 356",
+      "Article 370"
+    ],
+    "answer": 0,
+    "explanation": "Article 368, in Part XX, provides for amendment by a special majority of Parliament, with certain federal provisions additionally requiring ratification by the legislatures of half the states.",
+    "difficulty": 1,
+    "tags": [
+      "amendment",
+      "article-368"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Election Commission of India is established under which Article of the Constitution?",
+    "options": [
+      "Article 315",
+      "Article 324",
+      "Article 280",
+      "Article 148"
+    ],
+    "answer": 1,
+    "explanation": "Article 324 vests the superintendence, direction and control of elections to Parliament, state legislatures and the offices of President and Vice-President in the Election Commission; it became a multi-member body in 1993.",
+    "difficulty": 1,
+    "tags": [
+      "election-commission",
+      "article-324"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Comptroller and Auditor General of India is appointed under which Article?",
+    "options": [
+      "Article 148",
+      "Article 149",
+      "Article 150",
+      "Article 151"
+    ],
+    "answer": 0,
+    "explanation": "Article 148 provides for the CAG, who holds office for six years or until the age of 65 and can be removed only in the manner prescribed for a Supreme Court judge; Ambedkar called the office the most important under the Constitution.",
+    "difficulty": 1,
+    "tags": [
+      "cag",
+      "article-148"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Finance Commission of India is constituted under which Article?",
+    "options": [
+      "Article 263",
+      "Article 275",
+      "Article 315",
+      "Article 280"
+    ],
+    "answer": 3,
+    "explanation": "Article 280 requires the President to constitute a Finance Commission every fifth year to recommend the distribution of tax proceeds between the Union and the states and the grants-in-aid to states.",
+    "difficulty": 2,
+    "tags": [
+      "finance-commission",
+      "article-280"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which of the following is NOT a constitutional body?",
+    "options": [
+      "Election Commission of India",
+      "Union Public Service Commission",
+      "NITI Aayog",
+      "Finance Commission"
+    ],
+    "answer": 2,
+    "explanation": "NITI Aayog was created by an executive resolution of the Union Cabinet on 1 January 2015 to replace the Planning Commission, so it is neither a constitutional nor a statutory body.",
+    "difficulty": 1,
+    "tags": [
+      "niti-aayog",
+      "constitutional-bodies"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "The Union Public Service Commission is provided for under which Article of the Constitution?",
+    "options": [
+      "Article 315",
+      "Article 320",
+      "Article 324",
+      "Article 280"
+    ],
+    "answer": 0,
+    "explanation": "Article 315 provides for a UPSC for the Union and a Public Service Commission for each state, while Article 320 lists their functions such as conducting examinations and advising on disciplinary matters.",
+    "difficulty": 2,
+    "tags": [
+      "upsc",
+      "article-315"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which kind of emergency has never been proclaimed in India so far?",
+    "options": [
+      "National emergency under Article 352",
+      "President's rule under Article 356",
+      "Financial emergency under Article 360",
+      "National emergency on the ground of external aggression"
+    ],
+    "answer": 2,
+    "explanation": "A financial emergency under Article 360 has never been declared; a national emergency has been proclaimed three times, in 1962, 1971 and 1975.",
+    "difficulty": 2,
+    "tags": [
+      "emergency",
+      "article-360"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-polity",
+    "question": "Which Fundamental Rights cannot be suspended even during a National Emergency?",
+    "options": [
+      "Articles 20 and 21",
+      "Articles 14 and 19",
+      "Articles 19 and 21",
+      "Articles 21 and 22"
+    ],
+    "answer": 0,
+    "explanation": "The 44th Amendment Act, 1978 provided that the rights under Article 20 (protection in respect of conviction) and Article 21 (life and personal liberty) can never be suspended, reversing the position taken in the ADM Jabalpur case.",
+    "difficulty": 3,
+    "tags": [
+      "emergency",
+      "fundamental-rights",
+      "44th-amendment"
+    ],
+    "source": "seed"
+  }
+]

@@ -1,0 +1,2342 @@
+[
+  {
+    "topic": "general-science",
+    "question": "What is the SI unit of force?",
+    "options": [
+      "Watt",
+      "Joule",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": 2,
+    "explanation": "Force is measured in newton (N); one newton is the force that gives a mass of 1 kg an acceleration of 1 m/s squared.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "units"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The SI unit of electric current is the",
+    "options": [
+      "Ampere",
+      "Volt",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": 0,
+    "explanation": "Current is measured in ampere (A), named after Andre-Marie Ampere. Volt measures potential difference and ohm measures resistance.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which of the following is a scalar quantity?",
+    "options": [
+      "Velocity",
+      "Force",
+      "Displacement",
+      "Speed"
+    ],
+    "answer": 3,
+    "explanation": "Speed has only magnitude, so it is a scalar. Velocity, force and displacement have both magnitude and direction, making them vectors.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "motion"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The SI unit of pressure is the",
+    "options": [
+      "Newton",
+      "Pascal",
+      "Joule",
+      "Hertz"
+    ],
+    "answer": 1,
+    "explanation": "Pressure is force per unit area, measured in pascal (Pa); one pascal equals one newton per square metre.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "units"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which instrument is used to measure atmospheric pressure?",
+    "options": [
+      "Hygrometer",
+      "Barometer",
+      "Altimeter",
+      "Anemometer"
+    ],
+    "answer": 1,
+    "explanation": "A barometer measures atmospheric pressure; a sudden fall in the reading indicates an approaching storm. An anemometer measures wind speed.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "instruments"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Radioactivity was discovered by",
+    "options": [
+      "Marie Curie",
+      "Ernest Rutherford",
+      "Albert Einstein",
+      "Henri Becquerel"
+    ],
+    "answer": 3,
+    "explanation": "Henri Becquerel discovered radioactivity in 1896 while studying uranium salts. Marie and Pierre Curie later extended the work and shared the 1903 Nobel Prize with him.",
+    "difficulty": 3,
+    "tags": [
+      "physics",
+      "scientists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The heat required to convert 1 kg of ice at 0 degree Celsius into water at the same temperature is called its",
+    "options": [
+      "Latent heat of fusion",
+      "Latent heat of vaporisation",
+      "Specific heat capacity",
+      "Thermal conductivity"
+    ],
+    "answer": 0,
+    "explanation": "Latent heat of fusion is the heat absorbed during melting without any rise in temperature; for ice it is about 336 kilojoule per kilogram.",
+    "difficulty": 3,
+    "tags": [
+      "physics",
+      "heat"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The speed of light in vacuum is approximately",
+    "options": [
+      "3 x 10^5 m/s",
+      "3 x 10^6 m/s",
+      "3 x 10^8 m/s",
+      "3 x 10^10 m/s"
+    ],
+    "answer": 2,
+    "explanation": "Light travels at about 3 x 10^8 metres per second (about 3 lakh km per second) in vacuum, the maximum speed possible in nature.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The speed of sound in air at 0 degree Celsius is nearest to",
+    "options": [
+      "332 m/s",
+      "1,500 m/s",
+      "5,000 m/s",
+      "3 x 10^8 m/s"
+    ],
+    "answer": 0,
+    "explanation": "Sound travels at about 332 m/s in air at 0 degree Celsius, and faster as the temperature rises. It travels much faster in water (about 1,500 m/s) and in steel.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "sound"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Sound cannot travel through",
+    "options": [
+      "Solids",
+      "Liquids",
+      "Vacuum",
+      "Gases"
+    ],
+    "answer": 2,
+    "explanation": "Sound is a mechanical wave and needs a material medium to propagate, so it cannot travel through vacuum. Light, being an electromagnetic wave, can.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "sound"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The minimum distance from a reflecting surface required to hear a distinct echo in air is about",
+    "options": [
+      "10 metres",
+      "17 metres",
+      "34 metres",
+      "50 metres"
+    ],
+    "answer": 1,
+    "explanation": "The sensation of sound persists in the ear for about 0.1 second, so the sound must travel at least 34 m to and fro, placing the obstacle about 17 metres away.",
+    "difficulty": 3,
+    "tags": [
+      "physics",
+      "sound"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Sound waves of frequency above which value are called ultrasonic?",
+    "options": [
+      "2,000 Hz",
+      "5,000 Hz",
+      "10,000 Hz",
+      "20,000 Hz"
+    ],
+    "answer": 3,
+    "explanation": "Frequencies above 20,000 Hz are ultrasonic and inaudible to humans; bats and dolphins use them, and they are applied in sonography and echo-sounding.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "sound"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Relative humidity of air is measured using a",
+    "options": [
+      "Barometer",
+      "Manometer",
+      "Lactometer",
+      "Hygrometer"
+    ],
+    "answer": 3,
+    "explanation": "A hygrometer measures the relative humidity of the atmosphere. A lactometer checks the purity of milk and a manometer measures gas pressure.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "instruments"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The loudness or intensity level of sound is measured in",
+    "options": [
+      "Hertz",
+      "Decibel",
+      "Watt",
+      "Candela"
+    ],
+    "answer": 1,
+    "explanation": "Loudness is expressed in decibel (dB). Hertz is the unit of frequency and candela is the unit of luminous intensity.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "sound"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The rear-view mirror used in vehicles is a",
+    "options": [
+      "Concave mirror",
+      "Plane mirror",
+      "Convex mirror",
+      "Cylindrical mirror"
+    ],
+    "answer": 2,
+    "explanation": "A convex mirror always forms a small, erect virtual image and gives a wider field of view, which is why it is used as a rear-view mirror.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Dentists use which type of mirror to examine teeth?",
+    "options": [
+      "Concave mirror",
+      "Convex mirror",
+      "Plane mirror",
+      "Bi-convex lens"
+    ],
+    "answer": 0,
+    "explanation": "A concave mirror forms an enlarged erect image when the object is placed within its focus, so it magnifies the tooth being examined.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Long-sightedness (hypermetropia) is corrected by using a",
+    "options": [
+      "Concave lens",
+      "Cylindrical lens",
+      "Convex lens",
+      "Prism"
+    ],
+    "answer": 2,
+    "explanation": "In hypermetropia the image forms behind the retina, so a converging (convex) lens is used to bring it onto the retina.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Short-sightedness (myopia) is corrected by using a",
+    "options": [
+      "Convex lens",
+      "Cylindrical lens",
+      "Bifocal lens",
+      "Concave lens"
+    ],
+    "answer": 3,
+    "explanation": "In myopia the image is formed in front of the retina, so a diverging (concave) lens of suitable power is used to push the image back onto the retina.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The splitting of white light into its seven constituent colours is called",
+    "options": [
+      "Reflection",
+      "Dispersion",
+      "Refraction",
+      "Diffraction"
+    ],
+    "answer": 1,
+    "explanation": "Dispersion occurs because different colours travel at different speeds in glass and hence bend by different amounts; violet bends the most and red the least.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The blue colour of the clear sky is due to",
+    "options": [
+      "Scattering of light",
+      "Dispersion of light",
+      "Total internal reflection",
+      "Interference of light"
+    ],
+    "answer": 0,
+    "explanation": "Air molecules scatter shorter blue wavelengths much more than red (Rayleigh scattering), so the sky looks blue and the setting Sun looks reddish.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "X-rays were discovered by",
+    "options": [
+      "Marie Curie",
+      "W. C. Roentgen",
+      "J. J. Thomson",
+      "Michael Faraday"
+    ],
+    "answer": 1,
+    "explanation": "Wilhelm Conrad Roentgen discovered X-rays in 1895 and received the first Nobel Prize in Physics in 1901 for the work.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "scientists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The formation of a mirage in a desert is due to",
+    "options": [
+      "Total internal reflection",
+      "Dispersion",
+      "Interference",
+      "Polarisation"
+    ],
+    "answer": 0,
+    "explanation": "Hot air near the ground is less dense, so light from the sky bends gradually and undergoes total internal reflection, giving the illusion of water.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The power of a lens is measured in",
+    "options": [
+      "Watt",
+      "Lux",
+      "Candela",
+      "Dioptre"
+    ],
+    "answer": 3,
+    "explanation": "Power of a lens is the reciprocal of its focal length in metres and is expressed in dioptre (D); convex lenses have positive power and concave lenses negative.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "light"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which mode of heat transfer does not require a material medium?",
+    "options": [
+      "Conduction",
+      "Convection",
+      "Radiation",
+      "Diffusion"
+    ],
+    "answer": 2,
+    "explanation": "Radiation transfers heat as electromagnetic waves and can travel through vacuum, which is how heat from the Sun reaches the Earth.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "heat"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Newton's first law of motion is also known as the",
+    "options": [
+      "Law of inertia",
+      "Law of momentum",
+      "Law of gravitation",
+      "Law of action and reaction"
+    ],
+    "answer": 0,
+    "explanation": "A body continues in its state of rest or uniform motion unless an external force acts on it; this property of resisting change is called inertia.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "motion"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Newton's second law of motion gives a measure of",
+    "options": [
+      "Inertia",
+      "Force",
+      "Conservation of momentum",
+      "Action and reaction"
+    ],
+    "answer": 1,
+    "explanation": "The second law states that the rate of change of momentum equals the applied force, giving the familiar relation F = ma.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "motion"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The working of a rocket is based on the principle of",
+    "options": [
+      "Conservation of energy",
+      "Bernoulli's principle",
+      "Conservation of linear momentum",
+      "Archimedes' principle"
+    ],
+    "answer": 2,
+    "explanation": "Hot gases ejected backwards carry momentum, and an equal and opposite momentum pushes the rocket forward, conserving total momentum.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "motion"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The recoil of a gun when a bullet is fired is explained by",
+    "options": [
+      "Newton's first law",
+      "Hooke's law",
+      "Boyle's law",
+      "Newton's third law"
+    ],
+    "answer": 3,
+    "explanation": "To every action there is an equal and opposite reaction; the forward force on the bullet produces an equal backward force on the gun.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "motion"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Archimedes' principle is related to",
+    "options": [
+      "Planetary motion",
+      "Electric current",
+      "Expansion of gases",
+      "Buoyancy"
+    ],
+    "answer": 3,
+    "explanation": "Archimedes' principle explains the upward buoyant force on a body immersed in a fluid, and is the basis of floating bodies and the hydrometer.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "mechanics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The upthrust acting on a body immersed in a liquid is equal to the weight of",
+    "options": [
+      "The body",
+      "The liquid remaining in the vessel",
+      "The liquid displaced by the body",
+      "The vessel and liquid together"
+    ],
+    "answer": 2,
+    "explanation": "By Archimedes' principle the buoyant force equals the weight of the fluid displaced, so a body floats when it displaces fluid equal to its own weight.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "mechanics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Hydraulic brakes and hydraulic lifts work on",
+    "options": [
+      "Pascal's law",
+      "Boyle's law",
+      "Newton's third law",
+      "Ohm's law"
+    ],
+    "answer": 0,
+    "explanation": "Pascal's law states that pressure applied to an enclosed liquid is transmitted equally in all directions, allowing a small force to lift a large load.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "mechanics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The lift of an aeroplane wing and the working of an atomiser are explained by",
+    "options": [
+      "Pascal's law",
+      "Bernoulli's principle",
+      "Archimedes' principle",
+      "Hooke's law"
+    ],
+    "answer": 1,
+    "explanation": "Bernoulli's principle states that pressure in a fluid falls where its speed increases; faster air over the curved upper surface of a wing creates lift.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "mechanics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "According to Ohm's law, the ratio of potential difference to current at constant temperature gives the",
+    "options": [
+      "Power",
+      "Resistance",
+      "Capacitance",
+      "Charge"
+    ],
+    "answer": 1,
+    "explanation": "Ohm's law states V = IR, so V divided by I is the resistance of the conductor, which stays constant if temperature does not change.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The unit of electrical resistance is the",
+    "options": [
+      "Ampere",
+      "Volt",
+      "Ohm",
+      "Farad"
+    ],
+    "answer": 2,
+    "explanation": "Resistance is measured in ohm, named after Georg Simon Ohm; one ohm equals one volt per ampere.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The wire used in an electric fuse should have",
+    "options": [
+      "High melting point and low resistance",
+      "Low melting point and low resistance",
+      "High melting point and high resistance",
+      "Low melting point and high resistance"
+    ],
+    "answer": 3,
+    "explanation": "A fuse wire is made of an alloy such as tin-lead with a low melting point and high resistance, so it melts and breaks the circuit when the current exceeds a safe value.",
+    "difficulty": 3,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Mercury is preferred in thermometers mainly because it",
+    "options": [
+      "Expands uniformly and does not stick to glass",
+      "Has a very low boiling point",
+      "Is a poor conductor of heat",
+      "Is lighter than water"
+    ],
+    "answer": 0,
+    "explanation": "Mercury expands uniformly over a wide range, is opaque and shiny, conducts heat well and does not wet glass, giving quick and accurate readings.",
+    "difficulty": 3,
+    "tags": [
+      "physics",
+      "heat"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Domestic electrical energy consumption is billed in units of",
+    "options": [
+      "Kilowatt-hour",
+      "Watt",
+      "Volt-ampere",
+      "Joule per second"
+    ],
+    "answer": 0,
+    "explanation": "One commercial unit of electricity is one kilowatt-hour, the energy used by a 1,000 watt appliance in one hour, equal to 3.6 million joules.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which metal is the best conductor of electricity?",
+    "options": [
+      "Gold",
+      "Aluminium",
+      "Copper",
+      "Silver"
+    ],
+    "answer": 3,
+    "explanation": "Silver has the highest electrical conductivity of all metals, but copper is used for wiring because it is far cheaper and nearly as good.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The theory of relativity was propounded by",
+    "options": [
+      "Isaac Newton",
+      "Max Planck",
+      "Albert Einstein",
+      "Niels Bohr"
+    ],
+    "answer": 2,
+    "explanation": "Albert Einstein put forward the special theory of relativity in 1905 and the general theory in 1915; his mass-energy relation is E = mc squared.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "scientists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The direction of current induced in a conductor moving in a magnetic field is given by",
+    "options": [
+      "Fleming's left hand rule",
+      "Fleming's right hand rule",
+      "Ampere's swimming rule",
+      "Right hand thumb rule"
+    ],
+    "answer": 1,
+    "explanation": "Fleming's right hand rule applies to generators and gives the direction of induced current; the left hand rule is used for motors.",
+    "difficulty": 3,
+    "tags": [
+      "physics",
+      "magnetism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "An electric motor converts",
+    "options": [
+      "Electrical energy into sound energy",
+      "Mechanical energy into electrical energy",
+      "Electrical energy into mechanical energy",
+      "Chemical energy into electrical energy"
+    ],
+    "answer": 2,
+    "explanation": "A motor uses the force on a current-carrying coil in a magnetic field to produce rotation, converting electrical energy into mechanical energy.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "An electric generator or dynamo works on the principle of",
+    "options": [
+      "Joule's heating effect",
+      "Electromagnetic induction",
+      "Ohm's law",
+      "Pascal's law"
+    ],
+    "answer": 1,
+    "explanation": "Electromagnetic induction, discovered by Michael Faraday, produces an emf in a coil when the magnetic flux through it changes.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "magnetism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "A freely suspended bar magnet always comes to rest pointing",
+    "options": [
+      "North-south",
+      "East-west",
+      "North-east",
+      "Vertically downwards"
+    ],
+    "answer": 0,
+    "explanation": "The Earth behaves like a huge magnet, so a freely suspended magnet aligns along the geographic north-south direction; this is the basis of the compass.",
+    "difficulty": 2,
+    "tags": [
+      "physics",
+      "magnetism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "A transformer works on the principle of",
+    "options": [
+      "Electrolysis",
+      "Joule heating",
+      "Self conduction",
+      "Mutual induction"
+    ],
+    "answer": 3,
+    "explanation": "Alternating current in the primary coil creates a changing flux that induces a voltage in the secondary coil; hence transformers work only with AC, not DC.",
+    "difficulty": 3,
+    "tags": [
+      "physics",
+      "electricity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The normal temperature of the human body is",
+    "options": [
+      "35 degree Celsius",
+      "36 degree Celsius",
+      "36.5 degree Celsius",
+      "37 degree Celsius"
+    ],
+    "answer": 3,
+    "explanation": "Normal body temperature is about 37 degree Celsius, which equals 98.6 degree Fahrenheit on the Fahrenheit scale.",
+    "difficulty": 1,
+    "tags": [
+      "physics",
+      "heat"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The chemical symbol of sodium is",
+    "options": [
+      "S",
+      "Na",
+      "So",
+      "Sn"
+    ],
+    "answer": 1,
+    "explanation": "Sodium takes its symbol Na from its Latin name natrium. S stands for sulphur and Sn for tin (stannum).",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The element represented by the symbol Ag is",
+    "options": [
+      "Gold",
+      "Argon",
+      "Aluminium",
+      "Silver"
+    ],
+    "answer": 3,
+    "explanation": "Ag comes from argentum, the Latin name for silver. Gold is Au (aurum), argon is Ar and aluminium is Al.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The lightest element in the periodic table is",
+    "options": [
+      "Helium",
+      "Lithium",
+      "Hydrogen",
+      "Nitrogen"
+    ],
+    "answer": 2,
+    "explanation": "Hydrogen, with atomic number 1, is the lightest and also the most abundant element in the universe.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The most abundant gas in the Earth's atmosphere is",
+    "options": [
+      "Nitrogen",
+      "Oxygen",
+      "Carbon dioxide",
+      "Argon"
+    ],
+    "answer": 0,
+    "explanation": "Nitrogen makes up about 78 per cent of air by volume, oxygen about 21 per cent and argon nearly 1 per cent.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The most abundant element in the Earth's crust is",
+    "options": [
+      "Oxygen",
+      "Silicon",
+      "Aluminium",
+      "Iron"
+    ],
+    "answer": 0,
+    "explanation": "Oxygen accounts for nearly half the mass of the Earth's crust, followed by silicon; aluminium is the most abundant metal.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The hardest naturally occurring substance is",
+    "options": [
+      "Quartz",
+      "Graphite",
+      "Diamond",
+      "Corundum"
+    ],
+    "answer": 2,
+    "explanation": "Diamond is the hardest natural substance, rated 10 on the Mohs scale, because each carbon atom is bonded to four others in a rigid three-dimensional network.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Diamond and graphite are",
+    "options": [
+      "Isotopes",
+      "Isobars",
+      "Isomers",
+      "Allotropes"
+    ],
+    "answer": 3,
+    "explanation": "Both are different physical forms of the same element carbon, so they are allotropes; fullerene is a third allotrope.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The pH value of pure water at 25 degree Celsius is",
+    "options": [
+      "6",
+      "7",
+      "7.4",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "Pure water is neutral with a pH of 7; values below 7 are acidic and above 7 are basic.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "acids-bases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "A solution having a pH value of 4 is",
+    "options": [
+      "Neutral",
+      "Strongly basic",
+      "Weakly basic",
+      "Acidic"
+    ],
+    "answer": 3,
+    "explanation": "The pH scale runs from 0 to 14; a value of 4 is below neutral 7, so the solution is acidic. The lower the pH, the stronger the acid.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "acids-bases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Blue litmus paper turns red when dipped in",
+    "options": [
+      "An acidic solution",
+      "A basic solution",
+      "A neutral solution",
+      "Distilled water"
+    ],
+    "answer": 0,
+    "explanation": "Acids turn blue litmus red, while bases turn red litmus blue. Litmus is a natural dye obtained from lichens.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "acids-bases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The acid present in the human stomach that helps digestion is",
+    "options": [
+      "Sulphuric acid",
+      "Hydrochloric acid",
+      "Nitric acid",
+      "Acetic acid"
+    ],
+    "answer": 1,
+    "explanation": "Gastric glands secrete dilute hydrochloric acid, which kills germs and activates the enzyme pepsin for protein digestion.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "acids-bases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The acid present in lemon and other citrus fruits is",
+    "options": [
+      "Lactic acid",
+      "Acetic acid",
+      "Citric acid",
+      "Oxalic acid"
+    ],
+    "answer": 2,
+    "explanation": "Citrus fruits contain citric acid. Lactic acid is found in curd, acetic acid in vinegar and oxalic acid in tomatoes.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "acids-bases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Vinegar is a dilute aqueous solution of",
+    "options": [
+      "Citric acid",
+      "Formic acid",
+      "Acetic acid",
+      "Tartaric acid"
+    ],
+    "answer": 2,
+    "explanation": "Vinegar contains about 5 to 8 per cent acetic acid; the pure acid is called glacial acetic acid because it freezes in cold weather.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "acids-bases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which acid is popularly called the 'king of chemicals'?",
+    "options": [
+      "Nitric acid",
+      "Sulphuric acid",
+      "Hydrochloric acid",
+      "Phosphoric acid"
+    ],
+    "answer": 1,
+    "explanation": "Sulphuric acid is called the king of chemicals because of its huge industrial use in fertilisers, dyes, detergents and refining.",
+    "difficulty": 3,
+    "tags": [
+      "chemistry",
+      "acids-bases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The chemical name of baking soda is",
+    "options": [
+      "Sodium bicarbonate",
+      "Sodium carbonate",
+      "Sodium chloride",
+      "Calcium carbonate"
+    ],
+    "answer": 0,
+    "explanation": "Baking soda is sodium hydrogen carbonate (NaHCO3); on heating it releases carbon dioxide, which makes cakes rise.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "compounds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Washing soda is chemically known as",
+    "options": [
+      "Sodium bicarbonate",
+      "Sodium chloride",
+      "Calcium hydroxide",
+      "Sodium carbonate"
+    ],
+    "answer": 3,
+    "explanation": "Washing soda is hydrated sodium carbonate (Na2CO3.10H2O) and is used to remove the permanent hardness of water.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "compounds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Quicklime is chemically",
+    "options": [
+      "Calcium hydroxide",
+      "Calcium oxide",
+      "Calcium carbonate",
+      "Calcium sulphate"
+    ],
+    "answer": 1,
+    "explanation": "Quicklime is calcium oxide (CaO), obtained by heating limestone; adding water to it gives slaked lime with a great deal of heat.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "compounds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Plaster of Paris is obtained by heating",
+    "options": [
+      "Gypsum",
+      "Limestone",
+      "Bauxite",
+      "Dolomite"
+    ],
+    "answer": 0,
+    "explanation": "Heating gypsum to about 100 degree Celsius gives calcium sulphate hemihydrate, or plaster of Paris, which sets hard on mixing with water and is used in casts.",
+    "difficulty": 3,
+    "tags": [
+      "chemistry",
+      "compounds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Marble and limestone are chemically",
+    "options": [
+      "Calcium oxide",
+      "Calcium sulphate",
+      "Calcium carbonate",
+      "Calcium phosphate"
+    ],
+    "answer": 2,
+    "explanation": "Both are forms of calcium carbonate (CaCO3); acid rain damages marble monuments because acids react with calcium carbonate.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "compounds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Bleaching powder is manufactured by passing chlorine over",
+    "options": [
+      "Quicklime",
+      "Gypsum",
+      "Sodium hydroxide",
+      "Dry slaked lime"
+    ],
+    "answer": 3,
+    "explanation": "Chlorine passed over dry slaked lime, calcium hydroxide, gives bleaching powder, which is used to disinfect drinking water and to bleach cotton and paper.",
+    "difficulty": 3,
+    "tags": [
+      "chemistry",
+      "compounds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which gas is filled in balloons and airships because it is light and non-inflammable?",
+    "options": [
+      "Hydrogen",
+      "Helium",
+      "Neon",
+      "Argon"
+    ],
+    "answer": 1,
+    "explanation": "Helium is the second lightest gas but, unlike hydrogen, it does not burn, so it is safe for weather balloons and airships.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Laughing gas is the common name of",
+    "options": [
+      "Nitrous oxide",
+      "Nitric oxide",
+      "Nitrogen dioxide",
+      "Ammonia"
+    ],
+    "answer": 0,
+    "explanation": "Nitrous oxide (N2O) causes a feeling of exhilaration and is used as a mild anaesthetic in dentistry and minor surgery.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The element represented by the symbol K is",
+    "options": [
+      "Krypton",
+      "Calcium",
+      "Potassium",
+      "Carbon"
+    ],
+    "answer": 2,
+    "explanation": "Potassium gets the symbol K from its Latin name kalium. Krypton is Kr, calcium is Ca and carbon is C.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Dry ice is the solid form of",
+    "options": [
+      "Water",
+      "Ammonia",
+      "Nitrogen",
+      "Carbon dioxide"
+    ],
+    "answer": 3,
+    "explanation": "Solid carbon dioxide is called dry ice because it sublimes directly into gas without becoming liquid, so it keeps things cold without wetting them.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which noble gas is used in advertisement signboards that glow reddish orange?",
+    "options": [
+      "Helium",
+      "Argon",
+      "Krypton",
+      "Neon"
+    ],
+    "answer": 3,
+    "explanation": "Neon glows a bright reddish orange when an electric discharge is passed through it, which is why such display tubes are called neon signs.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The most abundant metal in the Earth's crust is",
+    "options": [
+      "Iron",
+      "Calcium",
+      "Aluminium",
+      "Sodium"
+    ],
+    "answer": 2,
+    "explanation": "Aluminium is the most abundant metal in the crust and is extracted from its ore bauxite; iron is the second most abundant metal.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "metals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which metal exists in the liquid state at ordinary room temperature?",
+    "options": [
+      "Sodium",
+      "Mercury",
+      "Lead",
+      "Zinc"
+    ],
+    "answer": 1,
+    "explanation": "Mercury is the only metal that is liquid at room temperature, which makes it useful in thermometers and barometers.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "metals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Brass is an alloy of",
+    "options": [
+      "Copper and zinc",
+      "Copper and tin",
+      "Copper and nickel",
+      "Iron and carbon"
+    ],
+    "answer": 0,
+    "explanation": "Brass is made of copper and zinc; it is harder than copper, resists corrosion and is used for utensils and fittings.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "alloys"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Bronze is an alloy of copper and",
+    "options": [
+      "Tin",
+      "Zinc",
+      "Lead",
+      "Aluminium"
+    ],
+    "answer": 0,
+    "explanation": "Bronze contains copper with about 10 per cent tin; it is hard and durable and was used for tools, statues and medals.",
+    "difficulty": 1,
+    "tags": [
+      "chemistry",
+      "alloys"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Besides iron, carbon and nickel, stainless steel contains",
+    "options": [
+      "Copper",
+      "Tin",
+      "Silver",
+      "Chromium"
+    ],
+    "answer": 3,
+    "explanation": "Chromium gives stainless steel its resistance to rust by forming a thin protective oxide layer on the surface.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "alloys"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "German silver is an alloy of copper, zinc and",
+    "options": [
+      "Silver",
+      "Tin",
+      "Nickel",
+      "Lead"
+    ],
+    "answer": 2,
+    "explanation": "German silver contains no silver at all; it is an alloy of copper, zinc and nickel that merely looks like silver.",
+    "difficulty": 3,
+    "tags": [
+      "chemistry",
+      "alloys"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The filament of an electric bulb is made of",
+    "options": [
+      "Nichrome",
+      "Tungsten",
+      "Platinum",
+      "Copper"
+    ],
+    "answer": 1,
+    "explanation": "Tungsten is used because it has a very high melting point of about 3,400 degree Celsius and can glow white hot without melting.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "metals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Coating iron articles with a layer of zinc to prevent rusting is called",
+    "options": [
+      "Electroplating",
+      "Annealing",
+      "Galvanisation",
+      "Vulcanisation"
+    ],
+    "answer": 2,
+    "explanation": "In galvanisation a zinc coating protects iron even if scratched, because zinc is more reactive and corrodes in preference to iron.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "metals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The rusting of iron is essentially a process of",
+    "options": [
+      "Oxidation",
+      "Reduction",
+      "Neutralisation",
+      "Sublimation"
+    ],
+    "answer": 0,
+    "explanation": "Iron is oxidised in the presence of both oxygen and moisture, so rusting does not occur in dry air or in air-free water.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "metals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Rust is chemically hydrated",
+    "options": [
+      "Ferrous sulphide",
+      "Ferric chloride",
+      "Ferrous oxide",
+      "Ferric oxide"
+    ],
+    "answer": 3,
+    "explanation": "Rust is hydrated ferric oxide (Fe2O3.xH2O); being flaky, it exposes fresh metal underneath so that corrosion continues.",
+    "difficulty": 3,
+    "tags": [
+      "chemistry",
+      "metals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "In the modern periodic table, elements are arranged in increasing order of their",
+    "options": [
+      "Atomic mass",
+      "Atomic number",
+      "Valency",
+      "Density"
+    ],
+    "answer": 1,
+    "explanation": "The modern periodic law arranges elements by increasing atomic number, which removed the anomalies of Mendeleev's mass-based table.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "periodic-table"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The vertical columns of the periodic table are called",
+    "options": [
+      "Periods",
+      "Groups",
+      "Series",
+      "Blocks"
+    ],
+    "answer": 1,
+    "explanation": "The 18 vertical columns are groups, whose members have the same number of valence electrons and similar properties; horizontal rows are periods.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "periodic-table"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The modern periodic law, based on atomic number, was given by",
+    "options": [
+      "John Newlands",
+      "Dmitri Mendeleev",
+      "Henry Moseley",
+      "Lothar Meyer"
+    ],
+    "answer": 2,
+    "explanation": "Henry Moseley showed in 1913 that atomic number, not atomic mass, is the fundamental property deciding an element's place in the table.",
+    "difficulty": 3,
+    "tags": [
+      "chemistry",
+      "periodic-table"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Isotopes of an element have the same number of",
+    "options": [
+      "Protons but a different number of neutrons",
+      "Neutrons but a different number of protons",
+      "Protons and neutrons",
+      "Neutrons and electrons only"
+    ],
+    "answer": 0,
+    "explanation": "Isotopes share the same atomic number but differ in mass number, like carbon-12 and carbon-14; they have identical chemical properties.",
+    "difficulty": 3,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The valency of carbon is",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answer": 3,
+    "explanation": "Carbon has four electrons in its outermost shell and forms four covalent bonds, which is why it can build millions of organic compounds.",
+    "difficulty": 2,
+    "tags": [
+      "chemistry",
+      "elements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which cell organelle is known as the powerhouse of the cell?",
+    "options": [
+      "Mitochondria",
+      "Ribosomes",
+      "Lysosomes",
+      "Golgi bodies"
+    ],
+    "answer": 0,
+    "explanation": "Mitochondria release energy from food and store it as ATP, the energy currency of the cell, and hence are called its powerhouse.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "cell"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The term 'cell' was used for the first time by",
+    "options": [
+      "Anton van Leeuwenhoek",
+      "Theodor Schwann",
+      "Robert Hooke",
+      "Rudolf Virchow"
+    ],
+    "answer": 2,
+    "explanation": "Robert Hooke coined the word cell in 1665 after observing box-like compartments in a thin slice of cork under his microscope.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "cell"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which organelle is called the 'suicide bag' of the cell?",
+    "options": [
+      "Ribosome",
+      "Mitochondrion",
+      "Plastid",
+      "Lysosome"
+    ],
+    "answer": 3,
+    "explanation": "Lysosomes contain powerful digestive enzymes; when the cell is damaged they burst and digest the cell itself, earning the name suicide bags.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "cell"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The nucleus of the cell was discovered by",
+    "options": [
+      "Robert Hooke",
+      "Robert Brown",
+      "Rudolf Virchow",
+      "Matthias Schleiden"
+    ],
+    "answer": 1,
+    "explanation": "Robert Brown discovered the cell nucleus in 1831 while examining orchid cells; the nucleus controls all activities of the cell.",
+    "difficulty": 3,
+    "tags": [
+      "biology",
+      "cell"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "In human beings the sex of a child is determined by",
+    "options": [
+      "The chromosomes contributed by the mother",
+      "The number of X chromosomes in the ovum",
+      "The chromosome contributed by the father",
+      "The age of the parents"
+    ],
+    "answer": 2,
+    "explanation": "The mother always contributes an X chromosome, while the father contributes either X or Y; an X gives a girl and a Y gives a boy.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "genetics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The cell wall of a plant cell is mainly made up of",
+    "options": [
+      "Chitin",
+      "Cellulose",
+      "Lignin",
+      "Starch"
+    ],
+    "answer": 1,
+    "explanation": "Plant cell walls are made of cellulose, which gives rigidity and shape; fungal cell walls, in contrast, are made of chitin.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "plants"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The green pigment in plants that traps solar energy is",
+    "options": [
+      "Chlorophyll",
+      "Carotene",
+      "Xanthophyll",
+      "Anthocyanin"
+    ],
+    "answer": 0,
+    "explanation": "Chlorophyll absorbs mainly red and blue light and reflects green, which is why leaves look green; it contains magnesium at its centre.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "plants"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Photosynthesis in green plants takes place in the",
+    "options": [
+      "Mitochondria",
+      "Vacuoles",
+      "Leucoplasts",
+      "Chloroplasts"
+    ],
+    "answer": 3,
+    "explanation": "Chloroplasts contain chlorophyll and convert carbon dioxide and water into glucose using sunlight, releasing oxygen as a by-product.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "plants"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The tiny pores on the surface of leaves through which exchange of gases occurs are called",
+    "options": [
+      "Lenticels",
+      "Xylem vessels",
+      "Root hairs",
+      "Stomata"
+    ],
+    "answer": 3,
+    "explanation": "Stomata, guarded by two kidney-shaped guard cells, allow gaseous exchange and also lose water vapour in transpiration.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "plants"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "In plants, water and dissolved minerals are conducted upwards through the",
+    "options": [
+      "Xylem",
+      "Phloem",
+      "Cambium",
+      "Cortex"
+    ],
+    "answer": 0,
+    "explanation": "Xylem carries water and minerals from the roots to the leaves, while phloem transports prepared food from leaves to the rest of the plant.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "plants"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which plant hormone is responsible for the ripening of fruits?",
+    "options": [
+      "Auxin",
+      "Gibberellin",
+      "Ethylene",
+      "Cytokinin"
+    ],
+    "answer": 2,
+    "explanation": "Ethylene is a gaseous hormone that hastens ripening, which is why one ripe fruit kept in a basket ripens the others quickly.",
+    "difficulty": 3,
+    "tags": [
+      "biology",
+      "plants"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The largest gland in the human body is the",
+    "options": [
+      "Pancreas",
+      "Liver",
+      "Thyroid gland",
+      "Salivary gland"
+    ],
+    "answer": 1,
+    "explanation": "The liver is the largest gland; it secretes bile, stores glycogen and detoxifies harmful substances in the blood.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The structural and functional unit of the kidney is the",
+    "options": [
+      "Neuron",
+      "Nephron",
+      "Alveolus",
+      "Villus"
+    ],
+    "answer": 1,
+    "explanation": "Each human kidney contains about one million nephrons, which filter the blood and form urine.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The longest and strongest bone in the human body is the",
+    "options": [
+      "Humerus",
+      "Tibia",
+      "Sternum",
+      "Femur"
+    ],
+    "answer": 3,
+    "explanation": "The femur, or thigh bone, is the longest bone in the body; the smallest is the stapes in the middle ear.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The number of bones in the body of a normal adult human being is",
+    "options": [
+      "206",
+      "208",
+      "300",
+      "212"
+    ],
+    "answer": 0,
+    "explanation": "An adult has 206 bones; a newborn has about 300, many of which fuse together as the child grows.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "In the human respiratory system, the exchange of gases takes place in the",
+    "options": [
+      "Bronchi",
+      "Trachea",
+      "Alveoli",
+      "Pleura"
+    ],
+    "answer": 2,
+    "explanation": "Alveoli are thin-walled air sacs richly supplied with blood capillaries, providing a huge surface area for oxygen and carbon dioxide exchange.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The normal blood pressure of a healthy adult human being is about",
+    "options": [
+      "120/80 mm of Hg",
+      "140/90 mm of Hg",
+      "100/60 mm of Hg",
+      "160/100 mm of Hg"
+    ],
+    "answer": 0,
+    "explanation": "The higher figure is systolic pressure during heart contraction and the lower is diastolic pressure during relaxation; it is measured with a sphygmomanometer.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The human heart has how many chambers?",
+    "options": [
+      "Two",
+      "Four",
+      "Three",
+      "Six"
+    ],
+    "answer": 1,
+    "explanation": "The heart has two atria and two ventricles; this four-chambered design keeps oxygenated and deoxygenated blood completely separate.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The red colour of human blood is due to",
+    "options": [
+      "Plasma",
+      "Platelets",
+      "White blood cells",
+      "Haemoglobin"
+    ],
+    "answer": 3,
+    "explanation": "Haemoglobin, the iron-containing red pigment of red blood cells, gives blood its colour and carries oxygen to the tissues.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which blood group is known as the universal donor?",
+    "options": [
+      "AB positive",
+      "A negative",
+      "O negative",
+      "B positive"
+    ],
+    "answer": 2,
+    "explanation": "O negative red cells carry neither A and B antigens nor the Rh factor, so they can be given to patients of any blood group in an emergency.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "blood"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Insulin, the hormone that controls blood sugar, is secreted by the",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Pancreas",
+      "Thyroid gland"
+    ],
+    "answer": 2,
+    "explanation": "Beta cells in the islets of Langerhans of the pancreas secrete insulin; its deficiency causes diabetes mellitus.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The ABO blood group system was discovered by",
+    "options": [
+      "Alexander Fleming",
+      "William Harvey",
+      "Edward Jenner",
+      "Karl Landsteiner"
+    ],
+    "answer": 3,
+    "explanation": "Karl Landsteiner discovered the ABO blood groups in 1900 and won the Nobel Prize in 1930; he later helped identify the Rh factor.",
+    "difficulty": 3,
+    "tags": [
+      "biology",
+      "blood"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The digestion of food in human beings begins in the",
+    "options": [
+      "Stomach",
+      "Mouth",
+      "Small intestine",
+      "Oesophagus"
+    ],
+    "answer": 1,
+    "explanation": "Saliva contains the enzyme amylase, which starts breaking starch into sugar in the mouth itself; most digestion is completed in the small intestine.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Clotting of blood at the site of a wound is helped mainly by",
+    "options": [
+      "Platelets",
+      "Red blood cells",
+      "White blood cells",
+      "Lymph"
+    ],
+    "answer": 0,
+    "explanation": "Platelets (thrombocytes) gather at the injury and trigger the formation of a fibrin mesh that seals the wound and stops bleeding.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "blood"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The scientific name of rice is",
+    "options": [
+      "Triticum aestivum",
+      "Zea mays",
+      "Hordeum vulgare",
+      "Oryza sativa"
+    ],
+    "answer": 3,
+    "explanation": "Rice is Oryza sativa. Triticum aestivum is wheat, Zea mays is maize and Hordeum vulgare is barley.",
+    "difficulty": 3,
+    "tags": [
+      "biology",
+      "scientific-names"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Deficiency of which vitamin causes night blindness?",
+    "options": [
+      "Vitamin B12",
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin D"
+    ],
+    "answer": 2,
+    "explanation": "Vitamin A is needed to make rhodopsin, the pigment of the rods in the retina; its lack causes night blindness and later xerophthalmia.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "vitamins"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Scurvy, marked by bleeding gums, is caused by the deficiency of",
+    "options": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin K",
+      "Vitamin B12"
+    ],
+    "answer": 0,
+    "explanation": "Vitamin C is required for making collagen; citrus fruits, amla and guava are rich sources.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "vitamins"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Rickets in children is caused by the deficiency of",
+    "options": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin C"
+    ],
+    "answer": 1,
+    "explanation": "Vitamin D helps the body absorb calcium; without it bones soften and bend. It is made in the skin on exposure to sunlight, so it is called the sunshine vitamin.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "vitamins"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Beri-beri is caused by the deficiency of",
+    "options": [
+      "Vitamin B12",
+      "Vitamin B1",
+      "Vitamin B6",
+      "Vitamin B2"
+    ],
+    "answer": 1,
+    "explanation": "Vitamin B1 or thiamine deficiency causes beri-beri, which affects the nerves and heart; polished rice is poor in thiamine.",
+    "difficulty": 3,
+    "tags": [
+      "biology",
+      "vitamins"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The chemical name of vitamin C is",
+    "options": [
+      "Ascorbic acid",
+      "Citric acid",
+      "Folic acid",
+      "Retinol"
+    ],
+    "answer": 0,
+    "explanation": "Vitamin C is ascorbic acid. Retinol is vitamin A, and folic acid is vitamin B9, needed for making red blood cells.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "vitamins"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The largest part of the human brain is the",
+    "options": [
+      "Medulla oblongata",
+      "Cerebellum",
+      "Cerebrum",
+      "Hypothalamus"
+    ],
+    "answer": 2,
+    "explanation": "The cerebrum is the seat of intelligence, memory and voluntary action; the cerebellum controls balance and the medulla controls breathing and heartbeat.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Deficiency of iodine in the diet leads to",
+    "options": [
+      "Anaemia",
+      "Rickets",
+      "Pellagra",
+      "Goitre"
+    ],
+    "answer": 3,
+    "explanation": "Iodine is needed by the thyroid gland to make thyroxine; its shortage enlarges the gland, a condition called goitre, prevented by iodised salt.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "vitamins"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Anaemia in human beings is caused by the deficiency of",
+    "options": [
+      "Calcium",
+      "Iodine",
+      "Iron",
+      "Phosphorus"
+    ],
+    "answer": 2,
+    "explanation": "Iron is essential for making haemoglobin, so its deficiency lowers the oxygen-carrying capacity of blood and causes fatigue and pallor.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "human-body"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Malaria is caused by",
+    "options": [
+      "A protozoan",
+      "A bacterium",
+      "A virus",
+      "A fungus"
+    ],
+    "answer": 0,
+    "explanation": "Malaria is caused by the protozoan parasite Plasmodium, which multiplies in the liver and red blood cells of human beings.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "diseases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Malaria is transmitted to human beings by the bite of the",
+    "options": [
+      "Male Anopheles mosquito",
+      "Female Anopheles mosquito",
+      "Aedes mosquito",
+      "Culex mosquito"
+    ],
+    "answer": 1,
+    "explanation": "Only the female Anopheles bites for blood, which she needs to develop her eggs, and in doing so transmits Plasmodium.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "diseases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Dengue fever is spread by the",
+    "options": [
+      "Anopheles mosquito",
+      "Culex mosquito",
+      "Housefly",
+      "Aedes mosquito"
+    ],
+    "answer": 3,
+    "explanation": "The Aedes aegypti mosquito, which bites mostly during the day and breeds in clean stagnant water, spreads dengue, chikungunya and Zika.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "diseases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which of the following diseases is caused by a virus?",
+    "options": [
+      "Rabies",
+      "Typhoid",
+      "Cholera",
+      "Leprosy"
+    ],
+    "answer": 0,
+    "explanation": "Rabies is a viral disease spread by the bite of an infected animal; typhoid, cholera and leprosy are all bacterial diseases.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "diseases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Tuberculosis in human beings is caused by",
+    "options": [
+      "A virus",
+      "A fungus",
+      "A protozoan",
+      "A bacterium"
+    ],
+    "answer": 3,
+    "explanation": "Tuberculosis is caused by the bacterium Mycobacterium tuberculosis, identified by Robert Koch in 1882; the BCG vaccine gives protection.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "diseases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Penicillin, the first antibiotic, was discovered by",
+    "options": [
+      "Louis Pasteur",
+      "Alexander Fleming",
+      "Robert Koch",
+      "Joseph Lister"
+    ],
+    "answer": 1,
+    "explanation": "Alexander Fleming discovered penicillin in 1928 from the mould Penicillium notatum, and shared the Nobel Prize with Florey and Chain.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "discoveries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The vaccine against smallpox was developed by",
+    "options": [
+      "Louis Pasteur",
+      "Jonas Salk",
+      "Edward Jenner",
+      "Robert Koch"
+    ],
+    "answer": 2,
+    "explanation": "Edward Jenner introduced vaccination in 1796 using cowpox material; smallpox was declared eradicated worldwide in 1980.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "discoveries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Who is regarded as the father of genetics?",
+    "options": [
+      "Charles Darwin",
+      "Gregor Mendel",
+      "Hugo de Vries",
+      "Thomas Hunt Morgan"
+    ],
+    "answer": 1,
+    "explanation": "Gregor Mendel, an Austrian monk, framed the laws of inheritance from his breeding experiments and is called the father of genetics.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "genetics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "Mendel performed his classic experiments on inheritance using",
+    "options": [
+      "Maize",
+      "Snapdragon",
+      "Garden pea",
+      "Fruit fly"
+    ],
+    "answer": 2,
+    "explanation": "Mendel used the garden pea, Pisum sativum, because it has clear contrasting characters, a short life cycle and is normally self-pollinating.",
+    "difficulty": 2,
+    "tags": [
+      "biology",
+      "genetics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The double helix model of DNA was proposed by",
+    "options": [
+      "Mendel and Morgan",
+      "Miescher and Crick",
+      "Darwin and Wallace",
+      "Watson and Crick"
+    ],
+    "answer": 3,
+    "explanation": "James Watson and Francis Crick described the double helix in 1953, using X-ray diffraction data from Rosalind Franklin and Maurice Wilkins.",
+    "difficulty": 3,
+    "tags": [
+      "biology",
+      "genetics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The number of chromosomes in a normal human body cell is",
+    "options": [
+      "46",
+      "44",
+      "23",
+      "48"
+    ],
+    "answer": 0,
+    "explanation": "Human body cells carry 46 chromosomes in 23 pairs, of which one pair decides sex; gametes carry only 23.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "genetics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "general-science",
+    "question": "The scientific name of modern human beings is",
+    "options": [
+      "Homo erectus",
+      "Homo habilis",
+      "Homo sapiens",
+      "Homo neanderthalensis"
+    ],
+    "answer": 2,
+    "explanation": "Modern humans belong to the species Homo sapiens, meaning 'wise man'; the other names refer to extinct human ancestors and relatives.",
+    "difficulty": 1,
+    "tags": [
+      "biology",
+      "scientific-names"
+    ],
+    "source": "seed"
+  }
+]

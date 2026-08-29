@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ---- Design tokens: warm, calm, encouraging ---- */
+:root {
+  color-scheme: light;
+  --bg: #fbf7f0;
+  --surface: #ffffff;
+  --surface-2: #f4efe6;
+  --ink: #1f2a37;
+  --muted: #6b7280;
+  --line: #e9e2d6;
+  --primary: #2e7d6b;
+  --primary-ink: #ffffff;
+  --primary-soft: #dcf1ea;
+  --accent: #f0a33a;
+  --accent-soft: #fdefd8;
+  --success: #2f9e6b;
+  --success-soft: #dff5e9;
+  --danger: #e0705f;
+  --danger-soft: #fde9e5;
+  --shadow: 0 6px 24px -12px rgba(31, 42, 55, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #131a21;
+    --surface: #1c2630;
+    --surface-2: #232f3b;
+    --ink: #eef2f5;
+    --muted: #9aa7b4;
+    --line: #2f3c49;
+    --primary: #4cc2a6;
+    --primary-ink: #0d1f1a;
+    --primary-soft: #1a3a33;
+    --accent: #f5b455;
+    --accent-soft: #3a2d16;
+    --success: #4cc28a;
+    --success-soft: #173a2a;
+    --danger: #f08a7a;
+    --danger-soft: #3f2320;
+    --shadow: 0 6px 24px -12px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-primary: var(--primary);
+  --color-primary-ink: var(--primary-ink);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: var(--font-nunito), ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --radius-xl: 1.1rem;
+  --radius-2xl: 1.5rem;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01";
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-2xl font-bold transition active:scale-[0.98] disabled:opacity-50 disabled:active:scale-100 select-none;
+  min-height: 3.25rem;
+  padding: 0 1.5rem;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-ink);
+  box-shadow: 0 6px 0 -2px color-mix(in srgb, var(--primary) 70%, black);
+}
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-primary:active { box-shadow: none; transform: translateY(2px) scale(0.99); }
+.btn-ghost {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.btn-ghost:hover { background: var(--line); }
+
+.option {
+  @apply w-full text-left rounded-2xl border-2 px-4 py-3.5 transition flex items-start gap-3 cursor-pointer;
+  background: var(--surface);
+  border-color: var(--line);
+}
+.option:hover:not(:disabled) { border-color: color-mix(in srgb, var(--primary) 50%, var(--line)); }
+.option[data-state="selected"] { border-color: var(--primary); background: var(--primary-soft); }
+.option[data-state="correct"] { border-color: var(--success); background: var(--success-soft); }
+.option[data-state="wrong"] { border-color: var(--danger); background: var(--danger-soft); }
+.option[data-state="dim"] { opacity: 0.55; }
+.option:disabled { cursor: default; }
+
+.field {
+  @apply w-full rounded-2xl border px-4 py-3 outline-none transition;
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.field:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-soft); }
+
+.mascot-part { transform-box: fill-box; transform-origin: center; }
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: translateY(8px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.pop-in { animation: pop-in 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+@keyframes float-up {
+  0% { opacity: 0; transform: translateY(6px); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-36px); }
+}
+.float-up { animation: float-up 1.3s ease-out forwards; }
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(3px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+.shake { animation: shake 0.5s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

@@ -1,0 +1,2164 @@
+[
+  {
+    "topic": "indian-history",
+    "question": "Excavation at which site in 1921 first revealed the existence of the Indus Valley Civilisation?",
+    "options": [
+      "Harappa",
+      "Mohenjo-daro",
+      "Lothal",
+      "Kalibangan"
+    ],
+    "answer": 0,
+    "explanation": "Daya Ram Sahni excavated Harappa on the Ravi in 1921, and the civilisation is therefore also called the Harappan Civilisation. Mohenjo-daro was excavated a year later by R.D. Banerji.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "indus-valley"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Great Bath, the largest public structure of the Harappan period, was found at which site?",
+    "options": [
+      "Harappa",
+      "Dholavira",
+      "Mohenjo-daro",
+      "Ropar"
+    ],
+    "answer": 2,
+    "explanation": "The Great Bath at Mohenjo-daro is a brick-lined tank made watertight with gypsum mortar and bitumen, and is believed to have been used for ritual bathing.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "indus-valley"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Harappan site in Gujarat is famous for its dockyard?",
+    "options": [
+      "Rakhigarhi",
+      "Lothal",
+      "Surkotada",
+      "Banawali"
+    ],
+    "answer": 1,
+    "explanation": "Lothal, on the Bhogava river in Gujarat, has a large trapezoidal brick basin identified as a dockyard, pointing to maritime trade with Mesopotamia.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "indus-valley"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Kalibangan, the Harappan site that yielded evidence of a ploughed field, is located in which present-day state?",
+    "options": [
+      "Gujarat",
+      "Haryana",
+      "Punjab",
+      "Rajasthan"
+    ],
+    "answer": 3,
+    "explanation": "Kalibangan lies on the dry bed of the Ghaggar in Hanumangarh district, Rajasthan. Its pre-Harappan ploughed field is the earliest such evidence found anywhere in the world.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "indus-valley"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which metal was NOT known to the people of the Indus Valley Civilisation?",
+    "options": [
+      "Iron",
+      "Copper",
+      "Bronze",
+      "Gold"
+    ],
+    "answer": 0,
+    "explanation": "The Harappans used copper, bronze, gold and silver but not iron; iron came into use in India only in the later Vedic period, from about 1000 BCE.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "indus-valley"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Harappan site in Kutch is noted for its stadium-like ground and elaborate water reservoirs?",
+    "options": [
+      "Lothal",
+      "Dholavira",
+      "Chanhudaro",
+      "Banawali"
+    ],
+    "answer": 1,
+    "explanation": "Dholavira in the Rann of Kutch had a three-part town plan and a chain of rock-cut reservoirs for water harvesting. It was declared a UNESCO World Heritage Site in 2021.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "indus-valley"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which is the oldest of the four Vedas?",
+    "options": [
+      "Samaveda",
+      "Yajurveda",
+      "Atharvaveda",
+      "Rigveda"
+    ],
+    "answer": 3,
+    "explanation": "The Rigveda, a collection of 1,028 hymns in ten mandalas, is the oldest Vedic text and the oldest surviving literature in an Indo-European language.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "vedic-period"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Gayatri Mantra of the Rigveda is addressed to which deity?",
+    "options": [
+      "Indra",
+      "Agni",
+      "Savitri, the Sun",
+      "Varuna"
+    ],
+    "answer": 2,
+    "explanation": "The Gayatri Mantra occurs in the third mandala of the Rigveda, composed by sage Vishvamitra, and invokes Savitri, the solar deity.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "vedic-period"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "India's national motto 'Satyameva Jayate' is taken from which text?",
+    "options": [
+      "Rigveda",
+      "Mundaka Upanishad",
+      "Bhagavad Gita",
+      "Manusmriti"
+    ],
+    "answer": 1,
+    "explanation": "The phrase comes from the Mundaka Upanishad and was adopted below the State Emblem of India, itself adapted from Ashoka's Lion Capital at Sarnath.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "vedic-period"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Veda is a collection of melodies and chants, making it the source of Indian classical music?",
+    "options": [
+      "Samaveda",
+      "Rigveda",
+      "Yajurveda",
+      "Atharvaveda"
+    ],
+    "answer": 0,
+    "explanation": "The Samaveda sets Rigvedic verses to musical notation for chanting at sacrifices, and is regarded as the earliest root of the Indian musical tradition.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "vedic-period"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Dasarajna or Battle of Ten Kings, described in the Rigveda, was fought on the banks of which river?",
+    "options": [
+      "Sindhu",
+      "Vipasa",
+      "Sutudri",
+      "Parushni"
+    ],
+    "answer": 3,
+    "explanation": "The battle was fought on the Parushni, the modern Ravi, where the Bharata chief Sudas defeated a confederacy of ten tribes.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "vedic-period"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Gautama Buddha was born at which place?",
+    "options": [
+      "Bodh Gaya",
+      "Sarnath",
+      "Lumbini",
+      "Kushinagar"
+    ],
+    "answer": 2,
+    "explanation": "Buddha was born at Lumbini in present-day Nepal; Ashoka later marked the spot with a pillar. He attained enlightenment at Bodh Gaya and passed away at Kushinagar.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "buddhism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Where did Gautama Buddha deliver his first sermon?",
+    "options": [
+      "Sarnath",
+      "Vaishali",
+      "Rajgir",
+      "Shravasti"
+    ],
+    "answer": 0,
+    "explanation": "The first sermon, called the Dharmachakra Pravartana or turning of the wheel of law, was delivered to five disciples at the deer park in Sarnath near Varanasi.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "buddhism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who was the twenty-fourth and last Tirthankara of Jainism?",
+    "options": [
+      "Parshvanatha",
+      "Mahavira",
+      "Rishabhanatha",
+      "Neminatha"
+    ],
+    "answer": 1,
+    "explanation": "Vardhamana Mahavira was the twenty-fourth Tirthankara; Rishabhanatha was the first and Parshvanatha the twenty-third. Mahavira added brahmacharya to Parshvanatha's four vows.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "jainism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Third Buddhist Council, held during Ashoka's reign, met at which city?",
+    "options": [
+      "Rajgriha",
+      "Vaishali",
+      "Pataliputra",
+      "Kashmir"
+    ],
+    "answer": 2,
+    "explanation": "The Third Council met at Pataliputra around 250 BCE under the monk Moggaliputta Tissa, and it decided to send Buddhist missions abroad, including to Sri Lanka.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "buddhism",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Chandragupta Maurya concluded a treaty in 305 BCE with which Greek ruler, gaining territory west of the Indus?",
+    "options": [
+      "Alexander",
+      "Antiochus",
+      "Menander",
+      "Seleucus Nicator"
+    ],
+    "answer": 3,
+    "explanation": "Seleucus Nicator ceded areas including Kabul, Kandahar and Baluchistan and received 500 war elephants; he also sent Megasthenes as his envoy to Pataliputra.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Megasthenes, the author of Indica, was an ambassador at the court of which Indian ruler?",
+    "options": [
+      "Bindusara",
+      "Chandragupta Maurya",
+      "Ashoka",
+      "Chandragupta I"
+    ],
+    "answer": 1,
+    "explanation": "Megasthenes was sent by Seleucus Nicator to the court of Chandragupta Maurya at Pataliputra. His Indica survives only in fragments quoted by later Greek writers.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Ashoka's remorse after the Kalinga war is recorded in which of his inscriptions?",
+    "options": [
+      "Major Rock Edict XIII",
+      "Pillar Edict VII",
+      "Minor Rock Edict I",
+      "The Barabar cave inscription"
+    ],
+    "answer": 0,
+    "explanation": "Major Rock Edict XIII describes the killing and deportation at Kalinga in about 261 BCE and Ashoka's turn to Dhamma-vijaya, conquest through righteousness.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who deciphered the Brahmi script in 1837, making Ashoka's edicts readable?",
+    "options": [
+      "William Jones",
+      "Alexander Cunningham",
+      "James Prinsep",
+      "John Marshall"
+    ],
+    "answer": 2,
+    "explanation": "James Prinsep, an official of the East India Company's mint at Calcutta, deciphered Brahmi and Kharoshthi, which revealed that the edicts belonged to a king called Devanampiya Piyadassi, later identified as Ashoka.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Arthashastra, a treatise on statecraft and economics, was written by whom?",
+    "options": [
+      "Vishakhadatta",
+      "Megasthenes",
+      "Banabhatta",
+      "Kautilya"
+    ],
+    "answer": 3,
+    "explanation": "Kautilya, also known as Chanakya or Vishnugupta, was the mentor of Chandragupta Maurya. The Arthashastra was rediscovered and published by R. Shamasastry in 1909.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The last Mauryan emperor, killed by his commander-in-chief Pushyamitra Shunga, was:",
+    "options": [
+      "Dasharatha",
+      "Brihadratha",
+      "Samprati",
+      "Shalishuka"
+    ],
+    "answer": 1,
+    "explanation": "Brihadratha was assassinated around 185 BCE by Pushyamitra Shunga, who founded the Shunga dynasty and ended about 137 years of Mauryan rule.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who is regarded as the founder of the Gupta dynasty?",
+    "options": [
+      "Sri Gupta",
+      "Chandragupta I",
+      "Ghatotkacha",
+      "Samudragupta"
+    ],
+    "answer": 0,
+    "explanation": "Sri Gupta founded the line in about 240 CE with the modest title Maharaja. Chandragupta I, the third ruler, was the first to take the imperial title Maharajadhiraja.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "gupta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Allahabad Pillar Inscription, composed by the court poet Harisena, records the conquests of which ruler?",
+    "options": [
+      "Chandragupta II",
+      "Skandagupta",
+      "Kumaragupta I",
+      "Samudragupta"
+    ],
+    "answer": 3,
+    "explanation": "The Prayag Prashasti was engraved on an older Ashokan pillar and lists Samudragupta's campaigns in north and south India, earning him the title 'Indian Napoleon' from V.A. Smith.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "gupta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Chinese pilgrim Fa-Hien visited India during the reign of which Gupta ruler?",
+    "options": [
+      "Samudragupta",
+      "Kumaragupta I",
+      "Chandragupta II",
+      "Skandagupta"
+    ],
+    "answer": 2,
+    "explanation": "Fa-Hien travelled in India between about 399 and 414 CE, in the reign of Chandragupta II Vikramaditya, and recorded his observations in the Fo-Kuo-Ki.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "gupta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Gupta-age astronomer wrote the Aryabhatiya and held that the Earth rotates on its own axis?",
+    "options": [
+      "Aryabhata",
+      "Varahamihira",
+      "Brahmagupta",
+      "Bhaskara I"
+    ],
+    "answer": 0,
+    "explanation": "Aryabhata, writing in 499 CE at the age of 23, explained eclipses scientifically and gave the value of pi as approximately 3.1416. India's first satellite was named after him.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "gupta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Nalanda Mahavihara is traditionally said to have been founded by which Gupta ruler?",
+    "options": [
+      "Chandragupta II",
+      "Samudragupta",
+      "Harshavardhana",
+      "Kumaragupta I"
+    ],
+    "answer": 3,
+    "explanation": "Kumaragupta I founded Nalanda in the fifth century CE; it grew into a great residential university that later drew Hiuen Tsang and I-tsing, and was destroyed in about 1193.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "gupta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The rust-resistant Iron Pillar at Mehrauli in Delhi is attributed to the reign of which ruler?",
+    "options": [
+      "Ashoka",
+      "Kanishka",
+      "Chandragupta II",
+      "Harshavardhana"
+    ],
+    "answer": 2,
+    "explanation": "Its Sanskrit inscription honours a king named Chandra, generally identified with Chandragupta II. The pillar's resistance to corrosion shows the advanced metallurgy of the age.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "gupta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Fourth Buddhist Council was held in Kashmir under the patronage of which ruler?",
+    "options": [
+      "Ashoka",
+      "Kanishka",
+      "Harshavardhana",
+      "Ajatashatru"
+    ],
+    "answer": 1,
+    "explanation": "The Kushana emperor Kanishka convened the council under Vasumitra and Ashvaghosha; Buddhism formally divided into the Hinayana and Mahayana schools around this time.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "buddhism",
+      "kushana"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Satavahana ruler is praised in the Nasik inscription issued by his mother Gautami Balashri?",
+    "options": [
+      "Gautamiputra Satakarni",
+      "Simuka",
+      "Hala",
+      "Vasishthiputra Pulumavi"
+    ],
+    "answer": 0,
+    "explanation": "The Nasik prashasti calls Gautamiputra Satakarni the destroyer of the Shakas, Pahlavas and Yavanas. The Satavahanas used metronymics, naming rulers after their mothers.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "satavahana"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Sangam assemblies of Tamil poets were held under the patronage of which dynasty?",
+    "options": [
+      "Cholas",
+      "Cheras",
+      "Pandyas",
+      "Pallavas"
+    ],
+    "answer": 2,
+    "explanation": "Tradition speaks of three Sangams convened by the Pandya kings at Madurai. Tolkappiyam, the earliest Tamil grammar, belongs to this literary tradition.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "sangam-age"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Banabhatta, the author of Harshacharita, was the court poet of which ruler?",
+    "options": [
+      "Chandragupta II",
+      "Pulakeshin II",
+      "Yashovarman",
+      "Harshavardhana"
+    ],
+    "answer": 3,
+    "explanation": "Banabhatta served Harshavardhana of Kanauj and wrote the Harshacharita, a biography of his patron, as well as the romance Kadambari.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "harsha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Chinese pilgrim Hiuen Tsang visited India during the reign of which ruler?",
+    "options": [
+      "Chandragupta II",
+      "Harshavardhana",
+      "Kanishka",
+      "Pulakeshin I"
+    ],
+    "answer": 1,
+    "explanation": "Hiuen Tsang stayed in India from about 630 to 644 CE, studied at Nalanda and described Harsha's administration in his account Si-yu-ki.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "harsha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Chalukya ruler defeated Harshavardhana on the banks of the Narmada?",
+    "options": [
+      "Pulakeshin II",
+      "Vikramaditya VI",
+      "Mangalesha",
+      "Kirtivarman I"
+    ],
+    "answer": 0,
+    "explanation": "Pulakeshin II of Badami checked Harsha's advance southwards in about 618 CE. The victory is recorded in the Aihole inscription composed by his court poet Ravikirti.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "chalukya"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The monolithic Kailasa temple at Ellora was built under which dynasty?",
+    "options": [
+      "Chalukyas",
+      "Pallavas",
+      "Rashtrakutas",
+      "Cholas"
+    ],
+    "answer": 2,
+    "explanation": "Cave 16 at Ellora was carved out of a single rock during the reign of the Rashtrakuta king Krishna I in the eighth century CE.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "rashtrakuta"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The rock-cut Rathas at Mahabalipuram were built under which dynasty?",
+    "options": [
+      "Cholas",
+      "Pallavas",
+      "Chalukyas",
+      "Pandyas"
+    ],
+    "answer": 1,
+    "explanation": "The five Pancha Rathas were carved during the reign of the Pallava king Narasimhavarman I, also called Mamalla, after whom Mamallapuram is named.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "pallava"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Brihadeeswarar temple at Thanjavur was built by which Chola ruler?",
+    "options": [
+      "Rajendra I",
+      "Kulothunga I",
+      "Parantaka I",
+      "Rajaraja I"
+    ],
+    "answer": 3,
+    "explanation": "Rajaraja I completed the temple in 1010 CE, which is why it is also called the Rajarajeswaram. It is part of the UNESCO listed Great Living Chola Temples.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "chola"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Uttaramerur inscription is an important source for village self-government under which dynasty?",
+    "options": [
+      "Cholas",
+      "Pallavas",
+      "Pandyas",
+      "Hoysalas"
+    ],
+    "answer": 0,
+    "explanation": "Issued in the reign of the Chola king Parantaka I, it describes the kudavolai system of choosing members of village assemblies by drawing lots from pots.",
+    "difficulty": 3,
+    "tags": [
+      "ancient-india",
+      "chola"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Alexander defeated King Porus in the Battle of Hydaspes, fought on the banks of which river?",
+    "options": [
+      "Ravi",
+      "Chenab",
+      "Jhelum",
+      "Beas"
+    ],
+    "answer": 2,
+    "explanation": "Hydaspes is the Greek name of the Jhelum. Alexander reinstated the defeated Porus as a ruler, and his army later refused to march beyond the Beas.",
+    "difficulty": 1,
+    "tags": [
+      "ancient-india",
+      "alexander"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Most of Ashoka's inscriptions were engraved in which script?",
+    "options": [
+      "Kharoshthi",
+      "Aramaic",
+      "Greek",
+      "Brahmi"
+    ],
+    "answer": 3,
+    "explanation": "Brahmi was used across most of the empire; Kharoshthi appears in the north-west, and Greek and Aramaic in Afghanistan, showing the reach of Ashoka's message.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "mauryan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which physician, author of a celebrated treatise on medicine, is traditionally associated with the court of Kanishka?",
+    "options": [
+      "Sushruta",
+      "Charaka",
+      "Dhanvantari",
+      "Vagbhata"
+    ],
+    "answer": 1,
+    "explanation": "Charaka, credited with the Charaka Samhita on internal medicine, is traditionally placed at Kanishka's court. Sushruta's Samhita deals mainly with surgery.",
+    "difficulty": 2,
+    "tags": [
+      "ancient-india",
+      "kushana"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "In the Second Battle of Tarain in 1192, Muhammad Ghori defeated which Indian ruler?",
+    "options": [
+      "Jaichand",
+      "Bhima II",
+      "Prithviraj Chauhan",
+      "Rana Sanga"
+    ],
+    "answer": 2,
+    "explanation": "Prithviraj Chauhan had defeated Ghori at the First Battle of Tarain in 1191, but lost the second battle a year later, opening north India to Turkish rule.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who founded the Slave or Mamluk dynasty of Delhi?",
+    "options": [
+      "Qutbuddin Aibak",
+      "Iltutmish",
+      "Balban",
+      "Muhammad Ghori"
+    ],
+    "answer": 0,
+    "explanation": "Qutbuddin Aibak, a slave and general of Muhammad Ghori, became ruler in 1206 and made Lahore his capital. He was known for his generosity as Lakh Baksh.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Qutub Minar at Delhi, begun by Qutbuddin Aibak, was completed by which ruler?",
+    "options": [
+      "Qutbuddin Aibak himself",
+      "Balban",
+      "Alauddin Khilji",
+      "Iltutmish"
+    ],
+    "answer": 3,
+    "explanation": "Iltutmish added the upper storeys of the tower, which was raised in honour of the Sufi saint Qutbuddin Bakhtiyar Kaki. Firoz Shah Tughlaq later repaired it.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Razia Sultan, the only woman to rule the Delhi Sultanate, was the daughter of which ruler?",
+    "options": [
+      "Qutbuddin Aibak",
+      "Iltutmish",
+      "Balban",
+      "Nasiruddin Mahmud"
+    ],
+    "answer": 1,
+    "explanation": "Iltutmish nominated his daughter Razia as successor over his sons. She ruled from 1236 to 1240 before being overthrown by the Turkish nobility known as the Chalisa.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Delhi Sultan introduced market price control regulations and maintained a large standing army paid in cash?",
+    "options": [
+      "Balban",
+      "Firoz Shah Tughlaq",
+      "Alauddin Khilji",
+      "Muhammad bin Tughlaq"
+    ],
+    "answer": 2,
+    "explanation": "Alauddin Khilji fixed prices of grain, cloth and horses and enforced them through market officers. His general Malik Kafur led expeditions deep into south India.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Muhammad bin Tughlaq shifted his capital from Delhi to which city?",
+    "options": [
+      "Daulatabad",
+      "Agra",
+      "Lahore",
+      "Jaunpur"
+    ],
+    "answer": 0,
+    "explanation": "He moved the capital to Daulatabad, formerly Devagiri in the Deccan, in 1327, but reversed the decision after great hardship to the people of Delhi.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Moroccan traveller Ibn Battuta visited India during the reign of which Sultan?",
+    "options": [
+      "Alauddin Khilji",
+      "Muhammad bin Tughlaq",
+      "Firoz Shah Tughlaq",
+      "Sikandar Lodi"
+    ],
+    "answer": 1,
+    "explanation": "Ibn Battuta reached Delhi in 1333 and was appointed qazi of the city by Muhammad bin Tughlaq. His travelogue is called the Rehla.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Delhi was invaded and sacked in 1398 by which conqueror?",
+    "options": [
+      "Genghis Khan",
+      "Nadir Shah",
+      "Ahmad Shah Abdali",
+      "Timur"
+    ],
+    "answer": 3,
+    "explanation": "Timur of Samarkand invaded during the reign of Nasiruddin Mahmud Tughlaq, plundering Delhi and hastening the collapse of the Tughlaq dynasty.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Sultan of Delhi founded the city of Agra in 1504 and shifted his capital there?",
+    "options": [
+      "Sikandar Lodi",
+      "Bahlul Lodi",
+      "Ibrahim Lodi",
+      "Firoz Shah Tughlaq"
+    ],
+    "answer": 0,
+    "explanation": "Sikandar Lodi founded Agra to control the Rajput chiefs better. He also wrote Persian verse under the pen name Gulrukhi and standardised the gaz measure.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The First Battle of Panipat in 1526 was fought between Babur and which ruler?",
+    "options": [
+      "Rana Sanga",
+      "Sher Shah Suri",
+      "Ibrahim Lodi",
+      "Hemu"
+    ],
+    "answer": 2,
+    "explanation": "Babur defeated Ibrahim Lodi using field artillery and the tulughma flanking tactic, ending the Lodi dynasty and founding the Mughal Empire in India.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Babur wrote his memoirs, the Baburnama, in which language?",
+    "options": [
+      "Persian",
+      "Chagatai Turkish",
+      "Arabic",
+      "Urdu"
+    ],
+    "answer": 1,
+    "explanation": "Babur composed the Tuzuk-i-Baburi in his mother tongue Chagatai Turkish; Abdur Rahim Khan-i-Khanan later translated it into Persian for Akbar.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which ruler introduced the silver coin called the Rupiya and reorganised the Grand Trunk Road?",
+    "options": [
+      "Akbar",
+      "Babur",
+      "Alauddin Khilji",
+      "Sher Shah Suri"
+    ],
+    "answer": 3,
+    "explanation": "Sher Shah Suri, who ruled from 1540 to 1545 after defeating Humayun, also built sarais along the highways and set up an efficient revenue survey system.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "sur-dynasty"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Second Battle of Panipat in 1556 was fought between Akbar's forces and which commander?",
+    "options": [
+      "Ibrahim Lodi",
+      "Maharana Pratap",
+      "Hemu",
+      "Sher Shah Suri"
+    ],
+    "answer": 2,
+    "explanation": "Hemu, the general of the Sur ruler Adil Shah, was defeated by Mughal forces led by Bairam Khan, securing the throne for the young Akbar.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Mughal emperor abolished the jizya tax on non-Muslims in 1564?",
+    "options": [
+      "Akbar",
+      "Jahangir",
+      "Shah Jahan",
+      "Humayun"
+    ],
+    "answer": 0,
+    "explanation": "Akbar abolished the pilgrimage tax in 1563 and jizya in 1564 as part of his policy of sulh-i-kul, or peace with all religions.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "In the Battle of Haldighati in 1576, Maharana Pratap fought against a Mughal army led by whom?",
+    "options": [
+      "Bairam Khan",
+      "Todar Mal",
+      "Abul Fazl",
+      "Man Singh"
+    ],
+    "answer": 3,
+    "explanation": "Raja Man Singh of Amber commanded Akbar's forces at Haldighati. Though Pratap withdrew, he continued resistance from the hills and later recovered much of Mewar.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Dahsala or Zabti land revenue system of Akbar was worked out by which official?",
+    "options": [
+      "Birbal",
+      "Todar Mal",
+      "Abul Fazl",
+      "Man Singh"
+    ],
+    "answer": 1,
+    "explanation": "Raja Todar Mal fixed revenue on the basis of the average produce and prices of the previous ten years, with revenue collected in cash.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Ain-i-Akbari, a detailed account of Akbar's administration, was written by whom?",
+    "options": [
+      "Abul Fazl",
+      "Badauni",
+      "Faizi",
+      "Abdul Hamid Lahori"
+    ],
+    "answer": 0,
+    "explanation": "Abul Fazl wrote the Ain-i-Akbari as the third volume of the Akbarnama. It gives statistics on revenue, the army, wages and prices in the empire.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Sir Thomas Roe came to India as the ambassador of James I to the court of which Mughal emperor?",
+    "options": [
+      "Akbar",
+      "Shah Jahan",
+      "Jahangir",
+      "Aurangzeb"
+    ],
+    "answer": 2,
+    "explanation": "Sir Thomas Roe stayed at Jahangir's court from 1615 to 1619 and secured trading concessions for the English East India Company. Captain Hawkins had come earlier.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Taj Mahal at Agra was built by Shah Jahan in memory of whom?",
+    "options": [
+      "Nur Jahan",
+      "Mumtaz Mahal",
+      "Jahanara Begum",
+      "Ruqaiya Begum"
+    ],
+    "answer": 1,
+    "explanation": "Mumtaz Mahal died in 1631 at Burhanpur. The mausoleum on the Yamuna took about twenty years to build and is credited to the architect Ustad Ahmad Lahauri.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Mughal emperor reimposed the jizya tax on non-Muslims in 1679?",
+    "options": [
+      "Jahangir",
+      "Shah Jahan",
+      "Bahadur Shah I",
+      "Aurangzeb"
+    ],
+    "answer": 3,
+    "explanation": "Aurangzeb revived jizya more than a century after Akbar had abolished it. His long Deccan campaigns and religious policy strained the empire's resources.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who was the last Mughal emperor of India?",
+    "options": [
+      "Bahadur Shah II",
+      "Akbar II",
+      "Shah Alam II",
+      "Muhammad Shah"
+    ],
+    "answer": 0,
+    "explanation": "Bahadur Shah Zafar was proclaimed the symbolic leader of the Revolt of 1857, deposed by the British and exiled to Rangoon, where he died in 1862.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Harihara and Bukka, who founded the Vijayanagara Empire in 1336, belonged to which dynasty?",
+    "options": [
+      "Tuluva",
+      "Saluva",
+      "Sangama",
+      "Aravidu"
+    ],
+    "answer": 2,
+    "explanation": "The Sangama dynasty was the first of the four ruling houses of Vijayanagara, followed by the Saluva, Tuluva and Aravidu lines.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "vijayanagara"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Amuktamalyada, a Telugu work on statecraft and devotion, was written by which ruler?",
+    "options": [
+      "Harihara I",
+      "Bukka I",
+      "Achyuta Deva Raya",
+      "Krishnadevaraya"
+    ],
+    "answer": 3,
+    "explanation": "Krishnadevaraya of the Tuluva dynasty, the greatest Vijayanagara ruler, was himself a poet and patron of the eight Telugu poets known as the Ashtadiggajas.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "vijayanagara"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Battle of Talikota in 1565 led to the decline of which empire?",
+    "options": [
+      "Bahmani",
+      "Vijayanagara",
+      "Maratha",
+      "Ahom"
+    ],
+    "answer": 1,
+    "explanation": "A confederacy of the Deccan Sultanates defeated Vijayanagara under Rama Raya, after which the capital Hampi was sacked and never recovered.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "vijayanagara"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Mahmud Gawan served as the celebrated prime minister of which kingdom?",
+    "options": [
+      "Bahmani",
+      "Vijayanagara",
+      "Golconda",
+      "Malwa"
+    ],
+    "answer": 0,
+    "explanation": "Mahmud Gawan, a Persian merchant-statesman, reformed the Bahmani administration and founded a madrasa at Bidar, but was executed on a false charge in 1481.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "bahmani"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which Portuguese traveller visited Vijayanagara during the reign of Krishnadevaraya?",
+    "options": [
+      "Nicolo Conti",
+      "Abdur Razzaq",
+      "Domingo Paes",
+      "Marco Polo"
+    ],
+    "answer": 2,
+    "explanation": "Domingo Paes left a vivid description of Vijayanagara city and its markets. Nicolo Conti was an Italian and Abdur Razzaq a Persian envoy who came earlier.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "vijayanagara"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Shivaji was formally crowned Chhatrapati in 1674 at which fort?",
+    "options": [
+      "Pratapgarh",
+      "Raigad",
+      "Sinhagad",
+      "Panhala"
+    ],
+    "answer": 1,
+    "explanation": "The coronation at Raigad, performed by Gaga Bhatta, gave the Maratha state formal sovereign status. Shivaji then assumed the title Chhatrapati.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "maratha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "In Shivaji's Ashtapradhan council of ministers, the chief minister was designated as:",
+    "options": [
+      "Amatya",
+      "Sachiv",
+      "Senapati",
+      "Peshwa"
+    ],
+    "answer": 3,
+    "explanation": "The Peshwa headed the eight-member Ashtapradhan; the Amatya handled finance and the Senapati the army. The office of Peshwa later became hereditary at Pune.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "maratha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which treaty of 1665 was signed between Shivaji and the Mughal commander Jai Singh I?",
+    "options": [
+      "Treaty of Bassein",
+      "Treaty of Salbai",
+      "Treaty of Purandar",
+      "Treaty of Surat"
+    ],
+    "answer": 2,
+    "explanation": "By the Treaty of Purandar, Shivaji surrendered 23 forts to the Mughals and agreed to send his son Sambhaji to serve as a mansabdar.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "maratha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "In the Third Battle of Panipat in 1761, the Marathas were defeated by whom?",
+    "options": [
+      "Ahmad Shah Abdali",
+      "Nadir Shah",
+      "The Nizam of Hyderabad",
+      "Hyder Ali"
+    ],
+    "answer": 0,
+    "explanation": "Ahmad Shah Abdali of Afghanistan defeated the Marathas led by Sadashivrao Bhau. The heavy losses halted Maratha expansion in north India.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "maratha"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The verses of which Bhakti saint are compiled in the work called the Bijak?",
+    "options": [
+      "Tulsidas",
+      "Namdev",
+      "Ravidas",
+      "Kabir"
+    ],
+    "answer": 3,
+    "explanation": "Kabir, a weaver of Varanasi and disciple of Ramananda, attacked ritualism and caste. Some of his verses are also included in the Sikh Adi Granth.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "bhakti-movement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Guru Nanak, the founder of Sikhism, was born at Talwandi, which is now known as:",
+    "options": [
+      "Amritsar",
+      "Nankana Sahib",
+      "Anandpur Sahib",
+      "Kartarpur"
+    ],
+    "answer": 1,
+    "explanation": "Talwandi in present-day Pakistan was renamed Nankana Sahib after the Guru. He spent his last years at Kartarpur on the Ravi.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "sikhism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Adi Granth, the sacred scripture of the Sikhs, was first compiled by which Guru?",
+    "options": [
+      "Guru Arjan Dev",
+      "Guru Nanak",
+      "Guru Gobind Singh",
+      "Guru Ram Das"
+    ],
+    "answer": 0,
+    "explanation": "Guru Arjan Dev compiled the Adi Granth in 1604 and installed it at the Harmandir Sahib in Amritsar. Guru Gobind Singh later added his father's hymns.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "sikhism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Khalsa was founded in 1699 by which Sikh Guru?",
+    "options": [
+      "Guru Tegh Bahadur",
+      "Guru Har Rai",
+      "Guru Gobind Singh",
+      "Banda Bahadur"
+    ],
+    "answer": 2,
+    "explanation": "Guru Gobind Singh, the tenth Guru, created the Khalsa at Anandpur Sahib on Baisakhi and ended the line of personal Gurus, vesting authority in the Guru Granth Sahib.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "sikhism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The dargah of Khwaja Moinuddin Chishti, who established the Chishti order in India, is located at:",
+    "options": [
+      "Delhi",
+      "Fatehpur Sikri",
+      "Gulbarga",
+      "Ajmer"
+    ],
+    "answer": 3,
+    "explanation": "Moinuddin Chishti settled at Ajmer in the late twelfth century. Later Chishti saints included Nizamuddin Auliya of Delhi and Gesudaraz of Gulbarga.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "sufism"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Vasco da Gama landed near Calicut in 1498 and was received by a ruler bearing which title?",
+    "options": [
+      "Raya",
+      "Zamorin",
+      "Nayaka",
+      "Rai"
+    ],
+    "answer": 1,
+    "explanation": "The Hindu ruler of Calicut was titled Zamorin, from Samoothiri. Vasco da Gama's arrival opened the direct sea route from Europe to India.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "european-arrival"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which poet of the Delhi Sultanate period is known as the Parrot of India, or Tuti-i-Hind?",
+    "options": [
+      "Ziauddin Barani",
+      "Malik Muhammad Jayasi",
+      "Amir Khusrau",
+      "Abul Fazl"
+    ],
+    "answer": 2,
+    "explanation": "Amir Khusrau, a disciple of Nizamuddin Auliya, served several Sultans and is credited with developing the qawwali and enriching Hindavi poetry.",
+    "difficulty": 3,
+    "tags": [
+      "medieval-india",
+      "delhi-sultanate"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Buland Darwaza at Fatehpur Sikri was built by Akbar to commemorate his victory over which region?",
+    "options": [
+      "Gujarat",
+      "Bengal",
+      "Malwa",
+      "Mewar"
+    ],
+    "answer": 0,
+    "explanation": "Akbar raised the 54-metre gateway after conquering Gujarat in 1573. Fatehpur Sikri was his capital for about fifteen years before water shortage forced its abandonment.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Peacock Throne was carried away from Delhi in 1739 by which invader?",
+    "options": [
+      "Ahmad Shah Abdali",
+      "Nadir Shah",
+      "Timur",
+      "Babur"
+    ],
+    "answer": 1,
+    "explanation": "Nadir Shah of Persia defeated Muhammad Shah at Karnal and plundered Delhi, taking the Peacock Throne and the Kohinoor diamond.",
+    "difficulty": 2,
+    "tags": [
+      "medieval-india",
+      "mughal"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The ruins of Hampi, capital of the Vijayanagara Empire, lie on the banks of which river?",
+    "options": [
+      "Krishna",
+      "Godavari",
+      "Kaveri",
+      "Tungabhadra"
+    ],
+    "answer": 3,
+    "explanation": "Hampi stands on the Tungabhadra in Karnataka and is a UNESCO World Heritage Site, famous for the Virupaksha temple and the Vittala temple stone chariot.",
+    "difficulty": 1,
+    "tags": [
+      "medieval-india",
+      "vijayanagara"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Battle of Plassey in 1757 was fought between the English East India Company and which ruler?",
+    "options": [
+      "Mir Jafar",
+      "Siraj-ud-Daulah",
+      "Mir Qasim",
+      "Shuja-ud-Daulah"
+    ],
+    "answer": 1,
+    "explanation": "Robert Clive defeated Siraj-ud-Daulah, the Nawab of Bengal, largely through the treachery of his commander Mir Jafar, who was then installed as Nawab.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "british-rule"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "After the Battle of Buxar, the East India Company obtained the Diwani of Bengal, Bihar and Orissa under which treaty?",
+    "options": [
+      "Treaty of Salbai",
+      "Treaty of Bassein",
+      "Treaty of Purandar",
+      "Treaty of Allahabad"
+    ],
+    "answer": 3,
+    "explanation": "By the Treaty of Allahabad of 1765, Shah Alam II granted the Diwani, or right to collect revenue, to the Company, giving it real political power in Bengal.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "british-rule"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Permanent Settlement of Bengal in 1793 was introduced by which Governor-General?",
+    "options": [
+      "Lord Cornwallis",
+      "Warren Hastings",
+      "Lord Wellesley",
+      "Lord Dalhousie"
+    ],
+    "answer": 0,
+    "explanation": "Cornwallis fixed the land revenue permanently and recognised zamindars as owners of land. He is also called the father of the Indian civil service.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "british-rule"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The policy of Subsidiary Alliance was introduced in India by which Governor-General?",
+    "options": [
+      "Lord Cornwallis",
+      "Lord Hastings",
+      "Lord Wellesley",
+      "Lord Dalhousie"
+    ],
+    "answer": 2,
+    "explanation": "Wellesley made Indian rulers maintain British troops at their own cost and surrender control of foreign relations. Hyderabad was the first state to accept it in 1798.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "british-rule"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Doctrine of Lapse was applied to annex Indian states by which Governor-General?",
+    "options": [
+      "Lord Canning",
+      "Lord Dalhousie",
+      "Lord Ripon",
+      "Lord Curzon"
+    ],
+    "answer": 1,
+    "explanation": "Dalhousie annexed Satara, Jhansi, Nagpur and others by refusing to recognise adopted heirs, a policy that became a major cause of the Revolt of 1857.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "british-rule"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Sati was legally abolished in 1829 during the tenure of which Governor-General?",
+    "options": [
+      "Lord William Bentinck",
+      "Lord Cornwallis",
+      "Lord Dalhousie",
+      "Lord Auckland"
+    ],
+    "answer": 0,
+    "explanation": "Bentinck's Regulation XVII of 1829 outlawed sati, an effort strongly supported by Raja Ram Mohan Roy. Bentinck also acted against thuggee and human sacrifice.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who founded the Brahmo Samaj in 1828?",
+    "options": [
+      "Dayanand Saraswati",
+      "Ishwar Chandra Vidyasagar",
+      "Debendranath Tagore",
+      "Raja Ram Mohan Roy"
+    ],
+    "answer": 3,
+    "explanation": "Raja Ram Mohan Roy, called the father of the Indian Renaissance, founded the Brahmo Samaj to promote monotheism and oppose idolatry and social evils.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who founded the Arya Samaj in 1875 and gave the call 'Back to the Vedas'?",
+    "options": [
+      "Keshab Chandra Sen",
+      "Swami Vivekananda",
+      "Dayanand Saraswati",
+      "Annie Besant"
+    ],
+    "answer": 2,
+    "explanation": "Swami Dayanand Saraswati founded the Arya Samaj at Bombay and wrote Satyarth Prakash. The movement promoted the shuddhi ceremony and modern education.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Ramakrishna Mission was founded in 1897 by whom?",
+    "options": [
+      "Swami Vivekananda",
+      "Ramakrishna Paramahamsa",
+      "Sister Nivedita",
+      "Keshab Chandra Sen"
+    ],
+    "answer": 0,
+    "explanation": "Swami Vivekananda founded the Mission in memory of his guru Ramakrishna Paramahamsa, stressing social service. He had addressed the Parliament of Religions at Chicago in 1893.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Indian headquarters of the Theosophical Society is located at:",
+    "options": [
+      "Belur",
+      "Adyar in Chennai",
+      "Pune",
+      "Bombay"
+    ],
+    "answer": 1,
+    "explanation": "The Society, founded in New York in 1875 by Madame Blavatsky and Colonel Olcott, moved its headquarters to Adyar in 1882. Annie Besant later led it in India.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Hindu Widows' Remarriage Act of 1856 was passed largely due to the efforts of whom?",
+    "options": [
+      "Raja Ram Mohan Roy",
+      "Jyotiba Phule",
+      "Ishwar Chandra Vidyasagar",
+      "M.G. Ranade"
+    ],
+    "answer": 2,
+    "explanation": "Vidyasagar campaigned with scriptural arguments for widow remarriage and also worked for women's education, founding several girls' schools in Bengal.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "social-reform"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Revolt of 1857 broke out on 10 May 1857 at which place?",
+    "options": [
+      "Barrackpore",
+      "Kanpur",
+      "Jhansi",
+      "Meerut"
+    ],
+    "answer": 3,
+    "explanation": "Sepoys at Meerut mutinied and marched to Delhi to proclaim Bahadur Shah Zafar emperor. Earlier, on 29 March, Mangal Pandey had revolted at Barrackpore.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "revolt-1857"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Revolt of 1857 at Lucknow was led by whom?",
+    "options": [
+      "Nana Sahib",
+      "Begum Hazrat Mahal",
+      "Rani Lakshmibai",
+      "Kunwar Singh"
+    ],
+    "answer": 1,
+    "explanation": "Begum Hazrat Mahal led the revolt in Awadh in the name of her son Birjis Qadr. Nana Sahib led at Kanpur, Lakshmibai at Jhansi and Kunwar Singh in Bihar.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "revolt-1857"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who became the first Viceroy of India under the Government of India Act of 1858?",
+    "options": [
+      "Lord Canning",
+      "Lord Lytton",
+      "Lord Mayo",
+      "Lord Elgin"
+    ],
+    "answer": 0,
+    "explanation": "The Act transferred power from the East India Company to the Crown, created the office of Secretary of State for India, and made Canning, the last Governor-General, the first Viceroy.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "british-rule"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who presided over the first session of the Indian National Congress in 1885?",
+    "options": [
+      "A.O. Hume",
+      "Dadabhai Naoroji",
+      "Badruddin Tyabji",
+      "W.C. Bonnerjee"
+    ],
+    "answer": 3,
+    "explanation": "The first session met at Gokuldas Tejpal Sanskrit College in Bombay with 72 delegates. A.O. Hume was the organising secretary, and W.C. Bonnerjee presided.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "inc"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who was the first woman to preside over a session of the Indian National Congress?",
+    "options": [
+      "Sarojini Naidu",
+      "Aruna Asaf Ali",
+      "Annie Besant",
+      "Vijayalakshmi Pandit"
+    ],
+    "answer": 2,
+    "explanation": "Annie Besant presided over the Calcutta session of 1917. Sarojini Naidu, who presided at Kanpur in 1925, was the first Indian woman to hold the office.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "inc"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Partition of Bengal in 1905, which triggered the Swadeshi Movement, was carried out by which Viceroy?",
+    "options": [
+      "Lord Curzon",
+      "Lord Minto",
+      "Lord Hardinge",
+      "Lord Ripon"
+    ],
+    "answer": 0,
+    "explanation": "Curzon divided Bengal on the stated ground of administrative convenience. The partition was annulled in 1911 at the Delhi Durbar under Lord Hardinge.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Indian National Congress split into Moderates and Extremists at the session held in 1907 at which city?",
+    "options": [
+      "Calcutta",
+      "Surat",
+      "Lucknow",
+      "Nagpur"
+    ],
+    "answer": 1,
+    "explanation": "The Surat split occurred over the choice of president and the Swadeshi programme. The two groups reunited at the Lucknow session of 1916.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "inc"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Separate electorates for Muslims were first introduced in India by which legislation?",
+    "options": [
+      "Indian Councils Act 1892",
+      "Government of India Act 1919",
+      "Government of India Act 1935",
+      "Indian Councils Act 1909"
+    ],
+    "answer": 3,
+    "explanation": "The Indian Councils Act of 1909, known as the Morley-Minto Reforms, created separate electorates. Lord Minto is therefore called the father of communal electorates.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "important-acts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Lucknow Pact of 1916 was an agreement between the Indian National Congress and which organisation?",
+    "options": [
+      "Hindu Mahasabha",
+      "The British Government",
+      "The Muslim League",
+      "Swaraj Party"
+    ],
+    "answer": 2,
+    "explanation": "The Congress and the Muslim League agreed on joint demands for self-government, with the Congress accepting separate electorates. Tilak and Jinnah were key figures.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Jallianwala Bagh massacre of 13 April 1919 took place in which city?",
+    "options": [
+      "Amritsar",
+      "Lahore",
+      "Delhi",
+      "Peshawar"
+    ],
+    "answer": 0,
+    "explanation": "General Dyer ordered firing on an unarmed gathering at Amritsar protesting the Rowlatt Act. Rabindranath Tagore renounced his knighthood in protest.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Rowlatt Act of 1919 was strongly opposed by Indians because it permitted:",
+    "options": [
+      "Separate electorates",
+      "Detention without trial",
+      "A steep rise in land revenue",
+      "The partition of Bengal"
+    ],
+    "answer": 1,
+    "explanation": "The Act allowed imprisonment without trial and trial without appeal, summed up in the slogan 'no vakil, no dalil, no appeal'. Gandhiji called a nationwide hartal against it.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "important-acts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Gandhiji withdrew the Non-Cooperation Movement in 1922 after a violent incident at which place?",
+    "options": [
+      "Kheda",
+      "Champaran",
+      "Chauri Chaura",
+      "Bardoli"
+    ],
+    "answer": 2,
+    "explanation": "At Chauri Chaura in Gorakhpur district, a mob set fire to a police station killing 22 policemen, leading Gandhiji to call off the movement in February 1922.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "gandhi-era"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Gandhiji's first satyagraha in India, launched at Champaran in 1917, was on behalf of which group?",
+    "options": [
+      "Textile mill workers",
+      "Salt pan workers",
+      "Peasants demanding revenue remission in Gujarat",
+      "Indigo cultivators"
+    ],
+    "answer": 3,
+    "explanation": "Champaran peasants in Bihar were forced to grow indigo under the tinkathia system. Gandhiji's intervention led to a commission and the abolition of the system.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "gandhi-era"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Simon Commission was boycotted by Indians mainly because:",
+    "options": [
+      "It recommended the partition of India",
+      "It had no Indian member",
+      "It proposed separate electorates",
+      "It was headed by a military officer"
+    ],
+    "answer": 1,
+    "explanation": "All seven members of the 1927 commission were British, prompting the cry 'Simon Go Back'. Lala Lajpat Rai died after a lathi charge during a protest at Lahore.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Purna Swaraj resolution demanding complete independence was adopted at the Congress session of 1929 held at:",
+    "options": [
+      "Lahore",
+      "Karachi",
+      "Calcutta",
+      "Madras"
+    ],
+    "answer": 0,
+    "explanation": "Jawaharlal Nehru presided at Lahore, where the tricolour was hoisted on the bank of the Ravi and 26 January 1930 was observed as the first Independence Day.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "inc"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Gandhiji began the Dandi March of 1930 from which place?",
+    "options": [
+      "Porbandar",
+      "Wardha",
+      "Sabarmati Ashram",
+      "Surat"
+    ],
+    "answer": 2,
+    "explanation": "He set out from Sabarmati Ashram near Ahmedabad on 12 March 1930 with 78 followers and broke the salt law at Dandi on 6 April after walking about 385 kilometres.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "gandhi-era"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Gandhiji attended which Round Table Conference in London as the sole representative of the Congress?",
+    "options": [
+      "The First Round Table Conference",
+      "The Third Round Table Conference",
+      "The Simla Conference",
+      "The Second Round Table Conference"
+    ],
+    "answer": 3,
+    "explanation": "Following the Gandhi-Irwin Pact of 1931, he attended the Second Round Table Conference, which ended without agreement on the question of minority representation.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "gandhi-era"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Poona Pact of 1932 was signed between Mahatma Gandhi and whom?",
+    "options": [
+      "B.R. Ambedkar",
+      "M.A. Jinnah",
+      "Lord Irwin",
+      "Madan Mohan Malaviya"
+    ],
+    "answer": 0,
+    "explanation": "The pact replaced separate electorates for the Depressed Classes, granted by the Communal Award, with reserved seats within the general electorate.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Which legislation introduced provincial autonomy and abolished dyarchy in the provinces?",
+    "options": [
+      "Government of India Act 1919",
+      "Government of India Act 1935",
+      "Indian Councils Act 1909",
+      "Indian Independence Act 1947"
+    ],
+    "answer": 1,
+    "explanation": "The 1935 Act ended provincial dyarchy, introduced it at the centre, and provided for a federation. Much of it was later drawn upon by the Constitution of India.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "important-acts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Quit India Movement was launched in 1942 following the Congress session held at:",
+    "options": [
+      "Wardha",
+      "Lahore",
+      "Tripuri",
+      "Bombay"
+    ],
+    "answer": 3,
+    "explanation": "The All India Congress Committee passed the Quit India resolution at Gowalia Tank in Bombay on 8 August 1942, where Gandhiji gave the call 'Do or Die'.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Subhas Chandra Bose resigned as Congress President and founded the Forward Bloc after being elected at which session?",
+    "options": [
+      "Haripura",
+      "Faizpur",
+      "Tripuri",
+      "Ramgarh"
+    ],
+    "answer": 2,
+    "explanation": "At Tripuri in 1939 Bose defeated Gandhiji's nominee Pattabhi Sitaramayya, but resigned amid opposition from the Working Committee and formed the Forward Bloc.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Rani Jhansi Regiment of the Indian National Army was commanded by whom?",
+    "options": [
+      "Lakshmi Sahgal",
+      "Aruna Asaf Ali",
+      "Sucheta Kripalani",
+      "Usha Mehta"
+    ],
+    "answer": 0,
+    "explanation": "Captain Lakshmi Sahgal led the women's regiment raised in Singapore in 1943 under Subhas Chandra Bose, one of the first women's combat units in Asia.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Cabinet Mission that came to India in 1946 was headed by whom?",
+    "options": [
+      "Stafford Cripps",
+      "Pethick-Lawrence",
+      "A.V. Alexander",
+      "Lord Wavell"
+    ],
+    "answer": 1,
+    "explanation": "Lord Pethick-Lawrence, Secretary of State for India, led the three-member mission that proposed a federal union and a Constituent Assembly, but rejected Pakistan.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The partition of India was announced through the plan of 3 June 1947 put forward by whom?",
+    "options": [
+      "Lord Wavell",
+      "Clement Attlee",
+      "Lord Mountbatten",
+      "Stafford Cripps"
+    ],
+    "answer": 2,
+    "explanation": "The Mountbatten Plan provided for two dominions, India and Pakistan. It was given legal effect by the Indian Independence Act passed in July 1947.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The song 'Vande Mataram', which became a rallying cry of the freedom struggle, was composed by whom?",
+    "options": [
+      "Rabindranath Tagore",
+      "Sarojini Naidu",
+      "Subramania Bharati",
+      "Bankim Chandra Chatterjee"
+    ],
+    "answer": 3,
+    "explanation": "Bankim Chandra Chatterjee wrote it and included it in his novel Anandamath. It was first sung at the Congress session of 1896 and is India's national song.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Bhagat Singh and Batukeshwar Dutt threw bombs in the Central Legislative Assembly in 1929 to protest against:",
+    "options": [
+      "The Public Safety Bill and the Trade Disputes Bill",
+      "The Rowlatt Act",
+      "The Simon Commission",
+      "The partition of Bengal"
+    ],
+    "answer": 0,
+    "explanation": "They aimed to make the deaf hear rather than to kill, and courted arrest. Bhagat Singh, Rajguru and Sukhdev were hanged in 1931 in the Lahore Conspiracy Case.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "revolutionaries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "Who declared 'Swaraj is my birthright and I shall have it'?",
+    "options": [
+      "Lala Lajpat Rai",
+      "Bal Gangadhar Tilak",
+      "Bipin Chandra Pal",
+      "Gopal Krishna Gokhale"
+    ],
+    "answer": 1,
+    "explanation": "Bal Gangadhar Tilak, called the Father of Indian Unrest, popularised Ganapati and Shivaji festivals and started the newspapers Kesari and Maratha.",
+    "difficulty": 1,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The 'Drain of Wealth' theory was expounded by whom?",
+    "options": [
+      "R.C. Dutt",
+      "M.G. Ranade",
+      "Dadabhai Naoroji",
+      "Gopal Krishna Gokhale"
+    ],
+    "answer": 2,
+    "explanation": "Dadabhai Naoroji explained the theory in Poverty and Un-British Rule in India. Known as the Grand Old Man of India, he was also the first Indian in the British House of Commons.",
+    "difficulty": 2,
+    "tags": [
+      "modern-india",
+      "freedom-struggle"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "indian-history",
+    "question": "The Vernacular Press Act of 1878 was passed during the viceroyalty of whom?",
+    "options": [
+      "Lord Ripon",
+      "Lord Curzon",
+      "Lord Dufferin",
+      "Lord Lytton"
+    ],
+    "answer": 3,
+    "explanation": "Lytton's Act curbed Indian language newspapers while exempting the English press, and was repealed by Lord Ripon in 1882. Lytton also held the Delhi Durbar of 1877.",
+    "difficulty": 3,
+    "tags": [
+      "modern-india",
+      "important-acts"
+    ],
+    "source": "seed"
+  }
+]

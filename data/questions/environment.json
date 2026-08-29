@@ -1,0 +1,1442 @@
+[
+  {
+    "topic": "environment",
+    "question": "Who coined the term 'Ecology'?",
+    "options": [
+      "Charles Darwin",
+      "Eugene Odum",
+      "Ernst Haeckel",
+      "Charles Elton"
+    ],
+    "answer": 2,
+    "explanation": "The German biologist Ernst Haeckel coined the term 'Ecology' in 1866, from the Greek 'oikos' (house) and 'logos' (study), to mean the study of organisms in relation to their surroundings.",
+    "difficulty": 1,
+    "tags": [
+      "ecology",
+      "basics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "In a food chain, green plants occupy which trophic level?",
+    "options": [
+      "First trophic level",
+      "Second trophic level",
+      "Third trophic level",
+      "Fourth trophic level"
+    ],
+    "answer": 0,
+    "explanation": "Green plants are producers (autotrophs) and always form the first trophic level, since they capture solar energy and make it available to all other levels.",
+    "difficulty": 1,
+    "tags": [
+      "food-chain",
+      "trophic-levels"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The 'ten per cent law' of energy transfer between trophic levels was proposed by",
+    "options": [
+      "Charles Elton",
+      "Arthur Tansley",
+      "Ernst Haeckel",
+      "Raymond Lindeman"
+    ],
+    "answer": 3,
+    "explanation": "Raymond Lindeman proposed in 1942 that only about 10% of the energy at one trophic level is transferred to the next, the rest being lost mainly as heat in respiration.",
+    "difficulty": 3,
+    "tags": [
+      "food-chain",
+      "energy-flow"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which ecological pyramid is always upright in every ecosystem?",
+    "options": [
+      "Pyramid of numbers",
+      "Pyramid of energy",
+      "Pyramid of biomass",
+      "Pyramid of decomposers"
+    ],
+    "answer": 1,
+    "explanation": "Because energy is lost as heat at each transfer, the energy available always decreases from producers upwards, so the pyramid of energy can never be inverted. Pyramids of number and biomass can be inverted.",
+    "difficulty": 2,
+    "tags": [
+      "ecology",
+      "energy-flow"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Bacteria and fungi that break down dead plants and animals in an ecosystem are called",
+    "options": [
+      "Producers",
+      "Decomposers",
+      "Primary consumers",
+      "Secondary consumers"
+    ],
+    "answer": 1,
+    "explanation": "Decomposers (saprotrophs) release enzymes that break down dead organic matter, returning nutrients such as nitrogen and phosphorus to the soil for reuse by producers.",
+    "difficulty": 1,
+    "tags": [
+      "ecology",
+      "decomposers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The flow of energy through an ecosystem is",
+    "options": [
+      "cyclic",
+      "bidirectional",
+      "reversible",
+      "unidirectional"
+    ],
+    "answer": 3,
+    "explanation": "Energy enters as sunlight, passes from producers to consumers and is finally lost as heat, so it flows in one direction only. Nutrients, in contrast, are recycled through biogeochemical cycles.",
+    "difficulty": 2,
+    "tags": [
+      "ecology",
+      "energy-flow"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which biome is characterised by permanently frozen subsoil (permafrost), mosses and lichens?",
+    "options": [
+      "Tundra",
+      "Taiga",
+      "Savanna",
+      "Chaparral"
+    ],
+    "answer": 0,
+    "explanation": "The tundra lies beyond the tree line in the far north and on high mountains; its permafrost prevents deep roots, so vegetation is limited to mosses, lichens and dwarf shrubs.",
+    "difficulty": 1,
+    "tags": [
+      "biomes",
+      "ecology"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "How many of the world's biodiversity hotspots extend into India?",
+    "options": [
+      "Two",
+      "Six",
+      "Four",
+      "Eight"
+    ],
+    "answer": 2,
+    "explanation": "Four hotspots cover parts of India: the Himalaya, the Western Ghats-Sri Lanka, Indo-Burma, and Sundaland (represented by the Nicobar Islands).",
+    "difficulty": 2,
+    "tags": [
+      "biodiversity",
+      "hotspots"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The term 'biodiversity hotspot' was coined by",
+    "options": [
+      "Norman Myers",
+      "E. O. Wilson",
+      "Eugene Odum",
+      "Madhav Gadgil"
+    ],
+    "answer": 0,
+    "explanation": "British ecologist Norman Myers introduced the concept in 1988. A hotspot must have at least 1,500 endemic vascular plant species and have lost 70% or more of its original vegetation.",
+    "difficulty": 3,
+    "tags": [
+      "biodiversity",
+      "hotspots"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Nicobar Islands of India form part of which biodiversity hotspot?",
+    "options": [
+      "Himalaya",
+      "Indo-Burma",
+      "Sundaland",
+      "Western Ghats-Sri Lanka"
+    ],
+    "answer": 2,
+    "explanation": "The Sundaland hotspot covers the Malay Peninsula and the western Indonesian islands; within India only the Nicobar group falls in it, while the Andamans belong to Indo-Burma.",
+    "difficulty": 3,
+    "tags": [
+      "biodiversity",
+      "hotspots"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Species that are found naturally in one particular region and nowhere else in the world are called",
+    "options": [
+      "exotic species",
+      "endemic species",
+      "invasive species",
+      "keystone species"
+    ],
+    "answer": 1,
+    "explanation": "Endemic species have a restricted natural range, which makes them highly vulnerable to extinction. The lion-tailed macaque of the Western Ghats and the Nilgiri tahr are Indian examples.",
+    "difficulty": 1,
+    "tags": [
+      "biodiversity",
+      "species"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "India's first national park, established in 1936 as Hailey National Park, is today known as",
+    "options": [
+      "Kaziranga National Park",
+      "Gir National Park",
+      "Bandipur National Park",
+      "Jim Corbett National Park"
+    ],
+    "answer": 3,
+    "explanation": "Set up in 1936 in the Nainital region of present-day Uttarakhand, it was renamed in 1957 after the hunter-turned-conservationist Jim Corbett.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "protected-areas"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Kaziranga National Park, famous for the one-horned rhinoceros, is located in",
+    "options": [
+      "Odisha",
+      "West Bengal",
+      "Arunachal Pradesh",
+      "Assam"
+    ],
+    "answer": 3,
+    "explanation": "Kaziranga lies on the floodplain of the Brahmaputra in Assam, is a UNESCO World Heritage Site, and holds roughly two-thirds of the world's greater one-horned rhinos.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "state-mapping"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Asiatic lion survives in the wild only in which state?",
+    "options": [
+      "Rajasthan",
+      "Gujarat",
+      "Karnataka",
+      "Madhya Pradesh"
+    ],
+    "answer": 1,
+    "explanation": "The Gir forest and its surrounding landscape in Saurashtra, Gujarat, is the last natural home of the Asiatic lion, protected since Gir National Park and Sanctuary were notified.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "endangered-species"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Kanha and Bandhavgarh National Parks are located in which state?",
+    "options": [
+      "Maharashtra",
+      "Chhattisgarh",
+      "Madhya Pradesh",
+      "Odisha"
+    ],
+    "answer": 2,
+    "explanation": "Both are tiger reserves in Madhya Pradesh, often called the 'Tiger State'. Kanha is also known for saving the hard-ground barasingha (swamp deer) from extinction.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "state-mapping"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Keibul Lamjao, the world's only floating national park, is situated in",
+    "options": [
+      "Manipur",
+      "Assam",
+      "Meghalaya",
+      "Tripura"
+    ],
+    "answer": 0,
+    "explanation": "Keibul Lamjao floats on the phumdis (mats of decomposing vegetation) of Loktak Lake in Manipur and is the last natural refuge of the sangai, the brow-antlered deer.",
+    "difficulty": 2,
+    "tags": [
+      "national-parks",
+      "state-mapping"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Keoladeo Ghana National Park, a celebrated bird sanctuary and Ramsar site, is in",
+    "options": [
+      "Gujarat",
+      "Uttar Pradesh",
+      "Rajasthan",
+      "Madhya Pradesh"
+    ],
+    "answer": 2,
+    "explanation": "Located at Bharatpur in Rajasthan, this man-made wetland is a UNESCO World Heritage Site and was once the wintering ground of the Siberian crane.",
+    "difficulty": 1,
+    "tags": [
+      "national-parks",
+      "ramsar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Sundarbans, the largest mangrove forest in the world, is best known as the habitat of the",
+    "options": [
+      "Royal Bengal tiger",
+      "Asiatic lion",
+      "one-horned rhinoceros",
+      "snow leopard"
+    ],
+    "answer": 0,
+    "explanation": "The Sundarbans delta of West Bengal and Bangladesh supports a unique population of Royal Bengal tigers adapted to swimming in saline creeks; it is a UNESCO World Heritage Site and a biosphere reserve.",
+    "difficulty": 1,
+    "tags": [
+      "mangroves",
+      "national-parks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Namdapha National Park, India's easternmost large protected area, is located in",
+    "options": [
+      "Sikkim",
+      "Nagaland",
+      "Mizoram",
+      "Arunachal Pradesh"
+    ],
+    "answer": 3,
+    "explanation": "Namdapha in Arunachal Pradesh is the only park in the world known to contain four big cats - tiger, leopard, clouded leopard and snow leopard - because its altitude ranges from about 200 m to over 4,500 m.",
+    "difficulty": 2,
+    "tags": [
+      "national-parks",
+      "state-mapping"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which was the first biosphere reserve to be notified in India, in 1986?",
+    "options": [
+      "Nanda Devi Biosphere Reserve",
+      "Nilgiri Biosphere Reserve",
+      "Gulf of Mannar Biosphere Reserve",
+      "Sundarbans Biosphere Reserve"
+    ],
+    "answer": 1,
+    "explanation": "The Nilgiri Biosphere Reserve, spread over Tamil Nadu, Kerala and Karnataka, was notified in 1986 as India's first, and includes Silent Valley, Mudumalai, Bandipur and Wayanad.",
+    "difficulty": 2,
+    "tags": [
+      "biosphere-reserves",
+      "protected-areas"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which of the following is NOT one of the standard zones of a biosphere reserve?",
+    "options": [
+      "Core zone",
+      "Commercial zone",
+      "Buffer zone",
+      "Transition zone"
+    ],
+    "answer": 1,
+    "explanation": "A biosphere reserve has a strictly protected core zone, a buffer zone allowing research and eco-tourism, and a transition zone where sustainable human activity is permitted.",
+    "difficulty": 1,
+    "tags": [
+      "biosphere-reserves",
+      "conservation"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Man and the Biosphere (MAB) Programme, under which biosphere reserves are designated, was launched in 1971 by",
+    "options": [
+      "UNEP",
+      "IUCN",
+      "WWF",
+      "UNESCO"
+    ],
+    "answer": 3,
+    "explanation": "UNESCO launched the intergovernmental Man and the Biosphere Programme in 1971 to reconcile conservation of biodiversity with its sustainable use by local communities.",
+    "difficulty": 2,
+    "tags": [
+      "biosphere-reserves",
+      "conventions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Project Tiger was launched in India in the year",
+    "options": [
+      "1973",
+      "1952",
+      "1969",
+      "1986"
+    ],
+    "answer": 0,
+    "explanation": "Project Tiger began in 1973 as a centrally sponsored scheme to conserve the tiger in designated reserves; it is now overseen by the National Tiger Conservation Authority.",
+    "difficulty": 1,
+    "tags": [
+      "project-tiger",
+      "conservation"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Project Tiger was formally launched from which protected area?",
+    "options": [
+      "Kanha National Park",
+      "Ranthambore National Park",
+      "Jim Corbett National Park",
+      "Bandipur National Park"
+    ],
+    "answer": 2,
+    "explanation": "The programme was inaugurated at Jim Corbett National Park in Uttarakhand in 1973, which became the first of the nine original tiger reserves.",
+    "difficulty": 2,
+    "tags": [
+      "project-tiger",
+      "national-parks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Project Elephant was launched by the Government of India in",
+    "options": [
+      "1992",
+      "1973",
+      "1983",
+      "2001"
+    ],
+    "answer": 0,
+    "explanation": "Project Elephant, started in 1992, protects elephants, their habitat and migration corridors, and addresses human-elephant conflict and welfare of captive elephants.",
+    "difficulty": 2,
+    "tags": [
+      "project-elephant",
+      "conservation"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which animal was declared the National Aquatic Animal of India in 2009?",
+    "options": [
+      "Olive Ridley turtle",
+      "Dugong",
+      "Gangetic river dolphin",
+      "Gharial"
+    ],
+    "answer": 2,
+    "explanation": "The Gangetic river dolphin, a nearly blind freshwater dolphin that navigates by echolocation, was declared the National Aquatic Animal in 2009 to highlight the health of the Ganga river system.",
+    "difficulty": 2,
+    "tags": [
+      "national-symbols",
+      "endangered-species"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The International Union for Conservation of Nature (IUCN) has its headquarters at",
+    "options": [
+      "Nairobi, Kenya",
+      "Gland, Switzerland",
+      "Geneva, Switzerland",
+      "Bonn, Germany"
+    ],
+    "answer": 1,
+    "explanation": "Founded in 1948, the IUCN is headquartered at Gland in Switzerland and publishes the Red List of Threatened Species, the world's standard inventory of extinction risk.",
+    "difficulty": 3,
+    "tags": [
+      "iucn",
+      "conservation"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "In the IUCN Red List, which of these categories indicates the highest risk of extinction in the wild?",
+    "options": [
+      "Endangered",
+      "Vulnerable",
+      "Near Threatened",
+      "Critically Endangered"
+    ],
+    "answer": 3,
+    "explanation": "The threatened categories in decreasing order of risk are Critically Endangered, Endangered and Vulnerable; above them lie Extinct in the Wild and Extinct.",
+    "difficulty": 1,
+    "tags": [
+      "iucn",
+      "red-list"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Great Indian Bustard, whose wild population is down to a few hundred birds, is listed by the IUCN as",
+    "options": [
+      "Vulnerable",
+      "Near Threatened",
+      "Least Concern",
+      "Critically Endangered"
+    ],
+    "answer": 3,
+    "explanation": "The Great Indian Bustard, the state bird of Rajasthan, is Critically Endangered; collision with power lines across the Thar desert is a major cause of its decline.",
+    "difficulty": 2,
+    "tags": [
+      "iucn",
+      "endangered-species"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Ramsar Convention, the international treaty on wetlands, was signed in 1971 in",
+    "options": [
+      "Sweden",
+      "Iran",
+      "Switzerland",
+      "Japan"
+    ],
+    "answer": 1,
+    "explanation": "The convention was signed in the Iranian city of Ramsar on the Caspian coast in 1971 and provides the framework for conserving wetlands of international importance.",
+    "difficulty": 1,
+    "tags": [
+      "ramsar",
+      "conventions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which two wetlands were designated as India's first Ramsar sites in 1981?",
+    "options": [
+      "Vembanad and Ashtamudi",
+      "Loktak Lake and Wular Lake",
+      "Chilika Lake and Keoladeo National Park",
+      "Sambhar Lake and Harike Wetland"
+    ],
+    "answer": 2,
+    "explanation": "Chilika Lake in Odisha and Keoladeo National Park in Rajasthan became India's first Ramsar sites in 1981, when India acceded to the convention.",
+    "difficulty": 2,
+    "tags": [
+      "ramsar",
+      "wetlands"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Montreux Record lists Ramsar sites facing ecological threat. Which Indian site, along with Keoladeo National Park, is on this record?",
+    "options": [
+      "Loktak Lake",
+      "Chilika Lake",
+      "Vembanad-Kol",
+      "Wular Lake"
+    ],
+    "answer": 0,
+    "explanation": "Loktak Lake in Manipur and Keoladeo National Park are India's entries in the Montreux Record. Chilika was placed on it in 1993 but removed in 2002 after successful restoration.",
+    "difficulty": 3,
+    "tags": [
+      "ramsar",
+      "wetlands"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Environment (Protection) Act, an umbrella law passed in the wake of the Bhopal gas tragedy, was enacted in",
+    "options": [
+      "1972",
+      "1974",
+      "1986",
+      "1980"
+    ],
+    "answer": 2,
+    "explanation": "The Environment (Protection) Act, 1986 was passed under Article 253 to implement the decisions of the 1972 Stockholm Conference and gives the Centre wide powers to regulate all forms of pollution.",
+    "difficulty": 1,
+    "tags": [
+      "environmental-laws",
+      "epa-1986"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Wildlife (Protection) Act, which created national parks, sanctuaries and schedules of protected species, was passed in",
+    "options": [
+      "1972",
+      "1952",
+      "1980",
+      "1986"
+    ],
+    "answer": 0,
+    "explanation": "The Wildlife (Protection) Act, 1972 prohibits hunting of scheduled species and provides for declaring protected areas; Project Tiger was launched under its framework the following year.",
+    "difficulty": 1,
+    "tags": [
+      "environmental-laws",
+      "wildlife-act"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which Act requires prior approval of the Central Government before forest land is diverted for non-forest purposes?",
+    "options": [
+      "The Indian Forest Act, 1927",
+      "The Environment (Protection) Act, 1986",
+      "The Biological Diversity Act, 2002",
+      "The Forest (Conservation) Act, 1980"
+    ],
+    "answer": 3,
+    "explanation": "The Forest (Conservation) Act, 1980 was enacted to check the rapid deforestation caused by states diverting forest land, and made central clearance compulsory for such diversion.",
+    "difficulty": 2,
+    "tags": [
+      "environmental-laws",
+      "forests"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Central Pollution Control Board was constituted under which law?",
+    "options": [
+      "The Air (Prevention and Control of Pollution) Act, 1981",
+      "The Water (Prevention and Control of Pollution) Act, 1974",
+      "The Environment (Protection) Act, 1986",
+      "The Factories Act, 1948"
+    ],
+    "answer": 1,
+    "explanation": "The CPCB was set up in 1974 under the Water Act; the Air Act of 1981 later entrusted it with air pollution control as well.",
+    "difficulty": 2,
+    "tags": [
+      "environmental-laws",
+      "pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The National Green Tribunal, a specialised court for environmental cases, was established in",
+    "options": [
+      "1986",
+      "2010",
+      "2002",
+      "2014"
+    ],
+    "answer": 1,
+    "explanation": "The NGT was created by the National Green Tribunal Act, 2010 for speedy disposal of environmental disputes; its principal bench sits in New Delhi and it must decide cases within six months.",
+    "difficulty": 2,
+    "tags": [
+      "environmental-laws",
+      "ngt"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which Article of the Indian Constitution directs the State to protect and improve the environment and to safeguard forests and wildlife?",
+    "options": [
+      "Article 21",
+      "Article 32",
+      "Article 44",
+      "Article 48A"
+    ],
+    "answer": 3,
+    "explanation": "Article 48A is a Directive Principle inserted by the 42nd Amendment in 1976. The corresponding fundamental duty of citizens is in Article 51A(g).",
+    "difficulty": 2,
+    "tags": [
+      "environmental-laws",
+      "constitution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The National Biodiversity Authority, set up under the Biological Diversity Act, 2002, has its headquarters at",
+    "options": [
+      "Chennai",
+      "New Delhi",
+      "Dehradun",
+      "Hyderabad"
+    ],
+    "answer": 0,
+    "explanation": "The National Biodiversity Authority, based in Chennai, regulates access to India's biological resources and associated traditional knowledge, and works with State Biodiversity Boards and local Biodiversity Management Committees.",
+    "difficulty": 3,
+    "tags": [
+      "environmental-laws",
+      "biodiversity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Kyoto Protocol, which set binding greenhouse gas reduction targets for developed countries, was adopted in",
+    "options": [
+      "1987",
+      "1992",
+      "1997",
+      "2005"
+    ],
+    "answer": 2,
+    "explanation": "The Kyoto Protocol was adopted in Japan in 1997 and entered into force in 2005; it applied the principle of 'common but differentiated responsibilities' by binding only Annex-I countries.",
+    "difficulty": 1,
+    "tags": [
+      "conventions",
+      "climate-change"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Paris Agreement seeks to hold the rise in global average temperature to well below what level above pre-industrial levels?",
+    "options": [
+      "2 degrees Celsius",
+      "1 degree Celsius",
+      "3 degrees Celsius",
+      "4 degrees Celsius"
+    ],
+    "answer": 0,
+    "explanation": "The 2015 Paris Agreement aims to keep warming well below 2 degrees Celsius while pursuing efforts to limit it to 1.5 degrees Celsius, through voluntary Nationally Determined Contributions.",
+    "difficulty": 1,
+    "tags": [
+      "conventions",
+      "climate-change"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Montreal Protocol of 1987 deals with",
+    "options": [
+      "greenhouse gas emissions",
+      "trade in hazardous waste",
+      "substances that deplete the ozone layer",
+      "conservation of wetlands"
+    ],
+    "answer": 2,
+    "explanation": "The Montreal Protocol phases out ozone-depleting substances such as CFCs and halons. It is often called the most successful environmental treaty, as the ozone layer is now slowly recovering.",
+    "difficulty": 1,
+    "tags": [
+      "conventions",
+      "ozone"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "CITES, which came into force in 1975, regulates",
+    "options": [
+      "emission of greenhouse gases",
+      "international trade in endangered species of wild fauna and flora",
+      "dumping of waste at sea",
+      "use of chemical pesticides"
+    ],
+    "answer": 1,
+    "explanation": "The Convention on International Trade in Endangered Species lists species in three Appendices; Appendix I species, such as the tiger, may not be traded commercially at all.",
+    "difficulty": 1,
+    "tags": [
+      "conventions",
+      "cites"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Convention on Biological Diversity was opened for signature at the",
+    "options": [
+      "Stockholm Conference, 1972",
+      "Johannesburg Summit, 2002",
+      "Kyoto Conference, 1997",
+      "Earth Summit at Rio de Janeiro, 1992"
+    ],
+    "answer": 3,
+    "explanation": "The CBD was signed at the 1992 Rio Earth Summit and has three objectives: conservation of biodiversity, sustainable use of its components, and fair sharing of benefits from genetic resources.",
+    "difficulty": 1,
+    "tags": [
+      "conventions",
+      "biodiversity"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The transboundary movement of hazardous wastes between countries is regulated by the",
+    "options": [
+      "Rotterdam Convention",
+      "Bonn Convention",
+      "Vienna Convention",
+      "Basel Convention"
+    ],
+    "answer": 3,
+    "explanation": "The Basel Convention, adopted in 1989, was a response to developed countries dumping toxic waste in poorer nations; it requires prior informed consent before such waste is exported.",
+    "difficulty": 2,
+    "tags": [
+      "conventions",
+      "pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Stockholm Convention of 2001 was adopted to eliminate or restrict",
+    "options": [
+      "ozone-depleting substances",
+      "Persistent Organic Pollutants",
+      "greenhouse gases",
+      "invasive alien species"
+    ],
+    "answer": 1,
+    "explanation": "Persistent Organic Pollutants such as DDT and PCBs resist degradation, travel long distances and accumulate in fatty tissue up the food chain, which is why the Stockholm Convention targets them.",
+    "difficulty": 3,
+    "tags": [
+      "conventions",
+      "pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which greenhouse gas contributes the largest share of human-caused global warming?",
+    "options": [
+      "Methane",
+      "Nitrous oxide",
+      "Carbon dioxide",
+      "Ozone"
+    ],
+    "answer": 2,
+    "explanation": "Although methane traps more heat per molecule, carbon dioxide is emitted in far greater quantities and stays in the atmosphere for centuries, making it the biggest single contributor.",
+    "difficulty": 1,
+    "tags": [
+      "climate-change",
+      "greenhouse-gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Global Warming Potential (GWP) of gases is measured relative to which reference gas, whose GWP is taken as 1?",
+    "options": [
+      "Carbon dioxide",
+      "Methane",
+      "Water vapour",
+      "Nitrous oxide"
+    ],
+    "answer": 0,
+    "explanation": "Carbon dioxide is the benchmark with GWP 1 over 100 years; methane is roughly 28 times and nitrous oxide roughly 265 times as potent over the same period.",
+    "difficulty": 2,
+    "tags": [
+      "climate-change",
+      "greenhouse-gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Intergovernmental Panel on Climate Change (IPCC) was set up in 1988 by the World Meteorological Organization together with",
+    "options": [
+      "UNESCO",
+      "FAO",
+      "UNEP",
+      "UNDP"
+    ],
+    "answer": 2,
+    "explanation": "The IPCC was established jointly by the WMO and the United Nations Environment Programme to assess the science of climate change; it does not do research itself but reviews published work.",
+    "difficulty": 2,
+    "tags": [
+      "climate-change",
+      "ipcc"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The ozone layer that shields the earth is concentrated in which layer of the atmosphere?",
+    "options": [
+      "Stratosphere",
+      "Troposphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "answer": 0,
+    "explanation": "About 90% of atmospheric ozone lies in the stratosphere, roughly 15-35 km up. Ozone at ground level in the troposphere is a harmful pollutant instead.",
+    "difficulty": 1,
+    "tags": [
+      "ozone",
+      "atmosphere"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The seasonal 'ozone hole' is most severe over which region?",
+    "options": [
+      "The Arctic",
+      "The Sahara",
+      "The Equator",
+      "Antarctica"
+    ],
+    "answer": 3,
+    "explanation": "Extremely cold polar stratospheric clouds over Antarctica in winter allow chlorine to be converted into forms that destroy ozone rapidly when sunlight returns in the southern spring.",
+    "difficulty": 1,
+    "tags": [
+      "ozone",
+      "atmosphere"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Ozone in the stratosphere is destroyed mainly by which atoms released from chlorofluorocarbons?",
+    "options": [
+      "Nitrogen",
+      "Chlorine",
+      "Sulphur",
+      "Carbon"
+    ],
+    "answer": 1,
+    "explanation": "Ultraviolet light splits CFC molecules, freeing chlorine atoms that act as catalysts: a single chlorine atom can destroy tens of thousands of ozone molecules before being removed.",
+    "difficulty": 2,
+    "tags": [
+      "ozone",
+      "pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Paddy fields and the digestive systems of cattle are major sources of which greenhouse gas?",
+    "options": [
+      "Carbon dioxide",
+      "Methane",
+      "Nitrous oxide",
+      "Sulphur dioxide"
+    ],
+    "answer": 1,
+    "explanation": "Flooded paddy fields and enteric fermentation in ruminants generate methane through anaerobic decomposition; agriculture is therefore a leading source of India's methane emissions.",
+    "difficulty": 2,
+    "tags": [
+      "climate-change",
+      "greenhouse-gases"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "A high Biochemical Oxygen Demand (BOD) value of a water sample indicates",
+    "options": [
+      "very clean water",
+      "high salinity",
+      "high radioactivity",
+      "heavy organic pollution"
+    ],
+    "answer": 3,
+    "explanation": "BOD measures the oxygen needed by microbes to break down organic matter; the more organic waste present, the higher the BOD and the less dissolved oxygen left for fish and other aquatic life.",
+    "difficulty": 2,
+    "tags": [
+      "pollution",
+      "water-pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Minamata disease, first reported in Japan, is caused by poisoning from",
+    "options": [
+      "mercury",
+      "cadmium",
+      "lead",
+      "arsenic"
+    ],
+    "answer": 0,
+    "explanation": "Industrial discharge of methylmercury into Minamata Bay accumulated in fish and caused severe neurological damage in people who ate them. The Minamata Convention of 2013 now regulates mercury.",
+    "difficulty": 2,
+    "tags": [
+      "pollution",
+      "health"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Blue baby syndrome (methaemoglobinaemia) in infants is caused by drinking water contaminated with",
+    "options": [
+      "fluorides",
+      "chlorides",
+      "nitrates",
+      "sulphates"
+    ],
+    "answer": 2,
+    "explanation": "Excess nitrate, usually from fertiliser runoff, is converted to nitrite in the body and binds haemoglobin so it cannot carry oxygen, giving the infant a bluish tinge.",
+    "difficulty": 3,
+    "tags": [
+      "pollution",
+      "water-pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The enrichment of a water body with nutrients, leading to algal blooms and oxygen depletion, is called",
+    "options": [
+      "eutrophication",
+      "biomagnification",
+      "salinisation",
+      "desertification"
+    ],
+    "answer": 0,
+    "explanation": "Nitrogen and phosphorus from sewage and fertilisers trigger dense algal growth; when the algae die, their decomposition consumes dissolved oxygen and fish die in large numbers.",
+    "difficulty": 2,
+    "tags": [
+      "pollution",
+      "water-pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "India's National Air Quality Index, launched in 2014, is based on how many pollutants?",
+    "options": [
+      "Four",
+      "Six",
+      "Eight",
+      "Ten"
+    ],
+    "answer": 2,
+    "explanation": "The AQI covers PM10, PM2.5, nitrogen dioxide, sulphur dioxide, carbon monoxide, ozone, ammonia and lead, and reports the worst sub-index as the overall value on a 0-500 scale.",
+    "difficulty": 3,
+    "tags": [
+      "pollution",
+      "air-quality"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Acid rain is caused mainly by the atmospheric emission of",
+    "options": [
+      "carbon dioxide and methane",
+      "sulphur dioxide and oxides of nitrogen",
+      "CFCs and halons",
+      "ozone and ammonia"
+    ],
+    "answer": 1,
+    "explanation": "Sulphur dioxide and nitrogen oxides from burning fossil fuels react with water vapour to form sulphuric and nitric acids, which damage crops, soils, aquatic life and even marble monuments.",
+    "difficulty": 1,
+    "tags": [
+      "pollution",
+      "air-pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The main constituent of biogas produced from cow dung and organic waste is",
+    "options": [
+      "carbon dioxide",
+      "hydrogen",
+      "butane",
+      "methane"
+    ],
+    "answer": 3,
+    "explanation": "Biogas is typically 50-70% methane with most of the remainder carbon dioxide; anaerobic bacteria produce it in the absence of oxygen, and the leftover slurry is a good manure.",
+    "difficulty": 1,
+    "tags": [
+      "renewable-energy",
+      "biogas"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The International Solar Alliance, launched in 2015, has its headquarters in",
+    "options": [
+      "Paris, France",
+      "Abu Dhabi, UAE",
+      "Nairobi, Kenya",
+      "Gurugram, India"
+    ],
+    "answer": 3,
+    "explanation": "The ISA was launched jointly by India and France at the Paris climate conference in 2015 and is headquartered at Gwal Pahari, Gurugram - the first international body with its seat in India.",
+    "difficulty": 2,
+    "tags": [
+      "renewable-energy",
+      "solar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Bhadla Solar Park, among the largest solar installations in the world, is located in which state?",
+    "options": [
+      "Gujarat",
+      "Rajasthan",
+      "Karnataka",
+      "Tamil Nadu"
+    ],
+    "answer": 1,
+    "explanation": "Bhadla Solar Park lies in the Thar desert in Jodhpur district, Rajasthan, where very high solar insolation and cheap barren land make large photovoltaic parks viable.",
+    "difficulty": 3,
+    "tags": [
+      "renewable-energy",
+      "solar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The National Action Plan on Climate Change, released by India in 2008, originally comprised how many national missions?",
+    "options": [
+      "Four",
+      "Six",
+      "Eight",
+      "Twelve"
+    ],
+    "answer": 2,
+    "explanation": "The NAPCC's eight missions cover solar energy, enhanced energy efficiency, sustainable habitat, water, sustaining the Himalayan ecosystem, a Green India, sustainable agriculture and strategic knowledge for climate change.",
+    "difficulty": 2,
+    "tags": [
+      "climate-change",
+      "policy"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Chipko movement, in which villagers hugged trees to stop felling, began in 1973 in the hills of",
+    "options": [
+      "Uttarakhand",
+      "Himachal Pradesh",
+      "Karnataka",
+      "Jharkhand"
+    ],
+    "answer": 0,
+    "explanation": "The movement started at Mandal and later Reni village in the Chamoli district of what is now Uttarakhand, where women led by Gaura Devi clasped trees to prevent contractors from cutting them.",
+    "difficulty": 1,
+    "tags": [
+      "movements",
+      "chipko"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which environmentalist, known for the slogan 'ecology is permanent economy', led the Chipko movement?",
+    "options": [
+      "Medha Patkar",
+      "Baba Amte",
+      "Sunderlal Bahuguna",
+      "Vandana Shiva"
+    ],
+    "answer": 2,
+    "explanation": "Sunderlal Bahuguna popularised the Chipko movement through long foot marches across the Himalaya and later opposed the Tehri dam; Chandi Prasad Bhatt was the other key Chipko leader.",
+    "difficulty": 1,
+    "tags": [
+      "movements",
+      "environmentalists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Appiko movement, inspired by Chipko, was launched in 1983 in which state?",
+    "options": [
+      "Karnataka",
+      "Kerala",
+      "Maharashtra",
+      "Andhra Pradesh"
+    ],
+    "answer": 0,
+    "explanation": "Led by Panduranga Hegde in the Uttara Kannada district of Karnataka, 'Appiko' means 'to hug' in Kannada; villagers embraced trees to stop commercial felling in the Western Ghats.",
+    "difficulty": 3,
+    "tags": [
+      "movements",
+      "western-ghats"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Narmada Bachao Andolan, opposing large dams on the Narmada, is most closely associated with",
+    "options": [
+      "Sunderlal Bahuguna",
+      "Sugathakumari",
+      "M. C. Mehta",
+      "Medha Patkar"
+    ],
+    "answer": 3,
+    "explanation": "Medha Patkar has led the Narmada Bachao Andolan since the 1980s, raising the issue of displacement and rehabilitation of people affected by the Sardar Sarovar and other dams.",
+    "difficulty": 1,
+    "tags": [
+      "movements",
+      "environmentalists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The 1962 book 'Silent Spring', which exposed the dangers of pesticides such as DDT, was written by",
+    "options": [
+      "Wangari Maathai",
+      "Rachel Carson",
+      "Vandana Shiva",
+      "Jane Goodall"
+    ],
+    "answer": 1,
+    "explanation": "Rachel Carson's 'Silent Spring' showed how DDT accumulated in food chains and thinned bird eggshells; it is widely credited with launching the modern environmental movement.",
+    "difficulty": 2,
+    "tags": [
+      "environmentalists",
+      "pollution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "World Environment Day is observed every year on",
+    "options": [
+      "22 April",
+      "5 June",
+      "16 September",
+      "2 February"
+    ],
+    "answer": 1,
+    "explanation": "The United Nations designated 5 June to mark the opening of the 1972 Stockholm Conference on the Human Environment; it has been observed since 1974 with a different global theme each year.",
+    "difficulty": 1,
+    "tags": [
+      "important-days",
+      "environment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Earth Day is observed internationally on",
+    "options": [
+      "5 June",
+      "22 March",
+      "3 March",
+      "22 April"
+    ],
+    "answer": 3,
+    "explanation": "Earth Day has been marked on 22 April since 1970, when mass demonstrations in the United States helped create public support for modern environmental legislation.",
+    "difficulty": 1,
+    "tags": [
+      "important-days",
+      "environment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "World Wetlands Day, marking the signing of the Ramsar Convention, is observed on",
+    "options": [
+      "2 February",
+      "5 June",
+      "22 March",
+      "22 May"
+    ],
+    "answer": 0,
+    "explanation": "The Ramsar Convention was signed on 2 February 1971, and the day is used to highlight the role of wetlands in flood control, groundwater recharge and supporting biodiversity.",
+    "difficulty": 2,
+    "tags": [
+      "important-days",
+      "ramsar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Silent Valley National Park is located in which district of Kerala?",
+    "options": [
+      "Idukki",
+      "Wayanad",
+      "Palakkad",
+      "Thrissur"
+    ],
+    "answer": 2,
+    "explanation": "Silent Valley, one of the last undisturbed tracts of tropical evergreen forest in India, lies in the Palakkad district and is famous for its lion-tailed macaques.",
+    "difficulty": 1,
+    "tags": [
+      "kerala",
+      "national-parks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Silent Valley movement was launched to stop a hydroelectric project on which river?",
+    "options": [
+      "Kunthipuzha",
+      "Periyar",
+      "Chaliyar",
+      "Bharathappuzha"
+    ],
+    "answer": 0,
+    "explanation": "The proposed dam across the Kunthipuzha, a tributary of the Bharathappuzha, would have submerged the core of the rainforest; sustained protest led to the project being abandoned.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "movements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Silent Valley hydroelectric project was finally abandoned in 1983 during the prime ministership of",
+    "options": [
+      "Morarji Desai",
+      "Rajiv Gandhi",
+      "Indira Gandhi",
+      "Charan Singh"
+    ],
+    "answer": 2,
+    "explanation": "After an expert committee headed by M. G. K. Menon reported against it, the Centre under Indira Gandhi dropped the project, and Silent Valley was declared a national park in 1984.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "movements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Which Malayalam poet was a leading figure of the Save Silent Valley movement?",
+    "options": [
+      "Balamani Amma",
+      "Sugathakumari",
+      "O. N. V. Kurup",
+      "Vailoppilli Sreedhara Menon"
+    ],
+    "answer": 1,
+    "explanation": "Sugathakumari, through her poem 'Marathinu Stuthi' and the Prakruthi Samrakshana Samithi, gave the Silent Valley campaign its public voice in Kerala.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "environmentalists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Vembanad, a Ramsar site in Kerala, holds which distinction?",
+    "options": [
+      "It is the largest freshwater lake in India",
+      "It is the highest lake in India",
+      "It is the largest salt lake in India",
+      "It is the longest lake in India"
+    ],
+    "answer": 3,
+    "explanation": "Vembanad stretches about 96 km along the Kerala coast, making it the longest lake in India; the Vembanad-Kol wetland was designated a Ramsar site in 2002.",
+    "difficulty": 1,
+    "tags": [
+      "kerala",
+      "ramsar"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The Western Ghats Ecology Expert Panel, whose 2011 report proposed graded ecologically sensitive zones, was headed by",
+    "options": [
+      "K. Kasturirangan",
+      "M. S. Swaminathan",
+      "M. G. K. Menon",
+      "Madhav Gadgil"
+    ],
+    "answer": 3,
+    "explanation": "The Gadgil Committee recommended treating the entire Western Ghats as ecologically sensitive, divided into three zones with graded restrictions on mining, quarrying and large projects.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "western-ghats"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "The high-level working group that reviewed the Gadgil report and recommended that about 37 per cent of the Western Ghats be treated as ecologically sensitive was headed by",
+    "options": [
+      "Madhav Gadgil",
+      "K. Kasturirangan",
+      "R. A. Mashelkar",
+      "Anil Kakodkar"
+    ],
+    "answer": 1,
+    "explanation": "The Kasturirangan committee of 2013 distinguished 'cultural' from 'natural' landscapes and restricted the ecologically sensitive area to about 37% of the Western Ghats, a dilution that remains controversial in Kerala.",
+    "difficulty": 3,
+    "tags": [
+      "kerala",
+      "western-ghats"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Eravikulam National Park in Kerala was established mainly to protect which animal?",
+    "options": [
+      "Lion-tailed macaque",
+      "Indian bison",
+      "Nilgiri tahr",
+      "Nilgiri langur"
+    ],
+    "answer": 2,
+    "explanation": "Eravikulam in Idukki district holds the largest surviving population of the Nilgiri tahr, and also contains Anamudi, the highest peak in South India.",
+    "difficulty": 1,
+    "tags": [
+      "kerala",
+      "national-parks"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "environment",
+    "question": "Periyar Tiger Reserve, one of Kerala's best known protected areas, is situated in which district?",
+    "options": [
+      "Idukki",
+      "Wayanad",
+      "Palakkad",
+      "Kollam"
+    ],
+    "answer": 0,
+    "explanation": "Periyar Tiger Reserve around Thekkady in Idukki district was among the first nine reserves under Project Tiger, and its lake was formed by the Mullaperiyar dam of 1895.",
+    "difficulty": 1,
+    "tags": [
+      "kerala",
+      "project-tiger"
+    ],
+    "source": "seed"
+  }
+]

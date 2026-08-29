@@ -1,0 +1,1442 @@
+[
+  {
+    "topic": "sports",
+    "question": "How many players of a cricket team are on the field at a time while fielding?",
+    "options": [
+      "11",
+      "10",
+      "12",
+      "9"
+    ],
+    "answer": 0,
+    "explanation": "A cricket team fields 11 players, including the wicketkeeper and the bowler. A substitute may field for an injured player but cannot bat, bowl or keep wickets.",
+    "difficulty": 1,
+    "tags": [
+      "team-size",
+      "cricket"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many players does each side have on court in volleyball?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "Volleyball is played with six players per side, who rotate clockwise each time their team wins back the serve. One of them may be designated a specialist defender called the libero.",
+    "difficulty": 1,
+    "tags": [
+      "team-size",
+      "volleyball"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many players are there on each side in kabaddi?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "Kabaddi is played by seven players per side on the mat, with five substitutes. The raider must cross into the opponents' half and return without being tackled.",
+    "difficulty": 1,
+    "tags": [
+      "team-size",
+      "kabaddi"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many players from each team are on the court in basketball?",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "Basketball is played five-a-side. The game was invented by Dr James Naismith in 1891 in Springfield, Massachusetts, USA.",
+    "difficulty": 1,
+    "tags": [
+      "team-size",
+      "basketball"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many players make up a water polo team in the pool?",
+    "options": [
+      "7",
+      "6",
+      "5",
+      "9"
+    ],
+    "answer": 0,
+    "explanation": "A water polo team has seven players in the water, six outfield players and a goalkeeper. It was the first team sport introduced at the modern Olympic Games, in 1900.",
+    "difficulty": 3,
+    "tags": [
+      "team-size",
+      "water-polo"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many players does a field hockey team have on the field?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "Field hockey is played with eleven players a side, including the goalkeeper. The international governing body is the International Hockey Federation (FIH), based in Lausanne.",
+    "difficulty": 1,
+    "tags": [
+      "team-size",
+      "hockey"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many players form a team in the game of polo?",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "Polo is played by four mounted players per side, who use long-handled mallets to drive a ball into the opposing goal. The modern game grew out of Manipur's sagol kangjei, taken up by British planters who founded the first polo club at Silchar in 1859.",
+    "difficulty": 3,
+    "tags": [
+      "team-size",
+      "polo"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many players are there in a baseball team?",
+    "options": [
+      "11",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "A baseball team fields nine players, and a batting order of nine also takes turns to bat. Baseball is widely regarded as the national game of the United States.",
+    "difficulty": 2,
+    "tags": [
+      "team-size",
+      "baseball"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The term 'googly' is associated with which sport?",
+    "options": [
+      "Cricket",
+      "Hockey",
+      "Football",
+      "Tennis"
+    ],
+    "answer": 0,
+    "explanation": "A googly is a delivery bowled by a leg-spinner that turns the opposite way to the expected leg-break. It is also called a 'wrong 'un' in Australia.",
+    "difficulty": 1,
+    "tags": [
+      "terminology",
+      "cricket"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The terms 'birdie', 'eagle' and 'bogey' belong to which sport?",
+    "options": [
+      "Archery",
+      "Golf",
+      "Shooting",
+      "Polo"
+    ],
+    "answer": 1,
+    "explanation": "In golf these terms describe a score relative to par: a birdie is one under par, an eagle two under, and a bogey one over par.",
+    "difficulty": 1,
+    "tags": [
+      "terminology",
+      "golf"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The term 'bully' is used in which sport?",
+    "options": [
+      "Cricket",
+      "Badminton",
+      "Hockey",
+      "Golf"
+    ],
+    "answer": 2,
+    "explanation": "The bully was the traditional way of restarting play in field hockey, with two opponents tapping sticks over the ball. It has largely been replaced by the free hit in the modern rules.",
+    "difficulty": 2,
+    "tags": [
+      "terminology",
+      "hockey"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The term 'deuce' is used in which sport?",
+    "options": [
+      "Chess",
+      "Boxing",
+      "Weightlifting",
+      "Tennis"
+    ],
+    "answer": 3,
+    "explanation": "Deuce in tennis is the score of 40-40, from which a player must win two consecutive points to take the game. The point won after deuce is called 'advantage'.",
+    "difficulty": 1,
+    "tags": [
+      "terminology",
+      "tennis"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "'Butterfly' is a term associated with which sport?",
+    "options": [
+      "Swimming",
+      "Boxing",
+      "Wrestling",
+      "Judo"
+    ],
+    "answer": 0,
+    "explanation": "Butterfly is one of the four competitive swimming strokes, along with freestyle, backstroke and breaststroke. It is the newest of the four, recognised as a separate stroke in 1952.",
+    "difficulty": 1,
+    "tags": [
+      "terminology",
+      "swimming"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The term 'scrum' is associated with which sport?",
+    "options": [
+      "Basketball",
+      "Rugby",
+      "Hockey",
+      "Baseball"
+    ],
+    "answer": 1,
+    "explanation": "A scrum is the method of restarting play in rugby, with forwards from both teams binding together and pushing for the ball. Rugby union is played with 15 players per side.",
+    "difficulty": 2,
+    "tags": [
+      "terminology",
+      "rugby"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The term 'half nelson' is used in which sport?",
+    "options": [
+      "Boxing",
+      "Fencing",
+      "Wrestling",
+      "Archery"
+    ],
+    "answer": 2,
+    "explanation": "The half nelson is a wrestling hold in which one arm is passed under the opponent's arm and the hand placed on the back of the neck. Wrestling has been an Olympic sport since the ancient Games.",
+    "difficulty": 3,
+    "tags": [
+      "terminology",
+      "wrestling"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The terms 'checkmate' and 'stalemate' belong to which game?",
+    "options": [
+      "Carrom",
+      "Billiards",
+      "Bridge",
+      "Chess"
+    ],
+    "answer": 3,
+    "explanation": "Chess ends in checkmate when a king is attacked and cannot escape, and in stalemate, a draw, when a player has no legal move but is not in check. The board has 64 squares.",
+    "difficulty": 1,
+    "tags": [
+      "terminology",
+      "chess"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Ranji Trophy is associated with which sport?",
+    "options": [
+      "Cricket",
+      "Hockey",
+      "Football",
+      "Badminton"
+    ],
+    "answer": 0,
+    "explanation": "The Ranji Trophy is India's premier domestic first-class cricket championship, started in 1934 and named after Ranjitsinhji, the Jam Saheb of Nawanagar.",
+    "difficulty": 1,
+    "tags": [
+      "trophies",
+      "cricket"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Santosh Trophy is contested in which sport?",
+    "options": [
+      "Hockey",
+      "Football",
+      "Volleyball",
+      "Kabaddi"
+    ],
+    "answer": 1,
+    "explanation": "The Santosh Trophy is the national football championship for Indian states and units, first held in 1941. Kerala and West Bengal are among its most successful teams.",
+    "difficulty": 1,
+    "tags": [
+      "trophies",
+      "football"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Thomas Cup is associated with which sport?",
+    "options": [
+      "Tennis",
+      "Table tennis",
+      "Badminton",
+      "Squash"
+    ],
+    "answer": 2,
+    "explanation": "The Thomas Cup is the world men's team badminton championship. India won it for the first time in 2022, beating Indonesia in the final in Bangkok.",
+    "difficulty": 1,
+    "tags": [
+      "trophies",
+      "badminton"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Davis Cup is associated with which sport?",
+    "options": [
+      "Golf",
+      "Cricket",
+      "Hockey",
+      "Tennis"
+    ],
+    "answer": 3,
+    "explanation": "The Davis Cup is the premier international team competition in men's tennis, begun in 1900. India has reached the final three times, in 1966, 1974 and 1987.",
+    "difficulty": 1,
+    "tags": [
+      "trophies",
+      "tennis"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Uber Cup is the world team championship for women in which sport?",
+    "options": [
+      "Badminton",
+      "Tennis",
+      "Basketball",
+      "Chess"
+    ],
+    "answer": 0,
+    "explanation": "The Uber Cup is the women's world team badminton championship, the counterpart of the men's Thomas Cup. It is named after the English player Betty Uber.",
+    "difficulty": 3,
+    "tags": [
+      "trophies",
+      "badminton"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Aga Khan Cup is associated with which sport?",
+    "options": [
+      "Cricket",
+      "Hockey",
+      "Polo",
+      "Football"
+    ],
+    "answer": 1,
+    "explanation": "The Aga Khan Cup is one of India's oldest hockey tournaments, first held in Bombay in 1896. The Beighton Cup of Kolkata is another historic Indian hockey tournament.",
+    "difficulty": 3,
+    "tags": [
+      "trophies",
+      "hockey"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Swaythling Cup is awarded in which sport?",
+    "options": [
+      "Badminton",
+      "Volleyball",
+      "Table tennis",
+      "Chess"
+    ],
+    "answer": 2,
+    "explanation": "The Swaythling Cup is the men's team trophy at the World Table Tennis Championships; the women's equivalent is the Corbillon Cup.",
+    "difficulty": 3,
+    "tags": [
+      "trophies",
+      "table-tennis"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Durand Cup, the oldest football tournament in Asia, is named after Mortimer Durand and is contested in which sport?",
+    "options": [
+      "Hockey",
+      "Cricket",
+      "Basketball",
+      "Football"
+    ],
+    "answer": 3,
+    "explanation": "The Durand Cup, started at Shimla in 1888, is Asia's oldest football tournament and the third-oldest in the world. It was named after Sir Mortimer Durand, then Foreign Secretary of British India.",
+    "difficulty": 2,
+    "tags": [
+      "trophies",
+      "football"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The America's Cup is associated with which sport?",
+    "options": [
+      "Yachting",
+      "Rowing",
+      "Swimming",
+      "Cycling"
+    ],
+    "answer": 0,
+    "explanation": "The America's Cup is the oldest international trophy in sport, contested in yacht racing since 1851. It is named after the schooner America, which won the first race.",
+    "difficulty": 3,
+    "tags": [
+      "trophies",
+      "yachting"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The first modern Olympic Games in 1896 were held in which city?",
+    "options": [
+      "Paris",
+      "Athens",
+      "London",
+      "Rome"
+    ],
+    "answer": 1,
+    "explanation": "The first modern Olympic Games were held at Athens, Greece, in 1896, with 14 nations taking part. Greece is honoured by leading the athletes' parade at every opening ceremony.",
+    "difficulty": 1,
+    "tags": [
+      "olympics",
+      "history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who is regarded as the founder of the modern Olympic Games?",
+    "options": [
+      "Avery Brundage",
+      "Demetrius Vikelas",
+      "Pierre de Coubertin",
+      "Juan Antonio Samaranch"
+    ],
+    "answer": 2,
+    "explanation": "The French educationist Baron Pierre de Coubertin founded the International Olympic Committee in 1894 and revived the Olympic Games in 1896. He also designed the five-ring Olympic flag.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many rings are there on the Olympic flag?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "The Olympic flag has five interlocked rings, in blue, yellow, black, green and red on a white ground, representing the five inhabited continents united by Olympism.",
+    "difficulty": 1,
+    "tags": [
+      "olympics",
+      "symbols"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Olympic motto 'Citius, Altius, Fortius' means:",
+    "options": [
+      "Faster, Higher, Stronger",
+      "Stronger, Faster, Higher",
+      "Higher, Faster, Braver",
+      "Faster, Braver, Stronger"
+    ],
+    "answer": 0,
+    "explanation": "The Latin motto 'Citius, Altius, Fortius' means Faster, Higher, Stronger. The word 'Communiter' (Together) was added to the motto in 2021.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "symbols"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "At which Olympic Games did India win its first Olympic gold medal in hockey?",
+    "options": [
+      "1924 Paris",
+      "1928 Amsterdam",
+      "1932 Los Angeles",
+      "1936 Berlin"
+    ],
+    "answer": 1,
+    "explanation": "India won its first Olympic hockey gold at Amsterdam in 1928, with Dhyan Chand as the leading scorer. It was the start of a run of six successive hockey golds.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "hockey"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who was the first Indian to win an individual medal at the Olympic Games?",
+    "options": [
+      "Leander Paes",
+      "Abhinav Bindra",
+      "K. D. Jadhav",
+      "Karnam Malleswari"
+    ],
+    "answer": 2,
+    "explanation": "Wrestler Khashaba Dadasaheb Jadhav won a bronze medal in bantamweight freestyle wrestling at the 1952 Helsinki Olympics, India's first individual Olympic medal.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who won India's first individual Olympic gold medal?",
+    "options": [
+      "Rajyavardhan Singh Rathore",
+      "Neeraj Chopra",
+      "Vijay Kumar",
+      "Abhinav Bindra"
+    ],
+    "answer": 3,
+    "explanation": "Abhinav Bindra won gold in the 10 m air rifle event at the 2008 Beijing Olympics, India's first individual Olympic gold. Rajyavardhan Rathore had won a shooting silver in 2004.",
+    "difficulty": 1,
+    "tags": [
+      "olympics",
+      "shooting"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Neeraj Chopra won a gold medal at the Tokyo 2020 Olympics in which event?",
+    "options": [
+      "Javelin throw",
+      "Discus throw",
+      "Shot put",
+      "Hammer throw"
+    ],
+    "answer": 0,
+    "explanation": "Neeraj Chopra won gold in the men's javelin throw with a best effort of 87.58 m, India's first Olympic gold in athletics. The Tokyo Games were held in 2021 after a pandemic postponement.",
+    "difficulty": 1,
+    "tags": [
+      "olympics",
+      "athletics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who was the first Indian woman to win an Olympic medal?",
+    "options": [
+      "P. T. Usha",
+      "Karnam Malleswari",
+      "Mary Kom",
+      "Saina Nehwal"
+    ],
+    "answer": 1,
+    "explanation": "Weightlifter Karnam Malleswari won a bronze in the 69 kg category at the 2000 Sydney Olympics, becoming the first Indian woman to win an Olympic medal.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "P. V. Sindhu won a silver medal at the 2016 Rio Olympics in which sport?",
+    "options": [
+      "Boxing",
+      "Wrestling",
+      "Badminton",
+      "Shooting"
+    ],
+    "answer": 2,
+    "explanation": "P. V. Sindhu won badminton silver at Rio 2016, then a bronze at Tokyo 2020, making her the first Indian woman to win two individual Olympic medals.",
+    "difficulty": 1,
+    "tags": [
+      "olympics",
+      "badminton"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "How many Olympic gold medals has India won in hockey?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "India has won eight Olympic gold medals in men's hockey, the last of them at Moscow in 1980. Six of these came consecutively between 1928 and 1956.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "hockey"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Where are the headquarters of the International Olympic Committee located?",
+    "options": [
+      "Lausanne",
+      "Zurich",
+      "Geneva",
+      "Brussels"
+    ],
+    "answer": 0,
+    "explanation": "The International Olympic Committee has been headquartered at Lausanne, Switzerland, since 1915, which is why the city is known as the Olympic Capital.",
+    "difficulty": 3,
+    "tags": [
+      "olympics",
+      "organisations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "What is the standard distance of an Olympic marathon?",
+    "options": [
+      "41.195 km",
+      "42.195 km",
+      "43.195 km",
+      "40 km"
+    ],
+    "answer": 1,
+    "explanation": "The marathon is run over 42.195 km (26 miles 385 yards), a distance standardised after the 1908 London Olympics. The race commemorates the legendary run from Marathon to Athens.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "athletics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Leander Paes won a bronze medal at the 1996 Atlanta Olympics in which sport?",
+    "options": [
+      "Boxing",
+      "Shooting",
+      "Tennis",
+      "Wrestling"
+    ],
+    "answer": 2,
+    "explanation": "Leander Paes won the men's singles tennis bronze at Atlanta 1996, India's first individual Olympic medal in 44 years since K. D. Jadhav.",
+    "difficulty": 2,
+    "tags": [
+      "olympics",
+      "tennis"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The first Asian Games in 1951 were held in which city?",
+    "options": [
+      "Manila",
+      "Tokyo",
+      "Jakarta",
+      "New Delhi"
+    ],
+    "answer": 3,
+    "explanation": "The first Asian Games were held at New Delhi in 1951, with Prof. G. D. Sondhi among the prime movers. New Delhi hosted them again in 1982.",
+    "difficulty": 2,
+    "tags": [
+      "asian-games",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "What was the mascot of the 1982 Asian Games held in New Delhi?",
+    "options": [
+      "Appu the elephant",
+      "Shera the tiger",
+      "Bhaga the deer",
+      "Jaadu the alien"
+    ],
+    "answer": 0,
+    "explanation": "Appu, a cartoon elephant, was the mascot of the 1982 Asian Games in New Delhi, the first Games in India telecast in colour.",
+    "difficulty": 3,
+    "tags": [
+      "asian-games",
+      "mascots"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The first Commonwealth Games, then called the British Empire Games, were held in 1930 in which country?",
+    "options": [
+      "Australia",
+      "Canada",
+      "England",
+      "New Zealand"
+    ],
+    "answer": 1,
+    "explanation": "The first British Empire Games were held at Hamilton, Canada, in 1930. The event was renamed the Commonwealth Games in 1978.",
+    "difficulty": 3,
+    "tags": [
+      "commonwealth-games",
+      "history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Shera, a tiger, was the mascot of which multi-sport event hosted by India?",
+    "options": [
+      "1982 Asian Games",
+      "2017 National Games",
+      "2010 Commonwealth Games",
+      "1951 Asian Games"
+    ],
+    "answer": 2,
+    "explanation": "Shera the tiger was the mascot of the 2010 Commonwealth Games in New Delhi, the first Commonwealth Games hosted by India.",
+    "difficulty": 2,
+    "tags": [
+      "commonwealth-games",
+      "mascots"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The 2022 Commonwealth Games were held in which city?",
+    "options": [
+      "Glasgow",
+      "Gold Coast",
+      "Manchester",
+      "Birmingham"
+    ],
+    "answer": 3,
+    "explanation": "Birmingham, England, hosted the 2022 Commonwealth Games. The previous editions were held at Gold Coast (2018) and Glasgow (2014).",
+    "difficulty": 2,
+    "tags": [
+      "commonwealth-games",
+      "venues"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which team won the first Cricket World Cup, held in 1975?",
+    "options": [
+      "West Indies",
+      "Australia",
+      "England",
+      "India"
+    ],
+    "answer": 0,
+    "explanation": "The West Indies beat Australia in the final at Lord's to win the first Cricket World Cup in 1975, and retained the title in 1979.",
+    "difficulty": 1,
+    "tags": [
+      "cricket",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who captained India to its first Cricket World Cup title in 1983?",
+    "options": [
+      "Sunil Gavaskar",
+      "Kapil Dev",
+      "Mohinder Amarnath",
+      "Ajit Wadekar"
+    ],
+    "answer": 1,
+    "explanation": "Kapil Dev led India to the 1983 World Cup title at Lord's, beating the West Indies in the final. Mohinder Amarnath was the Man of the Match in that final.",
+    "difficulty": 1,
+    "tags": [
+      "cricket",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "At which stadium did India win the 2011 Cricket World Cup final?",
+    "options": [
+      "Eden Gardens, Kolkata",
+      "M. A. Chidambaram Stadium, Chennai",
+      "Wankhede Stadium, Mumbai",
+      "Feroz Shah Kotla, Delhi"
+    ],
+    "answer": 2,
+    "explanation": "India beat Sri Lanka in the 2011 World Cup final at the Wankhede Stadium, Mumbai, under captain M. S. Dhoni, becoming the first host nation to win the title.",
+    "difficulty": 2,
+    "tags": [
+      "cricket",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which team won the 2023 ICC Cricket World Cup held in India?",
+    "options": [
+      "India",
+      "England",
+      "New Zealand",
+      "Australia"
+    ],
+    "answer": 3,
+    "explanation": "Australia beat India in the 2023 final at the Narendra Modi Stadium, Ahmedabad, to win their sixth Cricket World Cup title.",
+    "difficulty": 1,
+    "tags": [
+      "cricket",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which country won the first ICC T20 World Cup, held in South Africa in 2007?",
+    "options": [
+      "India",
+      "Pakistan",
+      "Australia",
+      "Sri Lanka"
+    ],
+    "answer": 0,
+    "explanation": "India, led by M. S. Dhoni, beat Pakistan in the final at Johannesburg to win the first T20 World Cup in 2007.",
+    "difficulty": 1,
+    "tags": [
+      "cricket",
+      "t20"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who is the highest run-scorer in the history of the Cricket World Cup?",
+    "options": [
+      "Ricky Ponting",
+      "Sachin Tendulkar",
+      "Kumar Sangakkara",
+      "Rohit Sharma"
+    ],
+    "answer": 1,
+    "explanation": "Sachin Tendulkar scored 2,278 runs across six World Cups between 1992 and 2011. He was also Player of the Tournament in 2003.",
+    "difficulty": 2,
+    "tags": [
+      "cricket",
+      "records"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Ashes is a Test cricket series contested between which two countries?",
+    "options": [
+      "India and Pakistan",
+      "Australia and South Africa",
+      "England and Australia",
+      "England and West Indies"
+    ],
+    "answer": 2,
+    "explanation": "The Ashes has been played between England and Australia since 1882, when a mock obituary declared English cricket dead and its ashes taken to Australia.",
+    "difficulty": 1,
+    "tags": [
+      "cricket",
+      "trophies"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "What is the length of a cricket pitch between the two sets of stumps?",
+    "options": [
+      "20 yards",
+      "21 yards",
+      "24 yards",
+      "22 yards"
+    ],
+    "answer": 3,
+    "explanation": "A cricket pitch measures 22 yards (20.12 m) between the bowling creases, a distance derived from the old English unit called a chain.",
+    "difficulty": 2,
+    "tags": [
+      "cricket",
+      "measurements"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Eden Gardens cricket stadium is located in which city?",
+    "options": [
+      "Kolkata",
+      "Mumbai",
+      "Chennai",
+      "Delhi"
+    ],
+    "answer": 0,
+    "explanation": "Eden Gardens in Kolkata, established in 1864, is India's oldest cricket stadium and is administered by the Cricket Association of Bengal.",
+    "difficulty": 1,
+    "tags": [
+      "stadiums",
+      "cricket"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which is the largest cricket stadium in the world by seating capacity?",
+    "options": [
+      "Melbourne Cricket Ground",
+      "Narendra Modi Stadium, Ahmedabad",
+      "Eden Gardens, Kolkata",
+      "Lord's, London"
+    ],
+    "answer": 1,
+    "explanation": "The Narendra Modi Stadium at Motera, Ahmedabad, seats about 1,32,000 spectators, making it the world's largest cricket stadium.",
+    "difficulty": 2,
+    "tags": [
+      "stadiums",
+      "cricket"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Lord's, known as the 'Home of Cricket', is situated in which city?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "London",
+      "Manchester"
+    ],
+    "answer": 2,
+    "explanation": "Lord's Cricket Ground in London is owned by the Marylebone Cricket Club (MCC), which framed and still maintains the Laws of Cricket.",
+    "difficulty": 1,
+    "tags": [
+      "stadiums",
+      "cricket"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Greenfield International Stadium, a multi-purpose venue built on a public-private partnership model, is located in which Kerala city?",
+    "options": [
+      "Kochi",
+      "Kannur",
+      "Kozhikode",
+      "Thiruvananthapuram"
+    ],
+    "answer": 3,
+    "explanation": "The Greenfield International Stadium at Karyavattom, Thiruvananthapuram, hosts both cricket and football internationals. Kochi's Jawaharlal Nehru Stadium is the home ground of Kerala Blasters FC.",
+    "difficulty": 2,
+    "tags": [
+      "stadiums",
+      "kerala"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which is the national sport of Bhutan?",
+    "options": [
+      "Archery",
+      "Football",
+      "Cricket",
+      "Wrestling"
+    ],
+    "answer": 0,
+    "explanation": "Archery (dha) is the national sport of Bhutan, and village tournaments are major social festivals. Bhutan has sent archers to the Olympic Games since 1984.",
+    "difficulty": 2,
+    "tags": [
+      "national-sports",
+      "world"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "St Andrews in Scotland is regarded as the home of which sport?",
+    "options": [
+      "Cricket",
+      "Golf",
+      "Tennis",
+      "Rugby"
+    ],
+    "answer": 1,
+    "explanation": "The Old Course at St Andrews is the most famous golf links in the world, and the Royal and Ancient Golf Club there long governed the sport's rules.",
+    "difficulty": 2,
+    "tags": [
+      "golf",
+      "world"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which is the highest sporting honour conferred by the Government of India?",
+    "options": [
+      "Arjuna Award",
+      "Dronacharya Award",
+      "Major Dhyan Chand Khel Ratna Award",
+      "Dhyan Chand Award"
+    ],
+    "answer": 2,
+    "explanation": "The Major Dhyan Chand Khel Ratna Award, instituted in 1991-92, is India's highest sporting honour. It was renamed from the Rajiv Gandhi Khel Ratna in 2021.",
+    "difficulty": 1,
+    "tags": [
+      "awards",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Dronacharya Award is given to outstanding:",
+    "options": [
+      "Players",
+      "Umpires",
+      "Sports administrators",
+      "Coaches"
+    ],
+    "answer": 3,
+    "explanation": "The Dronacharya Award, instituted in 1985, honours eminent coaches who have produced medal winners in international events. It is named after the guru Dronacharya of the Mahabharata.",
+    "difficulty": 1,
+    "tags": [
+      "awards",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who was the first recipient of the Khel Ratna Award in 1991-92?",
+    "options": [
+      "Viswanathan Anand",
+      "Sachin Tendulkar",
+      "Leander Paes",
+      "Kapil Dev"
+    ],
+    "answer": 0,
+    "explanation": "Chess player Viswanathan Anand was the first recipient of the Khel Ratna in 1991-92. He had become India's first Grandmaster in 1988.",
+    "difficulty": 2,
+    "tags": [
+      "awards",
+      "chess"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "National Sports Day is observed in India on which date, marking the birth anniversary of Dhyan Chand?",
+    "options": [
+      "15 August",
+      "29 August",
+      "23 January",
+      "5 September"
+    ],
+    "answer": 1,
+    "explanation": "National Sports Day is observed on 29 August, the birth anniversary of hockey legend Major Dhyan Chand. National sports awards are traditionally presented on this day.",
+    "difficulty": 1,
+    "tags": [
+      "awards",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "In which year was the Arjuna Award instituted?",
+    "options": [
+      "1951",
+      "1956",
+      "1961",
+      "1965"
+    ],
+    "answer": 2,
+    "explanation": "The Arjuna Award was instituted in 1961 to recognise outstanding performance by Indian sportspersons over a period of years. The Dronacharya Award for coaches came much later, in 1985.",
+    "difficulty": 3,
+    "tags": [
+      "awards",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which country won the first FIFA World Cup, held in 1930?",
+    "options": [
+      "Brazil",
+      "Italy",
+      "France",
+      "Uruguay"
+    ],
+    "answer": 3,
+    "explanation": "Uruguay hosted and won the first FIFA World Cup in 1930, beating Argentina 4-2 in the final at Montevideo.",
+    "difficulty": 2,
+    "tags": [
+      "football",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which country has won the FIFA World Cup the most times?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Italy",
+      "Argentina"
+    ],
+    "answer": 0,
+    "explanation": "Brazil has won the FIFA World Cup five times (1958, 1962, 1970, 1994 and 2002), more than any other nation. Germany and Italy have four titles each.",
+    "difficulty": 1,
+    "tags": [
+      "football",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which country won the 2022 FIFA World Cup?",
+    "options": [
+      "France",
+      "Argentina",
+      "Brazil",
+      "Germany"
+    ],
+    "answer": 1,
+    "explanation": "Argentina beat France on penalties after a 3-3 draw in the 2022 final at Lusail, winning their third World Cup. Lionel Messi received the Golden Ball.",
+    "difficulty": 1,
+    "tags": [
+      "football",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The 2022 FIFA World Cup was hosted by which country?",
+    "options": [
+      "United Arab Emirates",
+      "Russia",
+      "Qatar",
+      "Japan"
+    ],
+    "answer": 2,
+    "explanation": "Qatar hosted the 2022 FIFA World Cup, the first in the Arab world, held in November-December to avoid the summer heat.",
+    "difficulty": 1,
+    "tags": [
+      "football",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which country won the 2018 FIFA World Cup held in Russia?",
+    "options": [
+      "Croatia",
+      "Germany",
+      "Spain",
+      "France"
+    ],
+    "answer": 3,
+    "explanation": "France beat Croatia 4-2 in the 2018 final at Moscow to win their second World Cup, after 1998.",
+    "difficulty": 2,
+    "tags": [
+      "football",
+      "world-cup"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Where are the headquarters of FIFA, the world governing body of football?",
+    "options": [
+      "Zurich",
+      "Paris",
+      "London",
+      "Lausanne"
+    ],
+    "answer": 0,
+    "explanation": "FIFA, founded in Paris in 1904, has been headquartered at Zurich, Switzerland. The FIFA World Cup has been held every four years since 1930, except during the Second World War.",
+    "difficulty": 3,
+    "tags": [
+      "football",
+      "organisations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which Indian athlete is known as the 'Flying Sikh'?",
+    "options": [
+      "Balbir Singh Senior",
+      "Milkha Singh",
+      "Ajit Pal Singh",
+      "Gurbachan Singh Randhawa"
+    ],
+    "answer": 1,
+    "explanation": "Sprinter Milkha Singh was nicknamed the Flying Sikh. He finished fourth in the 400 m at the 1960 Rome Olympics and won gold at the 1958 Commonwealth Games.",
+    "difficulty": 1,
+    "tags": [
+      "nicknames",
+      "athletics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Which Indian sportsperson is known as the 'Wizard of Hockey'?",
+    "options": [
+      "Roop Singh",
+      "Balbir Singh Senior",
+      "Dhyan Chand",
+      "Ajit Pal Singh"
+    ],
+    "answer": 2,
+    "explanation": "Dhyan Chand, called the Wizard or Magician of Hockey for his ball control, won Olympic golds in 1928, 1932 and 1936. India's highest sporting award is named after him.",
+    "difficulty": 1,
+    "tags": [
+      "nicknames",
+      "hockey"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Pele, nicknamed the 'Black Pearl', was a legendary player of which sport?",
+    "options": [
+      "Boxing",
+      "Basketball",
+      "Athletics",
+      "Football"
+    ],
+    "answer": 3,
+    "explanation": "The Brazilian footballer Pele won three FIFA World Cups, in 1958, 1962 and 1970, the only player to do so.",
+    "difficulty": 1,
+    "tags": [
+      "nicknames",
+      "football"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Who became India's first chess Grandmaster?",
+    "options": [
+      "Viswanathan Anand",
+      "Pentala Harikrishna",
+      "Krishnan Sasikiran",
+      "Dibyendu Barua"
+    ],
+    "answer": 0,
+    "explanation": "Viswanathan Anand became India's first Grandmaster in 1988 and went on to become undisputed World Chess Champion in 2007.",
+    "difficulty": 2,
+    "tags": [
+      "chess",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Mary Kom, a six-time world champion, is associated with which sport?",
+    "options": [
+      "Wrestling",
+      "Boxing",
+      "Judo",
+      "Weightlifting"
+    ],
+    "answer": 1,
+    "explanation": "M. C. Mary Kom of Manipur is a six-time world amateur boxing champion and won a bronze at the 2012 London Olympics.",
+    "difficulty": 1,
+    "tags": [
+      "boxing",
+      "india"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Sushil Kumar, the first Indian to win two individual Olympic medals, competed in which sport?",
+    "options": [
+      "Boxing",
+      "Shooting",
+      "Wrestling",
+      "Archery"
+    ],
+    "answer": 2,
+    "explanation": "Wrestler Sushil Kumar won a bronze at Beijing 2008 and a silver at London 2012, becoming the first Indian with two individual Olympic medals.",
+    "difficulty": 2,
+    "tags": [
+      "wrestling",
+      "olympics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "I. M. Vijayan, nicknamed 'Kalo Harin' (Black Buck), is associated with which sport?",
+    "options": [
+      "Volleyball",
+      "Hockey",
+      "Cricket",
+      "Football"
+    ],
+    "answer": 3,
+    "explanation": "I. M. Vijayan of Thrissur, Kerala, was a striker and captain of the Indian football team, and received the Arjuna Award in 2003.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "football"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "In which event did P. T. Usha miss an Olympic bronze medal by 1/100th of a second at the 1984 Los Angeles Olympics?",
+    "options": [
+      "400 m hurdles",
+      "100 m",
+      "800 m",
+      "Long jump"
+    ],
+    "answer": 0,
+    "explanation": "P. T. Usha, the 'Payyoli Express', finished fourth in the 400 m hurdles final at Los Angeles in 1984, missing bronze by one-hundredth of a second.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "athletics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Anju Bobby George, the first Indian to win a medal at the World Athletics Championships, competed in which event?",
+    "options": [
+      "High jump",
+      "Long jump",
+      "Triple jump",
+      "Javelin throw"
+    ],
+    "answer": 1,
+    "explanation": "Anju Bobby George of Kerala won a long jump bronze at the 2003 World Championships in Paris, the first World Championships medal for India in athletics.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "athletics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "The Nehru Trophy Boat Race, Kerala's famous snake boat race, is held on which lake?",
+    "options": [
+      "Ashtamudi Lake",
+      "Sasthamkotta Lake",
+      "Punnamada Lake",
+      "Vellayani Lake"
+    ],
+    "answer": 2,
+    "explanation": "The Nehru Trophy Boat Race is held on Punnamada Lake at Alappuzha, and takes its name from Jawaharlal Nehru, who donated the trophy after a 1952 visit.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "boat-race"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "sports",
+    "question": "Jimmy George, one of Kerala's greatest sportspersons and an Arjuna Awardee, played which sport?",
+    "options": [
+      "Basketball",
+      "Football",
+      "Athletics",
+      "Volleyball"
+    ],
+    "answer": 3,
+    "explanation": "Jimmy George of Peravoor, Kannur, was among Asia's finest volleyball players and the first Indian to play professional volleyball in Italy.",
+    "difficulty": 2,
+    "tags": [
+      "kerala",
+      "volleyball"
+    ],
+    "source": "seed"
+  }
+]

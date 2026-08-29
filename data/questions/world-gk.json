@@ -1,0 +1,1802 @@
+[
+  {
+    "topic": "world-gk",
+    "question": "In which year was the United Nations Organisation founded?",
+    "options": [
+      "1945",
+      "1919",
+      "1950",
+      "1939"
+    ],
+    "answer": 0,
+    "explanation": "The UN Charter, signed at San Francisco, came into force on 24 October 1945 after the Second World War, replacing the failed League of Nations.",
+    "difficulty": 1,
+    "tags": [
+      "united-nations",
+      "organisations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Where is the headquarters of the United Nations located?",
+    "options": [
+      "Geneva",
+      "New York City",
+      "Paris",
+      "Vienna"
+    ],
+    "answer": 1,
+    "explanation": "The UN Headquarters stands on international territory beside the East River in New York City; Geneva, Vienna and Nairobi host the other major UN offices.",
+    "difficulty": 1,
+    "tags": [
+      "united-nations",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "What is the title of the administrative head of the United Nations?",
+    "options": [
+      "President",
+      "Chairperson",
+      "Secretary-General",
+      "Director-General"
+    ],
+    "answer": 2,
+    "explanation": "The Secretary-General heads the UN Secretariat and is appointed by the General Assembly on the recommendation of the Security Council, usually for a five-year term.",
+    "difficulty": 1,
+    "tags": [
+      "united-nations",
+      "organisations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "UNESCO has its headquarters in which city?",
+    "options": [
+      "Rome",
+      "Geneva",
+      "New York City",
+      "Paris"
+    ],
+    "answer": 3,
+    "explanation": "The United Nations Educational, Scientific and Cultural Organisation was founded in 1945 and works from Paris; it maintains the World Heritage List.",
+    "difficulty": 1,
+    "tags": [
+      "unesco",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The World Health Organisation (WHO) is headquartered in which city?",
+    "options": [
+      "Geneva",
+      "Vienna",
+      "Paris",
+      "Rome"
+    ],
+    "answer": 0,
+    "explanation": "WHO was established on 7 April 1948 and works from Geneva, Switzerland, which is also the seat of the ILO, WTO and the Red Cross.",
+    "difficulty": 1,
+    "tags": [
+      "who",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Food and Agriculture Organisation (FAO) has its headquarters in which city?",
+    "options": [
+      "Geneva",
+      "Rome",
+      "Vienna",
+      "Nairobi"
+    ],
+    "answer": 1,
+    "explanation": "The FAO, founded in 1945, is based in Rome and leads global efforts against hunger; it publishes the annual State of Food Security report.",
+    "difficulty": 2,
+    "tags": [
+      "fao",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The International Atomic Energy Agency (IAEA) has its headquarters in which city?",
+    "options": [
+      "Geneva",
+      "Paris",
+      "Vienna",
+      "Brussels"
+    ],
+    "answer": 2,
+    "explanation": "Set up in 1957 as the world's 'Atoms for Peace' organisation, the IAEA works from Vienna and inspects nuclear facilities under safeguards agreements.",
+    "difficulty": 2,
+    "tags": [
+      "iaea",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which specialised agency of the UN was created in 1919 under the Treaty of Versailles, making it the oldest?",
+    "options": [
+      "WHO",
+      "UNESCO",
+      "FAO",
+      "ILO"
+    ],
+    "answer": 3,
+    "explanation": "The International Labour Organisation was born with the Treaty of Versailles in 1919 and became the first specialised agency of the UN in 1946; it won the Nobel Peace Prize in 1969.",
+    "difficulty": 3,
+    "tags": [
+      "ilo",
+      "organisations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which of the following is a permanent member of the UN Security Council?",
+    "options": [
+      "France",
+      "Germany",
+      "Japan",
+      "Brazil"
+    ],
+    "answer": 0,
+    "explanation": "The five permanent members with veto power are China, France, Russia, the United Kingdom and the United States; Germany, Japan, Brazil and India are aspirants for permanent seats.",
+    "difficulty": 1,
+    "tags": [
+      "united-nations",
+      "security-council"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The International Court of Justice, the principal judicial organ of the UN, sits in which city?",
+    "options": [
+      "Geneva",
+      "The Hague",
+      "Brussels",
+      "Strasbourg"
+    ],
+    "answer": 1,
+    "explanation": "The ICJ sits at the Peace Palace in The Hague, Netherlands, and has 15 judges elected for nine-year terms; it is the only principal UN organ not located in New York.",
+    "difficulty": 1,
+    "tags": [
+      "icj",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The World Bank has its headquarters in which city?",
+    "options": [
+      "New York City",
+      "Geneva",
+      "Washington, D.C.",
+      "London"
+    ],
+    "answer": 2,
+    "explanation": "Both the World Bank and the International Monetary Fund are headquartered in Washington, D.C.; the Bank lends for development projects while the IMF handles balance-of-payments stability.",
+    "difficulty": 2,
+    "tags": [
+      "world-bank",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The International Monetary Fund and the World Bank were created at which 1944 conference?",
+    "options": [
+      "Yalta Conference",
+      "Potsdam Conference",
+      "San Francisco Conference",
+      "Bretton Woods Conference"
+    ],
+    "answer": 3,
+    "explanation": "Delegates of 44 nations met at Bretton Woods, New Hampshire, in July 1944 and set up the IMF and the IBRD (World Bank); hence these are called the Bretton Woods twins.",
+    "difficulty": 3,
+    "tags": [
+      "bretton-woods",
+      "imf"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "In which year did the World Trade Organisation come into existence?",
+    "options": [
+      "1995",
+      "1948",
+      "1991",
+      "2001"
+    ],
+    "answer": 0,
+    "explanation": "The WTO began functioning on 1 January 1995 as a result of the Uruguay Round, replacing the GATT of 1948; it is headquartered in Geneva.",
+    "difficulty": 2,
+    "tags": [
+      "wto",
+      "organisations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "OPEC, the Organisation of the Petroleum Exporting Countries, has its headquarters in which city?",
+    "options": [
+      "Riyadh",
+      "Vienna",
+      "Geneva",
+      "Kuwait City"
+    ],
+    "answer": 1,
+    "explanation": "OPEC was founded at Baghdad in 1960 but moved its secretariat to Vienna in 1965, where it still coordinates the oil output policy of its member states.",
+    "difficulty": 2,
+    "tags": [
+      "opec",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Interpol, the International Criminal Police Organisation, has its headquarters in which city?",
+    "options": [
+      "The Hague",
+      "Brussels",
+      "Lyon",
+      "Vienna"
+    ],
+    "answer": 2,
+    "explanation": "Interpol shifted its General Secretariat to Lyon, France, in 1989; it circulates colour-coded notices, of which the Red Notice seeks the location and arrest of a wanted person.",
+    "difficulty": 3,
+    "tags": [
+      "interpol",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The headquarters of NATO is located in which city?",
+    "options": [
+      "Paris",
+      "Geneva",
+      "Vienna",
+      "Brussels"
+    ],
+    "answer": 3,
+    "explanation": "The North Atlantic Treaty Organisation, formed in 1949 as a Western military alliance, moved its headquarters from Paris to Brussels in 1967.",
+    "difficulty": 2,
+    "tags": [
+      "nato",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The permanent secretariat of SAARC is located in which city?",
+    "options": [
+      "Kathmandu",
+      "Dhaka",
+      "Colombo",
+      "New Delhi"
+    ],
+    "answer": 0,
+    "explanation": "SAARC was founded at Dhaka in 1985, but its permanent secretariat was established at Kathmandu, Nepal, in 1987.",
+    "difficulty": 2,
+    "tags": [
+      "saarc",
+      "headquarters"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which of the following is NOT one of the six official languages of the United Nations?",
+    "options": [
+      "Arabic",
+      "German",
+      "Chinese",
+      "Russian"
+    ],
+    "answer": 1,
+    "explanation": "The six official languages of the UN are Arabic, Chinese, English, French, Russian and Spanish; German is not among them despite the size of its speaking population.",
+    "difficulty": 2,
+    "tags": [
+      "united-nations",
+      "languages"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "In which year was UNICEF established?",
+    "options": [
+      "1919",
+      "1945",
+      "1946",
+      "1950"
+    ],
+    "answer": 2,
+    "explanation": "UNICEF was created by the General Assembly in December 1946 to help children in war-devastated Europe; headquartered in New York, it won the Nobel Peace Prize in 1965.",
+    "difficulty": 3,
+    "tags": [
+      "unicef",
+      "organisations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The French Revolution began in which year?",
+    "options": [
+      "1776",
+      "1799",
+      "1815",
+      "1789"
+    ],
+    "answer": 3,
+    "explanation": "The storming of the Bastille prison on 14 July 1789 marks the start of the French Revolution, which spread the ideals of liberty, equality and fraternity.",
+    "difficulty": 1,
+    "tags": [
+      "french-revolution",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The American Declaration of Independence was adopted in which year?",
+    "options": [
+      "1776",
+      "1774",
+      "1781",
+      "1783"
+    ],
+    "answer": 0,
+    "explanation": "The thirteen American colonies adopted the Declaration of Independence, drafted mainly by Thomas Jefferson, on 4 July 1776; Britain recognised independence by the Treaty of Paris in 1783.",
+    "difficulty": 1,
+    "tags": [
+      "american-revolution",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The First World War began in which year?",
+    "options": [
+      "1905",
+      "1914",
+      "1918",
+      "1939"
+    ],
+    "answer": 1,
+    "explanation": "The First World War broke out in 1914 and ended with the armistice of 11 November 1918, pitting the Allied Powers against the Central Powers.",
+    "difficulty": 1,
+    "tags": [
+      "world-war-i",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "In which year did the Second World War end?",
+    "options": [
+      "1939",
+      "1944",
+      "1945",
+      "1946"
+    ],
+    "answer": 2,
+    "explanation": "The war ended in 1945: Germany surrendered in May and Japan in September after the atomic bombings of Hiroshima and Nagasaki.",
+    "difficulty": 1,
+    "tags": [
+      "world-war-ii",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who led the Bolsheviks during the October Revolution of 1917 in Russia?",
+    "options": [
+      "Joseph Stalin",
+      "Leon Trotsky",
+      "Karl Marx",
+      "Vladimir Lenin"
+    ],
+    "answer": 3,
+    "explanation": "Vladimir Lenin led the Bolshevik seizure of power in November 1917 (October by the old Russian calendar), creating the world's first communist state.",
+    "difficulty": 1,
+    "tags": [
+      "russian-revolution",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "What was the immediate cause of the outbreak of the First World War?",
+    "options": [
+      "The assassination of Archduke Franz Ferdinand at Sarajevo",
+      "The sinking of the Lusitania",
+      "The German invasion of Poland",
+      "The signing of the Treaty of Versailles"
+    ],
+    "answer": 0,
+    "explanation": "The assassination of the Austrian Archduke Franz Ferdinand at Sarajevo on 28 June 1914 triggered a chain of alliance obligations that pulled Europe into war.",
+    "difficulty": 2,
+    "tags": [
+      "world-war-i",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which treaty formally ended the First World War?",
+    "options": [
+      "Treaty of Paris",
+      "Treaty of Versailles",
+      "Treaty of Vienna",
+      "Treaty of Utrecht"
+    ],
+    "answer": 1,
+    "explanation": "The Treaty of Versailles, signed in 1919, imposed heavy reparations and war guilt on Germany and created the League of Nations.",
+    "difficulty": 2,
+    "tags": [
+      "world-war-i",
+      "treaties"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Second World War began in 1939 with Germany's invasion of which country?",
+    "options": [
+      "France",
+      "Belgium",
+      "Poland",
+      "Czechoslovakia"
+    ],
+    "answer": 2,
+    "explanation": "Hitler's forces invaded Poland on 1 September 1939, after which Britain and France declared war on Germany two days later.",
+    "difficulty": 1,
+    "tags": [
+      "world-war-ii",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The first atomic bomb used in warfare was dropped on which city?",
+    "options": [
+      "Nagasaki",
+      "Tokyo",
+      "Osaka",
+      "Hiroshima"
+    ],
+    "answer": 3,
+    "explanation": "The United States dropped the bomb 'Little Boy' on Hiroshima on 6 August 1945; Nagasaki was bombed three days later on 9 August.",
+    "difficulty": 1,
+    "tags": [
+      "world-war-ii",
+      "nuclear"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "In which year did the Berlin Wall fall?",
+    "options": [
+      "1989",
+      "1987",
+      "1991",
+      "1993"
+    ],
+    "answer": 0,
+    "explanation": "The wall dividing East and West Berlin since 1961 was opened on 9 November 1989, and Germany was formally reunified in October 1990.",
+    "difficulty": 1,
+    "tags": [
+      "cold-war",
+      "germany"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "In which year was the Soviet Union formally dissolved?",
+    "options": [
+      "1989",
+      "1991",
+      "1990",
+      "1993"
+    ],
+    "answer": 1,
+    "explanation": "The USSR was dissolved on 26 December 1991 into 15 independent republics, ending the Cold War; Mikhail Gorbachev resigned as its last President.",
+    "difficulty": 2,
+    "tags": [
+      "cold-war",
+      "ussr"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who delivered the famous 'Iron Curtain' speech in 1946?",
+    "options": [
+      "Franklin Roosevelt",
+      "Harry Truman",
+      "Winston Churchill",
+      "Joseph Stalin"
+    ],
+    "answer": 2,
+    "explanation": "Winston Churchill declared at Fulton, Missouri, in March 1946 that an 'iron curtain' had descended across Europe, a phrase that came to symbolise the Cold War divide.",
+    "difficulty": 2,
+    "tags": [
+      "cold-war",
+      "speeches"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "What was the main purpose of the Marshall Plan announced in 1947?",
+    "options": [
+      "To create the NATO military alliance",
+      "To divide Germany into four occupation zones",
+      "To establish the United Nations",
+      "To provide American aid for rebuilding Western Europe"
+    ],
+    "answer": 3,
+    "explanation": "Named after US Secretary of State George Marshall, the plan channelled billions of dollars into rebuilding war-shattered Western European economies and checking the spread of communism.",
+    "difficulty": 3,
+    "tags": [
+      "cold-war",
+      "marshall-plan"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Industrial Revolution began first in which country?",
+    "options": [
+      "Britain",
+      "France",
+      "Germany",
+      "United States"
+    ],
+    "answer": 0,
+    "explanation": "The Industrial Revolution started in Britain in the second half of the 18th century, helped by coal, capital, colonies and inventions such as the spinning jenny and the steam engine.",
+    "difficulty": 1,
+    "tags": [
+      "industrial-revolution",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Magna Carta was signed by King John of England in which year?",
+    "options": [
+      "1066",
+      "1215",
+      "1315",
+      "1415"
+    ],
+    "answer": 1,
+    "explanation": "The Magna Carta of 1215 limited the arbitrary power of the English monarch and is regarded as an early foundation of constitutional government and the rule of law.",
+    "difficulty": 2,
+    "tags": [
+      "england",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Napoleon Bonaparte was finally defeated at the Battle of Waterloo in 1815 by forces led by whom?",
+    "options": [
+      "Lord Nelson",
+      "Marshal Ney",
+      "the Duke of Wellington",
+      "Otto von Bismarck"
+    ],
+    "answer": 2,
+    "explanation": "The Duke of Wellington, aided by the Prussian army under Blucher, defeated Napoleon at Waterloo in Belgium; Napoleon was then exiled to St Helena.",
+    "difficulty": 2,
+    "tags": [
+      "napoleon",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who is known as the architect of German unification, achieved in 1871?",
+    "options": [
+      "Kaiser Wilhelm II",
+      "Count Cavour",
+      "Giuseppe Mazzini",
+      "Otto von Bismarck"
+    ],
+    "answer": 3,
+    "explanation": "Bismarck, the 'Iron Chancellor' of Prussia, united Germany through a policy of 'blood and iron' and three wars, proclaiming the German Empire at Versailles in 1871.",
+    "difficulty": 3,
+    "tags": [
+      "germany",
+      "unification"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who led the 'Red Shirts' volunteers during the unification of Italy?",
+    "options": [
+      "Giuseppe Garibaldi",
+      "Count Cavour",
+      "Giuseppe Mazzini",
+      "Victor Emmanuel II"
+    ],
+    "answer": 0,
+    "explanation": "Garibaldi's Red Shirts conquered Sicily and Naples in 1860 and handed them to Victor Emmanuel II; Mazzini supplied the ideas and Cavour the diplomacy of Italian unification.",
+    "difficulty": 3,
+    "tags": [
+      "italy",
+      "unification"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Warsaw Pact, the Soviet-led military alliance, was formed in which year?",
+    "options": [
+      "1949",
+      "1955",
+      "1945",
+      "1961"
+    ],
+    "answer": 1,
+    "explanation": "The Warsaw Pact was signed in 1955 as a response to West Germany's entry into NATO, and it was dissolved in 1991 as the Cold War ended.",
+    "difficulty": 3,
+    "tags": [
+      "cold-war",
+      "warsaw-pact"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "In which year did Nelson Mandela become the first Black President of South Africa?",
+    "options": [
+      "1990",
+      "1991",
+      "1994",
+      "1996"
+    ],
+    "answer": 2,
+    "explanation": "Mandela, released from prison in 1990 after 27 years, won South Africa's first non-racial elections in 1994, ending apartheid rule.",
+    "difficulty": 1,
+    "tags": [
+      "south-africa",
+      "apartheid"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who proclaimed the founding of the People's Republic of China in 1949?",
+    "options": [
+      "Zhou Enlai",
+      "Deng Xiaoping",
+      "Sun Yat-sen",
+      "Mao Zedong"
+    ],
+    "answer": 3,
+    "explanation": "Mao Zedong declared the People's Republic of China on 1 October 1949 after the communists defeated Chiang Kai-shek's nationalists, who withdrew to Taiwan.",
+    "difficulty": 2,
+    "tags": [
+      "china",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Cuban Missile Crisis, the closest the Cold War came to nuclear war, occurred in which year?",
+    "options": [
+      "1962",
+      "1959",
+      "1965",
+      "1968"
+    ],
+    "answer": 0,
+    "explanation": "In October 1962 the United States under Kennedy and the USSR under Khrushchev confronted each other over Soviet missiles in Cuba; the missiles were withdrawn after a naval blockade.",
+    "difficulty": 2,
+    "tags": [
+      "cold-war",
+      "cuba"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who is credited with inventing the telephone?",
+    "options": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Guglielmo Marconi",
+      "Michael Faraday"
+    ],
+    "answer": 1,
+    "explanation": "Alexander Graham Bell patented the telephone in 1876; the unit of sound intensity, the bel (and decibel), is named after him.",
+    "difficulty": 1,
+    "tags": [
+      "inventions",
+      "inventors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who is credited with the invention of wireless telegraphy, or radio communication?",
+    "options": [
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Guglielmo Marconi",
+      "Alexander Graham Bell"
+    ],
+    "answer": 2,
+    "explanation": "The Italian inventor Guglielmo Marconi sent the first transatlantic wireless signal in 1901 and shared the 1909 Nobel Prize in Physics for his work.",
+    "difficulty": 2,
+    "tags": [
+      "inventions",
+      "inventors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who invented the first commercially practical incandescent electric bulb?",
+    "options": [
+      "Nikola Tesla",
+      "James Watt",
+      "Benjamin Franklin",
+      "Thomas Alva Edison"
+    ],
+    "answer": 3,
+    "explanation": "Thomas Alva Edison produced a long-lasting carbon-filament lamp in 1879; he held over a thousand patents including the phonograph and the motion picture camera.",
+    "difficulty": 1,
+    "tags": [
+      "inventions",
+      "inventors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Whose improvements to the steam engine powered the Industrial Revolution, and whose name is given to the SI unit of power?",
+    "options": [
+      "James Watt",
+      "Thomas Newcomen",
+      "George Stephenson",
+      "Robert Fulton"
+    ],
+    "answer": 0,
+    "explanation": "James Watt added a separate condenser to Newcomen's engine in 1765, greatly improving efficiency; the SI unit of power, the watt, honours him.",
+    "difficulty": 2,
+    "tags": [
+      "inventions",
+      "inventors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who formulated the law of universal gravitation?",
+    "options": [
+      "Galileo Galilei",
+      "Isaac Newton",
+      "Johannes Kepler",
+      "Albert Einstein"
+    ],
+    "answer": 1,
+    "explanation": "Isaac Newton set out the law of universal gravitation and the three laws of motion in his 1687 work Principia Mathematica.",
+    "difficulty": 1,
+    "tags": [
+      "discoveries",
+      "scientists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who propounded the Theory of Relativity?",
+    "options": [
+      "Niels Bohr",
+      "Max Planck",
+      "Albert Einstein",
+      "Isaac Newton"
+    ],
+    "answer": 2,
+    "explanation": "Albert Einstein published the special theory of relativity in 1905 and the general theory in 1915; his 1921 Nobel Prize was actually awarded for the photoelectric effect.",
+    "difficulty": 1,
+    "tags": [
+      "discoveries",
+      "scientists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who discovered penicillin, the world's first widely used antibiotic?",
+    "options": [
+      "Louis Pasteur",
+      "Edward Jenner",
+      "Robert Koch",
+      "Alexander Fleming"
+    ],
+    "answer": 3,
+    "explanation": "Alexander Fleming noticed in 1928 that the mould Penicillium killed bacteria in a culture dish; he shared the 1945 Nobel Prize with Florey and Chain, who turned it into a drug.",
+    "difficulty": 2,
+    "tags": [
+      "discoveries",
+      "medicine"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who developed the world's first vaccine, against smallpox?",
+    "options": [
+      "Edward Jenner",
+      "Alexander Fleming",
+      "Jonas Salk",
+      "Louis Pasteur"
+    ],
+    "answer": 0,
+    "explanation": "Edward Jenner showed in 1796 that inoculation with cowpox protected against smallpox; the word 'vaccine' comes from vacca, the Latin for cow.",
+    "difficulty": 2,
+    "tags": [
+      "discoveries",
+      "medicine"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who developed the first successful injectable polio vaccine in 1955?",
+    "options": [
+      "Edward Jenner",
+      "Jonas Salk",
+      "Alexander Fleming",
+      "Robert Koch"
+    ],
+    "answer": 1,
+    "explanation": "Jonas Salk's inactivated polio vaccine was licensed in 1955; Albert Sabin later developed the oral polio vaccine used in mass immunisation drives.",
+    "difficulty": 3,
+    "tags": [
+      "discoveries",
+      "medicine"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who discovered the circulation of blood in the human body?",
+    "options": [
+      "Andreas Vesalius",
+      "Marcello Malpighi",
+      "William Harvey",
+      "Louis Pasteur"
+    ],
+    "answer": 2,
+    "explanation": "The English physician William Harvey demonstrated in 1628 that blood circulates through the body pumped by the heart, overturning the ancient ideas of Galen.",
+    "difficulty": 3,
+    "tags": [
+      "discoveries",
+      "medicine"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who arranged the elements into the first widely accepted periodic table?",
+    "options": [
+      "Antoine Lavoisier",
+      "John Dalton",
+      "Niels Bohr",
+      "Dmitri Mendeleev"
+    ],
+    "answer": 3,
+    "explanation": "The Russian chemist Dmitri Mendeleev published his periodic table in 1869, arranging elements by atomic weight and leaving gaps for elements not yet discovered.",
+    "difficulty": 2,
+    "tags": [
+      "discoveries",
+      "chemistry"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who discovered the radioactive elements radium and polonium?",
+    "options": [
+      "Marie Curie",
+      "Lise Meitner",
+      "Dorothy Hodgkin",
+      "Rosalind Franklin"
+    ],
+    "answer": 0,
+    "explanation": "Marie Curie, working with Pierre Curie, discovered polonium and radium in 1898; she remains the only person to win Nobel Prizes in two different sciences, Physics and Chemistry.",
+    "difficulty": 1,
+    "tags": [
+      "discoveries",
+      "scientists"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who is regarded as the father of genetics?",
+    "options": [
+      "Charles Darwin",
+      "Gregor Mendel",
+      "Thomas Hunt Morgan",
+      "James Watson"
+    ],
+    "answer": 1,
+    "explanation": "The Austrian monk Gregor Mendel worked out the laws of inheritance from his experiments on pea plants in the 1860s, though his work was recognised only after 1900.",
+    "difficulty": 2,
+    "tags": [
+      "discoveries",
+      "biology"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The double helix structure of DNA was described in 1953 by which pair of scientists?",
+    "options": [
+      "Banting and Best",
+      "Hershey and Chase",
+      "Watson and Crick",
+      "Florey and Chain"
+    ],
+    "answer": 2,
+    "explanation": "James Watson and Francis Crick proposed the double helix model at Cambridge in 1953, using X-ray diffraction images produced by Rosalind Franklin.",
+    "difficulty": 3,
+    "tags": [
+      "discoveries",
+      "biology"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who introduced the movable-type printing press in Europe?",
+    "options": [
+      "William Caxton",
+      "Martin Luther",
+      "Leonardo da Vinci",
+      "Johannes Gutenberg"
+    ],
+    "answer": 3,
+    "explanation": "Johannes Gutenberg of Mainz built his movable-type press around 1440, and his 42-line Bible became the first major book printed in Europe.",
+    "difficulty": 2,
+    "tags": [
+      "inventions",
+      "inventors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who invented dynamite and instituted the prizes named after him?",
+    "options": [
+      "Alfred Nobel",
+      "Humphry Davy",
+      "Michael Faraday",
+      "Antoine Lavoisier"
+    ],
+    "answer": 0,
+    "explanation": "The Swedish chemist Alfred Nobel patented dynamite in 1867 and left his fortune to fund the Nobel Prizes, first awarded in 1901.",
+    "difficulty": 2,
+    "tags": [
+      "inventions",
+      "nobel"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who made the first successful powered aeroplane flight in 1903?",
+    "options": [
+      "Louis Bleriot",
+      "the Wright brothers",
+      "Otto Lilienthal",
+      "Samuel Langley"
+    ],
+    "answer": 1,
+    "explanation": "Orville and Wilbur Wright flew their powered machine at Kitty Hawk, North Carolina, on 17 December 1903; the first flight lasted about 12 seconds.",
+    "difficulty": 1,
+    "tags": [
+      "inventions",
+      "aviation"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who is called the 'Father of the Computer' for designing the Analytical Engine?",
+    "options": [
+      "Alan Turing",
+      "Blaise Pascal",
+      "Charles Babbage",
+      "John von Neumann"
+    ],
+    "answer": 2,
+    "explanation": "Charles Babbage designed the Difference Engine and the programmable Analytical Engine in the 19th century; Ada Lovelace wrote the first algorithm for it.",
+    "difficulty": 2,
+    "tags": [
+      "inventions",
+      "computers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who invented the World Wide Web?",
+    "options": [
+      "Vint Cerf",
+      "Robert Kahn",
+      "Marc Andreessen",
+      "Tim Berners-Lee"
+    ],
+    "answer": 3,
+    "explanation": "Tim Berners-Lee proposed the World Wide Web at CERN in 1989 and created HTML, HTTP and the first browser; Cerf and Kahn had earlier designed the internet's TCP/IP protocols.",
+    "difficulty": 2,
+    "tags": [
+      "inventions",
+      "computers"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who discovered X-rays in 1895?",
+    "options": [
+      "Wilhelm Roentgen",
+      "Henri Becquerel",
+      "J.J. Thomson",
+      "Ernest Rutherford"
+    ],
+    "answer": 0,
+    "explanation": "Wilhelm Conrad Roentgen discovered X-rays while experimenting with cathode-ray tubes and received the very first Nobel Prize in Physics in 1901.",
+    "difficulty": 3,
+    "tags": [
+      "discoveries",
+      "physics"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who wrote the book 'Das Kapital'?",
+    "options": [
+      "Adam Smith",
+      "Karl Marx",
+      "Friedrich Engels",
+      "Vladimir Lenin"
+    ],
+    "answer": 1,
+    "explanation": "Karl Marx published the first volume of Das Kapital in 1867, a critique of capitalism; he had earlier written the Communist Manifesto with Friedrich Engels.",
+    "difficulty": 1,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "'The Wealth of Nations', the founding text of modern economics, was written by whom?",
+    "options": [
+      "David Ricardo",
+      "Thomas Malthus",
+      "Adam Smith",
+      "John Maynard Keynes"
+    ],
+    "answer": 2,
+    "explanation": "Adam Smith published An Inquiry into the Nature and Causes of the Wealth of Nations in 1776, introducing the idea of the 'invisible hand' of the market.",
+    "difficulty": 2,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who is the author of the novel 'War and Peace'?",
+    "options": [
+      "Fyodor Dostoevsky",
+      "Anton Chekhov",
+      "Maxim Gorky",
+      "Leo Tolstoy"
+    ],
+    "answer": 3,
+    "explanation": "The Russian writer Leo Tolstoy published War and Peace in 1869, set against Napoleon's invasion of Russia; he also wrote Anna Karenina.",
+    "difficulty": 1,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who wrote the book 'Mein Kampf'?",
+    "options": [
+      "Adolf Hitler",
+      "Benito Mussolini",
+      "Joseph Goebbels",
+      "Otto von Bismarck"
+    ],
+    "answer": 0,
+    "explanation": "Adolf Hitler dictated Mein Kampf ('My Struggle') while imprisoned after the failed Munich putsch of 1923; it set out his Nazi ideology.",
+    "difficulty": 1,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who wrote the novel 'The Old Man and the Sea'?",
+    "options": [
+      "John Steinbeck",
+      "Ernest Hemingway",
+      "William Faulkner",
+      "F. Scott Fitzgerald"
+    ],
+    "answer": 1,
+    "explanation": "Ernest Hemingway's short novel about the fisherman Santiago won the Pulitzer Prize in 1953 and contributed to his Nobel Prize in Literature in 1954.",
+    "difficulty": 2,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "'A Brief History of Time' was written by which scientist?",
+    "options": [
+      "Carl Sagan",
+      "Richard Feynman",
+      "Stephen Hawking",
+      "Roger Penrose"
+    ],
+    "answer": 2,
+    "explanation": "The British physicist Stephen Hawking published this popular account of cosmology and black holes in 1988; it sold more than ten million copies.",
+    "difficulty": 2,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who wrote 'On the Origin of Species'?",
+    "options": [
+      "Jean-Baptiste Lamarck",
+      "Gregor Mendel",
+      "Alfred Russel Wallace",
+      "Charles Darwin"
+    ],
+    "answer": 3,
+    "explanation": "Charles Darwin published On the Origin of Species in 1859, setting out evolution by natural selection based on observations made during his voyage on HMS Beagle.",
+    "difficulty": 1,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The classic work of political philosophy 'The Republic' was written by whom?",
+    "options": [
+      "Plato",
+      "Aristotle",
+      "Socrates",
+      "Cicero"
+    ],
+    "answer": 0,
+    "explanation": "Plato wrote The Republic in the 4th century BCE, presenting his idea of the ideal state ruled by philosopher-kings; Aristotle, his pupil, wrote Politics.",
+    "difficulty": 3,
+    "tags": [
+      "books",
+      "authors"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "United Nations Day is observed on which date?",
+    "options": [
+      "10 December",
+      "24 October",
+      "1 May",
+      "8 March"
+    ],
+    "answer": 1,
+    "explanation": "UN Day is celebrated on 24 October, the anniversary of the day in 1945 when the UN Charter came into force.",
+    "difficulty": 1,
+    "tags": [
+      "important-days",
+      "united-nations"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Human Rights Day is observed worldwide on which date?",
+    "options": [
+      "24 October",
+      "5 June",
+      "10 December",
+      "21 June"
+    ],
+    "answer": 2,
+    "explanation": "Human Rights Day marks 10 December 1948, when the UN General Assembly adopted the Universal Declaration of Human Rights in Paris.",
+    "difficulty": 1,
+    "tags": [
+      "important-days",
+      "human-rights"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "World Environment Day is observed on which date?",
+    "options": [
+      "22 April",
+      "21 March",
+      "16 September",
+      "5 June"
+    ],
+    "answer": 3,
+    "explanation": "World Environment Day is observed on 5 June, marking the opening of the 1972 Stockholm Conference on the Human Environment, which also led to the creation of UNEP.",
+    "difficulty": 1,
+    "tags": [
+      "important-days",
+      "environment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The International Day of Yoga is observed on which date?",
+    "options": [
+      "21 June",
+      "21 March",
+      "21 April",
+      "21 May"
+    ],
+    "answer": 0,
+    "explanation": "The UN General Assembly declared 21 June, the summer solstice and longest day in the northern hemisphere, as the International Day of Yoga; it was first observed in 2015.",
+    "difficulty": 1,
+    "tags": [
+      "important-days",
+      "yoga"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "International Women's Day is observed on which date?",
+    "options": [
+      "1 May",
+      "8 March",
+      "19 November",
+      "8 May"
+    ],
+    "answer": 1,
+    "explanation": "International Women's Day is observed on 8 March; it grew out of early 20th-century labour movements and has been marked by the UN since 1975.",
+    "difficulty": 1,
+    "tags": [
+      "important-days",
+      "women"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "World Health Day is observed on which date?",
+    "options": [
+      "1 December",
+      "24 March",
+      "7 April",
+      "12 May"
+    ],
+    "answer": 2,
+    "explanation": "World Health Day falls on 7 April, the anniversary of the founding of the World Health Organisation in 1948; 24 March is World TB Day.",
+    "difficulty": 2,
+    "tags": [
+      "important-days",
+      "health"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "World AIDS Day is observed on which date?",
+    "options": [
+      "10 December",
+      "24 March",
+      "7 April",
+      "1 December"
+    ],
+    "answer": 3,
+    "explanation": "World AIDS Day has been observed on 1 December since 1988 to raise awareness of HIV/AIDS and to remember those who have died of the disease.",
+    "difficulty": 2,
+    "tags": [
+      "important-days",
+      "health"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "World Ozone Day is observed on which date?",
+    "options": [
+      "16 September",
+      "5 June",
+      "22 April",
+      "2 December"
+    ],
+    "answer": 0,
+    "explanation": "The International Day for the Preservation of the Ozone Layer is observed on 16 September, marking the signing of the Montreal Protocol in 1987.",
+    "difficulty": 3,
+    "tags": [
+      "important-days",
+      "environment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Earth Day is observed every year on which date?",
+    "options": [
+      "5 June",
+      "22 April",
+      "21 March",
+      "16 September"
+    ],
+    "answer": 1,
+    "explanation": "Earth Day was first held on 22 April 1970 in the United States and is now marked in more than 190 countries to promote environmental protection.",
+    "difficulty": 2,
+    "tags": [
+      "important-days",
+      "environment"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The 'Diet' is the name of the parliament of which country?",
+    "options": [
+      "Israel",
+      "Russia",
+      "Japan",
+      "Spain"
+    ],
+    "answer": 2,
+    "explanation": "Japan's bicameral parliament is called the National Diet, made up of the House of Representatives and the House of Councillors.",
+    "difficulty": 2,
+    "tags": [
+      "parliaments",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Knesset is the parliament of which country?",
+    "options": [
+      "Iran",
+      "Norway",
+      "Denmark",
+      "Israel"
+    ],
+    "answer": 3,
+    "explanation": "The Knesset is Israel's single-chamber parliament of 120 members, based in Jerusalem; Iran's legislature is the Majlis and Norway's is the Storting.",
+    "difficulty": 2,
+    "tags": [
+      "parliaments",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The State Duma is the lower house of the parliament of which country?",
+    "options": [
+      "Russia",
+      "Poland",
+      "Ukraine",
+      "Hungary"
+    ],
+    "answer": 0,
+    "explanation": "Russia's Federal Assembly consists of the State Duma as the lower house and the Federation Council as the upper house.",
+    "difficulty": 2,
+    "tags": [
+      "parliaments",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Cortes Generales is the national legislature of which country?",
+    "options": [
+      "Portugal",
+      "Spain",
+      "Italy",
+      "Greece"
+    ],
+    "answer": 1,
+    "explanation": "Spain's parliament, the Cortes Generales, has two chambers: the Congress of Deputies and the Senate. Italy's is the Parliament and Greece's is the Hellenic Parliament.",
+    "difficulty": 3,
+    "tags": [
+      "parliaments",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Baht is the currency of which country?",
+    "options": [
+      "Malaysia",
+      "Myanmar",
+      "Thailand",
+      "Cambodia"
+    ],
+    "answer": 2,
+    "explanation": "The Baht is Thailand's currency; Malaysia uses the Ringgit, Myanmar the Kyat and Cambodia the Riel.",
+    "difficulty": 2,
+    "tags": [
+      "currencies",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Rand is the currency of which country?",
+    "options": [
+      "Nigeria",
+      "Kenya",
+      "Egypt",
+      "South Africa"
+    ],
+    "answer": 3,
+    "explanation": "South Africa's currency is the Rand, named after the Witwatersrand gold-mining ridge; Nigeria uses the Naira and Kenya the Shilling.",
+    "difficulty": 1,
+    "tags": [
+      "currencies",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The Dong is the currency of which country?",
+    "options": [
+      "Vietnam",
+      "Indonesia",
+      "Laos",
+      "Philippines"
+    ],
+    "answer": 0,
+    "explanation": "Vietnam's currency is the Dong; Indonesia uses the Rupiah, Laos the Kip and the Philippines the Peso.",
+    "difficulty": 3,
+    "tags": [
+      "currencies",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The maple leaf is the national symbol of which country?",
+    "options": [
+      "Norway",
+      "Canada",
+      "Sweden",
+      "Switzerland"
+    ],
+    "answer": 1,
+    "explanation": "The red maple leaf has been the central emblem on Canada's national flag since 1965 and is its best known national symbol.",
+    "difficulty": 1,
+    "tags": [
+      "national-symbols",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which country is popularly known as the 'Land of the Midnight Sun'?",
+    "options": [
+      "Finland",
+      "Iceland",
+      "Norway",
+      "Sweden"
+    ],
+    "answer": 2,
+    "explanation": "Norway is called the Land of the Midnight Sun because parts of it lie above the Arctic Circle, where the sun does not set for weeks in midsummer.",
+    "difficulty": 2,
+    "tags": [
+      "nicknames",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which city is known as the 'Eternal City'?",
+    "options": [
+      "Athens",
+      "Jerusalem",
+      "Istanbul",
+      "Rome"
+    ],
+    "answer": 3,
+    "explanation": "Rome has been called the Eternal City since ancient times because Romans believed it would endure forever; it is also known as the City of Seven Hills.",
+    "difficulty": 2,
+    "tags": [
+      "nicknames",
+      "cities"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who was the world's first woman Prime Minister?",
+    "options": [
+      "Sirimavo Bandaranaike",
+      "Indira Gandhi",
+      "Golda Meir",
+      "Margaret Thatcher"
+    ],
+    "answer": 0,
+    "explanation": "Sirimavo Bandaranaike of Ceylon (now Sri Lanka) became the world's first woman Prime Minister in 1960; Indira Gandhi took office in India in 1966.",
+    "difficulty": 2,
+    "tags": [
+      "world-firsts",
+      "personalities"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which country is known as the 'Land of the Rising Sun'?",
+    "options": [
+      "China",
+      "Japan",
+      "South Korea",
+      "Thailand"
+    ],
+    "answer": 1,
+    "explanation": "Japan is called the Land of the Rising Sun; its own name, Nippon, means 'origin of the sun', and its flag shows a red sun disc.",
+    "difficulty": 1,
+    "tags": [
+      "nicknames",
+      "countries"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The slogan 'Liberty, Equality, Fraternity' is associated with which event?",
+    "options": [
+      "the American Revolution",
+      "the Russian Revolution",
+      "the French Revolution",
+      "the Industrial Revolution"
+    ],
+    "answer": 2,
+    "explanation": "Liberte, Egalite, Fraternite was the rallying cry of the French Revolution of 1789 and is today the official motto of the French Republic.",
+    "difficulty": 1,
+    "tags": [
+      "slogans",
+      "french-revolution"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who delivered the famous 'I Have a Dream' speech in 1963?",
+    "options": [
+      "Nelson Mandela",
+      "Abraham Lincoln",
+      "John F. Kennedy",
+      "Martin Luther King Jr."
+    ],
+    "answer": 3,
+    "explanation": "Martin Luther King Jr. delivered the speech at the March on Washington in August 1963 during the American civil rights movement; he won the Nobel Peace Prize in 1964.",
+    "difficulty": 1,
+    "tags": [
+      "speeches",
+      "personalities"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The famous words 'Veni, vidi, vici' ('I came, I saw, I conquered') are attributed to whom?",
+    "options": [
+      "Julius Caesar",
+      "Alexander the Great",
+      "Napoleon Bonaparte",
+      "Augustus"
+    ],
+    "answer": 0,
+    "explanation": "Julius Caesar is said to have reported his swift victory at Zela in 47 BCE with these three Latin words.",
+    "difficulty": 3,
+    "tags": [
+      "quotes",
+      "world-history"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "The slogan 'Workers of the world, unite!' comes from which work?",
+    "options": [
+      "The Wealth of Nations",
+      "The Communist Manifesto",
+      "Utopia",
+      "The Prince"
+    ],
+    "answer": 1,
+    "explanation": "The rallying call closes The Communist Manifesto, written by Karl Marx and Friedrich Engels in 1848.",
+    "difficulty": 3,
+    "tags": [
+      "slogans",
+      "books"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "What was the name of the world's first artificial satellite, launched in 1957?",
+    "options": [
+      "Explorer 1",
+      "Vostok 1",
+      "Sputnik 1",
+      "Luna 2"
+    ],
+    "answer": 2,
+    "explanation": "The Soviet Union launched Sputnik 1 on 4 October 1957, beginning the space age and the space race; the United States replied with Explorer 1 in 1958.",
+    "difficulty": 1,
+    "tags": [
+      "space",
+      "world-firsts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who was the first human being to travel into space?",
+    "options": [
+      "Alan Shepard",
+      "John Glenn",
+      "Neil Armstrong",
+      "Yuri Gagarin"
+    ],
+    "answer": 3,
+    "explanation": "The Soviet cosmonaut Yuri Gagarin orbited the Earth aboard Vostok 1 on 12 April 1961; the date is now marked as the International Day of Human Space Flight.",
+    "difficulty": 1,
+    "tags": [
+      "space",
+      "world-firsts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who was the first woman to travel into space?",
+    "options": [
+      "Valentina Tereshkova",
+      "Sally Ride",
+      "Svetlana Savitskaya",
+      "Kalpana Chawla"
+    ],
+    "answer": 0,
+    "explanation": "Valentina Tereshkova of the Soviet Union flew aboard Vostok 6 in June 1963; Sally Ride became the first American woman in space twenty years later.",
+    "difficulty": 2,
+    "tags": [
+      "space",
+      "world-firsts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which animal became the first living creature to orbit the Earth, aboard Sputnik 2 in 1957?",
+    "options": [
+      "Ham",
+      "Laika",
+      "Belka",
+      "Strelka"
+    ],
+    "answer": 1,
+    "explanation": "Laika, a stray dog from Moscow, was launched aboard Sputnik 2 in November 1957; Belka and Strelka later became the first dogs to return alive from orbit.",
+    "difficulty": 3,
+    "tags": [
+      "space",
+      "world-firsts"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Which mission first landed human beings on the Moon?",
+    "options": [
+      "Apollo 8",
+      "Apollo 13",
+      "Apollo 11",
+      "Gemini 4"
+    ],
+    "answer": 2,
+    "explanation": "Apollo 11 landed Neil Armstrong and Buzz Aldrin on the Moon on 20 July 1969, while Michael Collins remained in lunar orbit in the command module.",
+    "difficulty": 1,
+    "tags": [
+      "space",
+      "moon"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "world-gk",
+    "question": "Who performed the first spacewalk in 1965?",
+    "options": [
+      "Yuri Gagarin",
+      "Ed White",
+      "Neil Armstrong",
+      "Alexei Leonov"
+    ],
+    "answer": 3,
+    "explanation": "The Soviet cosmonaut Alexei Leonov left his Voskhod 2 capsule on 18 March 1965 for a 12-minute walk in space; Ed White made the first American spacewalk that June.",
+    "difficulty": 3,
+    "tags": [
+      "space",
+      "world-firsts"
+    ],
+    "source": "seed"
+  }
+]
