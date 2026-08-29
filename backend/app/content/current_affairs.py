@@ -26,7 +26,7 @@ from time import mktime
 
 import feedparser
 import httpx
-from sqlalchemy import select
+from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..config import settings
@@ -193,6 +193,11 @@ def _validate(q: dict, src: dict | None) -> dict | None:
         return None
     topic = q.get("topic") if q.get("topic") in TOPIC_SLUGS else "world-gk"
     diff = q.get("difficulty") if q.get("difficulty") in (1, 2, 3) else 1
+    # LLMs tend to park the right answer in the same slot; shuffle so position carries no signal.
+    order = list(range(4))
+    random.shuffle(order)
+    opts = [opts[i] for i in order]
+    ans = order.index(ans)
     return {
         "topic": "current-affairs",
         "question": stem,
@@ -207,24 +212,44 @@ def _validate(q: dict, src: dict | None) -> dict | None:
     }
 
 
-def generate_with_llm(items: list[dict], target: int, batch_size: int = 10) -> list[dict]:
-    """Ask the configured LLM for MCQs, batch by batch, until `target` questions are collected."""
+def generate_with_llm(items: list[dict], target: int, batch_size: int = 6, max_retries: int = 3) -> list[dict]:
+    """Ask the configured LLM for MCQs, batch by batch, until `target` questions are collected.
+
+    Free tiers are tight on tokens-per-minute (Groq: 8k TPM), so batches are small and a 429 triggers a
+    wait-and-retry instead of giving up — the daily job is not latency sensitive.
+    """
+    import time
+
     cfg = llm.current_config()
     out: list[dict] = []
     for start in range(0, len(items), batch_size):
         if len(out) >= target:
             break
         batch = items[start:start + batch_size]
-        lines = [f"[{i}] ({it['published']}, {it['source']}) {it['title']}\n{it['summary'][:900]}"
+        lines = [f"[{i}] ({it['published']}, {it['source']}) {it['title']}\n{it['summary'][:600]}"
                  for i, it in enumerate(batch)]
         user = "News items:\n\n" + "\n\n".join(lines) + f"\n\nAllowed topic slugs: {', '.join(TOPIC_SLUGS)}."
-        try:
-            data = llm.complete_json(SYSTEM_PROMPT, user, schema=OUTPUT_SCHEMA, cfg=cfg)
-        except llm.LLMError as e:
-            log.warning("LLM batch at %d failed: %s", start, e)
-            if "rate limited" in str(e) or "HTTP 401" in str(e) or "HTTP 403" in str(e) or "no API key" in str(e):
-                break  # no point retrying the remaining batches
+        data = None
+        for attempt in range(max_retries + 1):
+            try:
+                data = llm.complete_json(SYSTEM_PROMPT, user, schema=OUTPUT_SCHEMA, cfg=cfg, max_tokens=3000)
+                break
+            except llm.LLMError as e:
+                msg = str(e)
+                if "HTTP 401" in msg or "HTTP 403" in msg or "no API key" in msg:
+                    log.warning("LLM auth problem, aborting: %s", msg)
+                    return out
+                if "rate limited" in msg and attempt < max_retries:
+                    wait = 65 if "per minute" in msg or "TPM" in msg or "RPM" in msg else 20 * (attempt + 1)
+                    log.info("rate limited; waiting %ds before retrying batch at %d", wait, start)
+                    time.sleep(wait)
+                    continue
+                log.warning("LLM batch at %d failed: %s", start, msg)
+                break
+        if data is None:
             continue
+        # Gentle pacing between batches keeps us under per-minute token caps.
+        time.sleep(3)
         for q in data.get("questions", []) if isinstance(data, dict) else []:
             idx = q.get("source_index", -1) if isinstance(q, dict) else -1
             src = batch[idx] if isinstance(idx, int) and 0 <= idx < len(batch) else None
@@ -282,6 +307,10 @@ async def run_daily(db: AsyncSession, *, day: date | None = None, force: bool = 
             ))
             inserted += 1
         run.inserted = inserted
+        if inserted and any(q["source"] == "news" for q in questions):
+            # LLM questions supersede the shallower heuristic ones for the same day.
+            await db.execute(update(Question).where(Question.topic_id == topic_id, Question.published_at == day,
+                                                    Question.source == "news-heuristic").values(is_active=False))
         run.status = "ok"
         run.message = f"{inserted} questions added for {day.isoformat()}"
     except Exception as e:  # noqa: BLE001

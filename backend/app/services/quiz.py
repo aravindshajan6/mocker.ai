@@ -78,7 +78,8 @@ async def current_affairs_ids(db: AsyncSession, day: date) -> list[int]:
         return []
     return list((await db.execute(
         select(Question.id).where(Question.topic_id == ca, Question.published_at == day, Question.is_active.is_(True))
-        .order_by(Question.id)
+        .order_by((Question.source == "news").desc(), Question.id)  # LLM-written first, then heuristic
+        .limit(settings.current_affairs_target)
     )).scalars().all())
 
 
