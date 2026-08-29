@@ -1097,7 +1097,7 @@ def short_post(post: str) -> str:
     """'TRACER (Soil Survey and Soil Conservation )' -> 'Tracer' for the explanation.
     Splits only on real separators, so 'SUB-ENGINEER' survives intact."""
     s = re.split(r"\s+[-–/]\s+|[(,]|\s*/\s*(?=[A-Z])", norm_ws(post))[0]
-    s = norm_ws(s).rstrip(" -–/,.")
+    s = norm_ws(s).strip(" -–/,.")
     if s.isupper() or s.islower():
         s = s.title()
     # .title() mangles the Grade numerals Kerala PSC uses everywhere ("Gr.II" -> "Gr.Ii")

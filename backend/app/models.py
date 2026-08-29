@@ -144,6 +144,7 @@ class UserPrefs(Base):
     timezone: Mapped[str] = mapped_column(String(64), default="Asia/Kolkata")
     telegram_chat_id: Mapped[str | None] = mapped_column(String(40), nullable=True)
     telegram_link_code: Mapped[str | None] = mapped_column(String(16), nullable=True, index=True)
+    telegram_code_issued_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     last_reminded_on: Mapped[date | None] = mapped_column(Date, nullable=True)
 
 

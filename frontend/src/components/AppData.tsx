@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { api } from "@/lib/api";
+import { api, setCurrentUserId } from "@/lib/api";
 import type { CurrentAffairs, Daily, ReviewDue, Stats, Topic, User } from "@/lib/types";
 
 /**
@@ -37,6 +37,7 @@ export function AppDataProvider({ children }: { children: React.ReactNode }) {
       const [u, s, d, r, c, t] = await Promise.all([
         api.me(), api.stats(), api.daily(), api.reviewQueue(), api.currentAffairs(), api.topics(),
       ]);
+      setCurrentUserId(u.id);
       setUser(u); setStats(s); setDaily(d); setDue(r); setCa(c); setTopics(t);
       setError(null);
     } catch (e) {

@@ -14,6 +14,7 @@ Two design constraints shape this:
 """
 from __future__ import annotations
 
+import asyncio
 import logging
 from datetime import date
 
@@ -87,7 +88,9 @@ async def explain(db: AsyncSession, q: Question) -> str:
             f"Correct answer: ({chr(65 + q.correct_index)}) {q.options[q.correct_index]}\n"
             f"Existing explanation: {q.explanation or '(none)'}")
     try:
-        data = llm.complete_json(SYSTEM_PROMPT, user, max_tokens=900, cfg=cfg)
+        # Synchronous HTTP inside the request handler would stall every other request for the
+        # duration of the provider call, so it runs on a worker thread.
+        data = await asyncio.to_thread(llm.complete_json, SYSTEM_PROMPT, user, max_tokens=900, cfg=cfg)
     except llm.LLMError as e:
         log.warning("explain failed for question %s: %s", q.id, e)
         raise ExplainUnavailable("Could not reach the explanation service just now.") from e

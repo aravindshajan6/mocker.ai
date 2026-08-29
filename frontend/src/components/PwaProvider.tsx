@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
+import { getCurrentUserId } from "@/lib/api";
 
 type InstallPrompt = Event & { prompt: () => Promise<void>; userChoice: Promise<{ outcome: string }> };
 
@@ -31,7 +32,7 @@ export default function PwaProvider() {
     const register = () => navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {});
     register();
 
-    const flush = () => navigator.serviceWorker.controller?.postMessage("flush-outbox");
+    const flush = () => navigator.serviceWorker.controller?.postMessage({ type: "flush-outbox", owner: getCurrentUserId() });
     const onOnline = () => flush();
     const onMessage = (e: MessageEvent) => {
       if (e.data?.type === "outbox-flushed" && e.data.count) {

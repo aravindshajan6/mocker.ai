@@ -10,7 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from ..auth import current_user
 from ..config import settings
 from ..db import get_db
-from ..models import PushSubscription, User, UserPrefs
+from ..models import PushSubscription, User, UserPrefs, utcnow
 from ..schemas import PrefsIn, PrefsOut, PushSubscribeIn
 from ..services import push, telegram
 
@@ -106,6 +106,7 @@ async def telegram_link(user: User = Depends(current_user), db: AsyncSession = D
         raise HTTPException(503, "Telegram reminders are not configured on this server")
     p = await get_prefs(db, user.id)
     p.telegram_link_code = telegram.new_link_code()
+    p.telegram_code_issued_at = utcnow()
     await db.commit()
     return await _out(db, user, p)
 

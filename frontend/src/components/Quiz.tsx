@@ -7,7 +7,7 @@ import { ArrowRight, Check, Lightbulb, X } from "lucide-react";
 import Mascot, { type Mood } from "@/components/Mascot";
 import { AnimatePresence, motion } from "motion/react";
 import { Chip, Num, ProgressBar, Spinner } from "@/components/ui";
-import { api } from "@/lib/api";
+import { api, QueuedOffline } from "@/lib/api";
 import type { AnswerResult, QuizSession } from "@/lib/types";
 
 const LETTERS = ["A", "B", "C", "D"];
@@ -30,6 +30,7 @@ export default function Quiz({ id }: { id: string }) {
   const [combo, setCombo] = useState(0);
   const [milestone, setMilestone] = useState<{ title: string; body: string; days: number } | null>(null);
   const [showQuit, setShowQuit] = useState(false);
+  const [queued, setQueued] = useState(false);
   const [deeper, setDeeper] = useState<string | null>(null);
   const [deeperBusy, setDeeperBusy] = useState(false);
   const [deeperError, setDeeperError] = useState<string | null>(null);
@@ -76,7 +77,12 @@ export default function Quiz({ id }: { id: string }) {
         confetti({ particleCount: 40, spread: 60, origin: { y: 0.3 }, scalar: 0.8, disableForReducedMotion: true });
       }
     } catch (e) {
-      setError((e as Error)?.message || "Something went wrong. Please try again.");
+      if (e instanceof QueuedOffline) {
+        // Saved locally; we genuinely do not know whether it was right, so do not pretend to.
+        setQueued(true);
+      } else {
+        setError((e as Error)?.message || "Something went wrong. Please try again.");
+      }
     } finally {
       setBusy(false);
     }
@@ -85,6 +91,10 @@ export default function Quiz({ id }: { id: string }) {
   const next = useCallback(async () => {
     if (!session || busy) return;
     if (index + 1 >= total) {
+      if (queued) {
+        setError("Some answers are still waiting to sync. Reconnect and reopen this quiz to finish it.");
+        return;
+      }
       setBusy(true);
       try {
         const f = await api.finish(session.id);
@@ -99,12 +109,13 @@ export default function Quiz({ id }: { id: string }) {
     shownAt.current = Date.now();
     setIndex(index + 1);
     setSelected(null);
+    setQueued(false);
     setDeeper(null);
     setDeeperError(null);
     setResult(null);
     setPhase("answering");
     setMood("think");
-  }, [session, busy, index, total, router]);
+  }, [session, busy, index, total, router, queued]);
 
   // Keyboard: 1-4 select, Enter to check/next
   useEffect(() => {
@@ -236,7 +247,16 @@ export default function Quiz({ id }: { id: string }) {
         </AnimatePresence>
 
         <div className="mt-auto pt-5">
-          {phase === "answering" ? (
+          {queued ? (
+            <>
+              <p className="rounded-xl bg-accent-soft text-accent-ink px-3 py-2 text-sm font-bold mb-2">
+                Saved offline. We can&apos;t mark it until you&apos;re back online — it will sync automatically.
+              </p>
+              <button className="btn btn-primary w-full" onClick={next} disabled={busy}>
+                {index + 1 >= total ? "Finish later" : "Next question"}
+              </button>
+            </>
+          ) : phase === "answering" ? (
             <button className="btn btn-primary w-full" onClick={check} disabled={selected === null || busy}>
               {busy ? "Checking…" : selected === null ? "Pick an answer" : "Check answer"}
             </button>

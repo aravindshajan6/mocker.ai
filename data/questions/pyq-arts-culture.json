@@ -45,28 +45,6 @@
   },
   {
     "topic": "arts-culture",
-    "question": "Match list – 1 of awardees with list – 2 of categories in 67th National Film Awards : List – 1 (Awardee) List – 2 (Category) a. Vijay Sethupathy 1. Best Actor b. manoj Bajpayee 2. Best Supporting Actor c. mathukutty Xavier 3. Best director d. Sanjay Puran Singh 4. Best debut Film of a director Codes : a b c d",
-    "options": [
-      "2 3 4 1",
-      "4 3 4 2",
-      "2 1 4 3",
-      "4 1 2 3"
-    ],
-    "answer": 2,
-    "explanation": "This question was asked in Kerala PSC exam 097/2021 (HSST Journalism, 29 Sep 2021). The correct answer is 2 1 4 3.",
-    "difficulty": 2,
-    "tags": [
-      "pyq",
-      "hsst-journalism-khse"
-    ],
-    "source": "pyq",
-    "source_ref": "Kerala PSC 097/2021 · Q99",
-    "source_key": "Final Answer Key",
-    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2021-09/qn_0.pdf",
-    "published_at": "2021-09-29"
-  },
-  {
-    "topic": "arts-culture",
     "question": "Which of the following malayalam screenplay is not included in m. T. Vasudevan Nair ? i. Nagaramenandi ii. Anandaram iii. Kochuthemmadai iv. Nizhalattam",
     "options": [
       "Only i and iv",

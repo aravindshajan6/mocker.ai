@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 
 from sqlalchemy import case, func, select
+from sqlalchemy.dialects.postgresql import insert as pg_insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..config import settings
@@ -140,8 +141,14 @@ async def daily_question_ids(db: AsyncSession, day: date) -> list[int]:
         if i > 10_000:
             break
     if chosen:
-        db.add(DailyChallenge(day=day, question_ids=chosen))
+        # Two requests just after the IST midnight boundary both miss the row above; let the first
+        # win rather than 500-ing the second on the primary key.
+        await db.execute(pg_insert(DailyChallenge).values(day=day, question_ids=chosen)
+                         .on_conflict_do_nothing(index_elements=["day"]))
         await db.commit()
+        stored = await db.get(DailyChallenge, day)
+        if stored:
+            return list(stored.question_ids)
     return chosen
 
 

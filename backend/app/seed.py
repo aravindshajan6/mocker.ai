@@ -59,6 +59,7 @@ async def seed_questions(db: AsyncSession) -> int:
         log.warning("data dir %s not found; skipping question seed", data_dir)
         return 0
     known = set((await db.execute(select(Question.fingerprint))).scalars().all())
+    known_by_source: dict[str, set[str]] = {}
     added = 0
     for path in sorted(data_dir.glob("*.json")):
         try:
@@ -76,6 +77,7 @@ async def seed_questions(db: AsyncSession) -> int:
             if len(opts) != 4 or not isinstance(ans, int) or not 0 <= ans < 4:
                 continue
             fp = fingerprint(item["question"])
+            known_by_source.setdefault(item.get("source") or "seed", set()).add(fp)
             if fp in known:
                 continue
             known.add(fp)
@@ -88,8 +90,30 @@ async def seed_questions(db: AsyncSession) -> int:
             ))
             added += 1
         await db.commit()
+    await _retire_removed_imports(db, data_dir, known_by_source)
     log.info("seeded %d new questions", added)
     return added
+
+
+async def _retire_removed_imports(db: AsyncSession, data_dir: Path, seen: dict[str, set[str]]) -> None:
+    """Deactivate imported questions that their importer no longer produces.
+
+    Importers get stricter over time (the PYQ one grew a second classification pass that dropped
+    half its output as post-specific). Without this, everything an earlier, looser run emitted
+    would keep being served forever.
+    """
+    for source, fingerprints in seen.items():
+        if source == "seed" or not fingerprints:
+            continue
+        stale = (await db.execute(
+            select(Question).where(Question.source == source, Question.is_active.is_(True),
+                                   Question.fingerprint.not_in(fingerprints))
+        )).scalars().all()
+        for q in stale:
+            q.is_active = False
+        if stale:
+            log.info("retired %d %s questions no longer in the bank files", len(stale), source)
+    await db.commit()
 
 
 async def seed_demo_user(db: AsyncSession) -> None:

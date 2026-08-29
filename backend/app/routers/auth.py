@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..auth import clear_auth_cookie, create_token, current_user, hash_password, set_auth_cookie, verify_password
 from ..db import get_db
-from ..models import User, UserStats
+from ..models import User, UserPrefs, UserStats
 from ..schemas import LoginIn, RegisterIn, UserOut
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
@@ -19,6 +19,10 @@ async def register(data: RegisterIn, response: Response, db: AsyncSession = Depe
     user = User(email=email, name=data.name.strip(), password_hash=hash_password(data.password))
     user.stats = UserStats()
     db.add(user)
+    await db.flush()
+    # Reminders are opt-out, so the preference row has to exist from the start — otherwise the
+    # reminder job's join silently skips everyone who never opened Settings.
+    db.add(UserPrefs(user_id=user.id))
     await db.commit()
     set_auth_cookie(response, create_token(user.id))
     return UserOut(id=user.id, name=user.name, email=user.email)
