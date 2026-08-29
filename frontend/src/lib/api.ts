@@ -1,6 +1,6 @@
 import type {
   ActiveSession, AnswerResult, CurrentAffairs, Daily, ExamResult, ExamState, FinishResult, HistoryRow, LeaderboardRow,
-  QuizSession, Stats, Topic, User,
+  QuizSession, ReviewDue, Stats, Topic, User,
 } from "./types";
 
 export class ApiError extends Error {
@@ -62,10 +62,12 @@ export const api = {
   topics: () => get<Topic[]>("/api/topics"),
   daily: () => get<Daily>("/api/quiz/daily"),
   active: () => get<ActiveSession[]>("/api/quiz/active"),
-  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
+  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
+  reviewQueue: () => get<ReviewDue>("/api/me/review"),
   currentAffairs: () => get<CurrentAffairs>("/api/current-affairs"),
   session: (id: string) => get<QuizSession>(`/api/quiz/${id}`),
-  answer: (id: string, question_id: number, selected_index: number) => post<AnswerResult>(`/api/quiz/${id}/answer`, { question_id, selected_index }),
+  answer: (id: string, question_id: number, selected_index: number, elapsed_ms?: number) =>
+    post<AnswerResult>(`/api/quiz/${id}/answer`, { question_id, selected_index, elapsed_ms }),
   finish: (id: string) => post<FinishResult>(`/api/quiz/${id}/finish`),
   abandon: (id: string) => post<{ ok: boolean }>(`/api/quiz/${id}/abandon`),
   startExam: (data: { count?: number; duration_minutes?: number; topic?: string }) => post<ExamState>("/api/exam/start", data),

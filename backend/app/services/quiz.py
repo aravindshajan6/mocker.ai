@@ -8,7 +8,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..config import settings
-from ..models import Attempt, DailyChallenge, Question, Topic, UserStats
+from ..models import Attempt, DailyChallenge, Question, ReviewCard, Topic, UserStats
 
 # Indian Standard Time — the app's "day" boundary for streaks and daily challenges.
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -87,6 +87,20 @@ async def current_affairs_ids(db: AsyncSession, day: date) -> list[int]:
     )).scalars().all())
 
 
+async def personal_daily_ids(db: AsyncSession, user_id: str, day: date, review_slots: int = 3) -> list[int]:
+    """Today's challenge for one user: the shared set, with up to `review_slots` slots given over to
+    questions they are due to revise. Everyone still sees mostly the same paper, so the daily score
+    stays comparable, but part of it is always tuned to what this person is forgetting."""
+    shared = await daily_question_ids(db, day)
+    if not shared:
+        return []
+    due = [q for q in await due_question_ids(db, user_id, review_slots) if q not in shared]
+    if not due:
+        return shared
+    keep = shared[: max(len(shared) - len(due), 0)]
+    return keep + due
+
+
 async def daily_question_ids(db: AsyncSession, day: date) -> list[int]:
     """Same 10 questions for everyone on a given day, spread across topics."""
     existing = await db.get(DailyChallenge, day)
@@ -149,3 +163,15 @@ def effective_streak(stats: UserStats, day: date) -> int:
     if stats.last_active_date >= day - timedelta(days=1):
         return stats.current_streak
     return 0
+
+
+async def due_question_ids(db: AsyncSession, user_id: str, limit: int = 20, at: datetime | None = None) -> list[int]:
+    """Questions whose spaced-repetition review is due, most overdue first."""
+    at = at or datetime.now(timezone.utc)
+    rows = (await db.execute(
+        select(ReviewCard.question_id)
+        .join(Question, Question.id == ReviewCard.question_id)
+        .where(ReviewCard.user_id == user_id, ReviewCard.due_at <= at, Question.is_active.is_(True))
+        .order_by(ReviewCard.due_at.asc()).limit(limit)
+    )).scalars().all()
+    return list(rows)

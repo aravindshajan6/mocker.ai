@@ -1,4 +1,4 @@
-from datetime import datetime, time, timedelta
+from datetime import datetime, time, timedelta, timezone
 
 from fastapi import APIRouter, Depends
 from sqlalchemy import case, func, select
@@ -6,9 +6,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..auth import current_user
 from ..db import get_db
-from ..models import Attempt, QuizSession, Topic, User, UserStats
+from ..models import Attempt, Question, QuizSession, ReviewCard, Topic, User, UserStats
 from ..routers.quiz import _badges, _get_stats
-from ..schemas import DayActivity, HistoryRow, LeaderboardRow, StatsOut
+from ..schemas import DayActivity, HistoryRow, LeaderboardRow, ReviewDueOut, StatsOut
 from ..services import scoring
 from ..services.quiz import IST, effective_streak, today
 
@@ -79,3 +79,35 @@ async def leaderboard(user: User = Depends(current_user), db: AsyncSession = Dep
                                                                         Attempt.answered_at >= since))).scalar()
         out.append(LeaderboardRow(name=user.name, points=int(mine or 0), is_me=True))
     return out
+
+
+@router.get("/review", response_model=ReviewDueOut)
+async def review_queue(user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
+    """What spaced repetition says this user should revise."""
+    now = datetime.now(timezone.utc)
+    end_of_day = datetime.combine(today() + timedelta(days=1), time.min, tzinfo=IST)
+    due_now = (await db.execute(
+        select(func.count()).select_from(ReviewCard).join(Question, Question.id == ReviewCard.question_id)
+        .where(ReviewCard.user_id == user.id, ReviewCard.due_at <= now, Question.is_active.is_(True))
+    )).scalar_one()
+    due_today = (await db.execute(
+        select(func.count()).select_from(ReviewCard).join(Question, Question.id == ReviewCard.question_id)
+        .where(ReviewCard.user_id == user.id, ReviewCard.due_at <= end_of_day, Question.is_active.is_(True))
+    )).scalar_one()
+    learning = (await db.execute(
+        select(func.count()).select_from(ReviewCard).where(ReviewCard.user_id == user.id)
+    )).scalar_one()
+    nxt = (await db.execute(
+        select(func.min(ReviewCard.due_at)).where(ReviewCard.user_id == user.id, ReviewCard.due_at > now)
+    )).scalar()
+    # Retention = how often a *repeat* encounter was answered correctly in the last 30 days.
+    since = now - timedelta(days=30)
+    rep_rows = (await db.execute(
+        select(func.count(), func.sum(case((Attempt.is_correct.is_(True), 1), else_=0)))
+        .select_from(Attempt).join(ReviewCard, (ReviewCard.user_id == Attempt.user_id) &
+                                   (ReviewCard.question_id == Attempt.question_id))
+        .where(Attempt.user_id == user.id, Attempt.answered_at >= since, ReviewCard.reps > 1)
+    )).one()
+    total_reps, correct_reps = rep_rows[0] or 0, rep_rows[1] or 0
+    return ReviewDueOut(due_now=due_now, due_today=due_today, learning=learning, next_due_at=nxt,
+                        retention=(correct_reps / total_reps) if total_reps >= 5 else None)

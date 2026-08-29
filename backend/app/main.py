@@ -27,6 +27,7 @@ async def lifespan(app: FastAPI):
             "ALTER TABLE quiz_sessions ADD COLUMN IF NOT EXISTS negative_marking DOUBLE PRECISION DEFAULT 0",
             "ALTER TABLE quiz_sessions ADD COLUMN IF NOT EXISTS raw_score DOUBLE PRECISION DEFAULT 0",
             "ALTER TABLE attempts ADD COLUMN IF NOT EXISTS marked_for_review BOOLEAN DEFAULT FALSE",
+            "ALTER TABLE questions ADD COLUMN IF NOT EXISTS explanation_long TEXT",
         ):
             await conn.execute(text(ddl))
     async with SessionLocal() as db:

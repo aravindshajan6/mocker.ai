@@ -114,6 +114,20 @@ class Attempt(Base):
     __table_args__ = (UniqueConstraint("session_id", "question_id", name="uq_attempt_session_question"),)
 
 
+class ReviewCard(Base):
+    """FSRS scheduling state for one (user, question) pair — see services/srs.py."""
+    __tablename__ = "review_cards"
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
+    question_id: Mapped[int] = mapped_column(ForeignKey("questions.id", ondelete="CASCADE"), primary_key=True)
+    state: Mapped[dict] = mapped_column(JSON)          # fsrs Card.to_dict()
+    due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    reps: Mapped[int] = mapped_column(Integer, default=0)
+    lapses: Mapped[int] = mapped_column(Integer, default=0)
+    last_reviewed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+    __table_args__ = (Index("ix_review_due", "user_id", "due_at"),)
+
+
 class DailyChallenge(Base):
     __tablename__ = "daily_challenges"
     day: Mapped[date] = mapped_column(Date, primary_key=True)
