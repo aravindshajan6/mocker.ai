@@ -209,7 +209,7 @@ async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_u
     stats.questions_answered += 1
     stats.correct_answers += 1 if is_correct else 0
     day = today()
-    extended = touch_streak(stats, day)
+    change = touch_streak(stats, day)
     await db.commit()
 
     return AnswerOut(
@@ -217,7 +217,10 @@ async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_u
         source_ref=q.source_ref,
         points=pts, combo=combo,
         score=s.score, correct=s.correct, answered=len(s.attempts) + 1, total=len(s.question_ids),
-        streak=effective_streak(stats, day), streak_extended=extended,
+        streak=effective_streak(stats, day), streak_extended=change.extended,
+        streak_repaired=change.repaired, repairs_left=change.repairs_left,
+        milestone=change.milestone, milestone_title=_milestone_copy(change.milestone)[0],
+        milestone_body=_milestone_copy(change.milestone)[1],
     )
 
 
@@ -254,6 +257,13 @@ async def finish(session_id: str, user: User = Depends(current_user), db: AsyncS
         level_title=title, points_to_next_level=to_next, streak=effective_streak(stats, today()),
         already_finished=already, new_badges=new_badges,
     )
+
+
+def _milestone_copy(milestone: int | None) -> tuple[str | None, str | None]:
+    if not milestone:
+        return None, None
+    title, body = scoring.MILESTONE_COPY.get(milestone, ("Milestone reached", ""))
+    return title, body
 
 
 async def _schedule_review(db: AsyncSession, user_id: str, question_id: int, is_correct: bool,

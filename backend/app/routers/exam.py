@@ -183,7 +183,7 @@ async def submit_exam(session_id: str, user: User = Depends(current_user), db: A
         stats.total_points += pts
         stats.quizzes_completed += 1
         if answered_now:
-            touch_streak(stats, today())
+            touch_streak(stats, today())  # exam attempts count as practice for the streak
         s.correct = correct
         s.raw_score = raw
         s.score = pts

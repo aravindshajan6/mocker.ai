@@ -39,6 +39,12 @@ class UserStats(Base):
     questions_answered: Mapped[int] = mapped_column(Integer, default=0)
     correct_answers: Mapped[int] = mapped_column(Integer, default=0)
     quizzes_completed: Mapped[int] = mapped_column(Integer, default=0)
+    # Streak repairs: a missed day is forgiven a couple of times a month so one bad day does not
+    # end a long run (and with it, usually, the habit).
+    repairs_month: Mapped[str | None] = mapped_column(String(7), nullable=True)   # "2026-08"
+    repairs_used: Mapped[int] = mapped_column(Integer, default=0)
+    last_repair_on: Mapped[date | None] = mapped_column(Date, nullable=True)
+    best_milestone: Mapped[int] = mapped_column(Integer, default=0)
 
     user: Mapped[User] = relationship(back_populates="stats")
 

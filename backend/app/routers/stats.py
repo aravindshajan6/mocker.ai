@@ -38,11 +38,17 @@ async def my_stats(user: User = Depends(current_user), db: AsyncSession = Depend
     daily = (await db.execute(select(QuizSession).where(QuizSession.user_id == user.id, QuizSession.daily_date == day,
                                                         QuizSession.mode == "daily",
                                                         QuizSession.finished_at.is_not(None)))).scalars().first()
+    month = day.strftime("%Y-%m")
+    used = stats.repairs_used if stats.repairs_month == month else 0
+    streak_now = effective_streak(stats, day)
+    upcoming = next((m for m in scoring.MILESTONES if m > streak_now), None)
     level, title, progress, to_next = scoring.level_for(stats.total_points)
     badges = await _badges(db, user.id, stats)
     return StatsOut(
         total_points=stats.total_points, level=level, level_title=title, level_progress=progress,
-        points_to_next_level=to_next, current_streak=effective_streak(stats, day), longest_streak=stats.longest_streak,
+        points_to_next_level=to_next, current_streak=streak_now, longest_streak=stats.longest_streak,
+        repairs_left=max(0, scoring.MONTHLY_REPAIRS - used), repairs_used=used,
+        best_milestone=stats.best_milestone, next_milestone=upcoming,
         questions_answered=stats.questions_answered, correct_answers=stats.correct_answers,
         accuracy=(stats.correct_answers / stats.questions_answered) if stats.questions_answered else 0.0,
         quizzes_completed=stats.quizzes_completed, last_7_days=last7, daily_done_today=daily is not None,

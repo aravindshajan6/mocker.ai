@@ -149,6 +149,11 @@ class AnswerOut(BaseModel):
     total: int
     streak: int
     streak_extended: bool
+    streak_repaired: bool = False
+    repairs_left: int = 0
+    milestone: int | None = None
+    milestone_title: str | None = None
+    milestone_body: str | None = None
 
 
 class FinishOut(BaseModel):
@@ -181,6 +186,10 @@ class StatsOut(BaseModel):
     points_to_next_level: int
     current_streak: int
     longest_streak: int
+    repairs_left: int
+    repairs_used: int
+    best_milestone: int
+    next_milestone: int | None
     questions_answered: int
     correct_answers: int
     accuracy: float

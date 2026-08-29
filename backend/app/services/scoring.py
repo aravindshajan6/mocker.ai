@@ -108,3 +108,32 @@ def guess_break_even(options: int = 4, penalty: float = NEGATIVE_MARK) -> float:
     which is the single most useful fact about negative marking: eliminating even one option
     makes guessing profitable, while guessing with no information is a coin flip on your score."""
     return round((1 / options) - (1 - 1 / options) * penalty, 4)
+
+
+# --- Streaks ---------------------------------------------------------------
+# Adults miss days. A brittle streak makes people abandon the app entirely rather than resume, so a
+# missed day is forgiven twice a month, automatically and without ceremony.
+MONTHLY_REPAIRS = 2
+
+MILESTONES = (3, 7, 14, 30, 50, 100, 200, 365)
+
+MILESTONE_COPY = {
+    3: ("Three days running", "The hardest part is starting. You have started."),
+    7: ("A full week", "Seven days is where practice starts turning into habit."),
+    14: ("Two weeks", "You have built something worth protecting."),
+    30: ("A month", "Thirty days of showing up. That is how exams get cleared."),
+    50: ("Fifty days", "Most people never get here."),
+    100: ("One hundred days", "A hundred days of steady work. Remarkable."),
+    200: ("Two hundred days", "This is dedication of a rare kind."),
+    365: ("A whole year", "Every single day for a year. Extraordinary."),
+}
+
+
+def milestone_reached(previous_best: int, streak: int) -> int | None:
+    """The highest milestone newly crossed by reaching `streak`, if any."""
+    crossed = [m for m in MILESTONES if previous_best < m <= streak]
+    return max(crossed) if crossed else None
+
+
+def milestone_points(milestone: int) -> int:
+    return milestone * 5

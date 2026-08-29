@@ -43,7 +43,8 @@ export default function Progress() {
 
       <section className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <Stat label="Points" value={stats.total_points.toLocaleString()} tone="text-primary" />
-        <Stat label="Day streak" value={`🔥 ${stats.current_streak}`} sub={`best ${stats.longest_streak}`} />
+        <Stat label="Day streak" value={`🔥 ${stats.current_streak}`}
+          sub={stats.next_milestone ? `${stats.next_milestone - stats.current_streak} to ${stats.next_milestone}` : `best ${stats.longest_streak}`} />
         <Stat label="Accuracy" value={`${Math.round(stats.accuracy * 100)}%`} sub={`${stats.correct_answers}/${stats.questions_answered}`} />
         <Stat label="Quizzes" value={String(stats.quizzes_completed)} />
       </section>
@@ -54,6 +55,20 @@ export default function Progress() {
           <span>{stats.points_to_next_level} pts to next</span>
         </div>
         <ProgressBar value={stats.level_progress} color="var(--accent)" />
+      </section>
+
+      <section className="card p-4 flex items-center gap-3">
+        <span className="text-2xl">🛟</span>
+        <div className="flex-1">
+          <p className="font-extrabold text-sm">
+            {stats.repairs_left > 0
+              ? `${stats.repairs_left} streak repair${stats.repairs_left === 1 ? "" : "s"} left this month`
+              : "No streak repairs left this month"}
+          </p>
+          <p className="text-xs text-muted font-semibold">
+            Miss a single day and we keep your run alive automatically — twice a month, no questions asked.
+          </p>
+        </div>
       </section>
 
       <section className="card p-4">
