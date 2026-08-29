@@ -34,3 +34,24 @@ def user(client):
     r = client.post("/api/auth/register", json={"name": "Pytest User", "email": email, "password": "secret123"})
     assert r.status_code == 200, r.text
     return r.json()
+
+
+@pytest.fixture
+async def db_session():
+    """A real database session for tests that exercise service-layer code directly.
+
+    Builds its own engine with no pooling: the app's shared engine is bound to the running
+    server's event loop, and reusing it from a test loop raises "Event loop is closed".
+    """
+    from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+    from sqlalchemy.pool import NullPool
+
+    from app.config import settings
+
+    engine = create_async_engine(settings.database_url, poolclass=NullPool)
+    maker = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
+    try:
+        async with maker() as session:
+            yield session
+    finally:
+        await engine.dispose()

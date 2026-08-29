@@ -28,14 +28,19 @@ async def lifespan(app: FastAPI):
             "ALTER TABLE quiz_sessions ADD COLUMN IF NOT EXISTS raw_score DOUBLE PRECISION DEFAULT 0",
             "ALTER TABLE attempts ADD COLUMN IF NOT EXISTS marked_for_review BOOLEAN DEFAULT FALSE",
             "ALTER TABLE questions ADD COLUMN IF NOT EXISTS explanation_long TEXT",
+            "ALTER TABLE questions ADD COLUMN IF NOT EXISTS verified_at TIMESTAMPTZ",
+            "ALTER TABLE questions ADD COLUMN IF NOT EXISTS verdict VARCHAR(16)",
+            "ALTER TABLE questions ADD COLUMN IF NOT EXISTS verdict_confidence DOUBLE PRECISION",
+            "ALTER TABLE questions ADD COLUMN IF NOT EXISTS verdict_note TEXT",
         ):
             await conn.execute(text(ddl))
     async with SessionLocal() as db:
         await seed_questions(db)
         await seed_demo_user(db)
-    job = scheduler.start()
+    jobs = scheduler.start()
     yield
-    job.cancel()
+    for job in jobs:
+        job.cancel()
     await engine.dispose()
 
 

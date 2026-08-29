@@ -8,6 +8,7 @@ from ..auth import current_user
 from ..config import settings
 from ..content import llm
 from ..content.current_affairs import run_daily
+from ..content.verify import run_audit, stats as audit_stats
 from ..db import SessionLocal, get_db
 from ..models import Attempt, ContentRun, Question, QuizSession, Topic, User
 from ..schemas import CADay, CARun, CurrentAffairsOut
@@ -78,3 +79,27 @@ async def trigger_run(background: BackgroundTasks, force: bool = False, wait: bo
         return _run_out(await run_daily(db, force=force))
     background.add_task(_bg_run, force)
     return None
+
+
+@router.get("/admin/verification")
+async def verification_status(x_admin_token: str = Header(default=""), db: AsyncSession = Depends(get_db)):
+    """How far the automated answer-key audit has got through the imported bank."""
+    if not settings.admin_token or x_admin_token != settings.admin_token:
+        raise HTTPException(403, "Admin token missing or wrong")
+    return await audit_stats(db)
+
+
+@router.post("/admin/verification/run")
+async def verification_run(background: BackgroundTasks, limit: int = 50, wait: bool = False,
+                           x_admin_token: str = Header(default=""), db: AsyncSession = Depends(get_db)):
+    if not settings.admin_token or x_admin_token != settings.admin_token:
+        raise HTTPException(403, "Admin token missing or wrong")
+    if wait:
+        return await run_audit(db, limit=limit)
+
+    async def _bg():
+        async with SessionLocal() as s:
+            await run_audit(s, limit=limit)
+
+    background.add_task(_bg)
+    return {"started": True, "limit": limit}

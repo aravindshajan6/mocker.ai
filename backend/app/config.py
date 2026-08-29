@@ -21,6 +21,13 @@ class Settings(BaseSettings):
     current_affairs_target: int = 15       # questions to aim for per day
     current_affairs_days_back: int = 2     # how many days of news to consider
     admin_token: str = ""                  # if set, enables POST /api/admin/* with X-Admin-Token
+    # Nightly answer-key audit of bulk-imported questions
+    verify_enabled: bool = True
+    verify_hour_ist: int = 3
+    verify_batch_size: int = 10
+    verify_per_night: int = 400            # questions audited per run (fits the free-tier token budget)
+    verify_model: str = "qwen/qwen3.8-27b" # 2M tokens/day on Groq's free tier vs 200k for gpt-oss-120b
+    verify_autodisable_confidence: float = 0.85
     # Demo account created on startup (set demo_password empty to disable)
     demo_email: str = "demo@mocker.app"
     demo_password: str = "demo1234"

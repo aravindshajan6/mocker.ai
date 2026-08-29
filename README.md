@@ -70,6 +70,14 @@ data/validate.py        validator for question files
     `ADMIN_TOKEN` set: `curl -X POST "http://localhost:3001/api/admin/current-affairs/run?wait=true&force=true" -H "X-Admin-Token: $ADMIN_TOKEN"`.
     `GET /api/current-affairs` shows the last run's status.
 
+* **Automated answer-key audit.** Imported (MILU) questions are the least trustworthy content in the
+  bank — a sample review found roughly 1 in 20 had a wrong or ambiguous key. A nightly job (03:00 IST)
+  asks the LLM to audit a slice of them: a confident "wrong answer" deactivates the question, an
+  uncertain verdict flags it for a human, and everything else is marked checked so it is not re-paid for.
+  It never rewrites a question or changes a key. Hand-authored and exam-paper questions are never audited —
+  they carry their own provenance. Status: `GET /api/admin/verification`; run now:
+  `POST /api/admin/verification/run?limit=50&wait=true` (needs `ADMIN_TOKEN`).
+
 Add your own questions: drop a JSON file into `data/questions/` following the schema, run
 `python3 data/validate.py data/questions/yourfile.json`, then `docker compose restart backend`.
 
