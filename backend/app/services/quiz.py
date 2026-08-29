@@ -4,7 +4,7 @@ from __future__ import annotations
 import random
 from datetime import date, datetime, timedelta, timezone
 
-from sqlalchemy import func, select
+from sqlalchemy import case, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..config import settings
@@ -175,3 +175,35 @@ async def due_question_ids(db: AsyncSession, user_id: str, limit: int = 20, at: 
         .order_by(ReviewCard.due_at.asc()).limit(limit)
     )).scalars().all()
     return list(rows)
+
+
+async def weak_topic_ids(db: AsyncSession, user_id: str, count: int, min_attempts: int = 8) -> list[int]:
+    """A practice set weighted towards the topics this user gets wrong most often.
+
+    Two thirds of the set comes from their weakest topics, the rest is mixed in so a session never
+    becomes a wall of the same subject — interleaving beats blocking for retention.
+    """
+    rows = (await db.execute(
+        select(Question.topic_id, func.count(), func.sum(case((Attempt.is_correct.is_(True), 1), else_=0)))
+        .join(Question, Question.id == Attempt.question_id)
+        .where(Attempt.user_id == user_id).group_by(Question.topic_id)
+    )).all()
+    scored = [(tid, (ok or 0) / n) for tid, n, ok in rows if n >= min_attempts]
+    scored.sort(key=lambda r: r[1])
+    weak = [tid for tid, acc in scored[:3] if acc < 0.75]
+    if not weak:
+        return await pick_questions(db, user_id, count)
+
+    target = max(1, (count * 2) // 3)
+    ids: list[int] = []
+    per_topic = max(1, target // len(weak))
+    for tid in weak:
+        ids += [q for q in await pick_questions(db, user_id, per_topic, topic_id=tid) if q not in ids]
+    if len(ids) < count:
+        for q in await pick_questions(db, user_id, count):
+            if q not in ids:
+                ids.append(q)
+            if len(ids) >= count:
+                break
+    random.shuffle(ids)
+    return ids[:count]

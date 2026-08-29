@@ -1,6 +1,6 @@
 import type {
   ActiveSession, AnswerResult, CurrentAffairs, Daily, ExamResult, ExamState, FinishResult, HistoryRow, LeaderboardRow,
-  QuizSession, ReviewDue, Stats, Topic, User,
+  Insights, QuizSession, ReviewDue, Stats, Topic, User,
 } from "./types";
 
 export class ApiError extends Error {
@@ -62,8 +62,9 @@ export const api = {
   topics: () => get<Topic[]>("/api/topics"),
   daily: () => get<Daily>("/api/quiz/daily"),
   active: () => get<ActiveSession[]>("/api/quiz/active"),
-  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
+  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review" | "weak"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
   reviewQueue: () => get<ReviewDue>("/api/me/review"),
+  insights: () => get<Insights>("/api/me/insights"),
   explain: (questionId: number) => post<{ question_id: number; explanation: string; cached: boolean }>(`/api/quiz/question/${questionId}/explain`),
   currentAffairs: () => get<CurrentAffairs>("/api/current-affairs"),
   session: (id: string) => get<QuizSession>(`/api/quiz/${id}`),

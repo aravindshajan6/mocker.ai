@@ -14,7 +14,7 @@ from ..schemas import (ActiveSessionOut, AnswerIn, AnswerOut, AttemptState, Dail
                        QuestionOut, SessionOut, StartQuizIn)
 from ..services import scoring, srs
 from ..services.quiz import (current_affairs_ids, due_question_ids, effective_streak, personal_daily_ids,
-                             pick_questions, today, touch_streak)
+                             pick_questions, today, touch_streak, weak_topic_ids)
 
 router = APIRouter(prefix="/api/quiz", tags=["quiz"])
 
@@ -123,6 +123,8 @@ async def start_quiz(data: StartQuizIn, user: User = Depends(current_user), db: 
         if existing:
             return await _session_out(db, existing)  # resume (or view finished) — one daily per day
         ids = await personal_daily_ids(db, user.id, daily_date)
+    elif data.mode == "weak":
+        ids = await weak_topic_ids(db, user.id, data.count or settings.topic_quiz_size)
     elif data.mode == "review":
         ids = await due_question_ids(db, user.id, data.count or 15)
         if not ids:

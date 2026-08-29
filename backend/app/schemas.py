@@ -44,7 +44,7 @@ class QuestionOut(BaseModel):
 
 
 class StartQuizIn(BaseModel):
-    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs|review)$")
+    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs|review|weak)$")
     topic: str | None = None
     count: int | None = Field(default=None, ge=3, le=30)
     day: date | None = None  # current-affairs mode: which day's set (default today)
@@ -269,3 +269,27 @@ class ExplainOut(BaseModel):
     question_id: int
     explanation: str
     cached: bool
+
+
+class TopicInsight(BaseModel):
+    slug: str
+    name: str
+    icon: str
+    answered: int
+    correct: int
+    accuracy: float
+    recent_accuracy: float | None   # last 20 attempts, once there are enough
+    trend: str                      # improving | steady | slipping | new
+    coverage: float                 # share of the topic's questions seen at least once
+    question_count: int
+
+
+class InsightsOut(BaseModel):
+    topics: list[TopicInsight]
+    weakest: list[str]              # slugs worth practising now (enough data, lowest accuracy)
+    strongest: list[str]
+    untouched: list[str]            # topics with no attempts yet
+    overall_accuracy: float
+    answered_total: int
+    enough_data: bool
+    headline: str

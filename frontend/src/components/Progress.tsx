@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
 import { ProgressBar, Spinner } from "@/components/ui";
 import { api } from "@/lib/api";
-import type { HistoryRow, LeaderboardRow, Stats } from "@/lib/types";
+import type { HistoryRow, Insights, LeaderboardRow, Stats } from "@/lib/types";
 
 const DAY = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
@@ -13,11 +14,14 @@ export default function Progress() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [history, setHistory] = useState<HistoryRow[]>([]);
   const [board, setBoard] = useState<LeaderboardRow[]>([]);
+  const [ins, setIns] = useState<Insights | null>(null);
+  const [starting, setStarting] = useState(false);
+  const router = useRouter();
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    Promise.all([api.stats(), api.history(), api.leaderboard()])
-      .then(([s, h, b]) => { setStats(s); setHistory(h); setBoard(b); })
+    Promise.all([api.stats(), api.history(), api.leaderboard(), api.insights()])
+      .then(([s, h, b, i]) => { setStats(s); setHistory(h); setBoard(b); setIns(i); })
       .catch((e) => setError(e?.message || "Something went wrong. Please try again."));
   }, []);
 
@@ -68,6 +72,17 @@ export default function Progress() {
           })}
         </div>
       </section>
+
+      {ins && <WeakTopics ins={ins} starting={starting} onPractise={async () => {
+        setStarting(true);
+        try {
+          const q = await api.startQuiz({ mode: "weak" });
+          router.push(`/quiz/${q.id}`);
+        } catch (e) {
+          setError((e as Error)?.message || "Could not start that practice set.");
+          setStarting(false);
+        }
+      }} />}
 
       <section className="card p-4">
         <h2 className="font-extrabold mb-3">Badges</h2>
@@ -130,5 +145,63 @@ function Stat({ label, value, sub, tone = "" }: { label: string; value: string; 
       <div className="text-[11px] font-extrabold text-muted uppercase tracking-wide">{label}</div>
       {sub && <div className="text-[11px] font-semibold text-muted">{sub}</div>}
     </div>
+  );
+}
+
+
+const TREND: Record<string, { label: string; cls: string }> = {
+  improving: { label: "↑ improving", cls: "text-success" },
+  slipping: { label: "↓ slipping", cls: "text-danger" },
+  steady: { label: "→ steady", cls: "text-muted" },
+  new: { label: "", cls: "text-muted" },
+};
+
+function WeakTopics({ ins, starting, onPractise }: { ins: Insights; starting: boolean; onPractise: () => void }) {
+  const ranked = [...ins.topics].filter((t) => t.answered > 0)
+    .sort((a, b) => (a.recent_accuracy ?? a.accuracy) - (b.recent_accuracy ?? b.accuracy));
+  const untouched = ins.topics.filter((t) => t.answered === 0);
+
+  return (
+    <section className="card p-4">
+      <h2 className="font-extrabold">Where you stand</h2>
+      <p className="text-sm text-muted font-semibold mt-1 leading-relaxed">{ins.headline}</p>
+
+      {ins.weakest.length > 0 && (
+        <button className="btn btn-primary w-full mt-3" onClick={onPractise} disabled={starting}>
+          {starting ? "Building your set…" : "Practise my weak topics →"}
+        </button>
+      )}
+
+      {ranked.length > 0 && (
+        <div className="mt-4 flex flex-col gap-2.5">
+          {ranked.map((t) => {
+            const acc = t.recent_accuracy ?? t.accuracy;
+            const weak = ins.weakest.includes(t.slug);
+            return (
+              <div key={t.slug}>
+                <div className="flex justify-between items-baseline text-xs font-extrabold">
+                  <span className={weak ? "text-danger" : ""}>{t.icon} {t.name}{weak ? " · focus here" : ""}</span>
+                  <span className="text-muted">
+                    {Math.round(acc * 100)}%
+                    {t.trend !== "new" && <span className={`ml-1.5 ${TREND[t.trend].cls}`}>{TREND[t.trend].label}</span>}
+                  </span>
+                </div>
+                <ProgressBar value={acc} className="!h-1.5 mt-1"
+                  color={acc >= 0.75 ? "var(--success)" : acc >= 0.5 ? "var(--accent)" : "var(--danger)"} />
+                <div className="text-[10px] font-semibold text-muted mt-0.5">
+                  {t.answered} answered · {Math.round(t.coverage * 100)}% of the topic seen
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {untouched.length > 0 && (
+        <p className="text-xs font-semibold text-muted mt-4">
+          Not started yet: {untouched.map((t) => `${t.icon} ${t.name}`).join(" · ")}
+        </p>
+      )}
+    </section>
   );
 }
