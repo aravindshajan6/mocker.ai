@@ -1,0 +1,22 @@
+{
+  "name": "Mocker — daily GK practice",
+  "short_name": "Mocker",
+  "description": "Calm, ad-free General Knowledge practice for Kerala PSC and other Indian competitive exams.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbf7f0",
+  "theme_color": "#2e7d6b",
+  "categories": ["education"],
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Today's challenge", "url": "/", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Exam mode", "url": "/exam", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

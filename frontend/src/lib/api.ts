@@ -31,12 +31,32 @@ async function handleSignedOut(): Promise<void> {
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const res = await fetch(path, {
+  let res: Response;
+  try {
+    res = await doFetch(path, init);
+  } catch {
+    // A dropped connection surfaces as a bare TypeError; say something a person can act on.
+    throw new ApiError(0, navigator.onLine
+      ? "Couldn't reach Mocker. Check your connection and try again."
+      : "You're offline. Anything you answer is saved and will sync when you're back.");
+  }
+  return handle<T>(res);
+}
+
+function doFetch(path: string, init?: RequestInit): Promise<Response> {
+  return fetch(path, {
     ...init,
     credentials: "same-origin",
     headers: { "Content-Type": "application/json", ...(init?.headers ?? {}) },
     cache: "no-store",
   });
+}
+
+async function handle<T>(res: Response): Promise<T> {
+  if (res.status === 202) {
+    // Queued by the service worker while offline; it will be replayed on reconnect.
+    return { queued: true } as T;
+  }
   if (!res.ok) {
     let msg = res.statusText;
     try {
