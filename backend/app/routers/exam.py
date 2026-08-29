@@ -11,7 +11,7 @@ from __future__ import annotations
 from datetime import timedelta
 
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
+from sqlalchemy import func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
@@ -128,7 +128,10 @@ async def save_answer(session_id: str, data: SaveAnswerIn, user: User = Depends(
                        selected_index=data.selected_index, is_correct=False, points=0,
                        marked_for_review=data.marked_for_review))
     await db.commit()
-    answered = sum(1 for a in s.attempts if a.selected_index >= 0)
+    answered = (await db.execute(
+        select(func.count()).select_from(Attempt)
+        .where(Attempt.session_id == s.id, Attempt.selected_index >= 0)
+    )).scalar_one()
     return {"ok": True, "answered": answered, "seconds_remaining": _seconds_left(s)}
 
 
@@ -169,7 +172,13 @@ async def submit_exam(session_id: str, user: User = Depends(current_user), db: A
     raw = scoring.exam_raw_score(correct, wrong, s.negative_marking or scoring.NEGATIVE_MARK)
     pts = scoring.exam_points(correct, wrong, total)
 
-    if not s.finished_at:
+    # Exactly one concurrent submit may claim the paper, otherwise parallel requests each award
+    # points and increment the streak counters.
+    claimed = (await db.execute(
+        update(QuizSession).where(QuizSession.id == s.id, QuizSession.finished_at.is_(None))
+        .values(finished_at=utcnow()).returning(QuizSession.id)
+    )).scalar_one_or_none() is not None
+    if claimed:
         # Persist per-question grading so stats and the review screen agree.
         for r in review:
             a = attempts.get(r.question_id)
@@ -187,8 +196,8 @@ async def submit_exam(session_id: str, user: User = Depends(current_user), db: A
         s.correct = correct
         s.raw_score = raw
         s.score = pts
-        s.finished_at = utcnow()
         await db.commit()
+        await db.refresh(s)
 
     elapsed = int(((s.finished_at or utcnow()) - s.started_at).total_seconds())
     attempted = correct + wrong

@@ -1,7 +1,8 @@
 from datetime import date
 
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
+from sqlalchemy.exc import IntegrityError
+from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
@@ -103,7 +104,7 @@ async def active_sessions(user: User = Depends(current_user), db: AsyncSession =
 async def abandon(session_id: str, user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
     """Delete an unfinished quiz (used when the user exits before answering anything)."""
     s = await db.get(QuizSession, session_id)
-    if not s or s.user_id != user.id:
+    if not s or s.user_id != user.id or s.mode == "exam":
         raise HTTPException(404, "Quiz not found")
     if s.finished_at:
         raise HTTPException(409, "Finished quizzes cannot be removed")
@@ -161,7 +162,9 @@ async def start_quiz(data: StartQuizIn, user: User = Depends(current_user), db: 
 @router.get("/{session_id}", response_model=SessionOut)
 async def get_session(session_id: str, user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
     s = await db.get(QuizSession, session_id)
-    if not s or s.user_id != user.id:
+    if not s or s.user_id != user.id or s.mode == "exam":
+        # Exams are served only by the exam router: this response carries correct_index for every
+        # attempt, which would hand a candidate the answer key mid-paper.
         raise HTTPException(404, "Quiz not found")
     return await _session_out(db, s)
 
@@ -170,8 +173,8 @@ async def get_session(session_id: str, user: User = Depends(current_user), db: A
 async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_user),
                  db: AsyncSession = Depends(get_db)):
     s = await db.get(QuizSession, session_id, options=[selectinload(QuizSession.attempts)])
-    if not s or s.user_id != user.id:
-        raise HTTPException(404, "Quiz not found")
+    if not s or s.user_id != user.id or s.mode == "exam":
+        raise HTTPException(404, "Quiz not found")   # exam answers go through /api/exam/*
     if s.finished_at:
         raise HTTPException(409, "This quiz is already finished")
     if data.question_id not in s.question_ids:
@@ -199,6 +202,11 @@ async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_u
 
     db.add(Attempt(session_id=s.id, user_id=user.id, question_id=q.id, selected_index=data.selected_index,
                    is_correct=is_correct, points=pts))
+    try:
+        await db.flush()          # surfaces the unique constraint before anything else is written
+    except IntegrityError:
+        await db.rollback()
+        raise HTTPException(409, "Already answered") from None
     s.score += pts
     s.correct += 1 if is_correct else 0
 
@@ -227,15 +235,20 @@ async def answer(session_id: str, data: AnswerIn, user: User = Depends(current_u
 @router.post("/{session_id}/finish", response_model=FinishOut)
 async def finish(session_id: str, user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
     s = await db.get(QuizSession, session_id, options=[selectinload(QuizSession.attempts)])
-    if not s or s.user_id != user.id:
-        raise HTTPException(404, "Quiz not found")
+    if not s or s.user_id != user.id or s.mode == "exam":
+        raise HTTPException(404, "Quiz not found")   # exams are graded by /api/exam/{id}/submit
     stats = await _get_stats(db, user.id)
     total = len(s.question_ids)
-    already = s.finished_at is not None
     new_badges: list[str] = []
-    if not already:
-        if len(s.attempts) < total:
-            raise HTTPException(409, "Answer all questions first")
+    if s.finished_at is None and len(s.attempts) < total:
+        raise HTTPException(409, "Answer all questions first")
+    # Exactly one concurrent request may claim the finish; the losers report already_finished.
+    claimed = (await db.execute(
+        update(QuizSession).where(QuizSession.id == s.id, QuizSession.finished_at.is_(None))
+        .values(finished_at=utcnow()).returning(QuizSession.id)
+    )).scalar_one_or_none() is not None
+    already = not claimed
+    if claimed:
         before = set(await _badges(db, user.id, stats))
         bonus = 0
         if s.mode == "daily":
@@ -244,10 +257,10 @@ async def finish(session_id: str, user: User = Depends(current_user), db: AsyncS
             bonus += 20  # perfect round
         s.bonus = bonus
         s.score += bonus
-        s.finished_at = utcnow()
         stats.total_points += bonus
         stats.quizzes_completed += 1
         await db.commit()
+        await db.refresh(s)
         after = await _badges(db, user.id, stats)
         new_badges = [b for b in after if b not in before]
     level, title, _, to_next = scoring.level_for(stats.total_points)

@@ -9,7 +9,7 @@
  * problem with no matching payoff.
  */
 
-const VERSION = "v3";
+const VERSION = "v4";
 const SHELL = `mocker-shell-${VERSION}`;
 const STATIC = `mocker-static-${VERSION}`;
 const DATA = `mocker-data-${VERSION}`;
@@ -18,8 +18,10 @@ const KEEP = [SHELL, STATIC, DATA];
 const OFFLINE_URL = "/offline";
 const SHELL_URLS = [OFFLINE_URL, "/icon-192.png", "/icon-512.png", "/manifest.webmanifest"];
 
-// API responses worth keeping so a started quiz survives a tunnel.
-const CACHEABLE_API = [/^\/api\/quiz\/[^/]+$/, /^\/api\/topics$/, /^\/api\/quiz\/daily$/, /^\/api\/auth\/me$/];
+// API responses worth keeping so a started quiz survives a tunnel. Deliberately excludes
+// /api/auth/me — serving a stale identity to whoever signs in next on a shared phone is worse
+// than showing them a loading state.
+const CACHEABLE_API = [/^\/api\/quiz\/[^/]+$/, /^\/api\/topics$/, /^\/api\/quiz\/daily$/];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(SHELL).then((c) => c.addAll(SHELL_URLS)).then(() => self.skipWaiting()));
@@ -46,17 +48,19 @@ function openDb() {
   });
 }
 
-async function queueAnswer(url, body) {
+const MAX_QUEUE_AGE_MS = 48 * 60 * 60 * 1000;
+
+async function queueAnswer(url, body, owner) {
   const db = await openDb();
   await new Promise((res, rej) => {
     const tx = db.transaction(STORE, "readwrite");
-    tx.objectStore(STORE).add({ url, body, at: Date.now() });
+    tx.objectStore(STORE).add({ url, body, owner, at: Date.now() });
     tx.oncomplete = res;
     tx.onerror = () => rej(tx.error);
   });
 }
 
-async function flushQueue() {
+async function flushQueue(owner) {
   const db = await openDb();
   const items = await new Promise((res, rej) => {
     const tx = db.transaction(STORE, "readonly");
@@ -64,7 +68,16 @@ async function flushQueue() {
     r.onsuccess = () => res(r.result);
     r.onerror = () => rej(r.error);
   });
+  let flushed = 0;
   for (const item of items) {
+    // Stale entries are dropped rather than retried forever on every page load.
+    if (Date.now() - (item.at || 0) > MAX_QUEUE_AGE_MS) {
+      await deleteQueued(item.id);
+      continue;
+    }
+    // Only replay answers belonging to whoever is signed in now: a different account on the same
+    // device must not inherit them (the server would reject it, but the entry would never clear).
+    if (item.owner && owner && item.owner !== owner) continue;
     try {
       const resp = await fetch(item.url, {
         method: "POST",
@@ -72,14 +85,18 @@ async function flushQueue() {
         body: item.body,
         credentials: "same-origin",
       });
-      // 409 means the server already recorded it — drop it either way.
-      if (resp.ok || resp.status === 409) await deleteQueued(item.id);
+      if (resp.ok || resp.status === 409) {
+        await deleteQueued(item.id);
+        flushed++;
+      } else if (resp.status >= 400 && resp.status < 500) {
+        await deleteQueued(item.id);   // wrong user, gone session, deleted quiz: never replayable
+      }
     } catch {
       return; // still offline; try again on the next flush
     }
   }
   const clients = await self.clients.matchAll();
-  if (items.length) clients.forEach((c) => c.postMessage({ type: "outbox-flushed", count: items.length }));
+  if (flushed) clients.forEach((c) => c.postMessage({ type: "outbox-flushed", count: flushed }));
 }
 
 async function deleteQueued(id) {
@@ -91,9 +108,23 @@ async function deleteQueued(id) {
   });
 }
 
+async function clearUserData() {
+  await caches.delete(DATA);
+  const db = await openDb();
+  await new Promise((res) => {
+    const tx = db.transaction(STORE, "readwrite");
+    tx.objectStore(STORE).clear();
+    tx.oncomplete = res;
+  });
+}
+
 self.addEventListener("message", (e) => {
-  if (e.data === "flush-outbox") e.waitUntil(flushQueue());
-  if (e.data === "skip-waiting") self.skipWaiting();
+  const msg = e.data;
+  if (msg === "skip-waiting") self.skipWaiting();
+  // Sign-out: drop everything tied to the account that is leaving this device.
+  if (msg === "clear-user-data") e.waitUntil(clearUserData());
+  if (msg === "flush-outbox") e.waitUntil(flushQueue());
+  if (msg && msg.type === "flush-outbox") e.waitUntil(flushQueue(msg.owner));
 });
 
 self.addEventListener("sync", (e) => {
@@ -114,7 +145,7 @@ self.addEventListener("fetch", (event) => {
         try {
           return await fetch(request);
         } catch {
-          await queueAnswer(url.pathname, await clone.text());
+          await queueAnswer(url.pathname, await clone.text(), request.headers.get("X-Mocker-User") || null);
           return new Response(JSON.stringify({ queued: true }), {
             status: 202, headers: { "Content-Type": "application/json" },
           });

@@ -3,6 +3,14 @@ import type {
   Insights, Prefs, QuizSession, ReviewDue, Stats, Topic, User,
 } from "./types";
 
+/** Thrown when the service worker accepted a write for later replay instead of sending it. */
+export class QueuedOffline extends Error {
+  constructor() {
+    super("Saved offline — this will sync when you're back online.");
+    this.name = "QueuedOffline";
+  }
+}
+
 export class ApiError extends Error {
   status: number;
   constructor(status: number, message: string) {
@@ -43,19 +51,35 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   return handle<T>(res);
 }
 
+let currentUserId: string | null = null;
+
+/** Lets the service worker scope its offline queue to the account that created each entry. */
+export function setCurrentUserId(id: string | null) {
+  currentUserId = id;
+}
+
+export function getCurrentUserId(): string | null {
+  return currentUserId;
+}
+
 function doFetch(path: string, init?: RequestInit): Promise<Response> {
   return fetch(path, {
     ...init,
     credentials: "same-origin",
-    headers: { "Content-Type": "application/json", ...(init?.headers ?? {}) },
+    headers: {
+      "Content-Type": "application/json",
+      ...(currentUserId ? { "X-Mocker-User": currentUserId } : {}),
+      ...(init?.headers ?? {}),
+    },
     cache: "no-store",
   });
 }
 
 async function handle<T>(res: Response): Promise<T> {
   if (res.status === 202) {
-    // Queued by the service worker while offline; it will be replayed on reconnect.
-    return { queued: true } as T;
+    // Queued by the service worker while offline. Signalled as a distinct error rather than a fake
+    // result: callers must not render "queued" as if it were a graded answer.
+    throw new QueuedOffline();
   }
   if (!res.ok) {
     let msg = res.statusText;
@@ -77,7 +101,16 @@ const get = <T,>(path: string) => request<T>(path);
 export const api = {
   register: (data: { name: string; email: string; password: string }) => post<User>("/api/auth/register", data),
   login: (data: { email: string; password: string }) => post<User>("/api/auth/login", data),
-  logout: () => post<{ ok: boolean }>("/api/auth/logout"),
+  logout: async () => {
+    const out = await post<{ ok: boolean }>("/api/auth/logout");
+    setCurrentUserId(null);
+    // Drop cached API responses and any queued answers so the next person to sign in on this
+    // device never sees the previous account's data.
+    try {
+      (await navigator.serviceWorker?.getRegistration())?.active?.postMessage("clear-user-data");
+    } catch { /* no service worker: nothing cached to clear */ }
+    return out;
+  },
   me: () => get<User>("/api/auth/me"),
   topics: () => get<Topic[]>("/api/topics"),
   daily: () => get<Daily>("/api/quiz/daily"),

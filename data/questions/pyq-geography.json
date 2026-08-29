@@ -1,28 +1,6 @@
 [
   {
     "topic": "geography",
-    "question": "In s (IST) n c n ?  (i) in ( 82 1 2 E) IST k kn  (ii) in ak t ( 23 1 2 E) IST k kn (iii) GMT n 04:30 k n IST (iv) 7°30' a 30 n IST k kn",
-    "options": [
-      "(i)",
-      "(i), (iv)",
-      "(ii), (iii)",
-      "(ii), (iv)"
-    ],
-    "answer": 1,
-    "explanation": "This question was asked in Kerala PSC exam 141/2025 (HST Social Science, 4 Nov 2025). The correct answer is (i), (iv).",
-    "difficulty": 2,
-    "tags": [
-      "pyq",
-      "hst-social-science-malayalam-medium"
-    ],
-    "source": "pyq",
-    "source_ref": "Kerala PSC 141/2025 · Q82",
-    "source_key": "Final Answer Key",
-    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-11/141-2025-A.pdf",
-    "published_at": "2025-11-04"
-  },
-  {
-    "topic": "geography",
     "question": "Which of the following climate type is common to southern California, central Chile and southern tip of Africa?",
     "options": [
       "Sudan type climate",
@@ -39,28 +17,6 @@
     ],
     "source": "pyq",
     "source_ref": "Kerala PSC 50/2025 · Q3",
-    "source_key": "Final Answer Key",
-    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-05/50-2025-A.pdf",
-    "published_at": "2025-05-10"
-  },
-  {
-    "topic": "geography",
-    "question": "Below are the horizons of a mature soil profile. Arrange them in the proper sequence from surface to bed rock. (i) A-Horizon, (ii) O-Horizon, (iii) B-Horizon, (iv) E-Horizon, (v) C-Horizon, (vi) R-Horizon",
-    "options": [
-      "(ii) – (i) – (iv) – (iii) – (v) – (vi)",
-      "(i) – (ii) – (v) – (iii) – (iv) – (vi)",
-      "(vi) – (iii) – (iv) – (i) – (v) – (ii)",
-      "(iv) – (i) – (ii) – (iii) – (vi) – (v)"
-    ],
-    "answer": 0,
-    "explanation": "This question was asked in Kerala PSC exam 50/2025 (Divisional Accountant, 10 May 2025). The correct answer is (ii) – (i) – (iv) – (iii) – (v) – (vi).",
-    "difficulty": 2,
-    "tags": [
-      "pyq",
-      "divisional-accountant-divisional"
-    ],
-    "source": "pyq",
-    "source_ref": "Kerala PSC 50/2025 · Q4",
     "source_key": "Final Answer Key",
     "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-05/50-2025-A.pdf",
     "published_at": "2025-05-10"

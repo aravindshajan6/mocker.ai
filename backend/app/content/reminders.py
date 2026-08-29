@@ -14,7 +14,7 @@ import random
 from datetime import date, datetime, time, timedelta
 from zoneinfo import ZoneInfo
 
-from sqlalchemy import select
+from sqlalchemy import or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..config import settings
@@ -24,7 +24,10 @@ from ..services.quiz import effective_streak
 
 log = logging.getLogger("reminders")
 
-WINDOW_MINUTES = 20  # how long after the chosen time we will still send
+WINDOW_MINUTES = 20     # how long after the chosen time we will still send
+LINK_CODE_TTL_MIN = 15  # a Telegram link code is single-use and short-lived
+DEFAULT_HOUR = 19
+DEFAULT_TZ = "Asia/Kolkata"
 
 # Rotated so the same line does not arrive two days running.
 LINES = [
@@ -50,13 +53,14 @@ def _pick(streak: int, seed: int) -> tuple[str, str]:
 
 def _due_now(prefs: UserPrefs, now_utc: datetime) -> bool:
     """Has this user's local reminder time just passed, within the send window?"""
+    hour = prefs.reminder_hour if prefs.reminder_hour is not None else DEFAULT_HOUR
+    minute = prefs.reminder_minute if prefs.reminder_minute is not None else 0
     try:
         tz = ZoneInfo(prefs.timezone or "Asia/Kolkata")
     except Exception:  # noqa: BLE001 - a bad stored zone must not stop everyone else's reminders
         tz = ZoneInfo("Asia/Kolkata")
     local = now_utc.astimezone(tz)
-    target = local.replace(hour=prefs.reminder_hour, minute=prefs.reminder_minute,
-                           second=0, microsecond=0)
+    target = local.replace(hour=hour, minute=minute, second=0, microsecond=0)
     if local < target:
         return False
     if (local - target) > timedelta(minutes=WINDOW_MINUTES):
@@ -89,14 +93,21 @@ async def run(db: AsyncSession, now_utc: datetime | None = None) -> dict:
     if not settings.reminders_enabled:
         return summary
 
+    # Driven from users, not prefs: accounts created before the prefs row existed (or before this
+    # feature shipped) must still be reachable, with the documented defaults.
     rows = (await db.execute(
-        select(UserPrefs, User, UserStats)
-        .join(User, User.id == UserPrefs.user_id)
-        .outerjoin(UserStats, UserStats.user_id == UserPrefs.user_id)
-        .where(UserPrefs.reminders_enabled.is_(True))
+        select(User, UserPrefs, UserStats)
+        .outerjoin(UserPrefs, UserPrefs.user_id == User.id)
+        .outerjoin(UserStats, UserStats.user_id == User.id)
+        .where(or_(UserPrefs.user_id.is_(None), UserPrefs.reminders_enabled.is_(True)))
     )).all()
 
-    for prefs, user, stats in rows:
+    for user, prefs, stats in rows:
+        if prefs is None:
+            # Column defaults only apply on insert, so spell them out for the in-memory row too.
+            prefs = UserPrefs(user_id=user.id, reminders_enabled=True, reminder_hour=DEFAULT_HOUR,
+                              reminder_minute=0, timezone=DEFAULT_TZ)
+            db.add(prefs)
         if not _due_now(prefs, now_utc):
             continue
         summary["considered"] += 1
@@ -148,11 +159,16 @@ async def consume_telegram_links(db: AsyncSession, offset: int | None = None) ->
             continue
         code = parts[1].strip().upper()
         prefs = (await db.execute(select(UserPrefs).where(UserPrefs.telegram_link_code == code))).scalar_one_or_none()
+        if prefs and prefs.telegram_code_issued_at and \
+                (datetime.now(tz=ZoneInfo("UTC")) - prefs.telegram_code_issued_at) > timedelta(minutes=LINK_CODE_TTL_MIN):
+            prefs.telegram_link_code = None      # a code left lying around must not stay redeemable
+            prefs = None
         if not prefs:
             await telegram.send(chat_id, "That code has expired. Generate a new one in Mocker.")
             continue
         prefs.telegram_chat_id = chat_id
         prefs.telegram_link_code = None
+        prefs.telegram_code_issued_at = None
         linked += 1
         await telegram.send(chat_id, "Linked. I'll send your daily nudge here.")
     await db.commit()

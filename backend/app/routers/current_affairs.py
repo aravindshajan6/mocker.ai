@@ -1,3 +1,4 @@
+import secrets
 from datetime import timedelta
 
 from fastapi import APIRouter, BackgroundTasks, Depends, Header, HTTPException
@@ -15,6 +16,12 @@ from ..schemas import CADay, CARun, CurrentAffairsOut
 from ..services.quiz import today
 
 router = APIRouter(prefix="/api", tags=["current-affairs"])
+
+
+def _require_admin(token: str) -> None:
+    """Admin endpoints are disabled entirely unless a token is configured."""
+    if not settings.admin_token or not secrets.compare_digest(token, settings.admin_token):
+        raise HTTPException(403, "Admin token missing or wrong")
 
 
 def _run_out(r: ContentRun | None) -> CARun | None:
@@ -82,8 +89,7 @@ async def trigger_run(background: BackgroundTasks, force: bool = False, wait: bo
 
     By default the run happens in the background (returns null); pass ?wait=true to block and get the result.
     """
-    if not settings.admin_token or x_admin_token != settings.admin_token:
-        raise HTTPException(403, "Admin token missing or wrong")
+    _require_admin(x_admin_token)
     if wait:
         return _run_out(await run_daily(db, force=force))
     background.add_task(_bg_run, force)
@@ -93,16 +99,14 @@ async def trigger_run(background: BackgroundTasks, force: bool = False, wait: bo
 @router.get("/admin/verification")
 async def verification_status(x_admin_token: str = Header(default=""), db: AsyncSession = Depends(get_db)):
     """How far the automated answer-key audit has got through the imported bank."""
-    if not settings.admin_token or x_admin_token != settings.admin_token:
-        raise HTTPException(403, "Admin token missing or wrong")
+    _require_admin(x_admin_token)
     return await audit_stats(db)
 
 
 @router.post("/admin/verification/run")
 async def verification_run(background: BackgroundTasks, limit: int = 50, wait: bool = False,
                            x_admin_token: str = Header(default=""), db: AsyncSession = Depends(get_db)):
-    if not settings.admin_token or x_admin_token != settings.admin_token:
-        raise HTTPException(403, "Admin token missing or wrong")
+    _require_admin(x_admin_token)
     if wait:
         return await run_audit(db, limit=limit)
 

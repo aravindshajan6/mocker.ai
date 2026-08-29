@@ -36,6 +36,7 @@ async def lifespan(app: FastAPI):
             "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS repairs_used INTEGER DEFAULT 0",
             "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS last_repair_on DATE",
             "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS best_milestone INTEGER DEFAULT 0",
+            "ALTER TABLE user_prefs ADD COLUMN IF NOT EXISTS telegram_code_issued_at TIMESTAMPTZ",
         ):
             await conn.execute(text(ddl))
     async with SessionLocal() as db:

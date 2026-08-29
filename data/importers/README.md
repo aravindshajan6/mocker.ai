@@ -151,4 +151,61 @@ skip anything already cached, so an interrupted run resumes cheaply; delete a su
 to force that stage to redo its work. Requires `pdftotext` (poppler-utils) on `PATH`; no
 Python dependencies beyond the standard library.
 
-<!-- PYQ-STATS -->
+### Second-pass specialism check
+
+Topic labelling alone still let degree-level specialism through — SQL semantics and Java RMI
+labelled `computers-tech` from Assistant-Programmer papers, corporate-finance jargon labelled
+`economy` from Assistant-Finance-Manager papers. A second LLM pass therefore re-reads every
+*kept* question together with its topic and the post it came from and asks whether an ordinary
+well-read general-exam candidate would be expected to answer it. It removed 246 of 480 (51 %)
+on the run below. Verdicts are cached under `VERIFY_VERSION`; `--no-verify` skips the pass.
+
+### Run of 2026-08-30 (`--limit 148`)
+
+| stage | count |
+| --- | --- |
+| index rows crawled (240 pages) | 4 798 |
+| ingestable papers in the index (English, ≥ 2019, paper + key) | 412 |
+| papers attempted | 148 |
+| papers parsed OK | 143 (28 general/common exam, 115 post-specific) |
+| papers skipped | 5 — 4 scanned 2019 booklets with no text layer, 1 junk text layer |
+| questions parsed from booklets | 14 112 |
+| candidates surviving the quality gates | 4 789 |
+| **kept after topic + specialism classification** | **234** (from 63 distinct papers) |
+
+Drops, by reason:
+
+| n | reason |
+| --- | --- |
+| 7 527 | stem under 15 words |
+| 4 281 | classified as non-GK (maths, grammar, regional language, post-specific) |
+| 733 | "All/None of the above" option |
+| 388 | answer key marked `X` / `*` / `Deleted` |
+| 243 | second pass: post-specific specialism |
+| 149 | stem over the word limit |
+| 141 | duplicate options |
+| 102 | empty option |
+| 88 | option over 120 characters |
+| 87 | garbled text (legacy font / bad extraction) |
+| 54 | `List – I`/`Column` reference with the pairs missing |
+| 38 | needs a figure / diagram / passage / table / underlined text |
+| 31 | duplicate of an existing question |
+| 9 | OCR garbage (> 15 % non-ASCII) |
+| 7 | option was a bare alpha-code marker |
+
+Kept per topic: `economy` 64, `indian-polity` 45, `computers-tech` 32, `kerala` 23,
+`general-science` 20, `indian-history` 17, `world-gk` 10, `environment` 8, `geography` 8,
+`arts-culture` 4, `sports` 3 — **234 total**. 213 came from a Final Answer Key, 21 from a
+provisional one.
+
+Answer position: A 55 (23.5 %), B 60 (25.6 %), C 72 (30.8 %), D 47 (20.1 %). Reported, not
+corrected.
+
+Note on yield: the 15-word minimum stem length is by far the most aggressive gate — it alone
+removes 54 % of parsed questions, because Kerala PSC writes a lot of short stems ("Who founded
+the SNDP Yogam?"). `MIN_STEM_WORDS` at the top of `pyq.py` is the single knob to change if a
+larger, slightly noisier bank is wanted. The remaining ~264 English papers in the index were
+crawled and parsed but not classified; their PDFs and text are already cached, so
+`python3 pyq.py --limit 500` resumes from where this run stopped and only pays for the
+classification.
+

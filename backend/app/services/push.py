@@ -11,6 +11,7 @@ never the only way the app communicates.
 """
 from __future__ import annotations
 
+import asyncio
 import base64
 import json
 import logging
@@ -92,7 +93,9 @@ async def send_to_user(db: AsyncSession, user_id: str, payload: dict) -> int:
     subs = (await db.execute(select(PushSubscription).where(PushSubscription.user_id == user_id))).scalars().all()
     delivered = 0
     for sub in subs:
-        ok, drop = _send(private_pem, sub, payload)
+        # pywebpush is synchronous; the reminder pass iterates every due user, so this must not
+        # hold the event loop while each provider round-trip completes.
+        ok, drop = await asyncio.to_thread(_send, private_pem, sub, payload)
         if ok:
             delivered += 1
             sub.failures = 0
