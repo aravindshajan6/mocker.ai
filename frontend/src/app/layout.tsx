@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import PwaProvider from "@/components/PwaProvider";
 import "./globals.css";
 
 const nunito = localFont({
@@ -15,7 +16,9 @@ export const metadata: Metadata = {
   title: { default: "Mocker — one more question", template: "%s · Mocker" },
   description: "Daily GK practice for PSC exams. Calm, fast, and ad-free.",
   applicationName: "Mocker",
-  icons: { icon: "/icon.svg" },
+  icons: { icon: "/icon.svg", apple: "/icon-192.png" },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "Mocker", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {
@@ -31,7 +34,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${nunito.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <PwaProvider />
+      </body>
     </html>
   );
 }

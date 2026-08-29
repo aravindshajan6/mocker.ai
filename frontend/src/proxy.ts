@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-const PUBLIC = ["/login", "/register"];
+const PUBLIC = ["/login", "/register", "/offline"];
 const COOKIE = "mocker_token";
 
 /**
@@ -49,5 +49,9 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|icon.svg|favicon.ico).*)"],
+  // Static assets must never be redirected. /sw.js in particular: a redirected service worker
+  // fails to register, which silently disables offline support and push notifications.
+  matcher: [
+    "/((?!api|_next/static|_next/image|sw\\.js|manifest\\.webmanifest|offline|.*\\.(?:png|svg|ico|webmanifest|txt)$).*)",
+  ],
 };
