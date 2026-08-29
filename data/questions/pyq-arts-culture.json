@@ -1,0 +1,112 @@
+[
+  {
+    "topic": "arts-culture",
+    "question": "The Gayathri Mantra is the most reversed Vedic Mantra in Hinduism. Which Vedic Sage is considered as the author of Gayathri Mantra?",
+    "options": [
+      "Sage Viswamitra",
+      "Sage Agasthya",
+      "Sage Angiras",
+      "Sage Kashyapa"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 76/2025 (Higher Secondary School Teacher, 30 Jun 2025). The correct answer is Sage Viswamitra.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "higher-secondary-school-teacher-physics"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 76/2025 · Q95",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/076-2025-A.pdf",
+    "published_at": "2025-06-30"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which among the individuals were bestowed Jnanapith Award for the year 2023 ? I. Assamese poet Nilmani Phookan. II. Sanskrit scholar Ramabhadracharya. III. Konkani author damodar mayzo. IV. Urdu poet Gulzar.",
+    "options": [
+      "I, II",
+      "II, III",
+      "I, IV",
+      "II, IV"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 044/2024 (Assistant, 23 Apr 2024). The correct answer is II, IV.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-cashier-ld-clerk-clerk"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 044/2024 · Q90",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-04/44-24%20QP.pdf",
+    "published_at": "2024-04-23"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Match list – 1 of awardees with list – 2 of categories in 67th National Film Awards : List – 1 (Awardee) List – 2 (Category) a. Vijay Sethupathy 1. Best Actor b. manoj Bajpayee 2. Best Supporting Actor c. mathukutty Xavier 3. Best director d. Sanjay Puran Singh 4. Best debut Film of a director Codes : a b c d",
+    "options": [
+      "2 3 4 1",
+      "4 3 4 2",
+      "2 1 4 3",
+      "4 1 2 3"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 097/2021 (HSST Journalism, 29 Sep 2021). The correct answer is 2 1 4 3.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "hsst-journalism-khse"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 097/2021 · Q99",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2021-09/qn_0.pdf",
+    "published_at": "2021-09-29"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "Which of the following malayalam screenplay is not included in m. T. Vasudevan Nair ? i. Nagaramenandi ii. Anandaram iii. Kochuthemmadai iv. Nizhalattam",
+    "options": [
+      "Only i and iv",
+      "Only ii",
+      "Only iii",
+      "Only i, iii and iv"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 63/2025 (Technical Assistant Gr II, 12 Jun 2025). The correct answer is Only ii.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "technical-assistant-gr-ii-food-safety"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 63/2025 · Q92",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/63-25%28Set-A%29.pdf",
+    "published_at": "2025-06-12"
+  },
+  {
+    "topic": "arts-culture",
+    "question": "What is the name of the dome above the central hall of the Golden Temple?",
+    "options": [
+      "Fluted Dome",
+      "Lotus Dome",
+      "Gold Dome",
+      "Silver Dome"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 182/2024 (Jr. Instructor, 23 Dec 2024). The correct answer is Fluted Dome.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "jr-instructor-architectural-draughtsman"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 182/2024 · Q77",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/182-2024-A.pdf",
+    "published_at": "2024-12-23"
+  }
+]

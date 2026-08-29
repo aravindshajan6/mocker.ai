@@ -1,0 +1,882 @@
+[
+  {
+    "topic": "general-science",
+    "question": "The amount of heat energy required to convert a unit mass of ice at 0°C into water at the same temperature is called :",
+    "options": [
+      "Melting point of water",
+      "Latent heat of ice",
+      "Latent heat of energy",
+      "Latent heat of vaporisation"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 142/2025 (Fireman, 5 Nov 2025). The correct answer is Latent heat of ice.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "fireman-kerala-kerakarshaka-sahakarana"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 142/2025 · Q34",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-11/142-2025-A.pdf",
+    "published_at": "2025-11-05"
+  },
+  {
+    "topic": "general-science",
+    "question": "The energy required to change a unit mass of liquid into gas at its boiling point, without change in temperature is called :",
+    "options": [
+      "Kinetic energy",
+      "Enthalpy",
+      "Entropy",
+      "Latent heat"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 142/2025 (Fireman, 5 Nov 2025). The correct answer is Latent heat.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "fireman-kerala-kerakarshaka-sahakarana"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 142/2025 · Q35",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-11/142-2025-A.pdf",
+    "published_at": "2025-11-05"
+  },
+  {
+    "topic": "general-science",
+    "question": "If a planet A has a longer orbital period than another planet B average distance of the planet A from the Sun :",
+    "options": [
+      "larger",
+      "smaller",
+      "cannot be determined",
+      "same"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 76/2025 (Higher Secondary School Teacher, 30 Jun 2025). The correct answer is larger.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "higher-secondary-school-teacher-physics"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 76/2025 · Q5",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/076-2025-A.pdf",
+    "published_at": "2025-06-30"
+  },
+  {
+    "topic": "general-science",
+    "question": "The force which imparts an acceleration of 1 m/s2 to a body of mass of 1 kg is equal to",
+    "options": [
+      "1 Joule",
+      "1 Pascal",
+      "1 Newton",
+      "1 Watt"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 079/2026 (Tracer, 21 Aug 2026). The correct answer is 1 Newton.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "tracer-soil-survey-and-soil-conservation"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 079/2026 · Q9",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-08/079-2026-A.pdf",
+    "published_at": "2026-08-21"
+  },
+  {
+    "topic": "general-science",
+    "question": "The substances which are slightly repelled by a magnet of powerful strength only are known as :",
+    "options": [
+      "Para magnetic substance",
+      "Dia magnetic substance",
+      "Ferro magnetic substance",
+      "Electro magnet"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 055/2026 (Electrician, 10 Jun 2026). The correct answer is Dia magnetic substance.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "electrician-electrical-helper-lineman"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 055/2026 · Q25",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-06/055-2026-A.pdf",
+    "published_at": "2026-06-10"
+  },
+  {
+    "topic": "general-science",
+    "question": "The material ability to retain its magnetism even after the external magnetic field is removed :",
+    "options": [
+      "Susceptibility",
+      "Permeability",
+      "Resistivity",
+      "Retendivity"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 055/2026 (Electrician, 10 Jun 2026). The correct answer is Retendivity.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "electrician-electrical-helper-lineman"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 055/2026 · Q30",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-06/055-2026-A.pdf",
+    "published_at": "2026-06-10"
+  },
+  {
+    "topic": "general-science",
+    "question": "According to the inverse square law, illumination on a surface is inversely proportional to :",
+    "options": [
+      "Distance from the light source",
+      "Square of the distance from the light source",
+      "Cube of the distance from the light source",
+      "Angle of incidence"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 055/2026 (Electrician, 10 Jun 2026). The correct answer is Square of the distance from the light source.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "electrician-electrical-helper-lineman"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 055/2026 · Q75",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-06/055-2026-A.pdf",
+    "published_at": "2026-06-10"
+  },
+  {
+    "topic": "general-science",
+    "question": "A symbiotic relationship in which one organism benefit whereas other partner is neither harmed benefited is known as",
+    "options": [
+      "Commensalism",
+      "Mutualism",
+      "Parasitism",
+      "Amensalism"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 053/2026 (Fisheries Officer, 3 Jun 2026). The correct answer is Commensalism.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "fisheries-officer-fisheries-department"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 053/2026 · Q41",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-06/053-2026-A.pdf",
+    "published_at": "2026-06-03"
+  },
+  {
+    "topic": "general-science",
+    "question": "In ABC of first aid, A-stands for Air way, B-stands for Breathing and C-stands for :",
+    "options": [
+      "Cardio problem",
+      "Circulation",
+      "Cardio arrest",
+      "Cleaning"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 008/2026 (Meter Reader, 29 Jan 2026). The correct answer is Circulation.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "meter-reader-kerala-water-authority"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 008/2026 · Q1",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/008-2026-A.pdf",
+    "published_at": "2026-01-29"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which toxic alkaloid, responsible for the death of the Greek Philosopher Socrates in 399 B.C., is obtained from the poisonous plant hemlock?",
+    "options": [
+      "Morphine",
+      "Coniine",
+      "Quinine",
+      "Nicotine"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 158/2025 (Analyst, 26 Nov 2025). The correct answer is Coniine.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "analyst-kerala-kera-karshaka-sahakarana"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 158/2025 · Q44",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-11/158-2025-A.pdf",
+    "published_at": "2025-11-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "A liquid drop splits into smaller droplets. Which of the following statements is true about the total surface energy ?",
+    "options": [
+      "It remains the same",
+      "It decreases",
+      "It increases",
+      "It depends on density"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is It increases.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q10",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "How many electrons are there in a body having 8 micro coulomb of charge ?",
+    "options": [
+      "8 × 1016",
+      "5 × 1013",
+      "5 × 1016",
+      "3 × 1013"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is 5 × 1013.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q15",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "A toroid has a core of inner radius 25 cm and outer radius 26 cm around which 3500 turns of wire is wound. If a current of 11A flows through it, what is the magnetic field inside the core ?",
+    "options": [
+      "0T",
+      "0.03T",
+      "0.3T",
+      "3T"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is 0.03T.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q20",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "A concave mirror is cut from a glass ball of diameter 45 cm. The focal length of the mirror is",
+    "options": [
+      "22.5 cm",
+      "45 cm",
+      "11.25 cm",
+      "90 cm"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is 11.25 cm.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q24",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "The magnification of a compound microscope with objective of focal length 2 cm, eyepiece of focal length 4 cm and tube length 24 cm is",
+    "options": [
+      "25",
+      "50",
+      "75",
+      "65"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is 75.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q30",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "The molarity of a solution obtained by diluting 1 molar 250 ml hydrochloric acid to 1,000 ml is",
+    "options": [
+      "0.5 m",
+      "2.5 m",
+      "0.05 m",
+      "0.25 m"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is 0.25 m.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q32",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "The pollengrain of an angiosperm plant contain 12 chromosomes, the number of chromosome in endosperm cell of the plant is",
+    "options": [
+      "12",
+      "36",
+      "24",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is 36.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q60",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "The ratio of protein and lipid varies considerably in plasma membrane of different cells. The plasma membrane of human RBc has",
+    "options": [
+      "40 percent proteins and 52 percent lipids",
+      "40 percent lipids and 52 percent proteins",
+      "40 percent proteins and 52 percent carbohydrates",
+      "40 percent carbohydrates and 52 percent lipids"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is 40 percent lipids and 52 percent proteins.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q63",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "Common name of four vertebrate animals are given. From these identify the odd one with reference to presence or absence of jaw.",
+    "options": [
+      "Hag Fish",
+      "angel Fish",
+      "Flying Fish",
+      "dog Fish"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is Hag Fish.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q80",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "“HIV is a member of virus group called Retrovirus.” In HIV genetic information passes from",
+    "options": [
+      "Protein → dNa → RNa",
+      "dNa → Protein → RNa",
+      "RNa → Protein → dNa",
+      "RNa → dNa → Protein"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is RNa → dNa → Protein.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q81",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "“Human blood groups are determined by a single gene 1, this 1 gene have 3 alleles. These alleles form 6 genotype combinations. These genotypes have 4 phenotypic expressions, a, B, aB, O - blood groups.” Of these 4 blood groups one is co-dominant. Identify the co-dominant from the following blood groups.",
+    "options": [
+      "O group",
+      "aB group",
+      "a group",
+      "B group"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is aB group.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q82",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "“The genetic make up of human male is 44 autosomes and 2 sex chromosomes, X and y. In female, 44 autosomes and 2 sex chromosomes, XX.” Which chromosome/ chromosomes determine the sex of the male child in human ?",
+    "options": [
+      "X chromosomes",
+      "autosomes",
+      "X and y chromosomes",
+      "y chromosome"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is y chromosome.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q83",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "The genetic code is composed of 64 codons. 61 codons code for 20 amino acids. 3 codons are stop codons and do not code for amino acids. From the codons given below find out the odd one.",
+    "options": [
+      "Uaa",
+      "aUG",
+      "UaG",
+      "UGa"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is aUG.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q84",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "“microorganisms like Bacteria, Fungus, yeast etc., are useful to humans for many purposes.” From the names of Bacterias given, find out the Bacteria used for the production of Biogas.",
+    "options": [
+      "methanobacterium",
+      "lactobacillus",
+      "acetobacter",
+      "clostridium"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is methanobacterium.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q85",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "general-science",
+    "question": "Heat produced by 1 kg of nuclear fuel is equal to that produced by :",
+    "options": [
+      "2750 Ton of coal",
+      "275 Ton of coal",
+      "27500 Ton of coal",
+      "27.5 Ton of coal"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 121/2025 (Electrician, 26 Sep 2025). The correct answer is 2750 Ton of coal.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "electrician-lineman"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 121/2025 · Q90",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-09/121-2025-A.pdf",
+    "published_at": "2025-09-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "Which among the following forms the world’s first DNA covid vaccine approved for human use which received emergency use authorization in India in August 2021?",
+    "options": [
+      "Inovio’s INO-4800",
+      "VGX-3100",
+      "ZyCoV-D",
+      "pVAC-1"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 113/2025 (Scientific Assistant, 12 Sep 2025). The correct answer is ZyCoV-D.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "scientific-assistant-pathology-medical"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 113/2025 · Q33",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-09/113-2025-A.pdf",
+    "published_at": "2025-09-12"
+  },
+  {
+    "topic": "general-science",
+    "question": "______________ is a process of heat transfer in which heat flows from a hotter body to a cold body in the form of electromagnetic waves and does not need any medium.",
+    "options": [
+      "conduction",
+      "Radiation",
+      "Emission",
+      "convection"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 63/2025 (Technical Assistant Gr II, 12 Jun 2025). The correct answer is Radiation.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "technical-assistant-gr-ii-food-safety"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 63/2025 · Q37",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/63-25%28Set-A%29.pdf",
+    "published_at": "2025-06-12"
+  },
+  {
+    "topic": "general-science",
+    "question": "DNA is composed of a backbone of sugar and phosphate. The ring-shaped monosaccharide molecule in DNA structure is",
+    "options": [
+      "Ribose",
+      "Ribulose",
+      "Adenine",
+      "Uracil"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 059/2025 (Field Assistant, 31 May 2025). The correct answer is Ribose.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "field-assistant-oil-palm-india-ltd"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 059/2025 · Q31",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/59_25_qp_a-1.pdf",
+    "published_at": "2025-05-31"
+  },
+  {
+    "topic": "general-science",
+    "question": "Read the following statements about vitamins and answer accordingly : Statement (1) : Deficiency of Thiamine leads to Beriberi. Statement (2) : Removal of rice bran by polishing leads to loss of Thiamine. Statement (3) : Thiamine is a Vitamin.",
+    "options": [
+      "Only statement (1) is correct",
+      "Only statement (2) is correct",
+      "Only statement (3) is correct",
+      "Only statement (3) is wrong"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 059/2025 (Field Assistant, 31 May 2025). The correct answer is Only statement (3) is wrong.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "field-assistant-oil-palm-india-ltd"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 059/2025 · Q35",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/59_25_qp_a-1.pdf",
+    "published_at": "2025-05-31"
+  },
+  {
+    "topic": "general-science",
+    "question": "An epidemic occurring over a very wide area and usually affecting a large number of people is called",
+    "options": [
+      "Pandemic",
+      "Sporadic",
+      "Endemic",
+      "Exotic"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 31/2025 (Junior Public Health Nurse Grade II, 26 Apr 2025). The correct answer is Pandemic.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-public-health-nurse-grade-ii"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 31/2025 · Q5",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-04/31-25%20%28Set-A%29.pdf",
+    "published_at": "2025-04-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "The number of live births per 1000 estimated mid-year population in a given year is called",
+    "options": [
+      "General fertility rate",
+      "Growth rate",
+      "Gross reproduction rate",
+      "Birth rate"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 31/2025 (Junior Public Health Nurse Grade II, 26 Apr 2025). The correct answer is Birth rate.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-public-health-nurse-grade-ii"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 31/2025 · Q6",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-04/31-25%20%28Set-A%29.pdf",
+    "published_at": "2025-04-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "Single massive dose of Vitamin A for preventing the deficiency in children between the age of 1 – 6 years for every 6 months is",
+    "options": [
+      "1.5 lakh IU",
+      "3 lakh IU",
+      "2 lakh IU",
+      "2.5 lakh IU"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 31/2025 (Junior Public Health Nurse Grade II, 26 Apr 2025). The correct answer is 2 lakh IU.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-public-health-nurse-grade-ii"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 31/2025 · Q14",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-04/31-25%20%28Set-A%29.pdf",
+    "published_at": "2025-04-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "In Pulse Polio Immunization Programme, VVm (Vaccine Vial monitor) to maintain the cold chain, which of the following indication to discard the vaccine is",
+    "options": [
+      "Inner square is lighter than the outer circle",
+      "Outer circle is darker than the inner square",
+      "Outer circle is yellow",
+      "Inner square darker than the outer circle"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 31/2025 (Junior Public Health Nurse Grade II, 26 Apr 2025). The correct answer is Inner square darker than the outer circle.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-public-health-nurse-grade-ii"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 31/2025 · Q15",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-04/31-25%20%28Set-A%29.pdf",
+    "published_at": "2025-04-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "Time interval between invasion by an infectious agent and appearance of first symptom is termed as",
+    "options": [
+      "Infectious period",
+      "Incubation period",
+      "Quarantine period",
+      "Surveillance period"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 31/2025 (Junior Public Health Nurse Grade II, 26 Apr 2025). The correct answer is Incubation period.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-public-health-nurse-grade-ii"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 31/2025 · Q35",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-04/31-25%20%28Set-A%29.pdf",
+    "published_at": "2025-04-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "A rapid global outbreak of an infection initiated from a single focus is termed as",
+    "options": [
+      "Pandemic",
+      "Epidemic",
+      "Endemic",
+      "Community acquired infection"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 31/2025 (Junior Public Health Nurse Grade II, 26 Apr 2025). The correct answer is Pandemic.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-public-health-nurse-grade-ii"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 31/2025 · Q43",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-04/31-25%20%28Set-A%29.pdf",
+    "published_at": "2025-04-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "Type of illness in which the signs and symptoms occur suddenly and last for a short period of time is called",
+    "options": [
+      "Chronic",
+      "Sub-acute",
+      "Acute",
+      "Acute or chronic"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 31/2025 (Junior Public Health Nurse Grade II, 26 Apr 2025). The correct answer is Acute.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-public-health-nurse-grade-ii"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 31/2025 · Q45",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-04/31-25%20%28Set-A%29.pdf",
+    "published_at": "2025-04-26"
+  },
+  {
+    "topic": "general-science",
+    "question": "In the classical conditioning experiment, conducted originally by Ivan Petrovich Pavlov, a restrained hungry dog is given meat powder (food) in association with the sound of a bell. Choose the correct statement regarding the classical conditioning experiment :",
+    "options": [
+      "Bell is the unconditioned stimulus and food is the conditioned stimulus",
+      "Bell is the unconditioned stimulus and salivation in response to food is the conditioned response",
+      "Bell is the conditioned stimulus and food is the unconditioned stimulus",
+      "Bell is the unconditioned stimulus and salivation in response to food is the unconditioned response"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 184/2024 (Senior Scientific Assistant In The Department Of Physiology, 27 Dec 2024). The correct answer is Bell is the conditioned stimulus and food is the unconditioned stimulus.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "senior-scientific-assistant-in-the"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 184/2024 · Q1",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/184-2024-A.pdf",
+    "published_at": "2024-12-27"
+  },
+  {
+    "topic": "general-science",
+    "question": "DNA barcoding is a promising method to identify organisms. Which is the most commonly used DNA barcode region for identifying animal species?",
+    "options": [
+      "RuBisCO gene",
+      "18S rRNA gene",
+      "Cytochrome",
+      "COI"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 184/2024 (Senior Scientific Assistant In The Department Of Physiology, 27 Dec 2024). The correct answer is COI.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "senior-scientific-assistant-in-the"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 184/2024 · Q2",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/184-2024-A.pdf",
+    "published_at": "2024-12-27"
+  },
+  {
+    "topic": "general-science",
+    "question": "Choose the right name of the group of human populations found in the Indian region with which the Indigenous Andaman Islanders are more related :",
+    "options": [
+      "Ancestral North Indians",
+      "Middle Easterners",
+      "Ancestral South Indians",
+      "Central Asians"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 184/2024 (Senior Scientific Assistant In The Department Of Physiology, 27 Dec 2024). The correct answer is Ancestral South Indians.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "senior-scientific-assistant-in-the"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 184/2024 · Q7",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/184-2024-A.pdf",
+    "published_at": "2024-12-27"
+  },
+  {
+    "topic": "general-science",
+    "question": "The name of the theory proposed by Lynn Margulis to explain the evolution of eukaryotes is given in the following options. Choose the most used and correct name of the theory :",
+    "options": [
+      "Mitochondrial Origin",
+      "Chloroplast Origin",
+      "Endosymbiotic theory",
+      "Endoplasmic Origin"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 184/2024 (Senior Scientific Assistant In The Department Of Physiology, 27 Dec 2024). The correct answer is Endosymbiotic theory.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "senior-scientific-assistant-in-the"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 184/2024 · Q9",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/184-2024-A.pdf",
+    "published_at": "2024-12-27"
+  }
+]

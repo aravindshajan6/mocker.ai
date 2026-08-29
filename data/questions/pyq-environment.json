@@ -1,0 +1,530 @@
+[
+  {
+    "topic": "environment",
+    "question": "Who wrote the work titled Ecological Journeys : The Science and Politics of Conservation in India?",
+    "options": [
+      "Madhav Gadgil",
+      "Ramachandra Guha",
+      "Vandana Shiva",
+      "K.A. Subramaniyan 3"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 141/2025 (HST Social Science, 4 Nov 2025). The correct answer is Madhav Gadgil.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "hst-social-science-malayalam-medium"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 141/2025 · Q5",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-11/141-2025-A.pdf",
+    "published_at": "2025-11-04"
+  },
+  {
+    "topic": "environment",
+    "question": "With reference to the sections of The Wildlife Protection Act 1972, consider the following statements : (i) National Board for Wildlife was constituted under Section 5A. (ii) National Tiger Conservation Authority was constituted under section 38L. (iii) Section 6 of the Act deals with Prohibition of hunting. Which of the above statement(s) is/are not correct about Wildlife Protection Act 1972?",
+    "options": [
+      "Only (i) and (iii)",
+      "Only (iii)",
+      "Only (ii)",
+      "Only (ii) and (iii)"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 76/2025 (Higher Secondary School Teacher, 30 Jun 2025). The correct answer is Only (iii).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "higher-secondary-school-teacher-physics"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 76/2025 · Q89",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/076-2025-A.pdf",
+    "published_at": "2025-06-30"
+  },
+  {
+    "topic": "environment",
+    "question": "Which of the following statements is incorrect regarding CITES? (i) CITES stand for “Convention on International Trade in Endangered Species of Wild Flora and Fauna”. (ii) CITES has three Appendix levels regulating the international trade of species. (iii) Although CITES is legally binding on the Parties, it does not take the place of national laws.",
+    "options": [
+      "(i) only",
+      "(ii) only",
+      "(iii) only",
+      "(i) and (iii)"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 024/2024 (Range Forest Officer, 16 Feb 2024). The correct answer is (i) only.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "range-forest-officer-screening-test"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2024 · Q45",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-02/024_2024_qp.pdf",
+    "published_at": "2024-02-16"
+  },
+  {
+    "topic": "environment",
+    "question": "The first protocol to ban the emissions of Chloro Fluoro Carbons in the atmosphere was made in ?",
+    "options": [
+      "Geneva",
+      "Paris",
+      "Montreal",
+      "Florida"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 069/2022 (High School Teacher English, 15 Jun 2022). The correct answer is Montreal.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "high-school-teacher-english-education"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 069/2022 · Q9",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2022-06/069_2022_set_a.pdf",
+    "published_at": "2022-06-15"
+  },
+  {
+    "topic": "environment",
+    "question": "Which of the following environmental issues is primarily associated with increase in greenhouse gas concentration in the atmosphere?",
+    "options": [
+      "Desertification",
+      "Global warming",
+      "Soil salinization",
+      "Land fragmentation"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 035/2026 (District Executive Officer, 6 Apr 2026). The correct answer is Global warming.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "district-executive-officer-additional"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 035/2026 · Q18",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-04/035-2026-A.pdf",
+    "published_at": "2026-04-06"
+  },
+  {
+    "topic": "environment",
+    "question": "According to the National Ambient Air Quality Standards (NAAQS) in India for industrial areas, which of the following correctly matches a pollutant with its prescribed 24-hour average concentration limit?",
+    "options": [
+      "Nitrogen dioxide (NO2) – 120 μ g/m3",
+      "Respirable Suspended Particulate – 80 μ g/m3 Matter (RSPM/PM10)",
+      "Sulphur Dioxide (SO2) – 120 μ g/m3",
+      "Ammonia (NH3) – 400 μ g/m3"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is Ammonia (NH3) – 400 μ g/m3.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q53",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "What does the C/N ratio refer to in the context of composting, and what is its optimal range?",
+    "options": [
+      "Carbon/Nitrogen ratio; 30:1",
+      "Calcium/Nitrogen ratio; 20:1",
+      "Compost/Nutrient ratio; 50:1",
+      "Chemical/Neutral ratio; 7:1"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is Carbon/Nitrogen ratio; 30:1.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q58",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "What is the role of the “State Advisory Body” constituted under the Solid Waste Management rules, 2016?",
+    "options": [
+      "Monitor compliance of local bodies",
+      "Advise State Government on policy and implementation",
+      "Issue authorization for waste processing plants",
+      "Impose penalties"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is Advise State Government on policy and implementation.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q60",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "As per the safety guide (2021) of Atomic Energy Regulatory Board, ‘Long-lived Waste’ refers to radioactive waste that contains significant levels of radionuclides with half-life :",
+    "options": [
+      "Greater than 20 years",
+      "Greater than 30 years",
+      "Greater than 40 years",
+      "Greater than 50 years"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is Greater than 30 years.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q61",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "Which of the following statements is true for the ambient air quality standards in respect of noise as per the Noise Pollution Rules 2000?",
+    "options": [
+      "Day time refers to 8.00 am to 8.00 pm",
+      "Night time refers to 9.00 pm to 6.00 am",
+      "The limit for noise in silence zone for day time is 50 dB(A) Leq",
+      "The limit for noise in silence zone for night time is 50 dB(A) Leq"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is The limit for noise in silence zone for day time is 50 dB(A) Leq.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q63",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "Which of the following Shared Socioeconomic Pathways (SSPs) of the Assessment Report 6 of IPCC represents the scenario: “Middle of the Road (Medium challenges to mitigation and adaptation)”?",
+    "options": [
+      "SSP1",
+      "SSP2",
+      "SSP3",
+      "SSP4"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is SSP1.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q65",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "Which of the following is/are true with respect to the second commitment period of the Kyoto protocol?",
+    "options": [
+      "and (C)",
+      "Parties committed to reduce GHG emissions by at least 5% below 1990 levels",
+      "Parties committed to reduce GHG emissions by atleast 5% below the first commitment period",
+      "Both"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is and (C).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q67",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "In COP26, the participants joining the Global Methane Pledge agreed to take voluntary actions to contribute to a collective effort to reduce global methane emissions :",
+    "options": [
+      "Atleast 25 percent from 2020 levels by 2030",
+      "Atleast 25 percent from 2020 levels by 2050",
+      "Atleast 30 percent from 2020 levels by 2030",
+      "Atleast 30 percent from 2020 levels by 2050"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is Atleast 30 percent from 2020 levels by 2030.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q68",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "An Emission Reduction Unit (ERU) is a trading unit under the Kyoto Protocol emissions trading scheme is generated by which of the following Kyoto mechanism/mechanisms?",
+    "options": [
+      "and (C)",
+      "International Emissions Trading",
+      "Clean Development Mechanism",
+      "Both"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 004/2026 (Assistant Engineer, 19 Jan 2026). The correct answer is and (C).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-engineer-kerala-state"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 004/2026 · Q73",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/004-2026-A.pdf",
+    "published_at": "2026-01-19"
+  },
+  {
+    "topic": "environment",
+    "question": "Madhav Gadgil report related to ____________ (i) A report on the environmental consequences of Nuclear Power plants. (ii) The report classified 37% of western ghats as Eco-sensitive area and remaining more populated areas as cultural landscapes with less stringent regulation. (iii) This report recommends strict conservation of western ghats region in India. It recommended severe restrictions on mining, thermal power plants and dam construction. (iv) The report also known as WGEEP submitted to the Ministry of Environment and forest, Govt. of India on 31st August, 2011.",
+    "options": [
+      "Option (ii) and (iv)",
+      "Option (i) and (ii)",
+      "Option (iii) and (iv)",
+      "Only Option (ii) 3"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 138/2025 (Divisional Accounts Officer, 29 Oct 2025). The correct answer is Option (iii) and (iv).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "divisional-accounts-officer-kerala"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 138/2025 · Q4",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/138-2025-A.pdf",
+    "published_at": "2025-10-29"
+  },
+  {
+    "topic": "environment",
+    "question": "The National Green Tribunal has no jurisdiction over questions arising out of the implementation of the ___________ Act.",
+    "options": [
+      "The Public Liability Insurance Act, 1991",
+      "The Forest (Conservation) Act, 1980",
+      "The Wildlife (Protection) Act, 1972",
+      "The Water (Prevention and Control of Pollution) Cess Act, 1977"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 133/2025 (Legal Assistant Gr II, 23 Oct 2025). The correct answer is The Wildlife (Protection) Act, 1972.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "legal-assistant-gr-ii-law-department"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 133/2025 · Q72",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/133-2025-A.pdf",
+    "published_at": "2025-10-23"
+  },
+  {
+    "topic": "environment",
+    "question": "For the purpose of the Noise Pollution (Regulation and Control) Rules, 2000, an area comprising not less than ___________ around courts may be declared as silence zone.",
+    "options": [
+      "200 metres",
+      "100 metres",
+      "50 metres",
+      "500 metres"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 133/2025 (Legal Assistant Gr II, 23 Oct 2025). The correct answer is 100 metres.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "legal-assistant-gr-ii-law-department"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 133/2025 · Q75",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/133-2025-A.pdf",
+    "published_at": "2025-10-23"
+  },
+  {
+    "topic": "environment",
+    "question": "Which is an exception in an ecosystem where the sun is not the source of energy ?",
+    "options": [
+      "deep-sea hydro thermal ecosystem",
+      "Terrestrial ecosystem",
+      "lake ecosystem",
+      "desert ecosystem"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 127/2025 (Treatment Organiser Gr II, 11 Oct 2025). The correct answer is deep-sea hydro thermal ecosystem.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "treatment-organiser-gr-ii-health"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 127/2025 · Q71",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-10/127-25%20%28Set-A%29.pdf",
+    "published_at": "2025-10-11"
+  },
+  {
+    "topic": "environment",
+    "question": "What was the major result of the Earth Summit held in Rio in 1992, which is a daring program of action calling for new strategies to invest in the future to achieve overall sustainable development in the 21st century ?",
+    "options": [
+      "montreal Protocol",
+      "Kyoto accords",
+      "agenda 21",
+      "Green climate Fund"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 62/2025 (Assistant Town Planner, 11 Jun 2025). The correct answer is agenda 21.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-town-planner-local-self"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 62/2025 · Q52",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/62-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-11"
+  },
+  {
+    "topic": "environment",
+    "question": "According to the India State of Forest Report (ISFR), which state has the highest forest cover by area?",
+    "options": [
+      "Kerala",
+      "Madhya Pradesh",
+      "Sikkim",
+      "Gujarat"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 059/2025 (Field Assistant, 31 May 2025). The correct answer is Madhya Pradesh.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "field-assistant-oil-palm-india-ltd"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 059/2025 · Q74",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/59_25_qp_a-1.pdf",
+    "published_at": "2025-05-31"
+  },
+  {
+    "topic": "environment",
+    "question": "Coral reefs are known for their exceptional biodiversity and high primary productivity. Choose the false statement from the below given statements :",
+    "options": [
+      "Corals carry symbiotic Archaea which are the major primary producers in Coral Reef Ecosystem",
+      "Coral polyps carry Zooxanthella which are the major primary producers in Coral Reef Ecosystem",
+      "Zooxanthella is able to use carbon dioxide and waste materials from their host",
+      "Coral polyps carry flagellate protists which are the primary producers in coral reef ecosystems"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 184/2024 (Senior Scientific Assistant In The Department Of Physiology, 27 Dec 2024). The correct answer is Corals carry symbiotic Archaea which are the major primary producers in Coral Reef Ecosystem.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "senior-scientific-assistant-in-the"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 184/2024 · Q8",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/184-2024-A.pdf",
+    "published_at": "2024-12-27"
+  },
+  {
+    "topic": "environment",
+    "question": "Below given names are of mammalian species which are distributed in South India. Choose the name of a species that is endemic to this region :",
+    "options": [
+      "Hemitragus jemlahicus",
+      "Nilgiritragus hylocrius",
+      "Cuon alpinus",
+      "Bos gaurus"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 184/2024 (Senior Scientific Assistant In The Department Of Physiology, 27 Dec 2024). The correct answer is Nilgiritragus hylocrius.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "senior-scientific-assistant-in-the"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 184/2024 · Q10",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/184-2024-A.pdf",
+    "published_at": "2024-12-27"
+  },
+  {
+    "topic": "environment",
+    "question": "Which of the following is/are the endemic bird(s) of the Western Ghats? (i) Rufous Treepie (ii) Grey -headed Bulbul (iii) Indian Roller (iv) Black-and-Orange Flycatcher (v) White-throated Kingfisher Choose the correct answer :",
+    "options": [
+      "(ii) and (iv)",
+      "(iii) only",
+      "(ii) and (v)",
+      "(i) only"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 184/2024 (Senior Scientific Assistant In The Department Of Physiology, 27 Dec 2024). The correct answer is (ii) and (iv).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "senior-scientific-assistant-in-the"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 184/2024 · Q85",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/184-2024-A.pdf",
+    "published_at": "2024-12-27"
+  },
+  {
+    "topic": "environment",
+    "question": "Which term describes the phenomenon where urban areas become significantly warmer than their rural surroundings?",
+    "options": [
+      "Heat island effect",
+      "Urban cooling",
+      "Coastal warming",
+      "Atmospheric inversion"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 182/2024 (Jr. Instructor, 23 Dec 2024). The correct answer is Heat island effect.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "jr-instructor-architectural-draughtsman"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 182/2024 · Q69",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/182-2024-A.pdf",
+    "published_at": "2024-12-23"
+  }
+]

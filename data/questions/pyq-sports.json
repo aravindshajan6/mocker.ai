@@ -1,0 +1,68 @@
+[
+ {
+  "topic": "sports",
+  "question": "Which Indian cricketer was inducted into the ICC Cricket Hall of Fame in June 2025?",
+  "options": [
+   "Virat Kohli",
+   "Mahendra Singh Dhoni",
+   "Rohit Sharma",
+   "Shikhar Dhawan"
+  ],
+  "answer": 1,
+  "explanation": "This question was asked in Kerala PSC exam 48/2026 (Special Branch Asst, 16 May 2026). The correct answer is Mahendra Singh Dhoni.",
+  "difficulty": 2,
+  "tags": [
+   "pyq",
+   "special-branch-asst-excise-inspector-si"
+  ],
+  "source": "pyq",
+  "source_ref": "Kerala PSC 48/2026 · Q28",
+  "source_key": "Final Answer Key",
+  "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/048-2026-A.pdf",
+  "published_at": "2026-05-16"
+ },
+ {
+  "topic": "sports",
+  "question": "Match the following : (i) The test of my life 1. Abhinav Bindra (ii) A Shot at History 2. Yuvraj Singh (iii) Ace Against Odds 3. P.T. Usha (iv) Golden Girl 4. Sania Mirza",
+  "options": [
+   "(i)-4, (ii)-1, (iii)-3, (iv)-2",
+   "(i)-2, (ii)-1, (iii)-4, (iv)-3",
+   "(i)-3, (ii)-4, (iii)-2, (iv)-1",
+   "(i)-1, (ii)-3, (iii)-2, (iv)-4"
+  ],
+  "answer": 1,
+  "explanation": "This question was asked in Kerala PSC exam 141/2025 (HST Social Science, 4 Nov 2025). The correct answer is (i)-2, (ii)-1, (iii)-4, (iv)-3.",
+  "difficulty": 2,
+  "tags": [
+   "pyq",
+   "hst-social-science-malayalam-medium"
+  ],
+  "source": "pyq",
+  "source_ref": "Kerala PSC 141/2025 · Q1",
+  "source_key": "Final Answer Key",
+  "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-11/141-2025-A.pdf",
+  "published_at": "2025-11-04"
+ },
+ {
+  "topic": "sports",
+  "question": "Gukesh Dommaraju became the FIDE World Chess Champion in 2024 by defeating which of the following players?",
+  "options": [
+   "Magnus Carlsen",
+   "Ding Liren",
+   "Hikaru Nakamura",
+   "Garry Kasparov 50/2025 5"
+  ],
+  "answer": 1,
+  "explanation": "This question was asked in Kerala PSC exam 50/2025 (Divisional Accountant, 10 May 2025). The correct answer is Ding Liren.",
+  "difficulty": 2,
+  "tags": [
+   "pyq",
+   "divisional-accountant-divisional"
+  ],
+  "source": "pyq",
+  "source_ref": "Kerala PSC 50/2025 · Q12",
+  "source_key": "Final Answer Key",
+  "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-05/50-2025-A.pdf",
+  "published_at": "2025-05-10"
+ }
+]

@@ -35,6 +35,27 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+# Malayalam papers published with legacy Shree-Lipi fonts decode to strings of stray single letters
+# or mojibake. Genuine "match the following" items also contain many short tokens, so the deciding
+# signal is whether any ordinary English word survives at all.
+_ENGLISH_ANCHORS = set("""the a an of in on at to for from by with and or is are was were which who what
+when where how many much not no all none be been being has have had do does did this that these those
+it its as following statement statements among between during after before under over above below year
+years first second third national international state states government india indian kerala act law
+article committee commission minister ministry court president prime chief city river district capital
+list correct identify consider given match pairs code codes only both relation form business advantage
+tag create items bullets memory types usage cache main theories principles proponents""".split())
+
+
+def looks_garbled(text: str) -> bool:
+    words = re.findall(r"[A-Za-z][A-Za-z'\-]*", text)
+    if len(words) < 4:
+        return True
+    known = sum(1 for w in words if w.lower() in _ENGLISH_ANCHORS)
+    longish = sum(1 for w in words if len(w) >= 4)
+    return known <= 1 and longish / len(words) < 0.25
+
+
 # --------------------------------------------------------------------------- #
 # Config
 # --------------------------------------------------------------------------- #
@@ -594,8 +615,9 @@ def _scan(txt):
 
 
 BOOKLET_ALPHA_RE = re.compile(r"Alpha\s*Code\s*[:\-]?\s*([A-D])\b", re.I)
-# Every page of a modern booklet is headed with its bare paper code, e.g. "079/2026".
-BOOKLET_CODE_RE = re.compile(r"^\s*(\d{1,3}/\d{4})(?:-[MTK])?\s*$", re.M)
+# Every page of a modern booklet is headed with its bare paper code, e.g. "079/2026"
+# -- sometimes with a two-digit year ("143/24").
+BOOKLET_CODE_RE = re.compile(r"^\s*(\d{1,3})\s*/\s*(\d{2}|\d{4})(?:-[MTK])?\s*$", re.M)
 
 
 def booklet_alpha(txt: str, fallback: str | None) -> str:
@@ -622,6 +644,8 @@ LIST_MARKER_RE = re.compile(r"(?:^|\s)\(?(?:[ivx]{1,4}|[a-d]|[1-9])[.)]\s")
 
 def gate(stem: str, options: list[str]) -> str | None:
     """Return a drop reason, or None if the question passes every gate."""
+    if looks_garbled(stem + " " + " ".join(options)):
+        return "garbled text (legacy font / bad extraction)"
     # Match-the-following / multi-statement items are kept -- they are authentic
     # Kerala PSC style -- but only when the pairs themselves survived extraction.
     markers = len(LIST_MARKER_RE.findall(stem))
@@ -953,6 +977,115 @@ class Classifier:
         return labels  # type: ignore[return-value]
 
 
+VERIFY_VERSION = "verify-v1"
+VERIFY_PROMPT = """You are the last quality gate on a Kerala PSC General Knowledge quiz bank.
+
+Each item below was pulled from a real Kerala PSC exam paper and already given a GK topic.
+Kerala PSC papers contain a small general-knowledge section plus a large post-specific
+section for the job being recruited. Your job is to catch the post-specific ones that got
+through.
+
+KEEP an item only if an ordinary well-read candidate -- someone preparing for a general
+Kerala PSC exam with no training in the post's subject -- would be expected to answer it.
+
+DROP an item if it needs degree-level or professional training in a specialism, including:
+- programming, SQL, Java/C/Python syntax, RMI, data structures, OS internals, DBMS
+  normalisation, networking protocol detail, software engineering theory
+  (basic computer literacy -- what a CPU/RAM/browser/virus/e-governance portal is -- is KEEP)
+- accountancy, auditing, book-keeping entries, corporate finance, actuarial or banking
+  operations detail (basic economics -- capitalism, GDP, RBI, budget, five-year plans,
+  co-operative movement history -- is KEEP)
+- literary criticism of specific poems/novels/authors, linguistics, pedagogy
+- clinical medicine, nursing, pharmacy, veterinary practice
+- civil/mechanical/electrical engineering, surveying, workshop practice, agriculture technique
+- statutory section numbers and procedural law
+- any question needing a diagram, table or passage that is not printed in the item
+
+Return JSON exactly:
+{"verdicts": [{"i": 1, "keep": true}, {"i": 2, "keep": false}]}
+
+Items:
+"""
+
+
+class Verifier(Classifier):
+    """Second pass: drop post-specific specialism that survived topic labelling."""
+
+    @staticmethod
+    def _cache_path(stem: str) -> str:
+        return os.path.join(CLS_CACHE, hashlib.sha1(
+            (LLM_MODEL + "|" + VERIFY_VERSION + "|" + norm_key(stem)).encode()
+        ).hexdigest()[:16] + ".json")
+
+    def _cached_verdict(self, stem: str):
+        f = self._cache_path(stem)
+        if os.path.exists(f):
+            try:
+                return bool(json.load(open(f))["keep"])
+            except Exception:
+                pass
+        return None
+
+    def _store_verdict(self, stem: str, keep: bool):
+        with open(self._cache_path(stem), "w") as fh:
+            json.dump({"keep": keep}, fh)
+
+    def _verify_batch(self, batch):
+        lines = []
+        for i, it in enumerate(batch, 1):
+            preview = " | ".join(o[:26] for o in it["options"])
+            lines.append(f'{i}. [topic: {it["topic"]}] [paper: {it["post"][:40]}]\n'
+                         f'   {it["question"][:220]}\n   opts: {preview[:130]}')
+        out = self._call(VERIFY_PROMPT + "\n".join(lines))
+        got = {}
+        if not isinstance(out, dict):
+            return got
+        verdicts = out.get("verdicts")
+        if not isinstance(verdicts, list):
+            verdicts = next((v for v in out.values() if isinstance(v, list)), [])
+        for e in verdicts:
+            if not isinstance(e, dict):
+                continue
+            try:
+                i = int(e.get("i"))
+            except (TypeError, ValueError):
+                continue
+            if 1 <= i <= len(batch):
+                got[i - 1] = bool(e.get("keep"))
+        return got
+
+    def verify(self, items):
+        """items: [{question, options, topic, post}] -> parallel list of bools."""
+        keep = [None] * len(items)
+        pending = []
+        for i, it in enumerate(items):
+            hit = self._cached_verdict(it["question"])
+            if hit is None:
+                pending.append(i)
+            else:
+                keep[i] = hit
+                self.stats["verify-cache"] += 1
+        if self.enabled and pending:
+            for start in range(0, len(pending), LLM_BATCH):
+                if self.exhausted or self.consecutive_failures >= 3 \
+                        or self.requests >= LLM_MAX_REQUESTS:
+                    log(f"    [verify] API unavailable; keeping the remaining "
+                        f"{len(pending) - start} items unverified")
+                    break
+                chunk = pending[start:start + LLM_BATCH]
+                got = self._verify_batch([items[i] for i in chunk])
+                self.consecutive_failures = 0 if got else self.consecutive_failures + 1
+                for j, idx in enumerate(chunk):
+                    if j in got:
+                        keep[idx] = got[j]
+                        self._store_verdict(items[idx]["question"], got[j])
+                        self.stats["verify-llm"] += 1
+                log(f"    [verify] {min(start + LLM_BATCH, len(pending))}/{len(pending)}"
+                    f" ({self.requests} reqs, {self.tokens:,} tokens)")
+        # Anything the verifier could not reach is kept (it is only a second opinion).
+        return [True if k is None else k for k in keep]
+
+
 # --------------------------------------------------------------------------- #
 # Per-paper ingest
 # --------------------------------------------------------------------------- #
@@ -1021,8 +1154,11 @@ def ingest_paper(p: dict, drops: collections.Counter) -> tuple[list[dict], dict]
         # A few index rows omit the code; the booklet prints it on every page.
         bm = BOOKLET_CODE_RE.search(qtxt[:6000])
         if bm:
-            p["code"] = bm.group(1)
-            p["ncode"] = p["ncode"] or norm_code(bm.group(1))
+            num, year = bm.group(1), bm.group(2)
+            if len(year) == 2:
+                year = "20" + year
+            p["code"] = f"{num}/{year}"
+            p["ncode"] = p["ncode"] or norm_code(p["code"])
             stat["code"] = p["code"]
 
     alpha = booklet_alpha(qtxt, p["alpha"])
@@ -1073,6 +1209,8 @@ def main() -> int:
                     help="max number of papers to ingest (default 40)")
     ap.add_argument("--pages", type=int, default=INDEX_PAGES,
                     help=f"index pages to crawl (default {INDEX_PAGES})")
+    ap.add_argument("--no-verify", action="store_true",
+                    help="skip the second-pass specialism check")
     ap.add_argument("--no-llm", action="store_true",
                     help="use only the deterministic keyword classifier")
     ap.add_argument("--refresh-index", action="store_true",
@@ -1137,11 +1275,30 @@ def main() -> int:
     labels = clf.classify(unique)
     log(f"  label source: {dict(clf.stats)}  (llm tokens used: {clf.tokens:,})")
 
-    buckets: dict[str, list[dict]] = collections.defaultdict(list)
+    kept_pairs = []
     for c, topic in zip(unique, labels):
         if topic == DROP:
             drops["classified as non-GK (drop)"] += 1
             continue
+        kept_pairs.append((c, topic))
+
+    if not args.no_verify:
+        log(f"  second pass: verifying {len(kept_pairs)} kept questions")
+        vf = Verifier(api_key, use_llm=not args.no_llm)
+        verdicts = vf.verify([{"question": c["question"], "options": c["options"],
+                               "topic": t, "post": short_post(c["paper"]["post"])}
+                              for c, t in kept_pairs])
+        log(f"  verify source: {dict(vf.stats)}")
+        survivors = []
+        for (c, t), ok in zip(kept_pairs, verdicts):
+            if ok:
+                survivors.append((c, t))
+            else:
+                drops["second pass: post-specific specialism"] += 1
+        kept_pairs = survivors
+
+    buckets: dict[str, list[dict]] = collections.defaultdict(list)
+    for c, topic in kept_pairs:
         p = c["paper"]
         answer_text = c["options"][c["answer"]]
         buckets[topic].append({

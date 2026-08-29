@@ -1,0 +1,2048 @@
+[
+  {
+    "topic": "computers-tech",
+    "question": "Match the following memory types with their correct usage : A. DRAM 1. Cache Memory B. SRAM 2. Main Memory C. BIOS 3. Stored permanently in ROM D. Registers 4. CPU’s working memory",
+    "options": [
+      "A–1, B–2, C–3, D–4",
+      "A–2, B–1, C–3¸ D–4",
+      "A–2, B–3, C–1, D–4",
+      "A–1, B–3, C–2, D–4"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 48/2026 (Special Branch Asst, 16 May 2026). The correct answer is A–2, B–1, C–3¸ D–4.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "special-branch-asst-excise-inspector-si"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 48/2026 · Q41",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/048-2026-A.pdf",
+    "published_at": "2026-05-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "A cyber criminal creates a fake website resembling a bank’s portal to collect login credentials. This activity best represents :",
+    "options": [
+      "Hacking",
+      "Identity theft",
+      "Phishing",
+      "Cyber stalking"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 48/2026 (Special Branch Asst, 16 May 2026). The correct answer is Phishing.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "special-branch-asst-excise-inspector-si"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 48/2026 · Q43",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/048-2026-A.pdf",
+    "published_at": "2026-05-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The clarity of an image on a computer monitor depends on : (i) Screen resolution (ii) Dot pitch (iii) Refresh rate",
+    "options": [
+      "(i) and (ii) only",
+      "(ii) and (iii) only",
+      "(i) and (iii) only",
+      "(i), (ii) and (iii)"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 48/2026 (Special Branch Asst, 16 May 2026). The correct answer is (i), (ii) and (iii).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "special-branch-asst-excise-inspector-si"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 48/2026 · Q45",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/048-2026-A.pdf",
+    "published_at": "2026-05-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Study the table given below and answer the question : Software example A Windows B mS Word C Winzip d mySQl Which of the following correctly classifies the software listed in the table ?",
+    "options": [
+      "A and B – System software; C and d – Application software",
+      "A and C – System software; B and d – Application software",
+      "A and d – System software; B and C – Application software",
+      "All are application software"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 13/2026 (Junior Co-operative Inspector, 28 Feb 2026). The correct answer is A and C – System software; B and d – Application software.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-co-operative-inspector-assistant"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 13/2026 · Q100",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-03/13-26%20%28Set%20A%29.pdf",
+    "published_at": "2026-02-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following output devices provides tactile feedback to the user, often used in gaming controllers and mobile devices ?",
+    "options": [
+      "Plasma display",
+      "OlEd display",
+      "dot matrix Printer",
+      "Haptic device"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 143/2024 (Clerk, 23 Oct 2024). The correct answer is Haptic device.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "clerk-cashier-kerala-bank"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 143/2024 · Q91",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-10/QUESTION.pdf",
+    "published_at": "2024-10-23"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In spreadsheet software, what is the intersection of a row and a column called ?",
+    "options": [
+      "Pivot table",
+      "Worksheet",
+      "Cell",
+      "macro"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 143/2024 (Clerk, 23 Oct 2024). The correct answer is Cell.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "clerk-cashier-kerala-bank"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 143/2024 · Q96",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-10/QUESTION.pdf",
+    "published_at": "2024-10-23"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which type of network is used to connect multiple networks over large geographical areas, such as countries or continents ?",
+    "options": [
+      "WAN",
+      "lAN",
+      "mAN",
+      "PAN"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 143/2024 (Clerk, 23 Oct 2024). The correct answer is WAN.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "clerk-cashier-kerala-bank"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 143/2024 · Q98",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-10/QUESTION.pdf",
+    "published_at": "2024-10-23"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which networking device is responsible for directing data packets between networks, typically found at the gateway between a local network and the internet ?",
+    "options": [
+      "Switch",
+      "Hub",
+      "Router",
+      "Repeater"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 143/2024 (Clerk, 23 Oct 2024). The correct answer is Router.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "clerk-cashier-kerala-bank"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 143/2024 · Q99",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-10/QUESTION.pdf",
+    "published_at": "2024-10-23"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following are primary memory devices? (i) RAM (ii) PROM (iii) Hard disk (iv) EPROM",
+    "options": [
+      "(i), (ii), (iii) only",
+      "(i), (ii), (iv) only",
+      "(i), (iii), (iv) only",
+      "(ii), (iii), (iv) only"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 153/2023 (Cashier, 18 Aug 2023). The correct answer is (i), (ii), (iv) only.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "cashier-general-category-cashier"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 153/2023 · Q71",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2023-08/153_2023_a.pdf",
+    "published_at": "2023-08-18"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Consider the following statement : (i) Registers memory is faster than cache memory. (ii) RAM is a non-volatile memory.",
+    "options": [
+      "(i) only",
+      "(ii) only",
+      "Both (i) and (ii)",
+      "Neither (i) nor (ii)"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 153/2023 (Cashier, 18 Aug 2023). The correct answer is (i) only.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "cashier-general-category-cashier"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 153/2023 · Q72",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2023-08/153_2023_a.pdf",
+    "published_at": "2023-08-18"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The device that can interconnect two networks of the same type using the same protocol. The above-mentioned device is :",
+    "options": [
+      "Router",
+      "Gateway",
+      "Bridge",
+      "Repeater"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 153/2023 (Cashier, 18 Aug 2023). The correct answer is Bridge.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "cashier-general-category-cashier"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 153/2023 · Q75",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2023-08/153_2023_a.pdf",
+    "published_at": "2023-08-18"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which section of IT Act 2000 mentions the punishment for publishing or transmitting materials related to child pornography?",
+    "options": [
+      "Section 67A",
+      "Section 67B",
+      "Section 66A",
+      "Section 66B"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 153/2023 (Cashier, 18 Aug 2023). The correct answer is Section 67B.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "cashier-general-category-cashier"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 153/2023 · Q80",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2023-08/153_2023_a.pdf",
+    "published_at": "2023-08-18"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which among the following is the application of ICT for delivering government services to citizens with quality and transparency ?",
+    "options": [
+      "E-Business",
+      "E-Administration",
+      "E-Governance",
+      "E-Marketing"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 089/2022 (Police Constable, 20 Sep 2022). The correct answer is E-Governance.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "police-constable-telecommunications"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 089/2022 · Q59",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2022-09/qp.pdf",
+    "published_at": "2022-09-20"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Key of keyboard which is used to get back to beginning of a document is called :",
+    "options": [
+      "Home key",
+      "End key",
+      "F12 key",
+      "ESC key"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 108/2021 (Accountant, 7 Nov 2021). The correct answer is Home key.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-cashier-jr-audit-assistant"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 108/2021 · Q88",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2021-11/Q.pdf",
+    "published_at": "2021-11-07"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The small memory which can be kept inside a central processing unit is referred as",
+    "options": [
+      "RAM",
+      "ROM",
+      "Registers",
+      "Drive"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 026/2020 (Junior Co-Operative Inspector, 16 Oct 2020). The correct answer is Registers.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-co-operative-inspector-kerala"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 026/2020 · Q95",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2020-10/q-26.pdf",
+    "published_at": "2020-10-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The practice of registering an Internet domain name that is likely to be wanted by another famous person or business",
+    "options": [
+      "IP spoofing",
+      "IP hacking",
+      "Cyber squatting",
+      "Cyber auction"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 026/2020 (Junior Co-Operative Inspector, 16 Oct 2020). The correct answer is Cyber squatting.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-co-operative-inspector-kerala"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 026/2020 · Q99",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2020-10/q-26.pdf",
+    "published_at": "2020-10-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following describes the correct order of function calls made by a TCP server before it can start communicating with a client?",
+    "options": [
+      "socket( ), bind( ), listen( ), accept( )",
+      "socket( ), listen( ), bind( ), accept( )",
+      "socket( ), bind( ), connect( ), accept( )",
+      "socket( ), listen( ), connect( ), accept( )"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 050/2026 (Deputy Manager, 20 May 2026). The correct answer is socket( ), bind( ), listen( ), accept( ).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "deputy-manager-it-assistant-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 050/2026 · Q78",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/050-2026-A.pdf",
+    "published_at": "2026-05-20"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following best describes the primary function of SMTP in the email ecosystem?",
+    "options": [
+      "It is used by clients to download messages from a server",
+      "It operates primarily over UDP port 25",
+      "It is a \"Push\" protocol used for transferring mail between servers",
+      "It was designed from the start with built-in encryption for all messages"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 050/2026 (Deputy Manager, 20 May 2026). The correct answer is It is a \"Push\" protocol used for transferring mail between servers.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "deputy-manager-it-assistant-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 050/2026 · Q83",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/050-2026-A.pdf",
+    "published_at": "2026-05-20"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "__________ is an XML-based, platform-independent standard for publishing and locating web services within a distributed registry.",
+    "options": [
+      "UDDI",
+      "DNS",
+      "Whois",
+      "SOAP"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 050/2026 (Deputy Manager, 20 May 2026). The correct answer is UDDI.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "deputy-manager-it-assistant-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 050/2026 · Q84",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/050-2026-A.pdf",
+    "published_at": "2026-05-20"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In RMI architecture, which component acts as a gateway for the client, intercepting the method call and communicating with the remote server?",
+    "options": [
+      "Skeleton",
+      "Stub",
+      "RMI Registry",
+      "Remote Reference Layer"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 050/2026 (Deputy Manager, 20 May 2026). The correct answer is Stub.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "deputy-manager-it-assistant-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 050/2026 · Q86",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-05/050-2026-A.pdf",
+    "published_at": "2026-05-20"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following is a special software that enables a hardware device to perform an operation according to the command given by the end user?",
+    "options": [
+      "Compiler",
+      "Utility software",
+      "Device driver",
+      "Firmware 3"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is Device driver.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q4",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following is a software that is distributed with its source code, allowing users to use, modify and redistribute it with its original rights?",
+    "options": [
+      "Shareware",
+      "Open-source software",
+      "Freeware",
+      "Proprietary software"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is Open-source software.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q5",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which option in Linux ‘rm’ command that the user is prompted for confirmation before removing each file and directory?",
+    "options": [
+      "–r",
+      "–c",
+      "–i",
+      "– rf"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is –i.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q6",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following command is used to change the access permissions of files and directories?",
+    "options": [
+      "pwd",
+      "cat",
+      "chmod",
+      "ssh"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is chmod.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q9",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the output of following code snippet in C? int a[ ] = {2,4,8,16}; printf(“%d”, 2[a]);",
+    "options": [
+      "Compile error",
+      "2",
+      "4",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is 8.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q27",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following statement(s) is/are correct about memory representation of two-dimensional arrays? (i) Stored in column-major order (ii) Stored in row-major order (iii) Elements of each row are stored contiguously (iv) Each row occupies equal memory",
+    "options": [
+      "(i) and (iii)",
+      "(i), (iii) and (iv)",
+      "(ii), (iii) and (iv)",
+      "(ii) and (iv)"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is (ii), (iii) and (iv).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q29",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Consider the code : int x =1; void fun( ) { int x = 2; { int x = 3; printf(\"%d\",x); } } What will be the Output?",
+    "options": [
+      "Compile error",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is 3.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q31",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following statement(s) is/are correct about structure in C? (i) Structure is a user-defined data type (ii) Structure can store variables of different data types (iii) Structure members are stored in contiguous memory locations (iv) All of the above",
+    "options": [
+      "(i)",
+      "(i) and (ii)",
+      "(i) and (iii)",
+      "(iv)"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is (iv).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q35",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the output of the following code? struct data { int x; float y; }; struct data d = {9}; printf(“%d %.1f”, d.x, d.y);",
+    "options": [
+      "9 garbage",
+      "9 0.0",
+      "0 0.0",
+      "Run time error"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is 9 0.0.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q37",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In SQL which function is used to calculates the sum of a set of values?",
+    "options": [
+      "AVG",
+      "MAX",
+      "SUM",
+      "MIN"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is SUM.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q47",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which OOP principle groups data and the functions that work on it into one unit?",
+    "options": [
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Abstraction"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is Encapsulation.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q52",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following makes a class “effectively” final even without using the final keyword?",
+    "options": [
+      "All methods are static",
+      "Constructor is private",
+      "Class has no abstract methods",
+      "No subclass is created in the program"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is Constructor is private.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q53",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following device forwards packets between networks by processing the routing information included in the packet?",
+    "options": [
+      "Firewall",
+      "Bridge",
+      "Hub",
+      "Router"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 002/2026 (Junior Instructor, 16 Jan 2026). The correct answer is Router.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-information-and"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 002/2026 · Q65",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2026-01/002-2026-A.pdf",
+    "published_at": "2026-01-16"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The bit associated with a cache block that signifies that the cache block is modified is called :",
+    "options": [
+      "Flag bit",
+      "Status bit",
+      "Dirty bit",
+      "Reference bit"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is Dirty bit.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q19",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which among the following processor registers facilitates the communication between the processor and the memory?",
+    "options": [
+      "PC",
+      "IR",
+      "MAR",
+      "PC and MAR A 5"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is MAR.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q20",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "When handling interrupts from multiple devices, which among the following methods is easy to implement?",
+    "options": [
+      "Interrupt nesting",
+      "Polling",
+      "Priority schemes",
+      "Vectored interrupt"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is Polling.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q21",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The interrupt handling mechanism where the device requesting the service identifies itself to the processor is called :",
+    "options": [
+      "Daisy chaining",
+      "Polling",
+      "Vectored interrupt",
+      "Interrupt nesting"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is Vectored interrupt.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q22",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The sorting technique in which the smallest element from the unsorted sublist is swapped with the element at the beginning of the unsorted sublist is :",
+    "options": [
+      "Selection Sort",
+      "Insertion Sort",
+      "Quick Sort",
+      "Bubble Sort"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is Selection Sort.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q28",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Assume that a stack is implemented with an array of size SIZE. If the array index starts from 0, the stack underflow can be identified using the condition :",
+    "options": [
+      "top = SIZE",
+      "top = SIZE –1",
+      "top = 0",
+      "top = –1"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is top = –1.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q29",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "A binary search tree is constructed out of the keys 5, –1, 12, 30, 15, 2, –87. The inorder traversal of this tree is :",
+    "options": [
+      "5, –1, 2, 30, 15, 12, –87",
+      "5, 2, –1, 15, 30, 12, –87",
+      "–87, –1, 2, 5, 12, 15, 30",
+      "–1, 2, 5, 30, 12, 15, –87"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is –87, –1, 2, 5, 12, 15, 30.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q33",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which among the following statements are correct? I. In C++, by default all data items defined in a class are Public II. In C++, by default all data items defined in a class are Private III. In Java, by default all data items defined in a class are Private within the class.",
+    "options": [
+      "I and III",
+      "II only",
+      "II and III",
+      "III only"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 93/2025 (System Analyst, 28 Jul 2025). The correct answer is II only.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "system-analyst-computer-programmer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 93/2025 · Q39",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-07/093-2025-A.pdf",
+    "published_at": "2025-07-28"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following statements is correct when considering the development history of Artificial Intelligence (AI) ? i. alan Turing published computer machinery and Intelligence (1950), which proposed a test of machine intelligence called ‘The Imitation Game’. ii. John McCarthy coined the term Artificial Intelligence (AI) and held a workshop on Artificial Intelligence at Dartmouth (1955).",
+    "options": [
+      "Both i and ii",
+      "Only i",
+      "Only ii",
+      "Neither i nor ii"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 63/2025 (Technical Assistant Gr II, 12 Jun 2025). The correct answer is Only i.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "technical-assistant-gr-ii-food-safety"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 63/2025 · Q91",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/63-25%28Set-A%29.pdf",
+    "published_at": "2025-06-12"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following is/are the lINUX-based mobile phone operating system ? i. Ubuntu touch ii. Post market OS iii. lineage OS iv. mobian",
+    "options": [
+      "Only i, ii and iii",
+      "Only i and iv",
+      "Only i and iii",
+      "Only i, ii and iv"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 63/2025 (Technical Assistant Gr II, 12 Jun 2025). The correct answer is Only i, ii and iv.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "technical-assistant-gr-ii-food-safety"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 63/2025 · Q100",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/63-25%28Set-A%29.pdf",
+    "published_at": "2025-06-12"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following devices is used to divide a large network into smaller, more efficient segments and also monitors traffic on both sides to ensure data packets are forwarded to the correct destination ?",
+    "options": [
+      "Hub",
+      "Bridge",
+      "modem",
+      "Switch"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is Bridge.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q83",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which Internet-based service enables real-time communication using sound and Video between individuals or groups through an electronic device ?",
+    "options": [
+      "Internet Relay Chat",
+      "FTP",
+      "Telnet",
+      "Video conferencing"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is Video conferencing.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q84",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the term used when several devices or computers are connected in a hierarchical structure ?",
+    "options": [
+      "Tree Network",
+      "mesh Network",
+      "Star Network",
+      "Ring Network"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is Tree Network.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q85",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which concept aims to provide a single multipurpose communication network using a uniform technology to support a wide range of telecommunication services, replacing dedicated service-specific networks ?",
+    "options": [
+      "Circuit Switching",
+      "dialup Network",
+      "Broadband Network",
+      "Integrated Services digital Network (ISdN)"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is Integrated Services digital Network (ISdN).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q87",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which type of attack occurs when an attacker sends an excessive amount of data, overwhelming an application or protocol beyond its handling capacity ?",
+    "options": [
+      "Phishing Attack",
+      "Brute Force Attack",
+      "Buffer Overrun Attack",
+      "man-in-the middle Attack"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is Buffer Overrun Attack.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q90",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the term for the situation where a digital resource becomes unreadable due to the unavailability of the physical media, the required reader, hardware, or supporting software ?",
+    "options": [
+      "digital Curation",
+      "digital Repositories",
+      "digital Obsolescence",
+      "digital library"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is digital Obsolescence.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q93",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Any data which has four V’s i.e. Volume, Variety, Veracity and Velocity is termed as",
+    "options": [
+      "data mining",
+      "data analytics",
+      "Big data",
+      "data curation"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is Big data.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q95",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "A technology that merges computer generated simulations with real world environments, placing them on top of real world objects is known as",
+    "options": [
+      "Augmented reality",
+      "Artificial intelligence",
+      "Expert systems",
+      "Virtual reality"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 61/2025 (Librarian Grade IV and Cultural Assistant, 10 Jun 2025). The correct answer is Augmented reality.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "librarian-grade-iv-and-cultural"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 61/2025 · Q98",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-06/61-25%20%28Set%20A%29.pdf",
+    "published_at": "2025-06-10"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following is the Key feature of a digital Signature which ensure the authenticity of online banking transaction?",
+    "options": [
+      "Two factor authentication",
+      "Public Key Cryptography with a private key held by a customer",
+      "Encryption of transaction details",
+      "Use of unique user name and password"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is Public Key Cryptography with a private key held by a customer.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q74",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which MS Word feature allows the user to apply a uniform look to the document using predefined formatting elements?",
+    "options": [
+      "Styles",
+      "Themes",
+      "Templates",
+      "Clip Art"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is Styles.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q86",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which feature in a worksheet allows you to keep row and column labels visible while scrolling through a large dataset?",
+    "options": [
+      "Freeze Panes",
+      "Split View",
+      "Filter",
+      "Conditional Formatting"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is Freeze Panes.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q89",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which PowerPoint feature allows you to animate the transition between slides for a more dynamic presentation?",
+    "options": [
+      "Slide Layout",
+      "Slide Transitions",
+      "Slide Design",
+      "Master Slide"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is Slide Transitions.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q90",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In C++, what happens if an array is declared with a size of 10 and an attempt is made to access the 15th element?",
+    "options": [
+      "The program will always terminate with an error",
+      "The behavior is undefined",
+      "The program will display a default value",
+      "An exception will be thrown"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is The behavior is undefined.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q92",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In Visual Basic, which event occurs when a user releases a mouse button over a form?",
+    "options": [
+      "MouseDown",
+      "MouseUp",
+      "MouseClick",
+      "MouseEnter A 17"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is MouseUp.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q93",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the output of the following VB.NET code? Dim i As Integer = 1 Do Until i >5 Console.WriteLine(i) i+=2 Loop",
+    "options": [
+      "12345",
+      "135",
+      "13",
+      "Infinite loop"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is 135.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q94",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which SQL join will include all rows from the left table and only the matching rows from the right table?",
+    "options": [
+      "INNER JOIN",
+      "OUTER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 024/2025 (Accountant- KERAFED, 22 Feb 2025). The correct answer is LEFT JOIN.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerafed"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 024/2025 · Q97",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/024-2025-A.pdf",
+    "published_at": "2025-02-22"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which component of the computer is responsible for temporary data storage while the computer is running?",
+    "options": [
+      "RAM",
+      "Hard Drive",
+      "ROM",
+      "Cache"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 022/2025 (Overseer Grade II, 19 Feb 2025). The correct answer is RAM.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "overseer-grade-ii-mechanical"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 022/2025 · Q84",
+    "source_key": "Provisional Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-02/022-2025-A.pdf",
+    "published_at": "2025-02-19"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the email option to send a copy of the email being sent without others knowing?",
+    "options": [
+      "Blinded Carbon Copy",
+      "Blind Carbon Copy",
+      "Blind Carbonic Copy",
+      "Blind Carbon Coping"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 10/2025 (Junior Instructor, 24 Jan 2025). The correct answer is Blind Carbon Copy.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-mechanic-consumer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 10/2025 · Q34",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-01/10-2025%20A.pdf",
+    "published_at": "2025-01-24"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which key is used with the line tool to draw a straight line in MS paint?",
+    "options": [
+      "Alt",
+      "Enter",
+      "Ctrl",
+      "Shift"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 10/2025 (Junior Instructor, 24 Jan 2025). The correct answer is Shift.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-mechanic-consumer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 10/2025 · Q39",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-01/10-2025%20A.pdf",
+    "published_at": "2025-01-24"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the total number of pins in a typical SATA connector used for data?",
+    "options": [
+      "4",
+      "15",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 10/2025 (Junior Instructor, 24 Jan 2025). The correct answer is 7.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-mechanic-consumer"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 10/2025 · Q55",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2025-01/10-2025%20A.pdf",
+    "published_at": "2025-01-24"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Given below is a code-snippet in C. Which variable will be shared between 2 threads executing the same code ? int myAge=20; int main() { int mymarks = 50; ________ }",
+    "options": [
+      "myAge",
+      "mymarks",
+      "Both myAge and mymarks",
+      "Neither myAge nor mymarks"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is myAge.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q23",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "A user does not have executable permission for a given file. Which of the following commands can be used to update the permission ?",
+    "options": [
+      "Chown",
+      "Chmod",
+      "Useradd",
+      "Usermod"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is Chmod.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q24",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What will be the output when the following shell script named test, is executed as ./test 25 26 27 ? #!/bin/sh echo “your name is $1 and your mark is $2”",
+    "options": [
+      "The script will generate an error",
+      "your name is 26 and your mark is 27",
+      "your name is test and your mark is 25",
+      "your name is 25 and your mark is 26"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is your name is 25 and your mark is 26.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q26",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In order to assign a value of 66 to the variable year, which of following can be used within an <applet> tag ?",
+    "options": [
+      "number = getParameter(66)",
+      "<number=66>",
+      "<param name=number value=66>",
+      "<param = radius value=66>"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is <param name=number value=66>.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q42",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In multiple inheritance, if class C inherits two classes A and B as follows, which class constructor will be called first ? class A{ }; class B{ }; class C : public A, public B{ };",
+    "options": [
+      "A()",
+      "B()",
+      "C()",
+      "Can’t be determined"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is A().",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q47",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Consider the following functional dependencies and corresponding implications. Which of the following statements are correct ? i. {BP, City} → {HRA, CCA} implies BP → {HRA, CCA} ii. BP → {HRA, CCA} implies BP → HRA iii. {BP, City} → HRA and Population → City implies {BP, Population} → HRA iv. BP → dA and {designation, dA} → HRA, implies {designation, BP} → HRA",
+    "options": [
+      "All statements are correct",
+      "Only ii and iv are correct",
+      "i, ii, iv are correct",
+      "ii, iii, iv are correct"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is ii, iii, iv are correct.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q51",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Let T1, T2, T3 and T4 are transactions. Determine whether the following schedule is conflict serializable. [subscript indicate transaction number] r1(y); r2(X) ; r3(y) ; w1(X) ; w4(X) ; w2(Z) ; r3(X) ; w3(X)",
+    "options": [
+      "Conflict Serializable; Schedule : T2, T3, T1, T4",
+      "Conflict Serializable; Schedule : T2, T3, T4, T1",
+      "Conflict Serializable; Schedule : T2, T1, T4, T3",
+      "Not Conflict Serializable"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is Conflict Serializable; Schedule : T2, T1, T4, T3.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q52",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Consider a schema R(A, B, C, d, E) and functional dependencies A → C and B → dE. The decomposition of R into R1 (A,",
+    "options": [
+      "dependency Preserving, but not lossless join",
+      "Not dependency Preserving, but lossless join",
+      "dependency Preserving, and lossless join",
+      "Not dependency Preserving and not lossless join"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is dependency Preserving, but not lossless join.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q53",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Consider the following relations and corresponding functional dependencies. Identify the highest normal form of the relations. R1 (A , B, C,",
+    "options": [
+      "R1 and R2 are in 3NF",
+      "R1 and R2 are in 2NF",
+      "R1 is in BCNF and R2 is in 3NF",
+      "R1 is in 2NF and R2 is in 3NF"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is R1 is in 2NF and R2 is in 3NF.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q55",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Given a relation instance T1, pick the output generated by the following SQl statements: roll no. marks 101 50 102 60 103 60 104 70 105 null i. select count(*) from T1 ii. select count(marks) from T1 iii. select avg(marks) from T1",
+    "options": [
+      "5, 4, 60",
+      "5, 5, 48",
+      "4, 4, 60",
+      "4, 5, 48"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is 5, 4, 60.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q56",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Identify the option which correct matching of the statements : a. The statement that is automatically run by i. durability the system as a result of the database modification b. Ensure that a value appears in one relation ii. Isolation for a given set of attributes also appears for a certain set of attributes in another relation c. The changes applied to the database by a iii. Referential Integrity committed transaction must persist in the database, even if there is system failure d. Ensures that changes made to the iv. Stored Procedure database by authorized users do not result in a loss of data consistency v. Trigger vi. Integrity Constraints",
+    "options": [
+      "a – v, b – iii, c – vi, d – i",
+      "a – v, b – iii, c – i, d – vi",
+      "a – iv, b – vi, c – ii, d – iii",
+      "a – iv, b – iii, c – i, d – vi"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is a – v, b – iii, c – i, d – vi.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q60",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Consider a relation R (A, B, C, d, E) and following instances : A B C d e a 2 3 4 5 a 2 3 6 5 a 2 3 6 6 a 2 3 4 6 Choose the correct statement about Fds and mVds in the above relation instances.",
+    "options": [
+      "Fd BC → d and mVd BC → → d are violated",
+      "Fd BC → d is violated, but mVd BC → → d is not violated",
+      "Fd BC → d is not violated but mVd BC → → d is violated",
+      "Fd BC → d and BC → → d are not violated"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is Fd BC → d is violated, but mVd BC → → d is not violated.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q61",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Identify the true statements about two phase locking: i. Two phase locking ensures conflict serializability. ii. Two phase locking does not ensure freedom from deadlock. iii. If the timestamp of a transaction Ti is smaller than the timestamp of transaction Tj, two phase locking ensures that the produced schedule is equivalent to a serial schedule. iv. Cascading rollback can be avoided using strict two phase locking.",
+    "options": [
+      "i, ii, iii are correct",
+      "All are correct",
+      "i, iii, iv are correct",
+      "i, ii, iv are correct"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is i, ii, iv are correct.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q62",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "What is the correct syntax to make each word of a sentence to start with a capital letter in CSS ?",
+    "options": [
+      "text-transform : upper;",
+      "text-transform : capitalize;",
+      "transform : capitalize;",
+      "text-style : capital;"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is text-transform : capitalize;.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q65",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which is the tag to create a list of items with bullets in HTml ?",
+    "options": [
+      "<ul>",
+      "<ol>",
+      "<bl>",
+      "<il>"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is <ul>.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q66",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In Visual Basic, which of the following window displays the list of projects contained in the current solution ?",
+    "options": [
+      "Solution Explorer Window",
+      "list Window",
+      "Catalogue Window",
+      "Project Window"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is Solution Explorer Window.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q70",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In the TCP/IP model, which protocol is used to transfer web pages from servers to clients ?",
+    "options": [
+      "FTP",
+      "HTTP",
+      "SmTP",
+      "SNmP"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is HTTP.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q76",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which protocol is commonly used alongside IP to provide error reporting and diagnostic messages ?",
+    "options": [
+      "dNS",
+      "ARP",
+      "UdP",
+      "ICmP"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is ICmP.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q78",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which attack method involves injecting malicious code into trusted websites to target users accessing those sites ?",
+    "options": [
+      "SQl injection",
+      "Phishing",
+      "man-in-the-middle",
+      "Cross-site Scripting (XSS)"
+    ],
+    "answer": 3,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is Cross-site Scripting (XSS).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q81",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following correctly describes the role of the backoff algorithm in medium access control ?",
+    "options": [
+      "It prioritizes stations based on their IP addresses",
+      "It guarantees that only one station transmits at a time",
+      "It allows stations to retransmit after a random delay following a collision",
+      "It ensures that a station always transmits at a fixed interval"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is It allows stations to retransmit after a random delay following a collision.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q84",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "In Kerberos, which type of cryptographic key is shared between the client and the Authentication Server (AS) ?",
+    "options": [
+      "A symmetric key derived from the client’s password",
+      "Public key generated by the client",
+      "A session key provided by the Key Distribution Center (KDC)",
+      "Private key stored on the client’s device"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is A symmetric key derived from the client’s password.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q85",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following International Standards Organization (ISO) standard is applicable for software product development ?",
+    "options": [
+      "ISO 14000",
+      "ISO 31000",
+      "ISO 9001",
+      "ISO 26000"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 186/2024 (Assistant Data Base Administrator, 30 Dec 2024). The correct answer is ISO 9001.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "assistant-data-base-administrator"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 186/2024 · Q91",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/186-24%20%28Set-A%29.pdf",
+    "published_at": "2024-12-30"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Which of the following is responsible for the permanent storage of data on a computer?",
+    "options": [
+      "RAM",
+      "ROM",
+      "Hard Disk Drive (HDD)",
+      "CPU Register"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 180/2024 (Jr. Instructor -Technician Mechatronics, 20 Dec 2024). The correct answer is Hard Disk Drive (HDD).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "jr-instructor-technician-mechatronics"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 180/2024 · Q35",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/180-2024-A.pdf",
+    "published_at": "2024-12-20"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "A computer program that act as an intermediate between a computer user and the computer hardware is called :",
+    "options": [
+      "Operating system",
+      "Application Software",
+      "Hardware",
+      "Browser software A 17"
+    ],
+    "answer": 0,
+    "explanation": "This question was asked in Kerala PSC exam 176/2024 (Junior Instructor, 12 Dec 2024). The correct answer is Operating system.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "junior-instructor-front-office"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 176/2024 · Q91",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/176-2024-A.pdf",
+    "published_at": "2024-12-12"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The 16 bit coding system that can represent characters from different languages all over the world is :",
+    "options": [
+      "EBCDIC",
+      "ASCII",
+      "UNICODE",
+      "ISCII"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 175/2024 (Accountant, 9 Dec 2024). The correct answer is UNICODE.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerala-state-industrial"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 175/2024 · Q82",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/175-2024-A.pdf",
+    "published_at": "2024-12-09"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Allocation and deallocation of processes and scheduling of various system resources is a function of :",
+    "options": [
+      "Interpreter",
+      "Utility software",
+      "Operating System",
+      "Application software"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 175/2024 (Accountant, 9 Dec 2024). The correct answer is Operating System.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerala-state-industrial"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 175/2024 · Q84",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/175-2024-A.pdf",
+    "published_at": "2024-12-09"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "Select the input device used to recognise the printed text in a scanned image and convert it to proper text format.",
+    "options": [
+      "Graphic Tablet",
+      "OCR",
+      "MICR",
+      "OMR"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 175/2024 (Accountant, 9 Dec 2024). The correct answer is OCR.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerala-state-industrial"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 175/2024 · Q85",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/175-2024-A.pdf",
+    "published_at": "2024-12-09"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The presentation view in MS-PowerPoint that displays only the text in your slides, not pictures or other graphical items is :",
+    "options": [
+      "Slide Sorter View",
+      "Handout View",
+      "Outline View",
+      "Notes View"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 175/2024 (Accountant, 9 Dec 2024). The correct answer is Outline View.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerala-state-industrial"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 175/2024 · Q88",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/175-2024-A.pdf",
+    "published_at": "2024-12-09"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "The MS- Excel function that counts the number of cells that are not empty in a range :",
+    "options": [
+      "COUNTIF( )",
+      "COUNTA( )",
+      "COUNT( )",
+      "COUNTROWS( )"
+    ],
+    "answer": 1,
+    "explanation": "This question was asked in Kerala PSC exam 175/2024 (Accountant, 9 Dec 2024). The correct answer is COUNTA( ).",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerala-state-industrial"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 175/2024 · Q89",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/175-2024-A.pdf",
+    "published_at": "2024-12-09"
+  },
+  {
+    "topic": "computers-tech",
+    "question": "A faded text or graphics appearing in the background of a document to show ownership or discourage unauthorized use is called :",
+    "options": [
+      "Header",
+      "Cropmark",
+      "Watermark",
+      "Superscript"
+    ],
+    "answer": 2,
+    "explanation": "This question was asked in Kerala PSC exam 175/2024 (Accountant, 9 Dec 2024). The correct answer is Watermark.",
+    "difficulty": 2,
+    "tags": [
+      "pyq",
+      "accountant-kerala-state-industrial"
+    ],
+    "source": "pyq",
+    "source_ref": "Kerala PSC 175/2024 · Q90",
+    "source_key": "Final Answer Key",
+    "source_url": "https://www.keralapsc.gov.in/sites/default/files/2024-12/175-2024-A.pdf",
+    "published_at": "2024-12-09"
+  }
+]
