@@ -175,3 +175,27 @@ export type ReviewDue = {
   next_due_at: string | null;
   retention: number | null;
 };
+
+export type TopicInsight = {
+  slug: string;
+  name: string;
+  icon: string;
+  answered: number;
+  correct: number;
+  accuracy: number;
+  recent_accuracy: number | null;
+  trend: "improving" | "steady" | "slipping" | "new";
+  coverage: number;
+  question_count: number;
+};
+
+export type Insights = {
+  topics: TopicInsight[];
+  weakest: string[];
+  strongest: string[];
+  untouched: string[];
+  overall_accuracy: number;
+  answered_total: number;
+  enough_data: boolean;
+  headline: string;
+};
