@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -33,7 +34,9 @@ export default function AuthForm({ mode }: { mode: "login" | "register" }) {
 
   return (
     <div className="min-h-dvh flex items-center justify-center px-4 py-10">
-      <div className="w-full max-w-sm">
+      <motion.div className="w-full max-w-sm"
+        initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: [0.2, 0.8, 0.2, 1] }}>
         <div className="flex flex-col items-center text-center mb-6">
           <Mascot mood="wave" size={120} />
           <h1 className="text-2xl font-extrabold mt-2">{isLogin ? "Welcome back!" : "Hi, I'm Kunju."}</h1>
@@ -41,7 +44,7 @@ export default function AuthForm({ mode }: { mode: "login" | "register" }) {
             {isLogin ? "Ready for a few questions?" : "Let's make studying a daily habit — one question at a time."}
           </p>
         </div>
-        <form onSubmit={submit} className="card p-5 flex flex-col gap-3">
+        <form onSubmit={submit} className="card card-2 p-5 flex flex-col gap-3">
           {!isLogin && (
             <label className="flex flex-col gap-1 text-sm font-bold">
               Your name
@@ -68,7 +71,15 @@ export default function AuthForm({ mode }: { mode: "login" | "register" }) {
             <>Already have an account? <Link className="text-primary font-extrabold" href="/login">Sign in</Link></>
           )}
         </p>
-      </div>
+        <ul className="mt-6 grid grid-cols-3 gap-2 text-center">
+          {[["6,000+", "questions"], ["Daily", "current affairs"], ["Zero", "ads"]].map(([a, b]) => (
+            <li key={b} className="rounded-2xl bg-surface-2 px-2 py-2.5">
+              <div className="text-sm font-extrabold">{a}</div>
+              <div className="text-[10px] font-extrabold text-muted uppercase tracking-wide">{b}</div>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
     </div>
   );
 }

@@ -94,7 +94,7 @@ export const api = {
   telegramLink: () => post<Prefs>("/api/me/telegram/link"),
   telegramUnlink: () => post<Prefs>("/api/me/telegram/unlink"),
   explain: (questionId: number) => post<{ question_id: number; explanation: string; cached: boolean }>(`/api/quiz/question/${questionId}/explain`),
-  currentAffairs: () => get<CurrentAffairs>("/api/current-affairs"),
+  currentAffairs: (days = 7) => get<CurrentAffairs>(`/api/current-affairs?days=${days}`),
   session: (id: string) => get<QuizSession>(`/api/quiz/${id}`),
   answer: (id: string, question_id: number, selected_index: number, elapsed_ms?: number) =>
     post<AnswerResult>(`/api/quiz/${id}/answer`, { question_id, selected_index, elapsed_ms }),

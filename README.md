@@ -27,7 +27,7 @@ Stop with `docker compose down` (add `-v` to wipe the database).
 
 | Layer | Tech |
 |---|---|
-| Frontend | Next.js 16 (App Router, TypeScript), Tailwind v4, anime.js v4 (mascot), canvas-confetti |
+| Frontend | Next.js 16 (App Router, TypeScript), Tailwind v4, Motion (transitions), anime.js v4 (mascot), lucide-react, canvas-confetti |
 | Backend | FastAPI, SQLAlchemy 2 (async) + asyncpg, PyJWT (httpOnly cookie), bcrypt |
 | Database | PostgreSQL 16 |
 | Content | Hand-authored banks + MILU (AI4Bharat) import + optional current-affairs generator |
@@ -41,8 +41,11 @@ backend/app/            FastAPI app
   services/quiz.py      question selection, daily challenge, streak logic (IST day boundary)
   content/              current-affairs pipeline (RSS -> Claude -> MCQs)
   seed.py               loads data/questions/*.json on startup (idempotent, dedup by question text)
-frontend/src/app        pages: /login /register / (home) /quiz/[id] /quiz/[id]/result /progress
-frontend/src/components Mascot.tsx (SVG + anime.js), Quiz.tsx, Home.tsx, Result.tsx, Progress.tsx
+frontend/src/app        /login /register / /daily /current-affairs /practice /practice/[slug] /review
+                        /exam /exam/[id] /exam/[id]/result /quiz/[id] /quiz/[id]/result /history
+                        /progress /settings /offline
+frontend/src/components AppShell + nav/ (sidebar, mobile drawer), AppData (shared fetch), ui.tsx (design kit),
+                        Mascot.tsx (SVG + anime.js), Quiz.tsx, Exam.tsx, PwaProvider.tsx
 data/questions/         question banks (JSON) — see data/QUESTION_SCHEMA.md
 data/importers/         dataset importers (MILU)
 data/validate.py        validator for question files

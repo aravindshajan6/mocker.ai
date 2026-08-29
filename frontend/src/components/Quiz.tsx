@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrowRight, Check, Lightbulb, X } from "lucide-react";
 import Mascot, { type Mood } from "@/components/Mascot";
-import { Chip, ProgressBar, Spinner } from "@/components/ui";
+import { AnimatePresence, motion } from "motion/react";
+import { Chip, Num, ProgressBar, Spinner } from "@/components/ui";
 import { api } from "@/lib/api";
 import type { AnswerResult, QuizSession } from "@/lib/types";
 
@@ -153,7 +155,7 @@ export default function Quiz({ id }: { id: string }) {
         </div>
         <div className="text-right relative">
           <div className="text-xs font-extrabold text-muted">SCORE</div>
-          <div className="text-xl font-extrabold tabular-nums">{score}</div>
+          <div className="text-xl font-extrabold"><Num value={score} /></div>
           {result && result.points > 0 && <span key={moodTick} className="float-up absolute right-0 -top-2 text-success font-extrabold">+{result.points}</span>}
           {combo >= 2 && phase === "revealed" && result?.is_correct && <Chip tone="accent">🔥 {combo} in a row</Chip>}
         </div>
@@ -169,20 +171,30 @@ export default function Quiz({ id }: { id: string }) {
           {q.options.map((opt, i) => {
             const state = optionState(i);
             return (
-              <button key={i} className={`option ${state === "wrong" ? "shake" : ""}`} data-state={state === "idle" ? undefined : state}
-                onClick={() => phase === "answering" && setSelected(i)} disabled={phase === "revealed"} aria-pressed={selected === i}>
-                <span className={`shrink-0 h-7 w-7 rounded-lg grid place-items-center text-xs font-extrabold ${state === "selected" ? "bg-primary text-primary-ink" : state === "correct" ? "bg-success text-white" : state === "wrong" ? "bg-danger text-white" : "bg-surface-2 text-muted"}`}>
-                  {state === "correct" ? "✓" : state === "wrong" ? "✕" : LETTERS[i]}
+              <motion.button key={i} className={`option ${state === "wrong" ? "shake" : ""}`}
+                data-state={state === "idle" ? undefined : state}
+                initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 * i, duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
+                whileTap={phase === "answering" ? { scale: 0.985 } : undefined}
+                onClick={() => phase === "answering" && setSelected(i)}
+                disabled={phase === "revealed"} aria-pressed={selected === i}>
+                <span className={`shrink-0 h-7 w-7 rounded-lg grid place-items-center text-xs font-extrabold transition-colors ${state === "selected" ? "bg-primary text-primary-ink" : state === "correct" ? "bg-success text-white" : state === "wrong" ? "bg-danger text-white" : "bg-surface-2 text-muted"}`}>
+                  {state === "correct" ? <Check size={15} strokeWidth={3} /> : state === "wrong" ? <X size={15} strokeWidth={3} /> : LETTERS[i]}
                 </span>
                 <span className="font-semibold leading-snug pt-0.5">{opt}</span>
-              </button>
+              </motion.button>
             );
           })}
         </div>
 
         {/* Explanation */}
+        <AnimatePresence>
         {phase === "revealed" && result && (
-          <div className={`pop-in mt-4 rounded-2xl p-4 ${result.is_correct ? "bg-success-soft" : "bg-danger-soft"}`}>
+          <motion.div key="feedback"
+            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+            animate={{ opacity: 1, height: "auto", marginTop: 16 }}
+            transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
+            className={`overflow-hidden rounded-2xl p-4 ${result.is_correct ? "bg-success-soft" : "bg-danger-soft"}`}>
             <p className={`font-extrabold ${result.is_correct ? "text-success" : "text-danger"}`}>
               {result.is_correct ? PRAISE[moodTick % PRAISE.length] : CONSOLE[moodTick % CONSOLE.length]}
             </p>
@@ -215,12 +227,13 @@ export default function Quiz({ id }: { id: string }) {
                     setDeeperBusy(false);
                   }
                 }}>
-                {deeperBusy ? "Thinking…" : "💡 Explain this more"}
+                {deeperBusy ? "Thinking…" : <span className="inline-flex items-center gap-1"><Lightbulb size={13} /> Explain this more</span>}
               </button>
             )}
             {deeperError && <p className="mt-2 text-xs font-bold text-danger">{deeperError}</p>}
-          </div>
+          </motion.div>
         )}
+        </AnimatePresence>
 
         <div className="mt-auto pt-5">
           {phase === "answering" ? (
@@ -229,7 +242,7 @@ export default function Quiz({ id }: { id: string }) {
             </button>
           ) : (
             <button className="btn btn-primary w-full" onClick={next} disabled={busy}>
-              {busy ? "Adding it up…" : index + 1 >= total ? "See my results 🎉" : "Next question →"}
+              {busy ? "Adding it up…" : index + 1 >= total ? "See my results 🎉" : <>Next question <ArrowRight size={17} /></>}
             </button>
           )}
           <p className="hidden sm:block text-center text-xs text-muted font-semibold mt-2">Tip: press 1–4 to pick, Enter to continue</p>
