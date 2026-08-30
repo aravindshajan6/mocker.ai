@@ -8,15 +8,6 @@ from app.config import settings
 from app.models import User
 
 
-@pytest.fixture
-def admin(client, base_url):
-    """Sign the shared client in as the seeded administrator."""
-    r = client.post("/api/auth/login", json={"email": settings.admin_email, "password": settings.admin_password})
-    assert r.status_code == 200, "the admin account should be seeded on startup"
-    assert r.json()["is_admin"] is True
-    return r.json()
-
-
 # --- sign-up is closed -------------------------------------------------------
 
 def test_public_signup_is_refused(client):

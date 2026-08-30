@@ -483,3 +483,26 @@ class JobOut(BaseModel):
     started: bool
     detail: str
     result: dict | None = None
+
+
+class ContentHealthDay(BaseModel):
+    day: date
+    questions: int
+    healthy: bool
+    attempts: int
+    last_status: str | None
+    last_message: str
+    last_attempt_at: datetime | None
+    next_retry_at: datetime | None
+    exhausted: bool
+
+
+class ContentHealthOut(BaseModel):
+    today: ContentHealthDay
+    recent: list[ContentHealthDay]
+    scheduled_hour_ist: int
+    min_questions: int
+    max_attempts: int
+    enabled: bool
+    due_now: bool
+    reason: str

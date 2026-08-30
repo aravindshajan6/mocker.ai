@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import time
-from datetime import date
+from datetime import date, datetime, timedelta
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from sqlalchemy import case, delete, func, select
@@ -23,8 +23,8 @@ from ..db import SessionLocal, get_db
 from ..models import (Attempt, ContentRun, LLMCredential, Question, QuizSession, Topic, User, UserPrefs,
                       UserStats, utcnow)
 from ..schemas import (AdminOverview, AdminQuestionIn, AdminQuestionOut, AdminQuestionsOut, AdminUserRow,
-                       CredentialIn, CredentialOut, CredentialPatch, CredentialTestOut, CreateUserIn,
-                       JobOut, ResetPasswordIn)
+                       ContentHealthDay, ContentHealthOut, CredentialIn, CredentialOut, CredentialPatch,
+                       CredentialTestOut, CreateUserIn, JobOut, ResetPasswordIn)
 from ..seed import fingerprint
 from ..services import llm_keys
 
@@ -64,18 +64,47 @@ async def overview(db: AsyncSession = Depends(get_db)):
     )
 
 
+# ---------------------------------------------------------------- content health ----
+@router.get("/content/health", response_model=ContentHealthOut)
+async def content_health(days: int = 7, db: AsyncSession = Depends(get_db)):
+    """Whether the daily pull is actually working, and when the next retry is due."""
+    from ..content.current_affairs import day_health, should_run_now
+    from ..services.quiz import IST, today as ist_today
+
+    days = max(1, min(days, 30))
+    base = ist_today()
+    recent = [_health_out(await day_health(db, base - timedelta(days=i))) for i in range(days)]
+    due, reason = await should_run_now(db, datetime.now(IST))
+    return ContentHealthOut(
+        today=recent[0], recent=recent, scheduled_hour_ist=settings.current_affairs_hour_ist,
+        min_questions=settings.current_affairs_min_questions,
+        max_attempts=settings.current_affairs_max_attempts,
+        enabled=settings.current_affairs_enabled, due_now=due, reason=reason,
+    )
+
+
+def _health_out(h) -> ContentHealthDay:
+    return ContentHealthDay(
+        day=h.day, questions=h.questions, healthy=h.healthy, attempts=h.attempts,
+        last_status=h.last_status, last_message=h.last_message, last_attempt_at=h.last_attempt_at,
+        next_retry_at=h.next_retry_at, exhausted=h.exhausted,
+    )
+
+
 # ------------------------------------------------------------------ content jobs ----
 @router.post("/content/current-affairs/run", response_model=JobOut)
 async def run_current_affairs(background: BackgroundTasks, force: bool = False, wait: bool = False,
                               db: AsyncSession = Depends(get_db)):
     """Fetch today's news and generate questions from it."""
     if wait:
-        summary = await run_daily(db, force=force)
-        return JobOut(started=True, detail="Finished", result=summary)
+        run = await run_daily(db, force=force, trigger="manual")
+        return JobOut(started=True, detail=run.message or "Finished",
+                      result={"status": run.status, "attempt": run.attempt, "fetched": run.fetched,
+                              "generated": run.generated, "inserted": run.inserted})
 
     async def _bg():
         async with SessionLocal() as s:
-            await run_daily(s, force=force)
+            await run_daily(s, force=force, trigger="manual")
 
     background.add_task(_bg)
     return JobOut(started=True, detail="Running in the background — refresh in a minute or two.")

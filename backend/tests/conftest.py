@@ -144,3 +144,13 @@ async def db_session():
             yield session
     finally:
         await engine.dispose()
+
+
+@pytest.fixture
+def admin(client):
+    """Sign the shared client in as the seeded administrator."""
+    from app.config import settings
+    r = client.post("/api/auth/login", json={"email": settings.admin_email,
+                                             "password": settings.admin_password})
+    assert r.status_code == 200, "the admin account should be seeded on startup"
+    return r.json()

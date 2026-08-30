@@ -1,14 +1,18 @@
 "use client";
 
-import { useState } from "react";
-import { Newspaper, ShieldCheck } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { AlertTriangle, CheckCircle2, Clock, Newspaper, ShieldCheck } from "lucide-react";
 import { ErrorNote, Item } from "@/components/ui";
 import { api } from "@/lib/api";
-import type { AdminOverview } from "@/lib/types";
+import type { AdminOverview, ContentHealth } from "@/lib/types";
 
 export default function AdminContent({ overview, onChange }:
   { overview: AdminOverview | null; onChange: () => void }) {
   const [busy, setBusy] = useState<string | null>(null);
+  const [health, setHealth] = useState<ContentHealth | null>(null);
+
+  const loadHealth = useCallback(() => api.adminContentHealth().then(setHealth).catch(() => {}), []);
+  useEffect(() => { const t = setTimeout(() => void loadHealth(), 0); return () => clearTimeout(t); }, [loadHealth]);
   const [note, setNote] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -16,7 +20,7 @@ export default function AdminContent({ overview, onChange }:
     setBusy(what); setError(null); setNote(null);
     try {
       setNote((await fn()).detail);
-      setTimeout(onChange, 2000);
+      setTimeout(() => { onChange(); void loadHealth(); }, 2000);
     } catch (e) {
       setError((e as Error)?.message || "That job could not be started.");
     } finally {
@@ -30,6 +34,8 @@ export default function AdminContent({ overview, onChange }:
     <>
       <ErrorNote message={error} />
       {note && <Item><p className="rounded-xl bg-success-soft text-success px-3 py-2 text-sm font-bold">{note}</p></Item>}
+
+      {health && <Item><HealthPanel health={health} /></Item>}
 
       <Item>
         <div className="card p-4">
@@ -118,5 +124,61 @@ export default function AdminContent({ overview, onChange }:
         </Item>
       )}
     </>
+  );
+}
+
+
+function HealthPanel({ health }: { health: ContentHealth }) {
+  const t = health.today;
+  const tone = t.healthy
+    ? { border: "border-success/40", chip: "bg-success-soft text-success" }
+    : t.exhausted
+      ? { border: "border-danger/40", chip: "bg-danger-soft text-danger" }
+      : { border: "border-accent/40", chip: "bg-accent-soft text-accent-ink" };
+  const Icon = t.healthy ? CheckCircle2 : t.exhausted ? AlertTriangle : Clock;
+  const headline = t.healthy
+    ? `Today is done — ${t.questions} questions published.`
+    : t.exhausted
+      ? `Today failed after ${t.attempts} attempts and has given up.`
+      : t.attempts === 0
+        ? "Today's pull hasn't run yet."
+        : `Attempt ${t.attempts} failed. A retry is scheduled.`;
+
+  return (
+    <div className={`card p-4 ${tone.border}`}>
+      <div className="flex items-start gap-3">
+        <div className={`grid place-items-center h-10 w-10 rounded-2xl shrink-0 ${tone.chip}`}>
+          <Icon size={18} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="font-extrabold">{headline}</p>
+          <p className="text-xs text-muted font-semibold mt-0.5 leading-relaxed">
+            Scheduled for {String(health.scheduled_hour_ist).padStart(2, "0")}:00 IST. A day counts as done once it
+            has at least {health.min_questions} questions; below that it retries on a widening backoff, up to{" "}
+            {health.max_attempts} attempts.
+          </p>
+          <p className="text-xs font-semibold mt-1.5">
+            <span className="text-muted">Right now: </span>
+            <span className={health.due_now ? "text-accent-ink" : "text-ink-soft"}>{health.reason}</span>
+          </p>
+          {t.last_message && <p className="text-[11px] text-muted font-semibold mt-1">Last attempt: {t.last_message}</p>}
+          {t.next_retry_at && !t.healthy && (
+            <p className="text-[11px] font-extrabold text-accent-ink mt-1">
+              Next retry {new Date(t.next_retry_at).toLocaleString()}
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="flex gap-1 mt-3">
+        {[...health.recent].reverse().map((d) => (
+          <div key={d.day} className="flex-1 text-center" title={`${d.day}: ${d.questions} questions, ${d.attempts} attempt(s)`}>
+            <div className={`h-8 rounded-lg ${d.healthy ? "bg-success" : d.attempts > 0 ? "bg-danger" : "bg-surface-3"}`} />
+            <div className="text-[9px] font-extrabold text-muted mt-1">{d.day.slice(8)}</div>
+          </div>
+        ))}
+      </div>
+      <p className="text-[10px] font-semibold text-muted mt-1.5 text-center">Last {health.recent.length} days — green means questions were published.</p>
+    </div>
   );
 }

@@ -217,3 +217,5 @@ class ContentRun(Base):
     inserted: Mapped[int] = mapped_column(Integer, default=0)
     status: Mapped[str] = mapped_column(String(16), default="running")  # running | ok | error | skipped
     message: Mapped[str] = mapped_column(Text, default="")
+    attempt: Mapped[int] = mapped_column(Integer, default=1)   # which try of the day this was
+    trigger: Mapped[str] = mapped_column(String(16), default="scheduled")  # scheduled | retry | manual | startup

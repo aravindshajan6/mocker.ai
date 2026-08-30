@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Settings as SettingsIcon } from "lucide-react";
 import { ErrorNote, Item, PageHeader, SkeletonPage, Stagger } from "@/components/ui";
 import { api } from "@/lib/api";
@@ -88,6 +89,16 @@ export default function Settings() {
 
       <ErrorNote message={error} />
       {note && <p className="text-sm font-extrabold text-success">{note}</p>}
+
+      <Item>
+        <div className="card p-4">
+          <h2 className="font-extrabold">Appearance</h2>
+          <p className="text-sm text-muted font-semibold mt-0.5 mb-3">
+            Dark works well for late sessions; “match device” follows your phone&apos;s own setting.
+          </p>
+          <ThemeToggle />
+        </div>
+      </Item>
 
       <section className="card p-4">
         <div className="flex items-center justify-between">
