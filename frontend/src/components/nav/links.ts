@@ -1,6 +1,6 @@
 import {
   BarChart3, BookMarked, BookOpenCheck, CalendarCheck, FileClock, Home, Newspaper, RotateCcw, Settings,
-  Timer,
+  ShieldCheck, Timer,
 } from "lucide-react";
 
 export type NavLink = {
@@ -10,6 +10,8 @@ export type NavLink = {
   /** Shown in the compact mobile bar */
   primary?: boolean;
   hint?: string;
+  /** Hidden from ordinary accounts */
+  adminOnly?: boolean;
 };
 
 export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
@@ -41,6 +43,7 @@ export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
     links: [
       { href: "/progress", label: "Progress", icon: BarChart3, primary: true, hint: "Stats, badges, weak topics" },
       { href: "/settings", label: "Settings", icon: Settings, hint: "Reminders and notifications" },
+      { href: "/admin", label: "Admin", icon: ShieldCheck, hint: "Content, keys and accounts", adminOnly: true },
     ],
   },
 ];

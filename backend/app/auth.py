@@ -56,3 +56,10 @@ async def current_user(request: Request, db: AsyncSession = Depends(get_db)) -> 
     if not user:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Account not found")
     return user
+
+
+async def current_admin(user: User = Depends(current_user)) -> User:
+    """Admin-only endpoints. Ordinary users must never be able to change content or settings."""
+    if not user.is_admin:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "Administrator access required")
+    return user

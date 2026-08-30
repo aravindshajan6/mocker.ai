@@ -3,17 +3,25 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
 import { ErrorNote } from "@/components/ui";
 import { api, ApiError } from "@/lib/api";
 
 export default function AuthForm({ mode }: { mode: "login" | "register" }) {
+  const [signupOpen, setSignupOpen] = useState(false);
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // The sign-up route stays reachable for an operator who re-opens registration, but the link is
+    // hidden while it is closed so nobody is invited into a dead end.
+    const t = setTimeout(() => void api.authConfig().then((c) => setSignupOpen(c.allow_signup)).catch(() => {}), 0);
+    return () => clearTimeout(t);
+  }, []);
   const [busy, setBusy] = useState(false);
   const isLogin = mode === "login";
 
@@ -66,7 +74,9 @@ export default function AuthForm({ mode }: { mode: "login" | "register" }) {
         </form>
         <p className="text-center text-sm font-semibold text-muted mt-5">
           {isLogin ? (
-            <>New here? <Link className="text-primary font-extrabold" href="/register">Create an account</Link></>
+            signupOpen
+              ? <>New here? <Link className="text-primary font-extrabold" href="/register">Create an account</Link></>
+              : <>Accounts are set up by an administrator. Ask for one if you don&apos;t have it yet.</>
           ) : (
             <>Already have an account? <Link className="text-primary font-extrabold" href="/login">Sign in</Link></>
           )}

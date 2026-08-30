@@ -1,4 +1,4 @@
-export type User = { id: string; name: string; email: string };
+export type User = { id: string; name: string; email: string; is_admin: boolean };
 
 export type Topic = {
   slug: string;
@@ -250,4 +250,36 @@ export type Answers = {
   total: number;
   offset: number;
   limit: number;
+};
+
+export type AdminOverview = {
+  users: number;
+  admins: number;
+  questions_active: number;
+  questions_by_source: Record<string, number>;
+  questions_by_topic: { slug: string; name: string; icon: string; count: number }[];
+  attempts: number;
+  sessions_finished: number;
+  last_content_run: { day: string; status: string; provider: string; model: string; fetched: number; generated: number; inserted: number; started_at: string; error: string | null } | null;
+  audit: { audited_pool: number; checked: number; remaining: number; by_verdict: Record<string, number>; deactivated: number; flagged_for_review: number };
+  llm_keys_active: number;
+  llm_provider: string;
+  llm_available: boolean;
+};
+
+export type AdminUserRow = {
+  id: string; name: string; email: string; is_admin: boolean;
+  created_at: string; answered: number; last_active: string | null;
+};
+
+export type Credential = {
+  id: number; label: string; provider: string; api_key_masked: string; model: string;
+  base_url: string; priority: number; is_active: boolean; cooling_down: boolean;
+  cooldown_until: string | null; last_used_at: string | null; last_error: string | null; created_at: string;
+};
+
+export type AdminQuestion = {
+  id: number; text: string; options: string[]; correct_index: number; explanation: string;
+  difficulty: number; topic: string; topic_slug: string; source: string; source_ref: string | null;
+  is_active: boolean; verdict: string | null; verdict_note: string | null; times_answered: number;
 };

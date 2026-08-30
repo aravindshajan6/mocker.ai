@@ -77,8 +77,16 @@ async def leaderboard(user: User = Depends(current_user), db: AsyncSession = Dep
     almost always an abandoned or automated session, and it pushes real learners down the board.
     """
     since = datetime.combine(today() - timedelta(days=6), time.min, tzinfo=IST)
+    # Only people who actually finished something appear: a row with points but no completed quiz
+    # is an abandoned session, and it pushes real learners down the board.
+    finishers = (
+        select(QuizSession.user_id.label("user_id"))
+        .where(QuizSession.finished_at.is_not(None), QuizSession.finished_at >= since)
+        .distinct().subquery()
+    )
     pts = (
         select(Attempt.user_id, func.sum(Attempt.points).label("pts"))
+        .join(finishers, finishers.c.user_id == Attempt.user_id)
         .where(Attempt.answered_at >= since).group_by(Attempt.user_id).subquery()
     )
     rows = (await db.execute(
@@ -86,8 +94,12 @@ async def leaderboard(user: User = Depends(current_user), db: AsyncSession = Dep
     )).all()
     out = [LeaderboardRow(name=n, points=int(p or 0), is_me=(uid == user.id)) for uid, n, p in rows]
     if not any(r.is_me for r in out):
-        mine = (await db.execute(select(func.sum(Attempt.points)).where(Attempt.user_id == user.id,
-                                                                        Attempt.answered_at >= since))).scalar()
+        # Same rule as the board, so your own row cannot show points the board would not count.
+        mine = (await db.execute(
+            select(func.sum(Attempt.points))
+            .join(finishers, finishers.c.user_id == Attempt.user_id)
+            .where(Attempt.user_id == user.id, Attempt.answered_at >= since)
+        )).scalar()
         out.append(LeaderboardRow(name=user.name, points=int(mine or 0), is_me=True))
     return out
 

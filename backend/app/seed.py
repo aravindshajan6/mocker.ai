@@ -13,7 +13,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from .config import settings
 from .auth import hash_password
-from .models import Question, Topic, User, UserStats
+from .models import Question, Topic, User, UserPrefs, UserStats
 
 log = logging.getLogger("seed")
 
@@ -116,16 +116,28 @@ async def _retire_removed_imports(db: AsyncSession, data_dir: Path, seen: dict[s
     await db.commit()
 
 
-async def seed_demo_user(db: AsyncSession) -> None:
-    """Create the demo account if configured and missing (idempotent)."""
-    if not settings.demo_password:
+async def _ensure_account(db: AsyncSession, email: str, name: str, password: str, admin: bool) -> None:
+    """Create an account if it is configured and missing. Never rewrites an existing password."""
+    if not password or not email:
         return
-    email = settings.demo_email.lower()
-    exists = (await db.execute(select(User).where(User.email == email))).scalar_one_or_none()
-    if exists:
+    email = email.lower()
+    existing = (await db.execute(select(User).where(User.email == email))).scalar_one_or_none()
+    if existing:
+        if existing.is_admin != admin:      # keep the admin flag in step with configuration
+            existing.is_admin = admin
+            await db.commit()
         return
-    user = User(email=email, name=settings.demo_name, password_hash=hash_password(settings.demo_password))
+    user = User(email=email, name=name, password_hash=hash_password(password), is_admin=admin)
     user.stats = UserStats()
     db.add(user)
+    await db.flush()
+    db.add(UserPrefs(user_id=user.id))
     await db.commit()
-    log.info("created demo account %s", email)
+    log.info("created %s account %s", "admin" if admin else "user", email)
+
+
+async def seed_accounts(db: AsyncSession) -> None:
+    """Sign-up is closed, so the accounts that exist are the ones provisioned here."""
+    await _ensure_account(db, settings.admin_email, settings.admin_name, settings.admin_password, admin=True)
+    await _ensure_account(db, settings.seed_user_email, settings.seed_user_name, settings.seed_user_password, admin=False)
+    await _ensure_account(db, settings.demo_email, settings.demo_name, settings.demo_password, admin=False)

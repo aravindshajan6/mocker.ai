@@ -32,7 +32,7 @@ export default function Sidebar() {
           <div key={group.title} className="mb-5">
             <p className="px-3 mb-1.5 text-[10px] font-extrabold uppercase tracking-[0.13em] text-muted">{group.title}</p>
             <ul className="flex flex-col gap-0.5">
-              {group.links.map((l) => {
+              {group.links.filter((l) => !l.adminOnly || user?.is_admin).map((l) => {
                 const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
                 const Icon = l.icon;
                 const badge = l.href === "/review" && due?.due_now ? due.due_now : null;

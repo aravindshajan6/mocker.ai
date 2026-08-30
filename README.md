@@ -19,7 +19,29 @@ docker compose up --build -d
 Only the frontend port (3001) is exposed. The browser talks to Next.js, which proxies `/api/*` to the FastAPI
 backend inside the compose network; Postgres is reachable only from the backend.
 
-A demo account is created on startup: **demo@mocker.app / demo1234** (change or disable via `DEMO_EMAIL` / `DEMO_PASSWORD` in `.env`).
+### Accounts
+
+Public sign-up is **closed** (`ALLOW_SIGNUP=false`): accounts are provisioned by an administrator in
+the app, or seeded from `.env` on startup. Three are created by default — change these before hosting:
+
+| Account | Default password | Role |
+| --- | --- | --- |
+| `admin@mocker.app` | `changeme-admin` | administrator |
+| `aswathi@gmail.com` | `aswathi123` | learner |
+| `demo@mocker.app` | `demo1234` | learner |
+
+### Admin
+
+Administrators get an **Admin** section (hidden from everyone else, and enforced server-side on every
+endpoint) covering: triggering the news fetch and the answer-key audit on demand; adding, editing and
+retiring questions; provisioning accounts and resetting passwords; and managing LLM provider keys.
+
+Keys are tried in priority order. A key the provider rejects is switched off automatically and a
+rate-limited one rests for six hours while the next takes over — so when a free tier runs out you add
+another key in the UI and generation carries on without a redeploy. Keys are stored server-side and
+only ever displayed masked.
+
+Legacy note: a demo account is created on startup: **demo@mocker.app / demo1234** (change or disable via `DEMO_EMAIL` / `DEMO_PASSWORD` in `.env`).
 
 Stop with `docker compose down` (add `-v` to wipe the database).
 

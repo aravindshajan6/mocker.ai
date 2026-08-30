@@ -37,10 +37,18 @@ class Settings(BaseSettings):
     telegram_bot_token: str = ""           # optional; from @BotFather
     telegram_bot_username: str = ""        # used to build the deep link
     public_base_url: str = "http://localhost:3001"
-    # Demo account created on startup (set demo_password empty to disable)
+    # Public sign-up is closed by default: accounts are provisioned by an admin.
+    allow_signup: bool = False
+    # Accounts created on startup (leave a password empty to skip that account)
     demo_email: str = "demo@mocker.app"
     demo_password: str = "demo1234"
     demo_name: str = "Demo Learner"
+    admin_email: str = "admin@mocker.app"
+    admin_password: str = "changeme-admin"
+    admin_name: str = "Admin"
+    seed_user_email: str = "aswathi@gmail.com"
+    seed_user_password: str = "aswathi123"
+    seed_user_name: str = "Aswathi"
     cors_origins: str = "http://localhost:3001,http://localhost:3000"
     # Scoring
     base_points: int = 10

@@ -104,9 +104,8 @@ def test_stats_count_only_attempted_questions(client, user, exam):
     assert st["quizzes_completed"] == 1
 
 
-def test_another_users_exam_is_not_reachable(client, user, exam, base_url):
-    import httpx
-    with httpx.Client(base_url=base_url, timeout=30) as other:
-        other.post("/api/auth/register", json={"name": "O", "email": f"o{exam['id']}@x.com", "password": "secret123"})
+def test_another_users_exam_is_not_reachable(client, user, exam, register_extra):
+    other = register_extra("O")
+    if True:
         assert other.get(f"/api/exam/{exam['id']}").status_code == 404
         assert other.post(f"/api/exam/{exam['id']}/submit").status_code == 404

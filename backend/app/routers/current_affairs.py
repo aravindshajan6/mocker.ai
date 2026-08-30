@@ -99,7 +99,7 @@ async def trigger_run(background: BackgroundTasks, force: bool = False, wait: bo
 @router.get("/admin/verification")
 async def verification_status(x_admin_token: str = Header(default=""), db: AsyncSession = Depends(get_db)):
     """How far the automated answer-key audit has got through the imported bank."""
-    _require_admin(x_admin_token)
+    _require_admin(x_admin_token)   # token auth kept for cron/CLI; the UI uses an admin session
     return await audit_stats(db)
 
 

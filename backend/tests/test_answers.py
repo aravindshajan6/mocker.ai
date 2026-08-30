@@ -102,12 +102,11 @@ def test_retry_rejects_a_set_with_no_mistakes(client, user, base_url):
     assert client.post("/api/quiz/start", json={"mode": "retry", "session": s["id"]}).status_code == 409
 
 
-def test_retry_needs_a_session_and_rejects_someone_elses(client, user, base_url):
-    import httpx
+def test_retry_needs_a_session_and_rejects_someone_elses(client, user, register_extra):
     assert client.post("/api/quiz/start", json={"mode": "retry"}).status_code == 422
     s = _play(client, "kerala", 5)
-    with httpx.Client(base_url=base_url, timeout=30) as other:
-        other.post("/api/auth/register", json={"name": "O", "email": f"o{s['id']}@example.com", "password": "secret123"})
+    other = register_extra("O")
+    if True:
         assert other.post("/api/quiz/start", json={"mode": "retry", "session": s["id"]}).status_code == 404
 
 

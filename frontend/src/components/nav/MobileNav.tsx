@@ -65,7 +65,7 @@ export default function MobileNav() {
                 {NAV_GROUPS.map((g) => (
                   <div key={g.title} className="mb-4">
                     <p className="px-2 mb-1 text-[10px] font-extrabold uppercase tracking-[0.13em] text-muted">{g.title}</p>
-                    {g.links.map((l) => {
+                    {g.links.filter((l) => !l.adminOnly || user?.is_admin).map((l) => {
                       const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
                       const Icon = l.icon;
                       const badge = l.href === "/review" && due?.due_now ? due.due_now : null;

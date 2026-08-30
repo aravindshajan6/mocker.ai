@@ -8,8 +8,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .db import Base, SessionLocal, engine
 from .content import scheduler
-from .routers import auth, current_affairs, exam, prefs, quiz, stats, topics
-from .seed import seed_demo_user, seed_questions
+from .routers import admin, auth, current_affairs, exam, prefs, quiz, stats, topics
+from .seed import seed_accounts, seed_questions
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
@@ -37,11 +37,13 @@ async def lifespan(app: FastAPI):
             "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS last_repair_on DATE",
             "ALTER TABLE user_stats ADD COLUMN IF NOT EXISTS best_milestone INTEGER DEFAULT 0",
             "ALTER TABLE user_prefs ADD COLUMN IF NOT EXISTS telegram_code_issued_at TIMESTAMPTZ",
+            "ALTER TABLE users ADD COLUMN IF NOT EXISTS is_admin BOOLEAN DEFAULT FALSE",
+            "ALTER TABLE questions ALTER COLUMN source TYPE VARCHAR(64)",
         ):
             await conn.execute(text(ddl))
     async with SessionLocal() as db:
         await seed_questions(db)
-        await seed_demo_user(db)
+        await seed_accounts(db)
     jobs = scheduler.start()
     yield
     for job in jobs:
@@ -60,6 +62,7 @@ app.include_router(quiz.router)
 app.include_router(stats.router)
 app.include_router(exam.router)
 app.include_router(prefs.router)
+app.include_router(admin.router)
 app.include_router(current_affairs.router)
 
 

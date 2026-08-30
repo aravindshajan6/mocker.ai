@@ -5,13 +5,22 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from ..auth import clear_auth_cookie, create_token, current_user, hash_password, set_auth_cookie, verify_password
 from ..db import get_db
 from ..models import User, UserPrefs, UserStats
+from ..config import settings
 from ..schemas import LoginIn, RegisterIn, UserOut
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 
+@router.get("/config")
+async def auth_config():
+    """Lets the sign-in page hide the sign-up link when registration is closed."""
+    return {"allow_signup": settings.allow_signup}
+
+
 @router.post("/register", response_model=UserOut)
 async def register(data: RegisterIn, response: Response, db: AsyncSession = Depends(get_db)):
+    if not settings.allow_signup:
+        raise HTTPException(403, "Sign-up is closed. Ask an administrator for an account.")
     email = data.email.lower()
     exists = (await db.execute(select(User).where(User.email == email))).scalar_one_or_none()
     if exists:
@@ -25,7 +34,7 @@ async def register(data: RegisterIn, response: Response, db: AsyncSession = Depe
     db.add(UserPrefs(user_id=user.id))
     await db.commit()
     set_auth_cookie(response, create_token(user.id))
-    return UserOut(id=user.id, name=user.name, email=user.email)
+    return UserOut(id=user.id, name=user.name, email=user.email, is_admin=user.is_admin)
 
 
 @router.post("/login", response_model=UserOut)
@@ -34,7 +43,7 @@ async def login(data: LoginIn, response: Response, db: AsyncSession = Depends(ge
     if not user or not verify_password(data.password, user.password_hash):
         raise HTTPException(401, "Incorrect email or password")
     set_auth_cookie(response, create_token(user.id))
-    return UserOut(id=user.id, name=user.name, email=user.email)
+    return UserOut(id=user.id, name=user.name, email=user.email, is_admin=user.is_admin)
 
 
 @router.post("/logout")
@@ -45,4 +54,4 @@ async def logout(response: Response):
 
 @router.get("/me", response_model=UserOut)
 async def me(user: User = Depends(current_user)):
-    return UserOut(id=user.id, name=user.name, email=user.email)
+    return UserOut(id=user.id, name=user.name, email=user.email, is_admin=user.is_admin)
