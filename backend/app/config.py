@@ -26,6 +26,13 @@ class Settings(BaseSettings):
     current_affairs_min_questions: int = 3
     current_affairs_max_attempts: int = 6
     current_affairs_tick_minutes: int = 5
+    # Phased classification of staged exam questions
+    staging_enabled: bool = True
+    staging_hour_ist: int = 2
+    staging_per_run: int = 600            # ceiling per run; the token budget usually stops it first
+    staging_rate_limit_retries: int = 4
+    staging_max_minutes: int = 90         # bound a run; the queue resumes the next night
+    staging_model: str = "qwen/qwen3.8-27b"   # 2M tokens/day on Groq's free tier
     verify_enabled: bool = True
     verify_hour_ist: int = 3
     verify_batch_size: int = 10

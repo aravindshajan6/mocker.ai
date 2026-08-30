@@ -1,7 +1,7 @@
 import type {
   ActiveSession, AnswerResult, CurrentAffairs, Daily, ExamResult, ExamState, FinishResult, HistoryRow, LeaderboardRow,
   AdminOverview, AdminQuestion, AdminUserRow, Answers, ContentHealth, Credential, Insights, Prefs,
-  QuizSession, ReviewDue, Stats, Topic, User,
+  QuizSession, ReviewDue, Staging, Stats, Topic, User,
 } from "./types";
 
 /** Thrown when the service worker accepted a write for later replay instead of sending it. */
@@ -107,6 +107,9 @@ export const api = {
   // --- admin ---------------------------------------------------------------
   adminOverview: () => get<AdminOverview>("/api/admin/overview"),
   adminContentHealth: () => get<ContentHealth>("/api/admin/content/health"),
+  adminStaging: () => get<Staging>("/api/admin/staging"),
+  adminStagingLoad: () => post<{ started: boolean; detail: string }>("/api/admin/staging/load"),
+  adminStagingRun: (limit: number) => post<{ started: boolean; detail: string }>(`/api/admin/staging/run?limit=${limit}`),
   adminUsers: () => get<AdminUserRow[]>("/api/admin/users"),
   adminCreateUser: (d: { name: string; email: string; password: string; is_admin: boolean }) =>
     post<AdminUserRow>("/api/admin/users", d),

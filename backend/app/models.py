@@ -157,6 +157,53 @@ class LLMCredential(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
 
+class LLMUsage(Base):
+    """Tokens spent per provider/model per day.
+
+    Free tiers cap on tokens per day, and the API does not tell you how much is left, so the only
+    way to stay inside the allowance is to count what we spend.
+    """
+    __tablename__ = "llm_usage"
+    day: Mapped[date] = mapped_column(Date, primary_key=True)
+    provider: Mapped[str] = mapped_column(String(32), primary_key=True)
+    model: Mapped[str] = mapped_column(String(120), primary_key=True)
+    requests: Mapped[int] = mapped_column(Integer, default=0)
+    prompt_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    completion_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    total_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class StagedQuestion(Base):
+    """A parsed exam question waiting to be classified and promoted into the bank.
+
+    Parsing every paper is free; deciding which questions are general knowledge costs LLM tokens.
+    Separating the two lets the expensive half run in nightly instalments inside the daily budget
+    instead of one long run that burns the whole allowance.
+    """
+    __tablename__ = "staged_questions"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    fingerprint: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    batch: Mapped[str] = mapped_column(String(40), index=True, default="pyq")
+    text: Mapped[str] = mapped_column(Text)
+    options: Mapped[list] = mapped_column(JSON)
+    correct_index: Mapped[int] = mapped_column(Integer)
+    explanation: Mapped[str] = mapped_column(Text, default="")
+    difficulty: Mapped[int] = mapped_column(Integer, default=2)
+    tags: Mapped[list] = mapped_column(JSON, default=list)
+    source: Mapped[str] = mapped_column(String(64), default="pyq")
+    source_ref: Mapped[str | None] = mapped_column(String(160), nullable=True)
+    source_url: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    published_at: Mapped[date | None] = mapped_column(Date, nullable=True)
+    exam_name: Mapped[str] = mapped_column(String(200), default="")
+    # classification
+    status: Mapped[str] = mapped_column(String(16), default="pending", index=True)  # pending|kept|dropped|failed
+    topic_slug: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    decided_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    note: Mapped[str] = mapped_column(Text, default="")
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
 class UserPrefs(Base):
     __tablename__ = "user_prefs"
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)

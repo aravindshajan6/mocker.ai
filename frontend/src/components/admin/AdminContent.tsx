@@ -1,22 +1,26 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { AlertTriangle, CheckCircle2, Clock, Newspaper, ShieldCheck } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Clock, Layers, Newspaper, ShieldCheck } from "lucide-react";
 import { ErrorNote, Item } from "@/components/ui";
 import { api } from "@/lib/api";
-import type { AdminOverview, ContentHealth } from "@/lib/types";
+import type { AdminOverview, ContentHealth, Staging } from "@/lib/types";
 
 export default function AdminContent({ overview, onChange }:
   { overview: AdminOverview | null; onChange: () => void }) {
   const [busy, setBusy] = useState<string | null>(null);
   const [health, setHealth] = useState<ContentHealth | null>(null);
+  const [staging, setStaging] = useState<Staging | null>(null);
 
-  const loadHealth = useCallback(() => api.adminContentHealth().then(setHealth).catch(() => {}), []);
+  const loadHealth = useCallback(() => Promise.all([
+    api.adminContentHealth().then(setHealth).catch(() => {}),
+    api.adminStaging().then(setStaging).catch(() => {}),
+  ]).then(() => undefined), []);
   useEffect(() => { const t = setTimeout(() => void loadHealth(), 0); return () => clearTimeout(t); }, [loadHealth]);
   const [note, setNote] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const run = async (what: "news" | "audit", fn: () => Promise<{ detail: string }>) => {
+  const run = async (what: "news" | "audit" | "staging", fn: () => Promise<{ detail: string }>) => {
     setBusy(what); setError(null); setNote(null);
     try {
       setNote((await fn()).detail);
@@ -101,6 +105,9 @@ export default function AdminContent({ overview, onChange }:
         </div>
       </Item>
 
+      {staging && staging.total > 0 && <Item><StagingPanel s={staging} busy={busy}
+        onRun={(n) => run("staging", () => api.adminStagingRun(n))} /></Item>}
+
       {overview && (
         <Item>
           <div className="card p-4">
@@ -179,6 +186,74 @@ function HealthPanel({ health }: { health: ContentHealth }) {
         ))}
       </div>
       <p className="text-[10px] font-semibold text-muted mt-1.5 text-center">Last {health.recent.length} days — green means questions were published.</p>
+    </div>
+  );
+}
+
+
+function StagingPanel({ s, busy, onRun }: { s: Staging; busy: string | null; onRun: (n: number) => void }) {
+  const done = s.kept + s.dropped;
+  const pct = s.total ? (done / s.total) * 100 : 0;
+  const keepRate = done ? (s.kept / done) * 100 : 0;
+
+  return (
+    <div className="card p-4">
+      <div className="flex items-start gap-3">
+        <div className="grid place-items-center h-10 w-10 rounded-2xl bg-info-soft text-info shrink-0">
+          <Layers size={18} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="font-extrabold">Staged exam questions</p>
+          <p className="text-xs text-muted font-semibold mt-0.5 leading-relaxed">
+            Parsed from Kerala PSC papers and waiting to be sorted into topics. Parsing was free; sorting costs
+            tokens, so it runs in nightly instalments at {String(s.scheduled_hour_ist).padStart(2, "0")}:00 IST
+            using {s.model}, stopping when the day&apos;s budget is spent.
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-3">
+        <div className="flex justify-between text-xs font-extrabold mb-1">
+          <span>{done.toLocaleString()} of {s.total.toLocaleString()} sorted</span>
+          <span className="text-muted">{s.pending.toLocaleString()} to go</span>
+        </div>
+        <div className="h-2 rounded-full bg-surface-2 overflow-hidden">
+          <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${pct}%` }} />
+        </div>
+        <p className="text-[11px] font-semibold text-muted mt-1.5">
+          {s.kept.toLocaleString()} kept as general knowledge ({keepRate.toFixed(1)}%),{" "}
+          {s.dropped.toLocaleString()} dropped as subject-specific, {s.promoted.toLocaleString()} live in the bank.
+        </p>
+      </div>
+
+      {s.budgets.map((b) => (
+        <div key={b.provider + b.model} className="mt-3">
+          <div className="flex justify-between text-[11px] font-extrabold">
+            <span>{b.provider} · {b.model}</span>
+            <span className={b.batch_remaining === 0 ? "text-danger" : "text-muted"}>
+              {b.used.toLocaleString()} / {b.limit.toLocaleString()} tokens today
+            </span>
+          </div>
+          <div className="h-1.5 rounded-full bg-surface-2 overflow-hidden mt-1">
+            <div className="h-full rounded-full bg-accent"
+              style={{ width: `${b.limit ? Math.min(100, (b.used / b.limit) * 100) : 0}%` }} />
+          </div>
+          <p className="text-[10px] font-semibold text-muted mt-0.5">
+            {b.batch_remaining > 0
+              ? `${b.batch_remaining.toLocaleString()} left for batch work today (the rest is reserved for learners)`
+              : "Batch share spent — nightly work resumes tomorrow"}
+          </p>
+        </div>
+      ))}
+
+      <div className="flex gap-2 mt-3">
+        {[100, 500, 2000].map((n) => (
+          <button key={n} className="btn btn-ghost flex-1 !min-h-11" disabled={busy !== null || s.pending === 0}
+            onClick={() => onRun(n)}>
+            {busy === "staging" ? "…" : `Sort ${n}`}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

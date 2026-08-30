@@ -26,6 +26,7 @@ import collections
 import hashlib
 import html
 import json
+from pathlib import Path
 import os
 import re
 import subprocess
@@ -1211,6 +1212,9 @@ def main() -> int:
                     help=f"index pages to crawl (default {INDEX_PAGES})")
     ap.add_argument("--no-verify", action="store_true",
                     help="skip the second-pass specialism check")
+    ap.add_argument("--stage", metavar="FILE", default=None,
+                    help="parse only: write unclassified candidates as JSONL for the app to "
+                         "classify in nightly instalments (no LLM tokens spent here)")
     ap.add_argument("--no-llm", action="store_true",
                     help="use only the deterministic keyword classifier")
     ap.add_argument("--refresh-index", action="store_true",
@@ -1267,6 +1271,18 @@ def main() -> int:
             continue
         seen.add(k)
         unique.append(c)
+
+    if args.stage:
+        # Parsing is free; classification is what costs tokens. Hand the candidates to the app so
+        # it can work through them inside its daily budget instead of burning the allowance here.
+        out = Path(args.stage)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with out.open("w") as fh:
+            for c in unique:
+                fh.write(json.dumps(c, ensure_ascii=False) + "\n")
+        log(f"\n[5/5] staged {len(unique)} unclassified candidates -> {out}")
+        log("  load them with:  POST /api/admin/staging/load   (admin UI: Content -> Staged questions)")
+        return 0
 
     api_key = load_api_key()
     clf = Classifier(api_key, use_llm=not args.no_llm)

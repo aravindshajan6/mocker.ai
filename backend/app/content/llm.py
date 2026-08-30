@@ -73,17 +73,22 @@ def _extract_json(text: str) -> dict:
 
 
 def complete_json(system: str, user: str, *, schema: dict | None = None, max_tokens: int = 6000,
-                  cfg: LLMConfig | None = None) -> dict:
-    """Return the model's JSON object for a system+user prompt. Raises LLMError on failure."""
+                  cfg: LLMConfig | None = None, usage: dict | None = None) -> dict:
+    """Return the model's JSON object for a system+user prompt. Raises LLMError on failure.
+
+    Pass a dict as `usage` to have the call's token cost written into it — free tiers are capped on
+    tokens per day, so anything doing bulk work needs to know what it just spent.
+    """
     cfg = cfg or current_config()
     if not cfg.available:
         raise LLMError(f"no API key configured for provider {cfg.provider}")
     if cfg.provider == "anthropic":
-        return _anthropic(system, user, schema=schema, max_tokens=max_tokens, cfg=cfg)
-    return _openai_compatible(system, user, max_tokens=max_tokens, cfg=cfg)
+        return _anthropic(system, user, schema=schema, max_tokens=max_tokens, cfg=cfg, usage=usage)
+    return _openai_compatible(system, user, max_tokens=max_tokens, cfg=cfg, usage=usage)
 
 
-def _openai_compatible(system: str, user: str, *, max_tokens: int, cfg: LLMConfig) -> dict:
+def _openai_compatible(system: str, user: str, *, max_tokens: int, cfg: LLMConfig,
+                       usage: dict | None = None) -> dict:
     headers = {"Content-Type": "application/json"}
     if cfg.api_key:
         headers["Authorization"] = f"Bearer {cfg.api_key}"
@@ -111,6 +116,13 @@ def _openai_compatible(system: str, user: str, *, max_tokens: int, cfg: LLMConfi
     if resp.status_code >= 400:
         raise LLMError(f"{cfg.provider} HTTP {resp.status_code}: {resp.text[:300]}")
     data = resp.json()
+    if usage is not None:
+        # Free tiers are capped on tokens per day, not requests, so the caller needs the real cost.
+        u = data.get("usage") or {}
+        usage["prompt_tokens"] = int(u.get("prompt_tokens") or 0)
+        usage["completion_tokens"] = int(u.get("completion_tokens") or 0)
+        usage["total_tokens"] = int(u.get("total_tokens") or 0) or (
+            usage["prompt_tokens"] + usage["completion_tokens"])
     try:
         text = data["choices"][0]["message"]["content"]
     except (KeyError, IndexError) as e:
@@ -121,7 +133,8 @@ def _openai_compatible(system: str, user: str, *, max_tokens: int, cfg: LLMConfi
         raise LLMError(f"{cfg.provider} returned non-JSON: {text[:200]}") from e
 
 
-def _anthropic(system: str, user: str, *, schema: dict | None, max_tokens: int, cfg: LLMConfig) -> dict:
+def _anthropic(system: str, user: str, *, schema: dict | None, max_tokens: int, cfg: LLMConfig,
+               usage: dict | None = None) -> dict:
     import anthropic
 
     client = anthropic.Anthropic(api_key=cfg.api_key)
@@ -142,6 +155,10 @@ def _anthropic(system: str, user: str, *, schema: dict | None, max_tokens: int, 
         raise LLMError(f"anthropic connection error: {e}") from e
     if resp.stop_reason == "refusal":
         raise LLMError("anthropic refused the request")
+    if usage is not None:
+        usage["prompt_tokens"] = int(getattr(resp.usage, "input_tokens", 0) or 0)
+        usage["completion_tokens"] = int(getattr(resp.usage, "output_tokens", 0) or 0)
+        usage["total_tokens"] = usage["prompt_tokens"] + usage["completion_tokens"]
     text = next((b.text for b in resp.content if b.type == "text"), "{}")
     try:
         return _extract_json(text)

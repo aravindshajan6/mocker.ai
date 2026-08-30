@@ -300,3 +300,15 @@ export type ContentHealth = {
   due_now: boolean;
   reason: string;
 };
+
+export type Budget = {
+  provider: string; model: string; limit: number; used: number; requests: number;
+  remaining: number; batch_remaining: number; capped: boolean;
+};
+
+export type Staging = {
+  total: number; pending: number; kept: number; dropped: number; failed: number; promoted: number;
+  by_topic: Record<string, number>;
+  budgets: Budget[];
+  model: string; scheduled_hour_ist: number; per_run: number;
+};

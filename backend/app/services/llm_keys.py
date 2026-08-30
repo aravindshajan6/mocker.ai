@@ -103,14 +103,19 @@ async def complete_json_failover(db: AsyncSession, system: str, user: str, *, ma
     candidates = await configs(db, model_override)
     if not candidates:
         raise llm.LLMError("no API key configured")
+    from . import budget
+
     last: Exception | None = None
     for cfg in candidates:
+        usage: dict = {}
         try:
-            data = await asyncio.to_thread(llm.complete_json, system, user, max_tokens=max_tokens, cfg=cfg)
+            data = await asyncio.to_thread(llm.complete_json, system, user, max_tokens=max_tokens,
+                                           cfg=cfg, usage=usage)
         except llm.LLMError as e:
             last = e
             await record_failure(db, cfg, str(e))
             continue
         await record_success(db, cfg)
+        await budget.record(db, cfg, usage)
         return data, cfg
     raise last or llm.LLMError("every configured key failed")

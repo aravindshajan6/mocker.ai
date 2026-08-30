@@ -14,6 +14,7 @@ from ..db import SessionLocal
 from ..services.quiz import IST
 from .current_affairs import day_health, run_daily, should_run_now
 from .reminders import consume_telegram_links, run as run_reminders
+from .staging import classify_once
 from .verify import run_audit
 
 log = logging.getLogger("scheduler")
@@ -110,11 +111,36 @@ async def reminder_loop() -> None:
         await asyncio.sleep(15 * 60)
 
 
+async def staging_loop() -> None:
+    """Work through staged exam questions in nightly instalments.
+
+    Deliberately an hour before the answer audit: both are token-hungry, and running them together
+    would have them competing for the same daily allowance.
+    """
+    if not settings.staging_enabled:
+        log.info("staged classification disabled")
+        return
+    await asyncio.sleep(45)
+    while True:
+        now = datetime.now(IST)
+        nxt = _next_run(now, settings.staging_hour_ist)
+        wait = (nxt - now).total_seconds()
+        log.info("next staged-question run at %s IST (in %.0f min)", nxt.strftime("%Y-%m-%d %H:%M"), wait / 60)
+        await asyncio.sleep(wait)
+        try:
+            async with SessionLocal() as db:
+                summary = await classify_once(db)
+                log.info("staged classification finished: %s", summary)
+        except Exception:  # noqa: BLE001
+            log.exception("staged classification crashed")
+
+
 def start() -> list[asyncio.Task]:
     return [
         asyncio.create_task(loop(), name="current-affairs-scheduler"),
         asyncio.create_task(audit_loop(), name="question-audit-scheduler"),
         asyncio.create_task(reminder_loop(), name="reminder-scheduler"),
+        asyncio.create_task(staging_loop(), name="staged-classification"),
     ]
 
 
