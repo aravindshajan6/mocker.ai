@@ -44,9 +44,10 @@ class QuestionOut(BaseModel):
 
 
 class StartQuizIn(BaseModel):
-    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs|review|weak)$")
+    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs|review|weak|retry)$")
     topic: str | None = None
     count: int | None = Field(default=None, ge=3, le=30)
+    session: str | None = None   # retry mode: redo the wrong answers from this past set
     day: date | None = None  # current-affairs mode: which day's set (default today)
 
 
@@ -327,3 +328,39 @@ class PushSubscribeIn(BaseModel):
     endpoint: str
     p256dh: str
     auth: str
+
+
+class AnsweredQuestion(BaseModel):
+    question_id: int
+    text: str
+    options: list[str]
+    correct_index: int
+    selected_index: int
+    is_correct: bool
+    explanation: str
+    topic: str
+    topic_slug: str
+    topic_icon: str
+    source_ref: str | None
+    source_url: str | None
+    difficulty: int
+    times_seen: int
+    times_correct: int
+    last_answered_at: datetime
+
+
+class AnsweredTopic(BaseModel):
+    slug: str
+    name: str
+    icon: str
+    attempted: int
+    correct: int
+    wrong: int
+
+
+class AnswersOut(BaseModel):
+    topics: list[AnsweredTopic]
+    questions: list[AnsweredQuestion]
+    total: int
+    offset: int
+    limit: int

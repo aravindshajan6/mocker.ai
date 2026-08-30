@@ -1,6 +1,6 @@
 import type {
   ActiveSession, AnswerResult, CurrentAffairs, Daily, ExamResult, ExamState, FinishResult, HistoryRow, LeaderboardRow,
-  Insights, Prefs, QuizSession, ReviewDue, Stats, Topic, User,
+  Answers, Insights, Prefs, QuizSession, ReviewDue, Stats, Topic, User,
 } from "./types";
 
 /** Thrown when the service worker accepted a write for later replay instead of sending it. */
@@ -115,9 +115,17 @@ export const api = {
   topics: () => get<Topic[]>("/api/topics"),
   daily: () => get<Daily>("/api/quiz/daily"),
   active: () => get<ActiveSession[]>("/api/quiz/active"),
-  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review" | "weak"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
+  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review" | "weak" | "retry"; topic?: string; count?: number; day?: string; session?: string }) => post<QuizSession>("/api/quiz/start", data),
   reviewQueue: () => get<ReviewDue>("/api/me/review"),
   insights: () => get<Insights>("/api/me/insights"),
+  answers: (opts: { topic?: string; only?: string; limit?: number; offset?: number } = {}) => {
+    const p = new URLSearchParams();
+    if (opts.topic) p.set("topic", opts.topic);
+    if (opts.only && opts.only !== "all") p.set("only", opts.only);
+    p.set("limit", String(opts.limit ?? 25));
+    p.set("offset", String(opts.offset ?? 0));
+    return get<Answers>(`/api/me/answers?${p}`);
+  },
   prefs: () => get<Prefs>("/api/me/prefs"),
   savePrefs: (data: Partial<Pick<Prefs, "reminders_enabled" | "reminder_hour" | "reminder_minute" | "timezone">>) =>
     request<Prefs>("/api/me/prefs", { method: "PUT", body: JSON.stringify(data) }),

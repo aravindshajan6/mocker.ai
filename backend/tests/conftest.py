@@ -29,11 +29,43 @@ def client(base_url):
 
 @pytest.fixture
 def user(client):
-    """A freshly registered, signed-in user. Returns the user dict; the client keeps the cookie."""
+    """A freshly registered, signed-in user, removed again when the test ends.
+
+    Without the teardown every run leaves another "Pytest User" on the leaderboard, which real
+    users then see.
+    """
     email = f"pytest{random.randint(1, 10**9)}@example.com"
     r = client.post("/api/auth/register", json={"name": "Pytest User", "email": email, "password": "secret123"})
     assert r.status_code == 200, r.text
-    return r.json()
+    data = r.json()
+    yield data
+    _purge(data["id"])
+
+
+def _purge(user_id: str) -> None:
+    """Delete a test user directly; cascades clear their attempts, sessions, stats and cards."""
+    import asyncio
+
+    async def go():
+        from sqlalchemy import delete
+        from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
+        from sqlalchemy.pool import NullPool
+
+        from app.config import settings
+        from app.models import User
+
+        engine = create_async_engine(settings.database_url, poolclass=NullPool)
+        try:
+            async with async_sessionmaker(engine, expire_on_commit=False)() as db:
+                await db.execute(delete(User).where(User.id == user_id))
+                await db.commit()
+        finally:
+            await engine.dispose()
+
+    try:
+        asyncio.run(go())
+    except Exception:  # noqa: BLE001 - cleanup must never fail a passing test
+        pass
 
 
 @pytest.fixture

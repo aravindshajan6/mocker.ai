@@ -220,3 +220,34 @@ export type Prefs = {
   telegram_available: boolean;
   telegram_link_url: string | null;
 };
+
+export type AnsweredQuestion = {
+  question_id: number;
+  text: string;
+  options: string[];
+  correct_index: number;
+  selected_index: number;
+  is_correct: boolean;
+  explanation: string;
+  topic: string;
+  topic_slug: string;
+  topic_icon: string;
+  source_ref: string | null;
+  source_url: string | null;
+  difficulty: number;
+  times_seen: number;
+  times_correct: number;
+  last_answered_at: string;
+};
+
+export type AnsweredTopic = {
+  slug: string; name: string; icon: string; attempted: number; correct: number; wrong: number;
+};
+
+export type Answers = {
+  topics: AnsweredTopic[];
+  questions: AnsweredQuestion[];
+  total: number;
+  offset: number;
+  limit: number;
+};

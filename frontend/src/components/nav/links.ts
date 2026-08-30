@@ -1,5 +1,6 @@
 import {
-  BarChart3, BookOpenCheck, CalendarCheck, FileClock, Home, Newspaper, RotateCcw, Settings, Timer,
+  BarChart3, BookMarked, BookOpenCheck, CalendarCheck, FileClock, Home, Newspaper, RotateCcw, Settings,
+  Timer,
 } from "lucide-react";
 
 export type NavLink = {
@@ -19,7 +20,7 @@ export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
       { href: "/daily", label: "Daily challenge", icon: CalendarCheck, hint: "10 questions, everyone the same set" },
       { href: "/current-affairs", label: "Current affairs", icon: Newspaper, hint: "Generated from today's news" },
       { href: "/practice", label: "Topics", icon: BookOpenCheck, primary: true, hint: "Pick a subject" },
-      { href: "/review", label: "Review", icon: RotateCcw, hint: "Spaced repetition queue" },
+      { href: "/review", label: "Revise", icon: RotateCcw, hint: "Spaced repetition queue" },
     ],
   },
   {
@@ -27,6 +28,12 @@ export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
     links: [
       { href: "/exam", label: "Exam mode", icon: Timer, primary: true, hint: "Full paper, negative marking" },
       { href: "/history", label: "History", icon: FileClock, hint: "Past attempts" },
+    ],
+  },
+  {
+    title: "Look back",
+    links: [
+      { href: "/answers", label: "My answers", icon: BookMarked, hint: "Every question you've attempted, by subject" },
     ],
   },
   {

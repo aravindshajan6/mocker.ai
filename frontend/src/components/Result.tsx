@@ -107,7 +107,8 @@ export default function Result({ id }: { id: string }) {
 
       <div className="w-full flex flex-col gap-2 mt-6">
         <button className="btn btn-primary" onClick={again} disabled={starting}>{starting ? "Shuffling…" : "One more round →"}</button>
-        <button className="btn btn-ghost" onClick={() => setShowReview((v) => !v)}>{showReview ? "Hide review" : "Review answers"}</button>
+        <Link href={`/quiz/${id}/review`} className="btn btn-ghost">Review all answers →</Link>
+        <button className="btn btn-quiet !min-h-10 text-sm" onClick={() => setShowReview((v) => !v)}>{showReview ? "Hide quick view" : "Quick view"}</button>
         <Link href="/" className="btn btn-ghost">Back home</Link>
       </div>
 

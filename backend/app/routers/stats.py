@@ -8,8 +8,8 @@ from ..auth import current_user
 from ..db import get_db
 from ..models import Attempt, Question, QuizSession, ReviewCard, Topic, User, UserStats
 from ..routers.quiz import _badges, _get_stats
-from ..schemas import (DayActivity, HistoryRow, InsightsOut, LeaderboardRow, ReviewDueOut, StatsOut,
-                       TopicInsight)
+from ..schemas import (AnsweredQuestion, AnsweredTopic, AnswersOut, DayActivity, HistoryRow, InsightsOut,
+                       LeaderboardRow, ReviewDueOut, StatsOut, TopicInsight)
 from ..services import scoring
 from ..services.quiz import IST, effective_streak, today
 
@@ -71,7 +71,11 @@ async def my_history(user: User = Depends(current_user), db: AsyncSession = Depe
 
 @router.get("/leaderboard", response_model=list[LeaderboardRow])
 async def leaderboard(user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
-    """Weekly leaderboard (points earned in the last 7 days), top 10 plus the current user."""
+    """Weekly leaderboard (points earned in the last 7 days), top 10 plus the current user.
+
+    Only people who actually finished something appear: a row with points but no completed quiz is
+    almost always an abandoned or automated session, and it pushes real learners down the board.
+    """
     since = datetime.combine(today() - timedelta(days=6), time.min, tzinfo=IST)
     pts = (
         select(Attempt.user_id, func.sum(Attempt.points).label("pts"))
@@ -198,3 +202,78 @@ async def insights(user: User = Depends(current_user), db: AsyncSession = Depend
         overall_accuracy=round(overall, 4), answered_total=answered_total,
         enough_data=answered_total >= MIN_FOR_VERDICT * 2, headline=headline,
     )
+
+
+@router.get("/answers", response_model=AnswersOut)
+async def my_answers(topic: str | None = None, only: str = "all", limit: int = 25, offset: int = 0,
+                     user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
+    """Every question this user has attempted, browsable by category.
+
+    One row per question rather than per attempt: meeting the same question three times in a list is
+    noise, so we show the most recent answer plus how often it has been seen and got right.
+    """
+    limit = max(1, min(limit, 100))
+    offset = max(0, offset)
+
+    # Per-question rollup of this user's attempts (blanks from exam mode excluded).
+    agg = (
+        select(
+            Attempt.question_id.label("qid"),
+            func.count().label("times_seen"),
+            func.sum(case((Attempt.is_correct.is_(True), 1), else_=0)).label("times_correct"),
+            func.max(Attempt.answered_at).label("last_at"),
+        )
+        .where(Attempt.user_id == user.id, Attempt.selected_index >= 0)
+        .group_by(Attempt.question_id)
+        .subquery()
+    )
+    # The most recent attempt supplies the answer we display.
+    latest = (
+        select(Attempt.question_id.label("question_id"), Attempt.selected_index.label("selected_index"),
+               Attempt.is_correct.label("is_correct"))
+        .join(agg, (agg.c.qid == Attempt.question_id) & (agg.c.last_at == Attempt.answered_at))
+        .where(Attempt.user_id == user.id)
+        .subquery()
+    )
+
+    counts = (await db.execute(
+        select(Topic.slug, Topic.name, Topic.icon, func.count(),
+               func.sum(case((latest.c.is_correct.is_(True), 1), else_=0)))
+        .select_from(latest)
+        .join(Question, Question.id == latest.c.question_id)
+        .join(Topic, Topic.id == Question.topic_id)
+        .group_by(Topic.slug, Topic.name, Topic.icon, Topic.sort_order)
+        .order_by(Topic.sort_order)
+    )).all()
+    topics = [AnsweredTopic(slug=sl, name=n, icon=i, attempted=c, correct=int(ok or 0),
+                            wrong=c - int(ok or 0))
+              for sl, n, i, c, ok in counts]
+
+    rows_q = (
+        select(Question, Topic, latest.c.selected_index, latest.c.is_correct,
+               agg.c.times_seen, agg.c.times_correct, agg.c.last_at)
+        .select_from(latest)
+        .join(Question, Question.id == latest.c.question_id)
+        .join(Topic, Topic.id == Question.topic_id)
+        .join(agg, agg.c.qid == latest.c.question_id)
+    )
+    if topic:
+        rows_q = rows_q.where(Topic.slug == topic)
+    if only == "wrong":
+        rows_q = rows_q.where(latest.c.is_correct.is_(False))
+    elif only == "correct":
+        rows_q = rows_q.where(latest.c.is_correct.is_(True))
+
+    total = (await db.execute(select(func.count()).select_from(rows_q.subquery()))).scalar_one()
+    rows = (await db.execute(rows_q.order_by(agg.c.last_at.desc()).limit(limit).offset(offset))).all()
+
+    questions = [
+        AnsweredQuestion(
+            question_id=q.id, text=q.text, options=q.options, correct_index=q.correct_index,
+            selected_index=sel, is_correct=ok, explanation=q.explanation, topic=t.name,
+            topic_slug=t.slug, topic_icon=t.icon, source_ref=q.source_ref, source_url=q.source_url,
+            difficulty=q.difficulty, times_seen=seen, times_correct=int(tc or 0), last_answered_at=last,
+        )
+        for q, t, sel, ok, seen, tc, last in rows
+    ]
+    return AnswersOut(topics=topics, questions=questions, total=total, offset=offset, limit=limit)
