@@ -41,6 +41,7 @@ services:
       VAPID_SUBJECT: ${VAPID_SUBJECT:-mailto:hello@mocker.local}
       ADMIN_TOKEN: ${ADMIN_TOKEN:-}
       CORS_ORIGINS: http://localhost:3001
+      TESTING_HOOKS: "true"   # dev compose only; the production compose leaves this unset
       ALLOW_SIGNUP: ${ALLOW_SIGNUP:-false}
       ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@mocker.app}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-changeme-admin}

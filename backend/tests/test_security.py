@@ -107,3 +107,50 @@ def test_auditor_prompt_marks_dataset_text_as_data():
     p = verify.SYSTEM_PROMPT
     assert "<<<ITEM>>>" in p and "<<<END>>>" in p
     assert "not a request" in p.lower() or "ignore it" in p.lower()
+
+
+# --- security headers --------------------------------------------------------
+# Next's headers() config does not cover paths served by rewrites(), so /api/* would otherwise
+# reach the browser bare. These assert the backend's own headers, which is what actually ships.
+
+REQUIRED_API_HEADERS = {
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "cross-origin-opener-policy": "same-origin",
+}
+
+
+def test_api_responses_carry_security_headers(client):
+    r = client.get("/api/health")
+    assert r.status_code == 200
+    for header, expected in REQUIRED_API_HEADERS.items():
+        assert r.headers.get(header) == expected, f"{header} missing or wrong on /api/health"
+    assert "frame-ancestors 'none'" in r.headers.get("content-security-policy", "")
+
+
+def test_security_headers_are_on_error_responses_too(client):
+    """A 401 or 404 is still a response an attacker can frame or sniff."""
+    for path, expect in (("/api/topics", 401), ("/api/nope", 404)):
+        r = client.get(path)
+        assert r.status_code == expect
+        assert r.headers.get("x-content-type-options") == "nosniff", f"{path} missing nosniff"
+        assert r.headers.get("x-frame-options") == "DENY", f"{path} missing frame options"
+
+
+def test_authenticated_api_responses_are_not_cached(client, user):
+    """Quiz answers and stats must not sit in a shared cache."""
+    r = client.get("/api/me/stats")
+    assert r.status_code == 200
+    assert "no-store" in r.headers.get("cache-control", "")
+
+
+def test_hsts_is_configurable_and_off_by_default_in_dev(client):
+    """Sending HSTS from a plain-http dev box would poison the browser for localhost."""
+    from app.config import settings
+
+    r = client.get("/api/health")
+    if settings.hsts_enabled:
+        assert "max-age=" in r.headers.get("strict-transport-security", "")
+    else:
+        assert "strict-transport-security" not in {k.lower() for k in r.headers}

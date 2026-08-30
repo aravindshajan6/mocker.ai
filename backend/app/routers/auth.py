@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -6,6 +6,7 @@ from ..auth import clear_auth_cookie, create_token, current_user, hash_password,
 from ..db import get_db
 from ..models import User, UserPrefs, UserStats
 from ..config import settings
+from ..services.ratelimit import limiter
 from ..schemas import LoginIn, RegisterIn, UserOut
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
@@ -18,7 +19,9 @@ async def auth_config():
 
 
 @router.post("/register", response_model=UserOut)
-async def register(data: RegisterIn, response: Response, db: AsyncSession = Depends(get_db)):
+@limiter.limit(settings.rate_limit_login)
+async def register(request: Request, data: RegisterIn, response: Response,
+                   db: AsyncSession = Depends(get_db)):
     if not settings.allow_signup:
         raise HTTPException(403, "Sign-up is closed. Ask an administrator for an account.")
     email = data.email.lower()
@@ -38,7 +41,9 @@ async def register(data: RegisterIn, response: Response, db: AsyncSession = Depe
 
 
 @router.post("/login", response_model=UserOut)
-async def login(data: LoginIn, response: Response, db: AsyncSession = Depends(get_db)):
+@limiter.limit(settings.rate_limit_login)
+async def login(request: Request, data: LoginIn, response: Response,
+                db: AsyncSession = Depends(get_db)):
     user = (await db.execute(select(User).where(User.email == data.email.lower()))).scalar_one_or_none()
     if not user or not verify_password(data.password, user.password_hash):
         raise HTTPException(401, "Incorrect email or password")

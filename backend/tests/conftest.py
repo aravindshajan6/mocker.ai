@@ -21,6 +21,23 @@ def base_url() -> str:
     return BASE
 
 
+@pytest.fixture(autouse=True)
+def reset_rate_limits():
+    """Clear the rate-limit buckets before each test.
+
+    Every test signs in from the same address, so without this the login limit is exhausted a few
+    tests in and everything after it fails on a 429. Resetting is better than disabling: the
+    limiter stays exercised, and the tests that deliberately trip it still can.
+    """
+    import httpx
+
+    try:
+        httpx.post(f"{BASE}/api/testing/reset-rate-limits", timeout=5)
+    except Exception:  # noqa: BLE001 - endpoint absent outside test builds
+        pass
+    yield
+
+
 @pytest.fixture
 def client(base_url):
     with httpx.Client(base_url=base_url, timeout=60) as c:
