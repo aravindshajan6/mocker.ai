@@ -121,6 +121,11 @@ Add your own questions: drop a JSON file into `data/questions/` following the sc
 `POST quiz/{id}/finish`, `POST quiz/{id}/abandon`, `GET me/stats`, `GET me/history`, `GET me/leaderboard`.
 Interactive docs: `docker compose exec backend curl localhost:8000/docs` (not exposed on the host).
 
+## Themes
+
+Light, dark, and match-your-device, chosen in Settings or from the compact toggle in the sidebar. The
+choice is applied before the first paint, so there is no flash of the wrong palette on load.
+
 ## Tests
 
 ```bash

@@ -21,12 +21,13 @@ import logging
 import random
 import re
 import sys
+from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from time import mktime
 
 import feedparser
 import httpx
-from sqlalchemy import select, update
+from sqlalchemy import func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..config import settings
@@ -263,7 +264,7 @@ async def generate_with_llm(db, items: list[dict], target: int, batch_size: int 
 
 
 async def run_daily(db: AsyncSession, *, day: date | None = None, force: bool = False,
-                    target: int | None = None) -> ContentRun:
+                    target: int | None = None, trigger: str = "manual") -> ContentRun:
     """Fetch news, generate questions and insert them for `day` (default: today, IST).
 
     Idempotent per day unless force=True: a second call on the same day is recorded as 'skipped'.
@@ -272,18 +273,25 @@ async def run_daily(db: AsyncSession, *, day: date | None = None, force: bool = 
     day = day or today()
     target = target or settings.current_affairs_target
     if not force:
-        prior = (await db.execute(select(ContentRun).where(ContentRun.day == day, ContentRun.status == "ok"))).scalars().first()
-        if prior:
-            run = ContentRun(day=day, status="skipped", message="already generated today", finished_at=utcnow())
+        # Judged on questions, not on a prior 'ok': a run can finish successfully having inserted
+        # nothing, and that day still needs another go.
+        health = await day_health(db, day)
+        if health.healthy:
+            run = ContentRun(day=day, status="skipped", trigger=trigger,
+                             message=f"{health.questions} questions already published for {day}",
+                             finished_at=utcnow())
             db.add(run)
             await db.commit()
             return run
+        attempt = health.attempts + 1
+    else:
+        attempt = 1
 
     from ..services import llm_keys
     chain = await llm_keys.configs(db)
     can_generate = bool(chain)
     run = ContentRun(day=day, provider=chain[0].provider if can_generate else "heuristic",
-                     model=chain[0].model if can_generate else "")
+                     model=chain[0].model if can_generate else "", attempt=attempt, trigger=trigger)
     db.add(run)
     await db.commit()
     try:
@@ -317,8 +325,19 @@ async def run_daily(db: AsyncSession, *, day: date | None = None, force: bool = 
             # LLM questions supersede the shallower heuristic ones for the same day.
             await db.execute(update(Question).where(Question.topic_id == topic_id, Question.published_at == day,
                                                     Question.source == "news-heuristic").values(is_active=False))
-        run.status = "ok"
-        run.message = f"{inserted} questions added for {day.isoformat()}"
+        total_for_day = (await db.execute(
+            select(func.count()).select_from(Question)
+            .where(Question.topic_id == topic_id, Question.published_at == day, Question.is_active.is_(True))
+        )).scalar_one()
+        if total_for_day >= settings.current_affairs_min_questions:
+            run.status = "ok"
+            run.message = f"{inserted} added; {total_for_day} questions now published for {day.isoformat()}"
+        else:
+            # Nothing usable came back. Recorded as an error so the supervisor schedules a retry
+            # rather than treating the day as finished.
+            run.status = "error"
+            run.message = (f"only {total_for_day} question(s) for {day.isoformat()} "
+                           f"(fetched {run.fetched}, generated {run.generated}, added {inserted})")
     except Exception as e:  # noqa: BLE001
         log.exception("current-affairs run failed")
         run.status = "error"
@@ -358,3 +377,84 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+# --- health and retry -------------------------------------------------------
+# Retry delays after each failed attempt of the day. Front-loaded, because most failures are a
+# transient feed timeout or a rate-limited key that clears in minutes, then spread out so a genuine
+# outage does not hammer the provider all day.
+RETRY_BACKOFF_MINUTES = (10, 20, 45, 120, 240)
+
+
+@dataclass
+class DayHealth:
+    day: date
+    questions: int
+    healthy: bool
+    attempts: int
+    last_status: str | None
+    last_message: str
+    last_attempt_at: datetime | None
+    next_retry_at: datetime | None
+    exhausted: bool          # out of retries and still not healthy
+
+
+async def day_health(db: AsyncSession, day: date | None = None, now: datetime | None = None) -> DayHealth:
+    """Did the day's pull actually work?
+
+    Judged on the questions that exist for that day, not on whether a run reported success: a run
+    can finish 'ok' having inserted nothing (every item filtered out, or every generated question a
+    duplicate), and that day is just as empty as one that crashed.
+    """
+    day = day or today()
+    now = now or datetime.now(timezone.utc)
+    ca = (await db.execute(select(Topic.id).where(Topic.slug == "current-affairs"))).scalar_one_or_none()
+    questions = 0
+    if ca is not None:
+        questions = (await db.execute(
+            select(func.count()).select_from(Question)
+            .where(Question.topic_id == ca, Question.published_at == day, Question.is_active.is_(True))
+        )).scalar_one()
+
+    runs = (await db.execute(
+        select(ContentRun).where(ContentRun.day == day, ContentRun.status != "skipped")
+        .order_by(ContentRun.started_at)
+    )).scalars().all()
+    real = [r for r in runs if r.status in ("ok", "error")]
+    attempts = len(real)
+    last = real[-1] if real else None
+    healthy = questions >= settings.current_affairs_min_questions
+
+    next_retry = None
+    exhausted = False
+    if not healthy and last and last.finished_at:
+        if attempts > len(RETRY_BACKOFF_MINUTES) or attempts >= settings.current_affairs_max_attempts:
+            exhausted = True
+        else:
+            delay = RETRY_BACKOFF_MINUTES[min(attempts - 1, len(RETRY_BACKOFF_MINUTES) - 1)]
+            next_retry = last.finished_at + timedelta(minutes=delay)
+
+    return DayHealth(
+        day=day, questions=questions, healthy=healthy, attempts=attempts,
+        last_status=last.status if last else None, last_message=last.message if last else "",
+        last_attempt_at=last.finished_at if last else None,
+        next_retry_at=next_retry, exhausted=exhausted,
+    )
+
+
+async def should_run_now(db: AsyncSession, now_ist: datetime) -> tuple[bool, str]:
+    """Decide whether the supervisor should start a run this tick, and say why."""
+    if not settings.current_affairs_enabled:
+        return False, "disabled"
+    health = await day_health(db, now_ist.date())
+    if health.healthy:
+        return False, f"{health.questions} questions already published for {health.day}"
+    if now_ist.hour < settings.current_affairs_hour_ist:
+        return False, f"waiting for {settings.current_affairs_hour_ist:02d}:00 IST"
+    if health.attempts == 0:
+        return True, "first attempt of the day"
+    if health.exhausted:
+        return False, f"gave up after {health.attempts} attempts"
+    if health.next_retry_at and datetime.now(timezone.utc) < health.next_retry_at:
+        return False, f"retry {health.attempts + 1} due at {health.next_retry_at:%H:%M} UTC"
+    return True, f"retry {health.attempts + 1} after a failed attempt"

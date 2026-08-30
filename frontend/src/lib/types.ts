@@ -283,3 +283,20 @@ export type AdminQuestion = {
   difficulty: number; topic: string; topic_slug: string; source: string; source_ref: string | null;
   is_active: boolean; verdict: string | null; verdict_note: string | null; times_answered: number;
 };
+
+export type ContentHealthDay = {
+  day: string; questions: number; healthy: boolean; attempts: number;
+  last_status: string | null; last_message: string; last_attempt_at: string | null;
+  next_retry_at: string | null; exhausted: boolean;
+};
+
+export type ContentHealth = {
+  today: ContentHealthDay;
+  recent: ContentHealthDay[];
+  scheduled_hour_ist: number;
+  min_questions: number;
+  max_attempts: number;
+  enabled: boolean;
+  due_now: boolean;
+  reason: string;
+};

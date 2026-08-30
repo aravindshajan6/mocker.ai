@@ -22,6 +22,10 @@ class Settings(BaseSettings):
     current_affairs_days_back: int = 2     # how many days of news to consider
     admin_token: str = ""                  # if set, enables POST /api/admin/* with X-Admin-Token
     # Nightly answer-key audit of bulk-imported questions
+    # A day is only considered done once it actually has questions; below this the job retries.
+    current_affairs_min_questions: int = 3
+    current_affairs_max_attempts: int = 6
+    current_affairs_tick_minutes: int = 5
     verify_enabled: bool = True
     verify_hour_ist: int = 3
     verify_batch_size: int = 10

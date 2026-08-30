@@ -66,6 +66,10 @@
   --sidebar-w: 248px;
 }
 
+/* Dark palette.
+   Declared twice on purpose: once for devices that ask for dark, and once for an explicit choice in
+   the app. A single media-query block would mean the in-app toggle could turn dark ON only for
+   people whose device was already dark — which is exactly the case it exists to serve. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
@@ -108,6 +112,48 @@
     --grad-primary: linear-gradient(135deg, #17594c 0%, #248d76 55%, #3fbfa2 100%);
     --grad-surface: linear-gradient(160deg, var(--surface) 0%, var(--surface-2) 100%);
   }
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg: #0e1618;
+    --bg-tint: #111c1f;
+    --surface: #162225;
+    --surface-2: #1d2c30;
+    --surface-3: #25373c;
+    --line: #26383d;
+    --line-strong: #354c52;
+
+    --ink: #eaf2f1;
+    --ink-soft: #b9c8c8;
+    --muted: #8b9ea0;
+
+    --primary: #3fbfa2;
+    --primary-hi: #63d8bd;
+    --primary-ink: #06231d;
+    --primary-soft: #16413a;
+    --primary-line: #2b6a5c;
+
+    --accent: #f0ac4c;
+    --accent-hi: #ffc774;
+    --accent-soft: #3b2c14;
+    --accent-ink: #ffd9a0;
+
+    --success: #45c489;
+    --success-soft: #123528;
+    --danger: #ef8b78;
+    --danger-soft: #3a201c;
+    --info: #6fb2d8;
+    --info-soft: #16303d;
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+    --shadow-2: 0 4px 12px -4px rgba(0, 0, 0, .55);
+    --shadow-3: 0 20px 40px -20px rgba(0, 0, 0, .8), 0 8px 16px -10px rgba(0, 0, 0, .5);
+    --shadow-glow: 0 10px 34px -14px color-mix(in srgb, var(--primary) 55%, transparent);
+
+    --grad-primary: linear-gradient(135deg, #17594c 0%, #248d76 55%, #3fbfa2 100%);
+    --grad-surface: linear-gradient(160deg, var(--surface) 0%, var(--surface-2) 100%);
 }
 
 @theme inline {

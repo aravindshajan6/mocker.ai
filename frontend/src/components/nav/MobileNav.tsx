@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { Flame, LogOut, Menu, Sparkles, X } from "lucide-react";
 import Mascot from "@/components/Mascot";
+import ThemeToggle from "@/components/ThemeToggle";
 import { useAppData } from "@/components/AppData";
 import { NAV_GROUPS, PRIMARY_LINKS } from "./links";
 import { api } from "@/lib/api";
@@ -38,6 +39,7 @@ export default function MobileNav() {
             <span className="inline-flex items-center gap-1 rounded-full bg-primary-soft px-2.5 py-1 text-[11px] font-extrabold text-primary">
               <Sparkles size={12} /> {stats?.total_points ?? 0}
             </span>
+            <ThemeToggle compact />
             <button onClick={() => setOpen(true)} aria-label="Open menu"
               className="h-9 w-9 grid place-items-center rounded-xl bg-surface-2 text-ink">
               <Menu size={18} />

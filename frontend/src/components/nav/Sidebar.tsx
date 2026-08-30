@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Flame, LogOut, Sparkles } from "lucide-react";
 import Mascot from "@/components/Mascot";
+import ThemeToggle from "@/components/ThemeToggle";
 import { useAppData } from "@/components/AppData";
 import { NAV_GROUPS } from "./links";
 import { api } from "@/lib/api";
@@ -68,6 +69,10 @@ export default function Sidebar() {
             <span className="inline-flex items-center gap-1"><Flame size={13} className="text-accent" />{stats?.current_streak ?? 0}</span>
             <span className="inline-flex items-center gap-1"><Sparkles size={13} className="text-primary" />{stats?.total_points ?? 0}</span>
           </div>
+        </div>
+        <div className="mt-2 flex items-center gap-2">
+          <ThemeToggle compact />
+          <span className="text-[11px] font-extrabold text-muted">Theme</span>
         </div>
         <button onClick={logout}
           className="mt-2 w-full flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-extrabold text-muted hover:text-ink hover:bg-surface-2 transition">
