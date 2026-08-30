@@ -1,5 +1,6 @@
 import {
-  BarChart3, BookOpenCheck, CalendarCheck, FileClock, Home, Newspaper, RotateCcw, Settings, Timer,
+  BarChart3, BookMarked, BookOpenCheck, CalendarCheck, FileClock, Home, Newspaper, RotateCcw, Settings,
+  ShieldCheck, Timer,
 } from "lucide-react";
 
 export type NavLink = {
@@ -9,6 +10,8 @@ export type NavLink = {
   /** Shown in the compact mobile bar */
   primary?: boolean;
   hint?: string;
+  /** Hidden from ordinary accounts */
+  adminOnly?: boolean;
 };
 
 export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
@@ -19,7 +22,7 @@ export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
       { href: "/daily", label: "Daily challenge", icon: CalendarCheck, hint: "10 questions, everyone the same set" },
       { href: "/current-affairs", label: "Current affairs", icon: Newspaper, hint: "Generated from today's news" },
       { href: "/practice", label: "Topics", icon: BookOpenCheck, primary: true, hint: "Pick a subject" },
-      { href: "/review", label: "Review", icon: RotateCcw, hint: "Spaced repetition queue" },
+      { href: "/review", label: "Revise", icon: RotateCcw, hint: "Spaced repetition queue" },
     ],
   },
   {
@@ -30,10 +33,17 @@ export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
     ],
   },
   {
+    title: "Look back",
+    links: [
+      { href: "/answers", label: "My answers", icon: BookMarked, hint: "Every question you've attempted, by subject" },
+    ],
+  },
+  {
     title: "You",
     links: [
       { href: "/progress", label: "Progress", icon: BarChart3, primary: true, hint: "Stats, badges, weak topics" },
       { href: "/settings", label: "Settings", icon: Settings, hint: "Reminders and notifications" },
+      { href: "/admin", label: "Admin", icon: ShieldCheck, hint: "Content, keys and accounts", adminOnly: true },
     ],
   },
 ];

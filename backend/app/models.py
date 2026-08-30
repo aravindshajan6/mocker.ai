@@ -24,6 +24,7 @@ class User(Base):
     email: Mapped[str] = mapped_column(String(255), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(80))
     password_hash: Mapped[str] = mapped_column(String(255))
+    is_admin: Mapped[bool] = mapped_column(Boolean, default=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
     stats: Mapped[UserStats] = relationship(back_populates="user", uselist=False, cascade="all, delete-orphan")
@@ -131,6 +132,29 @@ class AppConfig(Base):
     __tablename__ = "app_config"
     key: Mapped[str] = mapped_column(String(64), primary_key=True)
     value: Mapped[str] = mapped_column(Text)
+
+
+class LLMCredential(Base):
+    """A usable LLM provider key.
+
+    Free tiers run out, so the app keeps an ordered list rather than a single key: generation walks
+    the list by priority and skips anything currently rate-limited or rejected, which lets an admin
+    drop in a replacement without a redeploy.
+    """
+    __tablename__ = "llm_credentials"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    label: Mapped[str] = mapped_column(String(80))
+    provider: Mapped[str] = mapped_column(String(32))
+    api_key: Mapped[str] = mapped_column(Text)
+    model: Mapped[str] = mapped_column(String(120), default="")
+    base_url: Mapped[str] = mapped_column(String(255), default="")
+    priority: Mapped[int] = mapped_column(Integer, default=100)   # lower is tried first
+    is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+    last_used_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    last_error: Mapped[str | None] = mapped_column(Text, nullable=True)
+    last_error_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    cooldown_until: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
 
 class UserPrefs(Base):

@@ -62,25 +62,22 @@ async def pending(db: AsyncSession, limit: int) -> list[Question]:
     )).scalars().all())
 
 
-def _audit_batch(batch: list[Question], cfg: llm.LLMConfig) -> list[dict]:
+def _build_prompt(batch: list[Question]) -> str:
     lines = []
     for i, q in enumerate(batch):
         opts = "; ".join(f"[{j}] {o}" for j, o in enumerate(q.options))
         lines.append(f"<<<ITEM index={i}>>>\nQ: {q.text}\nOptions: {opts}\n"
                      f"Bank says correct: [{q.correct_index}] {q.options[q.correct_index]}\n<<<END>>>")
-    data = llm.complete_json(SYSTEM_PROMPT, "\n\n".join(lines), max_tokens=2500, cfg=cfg)
-    results = data.get("results") if isinstance(data, dict) else None
-    return results if isinstance(results, list) else []
+    return "\n\n".join(lines)
 
 
 async def run_audit(db: AsyncSession, limit: int | None = None) -> dict:
     """Audit up to `limit` unchecked questions. Returns a summary dict."""
-    cfg = llm.current_config()
-    if settings.verify_model:
-        cfg = llm.LLMConfig(cfg.provider, cfg.api_key, settings.verify_model, cfg.base_url)
+    from ..services import llm_keys
+    available = await llm_keys.configs(db, settings.verify_model)
     summary = {"checked": 0, "ok": 0, "wrong": 0, "ambiguous": 0, "deactivated": 0, "flagged": 0,
-               "model": cfg.model, "errors": 0}
-    if not cfg.available:
+               "model": available[0].model if available else "", "errors": 0}
+    if not available:
         summary["errors"] = 1
         summary["message"] = "no LLM key configured"
         return summary
@@ -94,8 +91,12 @@ async def run_audit(db: AsyncSession, limit: int | None = None) -> dict:
     for start in range(0, len(todo), size):
         batch = todo[start:start + size]
         try:
-            # Offloaded: the audit is a background job but shares the app's event loop.
-            results = await asyncio.to_thread(_audit_batch, batch, cfg)
+            data, used = await llm_keys.complete_json_failover(
+                db, SYSTEM_PROMPT, _build_prompt(batch), max_tokens=2500,
+                model_override=settings.verify_model)
+            summary["model"] = used.model
+            results = data.get("results") if isinstance(data, dict) else None
+            results = results if isinstance(results, list) else []
         except llm.LLMError as e:
             msg = str(e)
             log.warning("audit batch at %d failed: %s", start, msg)

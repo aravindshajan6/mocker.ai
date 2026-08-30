@@ -1,6 +1,7 @@
 import type {
   ActiveSession, AnswerResult, CurrentAffairs, Daily, ExamResult, ExamState, FinishResult, HistoryRow, LeaderboardRow,
-  Insights, Prefs, QuizSession, ReviewDue, Stats, Topic, User,
+  AdminOverview, AdminQuestion, AdminUserRow, Answers, Credential, Insights, Prefs, QuizSession, ReviewDue,
+  Stats, Topic, User,
 } from "./types";
 
 /** Thrown when the service worker accepted a write for later replay instead of sending it. */
@@ -101,6 +102,34 @@ const get = <T,>(path: string) => request<T>(path);
 export const api = {
   register: (data: { name: string; email: string; password: string }) => post<User>("/api/auth/register", data),
   login: (data: { email: string; password: string }) => post<User>("/api/auth/login", data),
+  authConfig: () => get<{ allow_signup: boolean }>("/api/auth/config"),
+
+  // --- admin ---------------------------------------------------------------
+  adminOverview: () => get<AdminOverview>("/api/admin/overview"),
+  adminUsers: () => get<AdminUserRow[]>("/api/admin/users"),
+  adminCreateUser: (d: { name: string; email: string; password: string; is_admin: boolean }) =>
+    post<AdminUserRow>("/api/admin/users", d),
+  adminResetPassword: (id: string, password: string) => post<{ ok: boolean }>(`/api/admin/users/${id}/password`, { password }),
+  adminDeleteUser: (id: string) => request<{ ok: boolean }>(`/api/admin/users/${id}`, { method: "DELETE" }),
+  adminKeys: () => get<Credential[]>("/api/admin/llm/keys"),
+  adminProviders: () => get<{ providers: { id: string; base_url: string; default_model: string; free_tier: boolean }[]; env_provider: string; env_key_present: boolean }>("/api/admin/llm/providers"),
+  adminAddKey: (d: { label: string; provider: string; api_key: string; model?: string; priority?: number }) =>
+    post<Credential>("/api/admin/llm/keys", d),
+  adminPatchKey: (id: number, d: Record<string, unknown>) =>
+    request<Credential>(`/api/admin/llm/keys/${id}`, { method: "PATCH", body: JSON.stringify(d) }),
+  adminDeleteKey: (id: number) => request<{ ok: boolean }>(`/api/admin/llm/keys/${id}`, { method: "DELETE" }),
+  adminTestKey: (id: number) => post<{ ok: boolean; detail: string; model: string; latency_ms: number | null }>(`/api/admin/llm/keys/${id}/test`),
+  adminQuestions: (o: { q?: string; topic?: string; source?: string; only?: string; limit?: number; offset?: number } = {}) => {
+    const p = new URLSearchParams();
+    Object.entries(o).forEach(([k, v]) => { if (v !== undefined && v !== "") p.set(k, String(v)); });
+    return get<{ questions: AdminQuestion[]; total: number; offset: number; limit: number }>(`/api/admin/questions?${p}`);
+  },
+  adminAddQuestion: (d: { topic: string; question: string; options: string[]; answer: number; explanation: string; difficulty: number; tags: string[] }) =>
+    post<AdminQuestion>("/api/admin/questions", d),
+  adminToggleQuestion: (id: number) => post<AdminQuestion>(`/api/admin/questions/${id}/toggle`),
+  adminRunNews: (force: boolean) => post<{ started: boolean; detail: string; result: Record<string, unknown> | null }>(`/api/admin/content/current-affairs/run?force=${force}`),
+  adminRunAudit: (limit: number) => post<{ started: boolean; detail: string; result: Record<string, unknown> | null }>(`/api/admin/content/audit/run?limit=${limit}`),
+
   logout: async () => {
     const out = await post<{ ok: boolean }>("/api/auth/logout");
     setCurrentUserId(null);
@@ -115,9 +144,17 @@ export const api = {
   topics: () => get<Topic[]>("/api/topics"),
   daily: () => get<Daily>("/api/quiz/daily"),
   active: () => get<ActiveSession[]>("/api/quiz/active"),
-  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review" | "weak"; topic?: string; count?: number; day?: string }) => post<QuizSession>("/api/quiz/start", data),
+  startQuiz: (data: { mode: "daily" | "topic" | "mixed" | "current-affairs" | "review" | "weak" | "retry"; topic?: string; count?: number; day?: string; session?: string }) => post<QuizSession>("/api/quiz/start", data),
   reviewQueue: () => get<ReviewDue>("/api/me/review"),
   insights: () => get<Insights>("/api/me/insights"),
+  answers: (opts: { topic?: string; only?: string; limit?: number; offset?: number } = {}) => {
+    const p = new URLSearchParams();
+    if (opts.topic) p.set("topic", opts.topic);
+    if (opts.only && opts.only !== "all") p.set("only", opts.only);
+    p.set("limit", String(opts.limit ?? 25));
+    p.set("offset", String(opts.offset ?? 0));
+    return get<Answers>(`/api/me/answers?${p}`);
+  },
   prefs: () => get<Prefs>("/api/me/prefs"),
   savePrefs: (data: Partial<Pick<Prefs, "reminders_enabled" | "reminder_hour" | "reminder_minute" | "timezone">>) =>
     request<Prefs>("/api/me/prefs", { method: "PUT", body: JSON.stringify(data) }),

@@ -75,10 +75,8 @@ async def explain(db: AsyncSession, q: Question) -> str:
     if q.explanation_long:
         return q.explanation_long
 
-    cfg = llm.current_config()
-    if settings.explain_model:
-        cfg = llm.LLMConfig(cfg.provider, cfg.api_key, settings.explain_model, cfg.base_url)
-    if not cfg.available:
+    from ..services import llm_keys
+    if not await llm_keys.configs(db, settings.explain_model):
         raise ExplainUnavailable("Deeper explanations need an LLM key to be configured.")
     if not _take_budget():
         raise ExplainUnavailable("Today's explanation budget is used up — please try again tomorrow.")
@@ -88,9 +86,10 @@ async def explain(db: AsyncSession, q: Question) -> str:
             f"Correct answer: ({chr(65 + q.correct_index)}) {q.options[q.correct_index]}\n"
             f"Existing explanation: {q.explanation or '(none)'}")
     try:
-        # Synchronous HTTP inside the request handler would stall every other request for the
-        # duration of the provider call, so it runs on a worker thread.
-        data = await asyncio.to_thread(llm.complete_json, SYSTEM_PROMPT, user, max_tokens=900, cfg=cfg)
+        # Walks the stored keys in priority order; a rate-limited or rejected key steps aside and
+        # the next one is tried, so a spent free tier does not take the feature down.
+        data, _cfg = await llm_keys.complete_json_failover(
+            db, SYSTEM_PROMPT, user, max_tokens=900, model_override=settings.explain_model)
     except llm.LLMError as e:
         log.warning("explain failed for question %s: %s", q.id, e)
         raise ExplainUnavailable("Could not reach the explanation service just now.") from e

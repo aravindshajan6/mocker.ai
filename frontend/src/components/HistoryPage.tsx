@@ -43,7 +43,7 @@ export default function HistoryPage() {
         <div className="flex flex-col gap-2.5">
           {rows.map((h) => {
             const pct = h.total ? h.correct / h.total : 0;
-            const href = h.mode === "exam" ? `/exam/${h.id}/result` : `/quiz/${h.id}/result`;
+            const href = h.mode === "exam" ? `/exam/${h.id}/result` : `/quiz/${h.id}/review`;
             return (
               <Item key={h.id}>
                 <Link href={href} className="card card-interactive p-4 flex items-center gap-3.5">

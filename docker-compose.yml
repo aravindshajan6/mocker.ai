@@ -41,6 +41,11 @@ services:
       VAPID_SUBJECT: ${VAPID_SUBJECT:-mailto:hello@mocker.local}
       ADMIN_TOKEN: ${ADMIN_TOKEN:-}
       CORS_ORIGINS: http://localhost:3001
+      ALLOW_SIGNUP: ${ALLOW_SIGNUP:-false}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@mocker.app}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-changeme-admin}
+      SEED_USER_EMAIL: ${SEED_USER_EMAIL:-aswathi@gmail.com}
+      SEED_USER_PASSWORD: ${SEED_USER_PASSWORD:-aswathi123}
       DEMO_EMAIL: ${DEMO_EMAIL:-demo@mocker.app}
       DEMO_PASSWORD: ${DEMO_PASSWORD:-demo1234}
     volumes:

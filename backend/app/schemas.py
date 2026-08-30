@@ -20,6 +20,7 @@ class UserOut(BaseModel):
     id: str
     name: str
     email: str
+    is_admin: bool = False
 
 
 class TopicOut(BaseModel):
@@ -44,9 +45,10 @@ class QuestionOut(BaseModel):
 
 
 class StartQuizIn(BaseModel):
-    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs|review|weak)$")
+    mode: str = Field(pattern="^(daily|topic|mixed|current-affairs|review|weak|retry)$")
     topic: str | None = None
     count: int | None = Field(default=None, ge=3, le=30)
+    session: str | None = None   # retry mode: redo the wrong answers from this past set
     day: date | None = None  # current-affairs mode: which day's set (default today)
 
 
@@ -327,3 +329,157 @@ class PushSubscribeIn(BaseModel):
     endpoint: str
     p256dh: str
     auth: str
+
+
+class AnsweredQuestion(BaseModel):
+    question_id: int
+    text: str
+    options: list[str]
+    correct_index: int
+    selected_index: int
+    is_correct: bool
+    explanation: str
+    topic: str
+    topic_slug: str
+    topic_icon: str
+    source_ref: str | None
+    source_url: str | None
+    difficulty: int
+    times_seen: int
+    times_correct: int
+    last_answered_at: datetime
+
+
+class AnsweredTopic(BaseModel):
+    slug: str
+    name: str
+    icon: str
+    attempted: int
+    correct: int
+    wrong: int
+
+
+class AnswersOut(BaseModel):
+    topics: list[AnsweredTopic]
+    questions: list[AnsweredQuestion]
+    total: int
+    offset: int
+    limit: int
+
+
+# --- Admin ------------------------------------------------------------------
+
+class AdminOverview(BaseModel):
+    users: int
+    admins: int
+    questions_active: int
+    questions_by_source: dict[str, int]
+    questions_by_topic: list[dict]
+    attempts: int
+    sessions_finished: int
+    last_content_run: CARun | None
+    audit: dict
+    llm_keys_active: int
+    llm_provider: str
+    llm_available: bool
+
+
+class AdminUserRow(BaseModel):
+    id: str
+    name: str
+    email: str
+    is_admin: bool
+    created_at: datetime
+    answered: int
+    last_active: date | None
+
+
+class CreateUserIn(BaseModel):
+    name: str = Field(min_length=1, max_length=80)
+    email: EmailStr
+    password: str = Field(min_length=6, max_length=128)
+    is_admin: bool = False
+
+
+class ResetPasswordIn(BaseModel):
+    password: str = Field(min_length=6, max_length=128)
+
+
+class CredentialIn(BaseModel):
+    label: str = Field(min_length=1, max_length=80)
+    provider: str = Field(min_length=1, max_length=32)
+    api_key: str = Field(min_length=8, max_length=400)
+    model: str = Field(default="", max_length=120)
+    base_url: str = Field(default="", max_length=255)
+    priority: int = Field(default=100, ge=0, le=1000)
+
+
+class CredentialPatch(BaseModel):
+    label: str | None = None
+    model: str | None = None
+    priority: int | None = Field(default=None, ge=0, le=1000)
+    is_active: bool | None = None
+    clear_cooldown: bool | None = None
+
+
+class CredentialOut(BaseModel):
+    id: int
+    label: str
+    provider: str
+    api_key_masked: str
+    model: str
+    base_url: str
+    priority: int
+    is_active: bool
+    cooling_down: bool
+    cooldown_until: datetime | None
+    last_used_at: datetime | None
+    last_error: str | None
+    created_at: datetime
+
+
+class CredentialTestOut(BaseModel):
+    ok: bool
+    detail: str
+    model: str
+    latency_ms: int | None
+
+
+class AdminQuestionIn(BaseModel):
+    topic: str
+    question: str = Field(min_length=10, max_length=600)
+    options: list[str] = Field(min_length=4, max_length=4)
+    answer: int = Field(ge=0, le=3)
+    explanation: str = Field(default="", max_length=1200)
+    difficulty: int = Field(default=1, ge=1, le=3)
+    tags: list[str] = Field(default_factory=list)
+
+
+class AdminQuestionOut(BaseModel):
+    id: int
+    text: str
+    options: list[str]
+    correct_index: int
+    explanation: str
+    difficulty: int
+    topic: str
+    topic_slug: str
+    source: str
+    source_ref: str | None
+    is_active: bool
+    verdict: str | None
+    verdict_note: str | None
+    times_answered: int
+
+
+class AdminQuestionsOut(BaseModel):
+    questions: list[AdminQuestionOut]
+    total: int
+    offset: int
+    limit: int
+
+
+class JobOut(BaseModel):
+    started: bool
+    detail: str
+    result: dict | None = None

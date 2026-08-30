@@ -124,6 +124,19 @@ async def start_quiz(data: StartQuizIn, user: User = Depends(current_user), db: 
         if existing:
             return await _session_out(db, existing)  # resume (or view finished) — one daily per day
         ids = await personal_daily_ids(db, user.id, daily_date)
+    elif data.mode == "retry":
+        if not data.session:
+            raise HTTPException(422, "session is required")
+        past = await db.get(QuizSession, data.session)
+        if not past or past.user_id != user.id or past.mode == "exam":
+            raise HTTPException(404, "Quiz not found")
+        ids = list((await db.execute(
+            select(Attempt.question_id).where(Attempt.session_id == past.id,
+                                              Attempt.is_correct.is_(False))
+            .order_by(Attempt.id)
+        )).scalars().all())
+        if not ids:
+            raise HTTPException(409, "You answered everything in that set correctly")
     elif data.mode == "weak":
         ids = await weak_topic_ids(db, user.id, data.count or settings.topic_quiz_size)
     elif data.mode == "review":

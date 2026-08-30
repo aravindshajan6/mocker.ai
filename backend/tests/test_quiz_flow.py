@@ -7,10 +7,8 @@ def test_unauthenticated_requests_are_rejected(client):
     assert client.post("/api/quiz/start", json={"mode": "mixed"}).status_code == 401
 
 
-def test_register_login_logout(client, user):
+def test_login_and_logout(client, user):
     assert client.get("/api/auth/me").json()["email"] == user["email"]
-    assert client.post("/api/auth/register",
-                       json={"name": "Dup", "email": user["email"], "password": "secret123"}).status_code == 409
     assert client.post("/api/auth/login", json={"email": user["email"], "password": "nope"}).status_code == 401
     assert client.post("/api/auth/logout").status_code == 200
     assert client.get("/api/auth/me").status_code == 401
@@ -78,12 +76,10 @@ def test_cannot_finish_a_partially_answered_quiz(client, user):
     assert client.post(f"/api/quiz/{s['id']}/finish").status_code == 409
 
 
-def test_another_users_quiz_is_not_reachable(client, user, base_url):
-    import httpx
+def test_another_users_quiz_is_not_reachable(client, user, register_extra):
     s = client.post("/api/quiz/start", json={"mode": "mixed", "count": 5}).json()
-    with httpx.Client(base_url=base_url, timeout=30) as other:
-        other.post("/api/auth/register", json={"name": "Other", "email": f"other{s['id']}@example.com",
-                                               "password": "secret123"})
+    other = register_extra("Other")
+    if True:
         assert other.get(f"/api/quiz/{s['id']}").status_code == 404
         assert other.post(f"/api/quiz/{s['id']}/answer",
                           json={"question_id": s["questions"][0]["id"], "selected_index": 0}).status_code == 404

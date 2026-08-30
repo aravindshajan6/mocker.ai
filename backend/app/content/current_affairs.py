@@ -213,15 +213,16 @@ def _validate(q: dict, src: dict | None) -> dict | None:
     }
 
 
-def generate_with_llm(items: list[dict], target: int, batch_size: int = 6, max_retries: int = 3) -> list[dict]:
+async def generate_with_llm(db, items: list[dict], target: int, batch_size: int = 6, max_retries: int = 3) -> list[dict]:
     """Ask the configured LLM for MCQs, batch by batch, until `target` questions are collected.
 
     Free tiers are tight on tokens-per-minute (Groq: 8k TPM), so batches are small and a 429 triggers a
     wait-and-retry instead of giving up — the daily job is not latency sensitive.
     """
-    import time
+    import asyncio
 
-    cfg = llm.current_config()
+    from ..services import llm_keys
+
     out: list[dict] = []
     for start in range(0, len(items), batch_size):
         if len(out) >= target:
@@ -233,7 +234,8 @@ def generate_with_llm(items: list[dict], target: int, batch_size: int = 6, max_r
         data = None
         for attempt in range(max_retries + 1):
             try:
-                data = llm.complete_json(SYSTEM_PROMPT, user, schema=OUTPUT_SCHEMA, cfg=cfg, max_tokens=3000)
+                # Failover across stored keys, so one exhausted free tier does not stop the day.
+                data, _used = await llm_keys.complete_json_failover(db, SYSTEM_PROMPT, user, max_tokens=3000)
                 break
             except llm.LLMError as e:
                 msg = str(e)
@@ -243,14 +245,14 @@ def generate_with_llm(items: list[dict], target: int, batch_size: int = 6, max_r
                 if "rate limited" in msg and attempt < max_retries:
                     wait = 65 if "per minute" in msg or "TPM" in msg or "RPM" in msg else 20 * (attempt + 1)
                     log.info("rate limited; waiting %ds before retrying batch at %d", wait, start)
-                    time.sleep(wait)
+                    await asyncio.sleep(wait)
                     continue
                 log.warning("LLM batch at %d failed: %s", start, msg)
                 break
         if data is None:
             continue
         # Gentle pacing between batches keeps us under per-minute token caps.
-        time.sleep(3)
+        await asyncio.sleep(3)
         for q in data.get("questions", []) if isinstance(data, dict) else []:
             idx = q.get("source_index", -1) if isinstance(q, dict) else -1
             src = batch[idx] if isinstance(idx, int) and 0 <= idx < len(batch) else None
@@ -277,19 +279,22 @@ async def run_daily(db: AsyncSession, *, day: date | None = None, force: bool = 
             await db.commit()
             return run
 
-    cfg = llm.current_config()
-    run = ContentRun(day=day, provider=cfg.provider if cfg.available else "heuristic", model=cfg.model if cfg.available else "")
+    from ..services import llm_keys
+    chain = await llm_keys.configs(db)
+    can_generate = bool(chain)
+    run = ContentRun(day=day, provider=chain[0].provider if can_generate else "heuristic",
+                     model=chain[0].model if can_generate else "")
     db.add(run)
     await db.commit()
     try:
         items = await asyncio.to_thread(fetch_items, settings.current_affairs_days_back, 80)
         run.fetched = len(items)
         questions: list[dict] = []
-        if cfg.available:
-            questions = await asyncio.to_thread(generate_with_llm, items, target)
+        if can_generate:
+            questions = await generate_with_llm(db, items, target)
         if not questions:
             questions = generate_heuristic(items, max_questions=target)
-            run.provider = "heuristic" if not cfg.available else f"{cfg.provider}->heuristic"
+            run.provider = "heuristic" if not can_generate else f"{run.provider}->heuristic"
         run.generated = len(questions)
         random.shuffle(questions)  # insertion order must not leak the answer-position pattern
 
