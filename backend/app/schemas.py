@@ -506,3 +506,28 @@ class ContentHealthOut(BaseModel):
     enabled: bool
     due_now: bool
     reason: str
+
+
+class BudgetOut(BaseModel):
+    provider: str
+    model: str
+    limit: int
+    used: int
+    requests: int
+    remaining: int
+    batch_remaining: int
+    capped: bool
+
+
+class StagingOut(BaseModel):
+    total: int
+    pending: int
+    kept: int
+    dropped: int
+    failed: int
+    promoted: int
+    by_topic: dict[str, int]
+    budgets: list[BudgetOut]
+    model: str
+    scheduled_hour_ist: int
+    per_run: int

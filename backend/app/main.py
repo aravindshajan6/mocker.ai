@@ -39,6 +39,7 @@ async def lifespan(app: FastAPI):
             "ALTER TABLE user_prefs ADD COLUMN IF NOT EXISTS telegram_code_issued_at TIMESTAMPTZ",
             "ALTER TABLE users ADD COLUMN IF NOT EXISTS is_admin BOOLEAN DEFAULT FALSE",
             "ALTER TABLE content_runs ADD COLUMN IF NOT EXISTS attempt INTEGER DEFAULT 1",
+            "ALTER TABLE staged_questions ADD COLUMN IF NOT EXISTS exam_name VARCHAR(200) DEFAULT ''",
             "ALTER TABLE content_runs ADD COLUMN IF NOT EXISTS trigger VARCHAR(16) DEFAULT 'scheduled'",
             "ALTER TABLE questions ALTER COLUMN source TYPE VARCHAR(64)",
         ):

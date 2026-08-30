@@ -121,6 +121,33 @@ Add your own questions: drop a JSON file into `data/questions/` following the sc
 `POST quiz/{id}/finish`, `POST quiz/{id}/abandon`, `GET me/stats`, `GET me/history`, `GET me/leaderboard`.
 Interactive docs: `docker compose exec backend curl localhost:8000/docs` (not exposed on the host).
 
+## Phased import (staying inside a free tier)
+
+Parsing exam papers costs nothing; deciding which of their questions are general knowledge costs LLM
+tokens, and there are ~10,000 parsed candidates against a free tier measured in tokens per day. So the
+two halves are separated:
+
+```bash
+# once, on the host: parse every cached paper, spend no tokens
+python3 data/importers/pyq.py --limit 500 --stage ../staged/pyq.jsonl
+# then, in the app: Admin → Content → Staged questions → Load, or
+curl -X POST localhost:3001/api/admin/staging/load
+```
+
+From there a nightly job (02:00 IST) sorts as many as the day's budget allows and promotes the keepers
+into the bank. Three things keep it inside the allowance:
+
+* **A token ledger.** Every LLM call records its real cost per provider/model per day, because the API
+  never tells you how much is left — a 429 is the first you hear of it.
+* **A batch share.** Bulk work may use 75% of the daily allowance; the rest stays reserved so a learner
+  tapping "Explain this more" still works after a nightly run.
+* **A per-minute pacer.** The daily cap is generous but the per-minute one (8,000 tokens on Groq) is what
+  a loop actually trips. A rolling window waits exactly long enough, and a mid-run 429 is waited out
+  rather than abandoning the run.
+
+Each batch commits its own decisions, so an interrupted run loses at most one batch. Progress, keep rate
+and today's token usage are on the admin Content tab.
+
 ## Themes
 
 Light, dark, and match-your-device, chosen in Settings or from the compact toggle in the sidebar. The

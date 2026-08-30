@@ -23,8 +23,9 @@ from ..db import SessionLocal, get_db
 from ..models import (Attempt, ContentRun, LLMCredential, Question, QuizSession, Topic, User, UserPrefs,
                       UserStats, utcnow)
 from ..schemas import (AdminOverview, AdminQuestionIn, AdminQuestionOut, AdminQuestionsOut, AdminUserRow,
-                       ContentHealthDay, ContentHealthOut, CredentialIn, CredentialOut, CredentialPatch,
-                       CredentialTestOut, CreateUserIn, JobOut, ResetPasswordIn)
+                       BudgetOut, ContentHealthDay, ContentHealthOut, CredentialIn, CredentialOut,
+                       CredentialPatch, CredentialTestOut, CreateUserIn, JobOut, ResetPasswordIn,
+                       StagingOut)
 from ..seed import fingerprint
 from ..services import llm_keys
 
@@ -123,6 +124,54 @@ async def run_verification(background: BackgroundTasks, limit: int = 50, wait: b
 
     background.add_task(_bg)
     return JobOut(started=True, detail=f"Auditing {limit} questions in the background.")
+
+
+# ----------------------------------------------------------- staged classification ----
+@router.get("/staging", response_model=StagingOut)
+async def staging_status(db: AsyncSession = Depends(get_db)):
+    """How far the phased classification has got, and what is left of today's token budget."""
+    from ..content.staging import progress
+    from ..services import budget as budget_svc
+
+    pr = await progress(db)
+    return StagingOut(
+        total=pr.total, pending=pr.pending, kept=pr.kept, dropped=pr.dropped, failed=pr.failed,
+        promoted=pr.promoted, by_topic=pr.by_topic,
+        budgets=[BudgetOut(**vars(b)) for b in await budget_svc.all_budgets(db)],
+        model=settings.staging_model, scheduled_hour_ist=settings.staging_hour_ist,
+        per_run=settings.staging_per_run,
+    )
+
+
+@router.post("/staging/load", response_model=JobOut)
+async def staging_load(path: str = "data/staged/pyq.jsonl", db: AsyncSession = Depends(get_db)):
+    """Load candidates produced by `pyq.py --stage`. Parsing is free; this only queues the work."""
+    from pathlib import Path as _Path
+
+    from ..content.staging import load_from_file
+
+    result = await load_from_file(db, _Path(path))
+    return JobOut(started=True, detail=result.get("message") or
+                  f"Queued {result['loaded']} candidates ({result['skipped']} already known).",
+                  result=result)
+
+
+@router.post("/staging/run", response_model=JobOut)
+async def staging_run(background: BackgroundTasks, limit: int = 100, wait: bool = False,
+                      db: AsyncSession = Depends(get_db)):
+    """Classify a slice now. Stops early if the day's token budget runs out."""
+    from ..content.staging import classify_once
+
+    if wait:
+        summary = await classify_once(db, max_questions=limit)
+        return JobOut(started=True, detail=summary.get("stopped") or "Finished", result=summary)
+
+    async def _bg():
+        async with SessionLocal() as s:
+            await classify_once(s, max_questions=limit)
+
+    background.add_task(_bg)
+    return JobOut(started=True, detail=f"Classifying up to {limit} questions in the background.")
 
 
 # --------------------------------------------------------------------- questions ----
