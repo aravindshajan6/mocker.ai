@@ -1,0 +1,33 @@
+# Production frontend. Unlike frontend/Dockerfile (dev), this installs from the lockfile inside the
+# build rather than vendoring the host's node_modules — that local workaround produces a
+# host-specific image and cannot work in CI.
+FROM node:20-slim AS deps
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+
+FROM node:20-slim AS build
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+# Next resolves rewrites() at BUILD time and bakes the destination into server.js, so the backend
+# URL must be correct here; setting it at runtime does nothing. It is a container name, never the
+# generic "backend", because this app shares Coolify's DNS namespace on the proxy network.
+ARG BACKEND_URL=http://mocker-backend:8000
+ENV BACKEND_URL=$BACKEND_URL NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production
+RUN npm run build
+
+FROM node:20-slim AS run
+WORKDIR /app
+ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 PORT=3000 HOSTNAME=0.0.0.0
+# `output: "standalone"` traces only the modules actually imported: 70 MB here versus 503 MB for a
+# production npm install. .next/cache (68 MB of build artefacts) is deliberately never copied.
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
+COPY --from=build /app/public ./public
+USER node
+EXPOSE 3000
+# Node's own fetch rather than curl: installing curl costs ~12 MB and an apt layer for one request.
+HEALTHCHECK --interval=15s --timeout=5s --start-period=20s --retries=4 \
+  CMD node -e "fetch('http://127.0.0.1:3000/login').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["node", "server.js"]

@@ -1,0 +1,119 @@
+# Production stack for mocker.sapper.top.
+#
+# Deliberately absent:
+#   * any `ports:` mapping — Traefik reaches the app over the shared `coolify` network, so nothing
+#     here is directly internet-facing and nothing can collide with 80/443.
+#   * Redis — this app does not use one.
+#
+# Both images are PULLED. Never build on the VPS: `next build` peaks at 1.58 GB against ~1.6 GB
+# available, mem_limit does not constrain a build, and the OOM killer would be free to pick valodex.
+name: mocker
+
+networks:
+  coolify:
+    external: true          # Coolify's proxy network; only the two web-facing services join it
+  internal:
+    driver: bridge          # Postgres lives here alone, unreachable from other Coolify containers
+
+volumes:
+  pgdata:
+    # Explicitly named. Without this the volume is derived as <project>_pgdata, which collides with
+    # the development stack's volume of the same name: production Postgres then attaches to the dev
+    # database and rejects its own password, because POSTGRES_PASSWORD only applies at first init.
+    name: mocker-prod-pgdata
+
+# Service names are deliberately prefixed: docker compose publishes the SERVICE name as a DNS
+# alias on every network the container joins. Calling these `frontend`/`backend` would claim those
+# generic names on the shared `coolify` network — the name-collision trap in reverse, where this
+# app shadows a neighbour's service rather than the other way round.
+services:
+  mocker-frontend:
+    image: ${FRONTEND_IMAGE:-ghcr.io/aravindshajan6/mocker-frontend:latest}
+    container_name: mocker-frontend
+    restart: unless-stopped
+    networks: [coolify, internal]
+    environment:
+      # Informational only: the rewrite destination is baked at build time (see Dockerfile.prod).
+      BACKEND_URL: http://mocker-backend:8000
+      # Node sizes its heap from HOST memory, not the cgroup, so without this it grows past
+      # mem_limit and the kernel kills the container instead of Node collecting garbage.
+      NODE_OPTIONS: --max-old-space-size=192
+    depends_on:
+      mocker-backend: { condition: service_healthy }
+    mem_limit: 256m
+    memswap_limit: 256m
+    cpus: 1.0
+    # No healthcheck here on purpose: a compose healthcheck OVERRIDES the image's, and defining it
+    # in both places let them drift — this one still called curl after it was removed from the
+    # image, so the container stayed unhealthy and Traefik silently skipped it (presenting as a
+    # 404, not a 502). The Dockerfile's HEALTHCHECK is the single definition.
+    labels:
+      # exposedbydefault=false on this Traefik, so without this the container gets no routing.
+      - traefik.enable=true
+      # The container is on two networks; tell Traefik which one to dial, or it may pick `internal`.
+      - traefik.docker.network=coolify
+      - traefik.http.routers.mocker.rule=Host(`mocker.sapper.top`)
+      - traefik.http.routers.mocker.entrypoints=https
+      - traefik.http.routers.mocker.tls=true
+      - traefik.http.routers.mocker.tls.certresolver=letsencrypt
+      - traefik.http.services.mocker.loadbalancer.server.port=3000
+      # The http router only redirects, but Let's Encrypt answers HTTP-01 on port 80 — removing it
+      # breaks certificate issuance and renewal.
+      - traefik.http.routers.mocker-http.rule=Host(`mocker.sapper.top`)
+      - traefik.http.routers.mocker-http.entrypoints=http
+      - traefik.http.routers.mocker-http.middlewares=mocker-https
+      - traefik.http.middlewares.mocker-https.redirectscheme.scheme=https
+
+  mocker-backend:
+    image: ${BACKEND_IMAGE:-ghcr.io/aravindshajan6/mocker-backend:latest}
+    container_name: mocker-backend      # this exact name is what the frontend image was built against
+    restart: unless-stopped
+    # On `coolify` so the frontend can reach it, and on `internal` to reach Postgres. It publishes
+    # no Traefik labels, so Traefik never routes to it from outside.
+    networks: [coolify, internal]
+    env_file: [.env]
+    environment:
+      # Container name, never `db` or `postgres`: on the shared network those may resolve to
+      # Coolify's own services.
+      DATABASE_URL: postgresql+asyncpg://mocker:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@mocker-postgres:5432/mocker
+      DATA_DIR: /app/data/questions
+      # MEASURED through a real Traefik, not assumed. The chain is Traefik -> Next rewrite ->
+      # uvicorn, but the value is 1, not 2: unlike nginx, Next's rewrite passes X-Forwarded-For
+      # through without appending, so the header carries exactly one entry. Traefik also REPLACES
+      # a client-supplied X-Forwarded-For rather than appending to it, so that single entry is the
+      # real peer and cannot be forged. Re-measure if a proxy is ever added or removed.
+      TRUSTED_PROXY_HOPS: ${TRUSTED_PROXY_HOPS:-1}
+      HSTS_ENABLED: "true"
+      COOKIE_SECURE: "true"
+      CORS_ORIGINS: https://mocker.sapper.top
+      PUBLIC_BASE_URL: https://mocker.sapper.top
+      # TESTING_HOOKS is deliberately unset here; the reset endpoint must not exist in production.
+    depends_on:
+      mocker-postgres: { condition: service_healthy }
+    mem_limit: 448m
+    memswap_limit: 448m
+    cpus: 1.0
+
+  mocker-postgres:
+    image: postgres:16-alpine
+    container_name: mocker-postgres     # referenced by THIS name in DATABASE_URL
+    restart: unless-stopped
+    networks: [internal]                # deliberately NOT on coolify
+    environment:
+      POSTGRES_USER: mocker
+      POSTGRES_DB: mocker
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    # Postgres sizes nothing from the container limit on its own; these are explicit so it cannot
+    # plan its way past mem_limit.
+    command: >
+      postgres -c shared_buffers=64MB -c max_connections=40
+               -c effective_cache_size=192MB -c work_mem=4MB
+               -c maintenance_work_mem=32MB
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mocker -d mocker"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    mem_limit: 256m
+    memswap_limit: 256m

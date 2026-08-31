@@ -48,6 +48,17 @@ class Settings(BaseSettings):
     telegram_bot_token: str = ""           # optional; from @BotFather
     telegram_bot_username: str = ""        # used to build the deep link
     public_base_url: str = "http://localhost:3001"
+    # Rate limiting. `trusted_proxy_hops` MUST match the real topology in front of uvicorn:
+    # behind Traefik -> Next.js rewrite it is 2. Too low and forged X-Forwarded-For buys a fresh
+    # bucket; too high and every visitor collapses into one.
+    rate_limit_enabled: bool = True
+    trusted_proxy_hops: int = 0            # 0 = direct (dev); production sets 2
+    rate_limit_default: str = "300/minute"
+    rate_limit_login: str = "8/minute;40/hour"
+    rate_limit_explain: str = "20/minute"
+    # Exposes POST /api/testing/reset-rate-limits. Must stay false anywhere reachable publicly.
+    testing_hooks: bool = False
+    hsts_enabled: bool = False             # production (behind TLS) sets this true
     # Public sign-up is closed by default: accounts are provisioned by an admin.
     allow_signup: bool = False
     # Accounts created on startup (leave a password empty to skip that account)

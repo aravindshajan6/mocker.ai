@@ -1,6 +1,6 @@
 from datetime import date
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -14,6 +14,7 @@ from ..content.explain import ExplainUnavailable, explain
 from ..schemas import (ActiveSessionOut, AnswerIn, AnswerOut, AttemptState, DailyOut, ExplainOut, FinishOut,
                        QuestionOut, SessionOut, StartQuizIn)
 from ..services import scoring, srs
+from ..services.ratelimit import limiter
 from ..services.quiz import (current_affairs_ids, due_question_ids, effective_streak, personal_daily_ids,
                              pick_questions, today, touch_streak, weak_topic_ids)
 
@@ -69,8 +70,9 @@ async def daily_status(user: User = Depends(current_user), db: AsyncSession = De
 
 
 @router.post("/question/{question_id}/explain", response_model=ExplainOut)
-async def explain_question(question_id: int, user: User = Depends(current_user),
-                           db: AsyncSession = Depends(get_db)):
+@limiter.limit(settings.rate_limit_explain)
+async def explain_question(request: Request, response: Response, question_id: int,
+                           user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
     """A deeper explanation with a memory hook. Only available once the user has answered it."""
     q = await db.get(Question, question_id)
     if not q:
