@@ -1,0 +1,3224 @@
+[
+  {
+    "topic": "english",
+    "question": "Choose the correct form: She ______ here since 2010.",
+    "options": [
+      "lived",
+      "lives",
+      "has been living",
+      "is living"
+    ],
+    "answer": 2,
+    "explanation": "An action that began in the past and continues to the present, marked by 'since', takes the present perfect continuous tense.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "By the time we reached the station, the train ______.",
+    "options": [
+      "has left",
+      "had left",
+      "leaves",
+      "left"
+    ],
+    "answer": 1,
+    "explanation": "Of two past actions, the earlier one takes the past perfect tense; the train's departure happened before we reached the station.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Look! The children ______ in the garden.",
+    "options": [
+      "play",
+      "played",
+      "have played",
+      "are playing"
+    ],
+    "answer": 3,
+    "explanation": "'Look!' shows the action is happening at this very moment, so the present continuous tense is used.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The sun ______ in the east.",
+    "options": [
+      "rises",
+      "is rising",
+      "rose",
+      "has risen"
+    ],
+    "answer": 0,
+    "explanation": "Universal truths and facts of nature are always expressed in the simple present tense.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "By next June, the workers ______ the new bridge.",
+    "options": [
+      "are completing",
+      "will have completed",
+      "have completed",
+      "will complete"
+    ],
+    "answer": 1,
+    "explanation": "'By + a future point of time' indicates an action finished before that time, which requires the future perfect tense.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He ______ for the bus when it began to rain.",
+    "options": [
+      "will wait",
+      "has waited",
+      "was waiting",
+      "is waiting"
+    ],
+    "answer": 2,
+    "explanation": "The past continuous tense shows an action that was in progress when another past action (the rain beginning) occurred.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correctly written sentence.",
+    "options": [
+      "I saw him yesterday.",
+      "I am seeing him yesterday.",
+      "I see him yesterday.",
+      "I have seen him yesterday."
+    ],
+    "answer": 0,
+    "explanation": "With a definite past time expression like 'yesterday', the simple past tense must be used, never the present perfect.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Hardly ______ the room when the phone rang.",
+    "options": [
+      "did he enter",
+      "he had entered",
+      "he entered",
+      "had he entered"
+    ],
+    "answer": 3,
+    "explanation": "When a sentence begins with 'Hardly', the past perfect is used with inversion: Hardly had + subject + past participle, followed by 'when'.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "It is high time we ______ home.",
+    "options": [
+      "will go",
+      "go",
+      "went",
+      "are going"
+    ],
+    "answer": 2,
+    "explanation": "'It is high time' is followed by the past subjunctive (simple past form) to show that the action should already have happened.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "This time tomorrow, we ______ over the Arabian Sea.",
+    "options": [
+      "will have flown",
+      "will be flying",
+      "fly",
+      "will fly"
+    ],
+    "answer": 1,
+    "explanation": "An action that will be in progress at a specific future moment ('this time tomorrow') takes the future continuous tense.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "tenses"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "If I ______ a bird, I would fly to you.",
+    "options": [
+      "were",
+      "was",
+      "am",
+      "had been"
+    ],
+    "answer": 0,
+    "explanation": "In hypothetical (second) conditionals, the subjunctive 'were' is used for all persons, including 'I' and 'he'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "conditionals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "If it rains tomorrow, we ______ the match.",
+    "options": [
+      "would have postponed",
+      "would postpone",
+      "postponed",
+      "will postpone"
+    ],
+    "answer": 3,
+    "explanation": "In the first conditional, the if-clause takes the simple present and the main clause takes 'will + base verb'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "conditionals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "If she had worked harder, she ______ the examination.",
+    "options": [
+      "will pass",
+      "would pass",
+      "would have passed",
+      "had passed"
+    ],
+    "answer": 2,
+    "explanation": "In the third conditional, the if-clause takes the past perfect and the main clause takes 'would have + past participle'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "conditionals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Had I known about the meeting, I ______ attended it.",
+    "options": [
+      "had",
+      "would",
+      "will have",
+      "would have"
+    ],
+    "answer": 3,
+    "explanation": "'Had I known' is an inverted third conditional meaning 'If I had known', so the main clause needs 'would have + past participle'.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "conditionals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Unless you hurry, you ______ the train.",
+    "options": [
+      "missed",
+      "will miss",
+      "would have missed",
+      "would miss"
+    ],
+    "answer": 1,
+    "explanation": "'Unless' means 'if not' and forms a first conditional, so the main clause takes 'will + base verb'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "conditionals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Neither of the boys ______ present at the meeting yesterday.",
+    "options": [
+      "was",
+      "were",
+      "are",
+      "have been"
+    ],
+    "answer": 0,
+    "explanation": "'Neither of + plural noun' is treated as singular, so it takes a singular verb.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The news ______ too good to be true.",
+    "options": [
+      "were",
+      "is",
+      "are",
+      "have been"
+    ],
+    "answer": 1,
+    "explanation": "'News' looks plural but is an uncountable singular noun and always takes a singular verb.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Bread and butter ______ his only breakfast.",
+    "options": [
+      "is",
+      "are",
+      "have been",
+      "were"
+    ],
+    "answer": 0,
+    "explanation": "When two nouns joined by 'and' express a single idea or one dish, they take a singular verb.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Either the manager or the clerks ______ responsible for the delay.",
+    "options": [
+      "is",
+      "was",
+      "are",
+      "has been"
+    ],
+    "answer": 2,
+    "explanation": "With 'either...or', the verb agrees with the subject nearer to it; here the nearer subject 'clerks' is plural.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Each of the students ______ given a prize.",
+    "options": [
+      "were",
+      "have been",
+      "are",
+      "was"
+    ],
+    "answer": 3,
+    "explanation": "'Each of + plural noun' is singular in sense and therefore takes a singular verb.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "A number of students ______ absent today.",
+    "options": [
+      "is",
+      "was",
+      "has been",
+      "are"
+    ],
+    "answer": 3,
+    "explanation": "'A number of' means 'many' and takes a plural verb, whereas 'the number of' takes a singular verb.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Ten kilometres ______ a long distance to walk.",
+    "options": [
+      "have been",
+      "is",
+      "are",
+      "were"
+    ],
+    "answer": 1,
+    "explanation": "Expressions of distance, money, weight and time are treated as a single unit and take a singular verb.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Many a student ______ failed in the examination.",
+    "options": [
+      "were",
+      "are",
+      "has",
+      "have"
+    ],
+    "answer": 2,
+    "explanation": "'Many a + singular noun' is plural in meaning but singular in form, so it takes a singular verb.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "______ you succeed in all your endeavours! (expressing a wish)",
+    "options": [
+      "May",
+      "Would",
+      "Might",
+      "Should"
+    ],
+    "answer": 0,
+    "explanation": "The modal 'may' is used to express a wish, prayer or blessing, as in 'May God bless you!'",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "modals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "When he was young, he ______ swim across the river.",
+    "options": [
+      "might",
+      "could",
+      "can",
+      "may"
+    ],
+    "answer": 1,
+    "explanation": "'Could' expresses ability in the past; 'can' is used only for present ability.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "modals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "You ______ to respect your elders.",
+    "options": [
+      "must",
+      "might",
+      "should",
+      "ought"
+    ],
+    "answer": 3,
+    "explanation": "'Ought' is the only modal that is followed by a to-infinitive; it expresses moral duty or obligation.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "modals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "______ he returned the book to the library?",
+    "options": [
+      "Has",
+      "Was",
+      "Have",
+      "Did"
+    ],
+    "answer": 0,
+    "explanation": "The past participle 'returned' with a singular subject 'he' needs the primary auxiliary 'has' to form the present perfect question.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "modals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "You ______ better consult a doctor at once.",
+    "options": [
+      "should",
+      "will",
+      "had",
+      "would"
+    ],
+    "answer": 2,
+    "explanation": "'Had better' is a fixed expression used to give strong advice; it is followed by the bare infinitive.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "modals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The lights are on; he ______ be at home.",
+    "options": [
+      "can",
+      "dare",
+      "must",
+      "need"
+    ],
+    "answer": 2,
+    "explanation": "'Must' expresses a strong logical conclusion or certainty drawn from evidence.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "modals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Need he go there tonight? — No, he ______.",
+    "options": [
+      "may not",
+      "need not",
+      "did not",
+      "must not"
+    ],
+    "answer": 1,
+    "explanation": "A question with modal 'need' is answered negatively with 'need not' (absence of necessity); 'must not' would wrongly express prohibition.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "modals"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She is beautiful, ______?",
+    "options": [
+      "doesn't she?",
+      "is she?",
+      "wasn't she?",
+      "isn't she?"
+    ],
+    "answer": 3,
+    "explanation": "A positive statement takes a negative tag formed with the same auxiliary ('is') and the pronoun of the subject.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "question-tags"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "They went home early, ______?",
+    "options": [
+      "didn't they?",
+      "did they?",
+      "didn't them?",
+      "don't they?"
+    ],
+    "answer": 0,
+    "explanation": "When the statement has no auxiliary, the tag uses 'do/does/did'; a simple past statement takes 'didn't' plus the subject pronoun.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "question-tags"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Let us go for a walk, ______?",
+    "options": [
+      "do we?",
+      "won't we?",
+      "shall we?",
+      "will you?"
+    ],
+    "answer": 2,
+    "explanation": "Sentences beginning with 'Let us' (a suggestion) always take the question tag 'shall we?'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "question-tags"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Please open the door, ______?",
+    "options": [
+      "did you?",
+      "shall we?",
+      "do you?",
+      "will you?"
+    ],
+    "answer": 3,
+    "explanation": "An imperative sentence (a request or command) takes the question tag 'will you?'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "question-tags"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He seldom comes late, ______?",
+    "options": [
+      "does he?",
+      "doesn't he?",
+      "has he?",
+      "is he?"
+    ],
+    "answer": 0,
+    "explanation": "Words like 'seldom', 'hardly' and 'never' make a statement negative in meaning, so the tag must be positive.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "question-tags"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "I am your friend, ______?",
+    "options": [
+      "amn't I?",
+      "aren't I?",
+      "isn't I?",
+      "am I?"
+    ],
+    "answer": 1,
+    "explanation": "The accepted tag for 'I am' is 'aren't I?', since 'amn't' is not standard English.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "question-tags"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Everyone enjoyed the party, ______?",
+    "options": [
+      "didn't he?",
+      "didn't they?",
+      "did they?",
+      "didn't everyone?"
+    ],
+    "answer": 1,
+    "explanation": "Indefinite pronouns like 'everyone' and 'everybody' are referred to by 'they' in question tags.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "question-tags"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He is fond of ______ cricket.",
+    "options": [
+      "to play",
+      "play",
+      "playing",
+      "played"
+    ],
+    "answer": 2,
+    "explanation": "A preposition such as 'of' must be followed by a gerund (verb + ing), not an infinitive.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She wants ______ a doctor when she grows up.",
+    "options": [
+      "to become",
+      "becoming",
+      "become",
+      "to becoming"
+    ],
+    "answer": 0,
+    "explanation": "The verb 'want' is always followed by a to-infinitive, never by a gerund.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "I look forward to ______ from you soon.",
+    "options": [
+      "heard",
+      "hear",
+      "to hear",
+      "hearing"
+    ],
+    "answer": 3,
+    "explanation": "In 'look forward to', the word 'to' is a preposition, so it must be followed by a gerund.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He avoided ______ my question.",
+    "options": [
+      "answering",
+      "answered",
+      "to answer",
+      "answer"
+    ],
+    "answer": 0,
+    "explanation": "Verbs like 'avoid', 'enjoy', 'finish' and 'suggest' are followed by a gerund, not an infinitive.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The teacher made the boy ______ the poem.",
+    "options": [
+      "recited",
+      "to recite",
+      "recite",
+      "reciting"
+    ],
+    "answer": 2,
+    "explanation": "Causative verbs like 'make', 'let' and 'bid' take the bare infinitive (without 'to') after their object.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Complete the proverb: '______ is human, to forgive divine.'",
+    "options": [
+      "To erring",
+      "Erring",
+      "Err",
+      "To err"
+    ],
+    "answer": 3,
+    "explanation": "The infinitive 'to err' acts as the subject of the sentence, parallel to 'to forgive' in the second half.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Would you mind ______ the window?",
+    "options": [
+      "open",
+      "opening",
+      "opened",
+      "to open"
+    ],
+    "answer": 1,
+    "explanation": "The verb 'mind' is always followed by a gerund, not an infinitive.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "I remember ______ him at a conference last year.",
+    "options": [
+      "meet",
+      "to meet",
+      "meeting",
+      "met"
+    ],
+    "answer": 2,
+    "explanation": "'Remember + gerund' refers to a memory of a past action; 'remember + infinitive' would mean remembering to do something in the future.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "infinitives-gerunds"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "In the sentence 'She sings beautifully', the word 'beautifully' is a/an ______.",
+    "options": [
+      "Noun",
+      "Adverb",
+      "Adjective",
+      "Verb"
+    ],
+    "answer": 1,
+    "explanation": "'Beautifully' modifies the verb 'sings', telling how she sings, so it is an adverb. Words ending in '-ly' that modify verbs are usually adverbs.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Identify the part of speech of 'honesty' in: 'Honesty is the best policy.'",
+    "options": [
+      "Noun",
+      "Adjective",
+      "Verb",
+      "Adverb"
+    ],
+    "answer": 0,
+    "explanation": "'Honesty' names a quality and acts as the subject of the sentence, so it is an abstract noun. The adjective form would be 'honest'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "In 'The fast train arrived late', the word 'fast' functions as a/an ______.",
+    "options": [
+      "Verb",
+      "Adverb",
+      "Noun",
+      "Adjective"
+    ],
+    "answer": 3,
+    "explanation": "Here 'fast' describes the noun 'train', so it is an adjective. The same word becomes an adverb only when it modifies a verb.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "In 'He ran fast to catch the bus', the word 'fast' is used as a/an ______.",
+    "options": [
+      "Adjective",
+      "Adverb",
+      "Noun",
+      "Preposition"
+    ],
+    "answer": 1,
+    "explanation": "Here 'fast' modifies the verb 'ran', showing how he ran, so it is an adverb. 'Fast' keeps the same form whether used as adjective or adverb.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "In 'Alas! We lost the match', the word 'Alas' is a/an ______.",
+    "options": [
+      "Interjection",
+      "Adverb",
+      "Conjunction",
+      "Preposition"
+    ],
+    "answer": 0,
+    "explanation": "'Alas' expresses a sudden feeling of sorrow and stands apart from the grammar of the sentence, so it is an interjection.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "In 'The then king was very cruel', the word 'then' is used as a/an ______.",
+    "options": [
+      "Noun",
+      "Conjunction",
+      "Adverb",
+      "Adjective"
+    ],
+    "answer": 3,
+    "explanation": "Though 'then' is usually an adverb, here it qualifies the noun 'king' (the king at that time), so it functions as an adjective.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "In 'The rich should help the poor', the word 'rich' functions as a/an ______.",
+    "options": [
+      "Verb",
+      "Adjective",
+      "Noun",
+      "Adverb"
+    ],
+    "answer": 2,
+    "explanation": "When an adjective is preceded by 'the' to denote a whole class of people, it functions as a noun; 'the rich' means rich people.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "In 'He faced the danger with courage', the word 'courage' is a/an ______ noun.",
+    "options": [
+      "Abstract",
+      "Common",
+      "Collective",
+      "Proper"
+    ],
+    "answer": 0,
+    "explanation": "'Courage' names a quality that cannot be seen or touched, so it is an abstract noun. Qualities, states and actions are named by abstract nouns.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "parts-of-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He is ______ honest man.",
+    "options": [
+      "the",
+      "an",
+      "a",
+      "No article"
+    ],
+    "answer": 1,
+    "explanation": "'Honest' begins with a silent 'h', so the word starts with a vowel sound and takes 'an'. The choice of a/an depends on sound, not spelling.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "articles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She is ______ European by birth.",
+    "options": [
+      "the",
+      "an",
+      "No article",
+      "a"
+    ],
+    "answer": 3,
+    "explanation": "'European' begins with the consonant sound /j/ (as in 'yes'), so it takes 'a' even though the spelling starts with a vowel letter.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "articles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "______ Ganga is a holy river of India.",
+    "options": [
+      "An",
+      "A",
+      "The",
+      "No article"
+    ],
+    "answer": 2,
+    "explanation": "Names of rivers, seas and mountain ranges always take the definite article 'the', as in the Ganga, the Nile and the Himalayas.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "articles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "I met ______ one-eyed beggar on the way.",
+    "options": [
+      "an",
+      "No article",
+      "the",
+      "a"
+    ],
+    "answer": 3,
+    "explanation": "'One' begins with the consonant sound /w/, so 'a' is used before 'one-eyed'. The initial sound, not the letter, decides between a and an.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "articles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He returned home after ______ hour.",
+    "options": [
+      "the",
+      "a",
+      "an",
+      "No article"
+    ],
+    "answer": 2,
+    "explanation": "The 'h' in 'hour' is silent, so the word begins with a vowel sound and takes 'an'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "articles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "My uncle is ______ M.L.A.",
+    "options": [
+      "an",
+      "the",
+      "a",
+      "No article"
+    ],
+    "answer": 0,
+    "explanation": "The letter 'M' is pronounced 'em', which begins with a vowel sound, so abbreviations like M.L.A., M.P. and M.A. take 'an'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "articles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He goes to ______ church every Sunday to pray.",
+    "options": [
+      "a",
+      "No article",
+      "an",
+      "the"
+    ],
+    "answer": 1,
+    "explanation": "When places like church, school, hospital or bed are visited for their primary purpose, no article is used. 'The church' would refer to the building itself.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "articles"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The train arrives ______ 6 o'clock every morning.",
+    "options": [
+      "on",
+      "at",
+      "by",
+      "in"
+    ],
+    "answer": 1,
+    "explanation": "'At' is used for a precise point of time, such as at 6 o'clock, at noon or at midnight. 'On' is for days and 'in' is for longer periods.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He has been living in Kochi ______ 2010.",
+    "options": [
+      "for",
+      "before",
+      "since",
+      "from"
+    ],
+    "answer": 2,
+    "explanation": "'Since' marks the point of time when an action began and is used with perfect tenses; 'for' would be used with a period, as in 'for ten years'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He is afraid ______ dogs.",
+    "options": [
+      "with",
+      "from",
+      "by",
+      "of"
+    ],
+    "answer": 3,
+    "explanation": "The adjective 'afraid' always takes the preposition 'of'. Such fixed adjective-preposition pairs must be learnt as units.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She has been suffering ______ fever for two days.",
+    "options": [
+      "from",
+      "by",
+      "with",
+      "of"
+    ],
+    "answer": 0,
+    "explanation": "The verb 'suffer' takes 'from' when speaking of an illness: one suffers from fever, from a cold or from a disease.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He is senior ______ me by three years.",
+    "options": [
+      "to",
+      "from",
+      "over",
+      "than"
+    ],
+    "answer": 0,
+    "explanation": "Latin comparatives like senior, junior, superior, inferior and prior take 'to', never 'than'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Distribute the sweets ______ the five children.",
+    "options": [
+      "upon",
+      "between",
+      "within",
+      "among"
+    ],
+    "answer": 3,
+    "explanation": "'Among' is used when sharing involves more than two persons; 'between' is reserved for two.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He was accused ______ theft by his neighbour.",
+    "options": [
+      "with",
+      "of",
+      "by",
+      "for"
+    ],
+    "answer": 1,
+    "explanation": "'Accuse' takes 'of' (accused of theft), whereas 'charge' takes 'with' (charged with theft). These fixed pairs are frequently tested.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She was married ______ a doctor last year.",
+    "options": [
+      "for",
+      "by",
+      "to",
+      "with"
+    ],
+    "answer": 2,
+    "explanation": "In standard English one is married 'to' a person, not 'with'. 'Married with' is a common Indian-English error.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The chairman presided ______ the annual meeting.",
+    "options": [
+      "in",
+      "on",
+      "upon",
+      "over"
+    ],
+    "answer": 3,
+    "explanation": "The verb 'preside' takes the preposition 'over': one presides over a meeting or a function.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She prides herself ______ her cooking.",
+    "options": [
+      "of",
+      "on",
+      "in",
+      "at"
+    ],
+    "answer": 1,
+    "explanation": "The reflexive verb 'pride oneself' takes 'on'. Compare the noun phrase 'take pride in', which takes 'in' instead.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "prepositions"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Kiran is ______ than his brother.",
+    "options": [
+      "tall",
+      "more taller",
+      "taller",
+      "tallest"
+    ],
+    "answer": 2,
+    "explanation": "'Than' signals a comparison between two persons, so the comparative degree 'taller' is required. 'More taller' is a double comparative and is wrong.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Of the two sisters, Meera is the ______.",
+    "options": [
+      "smarter",
+      "smartest",
+      "most smart",
+      "smart"
+    ],
+    "answer": 0,
+    "explanation": "When only two persons are compared, the comparative degree is used with 'the'; the superlative needs three or more.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the grammatically correct comparison.",
+    "options": [
+      "He is wiser than clever.",
+      "He is wisest than clever.",
+      "He is more wise than clever.",
+      "He is as wiser as clever."
+    ],
+    "answer": 2,
+    "explanation": "When two qualities of the same person are compared, 'more' with the positive form is used, not the '-er' comparative.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Select the sentence that uses the degree of comparison correctly.",
+    "options": [
+      "Iron is more useful than any other metal.",
+      "Iron is the most useful than any other metal.",
+      "Iron is more useful than any metal.",
+      "Iron is more useful than all metals."
+    ],
+    "answer": 0,
+    "explanation": "In comparing one thing with the rest of its class, 'any other' must be used to exclude the thing itself; iron cannot be more useful than itself.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She speaks English ______.",
+    "options": [
+      "fluenter",
+      "more fluent",
+      "fluent",
+      "fluently"
+    ],
+    "answer": 3,
+    "explanation": "An adverb is needed to modify the verb 'speaks', so 'fluently' is correct; 'fluent' is an adjective and cannot modify a verb.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He worked ______ to pass the examination.",
+    "options": [
+      "hardly",
+      "hard",
+      "hardy",
+      "hardness"
+    ],
+    "answer": 1,
+    "explanation": "'Hard' is the adverb meaning with great effort; 'hardly' means scarcely and would reverse the meaning of the sentence.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The climate of Kerala is better than ______ of Tamil Nadu.",
+    "options": [
+      "it",
+      "this",
+      "those",
+      "that"
+    ],
+    "answer": 3,
+    "explanation": "To avoid repeating the singular noun 'climate', the pronoun 'that' is used; 'those' would stand for a plural noun.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He is ______ enough to lift the heavy box.",
+    "options": [
+      "strongest",
+      "strong",
+      "strength",
+      "strongly"
+    ],
+    "answer": 1,
+    "explanation": "After the linking verb 'is', an adjective describing the subject is needed, and 'enough' follows the adjective: strong enough.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "comparison"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Neither Ravi ______ his friends were present at the meeting.",
+    "options": [
+      "nor",
+      "and",
+      "or",
+      "but"
+    ],
+    "answer": 0,
+    "explanation": "'Neither' must always be paired with 'nor'; 'either' pairs with 'or'. Mixing the pairs is a common exam trap.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "correlatives"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "No sooner had he reached the station ______ the train left.",
+    "options": [
+      "then",
+      "when",
+      "than",
+      "that"
+    ],
+    "answer": 2,
+    "explanation": "'No sooner' is a comparative expression and must be followed by 'than', while 'hardly' and 'scarcely' are followed by 'when'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "correlatives"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "She is not only intelligent ______ hardworking.",
+    "options": [
+      "as well",
+      "but also",
+      "or else",
+      "and also"
+    ],
+    "answer": 1,
+    "explanation": "The correlative pair is 'not only ... but also'; the two joined items must be balanced by this fixed pair.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "correlatives"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Hardly had she entered the room ______ the phone rang.",
+    "options": [
+      "than",
+      "that",
+      "when",
+      "then"
+    ],
+    "answer": 2,
+    "explanation": "'Hardly' and 'scarcely' are followed by 'when', whereas 'no sooner' is followed by 'than'. Confusing the two pairs is a frequent error.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "correlatives"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "'What a beautiful painting it is!' — this is a/an ______ sentence.",
+    "options": [
+      "Exclamatory",
+      "Interrogative",
+      "Imperative",
+      "Assertive"
+    ],
+    "answer": 0,
+    "explanation": "The sentence expresses a sudden strong feeling and ends with an exclamation mark, so it is exclamatory.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "sentence-correction"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "'Please close the door.' is an example of a/an ______ sentence.",
+    "options": [
+      "Interrogative",
+      "Exclamatory",
+      "Assertive",
+      "Imperative"
+    ],
+    "answer": 3,
+    "explanation": "A sentence that expresses an order, request or advice is imperative; its subject 'you' is understood, not stated.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "sentence-correction"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "'May God bless you!' is a/an ______ sentence.",
+    "options": [
+      "Exclamatory",
+      "Imperative",
+      "Optative",
+      "Interrogative"
+    ],
+    "answer": 2,
+    "explanation": "A sentence that expresses a wish, prayer or blessing is called optative, often beginning with 'May'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "sentence-correction"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Pick out the correct sentence.",
+    "options": [
+      "She did not wrote the letter.",
+      "She did not write the letter.",
+      "She has not wrote the letter.",
+      "She did not written the letter."
+    ],
+    "answer": 1,
+    "explanation": "After the auxiliary 'did', the verb must be in its base form: did not write. The past form 'wrote' cannot follow 'did'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "sentence-correction"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Select the correct sentence.",
+    "options": [
+      "I am working here since 2015.",
+      "I work here since 2015.",
+      "I was working here since 2015.",
+      "I have been working here since 2015."
+    ],
+    "answer": 3,
+    "explanation": "With 'since' plus a point of time, an action continuing into the present needs the present perfect continuous tense.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "sentence-correction"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correctly reported question.",
+    "options": [
+      "He asked me where I lived.",
+      "He asked me where did I live.",
+      "He asked me where do I lived.",
+      "He asked me that where I lived."
+    ],
+    "answer": 0,
+    "explanation": "In reported speech a question takes statement word order (subject before verb) and drops the auxiliary 'did'; 'that' is never used before a wh-word.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "sentence-correction"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Find the grammatically correct sentence.",
+    "options": [
+      "Each of the students has submitted the assignment.",
+      "Each of the students have submitted the assignment.",
+      "Each of the student has submitted the assignment.",
+      "Each students has submitted the assignment."
+    ],
+    "answer": 0,
+    "explanation": "'Each of' takes a plural noun after it, but the verb agrees with 'each', which is singular: each of the students has.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "sentence-correction"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'She writes a letter.'",
+    "options": [
+      "A letter is written by she.",
+      "A letter is being written by her.",
+      "A letter was written by her.",
+      "A letter is written by her."
+    ],
+    "answer": 3,
+    "explanation": "Simple present active (writes) becomes 'is/are + past participle' in the passive, and the subject pronoun 'she' changes to the object form 'her'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'The teacher praised the student.'",
+    "options": [
+      "The student is praised by the teacher.",
+      "The student was praised by the teacher.",
+      "The student was praising by the teacher.",
+      "The student has been praised by the teacher."
+    ],
+    "answer": 1,
+    "explanation": "Simple past active takes 'was/were + past participle' in the passive; the tense must remain simple past.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'They are building a new bridge.'",
+    "options": [
+      "A new bridge is being build by them.",
+      "A new bridge is built by them.",
+      "A new bridge is being built by them.",
+      "A new bridge was being built by them."
+    ],
+    "answer": 2,
+    "explanation": "Present continuous active becomes 'is/are + being + past participle' in the passive, so 'are building' changes to 'is being built'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'Who wrote this poem?'",
+    "options": [
+      "Who was this poem written?",
+      "By whom this poem was written?",
+      "By whom is this poem written?",
+      "By whom was this poem written?"
+    ],
+    "answer": 3,
+    "explanation": "In a passive question, 'who' becomes 'by whom' and the auxiliary must come before the subject: 'By whom was this poem written?'. The past tense is retained.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'Open the door.'",
+    "options": [
+      "Let the door be open.",
+      "Let the door be opened.",
+      "Let the door opened.",
+      "Let the door is opened."
+    ],
+    "answer": 1,
+    "explanation": "An imperative sentence takes the passive pattern 'Let + object + be + past participle', so it becomes 'Let the door be opened.'",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'He has completed the project.'",
+    "options": [
+      "The project had been completed by him.",
+      "The project was completed by him.",
+      "The project has been completed by him.",
+      "The project has completed by him."
+    ],
+    "answer": 2,
+    "explanation": "Present perfect active becomes 'has/have + been + past participle' in the passive; the perfect tense must not shift to past.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'Somebody stole my purse.'",
+    "options": [
+      "My purse was stolen.",
+      "My purse was being stolen.",
+      "My purse is stolen.",
+      "My purse had been stolen."
+    ],
+    "answer": 0,
+    "explanation": "With a vague agent like 'somebody', the by-phrase is dropped; simple past active becomes 'was/were + past participle'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct active form: 'The thief was caught by the police.'",
+    "options": [
+      "The police were catching the thief.",
+      "The police catch the thief.",
+      "The police have caught the thief.",
+      "The police caught the thief."
+    ],
+    "answer": 3,
+    "explanation": "The passive 'was caught' is simple past, so the active form must also be simple past: 'caught'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'They will announce the results tomorrow.'",
+    "options": [
+      "The results will announce tomorrow.",
+      "The results will be announced tomorrow.",
+      "The results would be announced tomorrow.",
+      "The results will be announce tomorrow."
+    ],
+    "answer": 1,
+    "explanation": "Simple future active becomes 'will + be + past participle' in the passive; 'will' does not change to 'would'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correct passive form: 'One should keep one's promises.'",
+    "options": [
+      "Promises should be kept.",
+      "Promises should be keep.",
+      "Promises ought to keep.",
+      "Promises should have been kept."
+    ],
+    "answer": 0,
+    "explanation": "With a modal verb, the passive is 'modal + be + past participle'; the indefinite agent 'one' is omitted, giving 'Promises should be kept.'",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "voice"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: He said, 'I am busy.'",
+    "options": [
+      "He said that I was busy.",
+      "He said that he is busy.",
+      "He said that he was busy.",
+      "He said that he had been busy."
+    ],
+    "answer": 2,
+    "explanation": "After a past reporting verb, the present tense 'am' backshifts to 'was', and the pronoun 'I' changes to 'he'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: She said to me, 'I will help you.'",
+    "options": [
+      "She told me that she will help me.",
+      "She said me that she would help me.",
+      "She told me that she would help me.",
+      "She told me that I would help her."
+    ],
+    "answer": 2,
+    "explanation": "'Said to' becomes 'told', 'will' backshifts to 'would', and the pronouns change to 'she' and 'me' from the reporter's point of view.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: He said, 'I saw the film yesterday.'",
+    "options": [
+      "He said that he had seen the film the previous day.",
+      "He said that he has seen the film the previous day.",
+      "He said that he had seen the film yesterday.",
+      "He said that he saw the film yesterday."
+    ],
+    "answer": 0,
+    "explanation": "Simple past backshifts to past perfect ('saw' to 'had seen'), and 'yesterday' changes to 'the previous day' in reported speech.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: The teacher said, 'The earth revolves around the sun.'",
+    "options": [
+      "The teacher said that the earth had revolved around the sun.",
+      "The teacher said that the earth revolves around the sun.",
+      "The teacher said that the earth revolved around the sun.",
+      "The teacher said that the earth was revolving around the sun."
+    ],
+    "answer": 1,
+    "explanation": "A universal truth is not backshifted in reported speech, so 'revolves' stays in the simple present.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: She said to me, 'Do you like coffee?'",
+    "options": [
+      "She asked me did I like coffee.",
+      "She asked me if I like coffee.",
+      "She told me if I liked coffee.",
+      "She asked me if I liked coffee."
+    ],
+    "answer": 3,
+    "explanation": "A yes/no question is reported with 'asked ... if/whether' in statement order, and 'like' backshifts to 'liked'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: He said to me, 'Where are you going?'",
+    "options": [
+      "He asked me where I am going.",
+      "He asked me where I was going.",
+      "He asked me where he was going.",
+      "He asked me where was I going."
+    ],
+    "answer": 1,
+    "explanation": "A wh-question is reported in statement word order (subject before verb), with 'are' backshifted to 'was' and 'you' changed to 'I'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: The officer said to the men, 'March forward.'",
+    "options": [
+      "The officer said the men to march forward.",
+      "The officer ordered the men that they march forward.",
+      "The officer ordered the men to marched forward.",
+      "The officer ordered the men to march forward."
+    ],
+    "answer": 3,
+    "explanation": "A command is reported with 'ordered/commanded + object + to-infinitive': 'ordered the men to march forward'.",
+    "difficulty": 2,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: She said, 'What a beautiful sunset!'",
+    "options": [
+      "She asked whether the sunset was beautiful.",
+      "She exclaimed that the sunset is very beautiful.",
+      "She exclaimed that the sunset was very beautiful.",
+      "She said that what a beautiful sunset."
+    ],
+    "answer": 2,
+    "explanation": "An exclamation is reported with 'exclaimed that', the exclamatory form becomes a statement with 'very', and 'is' backshifts to 'was'.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: He said, 'Let us go for a walk.'",
+    "options": [
+      "He suggested that we should go for a walk.",
+      "He suggested us to go for a walk.",
+      "He said that we go for a walk.",
+      "He ordered that we should go for a walk."
+    ],
+    "answer": 0,
+    "explanation": "A proposal beginning with 'Let us' is reported with 'suggested that + subject + should'; 'suggest' never takes 'object + to-infinitive'.",
+    "difficulty": 3,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Rewrite in reported speech: The doctor said to him, 'Do not smoke.'",
+    "options": [
+      "The doctor advised that he does not smoke.",
+      "The doctor said him not to smoke.",
+      "The doctor advised him not to smoke.",
+      "The doctor advised him do not smoke."
+    ],
+    "answer": 2,
+    "explanation": "A negative command is reported with 'advised/told + object + not + to-infinitive': 'advised him not to smoke'.",
+    "difficulty": 1,
+    "tags": [
+      "grammar",
+      "reported-speech"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'candid' is:",
+    "options": [
+      "Frank",
+      "Timid",
+      "Secretive",
+      "Dishonest"
+    ],
+    "answer": 0,
+    "explanation": "'Candid' means truthful and straightforward in speech, which is exactly what 'frank' means.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'abundant' is:",
+    "options": [
+      "Moderate",
+      "Plentiful",
+      "Meagre",
+      "Scarce"
+    ],
+    "answer": 1,
+    "explanation": "'Abundant' means existing in large quantities, the same as 'plentiful'; 'scarce' and 'meagre' are its opposites.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'jubilant' is:",
+    "options": [
+      "Sorrowful",
+      "Furious",
+      "Jealous",
+      "Joyful"
+    ],
+    "answer": 3,
+    "explanation": "'Jubilant' means feeling or expressing great happiness, especially at a success, so 'joyful' is the closest word.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'obsolete' is:",
+    "options": [
+      "Modern",
+      "Fashionable",
+      "Outdated",
+      "Useful"
+    ],
+    "answer": 2,
+    "explanation": "'Obsolete' describes something no longer in use because it is out of date, so 'outdated' is the synonym.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'eminent' is:",
+    "options": [
+      "Notorious",
+      "Imminent",
+      "Ordinary",
+      "Distinguished"
+    ],
+    "answer": 3,
+    "explanation": "'Eminent' means famous and respected in a field, i.e. 'distinguished'; do not confuse it with 'imminent' (about to happen).",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'audacious' is:",
+    "options": [
+      "Audible",
+      "Bold",
+      "Cautious",
+      "Cowardly"
+    ],
+    "answer": 1,
+    "explanation": "'Audacious' means showing a willingness to take daring risks, so 'bold' is the synonym; 'audible' merely sounds similar.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'frugal' is:",
+    "options": [
+      "Thrifty",
+      "Wasteful",
+      "Generous",
+      "Wealthy"
+    ],
+    "answer": 0,
+    "explanation": "'Frugal' means careful and sparing in spending money, which is the meaning of 'thrifty'; 'wasteful' is its opposite.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The synonym of 'ephemeral' is:",
+    "options": [
+      "Delicate",
+      "Powerful",
+      "Eternal",
+      "Short-lived"
+    ],
+    "answer": 3,
+    "explanation": "'Ephemeral' describes something lasting for a very short time, so 'short-lived' is the synonym and 'eternal' the opposite.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'transparent' is:",
+    "options": [
+      "Clear",
+      "Fragile",
+      "Opaque",
+      "Glossy"
+    ],
+    "answer": 2,
+    "explanation": "'Transparent' means allowing light to pass through, while 'opaque' means not allowing light through.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'victory' is:",
+    "options": [
+      "Glory",
+      "Defeat",
+      "Struggle",
+      "Triumph"
+    ],
+    "answer": 1,
+    "explanation": "'Victory' means winning a contest; its opposite is 'defeat'. 'Triumph' is a synonym of victory, not its antonym.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'expand' is:",
+    "options": [
+      "Contract",
+      "Explode",
+      "Enlarge",
+      "Extend"
+    ],
+    "answer": 0,
+    "explanation": "'Expand' means to become larger; 'contract' means to become smaller, making it the antonym.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'optimistic' is:",
+    "options": [
+      "Realistic",
+      "Energetic",
+      "Hopeful",
+      "Pessimistic"
+    ],
+    "answer": 3,
+    "explanation": "An 'optimistic' person expects the best, while a 'pessimistic' person expects the worst.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'arrogant' is:",
+    "options": [
+      "Rude",
+      "Humble",
+      "Proud",
+      "Wealthy"
+    ],
+    "answer": 1,
+    "explanation": "'Arrogant' means having an exaggerated sense of one's importance; 'humble' means modest, its opposite.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'benevolent' is:",
+    "options": [
+      "Kind",
+      "Generous",
+      "Malevolent",
+      "Brilliant"
+    ],
+    "answer": 2,
+    "explanation": "'Benevolent' means well-meaning and kindly; 'malevolent' means wishing harm to others, its direct opposite.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'prosperity' is:",
+    "options": [
+      "Adversity",
+      "Fortune",
+      "Wealth",
+      "Happiness"
+    ],
+    "answer": 0,
+    "explanation": "'Prosperity' means success and good fortune, while 'adversity' means difficulty and misfortune.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The antonym of 'exonerate' is:",
+    "options": [
+      "Release",
+      "Convict",
+      "Acquit",
+      "Forgive"
+    ],
+    "answer": 1,
+    "explanation": "'Exonerate' means to officially declare someone free of blame; 'convict' means to declare someone guilty. 'Acquit' is a synonym of exonerate.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "antonyms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'a person who loves books':",
+    "options": [
+      "Philologist",
+      "Bibliophobe",
+      "Bibliographer",
+      "Bibliophile"
+    ],
+    "answer": 3,
+    "explanation": "'Bibliophile' comes from Greek 'biblio' (book) and 'phile' (lover); a 'bibliophobe' fears or dislikes books.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'a person who can use both hands equally well':",
+    "options": [
+      "Ambidextrous",
+      "Dexterous",
+      "Amphibious",
+      "Ambiguous"
+    ],
+    "answer": 0,
+    "explanation": "'Ambidextrous' means able to use the right and left hands equally well; 'dexterous' only means skilful with the hands.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'a speech made without preparation':",
+    "options": [
+      "Prologue",
+      "Monologue",
+      "Extempore",
+      "Soliloquy"
+    ],
+    "answer": 2,
+    "explanation": "An 'extempore' speech is delivered without prior preparation; a 'soliloquy' is speaking one's thoughts aloud when alone.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'government by the people':",
+    "options": [
+      "Democracy",
+      "Bureaucracy",
+      "Monarchy",
+      "Autocracy"
+    ],
+    "answer": 0,
+    "explanation": "'Democracy' is rule by the people; 'autocracy' is rule by one person with absolute power and 'monarchy' is rule by a king or queen.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'a person who does not believe in the existence of God':",
+    "options": [
+      "Pagan",
+      "Atheist",
+      "Theist",
+      "Agnostic"
+    ],
+    "answer": 1,
+    "explanation": "An 'atheist' denies the existence of God, while an 'agnostic' holds that God's existence cannot be known.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'a place where bees are kept':",
+    "options": [
+      "Aquarium",
+      "Granary",
+      "Apiary",
+      "Aviary"
+    ],
+    "answer": 2,
+    "explanation": "An 'apiary' is a place where bees are kept; an 'aviary' houses birds and a 'granary' stores grain.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'a person who knows many languages':",
+    "options": [
+      "Grammarian",
+      "Polygamist",
+      "Bilingual",
+      "Polyglot"
+    ],
+    "answer": 3,
+    "explanation": "A 'polyglot' knows and uses many languages; 'bilingual' refers to only two languages.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'the study or collection of coins':",
+    "options": [
+      "Archaeology",
+      "Numismatics",
+      "Calligraphy",
+      "Philately"
+    ],
+    "answer": 1,
+    "explanation": "'Numismatics' is the study or collection of coins and medals; 'philately' is the collection of postage stamps.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "One word for 'a person who cannot be corrected or reformed':",
+    "options": [
+      "Invincible",
+      "Incurable",
+      "Illegible",
+      "Incorrigible"
+    ],
+    "answer": 3,
+    "explanation": "'Incorrigible' describes a person whose bad habits cannot be corrected; 'incurable' applies to a disease and 'illegible' to unreadable writing.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "one-word-substitutes"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'to bell the cat' means:",
+    "options": [
+      "To make a loud and unnecessary noise",
+      "To tame a wild animal with patience",
+      "To take the lead in doing a risky or dangerous task",
+      "To warn a friend of coming danger"
+    ],
+    "answer": 2,
+    "explanation": "From the fable of mice planning to tie a bell on the cat, 'to bell the cat' means to undertake a dangerous task for the benefit of others.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'a blessing in disguise' means:",
+    "options": [
+      "A good thing that seemed bad at first",
+      "A misfortune that ruins one's plans",
+      "A gift given secretly to someone",
+      "A prayer answered after a long time"
+    ],
+    "answer": 0,
+    "explanation": "A blessing in disguise is something that appears to be a misfortune but turns out to be beneficial.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'to bury the hatchet' means:",
+    "options": [
+      "To end a quarrel and make peace",
+      "To keep a secret from everyone",
+      "To hide a weapon before a fight",
+      "To forget an important duty"
+    ],
+    "answer": 0,
+    "explanation": "'To bury the hatchet' comes from a Native American custom of burying weapons to mark peace; it means to stop fighting and become friends again.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'once in a blue moon' means:",
+    "options": [
+      "At an unlucky moment",
+      "During a festival season",
+      "Every night without fail",
+      "Very rarely"
+    ],
+    "answer": 3,
+    "explanation": "A 'blue moon' is a rare second full moon in a month, so the idiom means something that happens very rarely.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'a white elephant' means:",
+    "options": [
+      "A large and profitable business",
+      "A costly but useless possession",
+      "A generous gift from a king",
+      "A rare and sacred animal"
+    ],
+    "answer": 1,
+    "explanation": "A white elephant is something expensive to maintain but of little practical use, from the costly sacred elephants gifted by Siamese kings.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'to smell a rat' means:",
+    "options": [
+      "To dislike someone strongly",
+      "To find the source of a bad odour",
+      "To suspect that something is wrong",
+      "To catch a thief red-handed"
+    ],
+    "answer": 2,
+    "explanation": "'To smell a rat' means to sense that something suspicious or dishonest is going on.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'at the eleventh hour' means:",
+    "options": [
+      "After the deadline has passed",
+      "At the last possible moment",
+      "Exactly at eleven o'clock",
+      "Early in the morning"
+    ],
+    "answer": 1,
+    "explanation": "'At the eleventh hour' means at the latest possible time, just before it is too late.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'a red-letter day' means:",
+    "options": [
+      "An important and memorable day",
+      "A day of mourning and loss",
+      "A day of extreme danger",
+      "A day when letters are delivered"
+    ],
+    "answer": 0,
+    "explanation": "A red-letter day is a specially significant or happy day, from the practice of marking holy days in red on calendars.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'to cut the Gordian knot' means:",
+    "options": [
+      "To create confusion deliberately",
+      "To untie a rope very carefully",
+      "To solve a difficult problem by bold action",
+      "To break a promise made earlier"
+    ],
+    "answer": 2,
+    "explanation": "Alexander the Great sliced through the legendary Gordian knot with his sword, so the idiom means solving a complicated problem with one decisive stroke.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The idiom 'to be at daggers drawn' means:",
+    "options": [
+      "To be armed for self-defence",
+      "To be skilled in sword fighting",
+      "To be ready for a friendly contest",
+      "To be in bitter enmity with someone"
+    ],
+    "answer": 3,
+    "explanation": "'At daggers drawn' describes two people or groups who are openly hostile to each other.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'call off' means:",
+    "options": [
+      "To invite formally",
+      "To shout loudly",
+      "To telephone someone",
+      "To cancel"
+    ],
+    "answer": 3,
+    "explanation": "'Call off' means to cancel something that was planned, as in 'The match was called off due to rain.'",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'look after' means:",
+    "options": [
+      "To admire greatly",
+      "To take care of",
+      "To search for",
+      "To follow closely"
+    ],
+    "answer": 1,
+    "explanation": "'Look after' means to take care of someone or something, as in 'She looks after her aged parents.'",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'give up' means:",
+    "options": [
+      "To stop doing something",
+      "To hand over a prize",
+      "To lift something high",
+      "To donate generously"
+    ],
+    "answer": 0,
+    "explanation": "'Give up' means to abandon or stop a habit or effort, as in 'He gave up smoking.'",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'put off' means:",
+    "options": [
+      "To wear clothes",
+      "To switch on",
+      "To postpone",
+      "To extinguish a fire"
+    ],
+    "answer": 2,
+    "explanation": "'Put off' means to delay or postpone something to a later time, as in 'The meeting was put off till Monday.'",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'break out' means:",
+    "options": [
+      "To escape punishment",
+      "To interrupt a speaker",
+      "To start suddenly",
+      "To destroy completely"
+    ],
+    "answer": 2,
+    "explanation": "'Break out' is used of war, fire, or disease starting suddenly, as in 'Cholera broke out in the village.'",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'turn down' means:",
+    "options": [
+      "To fall asleep",
+      "To reject",
+      "To lower one's head",
+      "To take a wrong route"
+    ],
+    "answer": 1,
+    "explanation": "'Turn down' means to refuse or reject an offer or request, as in 'She turned down the job offer.'",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'carry out' means:",
+    "options": [
+      "To remove something by force",
+      "To continue without stopping",
+      "To transport goods outside",
+      "To execute or perform"
+    ],
+    "answer": 3,
+    "explanation": "'Carry out' means to perform or complete a task or order, as in 'The soldiers carried out the command.'",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'run into' means:",
+    "options": [
+      "To meet by chance",
+      "To race against someone",
+      "To enter a building quickly",
+      "To chase a criminal"
+    ],
+    "answer": 0,
+    "explanation": "'Run into' means to meet someone unexpectedly, as in 'I ran into an old friend at the market.'",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'bear out' means:",
+    "options": [
+      "To carry a heavy load",
+      "To give birth to",
+      "To confirm or support",
+      "To endure patiently"
+    ],
+    "answer": 2,
+    "explanation": "'Bear out' means to confirm or support a statement or claim, as in 'The evidence bears out his story.'",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The phrasal verb 'fall through' means:",
+    "options": [
+      "To pass an examination",
+      "To fail to happen",
+      "To collapse under weight",
+      "To drop from a height"
+    ],
+    "answer": 1,
+    "explanation": "'Fall through' means a plan or arrangement fails to be completed, as in 'The deal fell through at the last minute.'",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The medicine had no ______ on the patient. Choose the correct word:",
+    "options": [
+      "effect",
+      "affect",
+      "affects",
+      "effected"
+    ],
+    "answer": 0,
+    "explanation": "'Effect' is a noun meaning result, while 'affect' is a verb meaning to influence; here a noun is needed.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "confused-words"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The dog wagged ______ tail happily. Choose the correct word:",
+    "options": [
+      "its'",
+      "it is",
+      "it's",
+      "its"
+    ],
+    "answer": 3,
+    "explanation": "'Its' is the possessive form of 'it', while 'it's' is the contraction of 'it is'; a possessive is needed before 'tail'.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "confused-words"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The ______ of the college addressed the students. Choose the correct word:",
+    "options": [
+      "principle",
+      "principled",
+      "principles",
+      "principal"
+    ],
+    "answer": 3,
+    "explanation": "'Principal' means the head of an institution, while 'principle' means a rule or moral standard.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "confused-words"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "He bought pens and envelopes from the ______ shop. Choose the correct word:",
+    "options": [
+      "stationarey",
+      "stationary",
+      "stationery",
+      "stationry"
+    ],
+    "answer": 2,
+    "explanation": "'Stationery' means writing materials, while 'stationary' means not moving.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "confused-words"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The doctor ______ him to take complete rest. Choose the correct word:",
+    "options": [
+      "advised",
+      "advice",
+      "adviced",
+      "advise"
+    ],
+    "answer": 0,
+    "explanation": "'Advise' is the verb and 'advice' is the noun; the past tense verb 'advised' is required here.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "confused-words"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The scarf ______ her dress perfectly. Choose the correct word:",
+    "options": [
+      "complaments",
+      "complements",
+      "complimants",
+      "compliments"
+    ],
+    "answer": 1,
+    "explanation": "'Complement' means to go well with or complete something, while 'compliment' means to praise.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "confused-words"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The police tried to ______ information from the reluctant witness. Choose the correct word:",
+    "options": [
+      "illicit",
+      "ellicit",
+      "elicit",
+      "elicite"
+    ],
+    "answer": 2,
+    "explanation": "'Elicit' is a verb meaning to draw out information, while 'illicit' is an adjective meaning illegal.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "confused-words"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Choose the correctly spelt word:",
+    "options": [
+      "Acommodation",
+      "Accommodation",
+      "Accomodation",
+      "Accommadation"
+    ],
+    "answer": 1,
+    "explanation": "'Accommodation' is spelt with double 'c' and double 'm'.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "spelling"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Pick out the word with the correct spelling:",
+    "options": [
+      "Separate",
+      "Saparate",
+      "Seperate",
+      "Seperete"
+    ],
+    "answer": 0,
+    "explanation": "'Separate' has 'a' in the middle syllable; 'seperate' is a very common misspelling.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "spelling"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Find the correctly spelt word from the following:",
+    "options": [
+      "Comittee",
+      "Commitee",
+      "Committe",
+      "Committee"
+    ],
+    "answer": 3,
+    "explanation": "'Committee' has double 'm', double 't', and double 'e'.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "spelling"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Which of the following words is spelt correctly?",
+    "options": [
+      "Millenium",
+      "Millennium",
+      "Millannium",
+      "Milennium"
+    ],
+    "answer": 1,
+    "explanation": "'Millennium' takes double 'l' and double 'n', from Latin 'mille' (thousand) and 'annus' (year).",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "spelling"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Select the correctly spelt word given below:",
+    "options": [
+      "Conoisseur",
+      "Connossieur",
+      "Connoiseur",
+      "Connoisseur"
+    ],
+    "answer": 3,
+    "explanation": "'Connoisseur', meaning an expert judge of art or taste, is spelt with double 'n' and double 's'.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "spelling"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The plural of 'criterion' is:",
+    "options": [
+      "criteria",
+      "criterias",
+      "criterion",
+      "criterions"
+    ],
+    "answer": 0,
+    "explanation": "'Criterion' is a Greek loanword whose plural is 'criteria'.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "number-gender"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The collective noun for lions is:",
+    "options": [
+      "flock",
+      "swarm",
+      "pride",
+      "herd"
+    ],
+    "answer": 2,
+    "explanation": "A group of lions is called a 'pride'.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "number-gender"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The plural of 'ox' is:",
+    "options": [
+      "oxem",
+      "oxes",
+      "oxs",
+      "oxen"
+    ],
+    "answer": 3,
+    "explanation": "'Ox' takes the old English '-en' plural, giving 'oxen'.",
+    "difficulty": 1,
+    "tags": [
+      "vocabulary",
+      "number-gender"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The feminine gender of 'colt' is:",
+    "options": [
+      "mare",
+      "filly",
+      "ewe",
+      "doe"
+    ],
+    "answer": 1,
+    "explanation": "A 'colt' is a young male horse and a 'filly' is a young female horse; 'mare' refers to an adult female horse.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "number-gender"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "A group of wolves is called a:",
+    "options": [
+      "pack",
+      "shoal",
+      "troop",
+      "gaggle"
+    ],
+    "answer": 0,
+    "explanation": "The collective noun for wolves is 'pack', as in 'a pack of wolves'.",
+    "difficulty": 2,
+    "tags": [
+      "vocabulary",
+      "number-gender"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The plural of 'court martial' is:",
+    "options": [
+      "court martials",
+      "court martiales",
+      "courts martial",
+      "courts martials"
+    ],
+    "answer": 2,
+    "explanation": "In compound nouns where the first word is the head noun, that word takes the plural, giving 'courts martial'.",
+    "difficulty": 3,
+    "tags": [
+      "vocabulary",
+      "number-gender"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Who wrote the novel 'Pride and Prejudice'?",
+    "options": [
+      "George Eliot",
+      "Charlotte Bronte",
+      "Jane Austen",
+      "Emily Bronte"
+    ],
+    "answer": 2,
+    "explanation": "'Pride and Prejudice' (1813), featuring Elizabeth Bennet and Mr. Darcy, was written by Jane Austen.",
+    "difficulty": 1,
+    "tags": [
+      "literature",
+      "authors-works"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Who created the famous detective Sherlock Holmes?",
+    "options": [
+      "Charles Dickens",
+      "Arthur Conan Doyle",
+      "Agatha Christie",
+      "Rudyard Kipling"
+    ],
+    "answer": 1,
+    "explanation": "Sir Arthur Conan Doyle created Sherlock Holmes, who first appeared in 'A Study in Scarlet' (1887).",
+    "difficulty": 1,
+    "tags": [
+      "literature",
+      "authors-works"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Shylock is a famous character in which Shakespearean play?",
+    "options": [
+      "Hamlet",
+      "Othello",
+      "King Lear",
+      "The Merchant of Venice"
+    ],
+    "answer": 3,
+    "explanation": "Shylock, the moneylender who demands a pound of flesh, appears in Shakespeare's 'The Merchant of Venice'.",
+    "difficulty": 2,
+    "tags": [
+      "literature",
+      "authors-works"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "The epic poem 'Paradise Lost' was written by:",
+    "options": [
+      "John Milton",
+      "John Dryden",
+      "Alexander Pope",
+      "John Keats"
+    ],
+    "answer": 0,
+    "explanation": "John Milton wrote 'Paradise Lost' (1667), an epic poem on the fall of man.",
+    "difficulty": 2,
+    "tags": [
+      "literature",
+      "authors-works"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Who is the author of the novel 'War and Peace'?",
+    "options": [
+      "Anton Chekhov",
+      "Maxim Gorky",
+      "Fyodor Dostoevsky",
+      "Leo Tolstoy"
+    ],
+    "answer": 3,
+    "explanation": "'War and Peace', set during the Napoleonic wars, was written by the Russian novelist Leo Tolstoy.",
+    "difficulty": 2,
+    "tags": [
+      "literature",
+      "authors-works"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Who is known as the 'Father of English Poetry'?",
+    "options": [
+      "Thomas Wyatt",
+      "Geoffrey Chaucer",
+      "Edmund Spenser",
+      "William Wordsworth"
+    ],
+    "answer": 1,
+    "explanation": "Geoffrey Chaucer, author of 'The Canterbury Tales', is traditionally called the Father of English Poetry.",
+    "difficulty": 3,
+    "tags": [
+      "literature",
+      "authors-works"
+    ],
+    "source": "seed"
+  },
+  {
+    "topic": "english",
+    "question": "Which novelist set his major works in the semi-fictional region of Wessex?",
+    "options": [
+      "Joseph Conrad",
+      "D. H. Lawrence",
+      "Thomas Hardy",
+      "Walter Scott"
+    ],
+    "answer": 2,
+    "explanation": "Thomas Hardy set novels such as 'Tess of the d'Urbervilles' and 'Far from the Madding Crowd' in his semi-fictional Wessex.",
+    "difficulty": 3,
+    "tags": [
+      "literature",
+      "authors-works"
+    ],
+    "source": "seed"
+  }
+]
