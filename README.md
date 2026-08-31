@@ -45,6 +45,20 @@ Legacy note: a demo account is created on startup: **demo@mocker.app / demo1234*
 
 Stop with `docker compose down` (add `-v` to wipe the database).
 
+### Tests
+
+Both suites run against the live dev stack, so `docker compose up` first.
+
+```bash
+docker compose exec backend python -m pytest tests -q   # backend (153 tests)
+(cd frontend && npm run test:e2e)                       # frontend smoke suite (Playwright)
+```
+
+The frontend suite provisions a throwaway `uitest@mocker.app` account through the admin API and
+deletes it afterwards, so runs never touch real users' stats. It signs in as the admin to do that —
+if you changed `ADMIN_PASSWORD` in `.env`, pass it along: `E2E_ADMIN_PASSWORD=... npm run test:e2e`.
+One-time setup per clone: `npx playwright install chromium` inside `frontend/`.
+
 ## Stack
 
 | Layer | Tech |
