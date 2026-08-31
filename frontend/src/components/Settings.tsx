@@ -121,7 +121,7 @@ export default function Settings() {
                 onChange={(e) => save({ reminder_hour: Number(e.target.value) })}>
                 {HOURS.map((h) => <option key={h} value={h}>{label(h, prefs.reminder_minute)}</option>)}
               </select>
-              <select className="field w-28" value={prefs.reminder_minute} disabled={busy}
+              <select className="field basis-28 shrink-0" value={prefs.reminder_minute} disabled={busy}
                 onChange={(e) => save({ reminder_minute: Number(e.target.value) })}>
                 {MINUTES.map((m) => <option key={m} value={m}>:{String(m).padStart(2, "0")}</option>)}
               </select>

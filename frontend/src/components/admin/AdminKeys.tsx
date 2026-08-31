@@ -133,7 +133,7 @@ export default function AdminKeys({ onChange }: { onChange: () => void }) {
                 <option key={p.id} value={p.id}>{p.id}{p.free_tier ? " (free tier)" : ""}</option>
               ))}
             </select>
-            <input className="field w-28" type="number" min={0} max={1000} value={form.priority}
+            <input className="field basis-28 shrink-0" type="number" min={0} max={1000} value={form.priority}
               onChange={(e) => setForm({ ...form, priority: Number(e.target.value) })} aria-label="Priority" />
           </div>
           <input className="field font-mono text-sm" placeholder="API key" required minLength={8}
