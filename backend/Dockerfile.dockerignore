@@ -1,0 +1,21 @@
+# Build context hygiene. The importer cache alone is ~193 MB and would be shipped to the daemon
+# on every build without this.
+.git
+.gitignore
+docs/
+**/node_modules
+**/.next
+**/.env
+**/.env.*
+!**/.env.example
+data/importers/cache/
+data/importers/__pycache__/
+data/staged/
+**/__pycache__/
+**/*.pyc
+*.md
+!README.md
+.github/
+deploy.sh
+compose*.yml
+docker-compose*.yml
