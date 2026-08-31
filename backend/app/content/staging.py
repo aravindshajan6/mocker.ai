@@ -29,7 +29,7 @@ log = logging.getLogger("staging")
 
 TOPIC_SLUGS = [
     "indian-history", "kerala", "indian-polity", "geography", "economy", "general-science",
-    "arts-culture", "world-gk", "sports", "computers-tech", "environment",
+    "arts-culture", "world-gk", "sports", "computers-tech", "environment", "english",
 ]
 DROP = "drop"
 
@@ -46,9 +46,13 @@ For each question decide the general-knowledge topic a Kerala PSC candidate woul
 
 Valid topics: {", ".join(TOPIC_SLUGS)}.
 
+"english" is for the General English section of ordinary PSC papers: grammar (tenses, voice,
+reported speech, articles, prepositions, question tags, sentence correction) and vocabulary
+(synonyms, antonyms, one-word substitutes, idioms, phrasal verbs, spelling).
+
 Use "{DROP}" for:
   - mathematics, mental ability, reasoning, data interpretation
-  - English or Malayalam grammar, vocabulary, comprehension or translation
+  - English comprehension passages; Malayalam grammar, vocabulary, comprehension or translation
   - literary criticism of specific poems, novels or authors (e.g. Mac Flecknoe, To His Coy Mistress,
     Tess of the D'Urbervilles, Preface to Lyrical Ballads) — these come from subject-specialist
     teacher papers and are NOT general knowledge

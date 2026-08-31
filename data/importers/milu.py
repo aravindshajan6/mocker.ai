@@ -90,10 +90,11 @@ SUBJECT_TO_TOPIC = {
     "Technology and Innovation": "computers-tech",
     # --- environment ---
     "Environmental Science": "environment",
+    # --- english ---
+    "Language Studies": "english",
 }
 
 DROPPED_SUBJECTS_NOTE = {
-    "Language Studies": "English grammar/vocabulary, not GK",
     "Education": "pedagogy + state-specific department trivia",
     "Logical Reasoning": "puzzles, not GK",
     "Sociology": "mostly reasoning puzzles / survey statistics",
@@ -151,20 +152,26 @@ BAD_QUESTION_SUBSTRINGS = [
     "pick the option",
 ]
 
-# Verbal-ability / grammar / vocabulary artefacts that slipped into GK subjects.
-BAD_QUESTION_RE = [
+# Verbal-ability / grammar / vocabulary artefacts. For GK subjects these are noise that slipped
+# in; for Language Studies (-> english) they are the content itself, so question_ok() only
+# applies this list when the row is NOT bound for the english topic.
+BAD_QUESTION_RE_VERBAL = [
     re.compile(r"\bselect the most appropriate\b", re.I),
     re.compile(r"\bfill in the blank", re.I),
-    re.compile(r"\bunderlined\b", re.I),
     re.compile(r"\bnarration\b", re.I),
     re.compile(r"\bidiom\b|\bproverb\b", re.I),
     re.compile(r"\bsynonym\b|\bantonym\b|\bspelt\b|\bspelling\b", re.I),
     re.compile(r"\bone word substitution\b", re.I),
-    re.compile(r"\bjumbled\b", re.I),
     re.compile(r"\bactive voice\b|\bpassive voice\b", re.I),
     re.compile(r"\bcomplete the (following|sentence)\b", re.I),
     re.compile(r"\bsegment\b.*\bsentence\b", re.I),
     re.compile(r"\bwhich of the following sentence", re.I),
+]
+
+BAD_QUESTION_RE = [
+    # formatting the import cannot reproduce, broken in any topic
+    re.compile(r"\bunderlined\b", re.I),
+    re.compile(r"\bjumbled\b", re.I),
     # arithmetic word problems
     re.compile(r"\bRs\.?\s*[\d,]", re.I),
     re.compile(r"\bper annum\b", re.I),
@@ -232,7 +239,7 @@ def strip_option_prefixes(options: list[str]) -> list[str]:
     return [norm_ws(o[m.end():]) for o, m in zip(options, matches)]
 
 
-def question_ok(q: str) -> bool:
+def question_ok(q: str, topic: str = "") -> bool:
     if "\n" in q or "\r" in q:
         return False
     if not (MIN_QUESTION_LEN <= len(q) <= MAX_QUESTION_LEN):
@@ -241,6 +248,8 @@ def question_ok(q: str) -> bool:
     if any(s in low for s in BAD_QUESTION_SUBSTRINGS):
         return False
     if any(r.search(q) for r in BAD_QUESTION_RE):
+        return False
+    if topic != "english" and any(r.search(q) for r in BAD_QUESTION_RE_VERBAL):
         return False
     # more than one fill-in blank -> usually a broken/translated stem
     if len(re.findall(r"_{2,}", q)) > 1:
@@ -348,7 +357,7 @@ def main() -> int:
             continue
 
         question = norm_ws(row.question)
-        if not question_ok(question):
+        if not question_ok(question, topic):
             stats["drop:question"] += 1
             continue
 
@@ -371,7 +380,8 @@ def main() -> int:
             continue
         seen.add(key)
 
-        if KERALA_RE.search(question):
+        # A grammar stem that happens to mention Kerala is still a grammar question.
+        if topic != "english" and KERALA_RE.search(question):
             topic = "kerala"
             stats["route:kerala"] += 1
 

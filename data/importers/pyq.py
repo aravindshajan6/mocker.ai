@@ -122,7 +122,7 @@ def strip_footer(text: str) -> str:
 LLM_URL = "https://api.groq.com/openai/v1/chat/completions"
 LLM_MODEL = "qwen/qwen3.8-27b"
 LLM_BATCH = 20
-PROMPT_VERSION = "v2"              # bump to invalidate the classification cache
+PROMPT_VERSION = "v3"              # bump to invalidate the classification cache (v3: keep english)
 LLM_RPM = 30                       # hard ceiling: requests / minute
 LLM_MIN_INTERVAL = 60.0 / LLM_RPM
 LLM_429_SLEEP = 65
@@ -138,7 +138,7 @@ LLM_MAX_REQUESTS = 900
 TOPICS = (
     "indian-history", "kerala", "indian-polity", "geography", "economy",
     "general-science", "arts-culture", "world-gk", "sports", "computers-tech",
-    "environment",
+    "environment", "english",
 )
 DROP = "drop"
 VALID_LABELS = set(TOPICS) | {DROP}
@@ -163,11 +163,14 @@ Topics:
 - sports: sports, games, tournaments, players, trophies, venues
 - computers-tech: computers, IT, internet, software, hardware, cyber law, e-governance
 - environment: ecology, biodiversity, pollution, climate, wildlife, conservation, protected areas
+- english: General English grammar, vocabulary and usage as asked in the General English section of
+  ordinary PSC papers -- tenses, voice, reported speech, articles, prepositions, question tags,
+  sentence correction, synonyms, antonyms, one-word substitutes, idioms, phrasal verbs, spelling
 - drop: NOT general knowledge.
 
 Use "drop" for all of the following:
 - maths / mental ability / reasoning / arithmetic / data interpretation
-- English grammar, vocabulary, comprehension, figures of speech, phonetics, linguistics
+- English comprehension passages, figures of speech, phonetics, linguistics
 - Malayalam, Tamil, Kannada, Hindi, Arabic or Sanskrit language questions
 - post-specific technical content: surveying, civil / mechanical / electrical / electronics
   engineering, nursing, pharmacy, clinical medicine, veterinary, agriculture machinery,
@@ -710,9 +713,6 @@ FALLBACK_DROP = [
     re.compile(r"\bhow many (days|hours|minutes|men|women|workers|litres|kg)\b", re.I),
     re.compile(r"\b(ratio|percentage|average|LCM|HCF|probability)\b.*\b(is|are|of)\b", re.I),
     re.compile(r"\bRs\.?\s*[\d,]", re.I),
-    re.compile(r"\b(synonym|antonym|spelling|spelt|idiom|phrase|proverb|preposition|"
-               r"conjunction|adjective|adverb|tense|voice|narration|article)\b", re.I),
-    re.compile(r"\bfill in the blank|\bcorrect(ly)? spel|\bone word substitut", re.I),
     re.compile(r"\b(surveying|theodolite|tacheometry|chainage|bearing capacity|"
                r"mouldboard|penstock|reinforcement|torque|bearing|welding|lathe|"
                r"transistor|amplifier|hydraulic|thresher|tractor|mortar|aggregate)\b", re.I),
@@ -726,6 +726,16 @@ FALLBACK_DROP = [
                r"evaluation technique|bloom.s taxonomy|constructivis)\b", re.I),
     re.compile(r"[ഀ-ൿ஀-௿ಀ-೿]"),   # Malayalam/Tamil/Kannada
 ]
+
+# General English section shapes. Routed to the english topic, not dropped — but only after
+# FALLBACK_DROP has had its say, so literary-criticism stems (Shakespeare, prosody, ...) still
+# drop even when they also mention e.g. "verse" or "phrase".
+FALLBACK_ENGLISH = re.compile(
+    r"\b(synonym|antonym|spelling|spelt|idiom|proverb|preposition|conjunction|"
+    r"adjective|adverb|tense|voice|narration|reported speech|question tag|"
+    r"one word substitut|phrasal verb)\b|\bfill in the blank|\bcorrect(ly)? spel",
+    re.I,
+)
 
 FALLBACK_TOPICS = [
     ("kerala", r"\b(kerala|malabar|travancore|cochin|kochi|thiruvananthapuram|trivandrum|"
@@ -773,6 +783,8 @@ def classify_fallback(stem: str, options: list[str]) -> str:
     blob = stem + " " + " ".join(options)
     if any(r.search(blob) for r in FALLBACK_DROP):
         return DROP
+    if FALLBACK_ENGLISH.search(blob):
+        return "english"
     for topic, rx in FALLBACK_TOPICS:
         if rx.search(blob):
             return topic
