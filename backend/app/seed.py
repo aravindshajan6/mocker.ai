@@ -29,6 +29,7 @@ TOPICS = [
     ("sports", "Sports", "Games, trophies, records and famous athletes", "🏏"),
     ("computers-tech", "Computers & IT", "Basics of computers, internet and cyber laws", "💻"),
     ("environment", "Environment", "Ecology, biodiversity, climate and conservation", "🌿"),
+    ("english", "English", "Grammar, vocabulary and literature for the General English paper", "🔤"),
     ("current-affairs", "Current Affairs", "Fresh questions generated from recent news", "📰"),
 ]
 

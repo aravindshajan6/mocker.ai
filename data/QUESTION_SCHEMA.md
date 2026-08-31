@@ -39,4 +39,5 @@ Topic slugs (phase 1, all under the "GK" umbrella):
 - sports                Sports & Games (rules, venues, trophies, famous players)
 - computers-tech        Basics of Computers & IT, Cyber laws
 - environment           Environment, Ecology, Biodiversity, Climate
+- english               General English: grammar, vocabulary, literature GK (tags distinguish: grammar/vocabulary/literature)
 - current-affairs       Current affairs (generated from news; not hand-authored)
