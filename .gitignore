@@ -5,3 +5,7 @@ __pycache__
 .env
 *.pyc
 tsconfig.tsbuildinfo
+
+# Server deployment notes: contain the VPS IP, SSH posture and security findings.
+# This repo is public — these must never be committed.
+docs/

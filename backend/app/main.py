@@ -1,11 +1,11 @@
 import logging
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
-from sqlalchemy import text
+from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
+from sqlalchemy import text
 
 from .config import settings
 from .services.ratelimit import limiter, too_many_requests
@@ -112,5 +112,17 @@ if settings.testing_hooks:
 
 
 @app.get("/api/health")
-async def health():
-    return {"status": "ok"}
+async def health(response: Response):
+    """Liveness AND readiness.
+
+    A health check that only proves the process is listening is worse than none: the container
+    reports healthy, Traefik routes to it, and every request 500s on a dead database. This touches
+    Postgres, so an unhealthy container is one that genuinely cannot serve.
+    """
+    try:
+        async with engine.connect() as conn:
+            await conn.execute(text("SELECT 1"))
+    except Exception as e:  # noqa: BLE001
+        response.status_code = 503
+        return {"status": "degraded", "database": f"{type(e).__name__}"}
+    return {"status": "ok", "database": "ok"}

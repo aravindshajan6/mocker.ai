@@ -35,6 +35,12 @@ const SECURITY_HEADERS = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  // next/image is not used anywhere in this app, and leaving the optimiser enabled pulls sharp and
+  // its platform binaries (~46 MB) into the standalone trace for nothing.
+  images: { unoptimized: true },
+  // `unoptimized` stops the optimiser running but Next still traces sharp as a possible dependency.
+  // Excluding it explicitly is what actually keeps the binaries out of the standalone output.
+  outputFileTracingExcludes: { "*": ["node_modules/@img/**", "node_modules/sharp/**"] },
   // Do not advertise the framework version to a scanner.
   poweredByHeader: false,
   async headers() {
