@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowRight, Check, Lightbulb, X } from "lucide-react";
 import Mascot, { type Mood } from "@/components/Mascot";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Chip, Num, ProgressBar, Spinner } from "@/components/ui";
 import { api, QueuedOffline } from "@/lib/api";
 import type { AnswerResult, QuizSession } from "@/lib/types";
@@ -36,6 +36,7 @@ export default function Quiz({ id }: { id: string }) {
   const [deeperError, setDeeperError] = useState<string | null>(null);
   const shownAt = useRef<number>(0);
   const [score, setScore] = useState(0);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     api.session(id).then((s) => {
@@ -155,10 +156,18 @@ export default function Quiz({ id }: { id: string }) {
         <span className="text-sm font-extrabold text-muted tabular-nums">{Math.min(index + 1, total)}/{total}</span>
       </div>
 
-      {/* Mascot + score */}
+      {/* Mascot + score. Kunju shares a layoutId with the slot in the feedback card, so on
+          reveal he glides down to deliver the verdict beside the explanation and returns here
+          on the next question. */}
       <div className="flex items-center justify-between mt-3">
         <div className="flex items-center gap-2">
-          <Mascot mood={mood} trigger={moodTick} size={72} />
+          <div className="h-[72px] w-[72px] shrink-0">
+            {phase !== "revealed" && (
+              <motion.div layoutId="kunju" transition={{ duration: reduceMotion ? 0 : 0.45, ease: [0.2, 0.8, 0.2, 1] }}>
+                <Mascot mood={mood} trigger={moodTick} size={72} />
+              </motion.div>
+            )}
+          </div>
           <div className="text-sm font-extrabold text-muted">
             <div className="text-ink">{q.topic_icon} {q.topic}{q.published_at && !q.source_ref && <span className="text-muted font-bold"> · {new Date(q.published_at + "T00:00:00").toLocaleDateString(undefined, { day: "numeric", month: "short" })}</span>}</div>
             <div>{"★".repeat(q.difficulty)}{"☆".repeat(3 - q.difficulty)} <span className="opacity-70">{["Easy", "Medium", "Hard"][q.difficulty - 1]}</span></div>
@@ -206,6 +215,13 @@ export default function Quiz({ id }: { id: string }) {
             animate={{ opacity: 1, height: "auto", marginTop: 16 }}
             transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
             className={`overflow-hidden rounded-2xl p-4 ${result.is_correct ? "bg-success-soft" : "bg-danger-soft"}`}>
+            <div className="flex items-start gap-3">
+            <motion.div layoutId="kunju" transition={{ duration: reduceMotion ? 0 : 0.45, ease: [0.2, 0.8, 0.2, 1] }} className="shrink-0">
+              <span key={moodTick} className="mascot-pop block">
+                <Mascot mood={mood} trigger={moodTick} size={64} />
+              </span>
+            </motion.div>
+            <div className="min-w-0 flex-1">
             <p className={`font-extrabold ${result.is_correct ? "text-success" : "text-danger"}`}>
               {result.is_correct ? PRAISE[moodTick % PRAISE.length] : CONSOLE[moodTick % CONSOLE.length]}
             </p>
@@ -242,6 +258,8 @@ export default function Quiz({ id }: { id: string }) {
               </button>
             )}
             {deeperError && <p className="mt-2 text-xs font-bold text-danger">{deeperError}</p>}
+            </div>
+            </div>
           </motion.div>
         )}
         </AnimatePresence>

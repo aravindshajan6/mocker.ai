@@ -334,6 +334,9 @@ body {
 @keyframes float-up { 0% { opacity: 0; transform: translateY(6px) scale(.9); } 22% { opacity: 1; transform: scale(1.1); } 100% { opacity: 0; transform: translateY(-40px); } }
 .float-up { animation: float-up 1.3s cubic-bezier(.2,.8,.2,1) forwards; }
 
+@keyframes mascot-pop { 0% { transform: scale(.85); } 55% { transform: scale(1.1); } 100% { transform: scale(1); } }
+.mascot-pop { animation: mascot-pop .5s cubic-bezier(.2,.8,.2,1); transform-origin: bottom center; }
+
 @keyframes shake { 10%,90% { transform: translateX(-2px); } 20%,80% { transform: translateX(3px); } 30%,50%,70% { transform: translateX(-4px); } 40%,60% { transform: translateX(4px); } }
 .shake { animation: shake .5s both; }
 
