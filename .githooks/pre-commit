@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# Refuse commits that would publish secrets or server details.
+#
+# This exists because docs/DEPLOY_NOTES.md — containing the VPS address, its SSH posture and a
+# security audit — was swept into two commits by `git add -A` and pushed to a public repo. A
+# .gitignore alone does not help once a path is already tracked, and it does nothing for a file
+# added with `git add -f`.
+#
+# Enable it (once per clone; hooks are not cloned):
+#     git config core.hooksPath .githooks
+set -uo pipefail
+
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+[[ -z "$staged" ]] && exit 0
+
+fail=0
+note() { printf '  \033[31m%s\033[0m %s\n' "$1" "$2"; fail=1; }
+
+# --- paths that must never be committed -------------------------------------
+while IFS= read -r f; do
+  case "$f" in
+    docs/*)
+      note "BLOCKED" "$f — docs/ holds server details and this repo is public" ;;
+    .env|.env.*|*/.env|*/.env.*)
+      case "$f" in
+        *.example|*.sample|*.template) ;;
+        *) note "BLOCKED" "$f — real environment file" ;;
+      esac ;;
+    *.pem|*.key|*id_rsa*|*id_ed25519*|*.p12|*.pfx)
+      note "BLOCKED" "$f — looks like a private key" ;;
+    data/staged/*)
+      note "BLOCKED" "$f — regenerable import staging data (8+ MB)" ;;
+  esac
+done <<< "$staged"
+
+# --- secret-shaped content in the staged diff -------------------------------
+# Only added lines, so pre-existing text does not trip it forever.
+added=$(git diff --cached -U0 --diff-filter=ACMR | grep '^+' | grep -v '^+++' || true)
+
+check() {  # pattern, description
+  local hits
+  hits=$(printf '%s\n' "$added" | grep -nEc "$1" || true)
+  [[ "$hits" -gt 0 ]] && note "BLOCKED" "$2 ($hits line(s))"
+}
+
+check 'gsk_[A-Za-z0-9]{40,}'                       "a Groq API key"
+check 'sk-(ant-)?[A-Za-z0-9_-]{30,}'               "an OpenAI/Anthropic API key"
+check 'AKIA[0-9A-Z]{16}'                           "an AWS access key id"
+check 'gh[pousr]_[A-Za-z0-9]{30,}'                 "a GitHub token"
+check 'AIza[0-9A-Za-z_-]{30,}'                     "a Google API key"
+check 'BEGIN (RSA |EC |OPENSSH |PGP )?PRIVATE KEY' "a private key block"
+check '[0-9]{1,3}(\.[0-9]{1,3}){3}[[:space:]]*#?[[:space:]]*(root|vps|server|ssh)' "a server address"
+
+if (( fail )); then
+  cat >&2 <<'MSG'
+
+Commit refused by .githooks/pre-commit.
+
+Fix the lines above, or if this is a false positive:
+    git commit --no-verify
+MSG
+  exit 1
+fi
+exit 0

@@ -153,6 +153,18 @@ and today's token usage are on the admin Content tab.
 Light, dark, and match-your-device, chosen in Settings or from the compact toggle in the sidebar. The
 choice is applied before the first paint, so there is no flash of the wrong palette on load.
 
+## Contributing to this clone
+
+Enable the commit guard once per clone — git hooks are not cloned:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+It refuses commits containing API keys, private keys, real `.env` files or anything under `docs/`
+(which holds server details and is deliberately untracked). Override a false positive with
+`git commit --no-verify`.
+
 ## Tests
 
 ```bash
