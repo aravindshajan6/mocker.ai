@@ -183,6 +183,7 @@
   --color-info: var(--info);
   --color-info-soft: var(--info-soft);
   --font-sans: var(--font-nunito), ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-accent: var(--font-fraunces), Georgia, "Times New Roman", serif;
   --radius-xl: var(--radius-lg);
   --radius-2xl: var(--radius-xl);
 }
@@ -488,6 +489,30 @@ body::before {
   background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--primary) 45%, transparent), transparent);
 }
 
+/* Shimmer text: a light sweep across a gradient-clipped headline — pure CSS. The tokens keep it
+   correct in dark mode, and reduced motion freezes it into a plain static gradient. */
+.shimmer-text {
+  background: linear-gradient(100deg,
+    var(--primary) 25%, var(--primary-hi) 42%, var(--accent-hi) 50%, var(--primary-hi) 58%, var(--primary) 75%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 4.5s linear infinite;
+}
+@keyframes shimmer-sweep { to { background-position: -250% 0; } }
+
+/* Tap-to-flip card. Pure CSS 3D; the trigger is a data attribute so the JS side is one toggle. */
+.flip-scene { perspective: 1200px; }
+.flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .55s cubic-bezier(.2,.8,.2,1);
+}
+.flip-scene[data-flipped="true"] .flip-inner { transform: rotateY(180deg); }
+.flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip-back { position: absolute; inset: 0; transform: rotateY(180deg); }
+
 .balance { text-wrap: balance; }
 .pretty { text-wrap: pretty; }
 
@@ -499,7 +524,7 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
   .pop-in, .float-up, .mascot-pop, .shake, .pulse-ring, .skeleton, .sheen::before,
-  .marquee-track, .aurora::before, .glow-ring::before { animation: none !important; }
+  .marquee-track, .aurora::before, .glow-ring::before, .shimmer-text { animation: none !important; }
   .reveal, .reveal-up { animation: none !important; opacity: 1 !important; transform: none !important; }
   .card-interactive:hover, .btn:hover, .option:hover:not(:disabled) { transform: none !important; }
   *, *::before, *::after {

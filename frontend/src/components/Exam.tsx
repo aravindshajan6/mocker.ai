@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Spinner } from "@/components/ui";
+import { HoldButton, LoadingQuips } from "@/components/ui";
 import { api } from "@/lib/api";
 import type { ExamState } from "@/lib/types";
 
@@ -115,7 +115,7 @@ export default function Exam({ id }: { id: string }) {
   }, [q, answers, marked, save, state, confirming]);
 
   if (error) return <div className="pt-10 text-center"><p className="text-danger font-bold">{error}</p><Link href="/exam" className="btn btn-ghost mt-4">Back</Link></div>;
-  if (!state || !q) return <Spinner label="Preparing your paper…" />;
+  if (!state || !q) return <LoadingQuips quips={["Preparing your paper…", "Setting the clock…", "Sealing the answer key…"]} />;
 
   const urgent = left <= 300;
   const chosen = answers[q.id];
@@ -210,7 +210,9 @@ export default function Exam({ id }: { id: string }) {
             <p className="text-xs font-semibold text-muted mt-2">Wrong answers lose 1/3 mark each. Blanks lose nothing.</p>
             <div className="flex gap-2 mt-4">
               <button className="btn btn-ghost flex-1" onClick={() => setConfirming(false)} disabled={submitting}>Keep going</button>
-              <button className="btn btn-primary flex-1" onClick={submit} disabled={submitting}>{submitting ? "Submitting…" : "Submit"}</button>
+              <HoldButton className="btn-primary flex-1" onComplete={submit} disabled={submitting}>
+                {submitting ? "Submitting…" : "Hold to submit"}
+              </HoldButton>
             </div>
           </div>
         </div>

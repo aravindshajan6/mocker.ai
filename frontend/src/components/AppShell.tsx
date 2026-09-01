@@ -19,7 +19,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   return (
     // reducedMotion="user" drops transform and layout animations for people who ask for less
     // motion, while keeping opacity and colour — so the app still feels responsive, not frozen.
-    <MotionConfig reducedMotion="user">
+    <MotionConfig reducedMotion="user" transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}>
     <AppDataProvider>
       {focus ? (
         <main className="mx-auto w-full max-w-2xl px-4">{children}</main>
