@@ -26,9 +26,12 @@ test.describe("landing page", () => {
 
     for (const heading of [
       "Everything you need, nothing you don't",
-      "Ten minutes a day is the whole method",
+      "A rhythm that carries you to exam day",
+      "Know exactly where you stand",
+      "Rehearse the exam before the exam",
       "Questions you can actually trust",
-      "Your streak starts today",
+      "And the rest of the toolkit",
+      "Your preparation starts today",
     ]) {
       await expect(page.getByRole("heading", { name: heading })).toBeVisible();
     }

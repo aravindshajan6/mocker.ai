@@ -4,11 +4,12 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import {
-  ArrowRight, BookOpenCheck, BrainCircuit, CalendarCheck, Check, Flame,
-  Newspaper, ShieldCheck, Sparkles, Timer, TrendingUp, WifiOff,
+  ArrowRight, BellRing, BookOpenCheck, BrainCircuit, CalendarCheck, Check, Flame,
+  Lightbulb, Medal, MonitorSmartphone, MoonStar, Newspaper, RotateCcw, ShieldCheck,
+  Sparkles, SpellCheck, Timer, TrendingUp, Trophy, WifiOff,
 } from "lucide-react";
 import Mascot from "@/components/Mascot";
-import { Num, spotlight } from "@/components/ui";
+import { ActivityRings, Num, spotlight } from "@/components/ui";
 
 type PublicStats = {
   questions: number;
@@ -90,9 +91,9 @@ export default function Landing() {
           </motion.h1>
 
           <motion.p {...enter(0.15)} className="pretty mx-auto mt-5 max-w-xl text-base font-semibold leading-relaxed text-ink-soft sm:text-lg">
-            A calm, ad-free way to build General Knowledge for competitive exams.
-            Ten questions a day, a streak worth protecting, and a small elephant who
-            genuinely believes in you.
+            A calm, ad-free home for your Kerala PSC, SSC and UPSC preparation — thousands
+            of exam-style questions, real past papers, targeted practice and full-length
+            mocks, with a small elephant who genuinely believes in you.
           </motion.p>
 
           {/* Question-first hero (the manus.im idea): the product's core object — a question —
@@ -184,7 +185,7 @@ export default function Landing() {
             <article className="card card-hero reveal-up p-6 sm:col-span-4 sm:p-8">
               <div className="relative">
                 <span className="text-[11px] font-extrabold uppercase tracking-[0.14em] opacity-80">The daily challenge</span>
-                <h3 className="mt-2 text-2xl font-extrabold sm:text-3xl">The same ten questions as everyone else</h3>
+                <h3 className="mt-2 text-2xl font-extrabold sm:text-3xl">The same challenge as every other aspirant</h3>
                 <p className="pretty mt-3 max-w-md font-semibold leading-relaxed opacity-90">
                   A fresh set every morning, identical for every learner, so scores are
                   genuinely comparable. Three slots are quietly swapped for questions
@@ -291,21 +292,153 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* ----------------------------------------------------------- insights --- */}
+      <section className="defer-paint px-4 py-20 sm:px-6">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2">
+          <div className="reveal-up">
+            <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Know exactly <em className="font-accent text-primary">where you stand</em>
+            </h2>
+            <p className="pretty mt-4 font-semibold leading-relaxed text-ink-soft">
+              Every answer you give teaches the app something about you. It watches each
+              subject&apos;s trend, schedules revision before you forget, and turns all of it
+              into one honest picture of your preparation.
+            </p>
+            <ul className="mt-6 flex flex-col gap-3">
+              {[
+                "Per-subject trends — improving, steady, or slipping",
+                "Practice sets weighted towards your weakest subjects",
+                "Revision timed to reach you just before you'd forget",
+                "Levels, badges and a weekly leaderboard for momentum",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-2.5 text-sm font-bold">
+                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary-soft text-primary">
+                    <Check size={13} strokeWidth={3} />
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* A miniature of the real Progress screen, built from the app's own components. */}
+          <div className="reveal-up card card-2 p-6">
+            <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-muted">
+              <TrendingUp size={15} className="text-primary" /> Your progress
+            </div>
+            <div className="mt-4 flex items-center gap-5">
+              <ActivityRings size={110} stroke={9} rings={[
+                { value: 0.8, color: "var(--primary)", label: "Today's questions" },
+                { value: 0.72, color: "var(--accent)", label: "Accuracy" },
+                { value: 0.45, color: "var(--info)", label: "Level progress" },
+              ]}>
+                <div className="text-center leading-none">
+                  <div className="text-lg font-extrabold">8</div>
+                  <div className="text-[9px] font-extrabold text-muted mt-0.5">TODAY</div>
+                </div>
+              </ActivityRings>
+              <div className="flex flex-1 flex-col gap-1.5 text-sm font-bold">
+                <span className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-primary" />8/10 questions today</span>
+                <span className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-accent" />72% accuracy</span>
+                <span className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-info" />45% to the next level</span>
+              </div>
+            </div>
+            <div className="mt-5 flex flex-col gap-2">
+              {[
+                { t: "Constitution & Polity", trend: "↑ improving", cls: "text-success" },
+                { t: "Geography", trend: "→ steady", cls: "text-muted" },
+                { t: "Economy", trend: "↓ slipping", cls: "text-danger" },
+              ].map((r) => (
+                <div key={r.t} className="flex items-center justify-between rounded-xl bg-surface-2 px-3.5 py-2.5 text-sm font-bold">
+                  <span>{r.t}</span>
+                  <span className={`text-xs font-extrabold ${r.cls}`}>{r.trend}</span>
+                </div>
+              ))}
+            </div>
+            <Link href="/login" className="btn btn-primary mt-5 w-full !min-h-11 text-sm">
+              Practise my weak subjects <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------------- exam mode --- */}
+      <section className="defer-paint border-y border-line bg-surface/40 px-4 py-20 sm:px-6">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2">
+          {/* A miniature of exam mode. Palette first in the DOM but second on mobile. */}
+          <div className="reveal-up card card-2 order-last p-6 sm:order-first">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-muted">
+                <Timer size={15} className="text-info" /> Mock exam
+              </div>
+              <span className="rounded-full bg-info-soft px-3 py-1 text-xs font-extrabold tabular-nums text-info">01:12:43</span>
+            </div>
+            <p className="mt-3 text-sm font-extrabold">100 questions · 75 minutes · −⅓ per wrong answer</p>
+            <div className="mt-4 grid grid-cols-8 gap-1.5" aria-hidden>
+              {["a","a","a","m","a","b","a","a","a","b","m","a","a","a","b","a","c","b","b","b","b","b","b","b"].map((st, i) => (
+                <span key={i} className={`grid aspect-square place-items-center rounded-lg text-[10px] font-extrabold ${
+                  st === "a" ? "bg-primary text-primary-ink" :
+                  st === "m" ? "bg-accent-soft text-accent-ink ring-2 ring-accent" :
+                  st === "c" ? "bg-surface-3 ring-2 ring-primary text-ink" : "bg-surface-2 text-muted"}`}>
+                  {i + 1}
+                </span>
+              ))}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-extrabold text-muted">
+              <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-primary" />answered</span>
+              <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-accent" />marked for review</span>
+              <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded bg-surface-3" />left blank</span>
+            </div>
+            <div className="mt-4 rounded-2xl bg-info-soft p-4 text-sm font-semibold leading-relaxed">
+              <span className="font-extrabold text-info">After you submit:</span> raw score, a
+              per-subject breakdown, and honest coaching on when guessing paid and when it cost you.
+            </div>
+          </div>
+
+          <div className="reveal-up">
+            <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Rehearse the exam <em className="font-accent text-primary">before the exam</em>
+            </h2>
+            <p className="pretty mt-4 font-semibold leading-relaxed text-ink-soft">
+              Exam mode recreates the real thing, not a friendlier version of it: a clock the
+              server keeps (your phone sleeping buys no time), answers you can change or
+              deliberately leave blank, and the same &minus;⅓ negative marking the hall uses.
+            </p>
+            <ul className="mt-6 flex flex-col gap-3">
+              {[
+                "Full-length, half-length and quick papers",
+                "Question palette with mark-for-review, like the real OMR drill",
+                "Per-subject breakdown of every attempt",
+                "Coaching on the guess/leave-blank trade-off",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-2.5 text-sm font-bold">
+                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-info-soft text-info">
+                    <Check size={13} strokeWidth={3} />
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* ---------------------------------------------------------------- how --- */}
       <section id="how" className="defer-paint border-y border-line bg-surface/40 px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-4xl">
           <div className="reveal-up text-center">
-            <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">Ten minutes a day is the <em className="font-accent text-primary">whole</em> method</h2>
+            <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">A rhythm that carries you to <em className="font-accent text-primary">exam day</em></h2>
             <p className="pretty mx-auto mt-3 max-w-xl font-semibold text-ink-soft">
-              Consistency beats cramming. The app is designed around one short, finishable session.
+              Cramming fades — steady practice compounds. Mocker keeps you moving from your
+              first session to the final mock.
             </p>
           </div>
 
           <ol className="mt-12 grid gap-4 sm:grid-cols-3">
             {[
-              { n: "01", icon: CalendarCheck, title: "Do today's ten", body: "One set, all subjects, finishable on a tea break. Finish it and your streak survives another day." },
-              { n: "02", icon: BookOpenCheck, title: "Practise the weak ones", body: "Pick a subject, or let the app choose the three you keep dropping marks in." },
-              { n: "03", icon: Timer, title: "Sit a full paper", body: "When the exam is close, run a timed mock with real negative marking and see where you stand." },
+              { n: "01", icon: CalendarCheck, title: "Practise every day", body: "Open with the daily challenge, then go as deep as your day allows — by subject, mixed, or straight from real past papers." },
+              { n: "02", icon: BookOpenCheck, title: "Target your weak areas", body: "Insights spot the subjects costing you marks and build practice sets weighted towards exactly those." },
+              { n: "03", icon: Timer, title: "Rehearse the real exam", body: "Full-length timed mocks with negative marking show you where you stand — before the exam hall does." },
             ].map((s) => (
               <li key={s.n} className="card reveal-up lift-edge p-6">
                 <div className="flex items-center justify-between">
@@ -401,16 +534,45 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* ------------------------------------------------------------- toolkit --- */}
+      <section className="defer-paint px-4 pb-20 sm:px-6">
+        <div className="mx-auto max-w-5xl">
+          <div className="reveal-up mx-auto max-w-2xl text-center">
+            <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">
+              And the <em className="font-accent text-primary">rest</em> of the toolkit
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: RotateCcw, tint: "bg-primary-soft text-primary", title: "My answers", body: "Every question you've faced, by subject — retry just the ones you got wrong." },
+              { icon: Lightbulb, tint: "bg-accent-soft text-accent-ink", title: "Explain this more", body: "A deeper, grounded explanation on tap when the short one isn't enough." },
+              { icon: Trophy, tint: "bg-info-soft text-info", title: "Weekly leaderboard", body: "Finishers only, resets each week — friendly stakes, zero pressure." },
+              { icon: Medal, tint: "bg-accent-soft text-accent-ink", title: "Badges & levels", body: "Eleven badges and eight levels mark the road from Beginner to Legend." },
+              { icon: SpellCheck, tint: "bg-primary-soft text-primary", title: "General English", body: "Grammar and vocabulary for the English paper, from tenses to idioms." },
+              { icon: BellRing, tint: "bg-info-soft text-info", title: "Gentle reminders", body: "One nudge a day, by push or Telegram — and only if you haven't practised." },
+              { icon: MoonStar, tint: "bg-primary-soft text-primary", title: "Light & dark", body: "A warm theme for daytime and a calm dark one for late-night sessions." },
+              { icon: MonitorSmartphone, tint: "bg-accent-soft text-accent-ink", title: "Installs like an app", body: "Add it to your home screen — it opens instantly and works offline." },
+            ].map((f) => (
+              <article key={f.title} onPointerMove={spotlight} className="card card-interactive spotlight reveal-up p-5">
+                <div className={`grid h-10 w-10 place-items-center rounded-2xl ${f.tint}`}><f.icon size={18} /></div>
+                <h3 className="mt-3 font-extrabold">{f.title}</h3>
+                <p className="pretty mt-1 text-sm font-semibold text-ink-soft">{f.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ----------------------------------------------------------- final CTA --- */}
       <section className="defer-paint px-4 pb-20 sm:px-6">
         <div className="card-hero reveal-up mx-auto max-w-3xl px-6 py-14 text-center sm:px-12">
           <div className="relative flex flex-col items-center">
             <Mascot mood="celebrate" size={104} />
             <h2 className="balance mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Your streak starts <em className="font-accent">today</em>
+              Your preparation starts <em className="font-accent">today</em>
             </h2>
             <p className="pretty mt-3 max-w-md font-semibold opacity-90">
-              Ten questions. Ten minutes. Kunju is already waiting.
+              From your first question to the final mock, Kunju is with you the whole way.
             </p>
             <Link
               href="/login"
