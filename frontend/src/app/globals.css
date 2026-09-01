@@ -502,16 +502,21 @@ body::before {
 }
 @keyframes shimmer-sweep { to { background-position: -250% 0; } }
 
-/* Tap-to-flip card. Pure CSS 3D; the trigger is a data attribute so the JS side is one toggle. */
+/* Tap-to-flip card. Each face rotates independently rather than spinning a preserve-3d parent:
+   Firefox does not reliably honour preserve-3d through nested stacking contexts (the flipped
+   back face rendered mirror-imaged), while two independently-transformed siblings under one
+   perspective behave identically in every engine. */
 .flip-scene { perspective: 1200px; }
-.flip-inner {
-  position: relative;
-  transform-style: preserve-3d;
+.flip-inner { position: relative; }
+.flip-face, .flip-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transition: transform .55s cubic-bezier(.2,.8,.2,1);
 }
-.flip-scene[data-flipped="true"] .flip-inner { transform: rotateY(180deg); }
-.flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-.flip-back { position: absolute; inset: 0; transform: rotateY(180deg); }
+.flip-face { transform: rotateY(0deg); }
+.flip-back { position: absolute; inset: 0; transform: rotateY(-180deg); }
+.flip-scene[data-flipped="true"] .flip-face { transform: rotateY(180deg); }
+.flip-scene[data-flipped="true"] .flip-back { transform: rotateY(0deg); }
 
 .balance { text-wrap: balance; }
 .pretty { text-wrap: pretty; }
