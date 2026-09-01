@@ -3,6 +3,12 @@ import { STORAGE_STATE } from "./helpers";
 
 test.use({ storageState: STORAGE_STATE });
 
+// The throwaway account is brand-new every run, so Kunju's first-run tour would otherwise
+// overlay these flows. Mark it seen before any page script runs (app-tour.spec covers the tour).
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => { try { localStorage.setItem("mocker:tour-done", "1"); } catch { /* private mode */ } });
+});
+
 test.describe("signed-in flows", () => {
   test("topics page lists the question banks", async ({ page }) => {
     await page.goto("/practice");

@@ -1,6 +1,12 @@
 import { expect, test } from "@playwright/test";
 import { TEST_EMAIL, TEST_PASSWORD } from "./helpers";
 
+// The throwaway account is brand-new every run, so Kunju's first-run tour would otherwise
+// overlay these flows. Mark it seen before any page script runs (app-tour.spec covers the tour).
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => { try { localStorage.setItem("mocker:tour-done", "1"); } catch { /* private mode */ } });
+});
+
 test.describe("authentication", () => {
   test("redirects a signed-out visitor to the login page", async ({ page }) => {
     await page.goto("/daily");
