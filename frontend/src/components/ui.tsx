@@ -1,8 +1,8 @@
 "use client";
 
 import NumberFlow from "@number-flow/react";
-import { motion } from "motion/react";
-import type { ReactNode } from "react";
+import { motion, useReducedMotion } from "motion/react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /* ------------------------------------------------------------------ bars ---- */
 export function ProgressBar({ value, className = "", color = "var(--primary)" }:
@@ -11,9 +11,11 @@ export function ProgressBar({ value, className = "", color = "var(--primary)" }:
   return (
     <div className={`h-2.5 w-full rounded-full bg-surface-2 overflow-hidden ${className}`}
       role="progressbar" aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100}>
-      <motion.div className="h-full rounded-full" style={{ background: color }}
-        initial={{ width: 0 }} animate={{ width: `${pct}%` }}
-        transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }} />
+      {/* scaleX, not width: width animates layout+paint on every answered question, while a
+          transform stays on the compositor. At 2.5px tall the corner distortion is invisible. */}
+      <motion.div className="h-full w-full rounded-full origin-left" style={{ background: color }}
+        initial={{ scaleX: 0 }} animate={{ scaleX: pct / 100 }}
+        transition={{ type: "spring", visualDuration: 0.5, bounce: 0.15 }} />
     </div>
   );
 }
@@ -31,7 +33,7 @@ export function ProgressRing({ value, size = 76, stroke = 7, color = "var(--prim
         <motion.circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={stroke}
           strokeLinecap="round" strokeDasharray={c}
           initial={{ strokeDashoffset: c }} animate={{ strokeDashoffset: c * (1 - pct) }}
-          transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }} />
+          transition={{ type: "spring", visualDuration: 0.8, bounce: 0.1 }} />
       </svg>
       <div className="absolute inset-0 grid place-items-center">{children}</div>
     </div>
@@ -177,6 +179,97 @@ export function EmptyState({ icon, title, body, action }:
       <p className="font-extrabold">{title}</p>
       <p className="text-sm text-muted font-semibold max-w-xs">{body}</p>
       {action && <div className="mt-2">{action}</div>}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------ loading + touch ---- */
+
+/**
+ * Loading state with rotating friendly copy (adapted from Kokonut UI's ai-text-loading,
+ * re-tokened and rebuilt on the CSS shimmer). Use where a plain Spinner feels too blank.
+ */
+export function LoadingQuips({ quips, interval = 1800 }: { quips: string[]; interval?: number }) {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setI((v) => (v + 1) % quips.length), interval);
+    return () => clearInterval(t);
+  }, [interval, quips.length]);
+  return (
+    <div className="flex flex-col items-center justify-center gap-3 py-20" role="status" aria-live="polite">
+      <div className="h-8 w-8 rounded-full border-4 border-line border-t-primary animate-spin" />
+      <span key={i} className="shimmer-text pop-in text-sm font-extrabold">{quips[i]}</span>
+    </div>
+  );
+}
+
+/**
+ * Press-and-hold confirmation button (adapted from Kokonut UI's hold-button, rebuilt on `.btn`).
+ * The fill is a scaleX overlay, so the whole gesture stays on the compositor. Under reduced
+ * motion a hold gesture with no visible progress would be baffling, so it completes on tap.
+ */
+export function HoldButton({ children, onComplete, holdMs = 900, className = "", disabled = false }: {
+  children: ReactNode; onComplete: () => void; holdMs?: number; className?: string; disabled?: boolean;
+}) {
+  const still = useReducedMotion();
+  const [holding, setHolding] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const stop = () => {
+    setHolding(false);
+    if (timer.current) clearTimeout(timer.current);
+  };
+  const start = () => {
+    if (disabled) return;
+    if (still) { onComplete(); return; }
+    setHolding(true);
+    timer.current = setTimeout(() => { setHolding(false); onComplete(); }, holdMs);
+  };
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
+  return (
+    <button type="button" disabled={disabled}
+      className={`btn relative overflow-clip touch-none select-none ${className}`}
+      onPointerDown={start} onPointerUp={stop} onPointerLeave={stop} onPointerCancel={stop}
+      onContextMenu={(e) => e.preventDefault()}>
+      <motion.span aria-hidden className="absolute inset-0 origin-left"
+        style={{ background: "color-mix(in srgb, var(--primary-ink) 25%, transparent)" }}
+        initial={{ scaleX: 0 }} animate={{ scaleX: holding ? 1 : 0 }}
+        transition={holding ? { duration: holdMs / 1000, ease: "linear" } : { duration: 0.18 }} />
+      <span className="relative inline-flex items-center gap-2">{children}</span>
+    </button>
+  );
+}
+
+/**
+ * Concentric progress rings (adapted from Kokonut UI's apple-activity-card: same dashoffset
+ * mechanics, our tokens, and no per-stroke drop-shadow filters — those are a jank source on
+ * low-end phones). Rings render outermost first.
+ */
+export function ActivityRings({ rings, size = 120, stroke = 10, children }: {
+  rings: { value: number; color: string; label: string }[];
+  size?: number; stroke?: number; children?: ReactNode;
+}) {
+  const label = rings
+    .map((r) => `${r.label}: ${Math.round(Math.min(1, Math.max(0, r.value)) * 100)}%`)
+    .join(", ");
+  return (
+    <div className="relative shrink-0" style={{ width: size, height: size }} role="img" aria-label={label}>
+      <svg width={size} height={size} className="-rotate-90">
+        {rings.map((ring, idx) => {
+          const r = (size - stroke) / 2 - idx * (stroke + 3);
+          const c = 2 * Math.PI * r;
+          const pct = Math.min(1, Math.max(0, ring.value));
+          return (
+            <g key={ring.label}>
+              <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--surface-3)" strokeWidth={stroke} />
+              <motion.circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={ring.color}
+                strokeWidth={stroke} strokeLinecap="round" strokeDasharray={c}
+                initial={{ strokeDashoffset: c }} animate={{ strokeDashoffset: c * (1 - pct) }}
+                transition={{ type: "spring", visualDuration: 0.9, bounce: 0, delay: idx * 0.12 }} />
+            </g>
+          );
+        })}
+      </svg>
+      <div className="absolute inset-0 grid place-items-center">{children}</div>
     </div>
   );
 }

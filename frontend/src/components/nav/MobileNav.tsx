@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -12,6 +12,11 @@ import { NAV_GROUPS, PRIMARY_LINKS } from "./links";
 import { api } from "@/lib/api";
 
 export default function MobileNav() {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  useMotionValueEvent(scrollY, "change", (y) => {
+    setHidden(y > (scrollY.getPrevious() ?? 0) && y > 80);
+  });
   const pathname = usePathname();
   const router = useRouter();
   const { stats, due, user } = useAppData();
@@ -26,7 +31,11 @@ export default function MobileNav() {
 
   return (
     <>
-      <header className="lg:hidden sticky top-0 z-30 glass border-b border-line">
+      {/* The header slides away while scrolling down and returns on the first upward scroll,
+          reclaiming 56px of a small screen. Motion values bypass React rendering; setState only
+          fires when the direction flips, not per frame. */}
+      <motion.header className="lg:hidden sticky top-0 z-30 glass border-b border-line"
+        animate={{ y: hidden ? "-100%" : 0 }} transition={{ duration: 0.2, ease: "easeOut" }}>
         <div className="mx-auto max-w-2xl h-14 px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Mascot mood="idle" size={28} />
@@ -46,7 +55,7 @@ export default function MobileNav() {
             </button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       <AnimatePresence>
         {open && (

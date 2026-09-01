@@ -4,13 +4,21 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { Award, BarChart3, Flame, LifeBuoy, Target, Trophy } from "lucide-react";
-import { Num, PageHeader, ProgressBar, ProgressRing, SkeletonPage, StatTile } from "@/components/ui";
+import { ActivityRings, Num, PageHeader, ProgressBar, ProgressRing, SkeletonPage, StatTile } from "@/components/ui";
 import { api } from "@/lib/api";
 import type { HistoryRow, Insights, LeaderboardRow, Stats } from "@/lib/types";
 
 const DAY = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+
+const TABS = [
+  { id: "overview", label: "Overview" },
+  { id: "topics", label: "Topics" },
+  { id: "badges", label: "Badges" },
+  { id: "activity", label: "Activity" },
+] as const;
+type TabId = (typeof TABS)[number]["id"];
 
 export default function Progress() {
   const [stats, setStats] = useState<Stats | null>(null);
@@ -20,6 +28,7 @@ export default function Progress() {
   const [starting, setStarting] = useState(false);
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
+  const [tab, setTab] = useState<TabId>("overview");
 
   useEffect(() => {
     Promise.all([api.stats(), api.history(), api.leaderboard(), api.insights()])
@@ -31,6 +40,7 @@ export default function Progress() {
   if (!stats) return <SkeletonPage />;
 
   const maxAnswered = Math.max(1, ...stats.last_7_days.map((d) => d.answered));
+  const todayAnswered = stats.last_7_days[stats.last_7_days.length - 1]?.answered ?? 0;
   const allBadges = Object.entries(stats.badge_meta);
 
   return (
@@ -51,6 +61,45 @@ export default function Progress() {
           <ProgressBar value={stats.level_progress} color="var(--accent)" className="mt-2" />
         </div>
         <Mascot mood={stats.current_streak > 0 ? "happy" : "idle"} size={72} />
+      </section>
+
+      {/* Tab bar: the active pill is a shared-layout element, same spring as the sidebar pill,
+          so switching tabs feels like one object sliding rather than two states swapping. */}
+      <div className="flex gap-1 rounded-2xl bg-surface-2 p-1" role="tablist" aria-label="Progress sections">
+        {TABS.map((t) => (
+          <button key={t.id} role="tab" aria-selected={tab === t.id} onClick={() => setTab(t.id)}
+            className={`relative flex-1 rounded-xl px-2 py-2 text-sm font-extrabold transition-colors ${tab === t.id ? "text-primary-ink" : "text-muted hover:text-ink"}`}>
+            {tab === t.id && (
+              <motion.span layoutId="progress-tab" className="absolute inset-0 rounded-xl bg-primary"
+                transition={{ type: "spring", stiffness: 420, damping: 34 }} />
+            )}
+            <span className="relative">{t.label}</span>
+          </button>
+        ))}
+      </div>
+
+      <AnimatePresence mode="wait" initial={false}>
+      <motion.div key={tab} className="flex flex-col gap-5"
+        initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }}
+        transition={{ duration: 0.18, ease: [0.2, 0.8, 0.2, 1] }}>
+
+      {tab === "overview" && <>
+      <section className="card p-4 flex items-center gap-5">
+        <ActivityRings size={116} stroke={9} rings={[
+          { value: todayAnswered / 10, color: "var(--primary)", label: "Today's questions" },
+          { value: stats.accuracy, color: "var(--accent)", label: "Accuracy" },
+          { value: stats.level_progress, color: "var(--info)", label: "Level progress" },
+        ]}>
+          <div className="text-center leading-none">
+            <div className="text-lg font-extrabold">{todayAnswered}</div>
+            <div className="text-[9px] font-extrabold text-muted mt-0.5">TODAY</div>
+          </div>
+        </ActivityRings>
+        <div className="flex-1 flex flex-col gap-1.5 text-sm font-bold">
+          <span className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-primary" />{todayAnswered}/10 questions today</span>
+          <span className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-accent" />{Math.round(stats.accuracy * 100)}% accuracy</span>
+          <span className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-info" />{Math.round(stats.level_progress * 100)}% to level {stats.level + 1}</span>
+        </div>
       </section>
 
       <section className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -107,7 +156,9 @@ export default function Progress() {
         </div>
       </section>
 
-      {ins && <WeakTopics ins={ins} starting={starting} onPractise={async () => {
+      </>}
+
+      {tab === "topics" && (ins ? <WeakTopics ins={ins} starting={starting} onPractise={async () => {
         setStarting(true);
         try {
           const q = await api.startQuiz({ mode: "weak" });
@@ -116,8 +167,9 @@ export default function Progress() {
           setError((e as Error)?.message || "Could not start that practice set.");
           setStarting(false);
         }
-      }} />}
+      }} /> : <p className="text-sm text-muted font-semibold text-center py-8">Answer a few more questions and your topic insights will appear here.</p>)}
 
+      {tab === "badges" && (
       <section className="card p-4">
         <h2 className="font-extrabold mb-3">Badges</h2>
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
@@ -133,7 +185,9 @@ export default function Progress() {
           })}
         </div>
       </section>
+      )}
 
+      {tab === "activity" && <>
       <section className="card p-4">
         <h2 className="font-extrabold mb-3">This week&apos;s leaderboard</h2>
         {board.length === 0 ? <p className="text-sm text-muted font-semibold">No activity yet this week.</p> : (
@@ -168,6 +222,10 @@ export default function Progress() {
           </ul>
         )}
       </section>
+      </>}
+
+      </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

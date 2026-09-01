@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import {
   ArrowRight, BookOpenCheck, BrainCircuit, CalendarCheck, Check, Flame,
@@ -31,8 +32,18 @@ const FALLBACK: PublicStats = {
   ],
 };
 
+/* Entrance choreography (borrowed from manus.im): one ease-out-cubic curve, elements arriving
+   in reading order. Used only for the hero — below the fold the CSS view() reveals take over. */
+const EASE_OUT = [0.33, 1, 0.68, 1] as const;
+const enter = (delay: number) => ({
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.45, ease: EASE_OUT, delay },
+});
+
 export default function Landing() {
   const [stats, setStats] = useState<PublicStats>(FALLBACK);
+  const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
     let alive = true;
@@ -65,38 +76,63 @@ export default function Landing() {
       {/* --------------------------------------------------------------- hero --- */}
       <section className="aurora relative px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="pop-in flex justify-center">
+          <motion.div {...enter(0)} className="flex justify-center">
             <Mascot mood="wave" size={132} />
-          </div>
+          </motion.div>
 
-          <span className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-primary-line bg-primary-soft px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-wider text-primary">
+          <motion.span {...enter(0.05)} className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-primary-line bg-primary-soft px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-wider text-primary">
             <Sparkles size={13} /> Built for Kerala PSC · SSC · UPSC
-          </span>
+          </motion.span>
 
-          <h1 className="balance mt-4 text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl">
+          <motion.h1 {...enter(0.1)} className="balance mt-4 text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl">
             One more question,<br />
-            <span className="text-grad">every single day.</span>
-          </h1>
+            <span className="font-accent italic shimmer-text pr-1">every single day.</span>
+          </motion.h1>
 
-          <p className="pretty mx-auto mt-5 max-w-xl text-base font-semibold leading-relaxed text-ink-soft sm:text-lg">
+          <motion.p {...enter(0.15)} className="pretty mx-auto mt-5 max-w-xl text-base font-semibold leading-relaxed text-ink-soft sm:text-lg">
             A calm, ad-free way to build General Knowledge for competitive exams.
             Ten questions a day, a streak worth protecting, and a small elephant who
             genuinely believes in you.
-          </p>
+          </motion.p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          {/* Question-first hero (the manus.im idea): the product's core object — a question —
+              is the first thing you can touch. Everything routes to sign-in, but arriving there
+              having already "asked" something reframes the whole page. */}
+          <motion.div {...enter(0.2)} className="mx-auto mt-7 max-w-xl">
+            <Link href="/login" className="card card-2 block rounded-[22px] p-2.5 pl-5 text-left transition hover:border-primary-line">
+              <span className="flex items-center justify-between gap-3">
+                <span className="truncate text-sm font-semibold text-muted sm:text-base">Try: Who wrote &lsquo;Pride and Prejudice&rsquo;?</span>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-primary text-primary-ink"><ArrowRight size={18} /></span>
+              </span>
+            </Link>
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+              {[
+                { icon: CalendarCheck, label: "Today's challenge" },
+                { icon: TrendingUp, label: "My weak topics" },
+                { icon: ShieldCheck, label: "Past papers" },
+                { icon: Newspaper, label: "Current affairs" },
+              ].map((c) => (
+                <Link key={c.label} href="/login"
+                  className="flex items-center gap-1.5 rounded-full border border-line bg-surface px-3.5 py-2 text-xs font-extrabold text-ink-soft transition hover:border-primary-line hover:text-primary active:scale-[0.98]">
+                  <c.icon size={14} /> {c.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div {...enter(0.26)} className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link href="/login" className="glow-ring btn btn-primary w-full px-8 text-base sm:w-auto">
               Start practising <ArrowRight size={18} />
             </Link>
             <a href="#features" className="btn btn-ghost w-full px-7 text-base sm:w-auto">See what&apos;s inside</a>
-          </div>
+          </motion.div>
 
-          <p className="mt-4 text-xs font-bold text-muted">
+          <motion.p {...enter(0.32)} className="mt-4 text-xs font-bold text-muted">
             Free · No advertisements · Works offline
-          </p>
+          </motion.p>
 
           {/* live counts */}
-          <dl className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-3">
+          <motion.dl {...enter(0.38)} className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-3">
             {[
               { label: "Questions", value: stats.questions, tone: "text-primary" },
               { label: "Subjects", value: stats.topics, tone: "text-accent" },
@@ -107,7 +143,7 @@ export default function Landing() {
                 <dt className="mt-1 text-[10px] font-extrabold uppercase tracking-wider text-muted">{s.label}</dt>
               </div>
             ))}
-          </dl>
+          </motion.dl>
         </div>
       </section>
 
@@ -135,7 +171,7 @@ export default function Landing() {
         <div className="mx-auto max-w-5xl">
           <div className="reveal-up mx-auto max-w-2xl text-center">
             <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Everything you need, nothing you don&apos;t
+              Everything you need, <em className="font-accent text-primary">nothing</em> you don&apos;t
             </h2>
             <p className="pretty mt-3 font-semibold text-ink-soft">
               No feed to scroll, no badges for logging in. Just the things that actually
@@ -259,7 +295,7 @@ export default function Landing() {
       <section id="how" className="defer-paint border-y border-line bg-surface/40 px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-4xl">
           <div className="reveal-up text-center">
-            <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">Ten minutes a day is the whole method</h2>
+            <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">Ten minutes a day is the <em className="font-accent text-primary">whole</em> method</h2>
             <p className="pretty mx-auto mt-3 max-w-xl font-semibold text-ink-soft">
               Consistency beats cramming. The app is designed around one short, finishable session.
             </p>
@@ -289,7 +325,7 @@ export default function Landing() {
         <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2">
           <div className="reveal-up">
             <h2 className="balance text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Questions you can actually trust
+              Questions you can <em className="font-accent text-primary">actually</em> trust
             </h2>
             <p className="pretty mt-4 font-semibold leading-relaxed text-ink-soft">
               A quiz app is only as good as its answer key. Ours is built from
@@ -314,40 +350,53 @@ export default function Landing() {
             </ul>
           </div>
 
-          <div className="reveal-up card card-2 p-6">
-            <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-muted">
-              <ShieldCheck size={15} className="text-primary" /> Sample question
-            </div>
-            <p className="mt-3 text-lg font-extrabold leading-snug">
-              Vasco da Gama first set foot on Indian soil in 1498 at Kappad, which lies in
-              which present-day district?
-            </p>
-            <div className="mt-4 flex flex-col gap-2">
-              {[
-                { t: "Kannur", s: "" },
-                { t: "Kozhikode", s: "correct" },
-                { t: "Malappuram", s: "" },
-                { t: "Thrissur", s: "" },
-              ].map((o, i) => (
-                <div
-                  key={o.t}
-                  data-state={o.s || undefined}
-                  className="option !cursor-default"
-                >
-                  <span className={`grid h-7 w-7 shrink-0 place-items-center rounded-lg text-xs font-extrabold ${o.s ? "bg-success text-white" : "bg-surface-2 text-muted"}`}>
-                    {o.s ? <Check size={15} strokeWidth={3} /> : ["A", "B", "C", "D"][i]}
-                  </span>
-                  <span className="pt-0.5 font-semibold leading-snug">{o.t}</span>
+          {/* Tap-to-flip sample (mechanics adapted from Kokonut UI's card-flip, made tappable —
+              theirs is hover-only, which does nothing on the phones this app is for). */}
+          <div className="reveal-up">
+            <button type="button" onClick={() => setFlipped(!flipped)} aria-pressed={flipped}
+              data-flipped={flipped} className="flip-scene block w-full text-left">
+              <div className="flip-inner">
+                <div className="flip-face card card-2 p-6">
+                  <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-muted">
+                    <ShieldCheck size={15} className="text-primary" /> Sample question
+                  </div>
+                  <p className="mt-3 text-lg font-extrabold leading-snug">
+                    Vasco da Gama first set foot on Indian soil in 1498 at Kappad, which lies in
+                    which present-day district?
+                  </p>
+                  <div className="mt-4 flex flex-col gap-2">
+                    {["Kannur", "Kozhikode", "Malappuram", "Thrissur"].map((t, i) => (
+                      <div key={t} className="option !cursor-pointer">
+                        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-surface-2 text-xs font-extrabold text-muted">
+                          {["A", "B", "C", "D"][i]}
+                        </span>
+                        <span className="pt-0.5 font-semibold leading-snug">{t}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-center text-xs font-extrabold text-primary">Tap to reveal the answer</p>
                 </div>
-              ))}
-            </div>
-            <div className="mt-4 rounded-2xl bg-success-soft p-4">
-              <p className="font-extrabold text-success">You got it!</p>
-              <p className="mt-1 text-sm font-semibold leading-relaxed">
-                Kappad, near Koyilandy in Kozhikode district, is where Vasco da Gama landed on
-                20 May 1498, opening the direct sea route from Europe to India.
-              </p>
-            </div>
+                <div className="flip-back card card-2 flex flex-col p-6" aria-hidden={!flipped}>
+                  <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-muted">
+                    <ShieldCheck size={15} className="text-success" /> Answer
+                  </div>
+                  <div className="option mt-3 !cursor-pointer" data-state="correct">
+                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-success text-white">
+                      <Check size={15} strokeWidth={3} />
+                    </span>
+                    <span className="pt-0.5 font-semibold leading-snug">Kozhikode</span>
+                  </div>
+                  <div className="mt-4 rounded-2xl bg-success-soft p-4">
+                    <p className="font-extrabold text-success">You got it!</p>
+                    <p className="mt-1 text-sm font-semibold leading-relaxed">
+                      Kappad, near Koyilandy in Kozhikode district, is where Vasco da Gama landed on
+                      20 May 1498, opening the direct sea route from Europe to India.
+                    </p>
+                  </div>
+                  <p className="mt-auto pt-4 text-center text-xs font-extrabold text-muted">Tap to flip back</p>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
       </section>
@@ -358,7 +407,7 @@ export default function Landing() {
           <div className="relative flex flex-col items-center">
             <Mascot mood="celebrate" size={104} />
             <h2 className="balance mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Your streak starts today
+              Your streak starts <em className="font-accent">today</em>
             </h2>
             <p className="pretty mt-3 max-w-md font-semibold opacity-90">
               Ten questions. Ten minutes. Kunju is already waiting.
@@ -377,18 +426,24 @@ export default function Landing() {
       </section>
 
       {/* ------------------------------------------------------------- footer --- */}
-      <footer className="border-t border-line px-4 py-10 sm:px-6">
-        <div className="mx-auto flex max-w-5xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-2">
-            <Mascot mood="idle" size={30} />
-            <span className="font-extrabold tracking-tight">Mocker</span>
-          </div>
-          <p className="max-w-xl text-[11px] font-semibold leading-relaxed text-muted">
-            Previous-year questions are reproduced from official papers published by the{" "}
-            <a href="https://www.keralapsc.gov.in" target="_blank" rel="noopener noreferrer" className="underline">
-              Kerala Public Service Commission
-            </a>. Mocker is an independent study tool and is not affiliated with or endorsed by the KPSC.
+      {/* Deep-teal band with a serif tagline — the one dark, quiet moment on the page. */}
+      <footer style={{ background: "var(--grad-primary)" }}>
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+          <p className="font-accent text-center text-3xl italic text-white sm:text-4xl">
+            One more question.
           </p>
+          <div className="mt-10 flex flex-col items-center gap-4 border-t border-white/20 pt-8 sm:flex-row sm:justify-between">
+            <div className="flex items-center gap-2 text-white">
+              <Mascot mood="sleepy" size={30} />
+              <span className="font-extrabold tracking-tight">Mocker</span>
+            </div>
+            <p className="max-w-xl text-center text-[11px] font-semibold leading-relaxed text-white/75 sm:text-left">
+              Previous-year questions are reproduced from official papers published by the{" "}
+              <a href="https://www.keralapsc.gov.in" target="_blank" rel="noopener noreferrer" className="underline">
+                Kerala Public Service Commission
+              </a>. Mocker is an independent study tool and is not affiliated with or endorsed by the KPSC.
+            </p>
+          </div>
         </div>
       </footer>
     </div>

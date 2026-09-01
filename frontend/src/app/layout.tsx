@@ -12,6 +12,13 @@ const nunito = localFont({
   display: "swap",
 });
 
+// Serif italic accent — used for single emphasised words, never body copy.
+const fraunces = localFont({
+  src: [{ path: "../fonts/fraunces-italic-latin.woff2", weight: "400 700", style: "italic" }],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: { default: "Mocker — one more question", template: "%s · Mocker" },
   description: "Daily GK practice for PSC exams. Calm, fast, and ad-free.",
@@ -33,7 +40,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${nunito.variable} h-full antialiased`}>
+    <html lang="en" className={`${nunito.variable} ${fraunces.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         {/* First thing in the body so a stored theme is applied before anything is painted;
             a raw <head> element is stripped by the App Router, so it has to live here. */}

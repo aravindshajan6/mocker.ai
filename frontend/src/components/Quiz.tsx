@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowRight, Check, Lightbulb, X } from "lucide-react";
 import Mascot, { type Mood } from "@/components/Mascot";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { Chip, Num, ProgressBar, Spinner } from "@/components/ui";
+import { Chip, LoadingQuips, Num, ProgressBar } from "@/components/ui";
 import { api, QueuedOffline } from "@/lib/api";
 import type { AnswerResult, QuizSession } from "@/lib/types";
 
@@ -136,7 +136,7 @@ export default function Quiz({ id }: { id: string }) {
   };
 
   if (error) return <div className="pt-10 text-center"><p className="text-danger font-bold">{error}</p><Link href="/" className="btn btn-ghost mt-4">Back home</Link></div>;
-  if (!session || !q) return <Spinner label="Shuffling questions…" />;
+  if (!session || !q) return <LoadingQuips quips={["Shuffling questions…", "Picking from past papers…", "Warming up Kunju…"]} />;
 
   const optionState = (i: number) => {
     if (phase === "answering") return selected === i ? "selected" : "idle";
@@ -181,8 +181,12 @@ export default function Quiz({ id }: { id: string }) {
         </div>
       </div>
 
-      {/* Question */}
-      <div key={q.id} className="pop-in mt-4 flex-1 flex flex-col">
+      {/* Question. popLayout pops the exiting card out of flow, so the incoming one takes its
+          place immediately and the footer button never jumps while both are on screen. */}
+      <AnimatePresence mode="popLayout" initial={false}>
+      <motion.div key={q.id} className="mt-4 flex-1 flex flex-col"
+        initial={{ opacity: 0, x: 28 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -28 }}
+        transition={{ type: "spring", visualDuration: 0.3, bounce: 0 }}>
         {q.source_ref && (
           <p className="text-[11px] font-extrabold text-accent uppercase tracking-wide mb-1.5">📄 Asked in {q.source_ref}</p>
         )}
@@ -285,34 +289,45 @@ export default function Quiz({ id }: { id: string }) {
           )}
           <p className="hidden sm:block text-center text-xs text-muted font-semibold mt-2">Tip: press 1–4 to pick, Enter to continue</p>
         </div>
-      </div>
+      </motion.div>
+      </AnimatePresence>
 
       {/* Streak milestone */}
+      <AnimatePresence>
       {milestone && (
-        <div className="fixed inset-0 z-40 bg-black/50 grid place-items-center px-6" onClick={() => setMilestone(null)}>
-          <div className="card p-6 w-full max-w-sm text-center pop-in" onClick={(e) => e.stopPropagation()}>
+        <motion.div className="fixed inset-0 z-40 bg-black/50 grid place-items-center px-6" onClick={() => setMilestone(null)}
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+          <motion.div className="card p-6 w-full max-w-sm text-center" onClick={(e) => e.stopPropagation()}
+            initial={{ scale: 0.94, y: 10, opacity: 0 }} animate={{ scale: 1, y: 0, opacity: 1 }}
+            exit={{ opacity: 0, scale: 0.96 }} transition={{ type: "spring", visualDuration: 0.3, bounce: 0.2 }}>
             <Mascot mood="celebrate" size={120} />
             <p className="text-3xl font-extrabold mt-1">🔥 {milestone.days}</p>
             <p className="text-xl font-extrabold mt-1">{milestone.title}</p>
             <p className="text-sm font-semibold text-muted mt-2 leading-relaxed">{milestone.body}</p>
             <button className="btn btn-primary w-full mt-5" onClick={() => setMilestone(null)}>Keep going</button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
+      </AnimatePresence>
 
       {/* Quit dialog */}
+      <AnimatePresence>
       {showQuit && (
-        <div className="fixed inset-0 z-30 bg-black/40 grid place-items-center px-6" onClick={() => setShowQuit(false)}>
-          <div className="card p-5 w-full max-w-sm pop-in" onClick={(e) => e.stopPropagation()}>
+        <motion.div className="fixed inset-0 z-30 bg-black/40 grid place-items-center px-6" onClick={() => setShowQuit(false)}
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+          <motion.div className="card p-5 w-full max-w-sm" onClick={(e) => e.stopPropagation()}
+            initial={{ scale: 0.94, y: 10, opacity: 0 }} animate={{ scale: 1, y: 0, opacity: 1 }}
+            exit={{ opacity: 0, scale: 0.96 }} transition={{ type: "spring", visualDuration: 0.3, bounce: 0.2 }}>
             <p className="font-extrabold text-lg">Take a break?</p>
             <p className="text-sm text-muted font-semibold mt-1">Your progress is saved — you can pick this quiz up again from Home.</p>
             <div className="flex gap-2 mt-4">
               <button className="btn btn-ghost flex-1" onClick={() => setShowQuit(false)}>Keep going</button>
               <button className="btn btn-primary flex-1" onClick={quit}>Exit</button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </div>
   );
 }
