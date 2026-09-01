@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { MotionConfig } from "motion/react";
 import { AppDataProvider } from "@/components/AppData";
 import Sidebar from "@/components/nav/Sidebar";
 import MobileNav from "@/components/nav/MobileNav";
@@ -16,6 +17,9 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const focus = isFocusMode(pathname);
 
   return (
+    // reducedMotion="user" drops transform and layout animations for people who ask for less
+    // motion, while keeping opacity and colour — so the app still feels responsive, not frozen.
+    <MotionConfig reducedMotion="user">
     <AppDataProvider>
       {focus ? (
         <main className="mx-auto w-full max-w-2xl px-4">{children}</main>
@@ -36,5 +40,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       )}
     </AppDataProvider>
+    </MotionConfig>
   );
 }

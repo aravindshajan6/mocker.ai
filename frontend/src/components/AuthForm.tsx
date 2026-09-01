@@ -41,7 +41,8 @@ export default function AuthForm({ mode }: { mode: "login" | "register" }) {
   };
 
   return (
-    <div className="min-h-dvh flex items-center justify-center px-4 py-10">
+    // The same colour wash as the landing hero, so arriving here from /welcome feels continuous.
+    <div className="aurora min-h-dvh flex items-center justify-center px-4 py-10">
       <motion.div className="w-full max-w-sm"
         initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: [0.2, 0.8, 0.2, 1] }}>
@@ -52,7 +53,7 @@ export default function AuthForm({ mode }: { mode: "login" | "register" }) {
             {isLogin ? "Ready for a few questions?" : "Let's make studying a daily habit — one question at a time."}
           </p>
         </div>
-        <form onSubmit={submit} className="card card-2 p-5 flex flex-col gap-3">
+        <form onSubmit={submit} className="card card-2 lift-edge p-5 flex flex-col gap-3">
           {!isLogin && (
             <label className="flex flex-col gap-1 text-sm font-bold">
               Your name

@@ -71,14 +71,29 @@ export function PageHeader({ title, subtitle, icon, action }:
   { title: string; subtitle?: string; icon?: ReactNode; action?: ReactNode }) {
   return (
     <div className="flex items-start gap-3 mb-5">
-      {icon && <div className="shrink-0 grid place-items-center h-11 w-11 rounded-2xl bg-primary-soft text-primary">{icon}</div>}
+      {icon && (
+        <div className="shrink-0 grid place-items-center h-11 w-11 rounded-2xl bg-primary-soft text-primary border border-primary-line/60 shadow-[var(--shadow-1)]">
+          {icon}
+        </div>
+      )}
       <div className="flex-1 min-w-0">
-        <h1 className="text-2xl font-extrabold leading-tight tracking-tight">{title}</h1>
+        <h1 className="balance text-2xl font-extrabold leading-tight tracking-tight">{title}</h1>
         {subtitle && <p className="text-muted font-semibold text-sm mt-0.5">{subtitle}</p>}
       </div>
       {action}
     </div>
   );
+}
+
+/**
+ * Cursor-following glow for `.spotlight` cards. Writes the pointer position straight into CSS
+ * custom properties, so there is no React state and no re-render per pointermove.
+ */
+export function spotlight(e: React.PointerEvent<HTMLElement>) {
+  const el = e.currentTarget;
+  const r = el.getBoundingClientRect();
+  el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  el.style.setProperty("--my", `${e.clientY - r.top}px`);
 }
 
 export function SectionTitle({ children, action }: { children: ReactNode; action?: ReactNode }) {
@@ -93,7 +108,7 @@ export function SectionTitle({ children, action }: { children: ReactNode; action
 export function StatTile({ label, value, sub, tone = "", icon }:
   { label: string; value: ReactNode; sub?: string; tone?: string; icon?: ReactNode }) {
   return (
-    <div className="card p-3.5">
+    <div className="card lift-edge p-3.5">
       {icon && <div className="text-muted mb-1">{icon}</div>}
       <div className={`text-xl font-extrabold leading-none ${tone}`}>{value}</div>
       <div className="text-[10px] font-extrabold text-muted uppercase tracking-wider mt-1.5">{label}</div>
