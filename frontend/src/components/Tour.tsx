@@ -1,98 +1,133 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, BrainCircuit, CalendarCheck, Flame, Timer, TrendingUp } from "lucide-react";
 import Mascot, { type Mood } from "@/components/Mascot";
 import { useAppData } from "@/components/AppData";
 
 const DONE_KEY = "mocker:tour-done";
+const TOUR_EVENT = "mocker:start-tour";
 
-/** One card per idea, Kunju acting each one out. Kept to five — a tour is a trailer, not the film. */
-const STEPS: { mood: Mood; icon: typeof Flame; tint: string; title: string; body: string }[] = [
-  { mood: "wave", icon: CalendarCheck, tint: "bg-primary-soft text-primary", title: "Hi, I'm Kunju!",
-    body: "Welcome to Mocker — your calm corner for PSC, SSC and UPSC prep. Let me show you around before your first question. It takes half a minute." },
-  { mood: "happy", icon: Flame, tint: "bg-accent-soft text-accent-ink", title: "Start with the daily challenge",
-    body: "Every morning there's a fresh shared set — the same for every aspirant, so scores really compare. Finish it to grow a streak; miss a day and I'll quietly repair it, twice a month." },
-  { mood: "think", icon: BrainCircuit, tint: "bg-primary-soft text-primary", title: "Practise what costs you marks",
-    body: "Drill any subject — from Indian History to General English — or let me build sets from the topics you keep slipping on. Questions you struggle with come back for revision right before you'd forget them." },
-  { mood: "oops", icon: Timer, tint: "bg-info-soft text-info", title: "Rehearse the real exam",
-    body: "Exam mode runs full-length timed papers with the hall's own rules — negative marking, a question palette, deliberate blanks. Better to meet them here first." },
-  { mood: "celebrate", icon: TrendingUp, tint: "bg-accent-soft text-accent-ink", title: "Watch yourself improve",
-    body: "Points, levels, badges and a weekly leaderboard keep score of your consistency, and your progress page shows exactly which subjects are rising. Ready?" },
+/** Replays the tour from anywhere (e.g. the nav's "Take the tour" button). */
+export function startTour() {
+  window.dispatchEvent(new Event(TOUR_EVENT));
+}
+
+/* Each step opens the real page it talks about, and the card parks itself in a corner where it
+   covers the least: alternating top/bottom on desktop, docked above the tab bar on mobile. */
+const STEPS: {
+  route: string; pos: string; mood: Mood; icon: typeof Flame; tint: string; title: string; body: string;
+}[] = [
+  { route: "/", pos: "lg:right-6 lg:top-auto lg:bottom-6", mood: "wave", icon: CalendarCheck, tint: "bg-primary-soft text-primary",
+    title: "Hi, I'm Kunju!",
+    body: "Welcome to Mocker — your calm corner for PSC, SSC and UPSC prep. This is Home: today's challenge, quick actions, your topics. Let me walk you through the real pages." },
+  { route: "/daily", pos: "lg:right-6 lg:top-20 lg:bottom-auto", mood: "happy", icon: Flame, tint: "bg-accent-soft text-accent-ink",
+    title: "The daily challenge",
+    body: "This page refreshes every morning with a set shared by every aspirant, so scores really compare. Finish it to grow a streak — miss a day and I repair it, twice a month." },
+  { route: "/practice", pos: "lg:right-6 lg:top-auto lg:bottom-6", mood: "think", icon: BrainCircuit, tint: "bg-primary-soft text-primary",
+    title: "Practise any subject",
+    body: "Every bank from Indian History to General English lives here — or let me build sets from the topics costing you marks. Struggled questions return for revision right before you'd forget them." },
+  { route: "/exam", pos: "lg:right-6 lg:top-20 lg:bottom-auto", mood: "oops", icon: Timer, tint: "bg-info-soft text-info",
+    title: "Rehearse the real exam",
+    body: "Full-length timed papers with the hall's own rules — negative marking, a question palette, deliberate blanks. Better to meet them here than there." },
+  { route: "/progress", pos: "lg:right-6 lg:top-auto lg:bottom-6", mood: "celebrate", icon: TrendingUp, tint: "bg-accent-soft text-accent-ink",
+    title: "Watch yourself improve",
+    body: "Points, levels, badges, a weekly leaderboard, and per-subject trends — this page keeps an honest score of your consistency. Ready for your first set?" },
 ];
 
 /**
- * First-run guided tour. Shows only for an account that has answered nothing yet, and only
- * until it's been completed or skipped on this device — after that it never returns.
+ * First-run guided walkthrough. Non-modal on purpose: no scrim, the page stays live behind a
+ * compact card, so each step genuinely shows the screen it describes. Appears only for an
+ * account that has answered nothing, until completed or skipped on this device.
  */
 export default function Tour() {
   const router = useRouter();
+  const pathname = usePathname();
   const { stats } = useAppData();
   // Derived, not effect-driven: on the server (and if storage is unavailable) this reads as
-  // dismissed, and stats are null during hydration — so first paint is identical everywhere,
-  // and the tour appears only once the account's zero-answers state is actually known.
+  // dismissed, and stats are null during hydration — so first paint is identical everywhere.
   const [dismissed, setDismissed] = useState(() => {
     if (typeof window === "undefined") return true;
     try { return !!localStorage.getItem(DONE_KEY); } catch { return true; }
   });
   const [i, setI] = useState(0);
-  const open = !dismissed && !!stats && stats.questions_answered === 0;
+  // A manual replay overrides both the storage flag and the new-account gate.
+  const [forced, setForced] = useState(false);
+  const open = forced || (!dismissed && !!stats && stats.questions_answered === 0);
+  const step = STEPS[i];
+  const last = i === STEPS.length - 1;
+
+  useEffect(() => {
+    const onStart = () => { setI(0); setForced(true); };
+    window.addEventListener(TOUR_EVENT, onStart);
+    return () => window.removeEventListener(TOUR_EVENT, onStart);
+  }, []);
+
+  // Take the user to the page the current step describes.
+  useEffect(() => {
+    if (open && pathname !== step.route) router.push(step.route);
+    // pathname is deliberately not a dependency: if the user wanders off mid-step, the tour
+    // waits where it is rather than yanking them back.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, i]);
 
   const dismiss = () => {
     try { localStorage.setItem(DONE_KEY, "1"); } catch { /* best effort */ }
     setDismissed(true);
+    setForced(false);
   };
   const finish = () => {
     dismiss();
     router.push("/daily");
   };
 
-  const step = STEPS[i];
-  const last = i === STEPS.length - 1;
-
   return (
     <AnimatePresence>
       {open && (
-        <motion.div className="fixed inset-0 z-50 grid place-items-center bg-black/50 px-5"
-          role="dialog" aria-modal="true" aria-label="Welcome tour"
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
-          <motion.div className="card card-2 w-full max-w-sm overflow-hidden p-6 text-center"
-            initial={{ scale: 0.94, y: 12, opacity: 0 }} animate={{ scale: 1, y: 0, opacity: 1 }}
-            exit={{ opacity: 0, scale: 0.96 }} transition={{ type: "spring", visualDuration: 0.35, bounce: 0.2 }}>
+        <motion.div
+          layout
+          role="dialog" aria-label="Welcome tour"
+          className={`fixed inset-x-3 bottom-20 z-50 lg:inset-x-auto lg:w-[320px] ${step.pos}`}
+          transition={{ type: "spring", visualDuration: 0.45, bounce: 0.15 }}
+          initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 16 }}>
+          <div className="card border-primary-line p-4" style={{ boxShadow: "var(--shadow-3)" }}>
             <AnimatePresence mode="popLayout" initial={false}>
               <motion.div key={i}
-                initial={{ opacity: 0, x: 34 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -34 }}
-                transition={{ type: "spring", visualDuration: 0.3, bounce: 0 }}>
-                <div className="flex justify-center"><Mascot mood={step.mood} trigger={i} size={110} /></div>
-                <div className={`mx-auto mt-2 grid h-9 w-9 place-items-center rounded-xl ${step.tint}`}>
-                  <step.icon size={17} />
+                initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }}
+                transition={{ type: "spring", visualDuration: 0.28, bounce: 0 }}>
+                <div className="flex items-start gap-3">
+                  <Mascot mood={step.mood} trigger={i} size={64} className="shrink-0" />
+                  <div className="min-w-0">
+                    <div className={`mb-1.5 grid h-7 w-7 place-items-center rounded-lg ${step.tint}`}>
+                      <step.icon size={14} />
+                    </div>
+                    <h2 className="font-extrabold leading-tight">{step.title}</h2>
+                  </div>
                 </div>
-                <h2 className="mt-3 text-xl font-extrabold">{step.title}</h2>
-                <p className="pretty mt-2 text-sm font-semibold leading-relaxed text-ink-soft">{step.body}</p>
+                <p className="pretty mt-2 text-[13px] font-semibold leading-relaxed text-ink-soft">{step.body}</p>
               </motion.div>
             </AnimatePresence>
 
-            {/* progress dots */}
-            <div className="mt-5 flex items-center justify-center gap-1.5" aria-hidden>
+            <div className="mt-3 flex items-center gap-1.5" aria-hidden>
               {STEPS.map((_, d) => (
                 <span key={d} className={`h-1.5 rounded-full transition-all duration-300 ${d === i ? "w-5 bg-primary" : "w-1.5 bg-line-strong"}`} />
               ))}
-            </div>
-
-            <div className="mt-5 flex gap-2">
-              {i > 0 && !last && (
-                <button className="btn btn-ghost !min-h-11 flex-none !px-4" onClick={() => setI(i - 1)} aria-label="Previous step">←</button>
-              )}
-              <button className="btn btn-primary !min-h-11 flex-1" onClick={() => (last ? finish() : setI(i + 1))}>
-                {last ? <>Start today&apos;s challenge <ArrowRight size={16} /></> : i === 0 ? "Show me around" : "Next"}
+              <button className="ml-auto text-[11px] font-extrabold text-muted transition hover:text-ink" onClick={dismiss}>
+                {last ? "Explore on my own" : "Skip tour"}
               </button>
             </div>
-            <button className="btn btn-quiet !min-h-9 mt-1.5 w-full text-xs" onClick={dismiss}>
-              {last ? "I'll explore on my own" : "Skip the tour"}
-            </button>
-          </motion.div>
+
+            <div className="mt-3 flex gap-2">
+              {i > 0 && (
+                <button className="btn btn-ghost !min-h-10 flex-none !px-3.5 text-sm" onClick={() => setI(i - 1)} aria-label="Previous step">←</button>
+              )}
+              <button className="btn btn-primary !min-h-10 flex-1 text-sm" onClick={() => (last ? finish() : setI(i + 1))}>
+                {last ? <>Start today&apos;s challenge <ArrowRight size={15} /></> : i === 0 ? "Show me around" : "Next"}
+              </button>
+            </div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

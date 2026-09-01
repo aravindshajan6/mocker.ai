@@ -7,7 +7,6 @@ import { useState } from "react";
 import { ArrowRight, CalendarCheck, Flame, Newspaper, RotateCcw, Sparkles, Timer, TrendingUp } from "lucide-react";
 import Mascot, { type Mood } from "@/components/Mascot";
 import { useAppData } from "@/components/AppData";
-import Tour from "@/components/Tour";
 import { Chip, Item, Num, ProgressRing, SectionTitle, SkeletonPage, Stagger } from "@/components/ui";
 import { api, greeting } from "@/lib/api";
 
@@ -52,8 +51,6 @@ export default function Home() {
   const total = topics.reduce((n, t) => n + t.question_count, 0);
 
   return (
-    <>
-    <Tour />
     <Stagger className="pt-1 flex flex-col gap-4">
       <Item>
         <div className="flex items-center gap-3">
@@ -178,7 +175,6 @@ export default function Home() {
         </div>
       </Item>
     </Stagger>
-  </>
   );
 }
 

@@ -3,8 +3,9 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Flame, LogOut, Sparkles } from "lucide-react";
+import { Compass, Flame, LogOut, Sparkles } from "lucide-react";
 import Mascot from "@/components/Mascot";
+import { startTour } from "@/components/Tour";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useAppData } from "@/components/AppData";
 import { NAV_GROUPS } from "./links";
@@ -74,8 +75,12 @@ export default function Sidebar() {
           <ThemeToggle compact />
           <span className="text-[11px] font-extrabold text-muted">Theme</span>
         </div>
-        <button onClick={logout}
+        <button onClick={startTour}
           className="mt-2 w-full flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-extrabold text-muted hover:text-ink hover:bg-surface-2 transition">
+          <Compass size={15} /> Take the tour
+        </button>
+        <button onClick={logout}
+          className="mt-1 w-full flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-extrabold text-muted hover:text-ink hover:bg-surface-2 transition">
           <LogOut size={15} /> Sign out
         </button>
       </div>

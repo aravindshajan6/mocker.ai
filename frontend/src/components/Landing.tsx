@@ -93,7 +93,7 @@ export default function Landing() {
           <motion.p {...enter(0.15)} className="pretty mx-auto mt-5 max-w-xl text-base font-semibold leading-relaxed text-ink-soft sm:text-lg">
             A calm, ad-free home for your Kerala PSC, SSC and UPSC preparation — thousands
             of exam-style questions, real past papers, targeted practice and full-length
-            mocks, with a small elephant who genuinely believes in you.
+            mocks, with a scholarly little elephant who genuinely believes in you.
           </motion.p>
 
           {/* Question-first hero (the manus.im idea): the product's core object — a question —
