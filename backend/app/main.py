@@ -11,7 +11,7 @@ from .config import settings
 from .services.ratelimit import limiter, too_many_requests
 from .db import Base, SessionLocal, engine
 from .content import scheduler
-from .routers import admin, auth, current_affairs, exam, prefs, quiz, stats, topics
+from .routers import admin, auth, current_affairs, exam, prefs, public, quiz, stats, topics
 from .seed import seed_accounts, seed_questions
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -100,6 +100,7 @@ app.include_router(exam.router)
 app.include_router(prefs.router)
 app.include_router(admin.router)
 app.include_router(current_affairs.router)
+app.include_router(public.router)
 
 
 if settings.testing_hooks:

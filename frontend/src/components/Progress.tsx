@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
+import { motion } from "motion/react";
 import { Award, BarChart3, Flame, LifeBuoy, Target, Trophy } from "lucide-react";
 import { Num, PageHeader, ProgressBar, ProgressRing, SkeletonPage, StatTile } from "@/components/ui";
 import { api } from "@/lib/api";
@@ -74,17 +75,32 @@ export default function Progress() {
         </div>
       </section>
 
-      <section className="card p-4">
+      <section className="card lift-edge p-4">
         <h2 className="font-extrabold mb-3">Last 7 days</h2>
-        <div className="grid grid-cols-7 gap-2 items-end h-28">
-          {stats.last_7_days.map((d) => {
+        <div className="grid grid-cols-7 gap-2 items-end h-32">
+          {stats.last_7_days.map((d, i) => {
             const date = new Date(d.day + "T00:00:00");
             const h = d.answered ? Math.max(12, (d.answered / maxAnswered) * 100) : 6;
+            const today = i === stats.last_7_days.length - 1;
             return (
-              <div key={d.day} className="flex flex-col items-center justify-end h-full gap-1">
+              <div key={d.day} className="flex flex-col items-center justify-end h-full gap-1 group">
                 <span className="text-[10px] font-extrabold text-muted">{d.answered || ""}</span>
-                <div className="w-full rounded-lg transition-all" style={{ height: `${h}%`, background: d.answered ? "var(--primary)" : "var(--line)" }} title={`${d.answered} answered, ${d.points} pts`} />
-                <span className="text-[11px] font-extrabold text-muted">{DAY[date.getDay()]}</span>
+                {/* Grown from the baseline with a transform so the bars animate on the compositor. */}
+                <motion.div
+                  className="w-full rounded-xl origin-bottom"
+                  style={{
+                    height: `${h}%`,
+                    background: d.answered ? "var(--grad-primary)" : "var(--line)",
+                    boxShadow: d.answered ? "var(--shadow-1)" : undefined,
+                  }}
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: 1 }}
+                  transition={{ duration: 0.5, delay: i * 0.05, ease: [0.2, 0.8, 0.2, 1] }}
+                  title={`${d.answered} answered, ${d.points} pts`}
+                />
+                <span className={`text-[11px] font-extrabold ${today ? "text-primary" : "text-muted"}`}>
+                  {DAY[date.getDay()]}
+                </span>
               </div>
             );
           })}

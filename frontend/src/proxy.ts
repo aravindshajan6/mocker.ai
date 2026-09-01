@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-const PUBLIC = ["/login", "/register", "/offline"];
+const PUBLIC = ["/login", "/register", "/offline", "/welcome"];
 const COOKIE = "mocker_token";
 
 /**
@@ -34,8 +34,10 @@ export function proxy(req: NextRequest) {
     return res;
   }
   if (!token && !isPublic) {
+    // A signed-out visitor landing on the root gets the marketing page; a deep link into the
+    // app is a returning user, so send those straight to sign-in instead.
     const url = req.nextUrl.clone();
-    url.pathname = "/login";
+    url.pathname = pathname === "/" ? "/welcome" : "/login";
     url.search = "";
     return NextResponse.redirect(url);
   }

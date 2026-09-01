@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { BookOpenCheck, Search, Shuffle } from "lucide-react";
 import { useAppData } from "@/components/AppData";
-import { Item, PageHeader, ProgressBar, SkeletonPage, Stagger } from "@/components/ui";
+import { Item, PageHeader, ProgressBar, SkeletonPage, Stagger, spotlight } from "@/components/ui";
 import { api } from "@/lib/api";
 
 export default function Practice() {
@@ -55,7 +55,7 @@ export default function Practice() {
           const pct = t.question_count ? t.answered / t.question_count : 0;
           return (
             <Item key={t.slug}>
-              <Link href={`/practice/${t.slug}`} className="card card-interactive p-4 flex gap-3.5 h-full">
+              <Link onPointerMove={spotlight} href={`/practice/${t.slug}`} className="card card-interactive spotlight p-4 flex gap-3.5 h-full">
                 <span className="text-2xl shrink-0">{t.icon}</span>
                 <div className="flex-1 min-w-0">
                   <p className="font-extrabold leading-tight">{t.name}</p>

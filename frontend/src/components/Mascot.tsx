@@ -1,6 +1,7 @@
 "use client";
 
 import { animate, createTimeline, stagger } from "animejs";
+import { useReducedMotion } from "motion/react";
 import { useEffect, useRef } from "react";
 
 export type Mood = "idle" | "happy" | "oops" | "celebrate" | "think" | "wave" | "sleepy";
@@ -14,11 +15,14 @@ type Props = { mood?: Mood; size?: number; className?: string; trigger?: number 
 export default function Mascot({ mood = "idle", size = 140, className = "", trigger = 0 }: Props) {
   const root = useRef<SVGSVGElement>(null);
   const idleAnim = useRef<ReturnType<typeof animate> | null>(null);
+  // anime.js writes inline transforms, which the CSS reduced-motion rules cannot reach — so the
+  // looping idle animation and the mood reactions have to opt out here, explicitly.
+  const still = useReducedMotion();
 
   // Breathing + blinking runs forever underneath everything else.
   useEffect(() => {
     const el = root.current;
-    if (!el) return;
+    if (!el || still) return;
     const body = el.querySelector<SVGGElement>(".k-body")!;
     const eyes = el.querySelectorAll<SVGGElement>(".k-eye");
     const leftEar = el.querySelector<SVGGElement>(".k-ear-l")!;
@@ -44,7 +48,7 @@ export default function Mascot({ mood = "idle", size = 140, className = "", trig
       clearTimeout(t2);
       idleAnim.current?.cancel();
     };
-  }, []);
+  }, [still]);
 
   // Mood reactions. `trigger` lets the parent replay the same mood (e.g. two correct answers in a row).
   useEffect(() => {
@@ -75,6 +79,13 @@ export default function Mascot({ mood = "idle", size = 140, className = "", trig
     show(zzz, mood === "sleepy");
     show(lids, mood === "sleepy");
     show(cheeks, mood === "happy" || mood === "celebrate");
+    // The expression above is opacity only, so it still reads under reduced motion — Kunju keeps
+    // smiling or drooping at the answer. It is the hopping and wobbling below that we drop.
+    if (still) {
+      all.style.transform = "none";
+      trunk.style.transform = "none";
+      return;
+    }
     animate(all, { rotate: 0, translateX: 0, translateY: 0, scale: 1, duration: 200 });
     animate(trunk, { rotate: 0, duration: 200 });
 
@@ -104,7 +115,7 @@ export default function Mascot({ mood = "idle", size = 140, className = "", trig
       animate(zzz.querySelectorAll("text"), { translateY: [0, -10], opacity: [0, 1, 0], duration: 2400, delay: stagger(500), loop: true, ease: "inOutSine" });
       animate(all, { rotate: [0, 3], duration: 1500, ease: "inOutSine", loop: true, alternate: true });
     }
-  }, [mood, trigger]);
+  }, [mood, trigger, still]);
 
   return (
     <svg
