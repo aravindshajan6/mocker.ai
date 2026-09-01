@@ -125,7 +125,7 @@ export default function Mascot({ mood = "idle", size = 140, className = "", trig
       height={size}
       className={className}
       role="img"
-      aria-label="Kunju the elephant, your study buddy"
+      aria-label="Kunju the scholar elephant, your study buddy"
     >
       <g className="k-all mascot-part">
         <g className="k-body mascot-part">
@@ -143,6 +143,13 @@ export default function Mascot({ mood = "idle", size = 140, className = "", trig
           <circle cx="100" cy="104" r="62" fill="url(#k-shade)" />
           {/* tuft */}
           <path d="M92 44 q8 -14 16 0" stroke="#3d6e62" strokeWidth="4" fill="none" strokeLinecap="round" />
+          {/* graduation cap — the scholar's mortarboard, tassel in the app's accent orange */}
+          <g className="k-cap">
+            <path d="M100 27 L141 43 L100 59 L59 43 Z" fill="#2c4f5e" />
+            <path d="M100 43 q22 2 24 20" stroke="#e8952a" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <circle cx="124" cy="65" r="4" fill="#e8952a" />
+            <circle cx="100" cy="43" r="3.2" fill="#e8952a" />
+          </g>
           {/* cheeks */}
           <circle className="k-cheek mascot-part" cx="66" cy="118" r="8" fill="#f59f8f" opacity="0" />
           <circle className="k-cheek mascot-part" cx="134" cy="118" r="8" fill="#f59f8f" opacity="0" />
@@ -159,6 +166,12 @@ export default function Mascot({ mood = "idle", size = 140, className = "", trig
           <path className="k-eye-happy" d="M112 97 q8 -9 16 0" stroke="#1f2a37" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0" />
           <rect className="k-lid" x="71" y="90" width="18" height="8" rx="4" fill="#9ccfc0" opacity="0" />
           <rect className="k-lid" x="111" y="90" width="18" height="8" rx="4" fill="#9ccfc0" opacity="0" />
+          {/* study glasses — drawn over eyes and lids so the frames always sit on top */}
+          <g className="k-glasses">
+            <circle cx="80" cy="96" r="11.5" fill="none" stroke="#3d6e62" strokeWidth="3" />
+            <circle cx="120" cy="96" r="11.5" fill="none" stroke="#3d6e62" strokeWidth="3" />
+            <path d="M91.5 96 h17" stroke="#3d6e62" strokeWidth="3" strokeLinecap="round" />
+          </g>
           {/* trunk */}
           <g className="k-trunk mascot-part" style={{ transformOrigin: "100px 112px" }}>
             <path d="M100 112 q-2 26 12 40 q10 10 20 4" stroke="#8ec4b4" strokeWidth="18" fill="none" strokeLinecap="round" />

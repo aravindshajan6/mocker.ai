@@ -12,7 +12,7 @@ test("Kunju's tour greets a new account, walks through, and starts the daily cha
   await expect(dialog).toContainText("Hi, I'm Kunju!");
   await dialog.getByRole("button", { name: "Show me around" }).click();
 
-  for (const excerpt of [/daily challenge/i, /costs you marks/i, /real exam/i, /improve/i]) {
+  for (const excerpt of [/daily challenge/i, /costing you marks/i, /real exam/i, /improve/i]) {
     await expect(dialog).toContainText(excerpt);
     await dialog.getByRole("button", { name: /^Next$|Start today/ }).click();
   }

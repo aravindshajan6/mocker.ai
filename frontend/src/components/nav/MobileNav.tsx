@@ -4,8 +4,9 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Flame, LogOut, Menu, Sparkles, X } from "lucide-react";
+import { Compass, Flame, LogOut, Menu, Sparkles, X } from "lucide-react";
 import Mascot from "@/components/Mascot";
+import { startTour } from "@/components/Tour";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useAppData } from "@/components/AppData";
 import { NAV_GROUPS, PRIMARY_LINKS } from "./links";
@@ -95,7 +96,11 @@ export default function MobileNav() {
               </nav>
               <div className="border-t border-line p-3">
                 <p className="text-xs font-extrabold truncate px-1">{user?.name}</p>
-                <button onClick={logout} className="mt-2 w-full flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-extrabold text-muted hover:bg-surface-2">
+                <button onClick={() => { setOpen(false); startTour(); }}
+                  className="mt-2 w-full flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-extrabold text-muted hover:bg-surface-2">
+                  <Compass size={16} /> Take the tour
+                </button>
+                <button onClick={logout} className="mt-1 w-full flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-extrabold text-muted hover:bg-surface-2">
                   <LogOut size={16} /> Sign out
                 </button>
               </div>

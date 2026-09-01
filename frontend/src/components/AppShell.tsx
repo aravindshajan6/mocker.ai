@@ -6,6 +6,7 @@ import { AppDataProvider } from "@/components/AppData";
 import Sidebar from "@/components/nav/Sidebar";
 import MobileNav from "@/components/nav/MobileNav";
 import PageTransition from "@/components/PageTransition";
+import Tour from "@/components/Tour";
 
 /** Chrome is hidden entirely while a quiz or exam is running — that is the whole point of the app. */
 function isFocusMode(pathname: string) {
@@ -27,6 +28,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         <div className="min-h-dvh">
           <Sidebar />
           <MobileNav />
+          <Tour />
           <div className="lg:pl-[var(--sidebar-w)]">
             <main className="mx-auto w-full max-w-3xl px-4 pb-24 lg:pb-12 lg:pt-6">
               <PageTransition>{children}</PageTransition>
