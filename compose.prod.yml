@@ -1,37 +1,56 @@
-# Production stack for mocker.sapper.top.
+# Production stack for mocker.sapper.top — fully self-contained, no PaaS layer.
 #
-# Deliberately absent:
-#   * any `ports:` mapping — Traefik reaches the app over the shared `coolify` network, so nothing
-#     here is directly internet-facing and nothing can collide with 80/443.
-#   * Redis — this app does not use one.
+# Caddy is the only internet-facing container: it owns 80/443, terminates TLS with automatic
+# Let's Encrypt issuance/renewal, and proxies everything to the frontend. Nothing else publishes
+# a port, so Postgres and the backend are unreachable from outside the compose networks.
 #
-# Both images are PULLED. Never build on the VPS: `next build` peaks at 1.58 GB against ~1.6 GB
-# available, mem_limit does not constrain a build, and the OOM killer would be free to pick valodex.
+# Both app images are PULLED from GHCR (built by CI on every push to main). Never build on the
+# VPS: `next build` peaks at ~1.6 GB, mem_limit does not constrain a build, and the OOM killer
+# picks its own victims.
 name: mocker
 
 networks:
-  coolify:
-    external: true          # Coolify's proxy network; only the two web-facing services join it
+  edge:
+    driver: bridge          # Caddy <-> frontend <-> backend
   internal:
-    driver: bridge          # Postgres lives here alone, unreachable from other Coolify containers
+    driver: bridge          # Postgres lives here alone
 
 volumes:
   pgdata:
-    # Explicitly named. Without this the volume is derived as <project>_pgdata, which collides with
-    # the development stack's volume of the same name: production Postgres then attaches to the dev
-    # database and rejects its own password, because POSTGRES_PASSWORD only applies at first init.
+    # Explicitly named. Without this the volume is derived as <project>_pgdata, which collides
+    # with the development stack's volume of the same name: production Postgres then attaches to
+    # the dev database and rejects its own password, because POSTGRES_PASSWORD only applies at
+    # first init.
     name: mocker-prod-pgdata
+  caddy-data:
+    name: mocker-caddy-data # TLS certificates + ACME account — keep across redeploys
 
-# Service names are deliberately prefixed: docker compose publishes the SERVICE name as a DNS
-# alias on every network the container joins. Calling these `frontend`/`backend` would claim those
-# generic names on the shared `coolify` network — the name-collision trap in reverse, where this
-# app shadows a neighbour's service rather than the other way round.
 services:
+  mocker-caddy:
+    image: caddy:2-alpine
+    container_name: mocker-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    networks: [edge]
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+    environment:
+      DOMAIN: ${DOMAIN:-mocker.sapper.top}
+      ACME_EMAIL: ${ACME_EMAIL:?set ACME_EMAIL in .env — Let's Encrypt requires a contact address}
+    depends_on:
+      mocker-frontend: { condition: service_healthy }
+    mem_limit: 128m
+    memswap_limit: 128m
+    cpus: 0.5
+
   mocker-frontend:
     image: ${FRONTEND_IMAGE:-ghcr.io/aravindshajan6/mocker-frontend:latest}
     container_name: mocker-frontend
     restart: unless-stopped
-    networks: [coolify, internal]
+    networks: [edge]
     environment:
       # Informational only: the rewrite destination is baked at build time (see Dockerfile.prod).
       BACKEND_URL: http://mocker-backend:8000
@@ -43,50 +62,30 @@ services:
     mem_limit: 256m
     memswap_limit: 256m
     cpus: 1.0
-    # No healthcheck here on purpose: a compose healthcheck OVERRIDES the image's, and defining it
-    # in both places let them drift — this one still called curl after it was removed from the
-    # image, so the container stayed unhealthy and Traefik silently skipped it (presenting as a
-    # 404, not a 502). The Dockerfile's HEALTHCHECK is the single definition.
-    labels:
-      # exposedbydefault=false on this Traefik, so without this the container gets no routing.
-      - traefik.enable=true
-      # The container is on two networks; tell Traefik which one to dial, or it may pick `internal`.
-      - traefik.docker.network=coolify
-      - traefik.http.routers.mocker.rule=Host(`mocker.sapper.top`)
-      - traefik.http.routers.mocker.entrypoints=https
-      - traefik.http.routers.mocker.tls=true
-      - traefik.http.routers.mocker.tls.certresolver=letsencrypt
-      - traefik.http.services.mocker.loadbalancer.server.port=3000
-      # The http router only redirects, but Let's Encrypt answers HTTP-01 on port 80 — removing it
-      # breaks certificate issuance and renewal.
-      - traefik.http.routers.mocker-http.rule=Host(`mocker.sapper.top`)
-      - traefik.http.routers.mocker-http.entrypoints=http
-      - traefik.http.routers.mocker-http.middlewares=mocker-https
-      - traefik.http.middlewares.mocker-https.redirectscheme.scheme=https
+    # No compose healthcheck on purpose: a compose healthcheck OVERRIDES the image's, and letting
+    # them drift once left the container permanently unhealthy. The Dockerfile's HEALTHCHECK is
+    # the single definition.
 
   mocker-backend:
     image: ${BACKEND_IMAGE:-ghcr.io/aravindshajan6/mocker-backend:latest}
     container_name: mocker-backend      # this exact name is what the frontend image was built against
     restart: unless-stopped
-    # On `coolify` so the frontend can reach it, and on `internal` to reach Postgres. It publishes
-    # no Traefik labels, so Traefik never routes to it from outside.
-    networks: [coolify, internal]
+    # On `edge` so the frontend can reach it, and on `internal` to reach Postgres. Caddy has no
+    # route to it, so it is never internet-facing.
+    networks: [edge, internal]
     env_file: [.env]
     environment:
-      # Container name, never `db` or `postgres`: on the shared network those may resolve to
-      # Coolify's own services.
       DATABASE_URL: postgresql+asyncpg://mocker:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@mocker-postgres:5432/mocker
       DATA_DIR: /app/data/questions
-      # MEASURED through a real Traefik, not assumed. The chain is Traefik -> Next rewrite ->
-      # uvicorn, but the value is 1, not 2: unlike nginx, Next's rewrite passes X-Forwarded-For
-      # through without appending, so the header carries exactly one entry. Traefik also REPLACES
-      # a client-supplied X-Forwarded-For rather than appending to it, so that single entry is the
-      # real peer and cannot be forged. Re-measure if a proxy is ever added or removed.
+      # Chain: Caddy -> Next rewrite -> uvicorn. Caddy discards a client-supplied X-Forwarded-For
+      # (the client is not a trusted proxy) and writes exactly one entry — the real peer — and
+      # Next's rewrite passes the header through without appending. So one hop. Verify after the
+      # first deploy (a rate-limit hit logs the peer IP) and re-measure if any proxy is added.
       TRUSTED_PROXY_HOPS: ${TRUSTED_PROXY_HOPS:-1}
       HSTS_ENABLED: "true"
       COOKIE_SECURE: "true"
-      CORS_ORIGINS: https://mocker.sapper.top
-      PUBLIC_BASE_URL: https://mocker.sapper.top
+      CORS_ORIGINS: https://${DOMAIN:-mocker.sapper.top}
+      PUBLIC_BASE_URL: https://${DOMAIN:-mocker.sapper.top}
       # TESTING_HOOKS is deliberately unset here; the reset endpoint must not exist in production.
     depends_on:
       mocker-postgres: { condition: service_healthy }
@@ -98,7 +97,7 @@ services:
     image: postgres:16-alpine
     container_name: mocker-postgres     # referenced by THIS name in DATABASE_URL
     restart: unless-stopped
-    networks: [internal]                # deliberately NOT on coolify
+    networks: [internal]                # deliberately NOT on edge
     environment:
       POSTGRES_USER: mocker
       POSTGRES_DB: mocker
