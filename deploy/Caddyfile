@@ -1,0 +1,11 @@
+# Caddy is the whole edge: it answers 80/443, redirects HTTP to HTTPS on its own, and obtains
+# and renews Let's Encrypt certificates automatically (certs persist in the caddy-data volume —
+# losing that volume means re-issuing against LE rate limits).
+{
+	email {$ACME_EMAIL}
+}
+
+{$DOMAIN} {
+	encode gzip zstd
+	reverse_proxy mocker-frontend:3000
+}

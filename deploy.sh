@@ -31,8 +31,10 @@ $COMPOSE up -d --remove-orphans
 echo "==> waiting for health"
 deadline=$(( SECONDS + 180 ))
 while (( SECONDS < deadline )); do
-  # Ask the daemon, not the app: this is the same signal depends_on and Traefik act on.
-  unhealthy=$(docker ps --filter name=mocker- --format '{{.Names}} {{.Status}}' \
+  # Ask the daemon, not the app: this is the same signal depends_on acts on. Only the three
+  # containers with an image HEALTHCHECK are polled — Caddy ships none and would never match.
+  unhealthy=$(docker ps --filter name=mocker-frontend --filter name=mocker-backend \
+              --filter name=mocker-postgres --format '{{.Names}} {{.Status}}' \
               | grep -vc 'healthy' || true)
   if [[ "$unhealthy" == "0" ]]; then
     echo "    all containers healthy"
@@ -48,7 +50,8 @@ if (( SECONDS >= deadline )); then
 fi
 
 echo "==> pruning dangling images only"
-# NEVER `docker system prune -a` here: it would delete images belonging to valodex.
+# Dangling-only on purpose: a broad prune would also delete the pinned older tags that
+# ./deploy.sh sha-<short> rolls back to.
 docker image prune -f >/dev/null
 
 echo

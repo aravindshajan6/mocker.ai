@@ -24,6 +24,10 @@ ADMIN_TOKEN="$(rand 24)"
 
 umask 077
 cat > "$TARGET" <<INNER
+# Domain served by Caddy, and the contact address Let's Encrypt requires.
+DOMAIN=mocker.sapper.top
+ACME_EMAIL=
+
 POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 JWT_SECRET=${JWT_SECRET}
 
@@ -70,6 +74,8 @@ Sign-in credentials — copy these somewhere safe NOW:
 The demo account is disabled (DEMO_PASSWORD empty). Set it if you want a public login.
 
 Still to fill in by hand:
+  ACME_EMAIL      — REQUIRED: compose refuses to start without it (Let's
+                    Encrypt needs a contact address for the certificate).
   LLM_API_KEY     — without it, current affairs falls back to heuristics and
                     "Explain this more" is unavailable. Nothing crashes.
   VAPID_SUBJECT   — a contact mailto: for push notifications.
