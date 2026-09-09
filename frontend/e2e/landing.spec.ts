@@ -46,4 +46,26 @@ test.describe("landing page", () => {
     await page.getByRole("link", { name: /Sign in and begin/ }).click();
     await expect(page).toHaveURL(/\/login/);
   });
+
+  test("is shareable and indexable: OG card, robots and sitemap", async ({ page, request }) => {
+    await page.goto("/welcome");
+    // WhatsApp/Telegram previews need an absolute image URL with declared dimensions.
+    const ogImage = page.locator('meta[property="og:image"]');
+    await expect(ogImage).toHaveAttribute("content", /^https?:\/\/.+\/og\.png$/);
+    await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute("content", "1200");
+    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+
+    const img = await request.get("/og.png");
+    expect(img.status()).toBe(200);
+    expect(img.headers()["content-type"]).toContain("image/png");
+
+    // Both must be served, not swallowed by the auth redirect in proxy.ts.
+    const robots = await request.get("/robots.txt");
+    expect(robots.status()).toBe(200);
+    expect(await robots.text()).toContain("Sitemap:");
+
+    const sitemap = await request.get("/sitemap.xml");
+    expect(sitemap.status()).toBe(200);
+    expect(await sitemap.text()).toContain("/welcome");
+  });
 });

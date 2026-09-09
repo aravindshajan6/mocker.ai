@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import PwaProvider from "@/components/PwaProvider";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const nunito = localFont({
@@ -20,6 +21,8 @@ const fraunces = localFont({
 });
 
 export const metadata: Metadata = {
+  // Makes relative OG image paths absolute — scrapers reject relative ones.
+  metadataBase: new URL(SITE_URL),
   title: { default: "Mocker — one more question", template: "%s · Mocker" },
   description: "Daily GK practice for PSC exams. Calm, fast, and ad-free.",
   applicationName: "Mocker",

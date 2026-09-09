@@ -1,14 +1,31 @@
 import type { Metadata } from "next";
 import Landing from "@/components/Landing";
 
+const DESCRIPTION =
+  "A calm, ad-free home for Kerala PSC, SSC and UPSC preparation: thousands of exam-style " +
+  "questions, real past papers, targeted practice, spaced revision and full-length timed mocks.";
+
 export const metadata: Metadata = {
-  title: "Mocker — daily GK practice for PSC exams",
-  description:
-    "A calm, ad-free way to build General Knowledge for Kerala PSC, SSC and UPSC. Ten questions a day, spaced revision, timed mock papers, and current affairs from the morning's news.",
+  title: "Mocker — GK practice for Kerala PSC, SSC and UPSC",
+  description: DESCRIPTION,
+  alternates: { canonical: "/welcome" },
   openGraph: {
-    title: "Mocker — one more question",
-    description: "Daily GK practice for Kerala PSC, SSC and UPSC. Calm, fast, and ad-free.",
+    title: "Mocker — one more question, every single day",
+    description: DESCRIPTION,
     type: "website",
+    url: "/welcome",
+    siteName: "Mocker",
+    locale: "en_IN",
+    // Absolute at render time via metadataBase in the root layout. Links shared into WhatsApp
+    // and Telegram — where most of this audience passes things around — only show a preview
+    // image when one is declared with explicit dimensions.
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Mocker — daily GK practice for PSC exams" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mocker — one more question, every single day",
+    description: DESCRIPTION,
+    images: ["/og.png"],
   },
 };
 
