@@ -54,6 +54,6 @@ export const config = {
   // Static assets must never be redirected. /sw.js in particular: a redirected service worker
   // fails to register, which silently disables offline support and push notifications.
   matcher: [
-    "/((?!api|_next/static|_next/image|sw\\.js|manifest\\.webmanifest|offline|.*\\.(?:png|svg|ico|webmanifest|txt)$).*)",
+    "/((?!api|_next/static|_next/image|sw\\.js|manifest\\.webmanifest|offline|robots\\.txt|sitemap\\.xml|.*\\.(?:png|svg|ico|webmanifest|txt|xml)$).*)",
   ],
 };
