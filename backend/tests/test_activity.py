@@ -82,24 +82,30 @@ def test_heartbeat_accepts_a_signed_in_user(client, user):
     assert client.post("/api/me/heartbeat").status_code == 204
 
 
-def test_analytics_is_admin_only(client, user):
-    assert client.get("/api/admin/analytics").status_code == 403
-
-
-def test_analytics_shape_for_admin(client, admin):
-    d = client.get("/api/admin/analytics?days=14").json()
-    assert d["days"] == 14 and len(d["series"]) == 14
-    for key in ("learners", "active_today", "active_week", "active_month",
-                "screen_seconds_week", "avg_screen_seconds_week", "answers_week"):
-        assert isinstance(d["summary"][key], int), key
-    assert d["summary"]["active_today"] <= d["summary"]["active_week"] <= d["summary"]["active_month"]
-    for cell in d["heatmap"]:
-        assert 0 <= cell["dow"] <= 6 and 0 <= cell["hour"] <= 23
-
-
 def test_accounts_list_carries_activity_columns(client, admin):
     rows = client.get("/api/admin/users").json()
     assert rows, "the seeded accounts should be listed"
     for key in ("screen_seconds_total", "screen_seconds_week", "active_days_month",
                 "quizzes_completed", "current_streak", "total_points", "last_seen_at"):
         assert key in rows[0], key
+
+
+def test_dashboard_is_admin_only(client, user):
+    assert client.get("/api/admin/analytics/dashboard").status_code == 403
+
+
+def test_dashboard_shape_and_ranges(client, admin):
+    for days in (7, 30, 90):
+        d = client.get(f"/api/admin/analytics/dashboard?days={days}").json()
+        assert d["range"]["days"] == days and len(d["current"]["series"]) == days
+        for key in ("active", "avg_daily_active", "screen_seconds", "answers", "quizzes", "new_users"):
+            assert key in d["current"]["totals"] and key in d["previous"], key
+        for section in ("topics", "difficulty", "sources", "modes", "heatmap", "hardest",
+                        "top_learners", "streaks", "cohorts"):
+            assert isinstance(d[section], list), section
+        assert len(d["exams"]["distribution"]) == 11          # <0 plus ten 10-point bins
+        assert sum(b["users"] for b in d["streaks"]) == d["learners"]
+
+
+def test_dashboard_rejects_odd_ranges_by_falling_back(client, admin):
+    assert client.get("/api/admin/analytics/dashboard?days=13").json()["range"]["days"] == 30

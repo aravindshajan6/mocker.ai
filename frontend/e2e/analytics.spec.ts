@@ -18,24 +18,49 @@ test.describe("usage analytics", () => {
     const res = await (await beat).response();
     expect(res?.status()).toBe(204);
   });
+
+  test("learners are refused the analytics page", async ({ page }) => {
+    await page.goto("/admin/analytics");
+    await expect(page.getByText("Administrators only")).toBeVisible();
+  });
 });
 
-test.describe("admin analytics", () => {
+test.describe("admin analytics dashboard", () => {
   test.use({ storageState: ADMIN_STORAGE_STATE });
 
-  test("the accounts tab shows usage, charts and the study-hours grid", async ({ page }) => {
-    await page.goto("/admin");
-    await page.getByRole("button", { name: /Accounts/ }).click();
-    await expect(page.getByText("Usage", { exact: true })).toBeVisible();
-    await expect(page.getByText("Active today")).toBeVisible();
-    await expect(page.getByRole("group", { name: /Active learners per day/ })).toBeVisible();
-    await expect(page.getByRole("group", { name: /Screen time per day/ })).toBeVisible();
-    await expect(page.getByRole("group", { name: /Study hours grid/ })).toBeVisible();
+  test("renders every section and switches range", async ({ page }) => {
+    await page.goto("/admin/analytics");
+    await expect(page.getByRole("heading", { name: "Analytics", level: 1 })).toBeVisible();
+    for (const title of ["Active learners", "Engagement", "Screen time", "Answers", "Accuracy over time",
+      "Accuracy by subject", "Practice by subject", "How learners practise", "When learners study",
+      "By weekday", "Retention by sign-up week", "Current streaks", "Mock exam scores",
+      "Most active learners", "Hardest questions"]) {
+      await expect(page.getByRole("heading", { name: title, exact: true, level: 2 })).toBeVisible();
+    }
 
-    // Keyboard parity with hover: focusing a chart and scrubbing announces a value.
+    const seven = page.getByRole("radio", { name: "7 days" });
+    await seven.click();
+    await expect(seven).toHaveAttribute("aria-checked", "true");
+    await expect(page.getByText(/vs prior 7d/).first()).toBeVisible();
+  });
+
+  test("charts are keyboard-readable, and nav lights only Analytics", async ({ page }) => {
+    await page.goto("/admin/analytics");
     const chart = page.getByRole("group", { name: /Active learners per day/ });
     await chart.focus();
-    await page.keyboard.press("ArrowLeft");
-    await expect(chart.locator("[aria-live]")).toHaveText(/: \d+ active$/);
+    await page.keyboard.press("End");
+    await expect(chart.locator("[aria-live]")).toHaveText(/active/);
+
+    // Most-specific match: /admin/analytics must not also light "Admin".
+    const nav = page.locator("aside");
+    await expect(nav.getByRole("link", { name: "Analytics" })).toHaveClass(/text-primary/);
+    await expect(nav.getByRole("link", { name: "Admin", exact: true })).not.toHaveClass(/text-primary/);
+  });
+
+  test("the accounts tab links to the dashboard", async ({ page }) => {
+    await page.goto("/admin");
+    await page.getByRole("button", { name: /Accounts/ }).click();
+    await page.getByRole("link", { name: /Analytics dashboard/ }).click();
+    await expect(page).toHaveURL(/\/admin\/analytics$/);
   });
 });

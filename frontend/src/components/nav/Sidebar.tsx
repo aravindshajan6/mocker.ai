@@ -8,7 +8,7 @@ import Mascot from "@/components/Mascot";
 import { startTour } from "@/components/Tour";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useAppData } from "@/components/AppData";
-import { NAV_GROUPS } from "./links";
+import { NAV_GROUPS, isActiveLink } from "./links";
 import { api } from "@/lib/api";
 
 export default function Sidebar() {
@@ -35,7 +35,7 @@ export default function Sidebar() {
             <p className="px-3 mb-1.5 text-[10px] font-extrabold uppercase tracking-[0.13em] text-muted">{group.title}</p>
             <ul className="flex flex-col gap-0.5">
               {group.links.filter((l) => !l.adminOnly || user?.is_admin).map((l) => {
-                const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+                const active = isActiveLink(l.href, pathname);
                 const Icon = l.icon;
                 const badge = l.href === "/review" && due?.due_now ? due.due_now : null;
                 return (

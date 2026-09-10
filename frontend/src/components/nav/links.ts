@@ -44,9 +44,21 @@ export const NAV_GROUPS: { title: string; links: NavLink[] }[] = [
       { href: "/progress", label: "Progress", icon: BarChart3, primary: true, hint: "Stats, badges, weak topics" },
       { href: "/settings", label: "Settings", icon: Settings, hint: "Reminders and notifications" },
       { href: "/admin", label: "Admin", icon: ShieldCheck, hint: "Content, keys and accounts", adminOnly: true },
+      { href: "/admin/analytics", label: "Analytics", icon: BarChart3, hint: "Usage and learning trends", adminOnly: true },
     ],
   },
 ];
 
 export const ALL_LINKS: NavLink[] = NAV_GROUPS.flatMap((g) => g.links);
 export const PRIMARY_LINKS: NavLink[] = ALL_LINKS.filter((l) => l.primary);
+
+/**
+ * Whether a nav link is the current page. The most specific match wins, so /admin/analytics
+ * lights "Analytics" and not also "Admin" — two lit items would share one animated highlight.
+ */
+export function isActiveLink(href: string, pathname: string): boolean {
+  const matches = (h: string) => (h === "/" ? pathname === "/" : pathname === h || pathname.startsWith(`${h}/`));
+  if (!matches(href)) return false;
+  return !ALL_LINKS.some((o) => o.href !== href && o.href.startsWith(href) && matches(o.href));
+}
+

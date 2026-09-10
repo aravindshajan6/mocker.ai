@@ -271,16 +271,17 @@ async def toggle_question(question_id: int, db: AsyncSession = Depends(get_db)):
 
 
 # ------------------------------------------------------------------------- users ----
-@router.get("/analytics")
-async def analytics_overview(days: int = 30, db: AsyncSession = Depends(get_db)):
-    """Active users, screen time and study hours for the accounts tab."""
+@router.get("/analytics/dashboard")
+async def analytics_dashboard(days: int = 30, db: AsyncSession = Depends(get_db)):
+    """Everything the analytics page draws, for one range and the equal range before it."""
     from ..services import analytics
-    return await analytics.overview(db, max(7, min(days, 90)))
+    return await analytics.dashboard(db, days if days in (7, 30, 90) else 30)
 
 
 @router.get("/users", response_model=list[AdminUserRow])
 async def list_users(db: AsyncSession = Depends(get_db)):
     from ..services import analytics
+    from ..services.quiz import effective_streak, today
 
     rows = (await db.execute(
         select(User, func.count(Attempt.id), UserStats)
@@ -302,7 +303,9 @@ async def list_users(db: AsyncSession = Depends(get_db)):
             active_days_month=a.get("active_days_month", 0),
             accuracy=(st.correct_answers / answered) if st and answered else None,
             quizzes_completed=st.quizzes_completed if st else 0,
-            current_streak=st.current_streak if st else 0,
+            # The stored counter only resets on the next answer, so a lapsed streak would still
+            # show; effective_streak is what the learner themselves sees.
+            current_streak=effective_streak(st, today()) if st else 0,
             total_points=st.total_points if st else 0,
         ))
     return out
