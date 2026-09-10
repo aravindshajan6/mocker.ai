@@ -266,3 +266,26 @@ class ContentRun(Base):
     message: Mapped[str] = mapped_column(Text, default="")
     attempt: Mapped[int] = mapped_column(Integer, default=1)   # which try of the day this was
     trigger: Mapped[str] = mapped_column(String(16), default="scheduled")  # scheduled | retry | manual | startup
+
+
+class ActivityBucket(Base):
+    """Seconds of foreground screen time, per user per IST hour.
+
+    Hourly granularity is the whole design: it answers "how long" and "when" without storing
+    anything about *what* was on screen — no paths, no IPs, no devices. New table, so create_all
+    provisions it with no migration.
+    """
+    __tablename__ = "activity_buckets"
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
+    day: Mapped[date] = mapped_column(Date, primary_key=True)          # IST calendar day
+    hour: Mapped[int] = mapped_column(Integer, primary_key=True)       # IST hour, 0-23
+    seconds: Mapped[int] = mapped_column(Integer, default=0)
+
+    __table_args__ = (Index("ix_activity_day", "day"),)
+
+
+class UserPresence(Base):
+    """When each user's last heartbeat landed — what screen-time credit is measured against."""
+    __tablename__ = "user_presence"
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
+    last_seen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))

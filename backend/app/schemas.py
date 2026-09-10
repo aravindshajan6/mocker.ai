@@ -392,6 +392,14 @@ class AdminUserRow(BaseModel):
     created_at: datetime
     answered: int
     last_active: date | None
+    last_seen_at: datetime | None = None
+    screen_seconds_total: int = 0
+    screen_seconds_week: int = 0
+    active_days_month: int = 0
+    accuracy: float | None = None
+    quizzes_completed: int = 0
+    current_streak: int = 0
+    total_points: int = 0
 
 
 class CreateUserIn(BaseModel):

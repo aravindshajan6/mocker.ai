@@ -56,6 +56,10 @@ class Settings(BaseSettings):
     rate_limit_default: str = "300/minute"
     rate_limit_login: str = "8/minute;40/hour"
     rate_limit_explain: str = "20/minute"
+    # Screen time: the client pings this often while the app is visible and in use. Each ping is
+    # credited at most this many seconds, so the ceiling on recorded time is real wall-clock time.
+    heartbeat_seconds: int = 30
+    rate_limit_heartbeat: str = "12/minute"
     # Exposes POST /api/testing/reset-rate-limits. Must stay false anywhere reachable publicly.
     testing_hooks: bool = False
     hsts_enabled: bool = False             # production (behind TLS) sets this true

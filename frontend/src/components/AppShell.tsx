@@ -7,6 +7,7 @@ import Sidebar from "@/components/nav/Sidebar";
 import MobileNav from "@/components/nav/MobileNav";
 import PageTransition from "@/components/PageTransition";
 import Tour from "@/components/Tour";
+import PresenceHeartbeat from "@/components/PresenceHeartbeat";
 
 /** Chrome is hidden entirely while a quiz or exam is running — that is the whole point of the app. */
 function isFocusMode(pathname: string) {
@@ -22,6 +23,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     // motion, while keeping opacity and colour — so the app still feels responsive, not frozen.
     <MotionConfig reducedMotion="user" transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}>
     <AppDataProvider>
+      <PresenceHeartbeat />
       {focus ? (
         <main className="mx-auto w-full max-w-2xl px-4">{children}</main>
       ) : (

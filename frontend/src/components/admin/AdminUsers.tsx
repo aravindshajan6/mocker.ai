@@ -1,10 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { KeyRound, Trash2, UserPlus } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { Flame, KeyRound, Trash2, UserPlus } from "lucide-react";
 import { ErrorNote, Item } from "@/components/ui";
+import AdminAnalytics, { fmtDuration } from "./AdminAnalytics";
 import { api } from "@/lib/api";
 import type { AdminUserRow } from "@/lib/types";
+
+function fmtAgo(iso: string | null): string {
+  if (!iso) return "never";
+  const mins = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+  if (mins < 2) return "just now";
+  if (mins < 60) return `${mins} min ago`;
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return `${hrs} h ago`;
+  const days = Math.round(hrs / 24);
+  return days < 30 ? `${days} day${days === 1 ? "" : "s"} ago`
+    : new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
+}
+
+const SORTS = {
+  seen: { label: "Last seen", key: (u: AdminUserRow) => (u.last_seen_at ? new Date(u.last_seen_at).getTime() : 0) },
+  screen: { label: "Screen time", key: (u: AdminUserRow) => u.screen_seconds_total },
+  answered: { label: "Answered", key: (u: AdminUserRow) => u.answered },
+  newest: { label: "Newest", key: (u: AdminUserRow) => new Date(u.created_at).getTime() },
+} as const;
+type SortId = keyof typeof SORTS;
 
 export default function AdminUsers({ onChange }: { onChange: () => void }) {
   const [rows, setRows] = useState<AdminUserRow[]>([]);
@@ -12,6 +33,8 @@ export default function AdminUsers({ onChange }: { onChange: () => void }) {
   const [note, setNote] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", password: "", is_admin: false });
+  const [sort, setSort] = useState<SortId>("seen");
+  const sorted = useMemo(() => [...rows].sort((a, b) => SORTS[sort].key(b) - SORTS[sort].key(a)), [rows, sort]);
 
   const load = () => api.adminUsers().then(setRows).catch((e: Error) => setError(e?.message || "Could not load accounts."));
   useEffect(() => { const t = setTimeout(() => void load(), 0); return () => clearTimeout(t); }, []);
@@ -54,17 +77,29 @@ export default function AdminUsers({ onChange }: { onChange: () => void }) {
 
   return (
     <>
+      <AdminAnalytics />
       <ErrorNote message={error} />
       {note && <Item><p className="rounded-xl bg-success-soft text-success px-3 py-2 text-sm font-bold">{note}</p></Item>}
 
       <Item>
         <div className="card p-4">
-          <p className="font-extrabold">Accounts ({rows.length})</p>
-          <p className="text-xs text-muted font-semibold mt-0.5">
-            Public sign-up is closed, so every account is created here.
-          </p>
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="font-extrabold">Accounts ({rows.length})</p>
+              <p className="text-xs text-muted font-semibold mt-0.5">
+                Public sign-up is closed, so every account is created here.
+              </p>
+            </div>
+            <label className="flex items-center gap-1.5 text-[11px] font-extrabold text-muted shrink-0">
+              Sort
+              <select className="rounded-lg border border-line bg-surface px-2 py-1 text-xs font-bold text-ink"
+                value={sort} onChange={(e) => setSort(e.target.value as SortId)}>
+                {Object.entries(SORTS).map(([id, s]) => <option key={id} value={id}>{s.label}</option>)}
+              </select>
+            </label>
+          </div>
           <div className="mt-3 flex flex-col gap-2">
-            {rows.map((u) => (
+            {sorted.map((u) => (
               <div key={u.id} className="flex items-center gap-3 py-2 border-t border-line first:border-0">
                 <div className="flex-1 min-w-0">
                   <p className="font-extrabold text-sm truncate">
@@ -73,8 +108,25 @@ export default function AdminUsers({ onChange }: { onChange: () => void }) {
                   </p>
                   <p className="text-[11px] text-muted font-semibold truncate">{u.email}</p>
                   <p className="text-[11px] text-muted font-semibold">
-                    {u.answered} answered{u.last_active ? ` · last active ${u.last_active}` : " · never signed in"}
+                    Last seen {fmtAgo(u.last_seen_at)} · joined {new Date(u.created_at).toLocaleDateString(undefined, { day: "numeric", month: "short" })}
                   </p>
+                  <div className="mt-1.5 flex flex-wrap gap-1.5">
+                    {[
+                      `${fmtDuration(u.screen_seconds_total)} total`,
+                      `${fmtDuration(u.screen_seconds_week)} this week`,
+                      `${u.active_days_month} of 30 days active`,
+                      `${u.answered} answered`,
+                      ...(u.accuracy !== null ? [`${Math.round(u.accuracy * 100)}% correct`] : []),
+                      `${u.quizzes_completed} quizzes`,
+                    ].map((t) => (
+                      <span key={t} className="rounded-full bg-surface-2 px-2 py-0.5 text-[10px] font-bold text-ink-soft">{t}</span>
+                    ))}
+                    {u.current_streak > 0 && (
+                      <span className="inline-flex items-center gap-0.5 rounded-full bg-accent-soft px-2 py-0.5 text-[10px] font-bold text-accent-ink">
+                        <Flame size={10} /> {u.current_streak}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <button className="btn btn-quiet !min-h-9 text-xs px-2" onClick={() => reset(u)} title="Reset password">
                   <KeyRound size={14} />

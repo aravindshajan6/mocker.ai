@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
-import { adminFetch, apiLogin, ADMIN_EMAIL, ADMIN_PASSWORD, BASE, STORAGE_STATE, TEST_EMAIL, TEST_PASSWORD } from "./helpers";
+import { adminFetch, apiLogin, ADMIN_EMAIL, ADMIN_PASSWORD, ADMIN_STORAGE_STATE, BASE, STORAGE_STATE, TEST_EMAIL, TEST_PASSWORD } from "./helpers";
 
 async function deleteTestUser(admin: string) {
   const users = await (await adminFetch(admin, "/api/admin/users")).json();
@@ -20,15 +20,18 @@ export default async function globalSetup() {
   });
   if (!created.ok) throw new Error(`could not provision ${TEST_EMAIL}: ${created.status} ${await created.text()}`);
 
-  // Sign the test user in once and persist the cookie as Playwright storage state.
+  // Sign the test user in once and persist the cookie as Playwright storage state. The admin
+  // session from above is saved too, so admin-page tests need no login of their own.
   const token = await apiLogin(TEST_EMAIL, TEST_PASSWORD);
   const { hostname } = new URL(BASE);
-  mkdirSync(dirname(STORAGE_STATE), { recursive: true });
-  writeFileSync(STORAGE_STATE, JSON.stringify({
+  const state = (value: string) => JSON.stringify({
     cookies: [{
-      name: "mocker_token", value: token, domain: hostname, path: "/",
+      name: "mocker_token", value, domain: hostname, path: "/",
       expires: Math.floor(Date.now() / 1000) + 86400, httpOnly: true, secure: false, sameSite: "Lax",
     }],
     origins: [],
-  }));
+  });
+  mkdirSync(dirname(STORAGE_STATE), { recursive: true });
+  writeFileSync(STORAGE_STATE, state(token));
+  writeFileSync(ADMIN_STORAGE_STATE, state(admin));
 }
