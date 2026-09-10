@@ -6,6 +6,7 @@ import { CalendarCheck, Flame, Trophy } from "lucide-react";
 import Mascot from "@/components/Mascot";
 import { useAppData } from "@/components/AppData";
 import { ErrorNote, Item, Num, PageHeader, ProgressRing, SkeletonPage, Stagger, StatTile } from "@/components/ui";
+import { streakSubtitle } from "@/lib/streak";
 import { api } from "@/lib/api";
 
 export default function DailyPage() {
@@ -67,7 +68,7 @@ export default function DailyPage() {
       <Item>
         <div className="grid grid-cols-3 gap-3">
           <StatTile label="Streak" value={<><Flame size={16} className="inline text-accent" /> <Num value={stats.current_streak} /></>}
-            sub={stats.next_milestone ? `${stats.next_milestone - stats.current_streak} to ${stats.next_milestone}` : `best ${stats.longest_streak}`} />
+            sub={streakSubtitle(stats.current_streak, stats.next_milestone, stats.longest_streak)} />
           <StatTile label="Repairs left" value={<Num value={stats.repairs_left} />} sub="this month" />
           <StatTile label="Points" value={<Num value={stats.total_points} />} sub={stats.level_title} />
         </div>
