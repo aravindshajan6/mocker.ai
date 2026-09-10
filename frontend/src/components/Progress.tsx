@@ -7,6 +7,7 @@ import Mascot from "@/components/Mascot";
 import { AnimatePresence, motion } from "motion/react";
 import { Award, BarChart3, Flame, LifeBuoy, Target, Trophy } from "lucide-react";
 import { ActivityRings, Num, PageHeader, ProgressBar, ProgressRing, SkeletonPage, StatTile } from "@/components/ui";
+import { streakSubtitle } from "@/lib/streak";
 import { api } from "@/lib/api";
 import type { HistoryRow, Insights, LeaderboardRow, Stats } from "@/lib/types";
 
@@ -105,7 +106,7 @@ export default function Progress() {
       <section className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <StatTile label="Points" value={<Num value={stats.total_points} />} tone="text-primary" icon={<Trophy size={15} />} />
         <StatTile label="Day streak" value={<><Flame size={16} className="inline text-accent" /> <Num value={stats.current_streak} /></>}
-          sub={stats.next_milestone ? `${stats.next_milestone - stats.current_streak} to ${stats.next_milestone}` : `best ${stats.longest_streak}`} />
+          sub={streakSubtitle(stats.current_streak, stats.next_milestone, stats.longest_streak)} />
         <StatTile label="Accuracy" value={`${Math.round(stats.accuracy * 100)}%`} sub={`${stats.correct_answers}/${stats.questions_answered}`} icon={<Target size={15} />} />
         <StatTile label="Quizzes" value={<Num value={stats.quizzes_completed} />} icon={<Award size={15} />} />
       </section>
