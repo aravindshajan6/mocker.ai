@@ -271,17 +271,41 @@ async def toggle_question(question_id: int, db: AsyncSession = Depends(get_db)):
 
 
 # ------------------------------------------------------------------------- users ----
+@router.get("/analytics")
+async def analytics_overview(days: int = 30, db: AsyncSession = Depends(get_db)):
+    """Active users, screen time and study hours for the accounts tab."""
+    from ..services import analytics
+    return await analytics.overview(db, max(7, min(days, 90)))
+
+
 @router.get("/users", response_model=list[AdminUserRow])
 async def list_users(db: AsyncSession = Depends(get_db)):
+    from ..services import analytics
+
     rows = (await db.execute(
-        select(User, func.count(Attempt.id), func.max(UserStats.last_active_date))
+        select(User, func.count(Attempt.id), UserStats)
         .outerjoin(Attempt, Attempt.user_id == User.id)
         .outerjoin(UserStats, UserStats.user_id == User.id)
-        .group_by(User.id).order_by(User.created_at)
+        .group_by(User.id, UserStats.user_id).order_by(User.created_at)
     )).all()
-    return [AdminUserRow(id=u.id, name=u.name, email=u.email, is_admin=u.is_admin,
-                         created_at=u.created_at, answered=n, last_active=last)
-            for u, n, last in rows]
+    activity = await analytics.per_user(db)
+    out = []
+    for u, n, st in rows:
+        a = activity.get(u.id, {})
+        answered = st.questions_answered if st else 0
+        out.append(AdminUserRow(
+            id=u.id, name=u.name, email=u.email, is_admin=u.is_admin, created_at=u.created_at,
+            answered=n, last_active=st.last_active_date if st else None,
+            last_seen_at=a.get("last_seen_at"),
+            screen_seconds_total=a.get("screen_seconds_total", 0),
+            screen_seconds_week=a.get("screen_seconds_week", 0),
+            active_days_month=a.get("active_days_month", 0),
+            accuracy=(st.correct_answers / answered) if st and answered else None,
+            quizzes_completed=st.quizzes_completed if st else 0,
+            current_streak=st.current_streak if st else 0,
+            total_points=st.total_points if st else 0,
+        ))
+    return out
 
 
 @router.post("/users", response_model=AdminUserRow)

@@ -270,6 +270,21 @@ export type AdminOverview = {
 export type AdminUserRow = {
   id: string; name: string; email: string; is_admin: boolean;
   created_at: string; answered: number; last_active: string | null;
+  last_seen_at: string | null;
+  screen_seconds_total: number; screen_seconds_week: number; active_days_month: number;
+  accuracy: number | null; quizzes_completed: number; current_streak: number; total_points: number;
+};
+
+export type AdminAnalytics = {
+  days: number;
+  summary: {
+    learners: number; active_today: number; active_week: number; active_month: number;
+    new_month: number; screen_seconds_week: number; screen_seconds_total: number;
+    avg_screen_seconds_week: number; answers_week: number; quizzes_week: number;
+  };
+  series: { day: string; active_users: number; screen_seconds: number; answers: number; new_users: number }[];
+  /** Answers per IST weekday (0 = Sunday) and hour. Sparse: empty slots are omitted. */
+  heatmap: { dow: number; hour: number; answers: number }[];
 };
 
 export type Credential = {

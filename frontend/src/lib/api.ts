@@ -1,4 +1,5 @@
 import type {
+  AdminAnalytics,
   ActiveSession, AnswerResult, CurrentAffairs, Daily, ExamResult, ExamState, FinishResult, HistoryRow, LeaderboardRow,
   AdminOverview, AdminQuestion, AdminUserRow, Answers, ContentHealth, Credential, Insights, Prefs,
   QuizSession, ReviewDue, Staging, Stats, Topic, User,
@@ -111,6 +112,7 @@ export const api = {
   adminStagingLoad: () => post<{ started: boolean; detail: string }>("/api/admin/staging/load"),
   adminStagingRun: (limit: number) => post<{ started: boolean; detail: string }>(`/api/admin/staging/run?limit=${limit}`),
   adminUsers: () => get<AdminUserRow[]>("/api/admin/users"),
+  adminAnalytics: (days = 30) => get<AdminAnalytics>(`/api/admin/analytics?days=${days}`),
   adminCreateUser: (d: { name: string; email: string; password: string; is_admin: boolean }) =>
     post<AdminUserRow>("/api/admin/users", d),
   adminResetPassword: (id: string, password: string) => post<{ ok: boolean }>(`/api/admin/users/${id}/password`, { password }),

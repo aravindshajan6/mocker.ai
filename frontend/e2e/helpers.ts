@@ -4,6 +4,7 @@ export const ADMIN_PASSWORD = process.env.E2E_ADMIN_PASSWORD || "changeme-admin"
 export const TEST_EMAIL = "uitest@mocker.app";
 export const TEST_PASSWORD = "uitest-password-1";
 export const STORAGE_STATE = "e2e/.auth/user.json";
+export const ADMIN_STORAGE_STATE = "e2e/.auth/admin.json";
 
 export async function apiLogin(email: string, password: string): Promise<string> {
   const res = await fetch(`${BASE}/api/auth/login`, {

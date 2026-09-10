@@ -471,7 +471,7 @@ export default function Landing() {
                 "Reproduced verbatim from official answer keys",
                 "Explanations on every single question",
                 "Nightly automated answer-key audit",
-                "No advertisements, no tracking, no upsell",
+                "No advertisements, no third-party trackers, no upsell",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2.5 text-sm font-bold">
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-success-soft text-success">
