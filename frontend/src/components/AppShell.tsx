@@ -17,6 +17,8 @@ function isFocusMode(pathname: string) {
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const focus = isFocusMode(pathname);
+  // The analytics page is a desktop admin surface; it gets the width its charts need.
+  const width = pathname.startsWith("/admin/analytics") ? "max-w-7xl" : "max-w-3xl";
 
   return (
     // reducedMotion="user" drops transform and layout animations for people who ask for less
@@ -32,10 +34,10 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
           <MobileNav />
           <Tour />
           <div className="lg:pl-[var(--sidebar-w)]">
-            <main className="mx-auto w-full max-w-3xl px-4 pb-24 lg:pb-12 lg:pt-6">
+            <main className={`mx-auto w-full ${width} px-4 pb-24 lg:pb-12 lg:pt-6`}>
               <PageTransition>{children}</PageTransition>
             </main>
-            <footer className="mx-auto w-full max-w-3xl px-4 pb-24 lg:pb-8 text-[11px] leading-relaxed text-muted font-semibold">
+            <footer className={`mx-auto w-full ${width} px-4 pb-24 lg:pb-8 text-[11px] leading-relaxed text-muted font-semibold`}>
               Previous-year questions are reproduced from official papers published by the{" "}
               <a href="https://www.keralapsc.gov.in" target="_blank" rel="noopener noreferrer" className="underline">Kerala Public Service Commission</a>.
               Mocker is an independent study tool and is not affiliated with or endorsed by the KPSC.

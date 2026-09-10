@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Flame, KeyRound, Trash2, UserPlus } from "lucide-react";
+import { ArrowRight, BarChart3, Flame, KeyRound, Trash2, UserPlus } from "lucide-react";
 import { ErrorNote, Item } from "@/components/ui";
-import AdminAnalytics, { fmtDuration } from "./AdminAnalytics";
+import Link from "next/link";
+import { fmtDuration } from "./charts";
 import { api } from "@/lib/api";
 import type { AdminUserRow } from "@/lib/types";
 
@@ -77,7 +78,16 @@ export default function AdminUsers({ onChange }: { onChange: () => void }) {
 
   return (
     <>
-      <AdminAnalytics />
+      <Item>
+        <Link href="/admin/analytics" className="card card-interactive p-4 flex items-center gap-3">
+          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-primary-soft text-primary"><BarChart3 size={18} /></span>
+          <span className="flex-1">
+            <span className="block font-extrabold">Analytics dashboard</span>
+            <span className="block text-xs text-muted font-semibold">Active learners, screen time, accuracy, retention and more</span>
+          </span>
+          <ArrowRight size={16} className="text-muted" />
+        </Link>
+      </Item>
       <ErrorNote message={error} />
       {note && <Item><p className="rounded-xl bg-success-soft text-success px-3 py-2 text-sm font-bold">{note}</p></Item>}
 

@@ -275,18 +275,6 @@ export type AdminUserRow = {
   accuracy: number | null; quizzes_completed: number; current_streak: number; total_points: number;
 };
 
-export type AdminAnalytics = {
-  days: number;
-  summary: {
-    learners: number; active_today: number; active_week: number; active_month: number;
-    new_month: number; screen_seconds_week: number; screen_seconds_total: number;
-    avg_screen_seconds_week: number; answers_week: number; quizzes_week: number;
-  };
-  series: { day: string; active_users: number; screen_seconds: number; answers: number; new_users: number }[];
-  /** Answers per IST weekday (0 = Sunday) and hour. Sparse: empty slots are omitted. */
-  heatmap: { dow: number; hour: number; answers: number }[];
-};
-
 export type Credential = {
   id: number; label: string; provider: string; api_key_masked: string; model: string;
   base_url: string; priority: number; is_active: boolean; cooling_down: boolean;
@@ -327,3 +315,31 @@ export type Staging = {
   budgets: Budget[];
   model: string; scheduled_hour_ist: number; per_run: number;
 };
+
+type DashTotals = {
+  active: number; avg_daily_active: number; screen_seconds: number; screen_per_active: number;
+  answers: number; accuracy: number | null; quizzes: number; new_users: number;
+};
+
+export type AnalyticsDashboard = {
+  range: { days: number; start: string; end: string };
+  learners: number;
+  current: {
+    totals: DashTotals;
+    series: { day: string; active: number; screen_seconds: number; answers: number; correct: number;
+      quizzes: number; new_users: number }[];
+  };
+  previous: DashTotals;
+  stickiness: number | null;
+  topics: { name: string; icon: string; answers: number; correct: number; learners: number }[];
+  difficulty: { difficulty: number; answers: number; correct: number }[];
+  sources: { source: string; answers: number; correct: number }[];
+  modes: { mode: string; started: number; finished: number }[];
+  heatmap: { dow: number; hour: number; answers: number }[];
+  exams: { taken: number; avg_pct: number | null; best_pct: number | null; distribution: { label: string; count: number }[] };
+  hardest: { id: number; text: string; topic: string; attempts: number; accuracy: number }[];
+  top_learners: { name: string; answers: number; accuracy: number | null; screen_seconds: number; streak: number }[];
+  streaks: { label: string; users: number }[];
+  cohorts: { week: string; size: number; retention: number[] }[];
+};
+

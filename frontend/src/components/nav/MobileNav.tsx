@@ -9,7 +9,7 @@ import Mascot from "@/components/Mascot";
 import { startTour } from "@/components/Tour";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useAppData } from "@/components/AppData";
-import { NAV_GROUPS, PRIMARY_LINKS } from "./links";
+import { NAV_GROUPS, PRIMARY_LINKS, isActiveLink } from "./links";
 import { api } from "@/lib/api";
 
 export default function MobileNav() {
@@ -78,7 +78,7 @@ export default function MobileNav() {
                   <div key={g.title} className="mb-4">
                     <p className="px-2 mb-1 text-[10px] font-extrabold uppercase tracking-[0.13em] text-muted">{g.title}</p>
                     {g.links.filter((l) => !l.adminOnly || user?.is_admin).map((l) => {
-                      const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+                      const active = isActiveLink(l.href, pathname);
                       const Icon = l.icon;
                       const badge = l.href === "/review" && due?.due_now ? due.due_now : null;
                       return (
@@ -112,7 +112,7 @@ export default function MobileNav() {
       <nav className="lg:hidden fixed bottom-0 inset-x-0 z-30 glass border-t border-line pb-[env(safe-area-inset-bottom)]">
         <div className="grid grid-cols-4 max-w-2xl mx-auto">
           {PRIMARY_LINKS.map((l) => {
-            const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+            const active = isActiveLink(l.href, pathname);
             const Icon = l.icon;
             return (
               <Link key={l.href} href={l.href}
